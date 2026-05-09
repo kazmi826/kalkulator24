@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+Disallow: /scripts/
+Disallow: /content/
+Disallow: /assets/js/
+
+# Sitemap
+Sitemap: /sitemap.xml
+
+# Host directive for Yandex
+Host: 
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1
