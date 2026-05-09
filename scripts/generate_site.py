@@ -58,8 +58,8 @@ def navbar(active=""):
 
 # ===== FOOTER =====
 def footer():
-    cats = "".join([f'<li><a href="/categories/{s}.html">{c["icon"]} {c["name"]}</a></li>' for s,c in categories.items()])
-    pop  = "".join([f'<li><a href="/tools/{t["slug"]}.html">{t["title"]}</a></li>' for t in tools[:6]])
+    cats = "".join([f'<li><a href="/kategori/{s}">{c["icon"]} {c["name"]}</a></li>' for s,c in categories.items()])
+    pop  = "".join([f'<li><a href="/verktoy/{t["slug"]}">{t["title"]}</a></li>' for t in tools[:6]])
     return f'''<footer>
   <div class="footer-inner">
     <div class="footer-grid">
@@ -67,9 +67,9 @@ def footer():
       <div class="footer-col"><h4>Kategorier</h4><ul>{cats}</ul></div>
       <div class="footer-col"><h4>Populære</h4><ul>{pop}</ul></div>
       <div class="footer-col"><h4>Info</h4><ul>
-        <li><a href="/om-oss.html">Om oss</a></li>
-        <li><a href="/personvern.html">Personvern</a></li>
-        <li><a href="/kontakt.html">Kontakt</a></li>
+        <li><a href="/om-oss">Om oss</a></li>
+        <li><a href="/personvern">Personvern</a></li>
+        <li><a href="/kontakt">Kontakt</a></li>
       </ul></div>
     </div>
     <div class="footer-bottom">© {datetime.now().year} {SITE_NAME} — Alle kalkulatorer er gratis</div>
@@ -495,8 +495,8 @@ function doSearch(){{
   const q=document.getElementById('sInput').value.trim();
   const all={json.dumps([{"slug":t["slug"],"title":t["title"]} for t in tools])};
   const res=all.filter(t=>t.title.toLowerCase().includes(q.toLowerCase()));
-  if(res.length===1)location='/tools/'+res[0].slug+'.html';
-  else if(res.length>0){{const r=res.map(t=>`<div class="tool-card" onclick="location='/tools/${{t.slug}}.html'" style="cursor:pointer"><h3>${{t.title}}</h3></div>`).join('');document.querySelector('.home-section').innerHTML='<h2>Søkeresultater</h2><div class="tools-grid">'+r+'</div>';}}
+  if(res.length===1)location='/verktoy/'+res[0].slug;
+  else if(res.length>0){{const r=res.map(t=>`<div class="tool-card" onclick="location='/verktoy/${{t.slug}}'" style="cursor:pointer"><h3>${{t.title}}</h3></div>`).join('');document.querySelector('.home-section').innerHTML='<h2>Søkeresultater</h2><div class="tools-grid">'+r+'</div>';}}
   else alert('Ingen resultater for: '+q);
 }}
 function toggleMenu() {{
