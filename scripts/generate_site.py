@@ -470,7 +470,7 @@ def gen_homepage():
     cat_cards = "".join([f'''<div class="cat-card" onclick="location='/kategori/{s}'">
       <span class="cat-icon">{c["icon"]}</span>
       <div class="cat-name">{c["name"]}</div>
-      <div class="cat-count">{len([t for t in tools if t["category"]==s])} kalkulatorer</div>
+      <div class="cat-count">Flere kalkulatorer</div>
     </div>''' for s,c in categories.items()])
 
     pop_cards = "".join([f'''<div class="tool-card" onclick="location='/verktoy/{t["slug"]}'">
