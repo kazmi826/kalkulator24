@@ -270,6 +270,9 @@ def head(page_type, tool_data=None, category_data=None, category_slug=None):
   <meta name="theme-color" content="#2563eb">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
+  
+  <!-- Google Site Verification -->
+  <meta name="google-site-verification" content="U-ZiCQHLID9ShjKIWBJI0Xi7xJDNrx9bwP4tRBEYzSQ">
 
   <!-- Stylesheets -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
