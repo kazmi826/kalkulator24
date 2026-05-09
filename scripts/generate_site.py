@@ -43,7 +43,7 @@ def navbar(active=""):
     links = ""
     for slug, cat in categories.items():
         a = 'active' if slug == active else ''
-        links += f'<li><a href="/categories/{slug}.html" class="{a}">{cat["icon"]} {cat["name"]}</a></li>'
+        links += f'<li><a href="/kategori/{slug}" class="{a}">{cat["icon"]} {cat["name"]}</a></li>'
     return f'''<nav class="navbar" style="position: relative;">
   <div class="navbar-inner">
     <a href="/" class="logo">{SITE_NAME.replace('.','<span>.')}</span></a>
@@ -86,7 +86,7 @@ def head(page_type, tool_data=None, category_data=None, category_slug=None):
         title = f'{tool_data["title"]} — Gratis Online Kalkulator | {SITE_NAME}'
         desc = tool_data["description"]
         keywords = tool_data.get('keywords', f'{tool_data["title"]}, kalkulator, online, gratis, {tool_data["category"]}')
-        canonical = f'/tools/{tool_data["slug"]}.html'
+        canonical = f'/verktoy/{tool_data["slug"]}'
         slug = tool_data["slug"]
         tool_title = tool_data["title"]
         category_name = categories.get(tool_data["category"], {}).get("name", "")
@@ -95,7 +95,7 @@ def head(page_type, tool_data=None, category_data=None, category_slug=None):
         title = f'{category_data["name"]} Kalkulatorer — Gratis | {SITE_NAME}'
         desc = f'Gratis {category_data["name"].lower()} kalkulatorer. {len([t for t in tools if t["category"] == category_slug])} verktøy for {category_data["name"].lower()}.'
         keywords = f'{category_data["name"]}, kalkulatorer, online, gratis, {category_data["name"].lower()}'
-        canonical = f'/categories/{category_slug}.html'
+        canonical = f'/kategori/{category_slug}'
         slug = category_slug
         tool_title = category_data["name"]
         category_name = category_data["name"]
@@ -120,7 +120,7 @@ def head(page_type, tool_data=None, category_data=None, category_slug=None):
   "@type": "WebApplication",
   "name": "{tool_title}",
   "description": "{desc}",
-  "url": "{SITE_DOMAIN}/tools/{slug}.html",
+  "url": "{SITE_DOMAIN}/verktoy/{slug}",
   "applicationCategory": "UtilityApplication",
   "operatingSystem": "Web Browser",
   "offers": {{
@@ -142,8 +142,8 @@ def head(page_type, tool_data=None, category_data=None, category_slug=None):
   "@type": "BreadcrumbList",
   "itemListElement": [
     {{"@type": "ListItem", "position": 1, "name": "Hjem", "item": "{SITE_DOMAIN}"}},
-    {{"@type": "ListItem", "position": 2, "name": "{category_name}", "item": "{SITE_DOMAIN}/categories/{category}.html"}},
-    {{"@type": "ListItem", "position": 3, "name": "{tool_title}", "item": "{SITE_DOMAIN}/tools/{slug}.html"}}
+    {{"@type": "ListItem", "position": 2, "name": "{category_name}", "item": "{SITE_DOMAIN}/kategori/{category}"}},
+    {{"@type": "ListItem", "position": 3, "name": "{tool_title}", "item": "{SITE_DOMAIN}/verktoy/{slug}"}}
   ]
 }}'''
         schemas.append(breadcrumb_schema)
@@ -199,11 +199,15 @@ def head(page_type, tool_data=None, category_data=None, category_slug=None):
     # Generate hreflang tags
     hreflang_tags = ""
     if slug:
-        hreflang_tags = f'''<link rel="alternate" hreflang="nb" href="{SITE_DOMAIN}/tools/{slug}.html">
-<link rel="alternate" hreflang="no" href="{SITE_DOMAIN}/tools/{slug}.html">'''
-    elif page_type == "category":
-        hreflang_tags = f'''<link rel="alternate" hreflang="nb" href="{SITE_DOMAIN}/categories/{slug}.html">
-<link rel="alternate" hreflang="no" href="{SITE_DOMAIN}/categories/{slug}.html">'''
+        if page_type == "tool":
+            hreflang_tags = f'''<link rel="alternate" hreflang="nb" href="{SITE_DOMAIN}/verktoy/{slug}">
+<link rel="alternate" hreflang="no" href="{SITE_DOMAIN}/verktoy/{slug}">'''
+        elif page_type == "category":
+            hreflang_tags = f'''<link rel="alternate" hreflang="nb" href="{SITE_DOMAIN}/kategori/{slug}">
+<link rel="alternate" hreflang="no" href="{SITE_DOMAIN}/kategori/{slug}">'''
+        else:
+            hreflang_tags = f'''<link rel="alternate" hreflang="nb" href="{SITE_DOMAIN}/">
+<link rel="alternate" hreflang="no" href="{SITE_DOMAIN}/">'''
     else:
         hreflang_tags = f'''<link rel="alternate" hreflang="nb" href="{SITE_DOMAIN}/">
 <link rel="alternate" hreflang="no" href="{SITE_DOMAIN}/">'''
@@ -291,7 +295,7 @@ def related_tools(tool, n=9):
     cards = ""
     for t in (same + other)[:n]:
         icon = categories.get(t['category'], {}).get('icon', '🧮')
-        cards += f'''<div class="tool-card" onclick="location='/tools/{t["slug"]}.html'">
+        cards += f'''<div class="tool-card" onclick="location='/verktoy/{t["slug"]}'">
           <span class="tool-card-icon">{icon}</span>
           <h3>{t["title"]}</h3><p>{t["description"]}</p>
         </div>'''
@@ -302,8 +306,8 @@ def sidebar_links(tool):
     cat = categories.get(tool['category'], {})
     icon = cat.get('icon', '🧮')
     items = [t for t in tools if t['category'] == tool['category'] and t['slug'] != tool['slug']][:10]
-    html = "".join([f'<li><a href="/tools/{t["slug"]}.html"><span class="icon">{icon}</span>{t["title"]}</a></li>' for t in items])
-    html += f'<li><a href="/categories/{tool["category"]}.html" style="color:var(--primary)">Se alle →</a></li>'
+    html = "".join([f'<li><a href="/verktoy/{t["slug"]}"><span class="icon">{icon}</span>{t["title"]}</a></li>' for t in items])
+    html += f'<li><a href="/kategori/{tool["category"]}" style="color:var(--primary)">Se alle →</a></li>'
     return html
 
 # ===== GENERATE TOOL PAGE =====
@@ -313,7 +317,7 @@ def gen_tool(tool):
     cat_icon = cat.get('icon', '🧮')
     slug    = tool['slug']
 
-    schema = json.dumps({"@context":"https://schema.org","@type":"WebApplication","name":tool['title'],"description":tool['description'],"applicationCategory":"UtilityApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"NOK"},"url":f"{SITE_DOMAIN}/tools/{slug}.html"})
+    schema = json.dumps({"@context":"https://schema.org","@type":"WebApplication","name":tool['title'],"description":tool['description'],"applicationCategory":"UtilityApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"NOK"},"url":f"{SITE_DOMAIN}/verktoy/{slug}"})
     
     # Check if content file exists
     content_file = f'../content/{slug}.html'
@@ -335,7 +339,7 @@ def gen_tool(tool):
 
 <div class="breadcrumb">
   <a href="/">Hjem</a><span class="sep">›</span>
-  <a href="/categories/{tool["category"]}.html">{cat_name}</a><span class="sep">›</span>{tool["title"]}
+  <a href="/kategori/{tool["category"]}">{cat_name}</a><span class="sep">›</span>{tool["title"]}
 </div>
 
 <div class="tool-hero">
@@ -395,13 +399,13 @@ document.addEventListener('click', function(e) {{
 </script>
 </body></html>'''
 
-    with open(f'../tools/{slug}.html', 'w', encoding='utf-8') as f:
+    with open(f'../verktoy/{slug}.html', 'w', encoding='utf-8') as f:
         f.write(html)
 
 # ===== GENERATE CATEGORY PAGE =====
 def gen_category(slug, cat):
     cat_tools = [t for t in tools if t['category'] == slug]
-    cards = "".join([f'''<div class="tool-card" onclick="location='/tools/{t["slug"]}.html'">
+    cards = "".join([f'''<div class="tool-card" onclick="location='/verktoy/{t["slug"]}'">
       <span class="tool-card-icon">{cat["icon"]}</span>
       <h3>{t["title"]}</h3><p>{t["description"]}</p>
     </div>''' for t in cat_tools])
@@ -437,18 +441,18 @@ document.addEventListener('click', function(e) {{
 </script>
 </body></html>'''
 
-    with open(f'../categories/{slug}.html', 'w', encoding='utf-8') as f:
+    with open(f'../kategori/{slug}.html', 'w', encoding='utf-8') as f:
         f.write(html)
 
 # ===== GENERATE HOMEPAGE =====
 def gen_homepage():
-    cat_cards = "".join([f'''<div class="cat-card" onclick="location='/categories/{s}.html'">
+    cat_cards = "".join([f'''<div class="cat-card" onclick="location='/kategori/{s}'">
       <span class="cat-icon">{c["icon"]}</span>
       <div class="cat-name">{c["name"]}</div>
       <div class="cat-count">{len([t for t in tools if t["category"]==s])} kalkulatorer</div>
     </div>''' for s,c in categories.items()])
 
-    pop_cards = "".join([f'''<div class="tool-card" onclick="location='/tools/{t["slug"]}.html'">
+    pop_cards = "".join([f'''<div class="tool-card" onclick="location='/verktoy/{t["slug"]}'">
       <span class="tool-card-icon">{categories.get(t["category"],{}).get("icon","🧮")}</span>
       <h3>{t["title"]}</h3><p>{t["description"]}</p>
     </div>''' for t in tools[:12]])
@@ -530,7 +534,7 @@ def gen_seo():
     # Category pages
     for s, cat in categories.items():
         urls.append(f'''<url>
-  <loc>{SITE_DOMAIN}/categories/{s}.html</loc>
+  <loc>{SITE_DOMAIN}/kategori/{s}</loc>
   <lastmod>{today}</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
@@ -539,7 +543,7 @@ def gen_seo():
     # Tool pages
     for t in tools:
         urls.append(f'''<url>
-  <loc>{SITE_DOMAIN}/tools/{t["slug"]}.html</loc>
+  <loc>{SITE_DOMAIN}/verktoy/{t["slug"]}</loc>
   <lastmod>{today}</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.8</priority>
