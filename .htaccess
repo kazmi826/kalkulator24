@@ -1,14 +1,7 @@
 ﻿Options -Indexes
 RewriteEngine On
 
-# Redirect old /tools/ to /verktoy/
-RewriteRule ^tools/(.*)\.html$ /verktoy/ [R=301,L]
-
-# Redirect old /categories/ to /kategori/
-RewriteRule ^categories/(.*)\.html$ /kategori/ [R=301,L]
-
-# Clean URLs - remove .html
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.*)$ .html [L]
+RewriteRule ^(.*)$ /.html [L]
