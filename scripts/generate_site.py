@@ -44,7 +44,7 @@ def navbar(active=""):
     for slug, cat in categories.items():
         a = 'active' if slug == active else ''
         links += f'<li><a href="/categories/{slug}.html" class="{a}">{cat["icon"]} {cat["name"]}</a></li>'
-    return f'''<nav class="navbar">
+    return f'''<nav class="navbar" style="position: relative;">
   <div class="navbar-inner">
     <a href="/" class="logo">{SITE_NAME.replace('.','<span>.')}</span></a>
     <ul id="mobileMenu" class="nav-links" style="display:flex; gap:4px; list-style:none; flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none;">{links}</ul>
@@ -259,8 +259,8 @@ def head(page_type, tool_data=None, category_data=None, category_slug=None):
   <!-- Scripts -->
   <script src="/assets/js/seo.js"></script>
   <script>
-    function toggleMobileMenu() {{
-      const navLinks = document.querySelector('.nav-links');
+    function toggleMenu() {{
+      const navLinks = document.getElementById('mobileMenu');
       navLinks.classList.toggle('show');
     }}
   </script>

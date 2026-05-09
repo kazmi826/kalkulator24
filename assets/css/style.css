@@ -20,9 +20,11 @@ a{text-decoration:none;color:inherit}
 @media(max-width:768px){
   .navbar{padding:0 16px}
   .navbar-inner{height:56px;padding:0}
-  .nav-links{display:none;position:absolute;top:56px;left:0;right:0;background:#fff;border-bottom:1px solid var(--border);flex-direction:column;padding:0;box-shadow:0 4px 12px rgba(0,0,0,.1);gap:0;width:100%;z-index:100}
-  .nav-links.show{display:flex}
-  .nav-links a{padding:12px 20px;font-size:15px;border-radius:0;border-bottom:1px solid var(--border);display:block;transition:all .15s}
+  .nav-links{display:none;position:absolute;top:60px;left:0;right:0;background:#fff;box-shadow:0 8px 24px rgba(0,0,0,.12);border-top:1px solid #e2e8f0;z-index:999}
+  .nav-links.show{display:block}
+  .nav-links ul{list-style:none;padding:8px 0;margin:0}
+  .nav-links a{display:flex;align-items:center;gap:10px;padding:14px 20px;font-size:15px;color:#1a1a2e;border-bottom:1px solid #f1f5f9;transition:background .15s}
+  .nav-links a:hover{background:#f8f9fa;color:#2563eb}
   .mobile-menu-btn{display:flex}
   .logo{font-size:18px}
 }
