@@ -101,8 +101,8 @@ def head(page_type, tool_data=None, category_data=None, category_slug=None):
         category_name = category_data["name"]
         category = category_slug
     else:  # homepage
-        title = f'Gratis Online Kalkulatorer — {SITE_NAME} | {len(tools)}+ Verktøy'
-        desc = f'Gratis online kalkulatorer for helse, finans, matematikk og mer. Over {len(tools)} kalkulatorer uten registrering.'
+        title = f'Gratis Online Kalkulatorer — {SITE_NAME} | Alle Verktøy'
+        desc = f'Gratis online kalkulatorer for helse, finans, matematikk og mer. Alle kalkulatorer uten registrering.'
         keywords = 'kalkulatorer, online, gratis, helse, finans, matematikk, konvertering'
         canonical = '/'
         slug = ''
@@ -187,9 +187,30 @@ def head(page_type, tool_data=None, category_data=None, category_slug=None):
   "@type": "Organization",
   "name": "{SITE_NAME}",
   "url": "{SITE_DOMAIN}",
-  "description": "{desc}"
+  "logo": "{SITE_DOMAIN}/assets/logo.png",
+  "description": "Gratis online kalkulatorer for alle behov"
 }}'''
         schemas.append(org_schema)
+        
+        # ItemList schema with top 10 tools
+        top_tools_json = []
+        for i, t in enumerate(tools[:10]):
+            top_tools_json.append(f'''{{
+  "@type": "ListItem",
+  "position": {i+1},
+  "name": "{t["title"]}",
+  "url": "{SITE_DOMAIN}/verktoy/{t["slug"]}"
+}}''')
+        
+        itemlist_schema = f'''{{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Populære kalkulatorer",
+  "itemListElement": [
+{",".join(top_tools_json)}
+  ]
+}}'''
+        schemas.append(itemlist_schema)
     
     # Generate schema tags
     schema_tags = ""
@@ -465,7 +486,7 @@ def gen_homepage():
 
 <div class="hero-home">
   <h1>Gratis Online Kalkulatorer</h1>
-  <p>Over {len(tools)} gratis kalkulatorer for helse, finans, matematikk og mer</p>
+  <p>Alle kalkulatorer for helse, finans, matematikk og mer</p>
   <div class="search-box">
     <input type="text" id="sInput" placeholder="Søk etter kalkulator..." onkeypress="if(event.key==='Enter')doSearch()">
     <button onclick="doSearch()">Søk</button>
@@ -482,9 +503,9 @@ def gen_homepage():
 {adsense_unit()}
 
 <div class="home-section">
-  <h2>Bla gjennom kategorier</h2>
+  <h2>Browse Categories</h2>
   <div class="cat-grid">{cat_cards}</div>
-  <h2>Populære kalkulatorer</h2>
+  <h2>Popular Calculators</h2>
   <div class="tools-grid">{pop_cards}</div>
 </div>
 
