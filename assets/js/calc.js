@@ -732,6 +732,208 @@ const Calculators = {
     const da=(alt+(120*(temp-isa))).toFixed(0);
     const density=(1.225*Math.pow((288.15-0.0065*alt)/288.15,5.2561)).toFixed(4);
     return {value:density, unit:'kg/m³', desc:`Tetthetshøyde: ${da}m | ISA temp: ${isa.toFixed(1)}°C`};
+  },
+
+  // ========== ADVANCED FYSIKK ==========
+  air_density: (i) => {
+    const t=+i.temperature+273.15, p=+i.pressure*100, rh=+i.humidity/100;
+    if(!t||!p) return null;
+    const psat=610.78*Math.exp(17.27*(t-273.15)/((t-273.15)+237.3));
+    const pv=rh*psat; const pd=p-pv;
+    const density=((pd*0.028964)+(pv*0.018016))/(8.314*t);
+    return {value:density.toFixed(4), unit:'kg/m³', desc:`T=${i.temperature}°C, P=${i.pressure}hPa, RH=${i.humidity}%`};
+  },
+
+  enthalpy: (i) => {
+    const m=+i.mass, c=+i.specific_heat, dt=+i.temp_change;
+    if(!m||!c||!dt) return null;
+    const h=(m*c*dt).toFixed(2);
+    return {value:h, unit:'J', desc:`H = m×c×ΔT = ${m}×${c}×${dt}`};
+  },
+
+  momentum: (i) => {
+    const m=+i.mass, v=+i.velocity;
+    if(!m||!v) return null;
+    const p=(m*v).toFixed(4);
+    const ke=(0.5*m*v*v).toFixed(4);
+    return {value:p, unit:'kg·m/s', desc:`p = mv = ${m}×${v} | KE = ${ke} J`};
+  },
+
+  relative_humidity: (i) => {
+    const t=+i.actual_temp, td=+i.dew_point;
+    if(isNaN(t)||isNaN(td)) return null;
+    const rh=(100*Math.exp((17.625*td)/(243.04+td))/Math.exp((17.625*t)/(243.04+t))).toFixed(1);
+    return {value:rh, unit:'%', desc:`T=${t}°C, Td=${td}°C | ${rh<30?'Tørt':rh<60?'Komfortabelt ✓':'Fuktig'}`};
+  },
+
+  acceleration: (i) => {
+    const vi=+i.initial_velocity, vf=+i.final_velocity, t=+i.time;
+    if(isNaN(vi)||isNaN(vf)||!t) return null;
+    const a=((vf-vi)/t).toFixed(4);
+    const dist=(vi*t+0.5*((vf-vi)/t)*t*t).toFixed(2);
+    return {value:a, unit:'m/s²', desc:`a=(vf-vi)/t | Distanse: ${dist}m`};
+  },
+
+  angular_velocity: (i) => {
+    const angle=+i.angle*Math.PI/180, t=+i.time;
+    if(!t) return null;
+    const omega=(angle/t).toFixed(4);
+    const rpm=(omega*60/(2*Math.PI)).toFixed(2);
+    return {value:omega, unit:'rad/s', desc:`ω = θ/t | ${rpm} RPM`};
+  },
+
+  gravitational_force: (i) => {
+    const m1=+i.mass1, m2=+i.mass2, r=+i.distance;
+    if(!m1||!m2||!r) return null;
+    const G=6.674e-11;
+    const f=(G*m1*m2/(r*r)).toExponential(4);
+    return {value:f, unit:'N', desc:`F = G×m1×m2/r² | G=${G}`};
+  },
+
+  earth_curvature: (i) => {
+    const d=+i.distance*1000;
+    if(!d) return null;
+    const R=6371000;
+    const drop=(d*d/(2*R)).toFixed(2);
+    return {value:drop, unit:'meter (fall)', desc:`For ${i.distance}km distanse | R=6371km`};
+  },
+
+  hookes_law: (i) => {
+    const k=+i.spring_constant, x=+i.displacement;
+    if(!k||!x) return null;
+    const f=(k*x).toFixed(4);
+    const pe=(0.5*k*x*x).toFixed(4);
+    return {value:f, unit:'N', desc:`F = kx = ${k}×${x} | PE = ${pe} J`};
+  },
+
+  de_broglie: (i) => {
+    const m=+i.mass, v=+i.velocity;
+    if(!m||!v) return null;
+    const h=6.626e-34;
+    const lambda=(h/(m*v)).toExponential(4);
+    return {value:lambda, unit:'m', desc:`λ = h/mv = ${h}/(${m}×${v})`};
+  },
+
+  dew_point: (i) => {
+    const t=+i.temperature, rh=+i.humidity;
+    if(isNaN(t)||!rh) return null;
+    const a=17.625, b=243.04;
+    const dp=(b*(Math.log(rh/100)+a*t/(b+t))/(a-Math.log(rh/100)-a*t/(b+t))).toFixed(2);
+    return {value:dp, unit:'°C', desc:`T=${t}°C, RH=${rh}% → Td=${dp}°C`};
+  },
+
+  transformer: (i) => {
+    const vp=+i.primary_voltage, np=+i.primary_turns, ns=+i.secondary_turns;
+    if(!vp||!np||!ns) return null;
+    const vs=(vp*ns/np).toFixed(2);
+    const ratio=(ns/np).toFixed(4);
+    return {value:vs, unit:'V (sekundær)', desc:`Vs = Vp×(Ns/Np) = ${vp}×${ratio} | Ratio: ${ratio}`};
+  },
+
+  frequency: (i) => {
+    const T=+i.period;
+    if(!T) return null;
+    const f=(1/T).toFixed(6);
+    const omega=(2*Math.PI/T).toFixed(4);
+    return {value:f, unit:'Hz', desc:`f = 1/T = 1/${T} | ω = ${omega} rad/s`};
+  },
+
+  coulombs_law: (i) => {
+    const q1=+i.charge1, q2=+i.charge2, r=+i.distance;
+    if(!q1||!q2||!r) return null;
+    const k=8.99e9;
+    const f=(k*Math.abs(q1)*Math.abs(q2)/(r*r)).toExponential(4);
+    const type=q1*q2>0?'Frastøtende':'Tiltrekkende';
+    return {value:f, unit:'N', desc:`F = kq1q2/r² | ${type}`};
+  },
+
+  potential_energy: (i) => {
+    const m=+i.mass, h=+i.height;
+    if(!m||!h) return null;
+    const pe=(m*9.81*h).toFixed(4);
+    return {value:pe, unit:'J', desc:`PE = mgh = ${m}×9.81×${h}`};
+  },
+
+  schwarzschild: (i) => {
+    const m=+i.mass;
+    if(!m) return null;
+    const G=6.674e-11, c=3e8;
+    const rs=(2*G*m/(c*c)).toExponential(4);
+    return {value:rs, unit:'m', desc:`rs = 2GM/c² | Svart hull radius`};
+  },
+
+  electricity: (i) => {
+    const v=+i.voltage, a=+i.current, t=+i.time;
+    if(!v||!a) return null;
+    const power=(v*a).toFixed(2);
+    const energy=(v*a*t*3600).toFixed(2);
+    const cost=((v*a*t)/1000*1.5).toFixed(2);
+    return {value:power, unit:'W', desc:`Energi: ${energy}J (${t}t) | Kostnad: ${cost} kr`};
+  },
+
+  resistance: (i) => {
+    const v=+i.voltage, a=+i.current;
+    if(!v||!a) return null;
+    const r=(v/a).toFixed(4);
+    const p=(v*a).toFixed(4);
+    return {value:r, unit:'Ω', desc:`R = V/I = ${v}/${a} | Effekt: ${p} W`};
+  },
+
+  string_tension: (i) => {
+    const m=+i.mass, l=+i.length, f=+i.frequency;
+    if(!m||!l||!f) return null;
+    const t=(4*m*l*f*f).toFixed(4);
+    return {value:t, unit:'N', desc:`T = 4mLf² = 4×${m}×${l}×${f}²`};
+  },
+
+  muzzle_energy: (i) => {
+    const grains=+i.mass, fps=+i.velocity;
+    if(!grains||!fps) return null;
+    const kg=grains*0.0000647989, ms=fps*0.3048;
+    const joules=(0.5*kg*ms*ms).toFixed(2);
+    const ftlbs=(joules*0.737562).toFixed(2);
+    return {value:joules, unit:'J', desc:`${ftlbs} ft·lbf | ${grains}gr @ ${fps}fps`};
+  },
+
+  sunrise_sunset: (i) => {
+    const lat=+i.latitude*Math.PI/180, doy=+i.day_of_year;
+    if(isNaN(lat)||!doy) return null;
+    const decl=0.4093*Math.sin(2*Math.PI*(284+doy)/365);
+    const ha=Math.acos(-Math.tan(lat)*Math.tan(decl));
+    const sunrise=(12-ha*12/Math.PI).toFixed(2);
+    const sunset=(12+ha*12/Math.PI).toFixed(2);
+    const daylight=(ha*24/Math.PI).toFixed(2);
+    const srH=Math.floor(sunrise), srM=Math.round((sunrise-srH)*60);
+    const ssH=Math.floor(sunset), ssM=Math.round((sunset-ssH)*60);
+    return {value:`${srH}:${String(srM).padStart(2,'0')}`, unit:'(soloppgang)', desc:`Solnedgang: ${ssH}:${String(ssM).padStart(2,'0')} | Dagslys: ${daylight}t`};
+  },
+
+  work_energy: (i) => {
+    const f=+i.force, d=+i.distance, angle=+i.angle||0;
+    if(!f||!d) return null;
+    const w=(f*d*Math.cos(angle*Math.PI/180)).toFixed(4);
+    return {value:w, unit:'J', desc:`W = F×d×cos(θ) = ${f}×${d}×cos(${angle}°)`};
+  },
+
+  newtons_second: (i) => {
+    const m=+i.mass, a=+i.acceleration;
+    if(!m||!a) return null;
+    const f=(m*a).toFixed(4);
+    return {value:f, unit:'N', desc:`F = ma = ${m}×${a}`};
+  },
+
+  magnitude: (i) => {
+    const x=+i.value1||0, y=+i.value2||0, z=+i.value3||0;
+    const mag=Math.sqrt(x*x+y*y+z*z).toFixed(4);
+    return {value:mag, unit:'', desc:`√(${x}²+${y}²+${z}²)`};
+  },
+
+  eos_calc: (i) => {
+    const p=+i.pressure*1e6, t=+i.temperature, v=+i.volume;
+    if(!p||!t||!v) return null;
+    const R=8.314;
+    const n=(p*v/(R*t)).toFixed(4);
+    return {value:n, unit:'mol', desc:`PV=nRT → n=${n} mol`};
   }
 };
 
