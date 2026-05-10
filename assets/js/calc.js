@@ -238,6 +238,501 @@ const Calculators = {
   fence: (i) => { const l=+i.length,w=+i.width; if(!l||!w) return null; return {value:(2*(l+w)),unit:'meter',desc:`${l}×${w} m tomt`}},
 
   brick: (i) => { const l=+i.length,w=+i.width,h=+i.height||0.1; if(!l||!w) return null; return {value:Math.ceil(l*w/h*60),unit:'murstein',desc:`${l}×${w} m vegg`}},
+
+  // ========== BIOLOGI ==========
+  population_growth: (i) => {
+    const p=+i.population, r=+i.growth_rate/100, n=+i.years;
+    if(!p||!r||!n) return null;
+    const future = Math.round(p * Math.pow(1+r, n));
+    const increase = future - p;
+    return {value: future.toLocaleString('nb-NO'), unit: 'personer', desc: `Økning: ${increase.toLocaleString('nb-NO')} (+${(r*100).toFixed(1)}%/år × ${n} år)`};
+  },
+
+  punnett: (i) => {
+    const p1=i.parent1||'Aa', p2=i.parent2||'Aa';
+    const alleles1=[p1[0],p1[1]], alleles2=[p2[0],p2[1]];
+    const combos=[];
+    alleles1.forEach(a=>alleles2.forEach(b=>combos.push([a,b].sort().join(''))));
+    const AA=combos.filter(c=>c==='AA').length;
+    const Aa=combos.filter(c=>c==='Aa').length;
+    const aa=combos.filter(c=>c==='aa').length;
+    return {value:`AA:${AA/4*100}% Aa:${Aa/4*100}% aa:${aa/4*100}%`, unit:'', desc:`${p1} × ${p2} — ${AA} AA, ${Aa} Aa, ${aa} aa av 4`};
+  },
+
+  blood_type_inheritance: (i) => {
+    const map={'A':['IA','i'],'B':['IB','i'],'AB':['IA','IB'],'O':['i','i']};
+    const p1=map[i.parent1]||['IA','i'], p2=map[i.parent2]||['IA','i'];
+    const results=[];
+    p1.forEach(a=>p2.forEach(b=>{
+      const g=[a,b].sort().join('');
+      if(g==='IAia'||g==='IAIA') results.push('A');
+      else if(g==='IBia'||g==='IBIB') results.push('B');
+      else if(g==='IAIB') results.push('AB');
+      else results.push('O');
+    }));
+    const unique=[...new Set(results)];
+    return {value:unique.join(', '), unit:'mulige blodtyper', desc:`${i.parent1} × ${i.parent2} kombinasjon`};
+  },
+
+  blood_type: (i) => {
+    const compatible={'A+':['A+','A-','O+','O-'],'A-':['A-','O-'],'B+':['B+','B-','O+','O-'],'B-':['B-','O-'],'AB+':['A+','A-','B+','B-','AB+','AB-','O+','O-'],'AB-':['A-','B-','AB-','O-'],'O+':['O+','O-'],'O-':['O-']};
+    const canGiveTo={'A+':['A+','AB+'],'A-':['A+','A-','AB+','AB-'],'B+':['B+','AB+'],'B-':['B+','B-','AB+','AB-'],'AB+':['AB+'],'AB-':['AB+','AB-'],'O+':['O+','A+','B+','AB+'],'O-':['O+','O-','A+','A-','B+','B-','AB+','AB-']};
+    const bt=i.blood_type||'O+';
+    return {value:compatible[bt]?.join(', ')||'', unit:'(kan motta fra)', desc:`Kan gi til: ${canGiveTo[bt]?.join(', ')||''}`};
+  },
+
+  doubling_time: (i) => {
+    const r=+i.growth_rate;
+    if(!r||r<=0) return null;
+    const dt=(Math.log(2)/Math.log(1+r/100)).toFixed(2);
+    return {value:dt, unit:'år', desc:`Regel 70: 70/${r} = ${(70/r).toFixed(1)} år (estimat)`};
+  },
+
+  ecological_footprint: (i) => {
+    const meat=(+i.meat||0)*0.5;
+    const transport=(+i.transport||0)*0.00021*365;
+    const electricity=(+i.electricity||0)*0.012;
+    const total=(meat*52+transport+electricity*12).toFixed(1);
+    const earths=(total/2.7).toFixed(1);
+    return {value:total, unit:'tonn CO₂/år', desc:`Tilsvarer ${earths} jordkloder`};
+  },
+
+  allele_frequency: (i) => {
+    const d=+i.dominant, t=+i.total;
+    if(!t) return null;
+    const p=(d/t).toFixed(4);
+    const q=(1-p).toFixed(4);
+    return {value:p, unit:'(p)', desc:`q = ${q} | p + q = 1.0`};
+  },
+
+  hardy_weinberg: (i) => {
+    const p=+i.p;
+    if(!p||p<0||p>1) return null;
+    const q=(1-p).toFixed(4);
+    const AA=(p*p).toFixed(4);
+    const Aa=(2*p*(1-p)).toFixed(4);
+    const aa=((1-p)*(1-p)).toFixed(4);
+    return {value:`AA=${AA}, Aa=${Aa}, aa=${aa}`, unit:'', desc:`p=${p}, q=${q} | Hardy-Weinberg likevekt`};
+  },
+
+  dog_pregnancy: (i) => {
+    if(!i.mating_date) return null;
+    const d=new Date(i.mating_date);
+    d.setDate(d.getDate()+63);
+    return {value:d.toLocaleDateString('nb-NO',{day:'numeric',month:'long',year:'numeric'}), unit:'', desc:'Hundegraviditet: 58-68 dager (ca 63 dager)'};
+  },
+
+  cat_pregnancy: (i) => {
+    if(!i.mating_date) return null;
+    const d=new Date(i.mating_date);
+    d.setDate(d.getDate()+65);
+    return {value:d.toLocaleDateString('nb-NO',{day:'numeric',month:'long',year:'numeric'}), unit:'', desc:'Kattegraviditet: 63-67 dager (ca 65 dager)'};
+  },
+
+  sheep_pregnancy: (i) => {
+    if(!i.mating_date) return null;
+    const d=new Date(i.mating_date);
+    d.setDate(d.getDate()+147);
+    return {value:d.toLocaleDateString('nb-NO',{day:'numeric',month:'long',year:'numeric'}), unit:'', desc:'Sauedrektigheit: 144-151 dager (ca 147 dager)'};
+  },
+
+  goat_pregnancy: (i) => {
+    if(!i.mating_date) return null;
+    const d=new Date(i.mating_date);
+    d.setDate(d.getDate()+150);
+    return {value:d.toLocaleDateString('nb-NO',{day:'numeric',month:'long',year:'numeric'}), unit:'', desc:'Geitedrektighet: 145-155 dager (ca 150 dager)'};
+  },
+
+  cow_pregnancy: (i) => {
+    if(!i.mating_date) return null;
+    const d=new Date(i.mating_date);
+    d.setDate(d.getDate()+283);
+    return {value:d.toLocaleDateString('nb-NO',{day:'numeric',month:'long',year:'numeric'}), unit:'', desc:'Kugraviditet: 279-287 dager (ca 283 dager)'};
+  },
+
+  horse_pregnancy: (i) => {
+    if(!i.mating_date) return null;
+    const d=new Date(i.mating_date);
+    d.setDate(d.getDate()+340);
+    return {value:d.toLocaleDateString('nb-NO',{day:'numeric',month:'long',year:'numeric'}), unit:'', desc:'Hestdrektighet: 320-360 dager (ca 340 dager)'};
+  },
+
+  dog_age: (i) => {
+    const a=+i.dog_age;
+    if(!a) return null;
+    const size=i.size||'Medium (10-25 kg)';
+    let human;
+    if(size.includes('Liten')) human=Math.round(a<=1?15:a<=2?24:24+(a-2)*4);
+    else if(size.includes('Stor')) human=Math.round(a<=1?15:a<=2?24:24+(a-2)*6);
+    else human=Math.round(a<=1?15:a<=2?24:24+(a-2)*5);
+    return {value:human, unit:'menneskeår', desc:`${a} hundeår = ${human} menneskeår (${size})`};
+  },
+
+  cat_age: (i) => {
+    const a=+i.cat_age;
+    if(!a) return null;
+    const human=a<=1?15:a<=2?24:Math.round(24+(a-2)*4);
+    return {value:human, unit:'menneskeår', desc:`${a} katteår = ${human} menneskeår`};
+  },
+
+  chocolate_toxicity_dog: (i) => {
+    const w=+i.weight, c=+i.chocolate;
+    if(!w||!c) return null;
+    const toxicity={'Melkesjokolade':44,'Mørk sjokolade':154,'Bakesjokolade':396,'Hvit sjokolade':0};
+    const theobromine=(toxicity[i.type]||44)*c/100;
+    const per_kg=theobromine/w;
+    let risk=per_kg<20?'Minimal risiko ✓':per_kg<40?'Moderat risiko ⚠️':per_kg<60?'Alvorlig risiko 🚨':'Livsfarlig! Ring veterinær nå! 🚨';
+    return {value:theobromine.toFixed(1), unit:'mg teobromin', desc:`${per_kg.toFixed(1)} mg/kg — ${risk}`};
+  },
+
+  chocolate_toxicity_cat: (i) => {
+    const w=+i.weight, c=+i.chocolate;
+    if(!w||!c) return null;
+    const toxicity={'Melkesjokolade':44,'Mørk sjokolade':154,'Bakesjokolade':396};
+    const theobromine=(toxicity[i.type]||44)*c/100;
+    const per_kg=theobromine/w;
+    let risk=per_kg<80?'Minimal risiko ✓':per_kg<160?'Moderat risiko ⚠️':'Alvorlig — kontakt veterinær! 🚨';
+    return {value:theobromine.toFixed(1), unit:'mg teobromin', desc:`${per_kg.toFixed(1)} mg/kg — ${risk}`};
+  },
+
+  dog_food: (i) => {
+    const w=+i.weight;
+    if(!w) return null;
+    const base=w*0.02;
+    const ageMulti={'Valp (under 1 år)':2,'Voksen (1-7 år)':1,'Senior (over 7 år)':0.8};
+    const actMulti={'Lav':0.8,'Normal':1,'Høy':1.3};
+    const amount=(base*(ageMulti[i.age]||1)*(actMulti[i.activity]||1)*1000).toFixed(0);
+    return {value:amount, unit:'gram/dag', desc:`For ${w} kg hund — ${i.age||'Voksen'}`};
+  },
+
+  cat_calories: (i) => {
+    const w=+i.weight;
+    if(!w) return null;
+    const rer=70*Math.pow(w,0.75);
+    const multi={'Kattunge':2.5,'Voksen':1.2,'Senior':1.1};
+    const sterile={'Sterilisert/Kastrert':0.8,'Intakt':1};
+    const cal=Math.round(rer*(multi[i.age]||1.2)*(sterile[i.status]||1));
+    return {value:cal, unit:'kcal/dag', desc:`RER: ${Math.round(rer)} kcal | ${i.age||'Voksen'} katt`};
+  },
+
+  protein_mw: (i) => {
+    const seq=(i.sequence||'').toUpperCase().replace(/[^ACDEFGHIKLMNPQRSTVWY]/g,'');
+    if(!seq.length) return null;
+    const mw={'A':89,'C':121,'D':133,'E':147,'F':165,'G':75,'H':155,'I':131,'K':146,'L':131,'M':149,'N':132,'P':115,'Q':146,'R':174,'S':105,'T':119,'V':117,'W':204,'Y':181};
+    const total=seq.split('').reduce((sum,aa)=>sum+(mw[aa]||110),0)-(seq.length-1)*18;
+    return {value:(total/1000).toFixed(2), unit:'kDa', desc:`${seq.length} aminosyrer | ${total.toLocaleString()} Da`};
+  },
+
+  dna_melting: (i) => {
+    const seq=(i.sequence||'').toUpperCase().replace(/[^ATCG]/g,'');
+    if(!seq.length) return null;
+    const gc=seq.split('').filter(b=>b==='G'||b==='C').length;
+    const at=seq.length-gc;
+    const tm=seq.length<14?2*(at)+4*(gc):64.9+41*(gc-16.4)/seq.length;
+    return {value:tm.toFixed(1), unit:'°C', desc:`GC: ${gc}/${seq.length} (${(gc/seq.length*100).toFixed(0)}%) | AT: ${at}`};
+  },
+
+  annealing_temp: (i) => {
+    const tm=+i.tm;
+    if(!tm) return null;
+    const ta=(tm-5).toFixed(1);
+    return {value:ta, unit:'°C', desc:`Ta = Tm - 5°C = ${tm} - 5 = ${ta}°C`};
+  },
+
+  compost: (i) => {
+    const g=+i.green, b=+i.brown;
+    if(!g||!b) return null;
+    const ratio=(b/g).toFixed(1);
+    const ideal=ratio>=25&&ratio<=30?'Ideelt ✓':ratio<25?'Trenger mer brunt materiale':'Trenger mer grønt materiale';
+    return {value:ratio, unit:':1 (brun:grønn)', desc:`C:N forhold — ${ideal}`};
+  },
+
+  soil: (i) => {
+    const l=+i.length, w=+i.width, d=+i.depth/100;
+    if(!l||!w||!d) return null;
+    const vol=(l*w*d).toFixed(3);
+    const liters=(l*w*d*1000).toFixed(0);
+    return {value:liters, unit:'liter', desc:`${vol} m³ | Ca ${Math.ceil(+liters/50)} sekker (50L)`};
+  },
+
+  grass_seed: (i) => {
+    const a=+i.area;
+    if(!a) return null;
+    const rate=i.type==='Nysåing'?30:15;
+    const kg=(a*rate/1000).toFixed(2);
+    return {value:kg, unit:'kg frø', desc:`${rate} g/m² × ${a} m² = ${kg} kg`};
+  },
+
+  corn_yield: (i) => {
+    const a=+i.area, p=+i.plants||8000;
+    if(!a) return null;
+    const yield_kg=Math.round(a*p*0.18/1000);
+    return {value:yield_kg.toLocaleString('nb-NO'), unit:'kg', desc:`${a} dekar × ${p} planter/dekar`};
+  },
+
+  cattle_per_acre: (i) => {
+    const a=+i.area;
+    if(!a) return null;
+    const multi={'Lav':0.3,'Normal':0.5,'God':0.8};
+    const cows=Math.floor(a*(multi[i.quality]||0.5));
+    return {value:cows, unit:'kyr', desc:`${i.quality||'Normal'} beitekvalitet på ${a} dekar`};
+  },
+
+  // ========== KJEMI ==========
+  molality: (i) => {
+    const mol=+i.moles, solvent=+i.solvent;
+    if(!mol||!solvent) return null;
+    return {value:(mol/solvent).toFixed(4), unit:'mol/kg', desc:`${mol} mol / ${solvent} kg`};
+  },
+
+  concentration: (i) => {
+    const mol=+i.moles, vol=+i.volume;
+    if(!mol||!vol) return null;
+    return {value:(mol/vol).toFixed(4), unit:'M (mol/L)', desc:`${mol} mol / ${vol} L`};
+  },
+
+  ph_calc: (i) => {
+    const h=+i.h_conc;
+    if(!h||h<=0) return null;
+    const ph=(-Math.log10(h)).toFixed(2);
+    const type=ph<7?'Sur syre':ph>7?'Basisk':'Nøytral';
+    return {value:ph, unit:'pH', desc:`[H⁺] = ${h} M — ${type}`};
+  },
+
+  molecular_weight: (i) => {
+    const c=+i.carbon||0, h=+i.hydrogen||0, o=+i.oxygen||0;
+    const mw=(c*12.011)+(h*1.008)+(o*15.999);
+    return {value:mw.toFixed(3), unit:'g/mol', desc:`C${c}H${h}O${o}`};
+  },
+
+  molar_mass: (i) => {
+    const c=+i.carbon||0, h=+i.hydrogen||0, o=+i.oxygen||0, n=+i.nitrogen||0;
+    const mm=(c*12.011)+(h*1.008)+(o*15.999)+(n*14.007);
+    return {value:mm.toFixed(3), unit:'g/mol', desc:`C${c}H${h}O${o}N${n}`};
+  },
+
+  molarity: (i) => {
+    const mol=+i.moles, vol=+i.volume;
+    if(!mol||!vol) return null;
+    return {value:(mol/vol).toFixed(4), unit:'M', desc:`${mol} mol / ${vol} L = ${(mol/vol).toFixed(4)} M`};
+  },
+
+  mol_calc: (i) => {
+    const g=+i.grams, mm=+i.molar_mass;
+    if(!g||!mm) return null;
+    const mol=(g/mm).toFixed(4);
+    return {value:mol, unit:'mol', desc:`${g}g / ${mm}g/mol = ${mol} mol`};
+  },
+
+  gram_to_mol: (i) => {
+    const g=+i.grams, mm=+i.molar_mass;
+    if(!g||!mm) return null;
+    return {value:(g/mm).toFixed(4), unit:'mol', desc:`${g}g ÷ ${mm}g/mol`};
+  },
+
+  percent_yield: (i) => {
+    const actual=+i.actual, theoretical=+i.theoretical;
+    if(!actual||!theoretical) return null;
+    return {value:(actual/theoretical*100).toFixed(2), unit:'%', desc:`${actual}g / ${theoretical}g × 100`};
+  },
+
+  theoretical_yield: (i) => {
+    const mol=+i.moles, mm=+i.molar_mass_product;
+    if(!mol||!mm) return null;
+    return {value:(mol*mm).toFixed(3), unit:'gram', desc:`${mol} mol × ${mm} g/mol`};
+  },
+
+  dilution_factor: (i) => {
+    const c1=+i.c1, v1=+i.v1, v2=+i.v2;
+    if(!c1||!v1||!v2) return null;
+    const c2=(c1*v1/v2).toFixed(4);
+    return {value:c2, unit:'M', desc:`C1V1=C2V2: ${c1}×${v1}=${c2}×${v2}`};
+  },
+
+  serial_dilution: (i) => {
+    const c=+i.initial_conc, df=+i.dilution_factor, steps=+i.steps;
+    if(!c||!df||!steps) return null;
+    const final=(c/Math.pow(df,steps)).toExponential(3);
+    return {value:final, unit:'', desc:`${c} ÷ ${df}^${steps} = ${final}`};
+  },
+
+  partial_pressure: (i) => {
+    const pt=+i.total_pressure, mf=+i.mole_fraction;
+    if(!pt||!mf) return null;
+    return {value:(pt*mf).toFixed(4), unit:'atm', desc:`P_total × X = ${pt} × ${mf}`};
+  },
+
+  entropy: (i) => {
+    const q=+i.q, t=+i.temperature;
+    if(!q||!t) return null;
+    return {value:(q/t).toFixed(4), unit:'J/K', desc:`ΔS = q/T = ${q}/${t}`};
+  },
+
+  pka_calc: (i) => {
+    const ka=+i.ka;
+    if(!ka||ka<=0) return null;
+    const pka=(-Math.log10(ka)).toFixed(2);
+    return {value:pka, unit:'pKa', desc:`pKa = -log(${ka}) = ${pka}`};
+  },
+
+  percent_composition: (i) => {
+    const em=+i.element_mass, tm=+i.total_mass;
+    if(!em||!tm) return null;
+    return {value:(em/tm*100).toFixed(2), unit:'%', desc:`${em}g/mol ÷ ${tm}g/mol × 100%`};
+  },
+
+  oxidation_number: (i) => {
+    const nums={'H':{'Syre':'+1','Base':'+1','Salt':'+1','Oksid':'+1'},'O':{'Syre':'-2','Base':'-2','Salt':'-2','Oksid':'-2'},'Na':{'Syre':'+1','Base':'+1','Salt':'+1','Oksid':'+1'},'Cl':{'Syre':'-1','Base':'-1','Salt':'-1','Oksid':'-1'}};
+    const n=nums[i.element]?.[i.compound]||'Variabel';
+    return {value:n, unit:`(${i.element} i ${i.compound})`, desc:`Oksidasjonstall for ${i.element}`};
+  },
+
+  solution_dilution: (i) => {
+    const c1=+i.c1, v1=+i.v1, c2=+i.c2;
+    if(!c1||!v1||!c2) return null;
+    const v2=(c1*v1/c2).toFixed(2);
+    return {value:v2, unit:'mL', desc:`V2 = C1×V1/C2 = ${c1}×${v1}/${c2}`};
+  },
+
+  tds_calc: (i) => {
+    const ec=+i.ec;
+    if(!ec) return null;
+    const tds=(ec*0.64).toFixed(0);
+    const quality=tds<300?'Utmerket':tds<600?'God':tds<900?'Akseptabel':'Dårlig';
+    return {value:tds, unit:'ppm (mg/L)', desc:`Vannkvalitet: ${quality}`};
+  },
+
+  titration: (i) => {
+    const ct=+i.c_titrant, vt=+i.v_titrant, va=+i.v_analyte;
+    if(!ct||!vt||!va) return null;
+    const ca=(ct*vt/va).toFixed(4);
+    return {value:ca, unit:'M', desc:`n1/n2 = 1:1 | C = ${ct}×${vt}/${va}`};
+  },
+
+  // ========== FYSIKK ==========
+  half_life: (i) => {
+    const n0=+i.initial, hl=+i.half_life, t=+i.time;
+    if(!n0||!hl||!t) return null;
+    const remaining=(n0*Math.pow(0.5,t/hl)).toFixed(4);
+    const decayed=(n0-remaining).toFixed(4);
+    return {value:remaining, unit:'', desc:`Henfallt: ${decayed} (${(decayed/n0*100).toFixed(1)}%)`};
+  },
+
+  centrifugal_force: (i) => {
+    const m=+i.mass, v=+i.velocity, r=+i.radius;
+    if(!m||!v||!r) return null;
+    const f=(m*v*v/r).toFixed(3);
+    return {value:f, unit:'N', desc:`F = mv²/r = ${m}×${v}²/${r}`};
+  },
+
+  speed_physics: (i) => {
+    const d=+i.distance, t=+i.time;
+    if(!d||!t) return null;
+    const v=(d/t).toFixed(3);
+    return {value:v, unit:'m/s', desc:`v = s/t = ${d}/${t} | ${(v*3.6).toFixed(2)} km/t`};
+  },
+
+  terminal_velocity: (i) => {
+    const m=+i.mass, cd=+i.drag||1.0, a=+i.area||0.5;
+    if(!m) return null;
+    const vt=Math.sqrt((2*m*9.81)/(1.225*cd*a)).toFixed(2);
+    return {value:vt, unit:'m/s', desc:`${(+vt*3.6).toFixed(1)} km/t | ρ=1.225 kg/m³`};
+  },
+
+  torque: (i) => {
+    const f=+i.force, d=+i.distance;
+    if(!f||!d) return null;
+    return {value:(f*d).toFixed(3), unit:'Nm', desc:`τ = F × d = ${f} × ${d}`};
+  },
+
+  projectile: (i) => {
+    const v=+i.velocity, a=+i.angle*Math.PI/180;
+    if(!v||!a) return null;
+    const range=(v*v*Math.sin(2*a)/9.81).toFixed(2);
+    const maxH=(v*v*Math.sin(a)*Math.sin(a)/(2*9.81)).toFixed(2);
+    const time=(2*v*Math.sin(a)/9.81).toFixed(2);
+    return {value:range, unit:'m (rekkevidde)', desc:`Maks høyde: ${maxH}m | Tid: ${time}s`};
+  },
+
+  pendulum: (i) => {
+    const l=+i.length;
+    if(!l) return null;
+    const t=(2*Math.PI*Math.sqrt(l/9.81)).toFixed(4);
+    return {value:t, unit:'sekunder', desc:`T = 2π√(L/g) = 2π√(${l}/9.81)`};
+  },
+
+  ideal_gas: (i) => {
+    const p=+i.pressure, v=+i.volume, n=+i.moles;
+    if(!p||!v||!n) return null;
+    const t=(p*v/(n*0.08206)).toFixed(2);
+    return {value:t, unit:'K', desc:`T = PV/nR = ${p}×${v}/(${n}×0.08206) = ${t}K = ${(t-273.15).toFixed(2)}°C`};
+  },
+
+  charles_law: (i) => {
+    const v1=+i.v1, t1=+i.t1, t2=+i.t2;
+    if(!v1||!t1||!t2) return null;
+    const v2=(v1*t2/t1).toFixed(4);
+    return {value:v2, unit:'liter', desc:`V2 = V1×T2/T1 = ${v1}×${t2}/${t1}`};
+  },
+
+  specific_heat: (i) => {
+    const m=+i.mass, c=+i.specific_heat||4186, dt=+i.delta_t;
+    if(!m||!dt) return null;
+    const q=(m*c*dt).toFixed(2);
+    return {value:q, unit:'J', desc:`Q = mcΔT = ${m}×${c}×${dt}`};
+  },
+
+  voltage: (i) => {
+    const curr=+i.current, r=+i.resistance;
+    if(!curr||!r) return null;
+    const v=(curr*r).toFixed(3);
+    return {value:v, unit:'V', desc:`V = I × R = ${curr} × ${r}`};
+  },
+
+  ampere_to_watt: (i) => {
+    const a=+i.ampere, v=+i.voltage||230;
+    if(!a) return null;
+    const w=(a*v).toFixed(2);
+    return {value:w, unit:'W', desc:`P = I × V = ${a} × ${v}`};
+  },
+
+  magnetic_force: (i) => {
+    const q=+i.charge, v=+i.velocity, b=+i.field;
+    if(!q||!v||!b) return null;
+    const f=(q*v*b).toFixed(4);
+    return {value:f, unit:'N', desc:`F = qvB = ${q}×${v}×${b}`};
+  },
+
+  time_dilation: (i) => {
+    const t=+i.time, v=+i.velocity/100;
+    if(!t||v>=1) return null;
+    const gamma=1/Math.sqrt(1-v*v);
+    const dilated=(t*gamma).toFixed(6);
+    return {value:dilated, unit:'sekunder', desc:`γ = ${gamma.toFixed(4)} | v = ${i.velocity}% av c`};
+  },
+
+  orbital_period: (i) => {
+    const r=+i.radius, v=+i.velocity;
+    if(!r||!v) return null;
+    const t=(2*Math.PI*r/v).toFixed(3);
+    return {value:t, unit:'sekunder', desc:`T = 2πr/v = 2π×${r}/${v}`};
+  },
+
+  wet_bulb: (i) => {
+    const t=+i.temperature, rh=+i.humidity;
+    if(!t||!rh) return null;
+    const wb=(t*Math.atan(0.151977*Math.sqrt(rh+8.313659))+Math.atan(t+rh)-Math.atan(rh-1.676331)+0.00391838*Math.pow(rh,1.5)*Math.atan(0.023101*rh)-4.686035).toFixed(2);
+    return {value:wb, unit:'°C (våttemperatur)', desc:`Tørr: ${t}°C | Fuktighet: ${rh}%`};
+  },
+
+  density_altitude: (i) => {
+    const alt=+i.altitude, temp=+i.temperature;
+    if(isNaN(alt)||isNaN(temp)) return null;
+    const isa=15-(alt*0.0065);
+    const da=(alt+(120*(temp-isa))).toFixed(0);
+    const density=(1.225*Math.pow((288.15-0.0065*alt)/288.15,5.2561)).toFixed(4);
+    return {value:density, unit:'kg/m³', desc:`Tetthetshøyde: ${da}m | ISA temp: ${isa.toFixed(1)}°C`};
+  }
 };
 
 // ============================================
