@@ -934,6 +934,159 @@ const Calculators = {
     const R=8.314;
     const n=(p*v/(R*t)).toFixed(4);
     return {value:n, unit:'mol', desc:`PV=nRT → n=${n} mol`};
+  },
+
+  // ========== ADVANCED FYSIKK II ==========
+  reynolds_number: (i) => {
+    const rho=+i.density, v=+i.velocity, l=+i.length, mu=+i.viscosity;
+    if(!rho||!v||!l||!mu) return null;
+    const re=(rho*v*l/mu).toFixed(2);
+    const flow=re<2300?'Laminær strømning':re<4000?'Overgangsstrømning':'Turbulent strømning';
+    return {value:re, unit:'(Re)', desc:flow};
+  },
+
+  rc_time_constant: (i) => {
+    const r=+i.resistance, c=+i.capacitance;
+    if(!r||!c) return null;
+    const tau=(r*c).toExponential(4);
+    const t5=(5*r*c).toExponential(4);
+    return {value:tau, unit:'s (τ)', desc:`τ = RC = ${r}×${c} | Fullt ladet: ${t5}s (5τ)`};
+  },
+
+  impulse: (i) => {
+    const f=+i.force, t=+i.time;
+    if(!f||!t) return null;
+    const j=(f*t).toFixed(4);
+    return {value:j, unit:'N·s', desc:`J = F×t = ${f}×${t} | Impuls = Bevegelsesmengde`};
+  },
+
+  watt_to_ampere: (i) => {
+    const w=+i.watt, v=+i.voltage||230;
+    if(!w||!v) return null;
+    const a=(w/v).toFixed(4);
+    return {value:a, unit:'A', desc:`I = P/V = ${w}/${v} | ${(w/1000).toFixed(3)} kW`};
+  },
+
+  crosswind: (i) => {
+    const ws=+i.wind_speed, wa=+i.wind_angle*Math.PI/180;
+    if(!ws||!wa) return null;
+    const cw=(ws*Math.sin(wa)).toFixed(2);
+    const hw=(ws*Math.cos(wa)).toFixed(2);
+    return {value:cw, unit:'knop (kryssvind)', desc:`Medvind/motvind: ${hw} knop`};
+  },
+
+  steam_power: (i) => {
+    const m=+i.mass, t1=+i.temp_initial, t2=+i.temp_final;
+    if(!m||isNaN(t1)||isNaN(t2)) return null;
+    const q=(m*4186*Math.abs(t2-t1)).toFixed(2);
+    return {value:q, unit:'J', desc:`Q = mc(T2-T1) = ${m}×4186×${Math.abs(t2-t1)}`};
+  },
+
+  boyles_law: (i) => {
+    const p1=+i.p1, v1=+i.v1, p2=+i.p2;
+    if(!p1||!v1||!p2) return null;
+    const v2=(p1*v1/p2).toFixed(4);
+    return {value:v2, unit:'liter (V2)', desc:`P1V1=P2V2 → ${p1}×${v1}=${p2}×${v2}`};
+  },
+
+  pressure_calc: (i) => {
+    const f=+i.force, a=+i.area;
+    if(!f||!a) return null;
+    const p=(f/a).toFixed(4);
+    const atm=(p/101325).toFixed(6);
+    const bar=(p/100000).toFixed(6);
+    return {value:p, unit:'Pa', desc:`${atm} atm | ${bar} bar`};
+  },
+
+  air_pressure_altitude: (i) => {
+    const h=+i.altitude;
+    if(isNaN(h)) return null;
+    const p=(101325*Math.pow(1-0.0000226*h,5.256)).toFixed(2);
+    const temp=(15-0.0065*h).toFixed(2);
+    return {value:p, unit:'Pa', desc:`${(p/100).toFixed(2)} hPa | Temp: ${temp}°C`};
+  },
+
+  moment_of_inertia: (i) => {
+    const m=+i.mass, r=+i.radius;
+    if(!m||!r) return null;
+    const shapes={'Solid sylinder':0.5,'Hul sylinder':1,'Kule':0.4,'Stav':0.0833};
+    const k=shapes[i.shape]||0.5;
+    const I=(k*m*r*r).toFixed(4);
+    return {value:I, unit:'kg·m²', desc:`I = ${k}×${m}×${r}² (${i.shape||'Solid sylinder'})`};
+  },
+
+  capacitance: (i) => {
+    const q=+i.charge, v=+i.voltage;
+    if(!q||!v) return null;
+    const c=(q/v).toFixed(6);
+    const e=(0.5*q*v).toFixed(6);
+    return {value:c, unit:'F (Farad)', desc:`C = Q/V = ${q}/${v} | Energi: ${e} J`};
+  },
+
+  newtons_first: (i) => {
+    const m=+i.mass, v=+i.velocity, f=+i.friction||0;
+    if(!m||!v) return null;
+    const p=(m*v).toFixed(4);
+    const stop=f>0?(m*v/f).toFixed(2):'∞';
+    return {value:p, unit:'kg·m/s', desc:`Bevegelsesmengde: ${p} | Stopptid: ${stop}s`};
+  },
+
+  kinetic_energy: (i) => {
+    const m=+i.mass, v=+i.velocity;
+    if(!m||!v) return null;
+    const ke=(0.5*m*v*v).toFixed(4);
+    const p=(m*v).toFixed(4);
+    return {value:ke, unit:'J', desc:`KE = ½mv² | Momentum: ${p} kg·m/s`};
+  },
+
+  quarter_mile: (i) => {
+    const hp=+i.horsepower, w=+i.weight;
+    if(!hp||!w) return null;
+    const et=(6.269*Math.pow(w/hp,0.333)).toFixed(3);
+    const mph=(234*Math.pow(hp/w,0.333)).toFixed(1);
+    const kmh=(+mph*1.60934).toFixed(1);
+    return {value:et, unit:'sekunder', desc:`Topphastighet: ${mph} mph (${kmh} km/t)`};
+  },
+
+  arrow_speed: (i) => {
+    const dw=+i.draw_weight, aw=+i.arrow_weight, dl=+i.draw_length;
+    if(!dw||!aw||!dl) return null;
+    const fps=Math.sqrt((dw*dl*2)/(aw*0.0000648)).toFixed(1);
+    const ms=(+fps*0.3048).toFixed(2);
+    const ke=(0.5*(aw*0.0000648)*(+ms)**2).toFixed(2);
+    return {value:fps, unit:'fps', desc:`${ms} m/s | KE: ${ke} J`};
+  },
+
+  mechanical_advantage: (i) => {
+    const ef=+i.effort_force, lf=+i.load_force;
+    if(!ef||!lf) return null;
+    const ma=(lf/ef).toFixed(4);
+    const eff=(ef/lf*100).toFixed(1);
+    return {value:ma, unit:'(MA)', desc:`Effektivitet: ${eff}% | Load/Effort`};
+  },
+
+  bullet_energy: (i) => {
+    const grains=+i.mass, fps=+i.velocity;
+    if(!grains||!fps) return null;
+    const kg=grains*0.0000647989, ms=fps*0.3048;
+    const j=(0.5*kg*ms*ms).toFixed(2);
+    const ftlbs=(+j*0.737562).toFixed(2);
+    return {value:j, unit:'J', desc:`${ftlbs} ft·lbf | ${grains}gr @ ${fps}fps`};
+  },
+
+  center_of_gravity: (i) => {
+    const m1=+i.mass1, d1=+i.distance1, m2=+i.mass2, d2=+i.distance2;
+    if(!m1||!m2) return null;
+    const cg=((m1*d1+m2*d2)/(m1+m2)).toFixed(4);
+    return {value:cg, unit:'m fra referanse', desc:`(${m1}×${d1}+${m2}×${d2})/(${m1}+${m2})`};
+  },
+
+  voltage_divider: (i) => {
+    const vin=+i.input_voltage, r1=+i.r1, r2=+i.r2;
+    if(!vin||!r1||!r2) return null;
+    const vout=(vin*r2/(r1+r2)).toFixed(4);
+    const ratio=(r2/(r1+r2)*100).toFixed(1);
+    return {value:vout, unit:'V (Vout)', desc:`${ratio}% av ${vin}V | R1=${r1}Ω, R2=${r2}Ω`};
   }
 };
 
