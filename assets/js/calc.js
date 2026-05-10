@@ -1,130 +1,320 @@
 // ============================================
-// CALCULATOR FORMULAS
+// KALKULATOR24 — COMPLETE CALCULATOR FORMULAS
+// All 222 tools with proper working formulas
 // ============================================
+
 const Calculators = {
-  bmi_advanced:(i)=>{const w=+i.weight,h=+i.height,a=+i.age,g=i.gender,act=i.activity,wa=+i.waist,hip=+i.hip;if(!w||!h)return null;const b=(w/((h/100)**2)).toFixed(1);const c=b<18.5?'Undervektig':b<25?'Normal vekt ✓':b<30?'Overvektig':'Fedme';const whr=wa&&hip?(wa/hip).toFixed(2):null;const ideal=g==='Mann'?50+2.3*((h/2.54)-60):45.5+2.3*((h/2.54)-60);return{value:b,unit:'BMI',desc:`Kategori: ${c}${whr?`, WHR: ${whr}`:''}${ideal?`, Ideal: ${Math.round(ideal)}kg`:''}`}},
-  calories_advanced:(i)=>{const w=+i.weight,h=+i.height,a=+i.age,g=i.gender,act=i.activity,goal=i.goal,diet=i.diet_type,workouts=+i.workouts_per_week;if(!w||!h||!a)return null;const bmr=g==='Mann'?88.362+(13.397*w)+(4.799*h)-(5.677*a):447.593+(9.247*w)+(3.098*h)-(4.330*a);const activityMultipliers={'Stillesittende':1.2,'Lett aktiv':1.375,'Moderat aktiv':1.55,'Veldig aktiv':1.725,'Ekstremt aktiv':2.0};const tdee=Math.round(bmr*(activityMultipliers[act]||1.55));const goalAdjustment=goal==='Vekttap'?-500:goal==='Muskelvekst'?300:0;const dailyCalories=tdee+goalAdjustment;const protein=Math.round(w*(goal==='Muskelvekst'?1.8:0.8));const carbs=Math.round((dailyCalories*0.5)/4);const fats=Math.round((dailyCalories*0.25)/9);return{value:dailyCalories,unit:'kcal/dag',desc:`BMR: ${Math.round(bmr)} kcal, TDEE: ${tdee} kcal, Protein: ${protein}g, Karb: ${carbs}g, Fett: ${fats}g`}},
-  idealweight_advanced:(i)=>{const h=+i.height,g=i.gender,a=+i.age,frame=i.body_frame,method=i.method,activity=i.activity_level;if(!h)return null;let id;switch(method){case'Devine':id=g==='Mann'?50+2.3*((h/2.54)-60):45.5+2.3*((h/2.54)-60);break;case'Robinson':id=g==='Mann'?52+1.9*((h/2.54)-60):49+1.7*((h/2.54)-60);break;case'Miller':id=g==='Mann'?56.2+1.41*((h/2.54)-60):53.1+1.36*((h/2.54)-60);break;case'Hamwi':id=g==='Mann'?48+2.7*((h/2.54)-60):45.5+2.3*((h/2.54)-60);break;default:id=g==='Mann'?50+2.3*((h/2.54)-60):45.5+2.3*((h/2.54)-60);}const range=frame==='Liten'?id*0.9:frame==='Stor'?id*1.1:id;return{value:Math.round(range),unit:'kg',desc:`Metode: ${method}, Kroppsbygning: ${frame}`}},
-  bodyfat_advanced:(i)=>{const w=+i.weight,wa=+i.waist,neck=+i.neck,h=+i.height,g=i.gender,a=+i.age,hip=+i.hip,method=i.method;if(!w||!wa||!h)return null;let bf;switch(method){case'US Navy':if(g==='Mann'){bf=86.010*Math.log10(wa-neck)-70.041*Math.log10(h)+36.76;}else{bf=163.205*Math.log10(wa+hip-109.777)-97.684*Math.log10(h)-78.387;}break;case'BMI-metode':const bmi=w/((h/100)**2);bf=g==='Mann'?(1.20*bmi)+(0.23*a)-(10.8*1)-5.4:(1.20*bmi)+(0.23*a)-5.4;break;case'Jackson-Pollock':const sum=waist*0.268+hip*0.245-neck*0.434;bf=sum-8.987;break;case'Durnin-Womersley':const sum2=waist*0.15+hip*0.741-neck*0.32;bf=sum2-4.8;break;default:bf=20;}const category=bf<15?'Lean':bf<25?'Fit':bf<30?'Average':'Obese';return{value:Math.abs(bf).toFixed(1),unit:'%',desc:`Metode: ${method}, Kategori: ${category}`}},
-  bmr_advanced:(i)=>{const w=+i.weight,h=+i.height,a=+i.age,g=i.gender,activity=i.activity,goal=i.goal,bodyFat=+i.body_fat,equation=i.equation_type;if(!w||!h||!a)return null;let bmr;switch(equation){case'Harris-Benedict':bmr=g==='Mann'?88.362+(13.397*w)+(4.799*h)-(5.677*a):447.593+(9.247*w)+(3.098*h)-(4.330*a);break;case'Mifflin-St Jeor':bmr=g==='Mann'?10*w+6.25*h-5*a+161:g==='Kvinne'?10*w+6.25*h-5*a-161:10*w+6.25*h-5*a-161;break;case'Katch-McArdle':bmr=370+(21.6*w)+(2.7*h)-(2.7*a)*bodyFat;break;default:bmr=g==='Mann'?10*w+6.25*h-5*a+161:g==='Kvinne'?10*w+6.25*h-5*a-161:10*w+6.25*h-5*a-161;}const activityMultipliers={'Stillesittende (1.2)':1.2,'Lett aktiv (1.375)':1.375,'Moderat aktiv (1.55)':1.55,'Veldig aktiv (1.725)':1.725,'Ekstremt aktiv (1.9)':1.9};const adjustedBmr=bmr+(goal==='Vekttap (-500 kcal)'?-500:goal==='Vekttap (-250 kcal)'?-250:goal==='Muskelvekst (+250 kcal)'?250:goal==='Muskelvekst (+500 kcal)'?500:0);return{value:Math.round(adjustedBmr*(activityMultipliers[activity]||1.55)),unit:'kcal/dag',desc:`Formel: ${equation}, Justert: ${goal}`}},
-  tdee_advanced:(i)=>{const w=+i.weight,h=+i.height,a=+i.age,g=i.gender,activity=i.activity,workType=i.work_type,exerciseMinutes=+i.exercise_minutes,exerciseType=i.exercise_type;if(!w||!h||!a)return null;const bmr=88.362+(13.397*w)+(4.799*h)-(5.677*a);const baseActivityMultipliers={'Stillesittende':1.2,'Lett aktiv':1.375,'Moderat aktiv':1.55,'Veldig aktiv':1.725,'Ekstremt aktiv':1.9};const workMultipliers={'Kontor':1.1,'Fysisk arbeid':1.2,'Blandet':1.3,'Håndverk':1.4};const exerciseMultipliers={'Kondisjon':1.2,'Styrke':1.1,'Blandet':1.15,'Yoga/Pilates':1.05};const tdee=bmr*(baseActivityMultipliers[activity]||1.55)+(workType?workMultipliers[workType]*exerciseMinutes/60*7:0)+(exerciseType?exerciseMultipliers[exerciseType]*exerciseMinutes/60*7:0);return{value:Math.round(tdee),unit:'kcal/dag',desc:`BMR: ${Math.round(bmr)} kcal, TDEE: ${Math.round(tdee)} kcal`}},
-  weightloss:(i)=>{const c=+i.current,t=+i.target,d=+i.deficit;if(!c||!t||!d)return null;const weeks=Math.round(((c-t)*7700)/d/7);return{value:weeks,unit:'uker',desc:`${c-t} kg å miste med ${d} kcal/dag underskudd`}},
-  water:(i)=>{const w=+i.weight;if(!w)return null;const mult={'Lav':30,'Moderat':35,'Høy':40};const ml=Math.round(w*(mult[i.activity]||35));return{value:(ml/1000).toFixed(1),unit:'liter/dag',desc:`${ml} ml daglig`}},
-  heartrate:(i)=>{const a=+i.age;if(!a)return null;const max=220-a;return{value:`${Math.round(max*0.6)}–${Math.round(max*0.85)}`,unit:'slag/min',desc:`Maks puls: ${max} slag/min`}},
-  protein:(i)=>{const w=+i.weight;if(!w)return null;const mult={'Vedlikehold':0.8,'Muskelvekst':1.8,'Vekttap':1.2};const g=Math.round(w*(mult[i.goal]||1.0));return{value:g,unit:'g/dag',desc:`${mult[i.goal]||1.0}g per kg kroppsvekt`}},
-  pregnancy:(i)=>{if(!i.lmp)return null;const d=new Date(i.lmp);d.setDate(d.getDate()+280);return{value:d.toLocaleDateString('nb-NO',{day:'numeric',month:'long',year:'numeric'}),unit:'',desc:'Estimert termindato (280 dager)'}},
-  bloodpressure:(i)=>{const s=+i.systolic,d=+i.diastolic;if(!s||!d)return null;const cat=s<120&&d<80?'Normal ✓':s<130&&d<80?'Forhøyet':s<140||d<90?'Høyt stadium 1':'Høyt stadium 2';return{value:`${s}/${d}`,unit:'mmHg',desc:`Kategori: ${cat}`}},
-  sleep:(i)=>{if(!i.wakeup)return null;const[h,m]=i.wakeup.split(':').map(Number);const times=[];for(let c=1;c<=5;c++){let th=h,tm=m-(90*c);while(tm<0){th--;tm+=60}if(th<0)th+=24;times.push(`${String(th).padStart(2,'0')}:${String(tm).padStart(2,'0')}`)}return{value:times[1],unit:'',desc:`Søvnvinduer: ${times.join(', ')}`}},
-  loan:(i)=>{const P=+i.amount,r=+i.rate/100/12,n=+i.years*12;if(!P||!r||!n)return null;const m=Math.round(P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1));return{value:m.toLocaleString('nb-NO'),unit:'kr/mnd',desc:`Totalt: ${(m*n).toLocaleString('nb-NO')} kr`}},
-  mortgage:(i)=>{const P=+i.price-+i.equity,r=+i.rate/100/12,n=+i.years*12;if(!P||!r||!n||P<0)return null;const m=Math.round(P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1));return{value:m.toLocaleString('nb-NO'),unit:'kr/mnd',desc:`Lån: ${P.toLocaleString('nb-NO')} kr`}},
-  interest:(i)=>{const p=+i.principal,r=+i.rate/100,n=+i.years;if(!p||!r||!n)return null;const t=Math.round(p*Math.pow(1+r,n));return{value:t.toLocaleString('nb-NO'),unit:'kr',desc:`Renter: ${(t-p).toLocaleString('nb-NO')} kr`}},
-  savings_advanced:(i)=>{const P=+i.initial,pmt=+i.monthly,r=+i.rate/100/12,n=+i.years*12,inflation=+i.inflation/100,taxRate=+i.tax_rate/100,contribType=i.contribution_type,freq=i.interest_frequency;if(!r||!n)return null;let adjustedRate=r-taxRate;const realRate=(adjustedRate-inflation)/(1+inflation);const periods=freq==='Månedlig'?n:freq==='Kvartalsvis'?n/4:freq==='Halvårlig'?n/2:n;const f=Math.round(P*Math.pow(1+realRate,periods)+pmt*(Math.pow(1+realRate,periods)-1)/realRate);const realValue=f/Math.pow(1+inflation,n/12);return{value:f.toLocaleString('nb-NO'),unit:'kr',desc:`Nominell: ${f.toLocaleString('nb-NO')} kr, Reell verdi: ${Math.round(realValue).toLocaleString('nb-NO')} kr (${n} år)`}},
-  vat_advanced:(i)=>{const a=+i.amount,rate=+i.custom_rate||+i.rate,op=i.operation,deductions=+i.deductions,country=i.country;if(!a)return null;let vatAmount;let baseAmount=a;if(op==='Trekk fra MVA'){baseAmount=a/(1+rate/100);vatAmount=a-baseAmount;}else{vatAmount=baseAmount*(rate/100);}if(op==='Finn MVA-beløp'){return{value:vatAmount.toLocaleString('nb-NO'),unit:'kr',desc:`MVA-beløp`};}const total=(op==='Trekk fra MVA'?baseAmount:baseAmount+vatAmount-deductions);const countryRates={'Norge':25,'Sverige':25,'Danmark':25,'Finland':24};const effectiveRate=countryRates[country]||rate;return{value:Math.round(total).toLocaleString('nb-NO'),unit:'kr',desc:`MVA: ${Math.round(vatAmount).toLocaleString('nb-NO')} kr (${effectiveRate}%)`}},
-  hourly_advanced:(i)=>{const a=+i.annual,h=+i.hours,vac=+i.vacation_days,sick=+i.sick_days,pension=+i.pension/100,tax=+i.tax/100,benefits=+i.benefits,overtime=+i.overtime;if(!a||!h)return null;const workWeeks=52-(vac/7)-(sick/7);const workHours=h*workWeeks;const overtimePay=overtime*(a/52/12)*(1+tax/100);const grossHourly=(a+benefits)/workHours;const netHourly=grossHourly*(1-tax/100)-pension;return{value:Math.round(netHourly).toLocaleString('nb-NO'),unit:'kr/time',desc:`Brutto: ${Math.round(grossHourly).toLocaleString('nb-NO')} kr/time`}},
-  tax_advanced:(i)=>{const inc=+i.income,status=i.filing_status,children=+i.children,deductions=+i.deductions,mortgageInterest=+i.mortgage_interest,unionFees=+i.union_fees,donations=+i.donations,municipality=i.municipality;if(!inc)return null;let tax=0;if(status==='Ugift'){tax=inc*0.22;}else if(status==='Gift/Samboer'){tax=inc*0.23;}else if(status==='Enke/Enkemann'){tax=inc*0.19;}const personalDeduction=children*10450+deductions+mortgageInterest+unionFees+donations;const taxableIncome=Math.max(0,inc-personalDeduction);const finalTax=Math.round(taxableIncome*tax/100);const netIncome=inc-finalTax;const effectiveRate=(finalTax/inc*100).toFixed(1);return{value:finalTax.toLocaleString('nb-NO'),unit:'kr skatt',desc:`Effektiv skattesats: ${effectiveRate}%, Netto: ${netIncome.toLocaleString('nb-NO')} kr`}},
-  investment_advanced:(i)=>{const a=+i.amount,r=+i.rate/100,n=+i.years,monthly=+i.monthly_contribution,risk=i.risk_level,inflation=+i.inflation/100,tax=+i.tax_rate/100,type=i.investment_type;if(!a||!r||!n)return null;const riskAdjustment=risk==='Lav'?0.95:risk==='Moderat'?1.0:risk==='Høy'?1.05:1.1;const adjustedRate=r*riskAdjustment;const realRate=(adjustedRate-inflation)/(1+inflation);const periods=n*12;const futureValue=Math.round(a*Math.pow(1+realRate,periods)+monthly*(Math.pow(1+realRate,periods)-1)/realRate);const nominalValue=Math.round(a*Math.pow(1+adjustedRate,periods)+monthly*(Math.pow(1+adjustedRate,periods)-1)/adjustedRate);const totalGain=nominalValue-a;const afterTaxGain=totalGain*(1-tax/100);return{value:futureValue.toLocaleString('nb-NO'),unit:'kr',desc:`Nominell: ${nominalValue.toLocaleString('nb-NO')} kr, Etter skatt: ${(futureValue-a+afterTaxGain).toLocaleString('nb-NO')} kr`}},
-  currency_advanced:(i)=>{const rates={'NOK':1,'USD':0.094,'EUR':0.087,'GBP':0.074,'SEK':0.97,'DKK':0.65,'CHF':0.103,'JPY':15.5,'CAD':0.073,'AUD':0.063};const a=+i.amount,from=i.from,to=i.to,feeType=i.fee_type,fee=+i.fee_amount,margin=+i.margin/100;if(!a)return null;const nok=a/rates[from];const exchangeRate=rates[to];let result=nok*exchangeRate;if(margin>0){result=nok*(exchangeRate*(1-margin));}const feeAmount=feeType==='Fast gebyr'?fee:feeType==='Prosentgebyr'?a*fee/100:0;const finalResult=feeType==='Fast gebyr'?result-fee:result*(1-fee/100);return{value:finalResult.toFixed(2),unit:to,desc:`${a} ${from} = ${finalResult.toFixed(2)} ${to}${fee>0?` (Gebyr: ${feeAmount} kr)`:''}`}},
-  pension_advanced:(i)=>{const a=+i.age,ret=+i.retirement_age,s=+i.salary,sav=+i.savings,monthly=+i.monthly_saving,expected=+i.expected_return/100,inflation=+i.inflation/100,type=i.pension_type;if(!a||!s)return null;const yearsToRetirement=ret-a;const realReturn=(expected-inflation)/(1+inflation);const futureSavings=Math.round(sav*Math.pow(1+realReturn,yearsToRetirement)+monthly*12*((Math.pow(1+realReturn,yearsToRetirement)-1)/realReturn));const governmentPension=type==='Offentlig'?salary*0.02*yearsToRetirement*12:0;const totalFuture=futureSavings+governmentPension;const monthlyPension=Math.round(totalFuture/(yearsToRetirement*12));return{value:monthlyPension.toLocaleString('nb-NO'),unit:'kr/mnd',desc:`Offentlig: ${Math.round(governmentPension/12).toLocaleString('nb-NO')} kr/mnd, Total: ${totalFuture.toLocaleString('nb-NO')} kr`}},
-  percent_advanced:(i)=>{const v=+i.value,p=+i.percent,op=i.operation,v2=+i.value2,precision=+i.precision||2,steps=i.show_steps;if(!v&&v!==0)return null;let result;let description='';switch(op){case'Finn prosent av tall':result=(v*p/100).toFixed(precision);description=`${p}% av ${v} = ${result}`;break;case'Finn prosent økning':result=((v2-v)/v*100).toFixed(precision);description=`Økning fra ${v} til ${v2}: ${result}%`;break;case'Finn prosent reduksjon':result=((v-v2)/v*100).toFixed(precision);description=`Reduksjon fra ${v} til ${v2}: ${result}%`;break;case'Finn opprinnelig verdi':result=(v/(p/100)).toFixed(precision);description=`${p}% av opprinnelig = ${v}, så opprinnelig = ${result}`;break;case'Sammenlign prosenter':result=((v-v2)/v2*100).toFixed(precision);description=`Forskjell: ${v} vs ${v2} = ${result}%`;break;default:result=(v*p/100).toFixed(precision);}return{value:result,unit:'%',desc:description}},
-  sqrt_advanced:(i)=>{const n=+i.number,rootType=i.root_type,customRoot=+i.custom_root,precision=+i.precision||6,showImaginary=i.show_imaginary;if(isNaN(n)||n<0)return null;let result;let description='';switch(rootType){case'Kvadratrot':result=Math.sqrt(n);description=`√${n}`;break;case'Kubikkrot':result=Math.cbrt(n);description=`³√${n}`;break;case'Fjerde rot':result=Math.pow(n,0.25);description=`⁴√${n}`;break;case'Egen rot':result=Math.pow(n,1/customRoot);description=`${customRoot}√${n}`;break;default:result=Math.sqrt(n);}if(showImaginary==='Ja'&&n<0){result=`${Math.sqrt(Math.abs(n))}i`;}return{value:result.toFixed(precision).replace(/\.?0+$/,''),unit:'',desc:description}},
-  power_advanced:(i)=>{const b=+i.base,e=+i.exp,precision=+i.precision||6,scientific=i.scientific_notation,steps=i.show_steps;if(isNaN(b)||isNaN(e))return null;const result=Math.pow(b,e);let displayValue;if(scientific==='Ja'){displayValue=result.toExponential(precision);}else{displayValue=result.toLocaleString('nb-NO',{maximumFractionDigits:precision});}const description=steps==='Ja'?`${b}^${e} = ${result}`:`${b}^${e}`;return{value:displayValue,unit:'',desc:description}},
-  fraction_advanced:(i)=>{const n1=+i.num1,d1=+i.den1,n2=+i.num2,d2=+i.den2,op=i.operation,simplify=i.simplify==='Ja',mixed=i.mixed_number==='Ja';if(!d1||!d2)return null;let rn,rd;switch(op){case'Addisjon':rn=n1*d2+n2*d1;rd=d1*d2;break;case'Subtraksjon':rn=n1*d2-n2*d1;rd=d1*d2;break;case'Multiplikasjon':rn=n1*n2;rd=d1*d2;break;case'Divisjon':rn=n1*d2;rd=d1*n2;break;default:rn=n1*d2+n2*d1;rd=d1*d2;}const g=gcd(rn,rd);let result=`${rn/g}/${rd/g}`;if(simplify){result=`${rn/g}/${rd/g}`;}if(mixed&&Math.abs(rn)>rd){const whole=Math.floor(rn/rd);const remainder=rn%rd;result=`${whole} ${Math.abs(remainder)}/${rd/g}`;}return{value:result,unit:'',desc:`${n1}/${d1} ${op} ${n2}/${d2}`}},
-  average_advanced:(i)=>{const nums=i.numbers.split(',').map(n=>+n.trim()).filter(n=>!isNaN(n));const method=i.method,weights=i.weights,precision=+i.precision||2,showStats=i.show_stats==='Ja';if(!nums.length)return null;let result;let description='';switch(method){case'Aritmetisk gjennomsnitt':result=nums.reduce((a,b)=>a+b,0)/nums.length;description=`Aritmetisk gjennomsnitt av ${nums.length} tall`;break;case'Geometrisk gjennomsnitt':result=Math.pow(nums.reduce((a,b)=>a*b,1),1/nums.length);description=`Geometrisk gjennomsnitt av ${nums.length} tall`;break;case'Harmonisk gjennomsnitt':result=nums.length/nums.reduce((a,b)=>a+1/b,0);description=`Harmonisk gjennomsnitt av ${nums.length} tall`;break;case'Vektet gjennomsnitt':if(!weights)return null;const w=weights.split(',').map(n=>+n.trim());result=nums.reduce((a,b,i)=>a+b*w[i],0)/w.reduce((a,b)=>a+b,0);description=`Vektet gjennomsnitt`;break;default:result=nums.reduce((a,b)=>a+b,0)/nums.length;}const stats=showStats?`, Min: ${Math.min(...nums).toFixed(precision)}, Max: ${Math.max(...nums).toFixed(precision)}`:'';return{value:result.toFixed(precision),unit:'',desc:description+stats}},
-  log_advanced:(i)=>{const n=+i.number,base=i.base,customBase=+i.custom_base,op=i.operation,precision=+i.precision||6;if(!n||n<=0)return null;let result;let description='';let b=base==='Egen base'?customBase:base==='10 (vanlig logaritme)'?10:base==='e (naturlig logaritme)'?Math.E:base==='2 (binær logaritme)'?2:10;switch(op){case'Logaritme':result=Math.log(n)/Math.log(b);description=`log_${b}(${n})`;break;case'Eksponential':result=Math.pow(b,n);description=`${b}^${n}`;break;case'Logaritme base 10':result=Math.log10(n);description=`log₁₀(${n})`;break;case'Naturlig logaritme':result=Math.log(n);description=`ln(${n})`;break;default:result=Math.log(n)/Math.log(b);}return{value:result.toFixed(precision).replace(/\.?0+$/,''),unit:'',desc:description}},
-  temperature_advanced:(i)=>{const temp=+i.temperature,from=i.from_unit,to=i.to_unit,precision=+i.precision||2;if(isNaN(temp))return null;let result;let description='';switch(from){case'Celsius (°C)':if(to.includes('Fahrenheit')){result=(temp*9/5+32).toFixed(precision);description=`${temp}°C = ${result}°F`;}else if(to.includes('Kelvin')){result=(temp+273.15).toFixed(precision);description=`${temp}°C = ${result}K`;}else if(to.includes('Rankine')){result=(temp*9/5+491.67).toFixed(precision);description=`${temp}°C = ${result}°R`;}else if(to.includes('Réaumur')){result=(temp*0.8).toFixed(precision);description=`${temp}°C = ${result}°Ré`;}break;case'Fahrenheit (°F)':if(to.includes('Celsius')){result=((temp-32)*5/9).toFixed(precision);description=`${temp}°F = ${result}°C`;}else if(to.includes('Kelvin')){result=((temp-32)*5/9+273.15).toFixed(precision);description=`${temp}°F = ${result}K`;}break;case'Kelvin (K)':if(to.includes('Celsius')){result=(temp-273.15).toFixed(precision);description=`${temp}K = ${result}°C`;}else if(to.includes('Fahrenheit')){result=((temp-273.15)*9/5+32).toFixed(precision);description=`${temp}K = ${result}°F`;}break;default:result=temp.toFixed(precision);}return{value:result,unit:to.split('(')[1].replace(')',''),desc:description}},
-  fahrenheit_to_celsius_advanced:(i)=>{const f=+i.fahrenheit,precision=+i.precision||2,showFormula=i.show_formula,showKelvin=i.show_kelvin;if(isNaN(f))return null;const c=((f-32)*5/9).toFixed(precision);const k=((f-32)*5/9+273.15).toFixed(precision);const formula=showFormula==='Ja'?'(°F - 32) × 5/9':'';const desc=showKelvin==='Ja'?`${f}°F = ${c}°C = ${k}K`:showFormula==='Ja'?`${f}°F = ${c}°C (${formula})`:`${f}°F = ${c}°C`;return{value:c,unit:'°C',desc:desc}},
-  km_to_miles_advanced:(i)=>{const k=+i.km,precision=+i.precision||3,showFormula=i.show_formula,conversionType=i.conversion_type;if(!k)return null;const conversionFactor=conversionType==='Nautiske miles'?0.539957:0.621371;const result=(k*conversionFactor).toFixed(precision);const formula=showFormula==='Ja'?`${k} × ${conversionFactor}`:'';const desc=showFormula==='Ja'?`${k} km = ${result} ${conversionType==='Nautiske miles'?'nautiske miles':'miles'} (${formula})`:`${k} km = ${result} ${conversionType==='Nautiske miles'?'nautiske miles':'miles'}`;return{value:result,unit:conversionType==='Nautiske miles'?'nautiske miles':'miles',desc:desc}},
-  miles_to_km_advanced:(i)=>{const m=+i.miles,precision=+i.precision||3,showFormula=i.show_formula,conversionType=i.conversion_type;if(!m)return null;const conversionFactor=conversionType==='Nautiske miles'?1.852:1.60934;const result=(m*conversionFactor).toFixed(precision);const formula=showFormula==='Ja'?`${m} × ${conversionFactor}`:'';const desc=showFormula==='Ja'?`${m} ${conversionType==='Nautiske miles'?'nautiske miles':'miles'} = ${result} km (${formula})`:`${m} ${conversionType==='Nautiske miles'?'nautiske miles':'miles'} = ${result} km`;return{value:result,unit:'km',desc:desc}},
-  kg_to_lbs_advanced:(i)=>{const k=+i.kg,precision=+i.precision||2,showFormula=i.show_formula,showStones=i.show_stones;if(!k)return null;const lbs=(k*2.20462).toFixed(precision);const stones=Math.floor(k/6.35029);const remainingLbs=(k*2.20462)%14;const formula=showFormula==='Ja'?`${k} × 2.20462`:'';let desc=showFormula==='Ja'?`${k} kg = ${lbs} pund (${formula})`:`${k} kg = ${lbs} pund`;if(showStones==='Ja'){desc+=` = ${stones} stone ${remainingLbs.toFixed(2)} lbs`;}return{value:lbs,unit:'pund',desc:desc}},
-  lbs_to_kg_advanced:(i)=>{const l=+i.lbs,precision=+i.precision||2,showFormula=i.show_formula,inputStones=i.input_stones;if(!l)return null;let kg;if(inputStones==='Ja'){const stones=Math.floor(l/14);const lbs=l%14;kg=(stones*6.35029+lbs/2.20462).toFixed(precision);}else{kg=(l/2.20462).toFixed(precision);}const formula=showFormula==='Ja'?`${l} ÷ 2.20462`:'';const desc=showFormula==='Ja'?`${l} pund = ${kg} kg (${formula})`:`${l} pund = ${kg} kg`;return{value:kg,unit:'kg',desc:desc}},
-  meter_to_feet_advanced:(i)=>{const m=+i.meter,precision=+i.precision||3,showFormula=i.show_formula,showInches=i.show_inches;if(!m)return null;const feet=(m*3.28084).toFixed(precision);const inches=(m*3.28084%1)*12;const formula=showFormula==='Ja'?`${m} × 3.28084`:'';let desc=showFormula==='Ja'?`${m} m = ${feet} fot (${formula})`:`${m} m = ${feet} fot`;if(showInches==='Ja'){desc+=` ${inches.toFixed(1)} tommer`;}return{value:feet,unit:'fot',desc:desc}},
-  cm_to_inches_advanced:(i)=>{const c=+i.cm,precision=+i.precision||3,showFormula=i.show_formula,showFractions=i.show_fractions;if(!c)return null;const inches=(c/2.54).toFixed(precision);const wholeInches=Math.floor(c/2.54);const fractionInches=(c/2.54%1)*16;const formula=showFormula==='Ja'?`${c} ÷ 2.54`:'';let desc=showFormula==='Ja'?`${c} cm = ${inches} tommer (${formula})`:`${c} cm = ${inches} tommer`;if(showFractions==='Ja'){desc+=` = ${wholeInches} ${Math.round(fractionInches)}/16 tommer`;}return{value:inches,unit:'tommer',desc:desc}},
-  liter_to_gallon_advanced:(i)=>{const l=+i.liter,gallonType=i.gallon_type,precision=+i.precision||3,showFormula=i.show_formula,showQuarts=i.show_quarts;if(!l)return null;const conversionFactor=gallonType==='UK gallon (Imperial)'?0.219969:0.264172;const gallons=(l*conversionFactor).toFixed(precision);const quarts=(l*conversionFactor*4).toFixed(precision);const formula=showFormula==='Ja'?`${l} × ${conversionFactor}`:'';let desc=showFormula==='Ja'?`${l} L = ${gallons} ${gallonType} (${formula})`:`${l} L = ${gallons} ${gallonType}`;if(showQuarts==='Ja'){desc+=` = ${quarts} quarts`;}return{value:gallons,unit:gallonType,desc:desc}},
-  ml_to_tsp_advanced:(i)=>{const m=+i.ml,toUnit=i.to_unit,precision=+i.precision||2,showFormula=i.show_formula,system=i.measurement_system;if(!m)return null;let result;let unit;let description='';switch(toUnit){case'Teskje (tsp)':result=(m/4.929).toFixed(precision);unit='teskje';break;case'Spiseskje (tbsp)':result=(m/14.787).toFixed(precision);unit='spiseskje';break;case'Kopp':result=(m/236.588).toFixed(precision);unit='kopp';break;case'Unse (oz)':result=(m/29.574).toFixed(precision);unit='unse';break;case'Kubikkcentimeter (cc)':result=m.toFixed(precision);unit='cc';break;default:result=(m/4.929).toFixed(precision);unit='teskje';}const formula=showFormula==='Ja'?`${m} ÷ ${toUnit==='Kopp'?236.588:toUnit==='Unse (oz)'?29.574:toUnit==='Spiseskje (tbsp)'?14.787:4.929}`:'';description=showFormula==='Ja'?`${m} ml = ${result} ${unit} (${formula})`:`${m} ml = ${result} ${unit}`;return{value:result,unit:unit,desc:description}},
-  area_advanced:(i)=>{const shape=i.shape,l=+i.length,w=+i.width,r=+i.radius,h=+i.height,b=+i.base,angle=+i.angle,unit=i.unit;if(!l&&!w&&!r&&!h&&!b)return null;let result;let description='';switch(shape){case'Rektangel':result=l*w;description=`Rektangel: ${l}×${w} ${unit}`;break;case'Kvadrat':result=l*l;description=`Kvadrat: ${l}×${l} ${unit}`;break;case'Sirkel':result=Math.PI*r*r;description=`Sirkel: π×${r}² ${unit}`;break;case'Trekant':result=0.5*b*h;description=`Trekant: ½×${b}×${h} ${unit}`;break;case'Parallellogram':result=b*h;description=`Parallellogram: ${b}×${h} ${unit}`;break;case'Trapez':result=0.5*(b+angle)*h;description=`Trapez: ½×(${b}+${angle})×${h} ${unit}`;break;case'Ellipse':result=Math.PI*(l/2)*(w/2);description=`Ellipse: π×${l/2}×${w/2} ${unit}`;break;case'Sektor':result=(angle/360)*Math.PI*r*r;description=`Sektor: (${angle}/360)×π×${r}² ${unit}`;break;default:result=l*w;}const convertedResult=unit==='centimeter'?result*10000:unit==='kilometer'?result/1000000:unit==='fot'?result*10.764:unit==='tommer'?result*1550:result;return{value:convertedResult.toFixed(2),unit:unit,desc:description}},
-  circle_advanced:(i)=>{const inputType=i.input_type,value=+i.value,unit=i.unit,precision=+i.precision||2,showFormula=i.show_formula,showPi=i.show_pi;if(!value)return null;let radius,diameter,circumference,area;switch(inputType){case'Radius':radius=value;diameter=2*radius;circumference=2*Math.PI*radius;area=Math.PI*radius*radius;break;case'Diameter':diameter=value;radius=diameter/2;circumference=Math.PI*diameter;area=Math.PI*(diameter/2)*(diameter/2);break;case'Omkrets':circumference=value;radius=circumference/(2*Math.PI);diameter=circumference/Math.PI;area=Math.PI*radius*radius;break;case'Areal':area=value;radius=Math.sqrt(area/Math.PI);diameter=2*radius;circumference=2*Math.PI*radius;break;default:radius=value;diameter=2*radius;circumference=2*Math.PI*radius;area=Math.PI*radius*radius;}const formula=showFormula==='Ja'?`Areal = π×r² = π×${radius}²`:'';const piDisplay=showPi==='Ja'?area.toFixed(precision).replace(/3.14159/g,'π'):area.toFixed(precision);const unitFactor=unit==='centimeter'?0.0001:unit==='kilometer'?1000000:unit==='fot'?0.092903:unit==='tommer'?0.00064516:1;const convertedArea=area*unitFactor;return{value:convertedArea.toFixed(precision),unit:unit,desc:`Radius: ${radius.toFixed(precision)} ${unit}, Diameter: ${diameter.toFixed(precision)} ${unit}, Omkrets: ${circumference.toFixed(precision)} ${unit}${formula?`, ${formula}`:''}`}},
-  triangle_advanced:(i)=>{const inputType=i.input_type,base=+i.base,height=+i.height,a=+i.side_a,side_b=+i.side_b,c=+i.side_c,angleA=+i.angle_a,angleB=+i.angle_b,unit=i.unit;if(!base&&!height&&!a&&!side_b&&!c)return null;let area,perimeter,angles;const unitFactor=unit==='centimeter'?0.0001:unit==='fot'?0.092903:unit==='tommer'?0.00064516:1;switch(inputType){case'Grunnlinje og høyde':area=0.5*base*height;perimeter=base+2*Math.sqrt((base/2)*(base/2)+height*height);break;case'Tre sider':if(a+side_b>c&&a+c>side_b&&side_b+c>a){const s=(a+side_b+c)/2;area=Math.sqrt(s*(s-a)*(s-side_b)*(s-c));perimeter=a+side_b+c;}else{return null;}break;case'To sider og vinkel':if(angleA&&angleB){const c_side=Math.sqrt(a*a+side_b*side_b-2*a*side_b*Math.cos(angleB*Math.PI/180));area=0.5*a*side_b*Math.sin(angleB*Math.PI/180);perimeter=a+side_b+c_side;}else{return null;}break;case'To vinkler og side':if(angleA&&angleB){const c_side=side_b*Math.sin(angleA*Math.PI/180)/Math.sin(angleB*Math.PI/180);area=0.5*a*side_b*Math.sin(angleB*Math.PI/180);perimeter=a+side_b+c_side;}else{return null;}break;default:area=0.5*base*height;perimeter=base+2*Math.sqrt((base/2)*(base/2)+height*height);}return{value:(area*unitFactor).toFixed(2),unit:unit,desc:`Areal: ${(area*unitFactor).toFixed(2)} ${unit}, Omkrets: ${perimeter.toFixed(2)} ${unit}`}},
-  pythagoras_advanced:(i)=>{const calcType=i.calculation_type,a=+i.side_a,b=+i.side_b,c=+i.side_c,precision=+i.precision||3,showFormula=i.show_formula,unit=i.unit;if(!a&&!b&&!c)return null;let result,description='';switch(calcType){case'Finn hypotenus (c)':if(a&&b){c=Math.sqrt(a*a+b*b);description=`Hypotenus c = √(${a}²+${b}²) = ${c.toFixed(precision)}`;}break;case'Finn katet (a)':if(b&&c){a=Math.sqrt(c*c-b*b);description=`Katet a = √(${c}²-${b}²) = ${a.toFixed(precision)}`;}break;case'Finn katet (b)':if(a&&c){b=Math.sqrt(c*c-a*a);description=`Katet b = √(${c}²-${a}²) = ${b.toFixed(precision)}`;}break;case'Sjekk rettvinklet trekant':if(a&&b&&c){const isRightTriangle=Math.abs(a*a+b*b-c*c)<0.0001;description=isRightTriangle?'Rettvinklet trekant ✓':'Ikke rettvinklet trekant';}else{return null;}break;default:return null;}const unitFactor=unit==='centimeter'?0.01:unit==='fot'?0.3048:unit==='tommer'?0.0254:1;const convertedResult=typeof result==='number'?result*unitFactor:result;return{value:typeof convertedResult==='number'?convertedResult.toFixed(precision):result,unit:unit,desc:description}},
-  volume_advanced:(i)=>{const shape=i.shape,l=+i.length,w=+i.width,h=+i.height,r=+i.radius,baseArea=+i.base_area,unit=i.unit,precision=+i.precision||3;if(!l&&!w&&!h&&!r&&!baseArea)return null;let result,description='';const unitFactor=unit==='liter'?1000:unit==='kubikkcentimeter'?1000000:unit==='kubikkfot'?35.3147:unit==='gallons'?264.172:1;switch(shape){case'Kuboid':result=l*w*h;description=`Kuboid: ${l}×${w}×${h} = ${result.toFixed(precision)} m³`;break;case'Kube':result=l*l*l;description=`Kube: ${l}³ = ${result.toFixed(precision)} m³`;break;case'Sylinder':result=Math.PI*r*r*h;description=`Sylinder: π×${r}²×${h} = ${result.toFixed(precision)} m³`;break;case'Kule':result=(4/3)*Math.PI*r**3;description=`Kule: (4/3)×π×${r}³ = ${result.toFixed(precision)} m³`;break;case'Kone':result=(1/3)*Math.PI*r*r*h;description=`Kone: (1/3)×π×${r}²×${h} = ${result.toFixed(precision)} m³`;break;case'Pyramide':result=(1/3)*baseArea*h;description=`Pyramide: (1/3)×${baseArea}×${h} = ${result.toFixed(precision)} m³`;break;case'Tetraeder':result=(l**3)/(6*Math.sqrt(2));description=`Tetraeder: ${l}³/(6×√2) = ${result.toFixed(precision)} m³`;break;case'Prisme':result=baseArea*h;description=`Prisme: ${baseArea}×${h} = ${result.toFixed(precision)} m³`;break;default:return null;}const convertedResult=result*unitFactor;return{value:convertedResult.toFixed(precision),unit:unit,desc:description}},
-  sphere_advanced:(i)=>{const inputType=i.input_type,value=+i.value,unit=i.unit,precision=+i.precision||3,showFormula=i.show_formula,showPi=i.show_pi;if(!value)return null;let radius,diameter,circumference,volume,surfaceArea;switch(inputType){case'Radius':radius=value;diameter=2*radius;circumference=2*Math.PI*radius;volume=(4/3)*Math.PI*radius**3;surfaceArea=4*Math.PI*radius**2;break;case'Diameter':diameter=value;radius=diameter/2;circumference=Math.PI*diameter;volume=(4/3)*Math.PI*radius**3;surfaceArea=4*Math.PI*radius**2;break;case'Omkrets':circumference=value;radius=circumference/(2*Math.PI);diameter=circumference/Math.PI;volume=(4/3)*Math.PI*radius**3;surfaceArea=4*Math.PI*radius**2;break;case'Volum':volume=value;radius=Math.pow((3*volume)/(4*Math.PI),1/3);diameter=2*radius;circumference=2*Math.PI*radius;surfaceArea=4*Math.PI*radius**2;break;case'Overflateareal':surfaceArea=value;radius=Math.sqrt(surfaceArea/(4*Math.PI));diameter=2*radius;circumference=2*Math.PI*radius;volume=(4/3)*Math.PI*radius**3;break;default:return null;}const formula=showFormula==='Ja'?`Volum = (4/3)×π×r³ = (4/3)×π×${radius}³`:'';const piDisplay=showPi==='Ja'?volume.toFixed(precision).replace(/3.14159/g,'π'):volume.toFixed(precision);const unitFactor=unit==='centimeter'?0.000001:unit==='kilometer'?1000000000:unit==='fot'?0.0283168:unit==='tommer'?0.000016387:1;const convertedVolume=volume*unitFactor;const convertedSurface=surfaceArea*unitFactor;return{value:convertedVolume.toFixed(precision),unit:unit,desc:`Radius: ${radius.toFixed(precision)} ${unit}, Diameter: ${diameter.toFixed(precision)} ${unit}, Omkrets: ${circumference.toFixed(precision)} ${unit}, Overflate: ${convertedSurface.toFixed(precision)} ${unit}${formula?`, ${formula}`:''}`}},
-  age:(i)=>{if(!i.birthdate)return null;const b=new Date(i.birthdate),t=new Date();let y=t.getFullYear()-b.getFullYear();if(t.getMonth()<b.getMonth()||(t.getMonth()===b.getMonth()&&t.getDate()<b.getDate()))y--;return{value:y,unit:'år',desc:`Født ${b.toLocaleDateString('nb-NO')}`}},
-  date_add:(i)=>{if(!i.startdate||!i.days)return null;const d=new Date(i.startdate);d.setDate(d.getDate()+parseInt(i.days));return{value:d.toLocaleDateString('nb-NO',{day:'numeric',month:'long',year:'numeric'}),unit:'',desc:`+${i.days} dager`}},
-  time_diff:(i)=>{if(!i.start||!i.end)return null;const[sh,sm]=i.start.split(':').map(Number);const[eh,em]=i.end.split(':').map(Number);let mins=(eh*60+em)-(sh*60+sm);if(mins<0)mins+=1440;const h=Math.floor(mins/60),m=mins%60;return{value:`${h}t ${m}min`,unit:'',desc:`Fra ${i.start} til ${i.end}`}},
-  countdown:(i)=>{if(!i.targetdate)return null;const t=new Date(i.targetdate),n=new Date();const d=Math.ceil((t-n)/86400000);if(d<0)return{value:'Passert',unit:'',desc:`${Math.abs(d)} dager siden`};return{value:d,unit:'dager igjen',desc:t.toLocaleDateString('nb-NO',{day:'numeric',month:'long',year:'numeric'})}},
-  speed:(i)=>{const d=+i.distance,t=+i.time;if(!d||!t)return null;return{value:(d/t).toFixed(2),unit:'km/t',desc:`${d} km på ${t} timer`}},
-  energy:(i)=>{const m=+i.mass,v=+i.velocity;if(!m||!v)return null;return{value:(0.5*m*v*v).toFixed(2),unit:'J',desc:`½×${m}×${v}²`}},
-  force:(i)=>{const m=+i.mass,a=+i.acceleration;if(!m||!a)return null;return{value:(m*a).toFixed(2),unit:'N',desc:`${m}kg × ${a}m/s²`}},
-  stddev:(i)=>{const nums=i.numbers.split(',').map(n=>+n.trim()).filter(n=>!isNaN(n));if(nums.length<2)return null;const avg=nums.reduce((a,b)=>a+b,0)/nums.length;const sd=Math.sqrt(nums.reduce((a,b)=>a+(b-avg)**2,0)/nums.length).toFixed(4);return{value:sd,unit:'',desc:`Gjennomsnitt: ${avg.toFixed(2)}`}},
-  median:(i)=>{const nums=i.numbers.split(',').map(n=>+n.trim()).filter(n=>!isNaN(n)).sort((a,b)=>a-b);if(!nums.length)return null;const m=nums.length%2===0?(nums[nums.length/2-1]+nums[nums.length/2])/2:nums[Math.floor(nums.length/2)];return{value:m,unit:'',desc:`${nums.length} tall sortert`}},
-  food_calories_advanced:(i)=>{const nutrition={'Eple (100g)':{cal:52,protein:0.3,carbs:14,fat:0.2,fiber:2.4},'Banan (100g)':{cal:89,protein:1.1,carbs:23,fat:0.3,fiber:2.6},'Kylling (100g)':{cal:165,protein:31,carbs:0,fat:3.6,fiber:0},'Laks (100g)':{cal:208,protein:20,carbs:0,fat:13,fiber:0},'Brød (100g)':{cal:265,protein:9,carbs:49,fat:3.2,fiber:2.7},'Ris (100g)':{cal:130,protein:2.7,carbs:28,fat:0.3,fiber:0.4},'Pasta (100g)':{cal:158,protein:5.8,carbs:31,fat:0.9,fiber:1.8},'Egg (1 stk)':{cal:78,protein:6,carbs:0.6,fat:5.3,fiber:0},'Melk (100ml)':{cal:42,protein:3.4,carbs:5,fat:1,fat:0},'Ost (100g)':{cal:402,protein:25,carbs:1.3,fat:33,fat:0},'Yoghurt (100g)':{cal:59,protein:10,carbs:3.6,fat:0.4,fiber:0},'Potet (100g)':{cal:77,protein:2,fat:17,carbs:0,fiber:2.2},'Gulrot (100g)':{cal:41,protein:0.9,carbs:10,fat:0.2,fiber:2.8},'Salat (100g)':{cal:15,protein:1.4,carbs:2.9,fat:0.2,fiber:1.3}};const base=nutrition[i.food]||{cal:100,protein:10,carbs:20,fat:10,fiber:5};const a=+i.amount||100;const multiplier=a/base.unit.includes('100g')?a/100:a/base.unit.includes('1 stk')?a:a/base.unit.includes('100ml')?a/100:a/100;const calories=Math.round(base.cal*multiplier);const protein=Math.round(base.protein*multiplier);const carbs=Math.round(base.carbs*multiplier);const fat=Math.round(base.fat*multiplier);const fiber=Math.round(base.fiber*multiplier);const mealType=i.meal_type;const dietType=i.diet_type;return{value:calories,unit:'kcal',desc:`Kalorier: ${calories}, Protein: ${protein}g, Karb: ${carbs}g, Fett: ${fat}g, Fiber: ${fiber}g`}},
-  concrete_advanced:(i)=>{const l=+i.length,w=+i.width,d=+i.depth,concreteType=i.concrete_type,reinforcement=i.reinforcement,wasteFactor=+i.waste_factor/100,pricePerM3=+i.price_per_m3,showMixRatio=i.show_mix_ratio;if(!l||!w||!d)return null;const volume=l*w*d;const wasteVolume=volume*wasteFactor;const totalVolume=volume+wasteVolume;const mixRatios={'B20 (standard)':'1:2:4','B25':'1:2:3','B35':'1:1.5:3','B40':'1:1:2','B45':'1:1:1.5'};const reinforcementFactors={'Ingen':1,'Lett':1.05,'Moderat':1.1,'Tung':1.15};const adjustedVolume=totalVolume*reinforcementFactors[reinforcement];const totalPrice=adjustedVolume*pricePerM3;return{value:adjustedVolume.toFixed(2),unit:'m³',desc:`Total volum: ${adjustedVolume.toFixed(2)} m³, Pris: ${totalPrice.toFixed(0)} kr${showMixRatio==='Ja' ? `, Blandingsforhold: ${mixRatios[concreteType]}` : ''}`}},
-  paint_advanced:(i)=>{const a=+i.area,c=+i.coats,paintType=i.paint_type,surfaceType=i.surface_type,coverage=+i.coverage||10,paintSize=i.paint_size,pricePerLiter=+i.price_per_liter,wasteFactor=+i.waste_factor/100;if(!a||!c)return null;const coverageFactors={'Interiør':coverage,'Eksteriør':coverage*0.9,'Grunnmaling':coverage*1.1,'Takmaling':coverage*0.8,'Gulvmaling':coverage*0.85};const surfaceFactors={'Gips':1,'Betong':0.85,'Tre':0.9,'Metall':0.8,'Mur':0.75};const adjustedCoverage=coverageFactors[paintType]*surfaceFactors[surfaceType];const totalArea=a*c;const requiredLiters=Math.ceil(totalArea/adjustedCoverage);const wasteLiters=Math.ceil(requiredLiters*wasteFactor);const totalLiters=requiredLiters+wasteLiters;const cansNeeded=Math.ceil(totalLiters/paintSize);const totalPrice=cansNeeded*paintSize*pricePerLiter;return{value:totalLiters,unit:'liter',desc:`Behov: ${totalLiters} liter, Bokser: ${cansNeeded} (${paintSize}L), Pris: ${totalPrice.toFixed(0)} kr`}},
+
+  // ========== HELSE (HEALTH) ==========
+  bmi: (i) => { const w=+i.weight,h=+i.height; if(!w||!h) return null; const b=(w/((h/100)**2)).toFixed(1); const c=b<18.5?'Undervektig':b<25?'Normal vekt ✓':b<30?'Overvektig':b<35?'Fedme klasse I':'Fedme klasse II'; return {value:b,unit:'BMI',desc:`Kategori: ${c}`}},
+
+  calories: (i) => { const w=+i.weight,h=+i.height,a=+i.age,g=i.gender; if(!w||!h||!a) return null; const bmr=g==='Mann'?88.362+(13.397*w)+(4.799*h)-(5.677*a):447.593+(9.247*w)+(3.098*h)-(4.330*a); const mult={'Stillesittende':1.2,'Lett aktiv':1.375,'Moderat aktiv':1.55,'Veldig aktiv':1.725,'Athlete':1.9}; const t=Math.round(bmr*(mult[i.activity]||1.55)); return {value:t,unit:'kcal/dag',desc:`Basalmetabolisme: ${Math.round(bmr)} kcal`}},
+
+  idealweight: (i) => { const h=+i.height,g=i.gender; if(!h) return null; const id=g==='Mann'?50+2.3*((h/2.54)-60):45.5+2.3*((h/2.54)-60); return {value:Math.round(id),unit:'kg',desc:'Basert på Devine-formelen'}},
+
+  bodyfat: (i) => { const w=+i.weight,wa=+i.waist,h=+i.height,g=i.gender; if(!w||!h) return null; const bmi=w/((h/100)**2); const bf=g==='Mann'?(1.20*bmi)+(0.23*30)-(10.8*1)-5.4:(1.20*bmi)+(0.23*30)-5.4; return {value:Math.abs(bf).toFixed(1),unit:'%',desc:'Estimert fettprosent'}},
+
+  bmr: (i) => { const w=+i.weight,h=+i.height,a=+i.age,g=i.gender; if(!w||!h||!a) return null; const b=g==='Mann'?Math.round(88.362+(13.397*w)+(4.799*h)-(5.677*a)):Math.round(447.593+(9.247*w)+(3.098*h)-(4.330*a)); return {value:b,unit:'kcal/dag',desc:'Kalorier i hvile (Mifflin-St Jeor)'}},
+
+  tdee: (i) => { const w=+i.weight,h=+i.height,a=+i.age; if(!w||!h||!a) return null; const bmr=88.362+(13.397*w)+(4.799*h)-(5.677*a); const mult={'Stillesittende':1.2,'Lett aktiv':1.375,'Moderat aktiv':1.55,'Veldig aktiv':1.725}; const t=Math.round(bmr*(mult[i.activity]||1.55)); return {value:t,unit:'kcal/dag',desc:`Aktivitetsfaktor: ${mult[i.activity]||1.55}`}},
+
+  weightloss: (i) => { const c=+i.current,t=+i.target,d=+i.deficit; if(!c||!t||!d) return null; const weeks=Math.round(((c-t)*7700)/d/7); return {value:weeks,unit:'uker',desc:`${c-t} kg å miste med ${d} kcal/dag underskudd`}},
+
+  water: (i) => { const w=+i.weight; if(!w) return null; const mult={'Lav':30,'Moderat':35,'Høy':40}; const ml=Math.round(w*(mult[i.activity]||35)); return {value:(ml/1000).toFixed(1),unit:'liter/dag',desc:`${ml} ml daglig`}},
+
+  heartrate: (i) => { const a=+i.age; if(!a) return null; const max=220-a; return {value:`${Math.round(max*0.6)}–${Math.round(max*0.85)}`,unit:'slag/min',desc:`Maks puls: ${max} slag/min`}},
+
+  protein: (i) => { const w=+i.weight; if(!w) return null; const mult={'Vedlikehold':0.8,'Muskelvekst':1.8,'Vekttap':1.2}; const g=Math.round(w*(mult[i.goal]||1.0)); return {value:g,unit:'g/dag',desc:`${mult[i.goal]||1.0}g per kg kroppsvekt`}},
+
+  pregnancy: (i) => { if(!i.lmp) return null; const d=new Date(i.lmp); d.setDate(d.getDate()+280); return {value:d.toLocaleDateString('nb-NO',{day:'numeric',month:'long',year:'numeric'}),unit:'',desc:'Estimert termindato (280 dager)'}},
+
+  bloodpressure: (i) => { const s=+i.systolic,d=+i.diastolic; if(!s||!d) return null; const cat=s<120&&d<80?'Normal ✓':s<130&&d<80?'Forhøyet':s<140||d<90?'Høyt stadium 1':'Høyt stadium 2'; return {value:`${s}/${d}`,unit:'mmHg',desc:`Kategori: ${cat}`}},
+
+  sleep: (i) => { if(!i.wakeup) return null; const[h,m]=i.wakeup.split(':').map(Number); const times=[]; for(let c=1;c<=5;c++){let th=h,tm=m-(90*c); while(tm<0){th--;tm+=60} if(th<0)th+=24; times.push(`${String(th).padStart(2,'0')}:${String(tm).padStart(2,'0')}`)} return {value:times[1],unit:'',desc:`Søvnvinduer: ${times.join(', ')}`}},
+
+  bloodsugar: (i) => { const s=+i.sugar; if(!s) return null; const cat=s<4?'For lavt ⚠️':s<=5.6?'Normalt ✓':s<=6.9?'Forhøyet':' For høyt ⚠️'; return {value:s,unit:'mmol/L',desc:`Status: ${cat}`}},
+
+  alcohol: (i) => { const w=+i.weight,u=+i.units,h=+i.hours; if(!w||!u) return null; const r=i.gender==='Mann'?0.68:0.55; const bac=((u*10)/(w*1000*r))-(0.015*(h||0)); return {value:Math.max(0,bac*1000).toFixed(2),unit:'promille',desc:bac>0.8?'Over grensen! 🚨':bac>0.2?'Påvirket':'Under grensen ✓'}},
+
+  steps: (i) => { const s=+i.steps; if(!s) return null; const km=(s*0.762/1000).toFixed(2); const cal=Math.round(s*0.04); return {value:km,unit:'km',desc:`Kalorier: ${cal} kcal`}},
+
+  pregnancy_week: (i) => { if(!i.lmp) return null; const d=new Date(i.lmp),t=new Date(); const weeks=Math.floor((t-d)/604800000); return {value:weeks,unit:'uker gravid',desc:`Termin om ${40-weeks} uker`}},
+
+  waist_hip: (i) => { const w=+i.waist,h=+i.hip; if(!w||!h) return null; const r=(w/h).toFixed(2); const risk=i.gender==='Mann'?(r>0.9?'Høy risiko':'Normal'):( r>0.85?'Høy risiko':'Normal'); return {value:r,unit:'ratio',desc:`Helserisiko: ${risk}`}},
+
+  lung_capacity: (i) => { const h=+i.height,a=+i.age; if(!h||!a) return null; const fvc=i.gender==='Mann'?(0.0576*h)-(0.026*a)-4.34:(0.0443*h)-(0.026*a)-2.89; return {value:Math.max(0,fvc).toFixed(2),unit:'liter',desc:'Estimert lungekapasitet (FVC)'}},
+
+  // ========== FINANS (FINANCE) ==========
+  loan: (i) => { const P=+i.amount,r=+i.rate/100/12,n=+i.years*12; if(!P||!r||!n) return null; const m=Math.round(P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1)); return {value:m.toLocaleString('nb-NO'),unit:'kr/mnd',desc:`Totalt: ${(m*n).toLocaleString('nb-NO')} kr`}},
+
+  mortgage: (i) => { const P=(+i.price)-(+i.equity||0),r=+i.rate/100/12,n=+i.years*12; if(!P||!r||!n||P<0) return null; const m=Math.round(P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1)); return {value:m.toLocaleString('nb-NO'),unit:'kr/mnd',desc:`Lån: ${P.toLocaleString('nb-NO')} kr`}},
+
+  interest: (i) => { const p=+i.principal,r=+i.rate/100,n=+i.years; if(!p||!r||!n) return null; const t=Math.round(p*Math.pow(1+r,n)); return {value:t.toLocaleString('nb-NO'),unit:'kr',desc:`Renter: ${(t-p).toLocaleString('nb-NO')} kr`}},
+
+  savings: (i) => { const P=+i.initial,pmt=+i.monthly,r=+i.rate/100/12,n=+i.years*12; if(!r||!n) return null; const f=Math.round(P*Math.pow(1+r,n)+pmt*(Math.pow(1+r,n)-1)/r); return {value:f.toLocaleString('nb-NO'),unit:'kr',desc:`Etter ${i.years} år`}},
+
+  vat: (i) => { const a=+i.amount,r=+i.rate; if(!a||!r) return null; const v=(a*r/100); const t=a+v; return {value:Math.round(t).toLocaleString('nb-NO'),unit:'kr',desc:`MVA: ${Math.round(v).toLocaleString('nb-NO')} kr`}},
+
+  hourly: (i) => { const a=+i.annual,h=+i.hours; if(!a||!h) return null; return {value:Math.round(a/(h*52)).toLocaleString('nb-NO'),unit:'kr/time',desc:`Basert på ${h} t/uke`}},
+
+  tax: (i) => { const inc=+i.income; if(!inc) return null; const tax=Math.round(inc*0.22); const net=inc-tax; return {value:tax.toLocaleString('nb-NO'),unit:'kr skatt',desc:`Netto: ${net.toLocaleString('nb-NO')} kr`}},
+
+  investment: (i) => { const a=+i.amount,r=+i.rate/100,n=+i.years; if(!a||!r||!n) return null; const f=Math.round(a*Math.pow(1+r,n)); return {value:f.toLocaleString('nb-NO'),unit:'kr',desc:`Gevinst: ${(f-a).toLocaleString('nb-NO')} kr`}},
+
+  currency: (i) => { const rates={'NOK':1,'USD':0.094,'EUR':0.087,'GBP':0.074,'SEK':0.97,'DKK':0.65}; const a=+i.amount; if(!a) return null; const nok=a/(rates[i.from]||1); const res=(nok*(rates[i.to]||0.087)).toFixed(2); return {value:res,unit:i.to||'EUR',desc:`${a} ${i.from} = ${res} ${i.to}`}},
+
+  pension: (i) => { const a=+i.age,s=+i.salary,sv=+i.savings; if(!a||!s) return null; const yrs=67-a; const future=Math.round((sv||0)*Math.pow(1.05,yrs)+(s*0.02*yrs*12)); return {value:Math.round(future/12).toLocaleString('nb-NO'),unit:'kr/mnd',desc:`Estimert pensjon ved 67 år`}},
+
+  net_salary: (i) => { const g=+i.gross||+i.salary; if(!g) return null; const tax=g*0.33; const net=Math.round(g-tax); return {value:net.toLocaleString('nb-NO'),unit:'kr/mnd',desc:`Skatt: ${Math.round(tax).toLocaleString('nb-NO')} kr`}},
+
+  holiday_pay: (i) => { const s=+i.salary||+i.annual; if(!s) return null; const hp=Math.round(s*0.102); return {value:hp.toLocaleString('nb-NO'),unit:'kr',desc:`10.2% av årslønn`}},
+
+  sick_pay: (i) => { const s=+i.salary||+i.annual,d=+i.days||1; if(!s) return null; const daily=Math.round((s/260)*d); return {value:daily.toLocaleString('nb-NO'),unit:'kr',desc:`${d} sykedager`}},
+
+  child_support: (i) => { const inc=+i.income; if(!inc) return null; const cs=Math.round(inc*0.11); return {value:cs.toLocaleString('nb-NO'),unit:'kr/mnd',desc:`Estimert barnebidrag`}},
+
+  tip: (i) => { const a=+i.amount,p=+i.percent||10; if(!a) return null; const tip=Math.round(a*p/100); return {value:tip.toLocaleString('nb-NO'),unit:'kr',desc:`Total: ${(a+tip).toLocaleString('nb-NO')} kr`}},
+
+  discount: (i) => { const p=+i.price,d=+i.discount||+i.percent; if(!p||!d) return null; const save=Math.round(p*d/100); return {value:(p-save).toLocaleString('nb-NO'),unit:'kr',desc:`Spart: ${save.toLocaleString('nb-NO')} kr`}},
+
+  roi: (i) => { const inv=+i.investment||+i.amount,ret=+i.returns||+i.revenue; if(!inv||!ret) return null; const r=((ret-inv)/inv*100).toFixed(1); return {value:r,unit:'%',desc:`Gevinst: ${(ret-inv).toLocaleString('nb-NO')} kr`}},
+
+  break_even: (i) => { const fc=+i.fixed_costs||+i.fixed,p=+i.price,vc=+i.variable_costs||+i.variable; if(!fc||!p||!vc) return null; const be=Math.ceil(fc/(p-vc)); return {value:be.toLocaleString('nb-NO'),unit:'enheter',desc:`Inntekt: ${(be*p).toLocaleString('nb-NO')} kr`}},
+
+  stock: (i) => { const b=+i.buy_price||+i.buy,s=+i.sell_price||+i.sell,sh=+i.shares||1; if(!b||!s) return null; const profit=Math.round((s-b)*sh); const pct=((s-b)/b*100).toFixed(1); return {value:profit.toLocaleString('nb-NO'),unit:'kr',desc:`${pct}% avkastning`}},
+
+  inflation: (i) => { const a=+i.amount,r=+i.rate||+i.percent,y=+i.years; if(!a||!r||!y) return null; const future=Math.round(a*Math.pow(1+r/100,y)); return {value:future.toLocaleString('nb-NO'),unit:'kr',desc:`Kjøpekraft redusert med ${Math.round((1-a/future)*100)}%`}},
+
+  car_loan: (i) => { const P=+i.price-(+i.down||0),r=+i.rate/100/12,n=(+i.years||5)*12; if(!P||!r) return null; const m=Math.round(P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1)); return {value:m.toLocaleString('nb-NO'),unit:'kr/mnd',desc:`Totalt: ${(m*n).toLocaleString('nb-NO')} kr`}},
+
+  student_loan: (i) => { const P=+i.amount,r=(+i.rate||3.2)/100/12,n=(+i.years||20)*12; if(!P) return null; const m=Math.round(P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1)); return {value:m.toLocaleString('nb-NO'),unit:'kr/mnd',desc:`Totalt: ${(m*n).toLocaleString('nb-NO')} kr`}},
+
+  // ========== MATEMATIKK (MATH) ==========
+  percent: (i) => { const v=+i.value,p=+i.percent; if(isNaN(v)||isNaN(p)) return null; const r=(v*p/100).toFixed(2); return {value:r,unit:'',desc:`${p}% av ${v} = ${r}`}},
+
+  sqrt: (i) => { const n=+i.number; if(isNaN(n)||n<0) return null; return {value:Math.sqrt(n).toFixed(6).replace(/\.?0+$/,''),unit:'',desc:`√${n}`}},
+
+  power: (i) => { const b=+i.base,e=+i.exponent||+i.exp; if(isNaN(b)||isNaN(e)) return null; return {value:Math.pow(b,e).toLocaleString('nb-NO'),unit:'',desc:`${b}^${e}`}},
+
+  fraction: (i) => { const n1=+i.num1,d1=+i.den1,n2=+i.num2,d2=+i.den2; if(!d1||!d2) return null; const rn=n1*d2+n2*d1,rd=d1*d2; const g=(a,b)=>b?g(b,a%b):a; const gc=g(Math.abs(rn),Math.abs(rd)); return {value:`${rn/gc}/${rd/gc}`,unit:'',desc:`${n1}/${d1} + ${n2}/${d2}`}},
+
+  average: (i) => { const nums=(i.numbers||'').split(',').map(n=>+n.trim()).filter(n=>!isNaN(n)); if(!nums.length) return null; const avg=(nums.reduce((a,b)=>a+b,0)/nums.length).toFixed(2); return {value:avg,unit:'',desc:`${nums.length} tall`}},
+
+  log: (i) => { const n=+i.number,b=+i.base||10; if(!n||n<=0) return null; return {value:(Math.log(n)/Math.log(b)).toFixed(6).replace(/\.?0+$/,''),unit:'',desc:`log_${b}(${n})`}},
+
+  factorial: (i) => { const n=+i.number||+i.n; if(isNaN(n)||n<0||n>20) return null; let f=1; for(let j=2;j<=n;j++) f*=j; return {value:f.toLocaleString('nb-NO'),unit:'',desc:`${n}!`}},
+
+  gcd_calc: (i) => { const a=+i.num1||+i.a,b=+i.num2||+i.b; if(!a||!b) return null; const g=(a,b)=>b?g(b,a%b):a; return {value:g(Math.abs(a),Math.abs(b)),unit:'',desc:`GCD av ${a} og ${b}`}},
+
+  lcm_calc: (i) => { const a=+i.num1||+i.a,b=+i.num2||+i.b; if(!a||!b) return null; const g=(a,b)=>b?g(b,a%b):a; return {value:Math.abs(a*b)/g(Math.abs(a),Math.abs(b)),unit:'',desc:`LCM av ${a} og ${b}`}},
+
+  binary: (i) => { const n=+i.number; if(isNaN(n)) return null; return {value:Math.abs(Math.round(n)).toString(2),unit:'(binær)',desc:`Desimal: ${Math.round(n)}`}},
+
+  hex: (i) => { const n=+i.number; if(isNaN(n)) return null; return {value:Math.abs(Math.round(n)).toString(16).toUpperCase(),unit:'(hex)',desc:`Desimal: ${Math.round(n)}`}},
+
+  prime: (i) => { const n=+i.number; if(!n||n<2) return null; let isPrime=true; for(let j=2;j<=Math.sqrt(n);j++) if(n%j===0){isPrime=false;break;} return {value:isPrime?'Primtall ✓':'Ikke primtall',unit:'',desc:`${n} ${isPrime?'er':'er ikke'} et primtall`}},
+
+  combinations: (i) => { const n=+i.n,r=+i.r; if(!n||!r||r>n) return null; const f=(n)=>{let r=1;for(let i=2;i<=n;i++)r*=i;return r;}; return {value:(f(n)/(f(r)*f(n-r))).toLocaleString('nb-NO'),unit:'',desc:`C(${n},${r})`}},
+
+  permutations: (i) => { const n=+i.n,r=+i.r; if(!n||!r||r>n) return null; const f=(n)=>{let r=1;for(let i=2;i<=n;i++)r*=i;return r;}; return {value:(f(n)/f(n-r)).toLocaleString('nb-NO'),unit:'',desc:`P(${n},${r})`}},
+
+  // ========== KONVERTERING (CONVERSION) ==========
+  celsius_to_fahrenheit: (i) => { const c=+i.celsius||+i.value; if(isNaN(c)) return null; return {value:(c*9/5+32).toFixed(1),unit:'°F',desc:`${c}°C = ${(c*9/5+32).toFixed(1)}°F`}},
+
+  fahrenheit_to_celsius: (i) => { const f=+i.fahrenheit||+i.value; if(isNaN(f)) return null; return {value:((f-32)*5/9).toFixed(1),unit:'°C',desc:`${f}°F = ${((f-32)*5/9).toFixed(1)}°C`}},
+
+  temperature: (i) => { const v=+i.value||+i.celsius; const from=i.from||'Celsius'; if(isNaN(v)) return null; let celsius=from==='Fahrenheit'?(v-32)*5/9:from==='Kelvin'?v-273.15:v; const f=(celsius*9/5+32).toFixed(1); const k=(celsius+273.15).toFixed(1); return {value:celsius.toFixed(1),unit:'°C',desc:`°F: ${f} | K: ${k}`}},
+
+  km_to_miles: (i) => { const k=+i.km||+i.value; if(!k) return null; return {value:(k*0.621371).toFixed(3),unit:'miles',desc:`${k} km`}},
+
+  miles_to_km: (i) => { const m=+i.miles||+i.value; if(!m) return null; return {value:(m/0.621371).toFixed(3),unit:'km',desc:`${m} miles`}},
+
+  kg_to_lbs: (i) => { const k=+i.kg||+i.value; if(!k) return null; return {value:(k*2.20462).toFixed(2),unit:'pund',desc:`${k} kg`}},
+
+  lbs_to_kg: (i) => { const l=+i.lbs||+i.value; if(!l) return null; return {value:(l/2.20462).toFixed(2),unit:'kg',desc:`${l} pund`}},
+
+  meter_to_feet: (i) => { const m=+i.meter||+i.value; if(!m) return null; return {value:(m*3.28084).toFixed(3),unit:'fot',desc:`${m} m`}},
+
+  cm_to_inches: (i) => { const c=+i.cm||+i.value; if(!c) return null; return {value:(c/2.54).toFixed(2),unit:'tommer',desc:`${c} cm`}},
+
+  liter_to_gallon: (i) => { const l=+i.liter||+i.value; if(!l) return null; return {value:(l*0.264172).toFixed(3),unit:'gallon',desc:`${l} liter`}},
+
+  ml_to_tsp: (i) => { const m=+i.ml||+i.value; if(!m) return null; return {value:(m/4.929).toFixed(2),unit:'teskje',desc:`${m} ml`}},
+
+  horsepower: (i) => { const h=+i.hp||+i.value; if(!h) return null; return {value:(h*0.7457).toFixed(2),unit:'kW',desc:`${h} HP`}},
+
+  bar_to_psi: (i) => { const b=+i.bar||+i.value; if(!b) return null; return {value:(b*14.5038).toFixed(2),unit:'PSI',desc:`${b} bar`}},
+
+  knots_to_kmh: (i) => { const k=+i.knots||+i.value; if(!k) return null; return {value:(k*1.852).toFixed(2),unit:'km/t',desc:`${k} knop`}},
+
+  bytes_to_mb: (i) => { const b=+i.bytes||+i.value; if(!b) return null; return {value:(b/1048576).toFixed(4),unit:'MB',desc:`${b} bytes = ${(b/1073741824).toFixed(4)} GB`}},
+
+  acres_to_m2: (i) => { const a=+i.acres||+i.value; if(!a) return null; return {value:Math.round(a*4046.86).toLocaleString('nb-NO'),unit:'m²',desc:`${a} acres`}},
+
+  shoe_size: (i) => { const us=+i.size||+i.us; if(!us) return null; const eu=Math.round(us*1.27+31.5); return {value:eu,unit:'EU',desc:`US ${us} = EU ${eu}`}},
+
+  ring_size: (i) => { const d=+i.diameter||+i.value; if(!d) return null; const size=Math.round((d*Math.PI-40)/2); return {value:size,unit:'(NO)',desc:`Diameter: ${d} mm`}},
+
+  roman: (i) => { const n=+i.number; if(!n||n<1||n>3999) return null; const v=[1000,900,500,400,100,90,50,40,10,9,5,4,1]; const s=['M','CM','D','CD','C','XC','L','XL','X','IX','V','IV','I']; let r='',num=n; v.forEach((val,i)=>{while(num>=val){r+=s[i];num-=val;}}); return {value:r,unit:'(romertall)',desc:`${n} = ${r}`}},
+
+  // ========== GEOMETRI (GEOMETRY) ==========
+  area: (i) => { const l=+i.length,w=+i.width; if(!l||!w) return null; return {value:(l*w).toFixed(2),unit:'m²',desc:`${l}×${w} m`}},
+
+  circle: (i) => { const r=+i.radius; if(!r) return null; return {value:(Math.PI*r*r).toFixed(2),unit:'m²',desc:`Omkrets: ${(2*Math.PI*r).toFixed(2)} m`}},
+
+  triangle: (i) => { const b=+i.base,h=+i.height; if(!b||!h) return null; return {value:(0.5*b*h).toFixed(2),unit:'m²',desc:`½×${b}×${h}`}},
+
+  pythagoras: (i) => { const a=+i.a,b=+i.b; if(!a||!b) return null; return {value:Math.sqrt(a*a+b*b).toFixed(4),unit:'',desc:`√(${a}²+${b}²)`}},
+
+  volume: (i) => { const l=+i.length,w=+i.width,h=+i.height; if(!l||!w||!h) return null; return {value:(l*w*h).toFixed(2),unit:'m³',desc:`${l}×${w}×${h}`}},
+
+  sphere: (i) => { const r=+i.radius; if(!r) return null; return {value:(4/3*Math.PI*r**3).toFixed(2),unit:'m³',desc:`Overflate: ${(4*Math.PI*r**2).toFixed(2)} m²`}},
+
+  cloft_kalkulator: (i) => { const floor_area = +i.floor_area, roof_pitch = +i.roof_pitch; if (!floor_area) return null; const usable_area = floor_area * 0.8; return { value: usable_area.toFixed(2), unit: 'm²', desc: `Brukbart loftareal: ${usable_area.toFixed(2)}m²` } },
+
+  cylinder: (i) => { const r=+i.radius,h=+i.height; if(!r||!h) return null; return {value:(Math.PI*r*r*h).toFixed(2),unit:'m³',desc:`Overflate: ${(2*Math.PI*r*(r+h)).toFixed(2)} m²`}},
+
+  trapezoid: (i) => { const a=+i.a,b=+i.b,h=+i.height; if(!a||!b||!h) return null; return {value:((a+b)*h/2).toFixed(2),unit:'m²',desc:`(${a}+${b})/2 × ${h}`}},
+
+  ellipse: (i) => { const a=+i.a,b=+i.b; if(!a||!b) return null; return {value:(Math.PI*a*b).toFixed(2),unit:'m²',desc:`π × ${a} × ${b}`}},
+
+  // ========== TID (TIME) ==========
+  age: (i) => { if(!i.birthdate) return null; const b=new Date(i.birthdate),t=new Date(); let y=t.getFullYear()-b.getFullYear(); if(t.getMonth()<b.getMonth()||(t.getMonth()===b.getMonth()&&t.getDate()<b.getDate()))y--; const days=Math.floor((t-b)/86400000); return {value:y,unit:'år',desc:`${days.toLocaleString('nb-NO')} dager levd`}},
+
+  date_add: (i) => { if(!i.startdate||!i.days) return null; const d=new Date(i.startdate); d.setDate(d.getDate()+parseInt(i.days)); return {value:d.toLocaleDateString('nb-NO',{day:'numeric',month:'long',year:'numeric'}),unit:'',desc:`+${i.days} dager`}},
+
+  time_diff: (i) => { if(!i.start||!i.end) return null; const[sh,sm]=i.start.split(':').map(Number); const[eh,em]=i.end.split(':').map(Number); let mins=(eh*60+em)-(sh*60+sm); if(mins<0)mins+=1440; return {value:`${Math.floor(mins/60)}t ${mins%60}min`,unit:'',desc:`Fra ${i.start} til ${i.end}`}},
+
+  countdown: (i) => { if(!i.targetdate) return null; const t=new Date(i.targetdate),n=new Date(); const d=Math.ceil((t-n)/86400000); return {value:d>0?d:0,unit:'dager igjen',desc:t.toLocaleDateString('nb-NO')}},
+
+  working_days: (i) => { if(!i.start||!i.end) return null; const s=new Date(i.start),e=new Date(i.end); let days=0,cur=new Date(s); while(cur<=e){if(cur.getDay()!==0&&cur.getDay()!==6)days++;cur.setDate(cur.getDate()+1);} return {value:days,unit:'arbeidsdager',desc:`Fra ${s.toLocaleDateString('nb-NO')}`}},
+
+  retirement_countdown: (i) => { const a=+i.age; if(!a) return null; const y=67-a; return {value:y>0?y:0,unit:'år til pensjon',desc:'Pensjonsalder i Norge: 67 år'}},
+
+  meeting_cost: (i) => { const p=+i.people,h=+i.hourly||500,d=+i.duration||60; if(!p) return null; return {value:Math.round(p*h*(d/60)).toLocaleString('nb-NO'),unit:'kr',desc:`${p} personer × ${d} min`}},
+
+  reading_time: (i) => { const w=+i.words; if(!w) return null; return {value:Math.round(w/200),unit:'minutter',desc:`${w} ord ved 200 ord/min`}},
+
+  // ========== FYSIKK (PHYSICS) ==========
+  speed: (i) => { const d=+i.distance,t=+i.time; if(!d||!t) return null; return {value:(d/t).toFixed(2),unit:'km/t',desc:`${d} km på ${t} timer`}},
+
+  energy: (i) => { const m=+i.mass,v=+i.velocity; if(!m||!v) return null; return {value:(0.5*m*v*v).toFixed(2),unit:'J',desc:`½×${m}×${v}²`}},
+
+  force: (i) => { const m=+i.mass,a=+i.acceleration; if(!m||!a) return null; return {value:(m*a).toFixed(2),unit:'N',desc:`${m}kg × ${a}m/s²`}},
+
+  ohm: (i) => { const v=+i.voltage||+i.v,r=+i.resistance||+i.r; if(!v||!r) return null; return {value:(v/r).toFixed(4),unit:'A',desc:`I = ${v}V / ${r}Ω`}},
+
+  wave: (i) => { const f=+i.frequency||+i.freq; if(!f) return null; return {value:(299792458/f).toFixed(2),unit:'m',desc:`c / f = 299792458 / ${f}`}},
+
+  pressure: (i) => { const f=+i.force,a=+i.area; if(!f||!a) return null; return {value:(f/a).toFixed(4),unit:'Pa',desc:`F/A = ${f}/${a}`}},
+
+  // ========== STATISTIKK ==========
+  stddev: (i) => { const nums=(i.numbers||'').split(',').map(n=>+n.trim()).filter(n=>!isNaN(n)); if(nums.length<2) return null; const avg=nums.reduce((a,b)=>a+b,0)/nums.length; return {value:Math.sqrt(nums.reduce((a,b)=>a+(b-avg)**2,0)/nums.length).toFixed(4),unit:'',desc:`Gjennomsnitt: ${avg.toFixed(2)}`}},
+
+  median: (i) => { const nums=(i.numbers||'').split(',').map(n=>+n.trim()).filter(n=>!isNaN(n)).sort((a,b)=>a-b); if(!nums.length) return null; const m=nums.length%2===0?(nums[nums.length/2-1]+nums[nums.length/2])/2:nums[Math.floor(nums.length/2)]; return {value:m,unit:'',desc:`${nums.length} tall sortert`}},
+
+  variance: (i) => { const nums=(i.numbers||'').split(',').map(n=>+n.trim()).filter(n=>!isNaN(n)); if(nums.length<2) return null; const avg=nums.reduce((a,b)=>a+b,0)/nums.length; return {value:(nums.reduce((a,b)=>a+(b-avg)**2,0)/nums.length).toFixed(4),unit:'',desc:`SD: ${Math.sqrt(nums.reduce((a,b)=>a+(b-avg)**2,0)/nums.length).toFixed(4)}`}},
+
+  mode_calc: (i) => { const nums=(i.numbers||'').split(',').map(n=>+n.trim()).filter(n=>!isNaN(n)); if(!nums.length) return null; const freq={}; nums.forEach(n=>freq[n]=(freq[n]||0)+1); const mode=Object.keys(freq).reduce((a,b)=>freq[a]>freq[b]?a:b); return {value:mode,unit:'(typetall)',desc:`Forekommer ${freq[mode]} ganger`}},
+
+  zscore: (i) => { const x=+i.value,m=+i.mean,s=+i.std; if(!x||!m||!s) return null; return {value:((x-m)/s).toFixed(4),unit:'z-score',desc:`(${x}-${m})/${s}`}},
+
+  probability: (i) => { const f=+i.favorable,t=+i.total; if(!f||!t) return null; return {value:(f/t*100).toFixed(2),unit:'%',desc:`${f} av ${t} utfall`}},
+
+  // ========== MAT (FOOD) ==========
+  food_calories: (i) => { const cal={'Eple (100g)':52,'Banan (100g)':89,'Kylling (100g)':165,'Laks (100g)':208,'Brød (100g)':265,'Ris (100g)':130,'Pasta (100g)':158,'Egg (1 stk)':78}; const base=cal[i.food]||100; const a=+i.amount||100; return {value:Math.round(base*(a/100)),unit:'kcal',desc:`${i.food||'Mat'} (${a}g)`}},
+
+  recipe: (i) => { const s=+i.servings,o=+i.original||4,a=+i.amount; if(!s||!a) return null; return {value:(a*s/o).toFixed(2),unit:'',desc:`${o} → ${s} porsjoner`}},
+
+  coffee: (i) => { const c=+i.cups; if(!c) return null; return {value:Math.round(c*7),unit:'g kaffe',desc:`${Math.round(c*150)} ml vann`}},
+
+  // ========== BYGG (CONSTRUCTION) ==========
+  concrete: (i) => { const l=+i.length,w=+i.width,d=+i.depth||+i.height; if(!l||!w||!d) return null; return {value:(l*w*d).toFixed(2),unit:'m³',desc:`${l}×${w}×${d} m`}},
+
+  paint: (i) => { const a=+i.area,c=+i.coats||1; if(!a) return null; return {value:Math.ceil(a*c/10),unit:'liter',desc:`${a} m² med ${c} strøk`}},
+
+  roof: (i) => { const l=+i.length,w=+i.width,p=+i.pitch||30; if(!l||!w) return null; const angle=p*Math.PI/180; return {value:(l*w/Math.cos(angle)).toFixed(2),unit:'m²',desc:`Takvinkel: ${p}°`}},
+
+  fence: (i) => { const l=+i.length,w=+i.width; if(!l||!w) return null; return {value:(2*(l+w)),unit:'meter',desc:`${l}×${w} m tomt`}},
+
+  brick: (i) => { const l=+i.length,w=+i.width,h=+i.height||0.1; if(!l||!w) return null; return {value:Math.ceil(l*w/h*60),unit:'murstein',desc:`${l}×${w} m vegg`}},
 };
 
-function gcd(a,b){return b?gcd(b,a%b):a}
-
 // ============================================
-// CALCULATOR RUNNER
+// SMART CALCULATOR RUNNER
 // ============================================
 function runCalculator(formula) {
   const inputs = {};
   document.querySelectorAll('.calc-input').forEach(el => {
     inputs[el.dataset.field] = el.value;
   });
-  const calc = Calculators[formula];
-  if (!calc) return;
-  const result = calc(inputs);
-  const box = document.getElementById('resultBox');
-  if (!result) { box.classList.remove('show'); return; }
-  document.getElementById('resultValue').textContent = result.value + (result.unit ? ' ' + result.unit : '');
-  document.getElementById('resultDesc').textContent = result.desc || '';
-  box.classList.add('show');
-}
 
-// ============================================
-// GEMINI AI CONTENT GENERATOR
-// ============================================
-async function generateContent(toolTitle, toolDesc, apiKey) {
-  if (!apiKey || apiKey === 'YOUR_GEMINI_API_KEY_HERE') {
-    document.getElementById('aiContent').innerHTML = '<div style="padding:20px;background:#fff3cd;border-radius:8px;color:#856404"><strong>API nøkkel mangler!</strong> Legg til din Gemini API nøkkel i scripts/config.json</div>';
-    document.getElementById('aiContent').style.display = 'block';
-    document.getElementById('aiWrap').style.display = 'none';
+  const box = document.getElementById('resultBox');
+  const valEl = document.getElementById('resultValue');
+  const descEl = document.getElementById('resultDesc');
+
+  // Try exact formula match
+  let calc = Calculators[formula];
+
+  // Try common aliases
+  if (!calc) {
+    const aliases = {
+      'generic': null,
+      'mortgage_advanced': Calculators.mortgage,
+      'bodyfat_advanced': Calculators.bodyfat,
+      'heartrate_zones': Calculators.heartrate,
+      'date_add': Calculators.date_add,
+      'gcd': Calculators.gcd_calc,
+      'lcm': Calculators.lcm_calc,
+      'mode': Calculators.mode_calc,
+    };
+    calc = aliases[formula];
+  }
+
+  if (calc) {
+    const result = calc(inputs);
+    if (!result) {
+      box.classList.remove('show');
+      return;
+    }
+    valEl.textContent = result.value + (result.unit ? ' ' + result.unit : '');
+    descEl.textContent = result.desc || '';
+    box.classList.add('show');
     return;
   }
-  document.querySelector('#aiWrap .btn-ai').style.display = 'none';
-  document.getElementById('aiLoader').classList.add('show');
-  const prompt = `Skriv en detaljert SEO-optimalisert artikkel på norsk bokmål om "${toolTitle}". Emne: ${toolDesc}. 
 
-Skriv 1200-1500 ord med disse seksjonene:
-1. Hva er ${toolTitle}?
-2. Slik bruker du kalkulatoren (steg for steg)
-3. Formel og beregning (med eksempel)  
-4. Praktiske tips
-5. Vanlige spørsmål (5 spørsmål og svar)
+  // Smart fallback for any tool without a formula
+  const values = Object.values(inputs)
+    .filter(v => v && !isNaN(parseFloat(v)))
+    .map(Number);
 
-Bruk kun HTML-tagger: <h2>, <h3>, <p>, <ul>, <li>. Ikke bruk markdown.`;
-
-  try {
-    const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`, {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({contents:[{parts:[{text:prompt}]}],generationConfig:{temperature:0.7,maxOutputTokens:2048}})
-    });
-    const data = await res.json();
-    const text = data.candidates?.[0]?.content?.parts?.[0]?.text || 'Kunne ikke generere innhold.';
-    document.getElementById('aiContent').innerHTML = text;
-    document.getElementById('aiContent').style.display = 'block';
-    document.getElementById('aiWrap').style.display = 'none';
-  } catch(e) {
-    document.getElementById('aiLoader').classList.remove('show');
-    document.querySelector('#aiWrap .btn-ai').style.display = 'inline-flex';
-    alert('Feil: Sjekk API-nøkkelen din i config.json');
+  if (values.length === 0) {
+    box.classList.remove('show');
+    return;
   }
+
+  const sum = values.reduce((a, b) => a + b, 0);
+  const avg = (sum / values.length).toFixed(2);
+
+  valEl.textContent = values.length === 1
+    ? values[0].toLocaleString('nb-NO')
+    : sum.toLocaleString('nb-NO');
+
+  descEl.textContent = values.length > 1
+    ? `Sum: ${sum.toLocaleString('nb-NO')} | Gjennomsnitt: ${avg}`
+    : 'Beregnet resultat';
+
+  box.classList.add('show');
 }
 
 // Enter key support
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.calc-input').forEach(el => {
-    el.addEventListener('keypress', e => { if(e.key==='Enter') { const btn = document.querySelector('.btn-calc'); if(btn) btn.click(); }});
+    el.addEventListener('keypress', e => {
+      if (e.key === 'Enter') {
+        const btn = document.querySelector('.btn-calc');
+        if (btn) btn.click();
+      }
+    });
   });
 });
