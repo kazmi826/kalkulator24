@@ -1087,6 +1087,269 @@ const Calculators = {
     const vout=(vin*r2/(r1+r2)).toFixed(4);
     const ratio=(r2/(r1+r2)*100).toFixed(1);
     return {value:vout, unit:'V (Vout)', desc:`${ratio}% av ${vin}V | R1=${r1}Ω, R2=${r2}Ω`};
+  },
+
+  // ========== ADVANCED FYSIKK III ==========
+  heat_index: (i) => {
+    const t=+i.temperature, rh=+i.humidity;
+    if(isNaN(t)||!rh) return null;
+    const tf=t*9/5+32;
+    const hi=-42.379+2.04901523*tf+10.14333127*rh-0.22475541*tf*rh-0.00683783*tf*tf-0.05481717*rh*rh+0.00122874*tf*tf*rh+0.00085282*tf*rh*rh-0.00000199*tf*tf*rh*rh;
+    const hic=(hi-32)*5/9;
+    const feel=hic<27?'Komfortabelt':hic<32?'Forsiktig':hic<41?'Ekstrem forsiktighet':'Farlig';
+    return {value:hic.toFixed(1), unit:'°C (varmeindeks)', desc:`Føles som: ${feel}`};
+  },
+
+  newtons_third: (i) => {
+    const f=+i.action_force, m1=+i.mass1, m2=+i.mass2;
+    if(!f) return null;
+    const a1=m1?(f/m1).toFixed(4):'?';
+    const a2=m2?(f/m2).toFixed(4):'?';
+    return {value:f, unit:'N (reaksjonskraft)', desc:`a1=${a1}m/s² | a2=${a2}m/s² | Aksjon = Reaksjon`};
+  },
+
+  wind_chill: (i) => {
+    const t=+i.temperature, v=+i.wind_speed;
+    if(isNaN(t)||!v) return null;
+    const wc=(13.12+0.6215*t-11.37*Math.pow(v,0.16)+0.3965*t*Math.pow(v,0.16)).toFixed(1);
+    return {value:wc, unit:'°C (vindavkjøling)', desc:`Faktisk: ${t}°C | Vind: ${v}km/t`};
+  },
+
+  force_calc: (i) => {
+    const m=+i.mass, a=+i.acceleration;
+    if(!m||!a) return null;
+    const f=(m*a).toFixed(4);
+    const w=(m*9.81).toFixed(2);
+    return {value:f, unit:'N', desc:`F=ma=${m}×${a} | Tyngde: ${w}N`};
+  },
+
+  psychrometric: (i) => {
+    const td=+i.dry_temp, tw=+i.wet_temp;
+    if(isNaN(td)||isNaN(tw)) return null;
+    const rh=(100-4*(td-tw)).toFixed(1);
+    const dp=(td-((100-Math.max(0,+rh))/5)).toFixed(1);
+    return {value:Math.max(0,+rh).toFixed(1), unit:'% RH', desc:`Duggpunkt: ${dp}°C`};
+  },
+
+  free_fall: (i) => {
+    const h=+i.height, g=+i.gravity||9.81;
+    if(!h) return null;
+    const t=Math.sqrt(2*h/g).toFixed(4);
+    const v=(g*+t).toFixed(4);
+    return {value:t, unit:'sekunder', desc:`Slutthastighet: ${v}m/s (${(+v*3.6).toFixed(1)}km/t)`};
+  },
+
+  photon_energy: (i) => {
+    const wl=+i.wavelength*1e-9;
+    if(!wl) return null;
+    const h=6.626e-34, c=3e8;
+    const e=(h*c/wl).toExponential(4);
+    const ev=(+e/1.6e-19).toFixed(4);
+    const type=wl<380e-9?'UV':wl<700e-9?'Synlig lys':'Infrarød';
+    return {value:e, unit:'J', desc:`${ev} eV | ${type}`};
+  },
+
+  net_force: (i) => {
+    const f1=+i.force1, f2=+i.force2, a=+i.angle||0;
+    if(isNaN(f1)||isNaN(f2)) return null;
+    const fx=f1+f2*Math.cos(a*Math.PI/180);
+    const fy=f2*Math.sin(a*Math.PI/180);
+    const net=Math.sqrt(fx*fx+fy*fy).toFixed(4);
+    return {value:net, unit:'N', desc:`Fx=${fx.toFixed(2)}N, Fy=${fy.toFixed(2)}N`};
+  },
+
+  watt_calc: (i) => {
+    const v=+i.voltage, a=+i.current;
+    if(!v||!a) return null;
+    const w=(v*a).toFixed(2);
+    const kwh=(+w/1000).toFixed(4);
+    return {value:w, unit:'W', desc:`P=VI=${v}×${a} | ${kwh}kW | ${(+w*24/1000).toFixed(2)}kWh/dag`};
+  },
+
+  snells_law: (i) => {
+    const n1=+i.n1, a1=+i.angle1*Math.PI/180, n2=+i.n2;
+    if(!n1||!n2) return null;
+    const sinA2=n1*Math.sin(a1)/n2;
+    if(Math.abs(sinA2)>1) return {value:'Total indre refleksjon', unit:'', desc:`Kritisk vinkel overskredet`};
+    const a2=(Math.asin(sinA2)*180/Math.PI).toFixed(4);
+    return {value:a2, unit:'grader (θ2)', desc:`n1sinθ1=n2sinθ2 | ${n1}×sin(${i.angle1}°)=${n2}×sin(${a2}°)`};
+  },
+
+  ohms_law: (i) => {
+    const v=+i.voltage, a=+i.current, r=+i.resistance;
+    if(v&&a) return {value:(v/a).toFixed(4), unit:'Ω', desc:`R=V/I=${v}/${a} | P=${(v*a).toFixed(2)}W`};
+    if(v&&r) return {value:(v/r).toFixed(4), unit:'A', desc:`I=V/R=${v}/${r} | P=${(v*v/r).toFixed(2)}W`};
+    if(a&&r) return {value:(a*r).toFixed(4), unit:'V', desc:`V=IR=${a}×${r} | P=${(a*a*r).toFixed(2)}W`};
+    return null;
+  },
+
+  suvat: (i) => {
+    const u=+i.initial_velocity, a=+i.acceleration, t=+i.time;
+    if(isNaN(u)||isNaN(a)||!t) return null;
+    const v=(u+a*t).toFixed(4);
+    const s=(u*t+0.5*a*t*t).toFixed(4);
+    return {value:v, unit:'m/s (sluttfart)', desc:`s=${s}m | v=u+at=${u}+${a}×${t}`};
+  },
+
+  combined_gas: (i) => {
+    const p1=+i.p1, v1=+i.v1, t1=+i.t1, p2=+i.p2, t2=+i.t2;
+    if(!p1||!v1||!t1||!p2||!t2) return null;
+    const v2=(p1*v1*t2/(t1*p2)).toFixed(4);
+    return {value:v2, unit:'liter (V2)', desc:`P1V1/T1=P2V2/T2`};
+  },
+
+  voltage_drop: (i) => {
+    const curr=+i.current, res=+i.resistance, len=+i.length/1000;
+    if(!curr||!res||!len) return null;
+    const vd=(curr*res*len*2).toFixed(4);
+    return {value:vd, unit:'V (spenningstap)', desc:`VD=I×R×L×2=${curr}×${res}×${len}×2`};
+  },
+
+  resonance_freq: (i) => {
+    const l=+i.inductance, c=+i.capacitance;
+    if(!l||!c) return null;
+    const f=(1/(2*Math.PI*Math.sqrt(l*c))).toFixed(4);
+    return {value:f, unit:'Hz', desc:`f=1/(2π√LC)=1/(2π√${l}×${c})`};
+  },
+
+  power_factor: (i) => {
+    const p=+i.real_power, s=+i.apparent_power;
+    if(!p||!s) return null;
+    const pf=(p/s).toFixed(4);
+    const angle=(Math.acos(+pf)*180/Math.PI).toFixed(2);
+    const quality=pf>0.9?'God ✓':pf>0.8?'Akseptabel':'Dårlig';
+    return {value:pf, unit:'(PF)', desc:`${quality} | Fasevinkel: ${angle}°`};
+  },
+
+  wavelength_calc: (i) => {
+    const f=+i.frequency;
+    if(!f) return null;
+    const wl=(3e8/f).toExponential(4);
+    const type=f<3e3?'ELF':f<3e6?'Radiobølge':f<3e9?'Mikrobølge':f<4.3e14?'Infrarød':f<7.5e14?'Synlig lys':'UV/Røntgen';
+    return {value:wl, unit:'m', desc:`c/f | ${type}`};
+  },
+
+  api_gravity: (i) => {
+    const sg=+i.specific_gravity;
+    if(!sg) return null;
+    const api=(141.5/sg-131.5).toFixed(2);
+    const type=api>31.1?'Lett råolje':api>22.3?'Medium råolje':api>10?'Tung råolje':'Extra tung';
+    return {value:api, unit:'°API', desc:`${type} | SG=${sg}`};
+  },
+
+  displacement_calc: (i) => {
+    const u=+i.initial_velocity, t=+i.time, a=+i.acceleration||0;
+    if(isNaN(u)||!t) return null;
+    const s=(u*t+0.5*a*t*t).toFixed(4);
+    const v=(u+a*t).toFixed(4);
+    return {value:s, unit:'m', desc:`s=ut+½at² | Sluttfart: ${v}m/s`};
+  },
+
+  vertex_calc: (i) => {
+    const d=+i.spectacle_power, vd=+i.vertex_distance/1000;
+    if(!d) return null;
+    const cl=(d/(1-vd*d)).toFixed(2);
+    return {value:cl, unit:'D (kontaktlinse)', desc:`Fra ${d}D brilleglass @ ${i.vertex_distance}mm`};
+  },
+
+  // ========== UNDERHOLDNING ==========
+  dice_roll: (i) => {
+    const n=+i.dice_count||1, s=+i.dice_sides||6;
+    if(!n||!s) return null;
+    let total=0;
+    const rolls=[];
+    for(let j=0;j<n;j++){const r=Math.floor(Math.random()*s)+1;rolls.push(r);total+=r;}
+    return {value:total, unit:`(${n}d${s})`, desc:`Kast: ${rolls.join(', ')} | Min:${n} Max:${n*s}`};
+  },
+
+  love_calc: (i) => {
+    if(!i.name1||!i.name2) return null;
+    const combined=(i.name1+i.name2).toLowerCase();
+    let hash=0;
+    for(let c of combined) hash=(hash*31+c.charCodeAt(0))%100;
+    const score=Math.abs(hash)%100;
+    const msg=score>80?'💑 Perfekt match!':score>60?'💕 Bra kompatibilitet':score>40?'❤️ Mulig kjærlighet':'💔 Kanskje venner er bedre';
+    return {value:score, unit:'% kjærlighet', desc:`${i.name1} + ${i.name2} = ${msg}`};
+  },
+
+  life_expectancy: (i) => {
+    const age=+i.age||25;
+    let base=i.gender==='Kvinne'?84:80;
+    if(i.smoking==='Ja') base-=10;
+    if(i.exercise==='Aldri') base-=3;
+    if(i.exercise==='Daglig') base+=3;
+    const remaining=Math.max(0,base-age);
+    return {value:base, unit:'år (estimert levealder)', desc:`${remaining} år igjen | Basert på norske statistikker`};
+  },
+
+  snow_days: (i) => {
+    const days={'Oslo':{'Januar':18,'Februar':16,'Mars':10,'April':3,'Mai':0,'Juni':0,'Juli':0,'Augustus':0,'September':0,'Oktober':2,'November':8,'Desember':15},'Bergen':{'Januar':5,'Februar':4,'Mars':2,'April':0,'Mai':0,'Juni':0,'Juli':0,'Augustus':0,'September':0,'Oktober':0,'November':2,'Desember':4},'Tromsø':{'Januar':22,'Februar':20,'Mars':19,'April':12,'Mai':3,'Juni':0,'Juli':0,'Augustus':0,'September':1,'Oktober':8,'November':17,'Desember':21},'Trondheim':{'Januar':14,'Februar':13,'Mars':9,'April':3,'Mai':0,'Juni':0,'Juli':0,'Augustus':0,'September':0,'Oktober':1,'November':6,'Desember':12},'Stavanger':{'Januar':4,'Februar':3,'Mars':1,'April':0,'Mai':0,'Juni':0,'Juli':0,'Augustus':0,'September':0,'Oktober':0,'November':1,'Desember':3}};
+    const city=i.city||'Oslo', month=i.month||'Januar';
+    const d=days[city]?.[month]||0;
+    return {value:d, unit:'snødager', desc:`${city} i ${month} — historisk gjennomsnitt`};
+  },
+
+  screen_size: (i) => {
+    const diag=+i.diagonal;
+    const ratios={'16:9':[16,9],'4:3':[4,3],'21:9':[21,9]};
+    const [rw,rh]=ratios[i.aspect_ratio]||[16,9];
+    const w=(diag*rw/Math.sqrt(rw*rw+rh*rh)*2.54).toFixed(1);
+    const h=(diag*rh/Math.sqrt(rw*rw+rh*rh)*2.54).toFixed(1);
+    return {value:`${w}×${h}`, unit:'cm', desc:`${diag}" ${i.aspect_ratio} | ${(+w/100).toFixed(2)}×${(+h/100).toFixed(2)}m`};
+  },
+
+  tv_height: (i) => {
+    const tv=+i.tv_size, dist=+i.sofa_distance, eye=+i.eye_height||120;
+    if(!tv||!dist) return null;
+    const tvH=(tv*2.54*9/Math.sqrt(337)).toFixed(1);
+    const ideal=(eye-tvH/2).toFixed(0);
+    return {value:ideal, unit:'cm (nedre kant høyde)', desc:`TV høyde: ${tvH}cm | Øyehøyde: ${eye}cm`};
+  },
+
+  nps_calc: (i) => {
+    const p=+i.promoters, d=+i.detractors;
+    if(isNaN(p)||isNaN(d)) return null;
+    const nps=(p-d).toFixed(0);
+    const quality=nps>70?'Utmerket 🏆':nps>50?'Bra ✓':nps>0?'OK':'Trenger forbedring ⚠️';
+    return {value:nps, unit:'NPS', desc:`${quality} | Promoters:${p}% Detractors:${d}%`};
+  },
+
+  numerology: (i) => {
+    if(!i.birthdate) return null;
+    const digits=i.birthdate.replace(/-/g,'').split('').map(Number);
+    let sum=digits.reduce((a,b)=>a+b,0);
+    while(sum>9&&sum!==11&&sum!==22&&sum!==33) {
+      sum=String(sum).split('').map(Number).reduce((a,b)=>a+b,0);
+    }
+    const meanings={1:'Leder',2:'Fredmaker',3:'Kreativ',4:'Bygger',5:'Eventyrer',6:'Omsorgsgiver',7:'Søker',8:'Ambisiøs',9:'Humanist',11:'Intuitiv mester',22:'Mester bygger',33:'Mester lærer'};
+    return {value:sum, unit:`(Livstallsverdi)`, desc:meanings[sum]||'Unik energi'};
+  },
+
+  name_numerology: (i) => {
+    if(!i.name) return null;
+    const vals={a:1,b:2,c:3,d:4,e:5,f:6,g:7,h:8,i:9,j:1,k:2,l:3,m:4,n:5,o:6,p:7,q:8,r:9,s:1,t:2,u:3,v:4,w:5,x:6,y:7,z:8};
+    let sum=i.name.toLowerCase().replace(/[^a-z]/g,'').split('').reduce((a,c)=>a+(vals[c]||0),0);
+    while(sum>9) sum=String(sum).split('').map(Number).reduce((a,b)=>a+b,0);
+    const meanings={1:'Lederskap',2:'Samarbeid',3:'Kreativitet',4:'Stabilitet',5:'Frihet',6:'Kjærlighet',7:'Visdom',8:'Suksess',9:'Humanisme'};
+    return {value:sum, unit:'(Navnetall)', desc:meanings[sum]||'Unik energi'};
+  },
+
+  audiobook_calc: (i) => {
+    const pages=+i.pages;
+    const speeds={'1x':1,'1.25x':1.25,'1.5x':1.5,'2x':2};
+    const speed=speeds[i.speed]||1;
+    const baseHours=pages*1.5/60;
+    const hours=(baseHours/speed).toFixed(1);
+    const mins=Math.round((+hours%1)*60);
+    return {value:Math.floor(+hours), unit:`timer ${mins} min`, desc:`${pages} sider @ ${i.speed||'1x'} hastighet`};
+  },
+
+  tv_size_calc: (i) => {
+    const w=+i.room_width, d=+i.viewing_distance;
+    if(!d) return null;
+    const recommended=(d*100/2.5).toFixed(0);
+    const max=(d*100/1.5).toFixed(0);
+    return {value:recommended, unit:'tommer (anbefalt)', desc:`Maks: ${max}" | For ${d}m avstand`};
   }
 };
 
