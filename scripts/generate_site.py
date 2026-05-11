@@ -1,641 +1,346 @@
 #!/usr/bin/env python3
 """
-🚀 Norwegian Calculator Site Generator
-Cursor AI se yeh script chalao — poori site generate ho jayegi!
-
-Usage:
-  python generate_site.py          # Sab generate karo
-  python generate_site.py --new    # Sirf naye tools generate karo
+Kalkulator24 - Site Generator with Internal Linking
 """
 
-import json, os, sys, re
+import json, os
 from datetime import datetime
 
-# ===== CONFIG LOAD =====
-with open('config.json', 'r') as f:
+with open('config.json', 'r', encoding='utf-8') as f:
     cfg = json.load(f)
 
-SITE_NAME   = cfg['site_name']
-SITE_DOMAIN = cfg['site_domain']
-API_KEY     = cfg['gemini_api_key']
+SITE_NAME   = cfg.get('site_name', 'Kalkulator24')
+SITE_DOMAIN = cfg.get('site_domain', 'https://kalkulator24.guru')
+API_KEY     = cfg.get('gemini_api_key', '')
 ADSENSE_ID  = cfg.get('adsense_id', '')
+VERIFICATION = 'U-ZiCQHLID9ShjKIWBJI0Xi7xJDNrx9bwP4tRBEYzSQ'
 
-# ===== TOOLS LOAD =====
 with open('tools_database.json', 'r', encoding='utf-8') as f:
     db = json.load(f)
 
 tools      = db['tools']
 categories = db['categories']
 
-# Output dirs
-for d in ['../tools', '../categories']:
+for d in ['../verktoy', '../kategori']:
     os.makedirs(d, exist_ok=True)
 
-# ===== ADSENSE CODE =====
-def adsense_unit(slot="auto"):
-    if not ADSENSE_ID or ADSENSE_ID == 'YOUR_ADSENSE_ID_HERE':
-        return '<!-- AdSense: Fill in ADSENSE_ID in config.json -->'
-    return f'''<ins class="adsbygoogle" style="display:block" data-ad-client="{ADSENSE_ID}" data-ad-slot="{slot}" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({{}});</script>'''
+POPULAR_TOOLS = [
+    'bmi-kalkulator', 'lan-kalkulator', 'prosent-kalkulator',
+    'alder-kalkulator', 'kalorikalkulator', 'ph-kalkulator',
+    'molekylvekt-kalkulator', 'halveringstid-kalkulator',
+    'befolkningsvekst-kalkulator', 'terningkaster'
+]
 
-# ===== NAVBAR =====
-def navbar(active=""):
-    links = ""
+def get_head(title, desc, canonical, keywords=''):
+    adsense = ''
+    if ADSENSE_ID and ADSENSE_ID != 'YOUR_ADSENSE_ID_HERE':
+        adsense = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + ADSENSE_ID + '" crossorigin="anonymous"></script>'
+    return (
+        '<head>\n'
+        '  <meta charset="UTF-8">\n'
+        '  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n'
+        '  <title>' + title + '</title>\n'
+        '  <meta name="description" content="' + desc + '">\n'
+        '  <meta name="keywords" content="' + keywords + '">\n'
+        '  <meta name="robots" content="index, follow">\n'
+        '  <meta name="language" content="Norwegian">\n'
+        '  <meta name="google-site-verification" content="' + VERIFICATION + '">\n'
+        '  <meta name="theme-color" content="#2563eb">\n'
+        '  <meta property="og:type" content="website">\n'
+        '  <meta property="og:title" content="' + title + '">\n'
+        '  <meta property="og:description" content="' + desc + '">\n'
+        '  <meta property="og:url" content="' + SITE_DOMAIN + canonical + '">\n'
+        '  <meta property="og:locale" content="nb_NO">\n'
+        '  <link rel="canonical" href="' + SITE_DOMAIN + canonical + '">\n'
+        '  <link rel="alternate" hreflang="nb" href="' + SITE_DOMAIN + canonical + '">\n'
+        '  <link rel="preconnect" href="https://fonts.googleapis.com">\n'
+        '  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">\n'
+        '  <link rel="stylesheet" href="/assets/css/style.css">\n'
+        '  ' + adsense + '\n'
+        '</head>'
+    )
+
+def get_navbar(active=''):
+    links = ''
     for slug, cat in categories.items():
         a = 'active' if slug == active else ''
-        links += f'<li><a href="/kategori/{slug}" class="{a}">{cat["icon"]} {cat["name"]}</a></li>'
-    return f'''<nav class="navbar" style="position: relative;">
-  <div class="navbar-inner">
-    <a href="/" class="logo">{SITE_NAME.replace('.','<span>.')}</span></a>
-    <ul id="mobileMenu" class="nav-links" style="display:flex; gap:4px; list-style:none; flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none;">{links}</ul>
-    <button id="hamburgerBtn" class="mobile-menu-btn" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </div>
-</nav>'''
+        links += '<li><a href="/kategori/' + slug + '" class="' + a + '">' + cat['icon'] + ' ' + cat['name'] + '</a></li>'
+    return (
+        '<nav class="navbar">\n'
+        '  <div class="navbar-inner">\n'
+        '    <a href="/" class="logo">' + SITE_NAME + '</a>\n'
+        '    <ul class="nav-links" id="navLinks">' + links + '</ul>\n'
+        '    <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">☰</button>\n'
+        '  </div>\n'
+        '  <div id="mobileMenu"><ul>' + links + '</ul></div>\n'
+        '</nav>'
+    )
 
-# ===== FOOTER =====
-def footer():
-    cats = "".join([f'<li><a href="/kategori/{s}">{c["icon"]} {c["name"]}</a></li>' for s,c in categories.items()])
-    pop  = "".join([f'<li><a href="/verktoy/{t["slug"]}">{t["title"]}</a></li>' for t in tools[:6]])
-    return f'''<footer>
-  <div class="footer-inner">
-    <div class="footer-grid">
-      <div class="footer-col"><h4>{SITE_NAME}</h4><p style="font-size:13px;line-height:1.7">Gratis online kalkulatorer for alle behov.</p></div>
-      <div class="footer-col"><h4>Kategorier</h4><ul>{cats}</ul></div>
-      <div class="footer-col"><h4>Populære</h4><ul>{pop}</ul></div>
-      <div class="footer-col"><h4>Info</h4><ul>
-        <li><a href="/om-oss">Om oss</a></li>
-        <li><a href="/personvern">Personvern</a></li>
-        <li><a href="/kontakt">Kontakt</a></li>
-      </ul></div>
-    </div>
-    <div class="footer-bottom">© {datetime.now().year} {SITE_NAME} — Alle kalkulatorer er gratis</div>
-  </div>
-</footer>'''
+def get_footer():
+    cat_links = ''
+    for s, c in categories.items():
+        cat_links += '<li><a href="/kategori/' + s + '">' + c['icon'] + ' ' + c['name'] + '</a></li>'
 
-# ===== HEAD =====
-def head(page_type, tool_data=None, category_data=None, category_slug=None):
-    """Generate comprehensive SEO-optimized head section"""
-    adsense_script = f'<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={ADSENSE_ID}" crossorigin="anonymous"></script>' if ADSENSE_ID and ADSENSE_ID != 'YOUR_ADSENSE_ID_HERE' else ''
-    
-    # Generate title, description, and other meta based on page type
-    if page_type == "tool" and tool_data:
-        title = f'{tool_data["title"]} — Gratis Online Kalkulator | {SITE_NAME}'
-        desc = tool_data["description"]
-        keywords = tool_data.get('keywords', f'{tool_data["title"]}, kalkulator, online, gratis, {tool_data["category"]}')
-        canonical = f'/verktoy/{tool_data["slug"]}'
-        slug = tool_data["slug"]
-        tool_title = tool_data["title"]
-        category_name = categories.get(tool_data["category"], {}).get("name", "")
-        category = tool_data["category"]
-    elif page_type == "category" and category_data:
-        title = f'{category_data["name"]} Kalkulatorer — Gratis | {SITE_NAME}'
-        desc = f'Gratis {category_data["name"].lower()} kalkulatorer. {len([t for t in tools if t["category"] == category_slug])} verktøy for {category_data["name"].lower()}.'
-        keywords = f'{category_data["name"]}, kalkulatorer, online, gratis, {category_data["name"].lower()}'
-        canonical = f'/kategori/{category_slug}'
-        slug = category_slug
-        tool_title = category_data["name"]
-        category_name = category_data["name"]
-        category = category_slug
-    else:  # homepage
-        title = f'Gratis Online Kalkulatorer — {SITE_NAME} | Alle Verktøy'
-        desc = f'Gratis online kalkulatorer for helse, finans, matematikk og mer. Alle kalkulatorer uten registrering.'
-        keywords = 'kalkulatorer, online, gratis, helse, finans, matematikk, konvertering'
-        canonical = '/'
-        slug = ''
-        tool_title = ''
-        category_name = ''
-        category = ''
-    
-    # Generate schema.org JSON-LD
-    schemas = []
-    
-    # WebApplication schema for tool pages
-    if page_type == "tool" and tool_data:
-        webapp_schema = f'''{{
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "{tool_title}",
-  "description": "{desc}",
-  "url": "{SITE_DOMAIN}/verktoy/{slug}",
-  "applicationCategory": "UtilityApplication",
-  "operatingSystem": "Web Browser",
-  "offers": {{
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "NOK"
-  }},
-  "publisher": {{
-    "@type": "Organization",
-    "name": "{SITE_NAME}",
-    "url": "{SITE_DOMAIN}"
-  }}
-}}'''
-        schemas.append(webapp_schema)
-        
-        # BreadcrumbList schema
-        breadcrumb_schema = f'''{{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {{"@type": "ListItem", "position": 1, "name": "Hjem", "item": "{SITE_DOMAIN}"}},
-    {{"@type": "ListItem", "position": 2, "name": "{category_name}", "item": "{SITE_DOMAIN}/kategori/{category}"}},
-    {{"@type": "ListItem", "position": 3, "name": "{tool_title}", "item": "{SITE_DOMAIN}/verktoy/{slug}"}}
-  ]
-}}'''
-        schemas.append(breadcrumb_schema)
-        
-        # FAQPage schema
-        faq_schema = f'''{{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {{"@type": "Question", "name": "Er {tool_title} gratis?", "acceptedAnswer": {{"@type": "Answer", "text": "Ja, {tool_title} er helt gratis å bruke uten registrering."}}}},
-    {{"@type": "Question", "name": "Hvordan bruker jeg {tool_title}?", "acceptedAnswer": {{"@type": "Answer", "text": "Fyll inn verdiene i feltene og klikk Beregn-knappen for å se resultatet."}}}},
-    {{"@type": "Question", "name": "Er beregningene nøyaktige?", "acceptedAnswer": {{"@type": "Answer", "text": "Ja, vi bruker standard matematiske formler for alle beregninger."}}}}
-  ]
-}}'''
-        schemas.append(faq_schema)
-    
-    # WebSite schema for homepage
-    elif page_type == "homepage":
-        website_schema = f'''{{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "{SITE_NAME}",
-  "url": "{SITE_DOMAIN}",
-  "description": "{desc}",
-  "potentialAction": {{
-    "@type": "SearchAction",
-    "target": "{SITE_DOMAIN}/?q={{search_term_string}}",
-    "query-input": "required name=search_term_string"
-  }},
-  "publisher": {{
-    "@type": "Organization",
-    "name": "{SITE_NAME}",
-    "url": "{SITE_DOMAIN}"
-  }}
-}}'''
-        schemas.append(website_schema)
-        
-        # Organization schema
-        org_schema = f'''{{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "{SITE_NAME}",
-  "url": "{SITE_DOMAIN}",
-  "logo": "{SITE_DOMAIN}/assets/logo.png",
-  "description": "Gratis online kalkulatorer for alle behov"
-}}'''
-        schemas.append(org_schema)
-        
-        # ItemList schema with top 10 tools
-        top_tools_json = []
-        for i, t in enumerate(tools[:10]):
-            top_tools_json.append(f'''{{
-  "@type": "ListItem",
-  "position": {i+1},
-  "name": "{t["title"]}",
-  "url": "{SITE_DOMAIN}/verktoy/{t["slug"]}"
-}}''')
-        
-        itemlist_schema = f'''{{
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "Populære kalkulatorer",
-  "itemListElement": [
-{",".join(top_tools_json)}
-  ]
-}}'''
-        schemas.append(itemlist_schema)
-    
-    # Generate schema tags
-    schema_tags = ""
-    for schema in schemas:
-        schema_tags += f'<script type="application/ld+json">{schema}</script>\n'
-    
-    # Generate hreflang tags
-    hreflang_tags = ""
-    if slug:
-        if page_type == "tool":
-            hreflang_tags = f'''<link rel="alternate" hreflang="nb" href="{SITE_DOMAIN}/verktoy/{slug}">
-<link rel="alternate" hreflang="no" href="{SITE_DOMAIN}/verktoy/{slug}">'''
-        elif page_type == "category":
-            hreflang_tags = f'''<link rel="alternate" hreflang="nb" href="{SITE_DOMAIN}/kategori/{slug}">
-<link rel="alternate" hreflang="no" href="{SITE_DOMAIN}/kategori/{slug}">'''
-        else:
-            hreflang_tags = f'''<link rel="alternate" hreflang="nb" href="{SITE_DOMAIN}/">
-<link rel="alternate" hreflang="no" href="{SITE_DOMAIN}/">'''
-    else:
-        hreflang_tags = f'''<link rel="alternate" hreflang="nb" href="{SITE_DOMAIN}/">
-<link rel="alternate" hreflang="no" href="{SITE_DOMAIN}/">'''
-    
-    return f'''<head>
-  <!-- Primary Meta Tags -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{title}</title>
-  <meta name="title" content="{title}">
-  <meta name="description" content="{desc}">
-  <meta name="keywords" content="{keywords}">
-  <meta name="robots" content="index, follow">
-  <meta name="language" content="Norwegian">
-  <meta name="author" content="{SITE_NAME}">
-  <meta name="revisit-after" content="7 days">
-  <link rel="canonical" href="{SITE_DOMAIN}{canonical}">
+    pop_links = ''
+    for slug in POPULAR_TOOLS:
+        t = next((x for x in tools if x['slug'] == slug), None)
+        if t:
+            pop_links += '<li><a href="/verktoy/' + t['slug'] + '">' + t['title'] + '</a></li>'
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="{SITE_DOMAIN}{canonical}">
-  <meta property="og:title" content="{title}">
-  <meta property="og:description" content="{desc}">
-  <meta property="og:locale" content="nb_NO">
-  <meta property="og:site_name" content="{SITE_NAME}">
+    recent_links = ''
+    for t in reversed(tools[-8:]):
+        recent_links += '<li><a href="/verktoy/' + t['slug'] + '">' + t['title'] + '</a></li>'
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="{SITE_DOMAIN}{canonical}">
-  <meta property="twitter:title" content="{title}">
-  <meta property="twitter:description" content="{desc}">
+    return (
+        '<footer>\n'
+        '  <div class="footer-inner">\n'
+        '    <div class="footer-grid">\n'
+        '      <div class="footer-col"><h4>' + SITE_NAME + '</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">' + str(len(tools)) + '+ gratis kalkulatorer</p></div>\n'
+        '      <div class="footer-col"><h4>Kategorier</h4><ul>' + cat_links + '</ul></div>\n'
+        '      <div class="footer-col"><h4>Populære</h4><ul>' + pop_links + '</ul></div>\n'
+        '      <div class="footer-col"><h4>Nylig lagt til</h4><ul>' + recent_links + '</ul></div>\n'
+        '      <div class="footer-col"><h4>Info</h4><ul><li><a href="/om-oss">Om oss</a></li><li><a href="/personvern">Personvern</a></li><li><a href="/kontakt">Kontakt</a></li></ul></div>\n'
+        '    </div>\n'
+        '    <div class="footer-bottom"><p>© ' + str(datetime.now().year) + ' ' + SITE_NAME + ' — Alle kalkulatorer er gratis</p></div>\n'
+        '  </div>\n'
+        '</footer>\n'
+        '<script>\n'
+        'function toggleMenu(){var m=document.getElementById("mobileMenu");m.classList.toggle("open");}\n'
+        'document.addEventListener("click",function(e){var m=document.getElementById("mobileMenu");var b=document.getElementById("hamburgerBtn");if(m&&b&&!m.contains(e.target)&&!b.contains(e.target))m.classList.remove("open");});\n'
+        '</script>'
+    )
 
-  <!-- Hreflang -->
-  {hreflang_tags}
-
-  <!-- Performance & Mobile -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-  <meta name="theme-color" content="#2563eb">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  
-  <!-- Google Site Verification -->
-  <meta name="google-site-verification" content="U-ZiCQHLID9ShjKIWBJI0Xi7xJDNrx9bwP4tRBEYzSQ">
-
-  <!-- Stylesheets -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/style.css">
-
-  <!-- Schema.org -->
-  {schema_tags}
-
-  <!-- AdSense -->
-  {adsense_script}
-
-  <!-- Scripts -->
-  <script src="/assets/js/seo.js"></script>
-  <script>
-    function toggleMenu() {{
-      const navLinks = document.getElementById('mobileMenu');
-      navLinks.classList.toggle('show');
-    }}
-  </script>
-</head>'''
-
-# ===== BUILD INPUTS =====
 def build_inputs(tool):
-    html = ""
+    html = ''
     for inp in tool['inputs']:
-        fid  = inp['id']
-        lbl  = inp['label']
-        ph   = inp.get('placeholder', '')
-        typ  = inp['type']
+        fid = inp['id']
+        lbl = inp['label']
+        ph  = inp.get('placeholder', '')
+        typ = inp['type']
         if typ == 'select':
-            opts = "".join([f'<option value="{o}">{o}</option>' for o in inp.get('options', [])])
-            field = f'<select class="calc-input" data-field="{fid}">{opts}</select>'
+            opts = ''.join(['<option value="' + o + '">' + o + '</option>' for o in inp.get('options', [])])
+            field = '<select class="calc-input" data-field="' + fid + '">' + opts + '</select>'
         elif typ == 'text':
-            field = f'<input type="text" class="calc-input" data-field="{fid}" placeholder="{ph}">'
+            field = '<input type="text" class="calc-input" data-field="' + fid + '" placeholder="' + ph + '">'
+        elif typ == 'time':
+            field = '<input type="time" class="calc-input" data-field="' + fid + '">'
+        elif typ == 'date':
+            field = '<input type="date" class="calc-input" data-field="' + fid + '">'
         else:
-            field = f'<input type="{typ}" class="calc-input" data-field="{fid}" placeholder="{ph}">'
-        html += f'<div class="input-group"><label>{lbl}</label><div class="input-row">{field}</div></div>'
+            field = '<input type="number" class="calc-input" data-field="' + fid + '" placeholder="' + ph + '">'
+        html += '<div class="input-group"><label>' + lbl + '</label><div class="input-row">' + field + '</div></div>'
     return html
 
-# ===== RELATED TOOLS =====
-def related_tools(tool, n=9):
+def get_related_tools(tool, n=12):
     same = [t for t in tools if t['category'] == tool['category'] and t['slug'] != tool['slug']]
     other = [t for t in tools if t['category'] != tool['category']]
-    cards = ""
+    cards = ''
     for t in (same + other)[:n]:
-        icon = categories.get(t['category'], {}).get('icon', '🧮')
-        cards += f'''<div class="tool-card" onclick="location='/verktoy/{t["slug"]}'">
-          <span class="tool-card-icon">{icon}</span>
-          <h3>{t["title"]}</h3><p>{t["description"]}</p>
-        </div>'''
+        icon = categories.get(t['category'], {}).get('icon', 'x')
+        cards += '<div class="tool-card" onclick="location=\'/verktoy/' + t['slug'] + '\'"><span class="tool-card-icon">' + icon + '</span><h3>' + t['title'] + '</h3><p>' + t['description'] + '</p></div>'
+    cat_name = categories.get(tool['category'], {}).get('name', '')
+    cards += '<div class="tool-card" onclick="location=\'/kategori/' + tool['category'] + '\'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle ' + cat_name + '</h3><p>Alle kalkulatorer i denne kategorien</p></div>'
     return cards
 
-# ===== SIDEBAR LINKS =====
-def sidebar_links(tool):
+def get_also_like(tool):
+    seen = set([tool['category']])
+    picks = []
+    for t in tools:
+        if t['category'] not in seen and t['slug'] != tool['slug']:
+            picks.append(t)
+            seen.add(t['category'])
+        if len(picks) >= 6:
+            break
+    cards = ''
+    for t in picks:
+        icon = categories.get(t['category'], {}).get('icon', 'x')
+        cards += '<div class="tool-card" onclick="location=\'/verktoy/' + t['slug'] + '\'"><span class="tool-card-icon">' + icon + '</span><h3>' + t['title'] + '</h3><p>' + t['description'] + '</p></div>'
+    return cards
+
+def get_sidebar(tool):
     cat = categories.get(tool['category'], {})
-    icon = cat.get('icon', '🧮')
-    items = [t for t in tools if t['category'] == tool['category'] and t['slug'] != tool['slug']][:10]
-    html = "".join([f'<li><a href="/verktoy/{t["slug"]}"><span class="icon">{icon}</span>{t["title"]}</a></li>' for t in items])
-    html += f'<li><a href="/kategori/{tool["category"]}" style="color:var(--primary)">Se alle →</a></li>'
-    return html
-
-# ===== GENERATE TOOL PAGE =====
-def gen_tool(tool):
-    cat     = categories.get(tool['category'], {})
+    icon = cat.get('icon', 'x')
     cat_name = cat.get('name', '')
-    cat_icon = cat.get('icon', '🧮')
-    slug    = tool['slug']
+    same_tools = [t for t in tools if t['category'] == tool['category'] and t['slug'] != tool['slug']][:8]
+    same_html = ''
+    for t in same_tools:
+        same_html += '<li><a href="/verktoy/' + t['slug'] + '"><span class="icon">' + icon + '</span>' + t['title'] + '</a></li>'
+    same_html += '<li><a href="/kategori/' + tool['category'] + '" style="color:var(--primary)">Se alle ' + cat_name + ' \u2192</a></li>'
+    pop_html = ''
+    for slug in POPULAR_TOOLS[:6]:
+        t = next((x for x in tools if x['slug'] == slug), None)
+        if t and t['slug'] != tool['slug']:
+            ci = categories.get(t['category'], {}).get('icon', 'x')
+            pop_html += '<li><a href="/verktoy/' + t['slug'] + '"><span class="icon">' + ci + '</span>' + t['title'] + '</a></li>'
+    return (
+        '<aside class="sidebar">\n'
+        '    <div class="sidebar-card"><h3>' + cat_name + ' kalkulatorer</h3><ul class="sidebar-links">' + same_html + '</ul></div>\n'
+        '    <div class="sidebar-card"><h3>Populære verktøy</h3><ul class="sidebar-links">' + pop_html + '</ul></div>\n'
+        '  </aside>'
+    )
 
-    schema = json.dumps({"@context":"https://schema.org","@type":"WebApplication","name":tool['title'],"description":tool['description'],"applicationCategory":"UtilityApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"NOK"},"url":f"{SITE_DOMAIN}/verktoy/{slug}"})
-    
-    # Check if content file exists
-    content_file = f'../content/{slug}.html'
+def gen_tool(tool):
+    cat      = categories.get(tool['category'], {})
+    cat_name = cat.get('name', '')
+    cat_icon = cat.get('icon', 'x')
+    slug     = tool['slug']
+
     content_html = ''
-    
-    if os.path.exists(content_file):
-        try:
-            with open(content_file, 'r', encoding='utf-8') as f:
-                content_html = f.read()
-        except Exception as e:
-            print(f"  ⚠️ Error reading content for {tool['title']}: {e}")
+    content_path = '../content/' + slug + '.html'
+    if os.path.exists(content_path):
+        with open(content_path, 'r', encoding='utf-8') as f:
+            content_html = f.read()
 
-    html = f'''<!DOCTYPE html>
-<html lang="nb">
-{head("tool", tool_data=tool)}
-<body>
+    schema = '{"@context":"https://schema.org","@type":"WebApplication","name":"' + tool['title'] + '","description":"' + tool['description'] + '","url":"' + SITE_DOMAIN + '/verktoy/' + slug + '","applicationCategory":"UtilityApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"NOK"}}'
+    breadcrumb = '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Hjem","item":"' + SITE_DOMAIN + '"},{"@type":"ListItem","position":2,"name":"' + cat_name + '","item":"' + SITE_DOMAIN + '/kategori/' + tool['category'] + '"},{"@type":"ListItem","position":3,"name":"' + tool['title'] + '","item":"' + SITE_DOMAIN + '/verktoy/' + slug + '"}]}'
 
-{navbar(tool['category'])}
+    if content_html:
+        content_section = '<div class="content-card">' + content_html + '</div>'
+    else:
+        content_section = (
+            '<div class="ai-loader" id="aiWrap">'
+            '<p>Last inn detaljert guide</p>'
+            '<button class="btn-ai" id="aiBtn">Vis guide</button>'
+            '<div class="loading-wrap" id="aiLoader"><div class="spinner"></div><span>Laster...</span></div>'
+            '</div>'
+            '<div class="content-card" id="aiContent" style="display:none"></div>'
+        )
 
-<div class="breadcrumb">
-  <a href="/">Hjem</a><span class="sep">›</span>
-  <a href="/kategori/{tool["category"]}">{cat_name}</a><span class="sep">›</span>{tool["title"]}
-</div>
+    html = (
+        '<!DOCTYPE html>\n<html lang="nb">\n'
+        + get_head(tool['title'] + ' — Gratis Online Kalkulator | ' + SITE_NAME, tool['description'] + ' — Gratis kalkulator online', '/verktoy/' + slug, tool.get('keywords', ''))
+        + '\n<body>\n'
+        + '<script type="application/ld+json">' + schema + '</script>\n'
+        + '<script type="application/ld+json">' + breadcrumb + '</script>\n'
+        + get_navbar(tool['category']) + '\n'
+        + '<div class="breadcrumb"><a href="/">Hjem</a><span class="sep">›</span><a href="/kategori/' + tool['category'] + '">' + cat_name + '</a><span class="sep">›</span>' + tool['title'] + '</div>\n'
+        + '<div class="tool-hero"><div class="tool-badge">' + cat_icon + ' ' + cat_name + '</div><h1>' + tool['title'] + '</h1><p class="subtitle">' + tool['description'] + ' — raskt og gratis</p></div>\n'
+        + '<div class="main-wrap">\n'
+        + '  <div class="main-content">\n'
+        + '    <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid">' + build_inputs(tool) + '</div>'
+        + '    <button class="btn-calc" onclick="runCalculator(\'' + tool['formula'] + '\')">Beregn \u2192</button>'
+        + '    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">\u2014</div><div class="result-desc" id="resultDesc"></div></div></div>\n'
+        + '    ' + content_section + '\n'
+        + '    <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid">' + get_related_tools(tool) + '</div></div>\n'
+        + '    <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid">' + get_also_like(tool) + '</div></div>\n'
+        + '  </div>\n'
+        + '  ' + get_sidebar(tool) + '\n'
+        + '</div>\n'
+        + get_footer() + '\n'
+        + '<script src="/assets/js/calc.js"></script>\n'
+        + '</body></html>'
+    )
 
-<div class="tool-hero">
-  <div class="tool-badge">{cat_icon} {cat_name}</div>
-  <h1>{tool["title"]}</h1>
-  <p class="subtitle">{tool["description"]} — raskt og gratis</p>
-</div>
-
-<div class="main-wrap">
-  <div class="main-content">
-
-    <div class="calc-card">
-      <h2>Skriv inn verdiene dine</h2>
-      <div class="inputs-grid">{build_inputs(tool)}</div>
-      <button class="btn-calc" onclick="runCalculator('{tool["formula"]}')">Beregn →</button>
-      <div class="result-box" id="resultBox">
-        <div class="result-label">Resultat</div>
-        <div class="result-value" id="resultValue">—</div>
-        <div class="result-desc" id="resultDesc"></div>
-        <div class="result-metrics" id="resultMetrics"></div>
-      </div>
-    </div>
-    
-    {content_html}
-
-    <div class="related-section">
-      <h2>Relaterte kalkulatorer</h2>
-      <div class="tools-grid">{related_tools(tool)}</div>
-    </div>
-
-  </div>
-  <aside class="sidebar">
-    <div class="sidebar-card">
-      <h3>{cat_name} kalkulatorer</h3>
-      <ul class="sidebar-links">{sidebar_links(tool)}</ul>
-    </div>
-    <div class="sidebar-card" style="padding:0;overflow:hidden;border:1px solid var(--border)">
-      {adsense_unit("sidebar")}
-    </div>
-  </aside>
-</div>
-
-{footer()}
-<script src="/assets/js/calc.js"></script>
-<script>
-function toggleMenu() {{
-  const menu = document.getElementById('mobileMenu');
-  menu.classList.toggle('open');
-}}
-document.addEventListener('click', function(e) {{
-  const menu = document.getElementById('mobileMenu');
-  const btn = document.getElementById('hamburgerBtn');
-  if (menu && !menu.contains(e.target) && !btn.contains(e.target)) {{
-    menu.classList.remove('open');
-  }}
-}});
-</script>
-</body></html>'''
-
-    with open(f'../verktoy/{slug}.html', 'w', encoding='utf-8') as f:
+    with open('../verktoy/' + slug + '.html', 'w', encoding='utf-8') as f:
         f.write(html)
 
-# ===== GENERATE CATEGORY PAGE =====
-def gen_category(slug, cat):
-    cat_tools = [t for t in tools if t['category'] == slug]
-    cards = "".join([f'''<div class="tool-card" onclick="location='/verktoy/{t["slug"]}'">
-      <span class="tool-card-icon">{cat["icon"]}</span>
-      <h3>{t["title"]}</h3><p>{t["description"]}</p>
-    </div>''' for t in cat_tools])
+def gen_category(cat_slug, cat):
+    cat_tools = [t for t in tools if t['category'] == cat_slug]
+    tool_cards = ''
+    for t in cat_tools:
+        tool_cards += '<div class="tool-card" onclick="location=\'/verktoy/' + t['slug'] + '\'"><span class="tool-card-icon">' + cat['icon'] + '</span><h3>' + t['title'] + '</h3><p>' + t['description'] + '</p></div>'
 
-    html = f'''<!DOCTYPE html>
-<html lang="nb">
-{head("category", category_data=cat, category_slug=slug)}
-<body>
-{navbar(slug)}
-<div class="tool-hero">
-  <div class="tool-badge">{cat["icon"]} Kategori</div>
-  <h1>{cat["name"]} Kalkulatorer</h1>
-  <p class="subtitle">{len(cat_tools)} gratis kalkulatorer</p>
-</div>
-<div style="max-width:1100px;margin:0 auto;padding:0 24px 80px">
-  {adsense_unit()}
-  <div class="tools-grid">{cards}</div>
-</div>
-{footer()}
-<script src="/assets/js/calc.js"></script>
-<script>
-function toggleMenu() {{
-  const menu = document.getElementById('mobileMenu');
-  menu.classList.toggle('open');
-}}
-document.addEventListener('click', function(e) {{
-  const menu = document.getElementById('mobileMenu');
-  const btn = document.getElementById('hamburgerBtn');
-  if (menu && !menu.contains(e.target) && !btn.contains(e.target)) {{
-    menu.classList.remove('open');
-  }}
-}});
-</script>
-</body></html>'''
+    other_cats = ''
+    for s, c in categories.items():
+        if s != cat_slug:
+            count = len([t for t in tools if t['category'] == s])
+            other_cats += '<div class="cat-card" onclick="location=\'/kategori/' + s + '\'"><span class="cat-icon">' + c['icon'] + '</span><div class="cat-name">' + c['name'] + '</div><div class="cat-count">' + str(count) + ' kalkulatorer</div></div>'
 
-    with open(f'../kategori/{slug}.html', 'w', encoding='utf-8') as f:
+    html = (
+        '<!DOCTYPE html>\n<html lang="nb">\n'
+        + get_head(cat['name'] + ' Kalkulatorer — Gratis | ' + SITE_NAME, 'Gratis ' + cat['name'].lower() + ' kalkulatorer. ' + str(len(cat_tools)) + ' verktøy.', '/kategori/' + cat_slug)
+        + '\n<body>\n'
+        + get_navbar(cat_slug) + '\n'
+        + '<div class="breadcrumb"><a href="/">Hjem</a><span class="sep">›</span>' + cat['name'] + '</div>\n'
+        + '<div class="tool-hero"><div class="tool-badge">' + cat['icon'] + ' Kategori</div><h1>' + cat['name'] + ' Kalkulatorer</h1><p class="subtitle">' + str(len(cat_tools)) + ' gratis kalkulatorer</p></div>\n'
+        + '<div style="max-width:1100px;margin:0 auto;padding:0 24px 80px">\n'
+        + '  <div class="tools-grid">' + tool_cards + '</div>\n'
+        + '  <div style="margin-top:48px"><h2 style="font-size:20px;font-weight:700;margin-bottom:20px">Andre kategorier</h2><div class="cat-grid">' + other_cats + '</div></div>\n'
+        + '</div>\n'
+        + get_footer() + '\n'
+        + '<script src="/assets/js/calc.js"></script>\n'
+        + '</body></html>'
+    )
+
+    with open('../kategori/' + cat_slug + '.html', 'w', encoding='utf-8') as f:
         f.write(html)
 
-# ===== GENERATE HOMEPAGE =====
 def gen_homepage():
-    cat_cards = "".join([f'''<div class="cat-card" onclick="location='/kategori/{s}'">
-      <span class="cat-icon">{c["icon"]}</span>
-      <div class="cat-name">{c["name"]}</div>
-      <div class="cat-count">Flere kalkulatorer</div>
-    </div>''' for s,c in categories.items()])
+    cat_cards = ''
+    for s, c in categories.items():
+        count = len([t for t in tools if t['category'] == s])
+        cat_cards += '<div class="cat-card" onclick="location=\'/kategori/' + s + '\'"><span class="cat-icon">' + c['icon'] + '</span><div class="cat-name">' + c['name'] + '</div><div class="cat-count">' + str(count) + ' kalkulatorer</div></div>'
 
-    pop_cards = "".join([f'''<div class="tool-card" onclick="location='/verktoy/{t["slug"]}'">
-      <span class="tool-card-icon">{categories.get(t["category"],{}).get("icon","🧮")}</span>
-      <h3>{t["title"]}</h3><p>{t["description"]}</p>
-    </div>''' for t in tools[:12]])
+    pop_cards = ''
+    for slug in POPULAR_TOOLS:
+        t = next((x for x in tools if x['slug'] == slug), None)
+        if t:
+            icon = categories.get(t['category'], {}).get('icon', 'x')
+            pop_cards += '<div class="tool-card" onclick="location=\'/verktoy/' + t['slug'] + '\'"><span class="tool-card-icon">' + icon + '</span><h3>' + t['title'] + '</h3><p>' + t['description'] + '</p></div>'
 
-    html = f'''<!DOCTYPE html>
-<html lang="nb">
-{head("homepage")}
-<body>
-{navbar()}
+    recent_cards = ''
+    for t in reversed(tools[-15:]):
+        icon = categories.get(t['category'], {}).get('icon', 'x')
+        recent_cards += '<div class="tool-card" onclick="location=\'/verktoy/' + t['slug'] + '\'"><span class="tool-card-icon">' + icon + '</span><h3>' + t['title'] + '</h3><p>' + t['description'] + '</p></div>'
 
-<div class="hero-home">
-  <h1>Gratis Online Kalkulatorer</h1>
-  <p>Alle kalkulatorer for helse, finans, matematikk og mer</p>
-  <div class="search-box">
-    <input type="text" id="sInput" placeholder="Søk etter kalkulator..." onkeypress="if(event.key==='Enter')doSearch()">
-    <button onclick="doSearch()">Søk</button>
-  </div>
-</div>
+    all_tools_js = json.dumps([{'slug': t['slug'], 'title': t['title']} for t in tools])
 
-<div class="stats-bar">
-  <div class="stat-item"><div class="stat-num">{len(tools)}+</div><div class="stat-label">Kalkulatorer</div></div>
-  <div class="stat-item"><div class="stat-num">{len(categories)}</div><div class="stat-label">Kategorier</div></div>
-  <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label">Gratis</div></div>
-  <div class="stat-item"><div class="stat-num">0</div><div class="stat-label">Registrering</div></div>
-</div>
+    schema_ws = '{"@context":"https://schema.org","@type":"WebSite","name":"' + SITE_NAME + '","url":"' + SITE_DOMAIN + '","description":"Gratis online kalkulatorer","inLanguage":"nb-NO"}'
 
-{adsense_unit()}
-
-<div class="home-section">
-  <h2>Browse Categories</h2>
-  <div class="cat-grid">{cat_cards}</div>
-  <h2>Popular Calculators</h2>
-  <div class="tools-grid">{pop_cards}</div>
-</div>
-
-{footer()}
-<script src="/assets/js/calc.js"></script>
-<script>
-function doSearch(){{
-  const q=document.getElementById('sInput').value.trim();
-  const all={json.dumps([{"slug":t["slug"],"title":t["title"]} for t in tools])};
-  const res=all.filter(t=>t.title.toLowerCase().includes(q.toLowerCase()));
-  if(res.length===1)location='/verktoy/'+res[0].slug;
-  else if(res.length>0){{const r=res.map(t=>`<div class="tool-card" onclick="location='/verktoy/${{t.slug}}'" style="cursor:pointer"><h3>${{t.title}}</h3></div>`).join('');document.querySelector('.home-section').innerHTML='<h2>Søkeresultater</h2><div class="tools-grid">'+r+'</div>';}}
-  else alert('Ingen resultater for: '+q);
-}}
-function toggleMenu() {{
-  const menu = document.getElementById('mobileMenu');
-  menu.classList.toggle('open');
-}}
-document.addEventListener('click', function(e) {{
-  const menu = document.getElementById('mobileMenu');
-  const btn = document.getElementById('hamburgerBtn');
-  if (menu && !menu.contains(e.target) && !btn.contains(e.target)) {{
-    menu.classList.remove('open');
-  }}
-}});
-</script>
-</body></html>'''
+    html = (
+        '<!DOCTYPE html>\n<html lang="nb">\n'
+        + get_head(SITE_NAME + ' — Gratis Online Kalkulatorer | ' + str(len(tools)) + '+ Verktøy', 'Gratis online kalkulatorer for helse, finans, matematikk og mer. Over ' + str(len(tools)) + ' kalkulatorer.', '/')
+        + '\n<body>\n'
+        + '<script type="application/ld+json">' + schema_ws + '</script>\n'
+        + get_navbar() + '\n'
+        + '<div class="hero-home"><h1>Gratis Online Kalkulatorer</h1><p>Over ' + str(len(tools)) + ' gratis kalkulatorer for helse, finans, matematikk og mer</p>'
+        + '<div class="search-box"><input type="text" id="sInput" placeholder="Søk etter kalkulator..." onkeypress="if(event.key===\'Enter\')doSearch()"><button onclick="doSearch()">Søk</button></div></div>\n'
+        + '<div class="home-section">\n'
+        + '  <h2>Bla gjennom kategorier</h2><div class="cat-grid">' + cat_cards + '</div>\n'
+        + '  <h2>Populære kalkulatorer</h2><div class="tools-grid">' + pop_cards + '</div>\n'
+        + '  <h2 style="margin-top:48px">Nylig lagt til</h2><div class="tools-grid">' + recent_cards + '</div>\n'
+        + '</div>\n'
+        + get_footer() + '\n'
+        + '<script src="/assets/js/calc.js"></script>\n'
+        + '<script>\n'
+        + 'var allTools=' + all_tools_js + ';\n'
+        + 'function doSearch(){var q=document.getElementById("sInput").value.trim().toLowerCase();if(!q)return;var res=allTools.filter(function(t){return t.title.toLowerCase().includes(q);});if(res.length===1){location.href="/verktoy/"+res[0].slug;}else if(res.length>1){var cards=res.map(function(t){return\'<div class="tool-card" onclick="location=\\"/verktoy/\'+t.slug+\'\\"">\'+\'<h3>\'+t.title+\'</h3></div>\';}).join("");document.querySelector(".home-section").innerHTML=\'<h2>Søkeresultater</h2><div class="tools-grid">\'+cards+\'</div>\';}else{alert("Ingen resultater for: "+q);}}\n'
+        + '</script>\n'
+        + '</body></html>'
+    )
 
     with open('../index.html', 'w', encoding='utf-8') as f:
         f.write(html)
 
-# ===== SITEMAP + ROBOTS =====
 def gen_seo():
     today = datetime.now().strftime('%Y-%m-%d')
-    
-    # Generate sitemap URLs with proper lastmod, priority, and changefreq
-    urls = []
-    
-    # Homepage
-    urls.append(f'''<url>
-  <loc>{SITE_DOMAIN}/</loc>
-  <lastmod>{today}</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>1.0</priority>
-</url>''')
-    
-    # Category pages
-    for s, cat in categories.items():
-        urls.append(f'''<url>
-  <loc>{SITE_DOMAIN}/kategori/{s}</loc>
-  <lastmod>{today}</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.7</priority>
-</url>''')
-    
-    # Tool pages
+    urls = ['<url><loc>' + SITE_DOMAIN + '/</loc><lastmod>' + today + '</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>']
     for t in tools:
-        urls.append(f'''<url>
-  <loc>{SITE_DOMAIN}/verktoy/{t["slug"]}</loc>
-  <lastmod>{today}</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>''')
-    
-    # Generate sitemap.xml
-    sitemap_content = f'''<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-{"".join(urls)}
-</urlset>'''
-    
+        urls.append('<url><loc>' + SITE_DOMAIN + '/verktoy/' + t['slug'] + '</loc><lastmod>' + today + '</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>')
+    for s in categories:
+        urls.append('<url><loc>' + SITE_DOMAIN + '/kategori/' + s + '</loc><lastmod>' + today + '</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>')
     with open('../sitemap.xml', 'w', encoding='utf-8') as f:
-        f.write(sitemap_content)
-    
-    # Generate robots.txt
-    robots_content = f'''User-agent: *
-Allow: /
-Disallow: /scripts/
-Disallow: /content/
-Disallow: /assets/js/
+        f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + '\n'.join(urls) + '\n</urlset>')
+    with open('../robots.txt', 'w') as f:
+        f.write('User-agent: *\nAllow: /\nDisallow: /scripts/\nSitemap: ' + SITE_DOMAIN + '/sitemap.xml\n')
 
-# Sitemap
-Sitemap: {SITE_DOMAIN}/sitemap.xml
-
-# Host directive for Yandex
-Host: {SITE_DOMAIN}
-
-# Crawl delay for respectful crawling
-Crawl-delay: 1'''
-    
-    with open('../robots.txt', 'w', encoding='utf-8') as f:
-        f.write(robots_content)
-
-# ===== MAIN =====
 if __name__ == '__main__':
-    new_only = '--new' in sys.argv
-    print(f"\n{'='*50}")
-    print(f"  🚀 {SITE_NAME} — Site Generator")
-    print(f"  {len(tools)} tools | {len(categories)} categories")
-    print(f"{'='*50}\n")
-
-    existing = set(os.listdir('../tools')) if new_only else set()
-
-    print("📄 Tool pages:")
-    count = 0
+    print('\n' + '='*50)
+    print('  ' + SITE_NAME + ' — Site Generator')
+    print('  ' + str(len(tools)) + ' tools | ' + str(len(categories)) + ' categories')
+    print('='*50 + '\n')
+    print('Tool pages:')
     for tool in tools:
-        fname = f"{tool['slug']}.html"
-        if new_only and fname in existing:
-            continue
         gen_tool(tool)
-        count += 1
-        print(f"  ✓ {tool['slug']}")
-    
-    print(f"\n📁 Category pages:")
+        print('  v ' + tool['slug'])
+    print('\nCategory pages:')
     for slug, cat in categories.items():
         gen_category(slug, cat)
-        print(f"  ✓ {slug}")
-
-    print(f"\n🏠 Homepage + SEO files:")
+        print('  v ' + slug)
+    print('\nHomepage + SEO:')
     gen_homepage()
     gen_seo()
-    print(f"  ✓ index.html, sitemap.xml, robots.txt")
-
-    print(f"\n{'='*50}")
-    print(f"  ✅ {count} tool pages generated!")
-    print(f"\n  📋 AGLE STEPS:")
-    print(f"  1. config.json mein API key set karo")
-    print(f"  2. tools_database.json mein aur tools add karo")
-    print(f"  3. Sab files Hostinger public_html mein upload karo")
-    print(f"  4. Google AdSense apply karo")
-    print(f"{'='*50}\n")
+    print('  v index.html, sitemap.xml, robots.txt')
+    print('\n' + '='*50)
+    print('  OK ' + str(len(tools)) + ' tool pages generated!')
+    print('='*50 + '\n')

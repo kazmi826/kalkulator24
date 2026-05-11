@@ -1,14 +1,4 @@
 User-agent: *
 Allow: /
 Disallow: /scripts/
-Disallow: /content/
-Disallow: /assets/js/
-
-# Sitemap
 Sitemap: https://kalkulator24.guru/sitemap.xml
-
-# Host directive for Yandex
-Host: https://kalkulator24.guru
-
-# Crawl delay for respectful crawling
-Crawl-delay: 1
