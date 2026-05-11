@@ -44,15 +44,292 @@ const Calculators = {
 
   lung_capacity: (i) => { const h=+i.height,a=+i.age; if(!h||!a) return null; const fvc=i.gender==='Mann'?(0.0576*h)-(0.026*a)-4.34:(0.0443*h)-(0.026*a)-2.89; return {value:Math.max(0,fvc).toFixed(2),unit:'liter',desc:'Estimert lungekapasitet (FVC)'}},
 
-  // ========== FINANS (FINANCE) ==========
-  loan: (i) => { const P=+i.amount,r=+i.rate/100/12,n=+i.years*12; if(!P||!r||!n) return null; const m=Math.round(P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1)); return {value:m.toLocaleString('nb-NO'),unit:'kr/mnd',desc:`Totalt: ${(m*n).toLocaleString('nb-NO')} kr`}},
+  tv_distance: (i) => {
+    const s=+i.tv_size;
+    if(!s) return null;
+    const res={'HD 720p':1.5,'Full HD 1080p':2.0,'4K UHD':3.0};
+    const factor=res[i.resolution]||2.0;
+    const min=(s*2.54*factor/100).toFixed(2);
+    const max=(s*2.54*(factor+0.5)/100).toFixed(2);
+    return {value:min+'-'+max, unit:'meter', desc:'Anbefalt sitteavstand for '+i.resolution};
+  },
 
-  mortgage: (i) => { const P=(+i.price)-(+i.equity||0),r=+i.rate/100/12,n=+i.years*12; if(!P||!r||!n||P<0) return null; const m=Math.round(P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1)); return {value:m.toLocaleString('nb-NO'),unit:'kr/mnd',desc:`Lån: ${P.toLocaleString('nb-NO')} kr`}},
+  unit_measure: (i) => {
+    const v=+i.value;
+    if(!v) return null;
+    const toM={'meter':1,'cm':0.01,'mm':0.001,'km':1000,'fot':0.3048,'tommer':0.0254,'yard':0.9144,'mil':1609.34};
+    const m=v*(toM[i.from_unit]||1);
+    const result=m/(toM[i.to_unit]||1);
+    return {value:result.toFixed(6), unit:i.to_unit, desc:v+' '+i.from_unit+' = '+result.toFixed(6)+' '+i.to_unit};
+  },
+
+  quart_to_liter: (i) => {
+    const q=+i.quart;
+    if(!q) return null;
+    return {value:(q*0.946353).toFixed(4), unit:'liter', desc:q+' qt = '+(q*0.946353).toFixed(4)+' L'};
+  },
+
+  ml_to_gram: (i) => {
+    const ml=+i.ml;
+    if(!ml) return null;
+    const density={'Vann':1,'Melk':1.03,'Olje':0.92,'Alkohol':0.789,'Honning':1.42};
+    const d=density[i.substance]||1;
+    return {value:(ml*d).toFixed(2), unit:'gram', desc:ml+'ml × '+d+'g/ml ('+i.substance+')'};
+  },
+
+  cups_to_ml: (i) => {
+    const c=+i.cups;
+    if(!c) return null;
+    return {value:(c*236.588).toFixed(2), unit:'ml', desc:c+' kopper = '+(c*236.588).toFixed(2)+' ml'};
+  },
+
+  gallons_to_quarts: (i) => {
+    const g=+i.gallons;
+    if(!g) return null;
+    return {value:(g*4).toFixed(2), unit:'quarts', desc:g+' gallon = '+(g*4)+' quarts'};
+  },
+
+  mm_to_inches: (i) => {
+    const mm=+i.mm;
+    if(!mm) return null;
+    return {value:(mm/25.4).toFixed(4), unit:'tommer', desc:mm+' mm = '+(mm/25.4).toFixed(4)'""'};
+  },
+
+  height_calc: (i) => {
+    const ft=+i.feet||0, inch=+i.inches||0;
+    const totalCm=((ft*12+inch)*2.54).toFixed(1);
+    return {value:totalCm, unit:'cm', desc:ft+"' "+inch+'" = '+totalCm+' cm'};
+  },
+
+  cubicft_to_gallon: (i) => {
+    const cf=+i.cubic_feet;
+    if(!cf) return null;
+    return {value:(cf*7.48052).toFixed(4), unit:'gallon', desc:cf+' kubikkfot = '+(cf*7.48052).toFixed(4)+' gallon'};
+  },
+
+  pint_to_ml: (i) => {
+    const p=+i.pint;
+    if(!p) return null;
+    return {value:(p*473.176).toFixed(2), unit:'ml', desc:p+' pint = '+(p*473.176).toFixed(2)+' ml'};
+  },
+
+  deg_to_mrad: (i) => {
+    const d=+i.degrees;
+    if(isNaN(d)) return null;
+    return {value:(d*17.4533).toFixed(4), unit:'mrad', desc:d+'° = '+(d*17.4533).toFixed(4)+' mrad'};
+  },
+
+  mg_to_ml: (i) => {
+    const mg=+i.mg, dens=+i.density||1;
+    if(!mg) return null;
+    return {value:(mg/dens/1000).toFixed(6), unit:'ml', desc:mg+'mg ÷ '+dens+'g/ml ÷ 1000'};
+  },
+
+  ml_to_cups: (i) => {
+    const ml=+i.ml;
+    if(!ml) return null;
+    return {value:(ml/236.588).toFixed(4), unit:'kopper', desc:ml+' ml = '+(ml/236.588).toFixed(4)+' kopper'};
+  },
+
+  quart_to_cups: (i) => {
+    const q=+i.quart;
+    if(!q) return null;
+    return {value:(q*4).toFixed(2), unit:'kopper', desc:q+' quart = '+(q*4)+' kopper'};
+  },
+
+  steel_weight: (i) => {
+    const l=+i.length, w=+i.width, t=+i.thickness;
+    if(!l||!w||!t) return null;
+    const vol=(l*w*(t/10))/1000;
+    const weight=(vol*7.85).toFixed(3);
+    return {value:weight, unit:'kg', desc:'Volum: '+vol.toFixed(4)+'L × 7.85kg/L'};
+  },
+
+  gallon_to_liter: (i) => {
+    const g=+i.gallons;
+    if(!g) return null;
+    return {value:(g*3.78541).toFixed(4), unit:'liter', desc:g+' gallon = '+(g*3.78541).toFixed(4)+' L'};
+  },
+
+  liter_to_cups: (i) => {
+    const l=+i.liter;
+    if(!l) return null;
+    return {value:(l*4.22675).toFixed(4), unit:'kopper', desc:l+' L = '+(l*4.22675).toFixed(4)+' kopper'};
+  },
+
+  cups_to_quart: (i) => {
+    const c=+i.cups;
+    if(!c) return null;
+    return {value:(c/4).toFixed(4), unit:'quart', desc:c+' kopper = '+(c/4)+' quart'};
+  },
+
+  cubicinch_to_gallon: (i) => {
+    const ci=+i.cubic_inches;
+    if(!ci) return null;
+    return {value:(ci/231).toFixed(6), unit:'gallon', desc:ci+' in³ ÷ 231 = '+(ci/231).toFixed(6)+' gal'};
+  },
+
+  mrad_to_deg: (i) => {
+    const m=+i.mrad;
+    if(isNaN(m)) return null;
+    return {value:(m/17.4533).toFixed(6), unit:'grader', desc:m+' mrad = '+(m/17.4533).toFixed(6)+'°'};
+  },
+
+  cubic_yard: (i) => {
+    const l=+i.length, w=+i.width, d=+i.depth/12;
+    if(!l||!w||!d) return null;
+    const cy=(l*w*d/27).toFixed(4);
+    return {value:cy, unit:'kubikkyard', desc:l+'×'+w+'×'+(+i.depth)+'" = '+cy+' yd³'};
+  },
+
+  cubicft_to_cubicyard: (i) => {
+    const cf=+i.cubic_feet;
+    if(!cf) return null;
+    return {value:(cf/27).toFixed(6), unit:'kubikkyard', desc:cf+' ft³ ÷ 27 = '+(cf/27).toFixed(6)+' yd³'};
+  },
+
+  lbs_to_oz: (i) => {
+    const l=+i.lbs;
+    if(!l) return null;
+    return {value:(l*16).toFixed(2), unit:'unser', desc:l+' lbs = '+(l*16)+' oz'};
+  },
+
+  ml_to_pint: (i) => {
+    const ml=+i.ml;
+    if(!ml) return null;
+    return {value:(ml/473.176).toFixed(6), unit:'pint', desc:ml+' ml = '+(ml/473.176).toFixed(6)+' pint'};
+  },
+
+  days_to_hours: (i) => {
+    const d=+i.days;
+    if(!d) return null;
+    return {value:(d*24).toFixed(0), unit:'timer', desc:d+' dager = '+(d*24)+' timer = '+(d*1440)+' min'};
+  },
+
+  minutes_to_hours: (i) => {
+    const m=+i.minutes;
+    if(!m) return null;
+    const h=Math.floor(m/60), min=m%60;
+    return {value:(m/60).toFixed(4), unit:'timer', desc:m+' min = '+h+'t '+min+'min'};
+  },
+
+  gallon_to_ml: (i) => {
+    const g=+i.gallons;
+    if(!g) return null;
+    return {value:(g*3785.41).toFixed(2), unit:'ml', desc:g+' gallon = '+(g*3785.41).toFixed(2)+' ml'};
+  },
+
+  seconds_to_minutes: (i) => {
+    const s=+i.seconds;
+    if(!s) return null;
+    const m=Math.floor(s/60), sec=s%60;
+    return {value:(s/60).toFixed(4), unit:'minutter', desc:s+' sek = '+m+'min '+sec+'sek'};
+  },
+
+  tsp_to_ml: (i) => {
+    const t=+i.tsp;
+    if(!t) return null;
+    return {value:(t*4.92892).toFixed(4), unit:'ml', desc:t+' ts = '+(t*4.92892).toFixed(4)+' ml'};
+  },
+
+  density_calc: (i) => {
+    const m=+i.mass, v=+i.volume;
+    if(!m||!v) return null;
+    const d=(m/v).toFixed(6);
+    return {value:d, unit:'g/ml', desc:'ρ = m/V = '+m+'/'+v+' | '+d+' g/cm³'};
+  },
+
+  tbsp_to_cups: (i) => {
+    const t=+i.tbsp;
+    if(!t) return null;
+    return {value:(t/16).toFixed(6), unit:'kopper', desc:t+' ss = '+(t/16).toFixed(4)+' kopper'};
+  },
+
+  celsius_to_kelvin: (i) => {
+    const c=+i.celsius;
+    if(isNaN(c)) return null;
+    const k=(c+273.15).toFixed(2);
+    return {value:k, unit:'K', desc:c+'°C = '+k+'K = '+(c*9/5+32).toFixed(1)+'°F'};
+  },
+
+  dekar_to_sqm: (i) => {
+    const d=+i.dekar;
+    if(!d) return null;
+    return {value:(d*1000).toFixed(2), unit:'m²', desc:d+' dekar = '+(d*1000)+' m² = '+(d*0.1)+' hektar'};
+  },
+
+  sqft_to_sqm: (i) => {
+    const s=+i.sqft;
+    if(!s) return null;
+    return {value:(s*0.092903).toFixed(4), unit:'m²', desc:s+' ft² = '+(s*0.092903).toFixed(4)+' m²'};
+  },
+
+  liter_to_oz: (i) => {
+    const l=+i.liter;
+    if(!l) return null;
+    return {value:(l*33.814).toFixed(4), unit:'fl oz', desc:l+' L = '+(l*33.814).toFixed(4)+' oz'};
+  },
+
+  cc_to_ml: (i) => {
+    const c=+i.cc;
+    if(!c) return null;
+    return {value:c, unit:'ml', desc:'1 cc = 1 ml | '+c+' cc = '+c+' ml'};
+  },
+
+  khz_to_mhz: (i) => {
+    const k=+i.khz;
+    if(!k) return null;
+    return {value:(k/1000).toFixed(6), unit:'MHz', desc:k+' kHz = '+(k/1000).toFixed(6)+' MHz = '+(k/1000000).toFixed(9)+' GHz'};
+  },
+
+  l_to_ml: (i) => {
+    const l=+i.liter;
+    if(!l) return null;
+    return {value:(l*1000).toFixed(2), unit:'ml', desc:l+' L = '+(l*1000)+' ml'};
+  },
+
+  waist_height_ratio: (i) => {
+    const w=+i.waist, h=+i.height;
+    if(!w||!h) return null;
+    const r=(w/h).toFixed(3);
+    const risk=r<0.4?'For slank':r<=0.5?'Sunn ✓':r<=0.6?'Overvektig risiko':'Høy helserisiko ⚠️';
+    return {value:r, unit:'(WHtR)', desc:'Helserisiko: '+risk+' | Under 0.5 = sunn'};
+  },
+
+  baby_gender: (i) => {
+    const age=+i.mother_age;
+    if(!age) return null;
+    const months=['Januar','Februar','Mars','April','Mai','Juni','Juli','August','September','Oktober','November','Desember'];
+    const monthNum=months.indexOf(i.conception_month)+1;
+    const result=(age+monthNum)%2===0?'Gutt 👦':'Jente 👧';
+    return {value:result, unit:'', desc:'Kinesisk kjønnskalkulator (ikke vitenskapelig) | Mor: '+age+' år'};
+  },
+
+  gematria: (i) => {
+    if(!i.word) return null;
+    const w=i.word.toLowerCase();
+    let sum=0;
+    for(let c of w){const code=c.charCodeAt(0)-96;if(code>0&&code<=26)sum+=code;}
+    const meanings={1:'Lederskap',2:'Samarbeid',3:'Kreativitet',4:'Stabilitet',5:'Frihet',6:'Kjærlighet',7:'Visdom',8:'Suksess',9:'Fullstendighet'};
+    let reduced=sum;
+    while(reduced>9) reduced=String(reduced).split('').map(Number).reduce((a,b)=>a+b,0);
+    return {value:sum, unit:'(gematria verdi)', desc:'Redusert: '+reduced+' — '+( meanings[reduced]||'Unik energi')};
+  },
+
+  angel_number: (i) => {
+    const n=String(i.number||'').replace(/\D/g,'');
+    if(!n) return null;
+    const meanings={'111':'Nye begynnelser og manifestasjon','222':'Balanse og harmoni','333':'Vekst og kreativitet','444':'Stabilitet og beskyttelse','555':'Stor forandring kommer','666':'Fokuser på åndelig vekst','777':'Lykke og guddommelig veiledning','888':'Overflod og velstand','999':'Avslutning og transformasjon','000':'Uendelig potensial','1111':'Portal åpner seg','1234':'Du er på rett vei'};
+    const msg=meanings[n]||'Engelnummer: se på de individuelle sifrene for mening';
+    return {value:n, unit:'(engelnummer)', desc:msg};
+  },
 
   interest: (i) => { const p=+i.principal,r=+i.rate/100,n=+i.years; if(!p||!r||!n) return null; const t=Math.round(p*Math.pow(1+r,n)); return {value:t.toLocaleString('nb-NO'),unit:'kr',desc:`Renter: ${(t-p).toLocaleString('nb-NO')} kr`}},
 
   savings: (i) => { const P=+i.initial,pmt=+i.monthly,r=+i.rate/100/12,n=+i.years*12; if(!r||!n) return null; const f=Math.round(P*Math.pow(1+r,n)+pmt*(Math.pow(1+r,n)-1)/r); return {value:f.toLocaleString('nb-NO'),unit:'kr',desc:`Etter ${i.years} år`}},
 
+  // ========== FINANS (FINANCE) ==========
+  loan: (i) => { const P=+i.amount,r=+i.rate/100/12,n=+i.years*12; if(!P||!r||!n) return null; const m=Math.round(P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1)); return {value:m.toLocaleString('nb-NO'),unit:'kr/mnd',desc:`Totalt: ${(m*n).toLocaleString('nb-NO')} kr`}},
   vat: (i) => { const a=+i.amount,r=+i.rate; if(!a||!r) return null; const v=(a*r/100); const t=a+v; return {value:Math.round(t).toLocaleString('nb-NO'),unit:'kr',desc:`MVA: ${Math.round(v).toLocaleString('nb-NO')} kr`}},
 
   hourly: (i) => { const a=+i.annual,h=+i.hours; if(!a||!h) return null; return {value:Math.round(a/(h*52)).toLocaleString('nb-NO'),unit:'kr/time',desc:`Basert på ${h} t/uke`}},
