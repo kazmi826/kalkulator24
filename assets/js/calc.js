@@ -1627,7 +1627,93 @@ const Calculators = {
     const recommended=(d*100/2.5).toFixed(0);
     const max=(d*100/1.5).toFixed(0);
     return {value:recommended, unit:'tommer (anbefalt)', desc:`Maks: ${max}" | For ${d}m avstand`};
-  }
+  },
+
+  hours_to_days: (i) => { const h=+i.hours; if(!h) return null; const d=(h/24).toFixed(4); const w=(h/168).toFixed(4); return {value:d, unit:'dager', desc:h+' timer = '+d+' dager = '+w+' uker'}; },
+
+  metal_weight: (i) => { const l=+i.length, w=+i.width, t=+i.thickness; if(!l||!w||!t) return null; const density={'Stål':7.85,'Aluminium':2.70,'Kobber':8.96,'Messing':8.50,'Titan':4.51}; const d=density[i.metal]||7.85; const vol=(l*w*(t/10))/1000; const weight=(vol*d).toFixed(3); return {value:weight, unit:'kg', desc:i.metal+' | Volum: '+vol.toFixed(4)+'L × '+d+'kg/L'}; },
+
+  psi_to_bar: (i) => { const p=+i.psi; if(!p) return null; const bar=(p*0.0689476).toFixed(4); return {value:bar, unit:'bar', desc:p+' PSI = '+bar+' bar = '+(p*6894.76).toFixed(0)+' Pa'}; },
+
+  scale_calc: (i) => { const r=+i.real_size, s=+i.scale; if(!r||!s) return null; const model=(r/s).toFixed(4); return {value:model, unit:i.unit||'mm (modell)', desc:'1:'+s+' skala | Virkelig: '+r+i.unit+' → Modell: '+model+i.unit}; },
+
+  gram_to_ml: (i) => { const g=+i.grams; if(!g) return null; const density={'Vann':1,'Melk':1.03,'Olje':0.92,'Alkohol':0.789,'Honning':1.42}; const d=density[i.substance]||1; return {value:(g/d).toFixed(4), unit:'ml', desc:g+'g ÷ '+d+'g/ml ('+i.substance+')'}; },
+
+  liter_to_gallon: (i) => { const l=+i.liter; if(!l) return null; return {value:(l*0.264172).toFixed(4), unit:'gallon', desc:l+' L = '+(l*0.264172).toFixed(4)+' gal'}; },
+
+  gallon_to_cubicinch: (i) => { const g=+i.gallons; if(!g) return null; return {value:(g*231).toFixed(2), unit:'in³', desc:g+' gallon = '+(g*231)+' kubikktommer'}; },
+
+  password_gen: (i) => { const len=+i.length||12; let chars='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'; if(i.include_numbers==='Ja') chars+='0123456789'; if(i.include_symbols==='Ja') chars+='!@#$%^&*()_+-=[]{}'; let pwd=''; for(let j=0;j<len;j++) pwd+=chars[Math.floor(Math.random()*chars.length)]; const strength=len<8?'Svakt':len<12?'Middels':len<16?'Sterkt':'Veldig sterkt'; return {value:pwd, unit:'', desc:'Styrke: '+strength+' | '+len+' tegn'}; },
+
+  sqkm_to_sqmiles: (i) => { const k=+i.sqkm; if(!k) return null; return {value:(k*0.386102).toFixed(4), unit:'miles²', desc:k+' km² = '+(k*0.386102).toFixed(4)+' mi²'}; },
+
+  ml_to_gallon: (i) => { const m=+i.ml; if(!m) return null; return {value:(m/3785.41).toFixed(6), unit:'gallon', desc:m+' ml = '+(m/3785.41).toFixed(6)+' gal'}; },
+
+  cups_to_liter: (i) => { const c=+i.cups; if(!c) return null; return {value:(c*0.236588).toFixed(4), unit:'liter', desc:c+' kopper = '+(c*0.236588).toFixed(4)+' L'}; },
+
+  inches_to_cm: (i) => { const inch=+i.inches; if(!inch) return null; return {value:(inch*2.54).toFixed(4), unit:'cm', desc:inch+'" = '+(inch*2.54).toFixed(4)+' cm'}; },
+
+  pool_salt: (i) => { const vol=+i.volume, curr=+i.current_ppm, target=+i.target_ppm; if(!vol||!target) return null; const diff=target-curr; if(diff<=0) return {value:0, unit:'kg', desc:'Salt nivå er allerede høyt nok!'}; const kg=(vol*diff/1000000*1000).toFixed(2); return {value:kg, unit:'kg salt', desc:'Legg til '+kg+'kg salt i '+vol+'L basseng'}; },
+
+  sqyard_calc: (i) => { const l=+i.length, w=+i.width; if(!l||!w) return null; const sqft=l*w; const sqyd=(sqft/9).toFixed(4); return {value:sqyd, unit:'yard²', desc:l+"' × "+w+"' = "+sqft+' ft² = '+sqyd+' yd²'}; },
+
+  km_to_miles: (i) => { const k=+i.km; if(!k) return null; return {value:(k*0.621371).toFixed(4), unit:'miles', desc:k+' km = '+(k*0.621371).toFixed(4)+' miles = '+(k*1000).toFixed(0)+' m'}; },
+
+  hours_to_decimal: (i) => { const h=+i.hours, m=+i.minutes; if(isNaN(h)||isNaN(m)) return null; const dec=(h+m/60).toFixed(4); return {value:dec, unit:'desimaltimer', desc:h+'t '+m+'min = '+dec+' timer'}; },
+
+  fahrenheit_to_celsius: (i) => { const f=+i.fahrenheit; if(isNaN(f)) return null; const c=(f-32)*5/9; return {value:c.toFixed(2), unit:'°C', desc:f+'°F = '+c.toFixed(2)+'°C = '+(c+273.15).toFixed(2)+'K'}; },
+
+  amp_to_kw: (i) => { const a=+i.ampere, v=+i.voltage; if(!a||!v) return null; const kw=(a*v/1000).toFixed(4); return {value:kw, unit:'kW', desc:a+'A × '+v+'V = '+(a*v)+'W = '+kw+'kW'}; },
+
+  kpa_to_psi: (i) => { const k=+i.kpa; if(!k) return null; return {value:(k*0.145038).toFixed(4), unit:'PSI', desc:k+' kPa = '+(k*0.145038).toFixed(4)+' PSI = '+(k/100).toFixed(4)+' bar'}; },
+
+  shoe_size_calc: (i) => { const fl=+i.foot_length; if(!fl) return null; const eu=Math.round(fl/0.667); const us_m=Math.round((fl/0.846)-23); const us_f=Math.round((fl/0.846)-22); return {value:eu, unit:'EU', desc:'US Mann: '+us_m+' | US Kvinne: '+us_f+' | Fot: '+fl+'cm'}; },
+
+  quart_to_gallon: (i) => { const q=+i.quart; if(!q) return null; return {value:(q/4).toFixed(4), unit:'gallon', desc:q+' quart = '+(q/4)+' gallon'}; },
+
+  pipe_volume: (i) => { const d=+i.diameter/1000, l=+i.length; if(!d||!l) return null; const vol=(Math.PI*(d/2)*(d/2)*l*1000).toFixed(4); return {value:vol, unit:'liter', desc:'D='+i.diameter+'mm × L='+l+'m | '+vol+'L'}; },
+
+  linear_feet: (i) => { const m=+i.length; if(!m) return null; return {value:(m*3.28084).toFixed(4), unit:'lineære fot', desc:m+' meter = '+(m*3.28084).toFixed(4)+' ft'}; },
+
+  unit_price: (i) => { const p=+i.total_price, q=+i.quantity; if(!p||!q) return null; return {value:(p/q).toFixed(2), unit:'kr per enhet', desc:p+'kr ÷ '+q+' = '+(p/q).toFixed(2)+' kr/stk'}; },
+
+  crore_to_million: (i) => { const c=+i.crore; if(!c) return null; return {value:(c*10).toFixed(2), unit:'million', desc:c+' crore = '+(c*10)+' million = '+(c*10000000).toLocaleString('nb-NO')+' (tall)'}; },
+
+  liter_to_cubicinch: (i) => { const l=+i.liter; if(!l) return null; return {value:(l*61.0237).toFixed(4), unit:'in³', desc:l+' L = '+(l*61.0237).toFixed(4)+' kubikktommer'}; },
+
+  cc_to_oz: (i) => { const c=+i.cc; if(!c) return null; return {value:(c*0.033814).toFixed(4), unit:'fl oz', desc:c+' cc = '+(c*0.033814).toFixed(4)+' oz'}; },
+
+  ml_to_liter: (i) => { const m=+i.ml; if(!m) return null; return {value:(m/1000).toFixed(4), unit:'liter', desc:m+' ml = '+(m/1000)+' L'}; },
+
+  fahrenheit_to_kelvin: (i) => { const f=+i.fahrenheit; if(isNaN(f)) return null; const k=((f-32)*5/9+273.15).toFixed(2); return {value:k, unit:'K', desc:f+'°F = '+((f-32)*5/9).toFixed(2)+'°C = '+k+'K'}; },
+
+  sqm_to_dekar: (i) => { const s=+i.sqm; if(!s) return null; return {value:(s/1000).toFixed(6), unit:'dekar', desc:s+' m² = '+(s/1000).toFixed(4)+' dekar = '+(s/10000).toFixed(6)+' hektar'}; },
+
+  pints_to_cups: (i) => { const p=+i.pints; if(!p) return null; return {value:(p*2).toFixed(2), unit:'kopper', desc:p+' pint = '+(p*2)+' kopper = '+(p*473.176).toFixed(0)+' ml'}; },
+
+  speed_converter: (i) => { const v=+i.value; if(!v) return null; const toMs={'km/t':1/3.6,'m/s':1,'mph':0.44704,'knop':0.514444}; const ms=v*(toMs[i.from_unit]||1); const result=ms/(toMs[i.to_unit]||1); return {value:result.toFixed(4), unit:i.to_unit, desc:v+' '+i.from_unit+' = '+result.toFixed(4)+' '+i.to_unit}; },
+
+  oz_to_liter: (i) => { const o=+i.oz; if(!o) return null; return {value:(o*0.0295735).toFixed(4), unit:'liter', desc:o+' fl oz = '+(o*0.0295735).toFixed(4)+' L = '+(o*29.5735).toFixed(2)+' ml'}; },
+
+  ml_to_cc: (i) => { const m=+i.ml; if(!m) return null; return {value:m, unit:'cc', desc:'1 ml = 1 cc | '+m+' ml = '+m+' cc'}; },
+
+  ring_size_calc: (i) => { const d=+i.diameter, c=+i.circumference; if(!d&&!c) return null; const circ=c||(d*Math.PI); const eu=Math.round((circ-40)/2); return {value:eu, unit:'(EU ringstørrelse)', desc:'Omkrets: '+circ.toFixed(1)+'mm | EU: '+eu}; },
+
+  kelvin_to_fahrenheit: (i) => { const k=+i.kelvin; if(!k) return null; const f=((k-273.15)*9/5+32).toFixed(2); const c=(k-273.15).toFixed(2); return {value:f, unit:'°F', desc:k+'K = '+c+'°C = '+f+'°F'}; },
+
+  cm_to_inches: (i) => { const c=+i.cm; if(!c) return null; return {value:(c/2.54).toFixed(4), unit:'tommer', desc:c+' cm = '+(c/2.54).toFixed(4)+'"'}; },
+
+  cubicft_to_cubicm: (i) => { const cf=+i.cubic_feet; if(!cf) return null; return {value:(cf*0.0283168).toFixed(6), unit:'m³', desc:cf+' ft³ = '+(cf*0.0283168).toFixed(6)+' m³'}; },
+
+  sqmiles_to_sqkm: (i) => { const m=+i.sqmiles; if(!m) return null; return {value:(m*2.58999).toFixed(4), unit:'km²', desc:m+' mi² = '+(m*2.58999).toFixed(4)+' km²'}; },
+
+  ml_to_mg: (i) => { const m=+i.ml, d=+i.density||1; if(!m) return null; return {value:(m*d*1000).toFixed(2), unit:'mg', desc:m+'ml × '+d+'g/ml × 1000 = '+(m*d*1000).toFixed(2)+'mg'}; },
+
+  crore_to_billion: (i) => { const c=+i.crore; if(!c) return null; return {value:(c/100).toFixed(4), unit:'milliard', desc:c+' crore = '+(c/100)+' milliard = '+(c*10000000).toLocaleString('nb-NO')}; },
+
+  kcal_to_cal: (i) => { const k=+i.kcal; if(!k) return null; return {value:(k*1000).toLocaleString('nb-NO'), unit:'kalorier (cal)', desc:k+' kcal = '+(k*1000)+' cal | 1 kcal = 1000 cal'}; },
+
+  oz_to_cc: (i) => { const o=+i.oz; if(!o) return null; return {value:(o*29.5735).toFixed(4), unit:'cc/ml', desc:o+' fl oz = '+(o*29.5735).toFixed(4)+' cc'}; }
 };
 
 // ============================================
