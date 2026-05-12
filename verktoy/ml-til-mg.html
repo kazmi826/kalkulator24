@@ -28,17 +28,191 @@
 <nav class="navbar">
   <div class="navbar-inner">
     <a href="/" class="logo">Kalkulator24</a>
-    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li></ul>
+    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li></ul>
     <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">☰</button>
   </div>
-  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li></ul></div>
+  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li></ul></div>
 </nav>
 <div class="breadcrumb"><a href="/">Hjem</a><span class="sep">›</span><a href="/kategori/konvertering">Konvertering</a><span class="sep">›</span>ML til MG Konvertering</div>
 <div class="tool-hero"><div class="tool-badge">🔄 Konvertering</div><h1>ML til MG Konvertering</h1><p class="subtitle">Konverter milliliter til milligram med tetthet — raskt og gratis</p></div>
 <div class="main-wrap">
   <div class="main-content">
     <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>Milliliter</label><div class="input-row"><input type="number" class="calc-input" data-field="ml" placeholder="1"></div></div><div class="input-group"><label>Tetthet (g/ml)</label><div class="input-row"><input type="number" class="calc-input" data-field="density" placeholder="1"></div></div></div>    <button class="btn-calc" onclick="runCalculator('ml_to_mg')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
-    <div class="ai-loader" id="aiWrap"><p>Last inn detaljert guide</p><button class="btn-ai" id="aiBtn">Vis guide</button><div class="loading-wrap" id="aiLoader"><div class="spinner"></div><span>Laster...</span></div></div><div class="content-card" id="aiContent" style="display:none"></div>
+    <div class="content-card">```html
+<h2>ML til MG Konvertering: Komplett Veiledning</h2>
+
+<p>Når du arbeider med væsker, medisiner eller kjemikalier, er det essensielt å forstå <strong>ml til mg konvertering</strong>. Denne kunnskapen er spesielt viktig innen helsevesen, farmasi og kjøkken. I denne artikkelen skal vi gå gjennom alt du trenger å vite om <strong>ml til mg konvertering</strong>, fra grunnleggende konsepter til praktiske eksempler.</p>
+
+<h2>Hva er ML til MG Konvertering?</h2>
+
+<p><strong>ML til mg konvertering</strong> er prosessen med å konvertere milliliter (ml), som er en målenhet for volum, til milligram (mg), som er en målenhet for masse eller vekt. Disse to enhetene måler forskjellige ting, og derfor er det ikke en direkte konvertering mellom dem.</p>
+
+<h3>Volum versus Masse</h3>
+
+<p>Milliliter (ml) måler hvor mye plass noe tar opp – det er en volumsenhet. Milligram (mg) måler hvor tungt noe er – det er en massenhet. For å kunne utføre <strong>ml til mg konvertering</strong>, må du kjenne tettheten av stoffet du konverterer.</p>
+
+<h3>Betydningen av Tetthet</h3>
+
+<p>Tetthet er forholdet mellom masse og volum. For eksempel, ett milliliter vann veier 1000 milligram, mens ett milliliter olje veier mindre. Dette er grunnen til at <strong>ml til mg konvertering</strong> krever kunnskap om stoffets tetthet.</p>
+
+<h2>Hvorfor er ML til MG Konvertering Viktig?</h2>
+
+<p><strong>ML til mg konvertering</strong> er kritisk viktig i flere områder av dagliglivet og profesjonelle felt. La oss utforske hvorfor denne kunnskapen er så verdifull.</p>
+
+<h3>I Medisinsk Behandling</h3>
+
+<p>Leger og sykepleiere må ofte konvertere mellom volum og dose. Når en pasient skal få en medisin, kan dosen være oppgitt i milligram, mens medisinen leveres i en væskform målt i milliliter. Korrekt <strong>ml til mg konvertering</strong> kan være forskjellen mellom riktig og feil dosering.</p>
+
+<h3>I Apoteket</h3>
+
+<p>Farmasøyter bruker <strong>ml til mg konvertering</strong> daglig når de skal forberede resepter. En receptor kan spesifisere en dose i milligram, men medisinen kan være tilgjengelig som en løsning eller suspensjon målt i milliliter.</p>
+
+<h3>I Kjøkkenet</h3>
+
+<p>Selv når du baker eller lager mat, kan <strong>ml til mg konvertering</strong> være relevant. Noen oppskrifter spesifiserer ingredienser etter vekt (mg), mens andre bruker volum (ml).</p>
+
+<h3>I Laboratorier</h3>
+
+<p>Kjemikere og biologer må konstant konvertere mellom disse enhetene når de arbeider med løsninger og reagenser. Presisjon er avgjørende for at eksperimenter skal lykkes.</p>
+
+<h2>Slik Bruker du ML til MG Konvertering</h2>
+
+<p>For å utføre en <strong>ml til mg konvertering</strong>, trenger du to viktige opplysninger: volumet i milliliter og tettheten av stoffet.</p>
+
+<h3>Trinn for Konvertering</h3>
+
+<ul>
+<li>Identifiser volumet i milliliter (ml) som skal konverteres</li>
+<li>Finn tettheten av stoffet (oppgitt som g/ml eller kg/L)</li>
+<li>Konverter tettheten til mg/ml hvis nødvendig</li>
+<li>Multipliser volumet med tettheten</li>
+<li>Resultatet er massen i milligram</li>
+</ul>
+
+<h3>Viktig Informasjon å Huske</h3>
+
+<p>Når du skal gjøre <strong>ml til mg konvertering</strong>, husk at tettheten kan variere med temperatur og trykk. Vær sikker på at du bruker riktig tetthet for stoffet og forholdene du arbeider under.</p>
+
+<h2>Formel med Eksempel</h2>
+
+<p>Den grunnleggende formelen for <strong>ml til mg konvertering</strong> er:</p>
+
+<p><strong>Masse (mg) = Volum (ml) × Tetthet (mg/ml)</strong></p>
+
+<h3>Praktisk Eksempel 1: Vann</h3>
+
+<p>La oss si at du har 50 ml vann. Tettheten av vann er 1 g/ml, som tilsvarer 1000 mg/ml.</p>
+
+<ul>
+<li>Volum: 50 ml</li>
+<li>Tetthet: 1000 mg/ml</li>
+<li>Beregning: 50 ml × 1000 mg/ml = 50 000 mg</li>
+<li>Resultat: 50 ml vann veier 50 000 mg</li>
+</ul>
+
+<h3>Praktisk Eksempel 2: Medisinløsning</h3>
+
+<p>Anta at du har en medisinløsning med konsentrasjon på 5 mg/ml, og du trenger 15 ml av denne løsningen.</p>
+
+<ul>
+<li>Volum: 15 ml</li>
+<li>Konsentrasjon: 5 mg/ml</li>
+<li>Beregning: 15 ml × 5 mg/ml = 75 mg</li>
+<li>Resultat: 15 ml medisinløsning inneholder 75 mg aktivt stoff</li>
+</ul>
+
+<p>Dette er et praktisk eksempel på hvordan <strong>ml til mg konvertering</strong> brukes i medisinsk sammenheng.</p>
+
+<h3>Praktisk Eksempel 3: Olje</h3>
+
+<p>Tettheten av vegetarolje er cirka 0,92 g/ml, som tilsvarer 920 mg/ml. Hvis du har 30 ml olje:</p>
+
+<ul>
+<li>Volum: 30 ml</li>
+<li>Tetthet: 920 mg/ml</li>
+<li>Beregning: 30 ml × 920 mg/ml = 27 600 mg</li>
+<li>Resultat: 30 ml olje veier 27 600 mg</li>
+</ul>
+
+<h2>Praktiske Eksempler fra Dagliglivet</h2>
+
+<p>La oss se på flere eksempler som illustrerer hvordan <strong>ml til mg konvertering</strong> brukes i virkelige situasjoner.</p>
+
+<h3>Eksempel: Barnmedisin</h3>
+
+<p>En lege ordinerer 10 mg av et antibiotikum til et barn. Medisinen leveres som en suspensjon med styrke 20 mg/5 ml. For å gjøre riktig <strong>ml til mg konvertering</strong>:</p>
+
+<ul>
+<li>Ønsket dose: 10 mg</li>
+<li>Tilgjengelig styrke: 20 mg per 5 ml</li>
+<li>Beregning: (10 mg ÷ 20 mg) × 5 ml = 2,5 ml</li>
+</ul>
+
+<p>Riktig dose er 2,5 ml. Dette viser hvor viktig det er å forstå <strong>ml til mg konvertering</strong> for pasientsikkerhet.</p>
+
+<h3>Eksempel: Kosmetikkindustri</h3>
+
+<p>En kosmetologfabrikk trenger å lage 500 ml av en krem med en konsentrasjon på 2% aktiv ingrediens. For <strong>ml til mg konvertering</strong>:</p>
+
+<ul>
+<li>Total volum: 500 ml</li>
+<li>Konsentrasjon: 2% = 20 mg/ml</li>
+<li>Total aktiv ingrediens: 500 ml × 20 mg/ml = 10 000 mg</li>
+</ul>
+
+<h3>Eksempel: Vitamintilskudd</h3>
+
+<p>Et vitamintilskudd kommer som en væske med 500 mg vitamin C per 5 ml. Hvis du tar 10 ml daglig:</p>
+
+<ul>
+<li>Volum tatt: 10 ml</li>
+<li>Styrke: 500 mg per 5 ml = 100 mg/ml</li>
+<li>Daglig dose: 10 ml × 100 mg/ml = 1000 mg</li>
+</ul>
+
+<p>Dette eksempelet viser praktisk bruk av <strong>ml til mg konvertering</strong> i hverdagen.</p>
+
+<h2>Tips for Nøyaktig ML til MG Konvertering</h2>
+
+<p>Her er noen verdifulle tips for å sikre at du gjør <strong>ml til mg konvertering</strong> korrekt:</p>
+
+<h3>Sjekk Alltid Tettheten</h3>
+
+<ul>
+<li>Slå opp den nøyaktige tettheten for stoffet du konverterer</li>
+<li>Vær oppmerksom på temperatur og trykk som kan påvirke tettheten</li>
+<li>Bruk pålitelige kilder som kjemiske databaser</li>
+</ul>
+
+<h3>Vær Nøye med Konsentrasjon</h3>
+
+<ul>
+<li>For medisiner og løsninger, fokuser på konsentrasjon i stedet for tettheten på hele væsken</li>
+<li>Konsentrasjonen oppgis vanligvis på etiketten</li>
+<li>Denne metoden er ofte mer praktisk enn å bruke tettheten</li>
+</ul>
+
+<h3>Dobbeltsjekk Dine Beregninger</h3>
+
+<ul>
+<li>Gjør kalkulasjonen minst to ganger</li>
+<li>Bruk en kalkulator for å unngå matematiske feil</li>
+<li>Spør en kollega til å verifisere resultatet hvis mulig</li>
+</ul>
+
+<h3>Dokumenter Alt</h3>
+
+<ul>
+<li>Skriv ned alle tall og beregninger</li>
+<li>Bevar kilder for tetthetsdata</li>
+<li>Dette er særlig viktig i medisinsk og laboratoriekontekst</li>
+</ul>
+
+<h2>Hyppig Stilte Spørsmål (FAQ)</h2>
+
+<h3>Spørsmål 1: Kan jeg direkte konvertere ml til mg?</h3>
+
+<p>Nei, du kan ikke direkte konvertere ml til mg fordi de måler forskjellige ting. ML måler volum og mg måler masse. Du må kjenne tettheten av stoffet for å gjøre konverteringen</div>
     <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/temperatur-konvertering'"><span class="tool-card-icon">🔄</span><h3>Temperatur Konvertering</h3><p>Konverter temperatur mellom alle enheter</p></div><div class="tool-card" onclick="location='/verktoy/fahrenheit-celsius'"><span class="tool-card-icon">🔄</span><h3>Fahrenheit til Celsius</h3><p>Konverter Fahrenheit til Celsius med detaljer</p></div><div class="tool-card" onclick="location='/verktoy/km-til-miles'"><span class="tool-card-icon">🔄</span><h3>Kilometer til Miles</h3><p>Konverter km til miles med nøyaktighet</p></div><div class="tool-card" onclick="location='/verktoy/miles-til-km'"><span class="tool-card-icon">🔄</span><h3>Miles til Kilometer</h3><p>Konverter miles til km med nøyaktighet</p></div><div class="tool-card" onclick="location='/verktoy/kg-til-pund'"><span class="tool-card-icon">🔄</span><h3>Kg til Pund</h3><p>Konverter kilogram til pund med presisjon</p></div><div class="tool-card" onclick="location='/verktoy/pund-til-kg'"><span class="tool-card-icon">🔄</span><h3>Pund til Kg</h3><p>Konverter pund til kilogram med presisjon</p></div><div class="tool-card" onclick="location='/verktoy/meter-til-fot'"><span class="tool-card-icon">🔄</span><h3>Meter til Fot</h3><p>Konverter meter til fot med høy nøyaktighet</p></div><div class="tool-card" onclick="location='/verktoy/cm-til-tommer'"><span class="tool-card-icon">🔄</span><h3>Centimeter til Tommer</h3><p>Konverter cm til tommer med brøker</p></div><div class="tool-card" onclick="location='/verktoy/liter-til-gallon'"><span class="tool-card-icon">🔄</span><h3>Liter til Gallon</h3><p>Konverter liter til gallon (US og UK)</p></div><div class="tool-card" onclick="location='/verktoy/ml-til-ts'"><span class="tool-card-icon">🔄</span><h3>Milliliter til Teskje</h3><p>Konverter ml til ulike måleenheter</p></div><div class="tool-card" onclick="location='/verktoy/bytes-til-mb'"><span class="tool-card-icon">🔄</span><h3>Bytes til MB Kalkulator</h3><p>Konverter bytes, KB, MB, GB, TB</p></div><div class="tool-card" onclick="location='/verktoy/hektar-til-m2'"><span class="tool-card-icon">🔄</span><h3>Hektar til m² Kalkulator</h3><p>Konverter hektar til kvadratmeter</p></div><div class="tool-card" onclick="location='/kategori/konvertering'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle Konvertering</h3><p>Alle kalkulatorer i denne kategorien</p></div></div></div>
     <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/lan-kalkulator'"><span class="tool-card-icon">💰</span><h3>Lån Kalkulator</h3><p>Beregn månedlige låneavdrag med nedbetalingsoversikt</p></div><div class="tool-card" onclick="location='/verktoy/prosent-kalkulator'"><span class="tool-card-icon">📐</span><h3>Prosent Kalkulator</h3><p>Beregn prosent med flere metoder og sammenligninger</p></div><div class="tool-card" onclick="location='/verktoy/areal-kalkulator'"><span class="tool-card-icon">📏</span><h3>Areal Kalkulator</h3><p>Beregn areal av ulike former med enheter</p></div><div class="tool-card" onclick="location='/verktoy/alder-kalkulator'"><span class="tool-card-icon">📅</span><h3>Alder Kalkulator</h3><p>Beregn nøyaktig alder med sammenligning og statistikk</p></div><div class="tool-card" onclick="location='/verktoy/fart-kalkulator'"><span class="tool-card-icon">⚡</span><h3>Fart Kalkulator</h3><p>Beregn fart, distanse og tid med enhetskonvertering og drivstoffestimat</p></div></div></div>
   </div>
@@ -50,10 +224,10 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-grid">
-      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">449+ gratis kalkulatorer</p></div>
-      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li></ul></div>
+      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">491+ gratis kalkulatorer</p></div>
+      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li><li><a href="/kategori/krypto">₿ Krypto</a></li><li><a href="/kategori/spill">🎮 Spill</a></li></ul></div>
       <div class="footer-col"><h4>Populære</h4><ul><li><a href="/verktoy/bmi-kalkulator">BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator">Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator">Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator">Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator">Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator">pH Kalkulator</a></li><li><a href="/verktoy/molekylvekt-kalkulator">Molekylvektkalkulator</a></li><li><a href="/verktoy/halveringstid-kalkulator">Halveringstid Kalkulator</a></li><li><a href="/verktoy/befolkningsvekst-kalkulator">Befolkningsvekst Kalkulator</a></li><li><a href="/verktoy/terningkaster">Terningkaster</a></li></ul></div>
-      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/konverter-oz-til-cc">OZ til CC Konverter</a></li><li><a href="/verktoy/kcal-til-kalorier">KCAL til Kalorier Omformer</a></li><li><a href="/verktoy/crore-til-milliard">Crore til Milliard Konverterer</a></li><li><a href="/verktoy/ml-til-mg">ML til MG Konvertering</a></li><li><a href="/verktoy/kvadratmiles-til-kvadratkilometer">Kvadratmiles til Kvadratkilometer Kalkulator</a></li><li><a href="/verktoy/kubikkfot-til-kubikkmeter">Kubikkfot til Kubikkmeter Konverter</a></li><li><a href="/verktoy/centimeter-til-tommer">Centimeter til Tommer Konverter</a></li><li><a href="/verktoy/kelvin-til-fahrenheit">Kelvin til Fahrenheit Konverter</a></li></ul></div>
+      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/beste-sjakktrekk">Beste Sjakktrekk Kalkulator</a></li><li><a href="/verktoy/wotlk-talent">WOTLK Talent Kalkulator</a></li><li><a href="/verktoy/sod-talent">SOD Talent Kalkulator</a></li><li><a href="/verktoy/bdo-hest">BDO Hestekalkulator</a></li><li><a href="/verktoy/diablo3-edelsten">Diablo 3 Edelstens Kalkulator</a></li><li><a href="/verktoy/dots-kalkulator">DOTS Kalkulator</a></li><li><a href="/verktoy/chocobo-farge">Chocobo Farge Kalkulator</a></li><li><a href="/verktoy/clash-of-clans">Clash of Clans Kalkulator</a></li></ul></div>
       <div class="footer-col"><h4>Info</h4><ul><li><a href="/om-oss">Om oss</a></li><li><a href="/personvern">Personvern</a></li><li><a href="/kontakt">Kontakt</a></li></ul></div>
     </div>
     <div class="footer-bottom"><p>© 2026 Kalkulator24 — Alle kalkulatorer er gratis</p></div>

@@ -28,17 +28,155 @@
 <nav class="navbar">
   <div class="navbar-inner">
     <a href="/" class="logo">Kalkulator24</a>
-    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li></ul>
+    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li></ul>
     <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">☰</button>
   </div>
-  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li></ul></div>
+  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li></ul></div>
 </nav>
 <div class="breadcrumb"><a href="/">Hjem</a><span class="sep">›</span><a href="/kategori/konvertering">Konvertering</a><span class="sep">›</span>Rørvolumkalkulator</div>
 <div class="tool-hero"><div class="tool-badge">🔄 Konvertering</div><h1>Rørvolumkalkulator</h1><p class="subtitle">Beregn rørvolum fra diameter og lengde — raskt og gratis</p></div>
 <div class="main-wrap">
   <div class="main-content">
     <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>Diameter (mm)</label><div class="input-row"><input type="number" class="calc-input" data-field="diameter" placeholder="100"></div></div><div class="input-group"><label>Lengde (m)</label><div class="input-row"><input type="number" class="calc-input" data-field="length" placeholder="10"></div></div></div>    <button class="btn-calc" onclick="runCalculator('pipe_volume')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
-    <div class="ai-loader" id="aiWrap"><p>Last inn detaljert guide</p><button class="btn-ai" id="aiBtn">Vis guide</button><div class="loading-wrap" id="aiLoader"><div class="spinner"></div><span>Laster...</span></div></div><div class="content-card" id="aiContent" style="display:none"></div>
+    <div class="content-card">```html
+<h2>Rørvolumkalkulator: Din Guide til Beregning av Rørvolum</h2>
+
+<p>En <strong>rørvolumkalkulator</strong> er et verdifullt verktøy for ingeniører, installatører og håndverkere som jobber med rør- og kanalinstallasjon. Denne kalkulatoren hjelper deg med å beregne nøyaktig hvor mye væske eller gass et rør kan inneholde. Om du arbeider med vann-, elektro-, eller oppvarminganlegg, er en <strong>rørvolumkalkulator</strong> essensielt for planlegging og dimensjonering.</p>
+
+<h2>Hva er en Rørvolumkalkulator?</h2>
+
+<h3>Definisjonen av Rørvolumkalkulator</h3>
+
+<p>En <strong>rørvolumkalkulator</strong> er et matematisk verktøy som beregner hvor mye væske eller gass som kan passe inne i et rør basert på dets diameter og lengde. Dette er kritisk informasjon når du planlegger installasjoner, beregner kapasitet eller estimerer materialbehov.</p>
+
+<p>Kalkulatoren fungerer ved å bruke geometriske formler for å finne volumet av en sylinder, siden rør er sylindriske objekter. Med en <strong>rørvolumkalkulator</strong> slipper du manuelle beregninger og får raske, nøyaktige resultater.</p>
+
+<h3>Ulike Typer Rørvolumkalkulatorer</h3>
+
+<ul>
+<li>Online kalkulatorer som krever kun diameterinput og lengde</li>
+<li>Smartphone-apper for kalkulering på byggeplassen</li>
+<li>Excel-baserte løsninger for større prosjekter</li>
+<li>Profesjonelle CAD-integrasjoner for komplekse systemer</li>
+</ul>
+
+<h2>Hvorfor er Rørvolumkalkulator Viktig?</h2>
+
+<h3>Betydningen i Byggebransjen</h3>
+
+<p>I bygg- og installasjonsarbeid er nøyaktige beregninger avgjørende. En <strong>rørvolumkalkulator</strong> hjelper deg med å:</p>
+
+<ul>
+<li><strong>Spare penger</strong> ved å estimere eksakt materialbehov</li>
+<li><strong>Sikre korrekt dimensjonering</strong> av rørledninger</li>
+<li><strong>Redusere svinn</strong> og unødvendig materialbruk</li>
+<li><strong>Planlegge installasjon</strong> effektivt og profesjonelt</li>
+<li><strong>Forhindre feil</strong> som kan være kostbare å reparere</li>
+</ul>
+
+<h3>Praktiske Fordeler</h3>
+
+<p>Ved å bruke en <strong>rørvolumkalkulator</strong> sparer du tid og reduserer risikoen for menneskelige feil. Istedenfor å gjøre manuelle beregninger på papir, får du øyeblikkelig tilbakemelding. Dette er spesielt viktig når du skal bestille materialer eller planlegge større prosjekter.</p>
+
+<h2>Slik Bruker Du en Rørvolumkalkulator</h2>
+
+<h3>Steg-for-Steg Veiledning</h3>
+
+<p>Å bruke en <strong>rørvolumkalkulator</strong> er enkelt og rett fram:</p>
+
+<ol>
+<li><strong>Mål diameter:</strong> Bestem rørdiameteren i millimeter eller tommer</li>
+<li><strong>Mål lengde:</strong> Måle lengden på røret ditt</li>
+<li><strong>Velg enhet:</strong> Bestem om du vil ha resultat i liter, kubikkmeter eller gallons</li>
+<li><strong>Skriv inn verdier:</strong> Legg inn målene i <strong>rørvolumkalkulatoren</strong></li>
+<li><strong>Få resultat:</strong> Kalkulatoren viser øyeblikkelig volumet</li>
+</ol>
+
+<h3>Hva Du Trenger Å Vite</h3>
+
+<p>Før du bruker en <strong>rørvolumkalkulator</strong>, er det viktig å forstå forskjellen mellom indre og ytre diameter. De fleste kalkulatorer bruker indre diameter, da det er denne som bestemmer hvor mye væske røret kan inneholde.</p>
+
+<h2>Formel og Praktisk Eksempel</h2>
+
+<h3>Matematisk Formel</h3>
+
+<p>En <strong>rørvolumkalkulator</strong> baserer seg på følgende formel for volum av en sylinder:</p>
+
+<p><strong>V = π × r² × h</strong></p>
+
+<p>Der:</p>
+<ul>
+<li>V = Volum</li>
+<li>π = 3,14159 (Pi)</li>
+<li>r = Radius (halve diameteren)</li>
+<li>h = Høyde/lengde på røret</li>
+</ul>
+
+<h3>Eksempel med Konkrete Tall</h3>
+
+<p>La oss si du har et rør med indre diameter på 50 mm og lengde på 2 meter (2000 mm). Slik beregner <strong>rørvolumkalkulatoren</strong>:</p>
+
+<ul>
+<li>Radius = 50 ÷ 2 = 25 mm</li>
+<li>V = 3,14159 × 25² × 2000</li>
+<li>V = 3,14159 × 625 × 2000</li>
+<li>V = 3.926.990 mm³</li>
+<li>V = 3,93 liter</li>
+</ul>
+
+<p>Med en <strong>rørvolumkalkulator</strong> ville du få dette resultatet på sekunder i stedet for å gjøre komplekse beregninger manuelt.</p>
+
+<h2>Praktiske Eksempler på Bruk</h2>
+
+<h3>Vannledningsinstallasjon</h3>
+
+<p>Når du installerer vannledninger i et hus, er det viktig å vite hvor mye vann systemet kan inneholde. En <strong>rørvolumkalkulator</strong> hjelper deg med å beregne hvor mange liter et 15 mm rør på 30 meter kan holde. Dette er essensielt for frostbeskyttelse og systemfylling.</p>
+
+<h3>Oppvarmingssystem</h3>
+
+<p>I varmeanlegg er korrekt volum kritisk for optimal drift. Med en <strong>rørvolumkalkulator</strong> kan du raskt finne ut hvor mye varmevæske du trenger for å fylle alle rørene i systemet.</p>
+
+<h3>Industribehov</h3>
+
+<p>Større industrielle installasjoner krever presise beregninger av rørvolumer. En <strong>rørvolumkalkulator</strong> sikrer at kapasiteter for pumper, ekspansjonstanker og reservoarer dimensjoneres korrekt.</p>
+
+<h2>Nyttige Tips for Bruk av Rørvolumkalkulator</h2>
+
+<ul>
+<li><strong>Mål nøyaktig:</strong> Små avvik i måling kan gi store avvik i resultat</li>
+<li><strong>Bruk indre diameter:</strong> Pass på at du bruker innvendig diameter, ikke ytre</li>
+<li><strong>Konverter enheter riktig:</strong> Vær sikker på enhetene før beregning</li>
+<li><strong>Legg til marginal:</strong> Legg gjerne til 5-10% ekstra volum for sikkerhet</li>
+<li><strong>Kontroller med fagfolk:</strong> For kritiske installasjoner, sjekk beregningene dine med erfaren personell</li>
+<li><strong>Dokumenter resultater:</strong> Behold oversikt over alle beregninger for framtida</li>
+</ul>
+
+<h2>Ofte Stilte Spørsmål om Rørvolumkalkulator</h2>
+
+<h3>Spørsmål 1: Hvilken Enhet Skal Jeg Bruke i Rørvolumkalkulatoren?</h3>
+
+<p>Du kan bruke hvilken som helst enhet du foretrekker, men vær konsistent. Hvis du bruker millimeter og millimeter, får du resultat i kubikkmillimeter som må konverteres. De fleste <strong>rørvolumkalkulatorer</strong> tillater deg å velge enheter direkte, så du kan få resultat i liter eller kubikkmeter rett på.</p>
+
+<h3>Spørsmål 2: Hva er Forskjellen på Indre og Ytre Diameter?</h3>
+
+<p>Indre diameter er målingen på innsiden av røret, mens ytre diameter er på utsiden. For volumberegning må du alltid bruke indre diameter, da det er denne som bestemmer hvor mye væske røret kan holde. En <strong>rørvolumkalkulator</strong> bruker alltid indre diameter.</p>
+
+<h3>Spørsmål 3: Kan Jeg Bruke Rørvolumkalkulatoren for Alle Typer Rør?</h3>
+
+<p>Ja, <strong>rørvolumkalkulatoren</strong> fungerer for alle sylindriske rør uavhengig av materiale. Om det er plast, metall, eller annet materiale, spiller ingen rolle for volumberegningen. Den eneste faktoren som importerer er diameter og lengde.</p>
+
+<h3>Spørsmål 4: Hvor Nøyaktig er en Rørvolumkalkulator?</h3>
+
+<p>En <strong>rørvolumkalkulator</strong> er matematisk nøyaktig basert på formelen for sylindervolum. Nøyaktigheten avhenger helt av hvor nøyaktig du måler diameter og lengde. Hvis du måler riktig, får du nøyaktige resultater.</p>
+
+<h3>Spørsmål 5: Trenger Jeg en Fysisk Kalkulator eller Kan Jeg Bruke Online Versjonen?</h3>
+
+<p>En online <strong>rørvolumkalkulator</strong> er ofte mer praktisk og krever ingen installasjon. Den kan brukes fra hvilken som helst enhet med internettforbindelse. For prosjekter på stedet anbefales det dog å ha en offline løsning eller en app på telefonen din som fungerer uten internett.</p>
+
+<h2>Konklusjon</h2>
+
+<p>En <strong>rørvolumkalkulator</strong> er et uunnværlig verktøy for alle som arbeider med rørinstallasjoner. Det sparer tid, reduserer feil, og sikrer nøyaktige beregninger. Enten du er profesjonell installer eller gjør det selv, vil en <strong>rørvolumkalkulator</strong> gjøre jobben lettere og mer effektiv. Start å bruke en i dag og opplev hvordan dette enkle verktøyet kan forbedre dine prosjekter.</p>
+```</div>
     <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/temperatur-konvertering'"><span class="tool-card-icon">🔄</span><h3>Temperatur Konvertering</h3><p>Konverter temperatur mellom alle enheter</p></div><div class="tool-card" onclick="location='/verktoy/fahrenheit-celsius'"><span class="tool-card-icon">🔄</span><h3>Fahrenheit til Celsius</h3><p>Konverter Fahrenheit til Celsius med detaljer</p></div><div class="tool-card" onclick="location='/verktoy/km-til-miles'"><span class="tool-card-icon">🔄</span><h3>Kilometer til Miles</h3><p>Konverter km til miles med nøyaktighet</p></div><div class="tool-card" onclick="location='/verktoy/miles-til-km'"><span class="tool-card-icon">🔄</span><h3>Miles til Kilometer</h3><p>Konverter miles til km med nøyaktighet</p></div><div class="tool-card" onclick="location='/verktoy/kg-til-pund'"><span class="tool-card-icon">🔄</span><h3>Kg til Pund</h3><p>Konverter kilogram til pund med presisjon</p></div><div class="tool-card" onclick="location='/verktoy/pund-til-kg'"><span class="tool-card-icon">🔄</span><h3>Pund til Kg</h3><p>Konverter pund til kilogram med presisjon</p></div><div class="tool-card" onclick="location='/verktoy/meter-til-fot'"><span class="tool-card-icon">🔄</span><h3>Meter til Fot</h3><p>Konverter meter til fot med høy nøyaktighet</p></div><div class="tool-card" onclick="location='/verktoy/cm-til-tommer'"><span class="tool-card-icon">🔄</span><h3>Centimeter til Tommer</h3><p>Konverter cm til tommer med brøker</p></div><div class="tool-card" onclick="location='/verktoy/liter-til-gallon'"><span class="tool-card-icon">🔄</span><h3>Liter til Gallon</h3><p>Konverter liter til gallon (US og UK)</p></div><div class="tool-card" onclick="location='/verktoy/ml-til-ts'"><span class="tool-card-icon">🔄</span><h3>Milliliter til Teskje</h3><p>Konverter ml til ulike måleenheter</p></div><div class="tool-card" onclick="location='/verktoy/bytes-til-mb'"><span class="tool-card-icon">🔄</span><h3>Bytes til MB Kalkulator</h3><p>Konverter bytes, KB, MB, GB, TB</p></div><div class="tool-card" onclick="location='/verktoy/hektar-til-m2'"><span class="tool-card-icon">🔄</span><h3>Hektar til m² Kalkulator</h3><p>Konverter hektar til kvadratmeter</p></div><div class="tool-card" onclick="location='/kategori/konvertering'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle Konvertering</h3><p>Alle kalkulatorer i denne kategorien</p></div></div></div>
     <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/lan-kalkulator'"><span class="tool-card-icon">💰</span><h3>Lån Kalkulator</h3><p>Beregn månedlige låneavdrag med nedbetalingsoversikt</p></div><div class="tool-card" onclick="location='/verktoy/prosent-kalkulator'"><span class="tool-card-icon">📐</span><h3>Prosent Kalkulator</h3><p>Beregn prosent med flere metoder og sammenligninger</p></div><div class="tool-card" onclick="location='/verktoy/areal-kalkulator'"><span class="tool-card-icon">📏</span><h3>Areal Kalkulator</h3><p>Beregn areal av ulike former med enheter</p></div><div class="tool-card" onclick="location='/verktoy/alder-kalkulator'"><span class="tool-card-icon">📅</span><h3>Alder Kalkulator</h3><p>Beregn nøyaktig alder med sammenligning og statistikk</p></div><div class="tool-card" onclick="location='/verktoy/fart-kalkulator'"><span class="tool-card-icon">⚡</span><h3>Fart Kalkulator</h3><p>Beregn fart, distanse og tid med enhetskonvertering og drivstoffestimat</p></div></div></div>
   </div>
@@ -50,10 +188,10 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-grid">
-      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">449+ gratis kalkulatorer</p></div>
-      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li></ul></div>
+      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">491+ gratis kalkulatorer</p></div>
+      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li><li><a href="/kategori/krypto">₿ Krypto</a></li><li><a href="/kategori/spill">🎮 Spill</a></li></ul></div>
       <div class="footer-col"><h4>Populære</h4><ul><li><a href="/verktoy/bmi-kalkulator">BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator">Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator">Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator">Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator">Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator">pH Kalkulator</a></li><li><a href="/verktoy/molekylvekt-kalkulator">Molekylvektkalkulator</a></li><li><a href="/verktoy/halveringstid-kalkulator">Halveringstid Kalkulator</a></li><li><a href="/verktoy/befolkningsvekst-kalkulator">Befolkningsvekst Kalkulator</a></li><li><a href="/verktoy/terningkaster">Terningkaster</a></li></ul></div>
-      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/konverter-oz-til-cc">OZ til CC Konverter</a></li><li><a href="/verktoy/kcal-til-kalorier">KCAL til Kalorier Omformer</a></li><li><a href="/verktoy/crore-til-milliard">Crore til Milliard Konverterer</a></li><li><a href="/verktoy/ml-til-mg">ML til MG Konvertering</a></li><li><a href="/verktoy/kvadratmiles-til-kvadratkilometer">Kvadratmiles til Kvadratkilometer Kalkulator</a></li><li><a href="/verktoy/kubikkfot-til-kubikkmeter">Kubikkfot til Kubikkmeter Konverter</a></li><li><a href="/verktoy/centimeter-til-tommer">Centimeter til Tommer Konverter</a></li><li><a href="/verktoy/kelvin-til-fahrenheit">Kelvin til Fahrenheit Konverter</a></li></ul></div>
+      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/beste-sjakktrekk">Beste Sjakktrekk Kalkulator</a></li><li><a href="/verktoy/wotlk-talent">WOTLK Talent Kalkulator</a></li><li><a href="/verktoy/sod-talent">SOD Talent Kalkulator</a></li><li><a href="/verktoy/bdo-hest">BDO Hestekalkulator</a></li><li><a href="/verktoy/diablo3-edelsten">Diablo 3 Edelstens Kalkulator</a></li><li><a href="/verktoy/dots-kalkulator">DOTS Kalkulator</a></li><li><a href="/verktoy/chocobo-farge">Chocobo Farge Kalkulator</a></li><li><a href="/verktoy/clash-of-clans">Clash of Clans Kalkulator</a></li></ul></div>
       <div class="footer-col"><h4>Info</h4><ul><li><a href="/om-oss">Om oss</a></li><li><a href="/personvern">Personvern</a></li><li><a href="/kontakt">Kontakt</a></li></ul></div>
     </div>
     <div class="footer-bottom"><p>© 2026 Kalkulator24 — Alle kalkulatorer er gratis</p></div>

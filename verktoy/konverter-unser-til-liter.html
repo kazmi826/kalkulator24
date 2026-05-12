@@ -28,17 +28,154 @@
 <nav class="navbar">
   <div class="navbar-inner">
     <a href="/" class="logo">Kalkulator24</a>
-    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li></ul>
+    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li></ul>
     <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">☰</button>
   </div>
-  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li></ul></div>
+  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li></ul></div>
 </nav>
 <div class="breadcrumb"><a href="/">Hjem</a><span class="sep">›</span><a href="/kategori/konvertering">Konvertering</a><span class="sep">›</span>Unser til Liter Konverter</div>
 <div class="tool-hero"><div class="tool-badge">🔄 Konvertering</div><h1>Unser til Liter Konverter</h1><p class="subtitle">Konverter fluid unser til liter — raskt og gratis</p></div>
 <div class="main-wrap">
   <div class="main-content">
     <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>Fl oz</label><div class="input-row"><input type="number" class="calc-input" data-field="oz" placeholder="33.8"></div></div></div>    <button class="btn-calc" onclick="runCalculator('oz_to_liter')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
-    <div class="ai-loader" id="aiWrap"><p>Last inn detaljert guide</p><button class="btn-ai" id="aiBtn">Vis guide</button><div class="loading-wrap" id="aiLoader"><div class="spinner"></div><span>Laster...</span></div></div><div class="content-card" id="aiContent" style="display:none"></div>
+    <div class="content-card">```html
+<h2>Unser til Liter Konverter - Komplett Guide</h2>
+
+<p>En <strong>unser til liter konverter</strong> er et praktisk verktøy som hjelper deg med å konvertere væskemengder fra unser til liter. Dette er særlig nyttig når du arbeider med oppskrifter, kjemikalier eller andre væsker der du møter forskjellige målsystemer. I denne artikkelen skal vi utforske alt du trenger å vite om <strong>unser til liter konverter</strong> og hvordan du bruker det effektivt.</p>
+
+<h2>Hva er en Unser til Liter Konverter?</h2>
+
+<p>En <strong>unser til liter konverter</strong> er et digitalt eller manuelt verktøy designet for å gjøre konvertering av måleenheter enkel og rask. Unser (oz) er en måleenhet som ofte brukes i engelskspråklige land, mens liter (L) er standarden i de fleste andre deler av verden. En <strong>unser til liter konverter</strong> eliminerer behovet for å huske kompliserte formler og gjør det mulig å få nøyaktige resultater på sekunder.</p>
+
+<p>Det finnes flere typer konvertere tilgjengelig:</p>
+
+<ul>
+<li>Online konvertere som du kan få tilgang til via nettleseren din</li>
+<li>Mobilapplikasjoner som fungerer offline</li>
+<li>Kalkulator-baserte verktøy</li>
+<li>Fysiske konverteringstabeller</li>
+</ul>
+
+<h2>Hvorfor er Unser til Liter Konverter Viktig?</h2>
+
+<h3>Nøyaktighet i Matlagning</h3>
+
+<p>Når du bruker internasjonale oppskrifter, vil du ofte støte på måleenheter som unser. En <strong>unser til liter konverter</strong> sikrer at du får de riktige mengdene ingredienser, noe som er kritisk for baking og presise kulinariske prosesser.</p>
+
+<h3>Profesjonell og Industriell Bruk</h3>
+
+<p>I farmasi, kjemi og andre industrier er nøyaktig konvertering essensielt. En pålitelig <strong>unser til liter konverter</strong> hjelper profesjonelle til å arbeide med sikkerhet og presisjon.</p>
+
+<h3>Internasjonale Transaksjoner</h3>
+
+<p>Når du kjøper eller selger væsker internasjonalt, må du forstå målinger i begge systemer. En <strong>unser til liter konverter</strong> eliminerer forvirring og mulige feil.</p>
+
+<h3>Frihet fra Hukommelsesbyrde</h3>
+
+<p>Du trenger ikke å huske kompliserte konverteringsformler. Med en <strong>unser til liter konverter</strong> kan du fokusere på oppgaven din i stedet for å gjøre mental matematikk.</p>
+
+<h2>Slik Bruker du en Unser til Liter Konverter</h2>
+
+<h3>Online Konvertere</h3>
+
+<p>De fleste online versjoner av en <strong>unser til liter konverter</strong> er veldig enkle å bruke:</p>
+
+<ol>
+<li>Åpne konverteringswebsiden din</li>
+<li>Skriv inn antall unser du ønsker å konvertere</li>
+<li>Klikk på "Konverter" eller tilsvarende knapp</li>
+<li>Se resultatet i liter øyeblikkelig</li>
+</ol>
+
+<h3>Mobilapplikasjoner</h3>
+
+<p>Mobilapper som fungerer som en <strong>unser til liter konverter</strong> følger samme prinsipp, men tilbyr den ekstra fordelen av offline-funksjonalitet og raskere tilgang.</p>
+
+<h3>Manuell Beregning</h3>
+
+<p>Hvis du ikke har tilgang til et digitalt verktøy, kan du alltid beregne manuelt ved hjelp av formelen som presenteres nedenfor.</p>
+
+<h2>Konverteringsformel med Eksempler</h2>
+
+<h3>Den Grunnleggende Formelen</h3>
+
+<p>For å konvertere unser til liter, bruker du denne formelen:</p>
+
+<p><strong>Liter = Unser × 0,0295735</strong></p>
+
+<p>Eller omvendt:</p>
+
+<p><strong>Unser = Liter × 33,814</strong></p>
+
+<h3>Praktiske Eksempler</h3>
+
+<p><strong>Eksempel 1:</strong> Du har 32 unser vann og vil vite hvor mange liter det er.</p>
+
+<p>Beregning: 32 × 0,0295735 = 0,9463 liter (eller omtrent 0,95 liter)</p>
+
+<p><strong>Eksempel 2:</strong> En oppskrift krever 2 liter melk, men dine målekopper er merket i unser.</p>
+
+<p>Beregning: 2 × 33,814 = 67,628 unser (eller omtrent 67,6 unser)</p>
+
+<p><strong>Eksempel 3:</strong> Du kjøper en flaske med 16 unser juice og vil vite litrene.</p>
+
+<p>Beregning: 16 × 0,0295735 = 0,4732 liter (eller omtrent 0,47 liter)</p>
+
+<h2>Praktiske Eksempler i Dagliglivet</h2>
+
+<h3>Matlagning og Baking</h3>
+
+<p>Amerikanske oppskrifter bruker ofte unser som måleenhet. Hvis du finner en god oppskrift på engelsk og ønsker å følge den, er en <strong>unser til liter konverter</strong> uunnværlig for å få riktige proporsjoner av væsker som melk, olje eller vann.</p>
+
+<h3>Drikkevareindustri</h3>
+
+<p>Mange drikkevarer selges i unser, spesielt i USA. Hvis du ønsker å sammenligne priser eller lagerstørrelse internasjonalt, trenger du en <strong>unser til liter konverter</strong> for å gjøre sammenligningen meningsfull.</p>
+
+<h3>Medisinering</h3>
+
+<p>Noen medisiner kommer i enheter av unser. Når du skal administrere dosering, er det kritisk å få konverteringen riktig. En nøyaktig <strong>unser til liter konverter</strong> sikrer at du eller dine pasienter får riktig mengde.</p>
+
+<h3>Kjemisk Eksperimentering</h3>
+
+<p>I vitenskapsprosjekter eller laboratoriemiljøer kan du møte amerikanske instruksjoner som bruker unser. En <strong>unser til liter konverter</strong> sikrer nøyaktighet i eksperimentelle resultater.</p>
+
+<h2>Nyttige Tips for Bruk av Unser til Liter Konverter</h2>
+
+<ul>
+<li><strong>Dobbeltsjekk alltid dine resultater</strong> - Spesielt når det gjelder kritiske applikasjoner som medisinering eller kjemikalier</li>
+<li><strong>Bruk pålitelige kilder</strong> - Velg en velrenommert <strong>unser til liter konverter</strong> for å sikre nøyaktighet</li>
+<li><strong>Husk desimalene</strong> - Små feil kan bli store når du skalerer oppskrifter opp eller ned</li>
+<li><strong>Lagre konverteringsformelen</strong> - Hvis du regelmessig gjør disse konverteringene, kan det lønne seg å skrive ned formelen</li>
+<li><strong>Vær oppmerksom på væskevolum vs vekt</strong> - Unser kan referere til både væskevolum (fl oz) og vekt (oz). En <strong>unser til liter konverter</strong> for væske er annerledes enn en for vekt</li>
+<li><strong>Bruk kalkulatorapplikasjoner</strong> - Moderne smarttelefonkalkulatorer kan fungere som en <strong>unser til liter konverter</strong> hvis du vet formelen</li>
+<li><strong>Avrund smartt</strong> - I dagligdagse oppskrifter er avrunding ofte akseptabelt, men i industri kreves større presisjon</li>
+</ul>
+
+<h2>Ofte Stilte Spørsmål (FAQ)</h2>
+
+<h3>Spørsmål 1: Hva er forskjellen mellom fl oz og oz?</h3>
+
+<p>Fl oz (flytende unser) måler volum og brukes for væsker, mens oz (unser) måler vekt. En <strong>unser til liter konverter</strong> som omhandler væske vil bruke fl oz. Det er viktig å vite hvilken enhet du arbeider med for å bruke den riktige konverteren.</p>
+
+<h3>Spørsmål 2: Hvor finner jeg en pålitelig unser til liter konverter online?</h3>
+
+<p>Det finnes mange pålitelige kilder online. Søk etter "unser til liter konverter" i Google, eller besøk nettsteder som er dedikert til enhetskonvertering. Sjekk at nettstedet har tydelige formler og brukerrecensioner.</p>
+
+<h3>Spørsmål 3: Kan jeg bruke samme konverteringsformel for alle væsker?</h3>
+
+<p>Ja, konverteringsformelen for volum forblir den samme uavhengig av hvilken væske du konverterer. 32 unser er alltid 0,9463 liter, enten det er vann, melk eller olje.</p>
+
+<h3>Spørsmål 4: Hvor nøyaktig må min konvertering være?</h3>
+
+<p>For matlagning og baking er små avvik vanligvis akseptabelt - avrunding til nærmeste 0,1 liter er ofte tilstrekkelig. For medisinering, kjemikalier eller vitenskapelig arbeid trenger du større presisjon og bør sikre at din <strong>unser til liter konverter</strong> kan håndtere flere desimaler.</p>
+
+<h3>Spørsmål 5: Er det bedre å bruke en mobilapp eller online konverter?</h3>
+
+<p>Det avhenger av dine behov. Online konvertere krever internettforbindelse, men er alltid oppdatert. Mobilapplikasjoner kan brukes offline, men må oppdateres manuelt. For de fleste mennesker er en online <strong>unser til liter konverter</strong> praktisk og tilstrekkelig.</p>
+
+<h2>Konklusjon</h2>
+
+<p>En <strong>unser til liter konverter</strong> er et uvurderlig verktøy i vår globaliserte verden.</div>
     <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/temperatur-konvertering'"><span class="tool-card-icon">🔄</span><h3>Temperatur Konvertering</h3><p>Konverter temperatur mellom alle enheter</p></div><div class="tool-card" onclick="location='/verktoy/fahrenheit-celsius'"><span class="tool-card-icon">🔄</span><h3>Fahrenheit til Celsius</h3><p>Konverter Fahrenheit til Celsius med detaljer</p></div><div class="tool-card" onclick="location='/verktoy/km-til-miles'"><span class="tool-card-icon">🔄</span><h3>Kilometer til Miles</h3><p>Konverter km til miles med nøyaktighet</p></div><div class="tool-card" onclick="location='/verktoy/miles-til-km'"><span class="tool-card-icon">🔄</span><h3>Miles til Kilometer</h3><p>Konverter miles til km med nøyaktighet</p></div><div class="tool-card" onclick="location='/verktoy/kg-til-pund'"><span class="tool-card-icon">🔄</span><h3>Kg til Pund</h3><p>Konverter kilogram til pund med presisjon</p></div><div class="tool-card" onclick="location='/verktoy/pund-til-kg'"><span class="tool-card-icon">🔄</span><h3>Pund til Kg</h3><p>Konverter pund til kilogram med presisjon</p></div><div class="tool-card" onclick="location='/verktoy/meter-til-fot'"><span class="tool-card-icon">🔄</span><h3>Meter til Fot</h3><p>Konverter meter til fot med høy nøyaktighet</p></div><div class="tool-card" onclick="location='/verktoy/cm-til-tommer'"><span class="tool-card-icon">🔄</span><h3>Centimeter til Tommer</h3><p>Konverter cm til tommer med brøker</p></div><div class="tool-card" onclick="location='/verktoy/liter-til-gallon'"><span class="tool-card-icon">🔄</span><h3>Liter til Gallon</h3><p>Konverter liter til gallon (US og UK)</p></div><div class="tool-card" onclick="location='/verktoy/ml-til-ts'"><span class="tool-card-icon">🔄</span><h3>Milliliter til Teskje</h3><p>Konverter ml til ulike måleenheter</p></div><div class="tool-card" onclick="location='/verktoy/bytes-til-mb'"><span class="tool-card-icon">🔄</span><h3>Bytes til MB Kalkulator</h3><p>Konverter bytes, KB, MB, GB, TB</p></div><div class="tool-card" onclick="location='/verktoy/hektar-til-m2'"><span class="tool-card-icon">🔄</span><h3>Hektar til m² Kalkulator</h3><p>Konverter hektar til kvadratmeter</p></div><div class="tool-card" onclick="location='/kategori/konvertering'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle Konvertering</h3><p>Alle kalkulatorer i denne kategorien</p></div></div></div>
     <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/lan-kalkulator'"><span class="tool-card-icon">💰</span><h3>Lån Kalkulator</h3><p>Beregn månedlige låneavdrag med nedbetalingsoversikt</p></div><div class="tool-card" onclick="location='/verktoy/prosent-kalkulator'"><span class="tool-card-icon">📐</span><h3>Prosent Kalkulator</h3><p>Beregn prosent med flere metoder og sammenligninger</p></div><div class="tool-card" onclick="location='/verktoy/areal-kalkulator'"><span class="tool-card-icon">📏</span><h3>Areal Kalkulator</h3><p>Beregn areal av ulike former med enheter</p></div><div class="tool-card" onclick="location='/verktoy/alder-kalkulator'"><span class="tool-card-icon">📅</span><h3>Alder Kalkulator</h3><p>Beregn nøyaktig alder med sammenligning og statistikk</p></div><div class="tool-card" onclick="location='/verktoy/fart-kalkulator'"><span class="tool-card-icon">⚡</span><h3>Fart Kalkulator</h3><p>Beregn fart, distanse og tid med enhetskonvertering og drivstoffestimat</p></div></div></div>
   </div>
@@ -50,10 +187,10 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-grid">
-      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">449+ gratis kalkulatorer</p></div>
-      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li></ul></div>
+      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">491+ gratis kalkulatorer</p></div>
+      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li><li><a href="/kategori/krypto">₿ Krypto</a></li><li><a href="/kategori/spill">🎮 Spill</a></li></ul></div>
       <div class="footer-col"><h4>Populære</h4><ul><li><a href="/verktoy/bmi-kalkulator">BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator">Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator">Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator">Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator">Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator">pH Kalkulator</a></li><li><a href="/verktoy/molekylvekt-kalkulator">Molekylvektkalkulator</a></li><li><a href="/verktoy/halveringstid-kalkulator">Halveringstid Kalkulator</a></li><li><a href="/verktoy/befolkningsvekst-kalkulator">Befolkningsvekst Kalkulator</a></li><li><a href="/verktoy/terningkaster">Terningkaster</a></li></ul></div>
-      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/konverter-oz-til-cc">OZ til CC Konverter</a></li><li><a href="/verktoy/kcal-til-kalorier">KCAL til Kalorier Omformer</a></li><li><a href="/verktoy/crore-til-milliard">Crore til Milliard Konverterer</a></li><li><a href="/verktoy/ml-til-mg">ML til MG Konvertering</a></li><li><a href="/verktoy/kvadratmiles-til-kvadratkilometer">Kvadratmiles til Kvadratkilometer Kalkulator</a></li><li><a href="/verktoy/kubikkfot-til-kubikkmeter">Kubikkfot til Kubikkmeter Konverter</a></li><li><a href="/verktoy/centimeter-til-tommer">Centimeter til Tommer Konverter</a></li><li><a href="/verktoy/kelvin-til-fahrenheit">Kelvin til Fahrenheit Konverter</a></li></ul></div>
+      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/beste-sjakktrekk">Beste Sjakktrekk Kalkulator</a></li><li><a href="/verktoy/wotlk-talent">WOTLK Talent Kalkulator</a></li><li><a href="/verktoy/sod-talent">SOD Talent Kalkulator</a></li><li><a href="/verktoy/bdo-hest">BDO Hestekalkulator</a></li><li><a href="/verktoy/diablo3-edelsten">Diablo 3 Edelstens Kalkulator</a></li><li><a href="/verktoy/dots-kalkulator">DOTS Kalkulator</a></li><li><a href="/verktoy/chocobo-farge">Chocobo Farge Kalkulator</a></li><li><a href="/verktoy/clash-of-clans">Clash of Clans Kalkulator</a></li></ul></div>
       <div class="footer-col"><h4>Info</h4><ul><li><a href="/om-oss">Om oss</a></li><li><a href="/personvern">Personvern</a></li><li><a href="/kontakt">Kontakt</a></li></ul></div>
     </div>
     <div class="footer-bottom"><p>© 2026 Kalkulator24 — Alle kalkulatorer er gratis</p></div>

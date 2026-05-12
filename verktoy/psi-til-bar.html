@@ -28,17 +28,148 @@
 <nav class="navbar">
   <div class="navbar-inner">
     <a href="/" class="logo">Kalkulator24</a>
-    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li></ul>
+    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li></ul>
     <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">☰</button>
   </div>
-  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li></ul></div>
+  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li></ul></div>
 </nav>
 <div class="breadcrumb"><a href="/">Hjem</a><span class="sep">›</span><a href="/kategori/konvertering">Konvertering</a><span class="sep">›</span>PSI til Bar Konverter</div>
 <div class="tool-hero"><div class="tool-badge">🔄 Konvertering</div><h1>PSI til Bar Konverter</h1><p class="subtitle">Konverter PSI til bar — raskt og gratis</p></div>
 <div class="main-wrap">
   <div class="main-content">
     <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>PSI</label><div class="input-row"><input type="number" class="calc-input" data-field="psi" placeholder="14.7"></div></div></div>    <button class="btn-calc" onclick="runCalculator('psi_to_bar')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
-    <div class="ai-loader" id="aiWrap"><p>Last inn detaljert guide</p><button class="btn-ai" id="aiBtn">Vis guide</button><div class="loading-wrap" id="aiLoader"><div class="spinner"></div><span>Laster...</span></div></div><div class="content-card" id="aiContent" style="display:none"></div>
+    <div class="content-card">```html
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSI til Bar Konverter - Komplett Veiledning</title>
+</head>
+<body>
+
+<h2>PSI til Bar Konverter: Komplett Veiledning</h2>
+
+<p>En <strong>psi til bar konverter</strong> er et praktisk verktøy som hjelper deg med å konvertere trykkmålinger fra PSI (pounds per square inch) til bar. Dette er en nødvendig konvertering i mange industrielle og dagligdagse sammenhenger, og å forstå hvordan den fungerer er viktig for alle som arbeider med trykkbaserte systemer.</p>
+
+<h3>Hva er PSI til Bar Konverter?</h3>
+
+<p>En <strong>psi til bar konverter</strong> er et verktøy, enten digitalt eller basert på matematisk beregning, som gjør det mulig å raskt og nøyaktig konvertere trykkmålinger. PSI står for «pounds per square inch» og er en trykkenhet som hovedsakelig brukes i USA og Storbritannia. Bar er en metrisk enhet for trykk som er mye brukt i Europa og resten av verden.</p>
+
+<p>Én bar tilsvarer omtrent 14,5038 PSI, eller omvendt, én PSI tilsvarer cirka 0,0689476 bar. En psi til bar konverter tar disse tallene og gjør det enkelt å omregne mellom de to enhetene uten å måtte gjøre kompliserte beregninger manuelt.</p>
+
+<p>Konvertere finnes i mange former:</p>
+
+<ul>
+    <li>Online <strong>psi til bar konverter</strong> nettsteder</li>
+    <li>Mobilapplikasjoner</li>
+    <li>Kalkulator-programmer</li>
+    <li>Fysiske konverteringstabeller</li>
+    <li>Innebygde funksjoner i vitenskapelige kalkulatorer</li>
+</ul>
+
+<h3>Hvorfor er PSI til Bar Konvertering Viktig?</h3>
+
+<p>Konvertering mellom PSI og bar er viktig av flere grunner. Først og fremst arbeider forskjellige deler av verden med forskjellige måleenheter. Når du importerer eller eksporterer utstyr, eller når du arbeider med internasjonale tekniske spesifikasjoner, trenger du ofte å konvertere mellom disse enhetene.</p>
+
+<p>I industrien er det kritisk å ha nøyaktige trykkmålinger. Feil konvertering kan føre til:</p>
+
+<ul>
+    <li>Sikkerhetsproblemer i trykkbaserte systemer</li>
+    <li>Skade på utstyr</li>
+    <li>Feil resultat i produksjonsprosesser</li>
+    <li>Kostnadsoverskridelser</li>
+    <li>Personskader hvis trykket blir feilinnstilt</li>
+</ul>
+
+<p>En palidig <strong>psi til bar konverter</strong> sikrer at du alltid har de riktige målingene, uavhengig av hvilken enhet som brukes originalt.</p>
+
+<h3>Slik Bruker Du en PSI til Bar Konverter</h3>
+
+<p>Å bruke en <strong>psi til bar konverter</strong> er enkelt og intuitivt. Her er en trinn-for-trinn guide:</p>
+
+<ul>
+    <li><strong>Trinn 1:</strong> Finn en pålitelig konverterkilde online eller bruk en mobilapp</li>
+    <li><strong>Trinn 2:</strong> Skriv inn PSI-verdien du ønsker å konvertere</li>
+    <li><strong>Trinn 3:</strong> Klikk på «Konverter» eller «Beregn»-knappen</li>
+    <li><strong>Trinn 4:</strong> Les av resultatet i bar-enheten</li>
+    <li><strong>Trinn 5:</strong> Dobbeltsjekk resultatet hvis det brukes til kritiske formål</li>
+</ul>
+
+<p>De fleste online <strong>psi til bar konverter</strong> verktøy gir resultatet umiddelbart og viser ofte flere desimaler for maksimal nøyaktighet. Noen avanserte konvertere lar deg også se omvendt konvertering (bar til PSI) samtidig.</p>
+
+<h3>Konverteringsformel med Eksempel</h3>
+
+<p>Hvis du ønsker å gjøre konverteringen manuelt, kan du bruke denne formelen:</p>
+
+<p><strong>Bar = PSI × 0,0689476</strong></p>
+
+<p>Eller omvendt:</p>
+
+<p><strong>PSI = Bar × 14,5038</strong></p>
+
+<p>La oss se på et praktisk eksempel:</p>
+
+<p>Hvis du har et trykk på <strong>50 PSI</strong> og ønsker å konvertere det til bar, bruker du formelen:</p>
+
+<p>Bar = 50 × 0,0689476 = <strong>3,44738 bar</strong></p>
+
+<p>En annen måte å huske dette på er at 1 PSI ≈ 0,069 bar, noe som gjør det enkelt å gjøre rask overslagsberegning selv uten en <strong>psi til bar konverter</strong>.</p>
+
+<h3>Praktiske Eksempler på Bruk</h3>
+
+<p>Her er noen virkelige situasjoner hvor du trenger en <strong>psi til bar konverter</strong>:</p>
+
+<ul>
+    <li><strong>Bildekk:</strong> Hvis ditt kjøretøy har britisk eller amerikansk dokumentasjon som angir dekktrykk i PSI, men ditt lokale deksenter bruker bar</li>
+    <li><strong>Kompressorer:</strong> Når du kjøper industrielle luftkompressorer fra USA og trenger å justere dem til europeiske standarder</li>
+    <li><strong>Hydraulikk-systemer:</strong> I maskineri som bruker hydraulisk kraft, er presise trykkmålinger kritiske</li>
+    <li><strong>Dykking:</strong> Dykkeutstyr spesifiserer ofte trykkgrenser i PSI, men mange kontrollorganer bruker bar</li>
+    <li><strong>Medisinsk utstyr:</strong> Respiratorer og andre medisinske apparater kan ha spesifikasjoner i både PSI og bar</li>
+</ul>
+
+<p>I hver av disse tilfellene sikrer en nøyaktig <strong>psi til bar konverter</strong> at systemer fungerer trygt og effektivt.</p>
+
+<h3>Nyttige Tips for Konvertering</h3>
+
+<ul>
+    <li><strong>Husk omtrentlige verdier:</strong> 1 PSI ≈ 0,07 bar og 1 bar ≈ 14,5 PSI. Dette hjelper med raske overslagsberegninger</li>
+    <li><strong>Bruk pålitelige kilder:</strong> Når du bruker en online <strong>psi til bar konverter</strong>, velg etablerte og anerkjente nettssteder</li>
+    <li><strong>Dobbeltsjekk viktige målinger:</strong> For kritiske applikasjoner, konverter alltid en gang til og sammenlign resultatene</li>
+    <li><strong>Lagre bokmerke:</strong> Hvis du bruker en bestemt online konverterkalkulator ofte, legg den til i favoritter</li>
+    <li><strong>Lær formelen:</strong> Å forstå den matematiske bakgrunnen hjelper deg med å oppdage feil</li>
+    <li><strong>Vær oppmerksom på desimaler:</strong> En liten forskjell i desimaler kan være viktig i pressisjonsindustrier</li>
+</ul>
+
+<h2>Vanlige Spørsmål (FAQ)</h2>
+
+<h3>1. Hva er den eksakte konverteringsfaktoren mellom PSI og bar?</h3>
+
+<p>Den eksakte konverteringsfaktoren er at 1 PSI = 0,0689476 bar, eller 1 bar = 14,50377 PSI. De fleste <strong>psi til bar konverter</strong> verktøy bruker disse presise verdiene for nøyaktig konvertering.</p>
+
+<h3>2. Kan jeg bruke en PSI til Bar Konverter offline?</h3>
+
+<p>Ja, du kan laste ned mobilapplikasjoner som fungerer offline, eller du kan lage dine egne konverteringstabeller basert på formelen. Mange smarttelefoner har også innebygde kalkulator-apper som kan brukes til beregninger.</p>
+
+<h3>3. Hvilken enhet brukes oftest internasjonalt?</h3>
+
+<p>Bar er den mest brukte trykkenhetne internasjonalt og er standarden i de fleste europeiske og industrielle sammenhenger. PSI er hovedsakelig brukt i USA og Storbritannia. Det er derfor en <strong>psi til bar konverter</strong> ofte er nyttig for internasjonalt arbeid.</p>
+
+<h3>4. Er det mulig å gjøre feil når man bruker en konverter?</h3>
+
+<p>Ja, det er mulig å gjøre innføringsfeil eller å bruke en upålitelig konverterkilde. Det er alltid lurt å dobbeltsjekke resultater, spesielt hvis de skal brukes til sikkerhetskritiske applikasjoner. En god <strong>psi til bar konverter</strong> fra en anerkjent kilde minimerer risikoen for feil.</p>
+
+<h3>5. Hvorfor finnes det så mange PSI og Bar Konvertere online?</h3>
+
+<p>Fordi konvertering mellom PSI og bar er så vanlig, og fordi det er enkelt å lage slike verktøy, finnes det mange konvertere tilgjengelig. Noen er gratis, noen er del av større konverteringsnettsteder, og noen er innebygd i applikasjoner. Det er lurt å finne en <strong>psi til bar konverter</strong> som du foretrekker og bruke den konsekvent.</p>
+
+<h2>Konklusjon</h2>
+
+<p>En <strong>psi til bar konverter</strong> er et uunnværlig verktøy for alle som arbeider med trykkbaserte systemer eller som trenger å håndtere internasjonale spesifikasjoner. Enten du er mekaniker, industriarbeider, dykker, eller bare noen som ønsker å forstå trykkmålinger bedre, vil en pålitelig <strong>psi til bar konverter</strong> spare deg for tid og unngå kostbare feil. Med de tips og kunnskaper presentert her, kan du konvertere mellom PSI og bar med sikkerhet og nøyaktighet.</p>
+
+</body>
+</html>
+```</div>
     <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/temperatur-konvertering'"><span class="tool-card-icon">🔄</span><h3>Temperatur Konvertering</h3><p>Konverter temperatur mellom alle enheter</p></div><div class="tool-card" onclick="location='/verktoy/fahrenheit-celsius'"><span class="tool-card-icon">🔄</span><h3>Fahrenheit til Celsius</h3><p>Konverter Fahrenheit til Celsius med detaljer</p></div><div class="tool-card" onclick="location='/verktoy/km-til-miles'"><span class="tool-card-icon">🔄</span><h3>Kilometer til Miles</h3><p>Konverter km til miles med nøyaktighet</p></div><div class="tool-card" onclick="location='/verktoy/miles-til-km'"><span class="tool-card-icon">🔄</span><h3>Miles til Kilometer</h3><p>Konverter miles til km med nøyaktighet</p></div><div class="tool-card" onclick="location='/verktoy/kg-til-pund'"><span class="tool-card-icon">🔄</span><h3>Kg til Pund</h3><p>Konverter kilogram til pund med presisjon</p></div><div class="tool-card" onclick="location='/verktoy/pund-til-kg'"><span class="tool-card-icon">🔄</span><h3>Pund til Kg</h3><p>Konverter pund til kilogram med presisjon</p></div><div class="tool-card" onclick="location='/verktoy/meter-til-fot'"><span class="tool-card-icon">🔄</span><h3>Meter til Fot</h3><p>Konverter meter til fot med høy nøyaktighet</p></div><div class="tool-card" onclick="location='/verktoy/cm-til-tommer'"><span class="tool-card-icon">🔄</span><h3>Centimeter til Tommer</h3><p>Konverter cm til tommer med brøker</p></div><div class="tool-card" onclick="location='/verktoy/liter-til-gallon'"><span class="tool-card-icon">🔄</span><h3>Liter til Gallon</h3><p>Konverter liter til gallon (US og UK)</p></div><div class="tool-card" onclick="location='/verktoy/ml-til-ts'"><span class="tool-card-icon">🔄</span><h3>Milliliter til Teskje</h3><p>Konverter ml til ulike måleenheter</p></div><div class="tool-card" onclick="location='/verktoy/bytes-til-mb'"><span class="tool-card-icon">🔄</span><h3>Bytes til MB Kalkulator</h3><p>Konverter bytes, KB, MB, GB, TB</p></div><div class="tool-card" onclick="location='/verktoy/hektar-til-m2'"><span class="tool-card-icon">🔄</span><h3>Hektar til m² Kalkulator</h3><p>Konverter hektar til kvadratmeter</p></div><div class="tool-card" onclick="location='/kategori/konvertering'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle Konvertering</h3><p>Alle kalkulatorer i denne kategorien</p></div></div></div>
     <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/lan-kalkulator'"><span class="tool-card-icon">💰</span><h3>Lån Kalkulator</h3><p>Beregn månedlige låneavdrag med nedbetalingsoversikt</p></div><div class="tool-card" onclick="location='/verktoy/prosent-kalkulator'"><span class="tool-card-icon">📐</span><h3>Prosent Kalkulator</h3><p>Beregn prosent med flere metoder og sammenligninger</p></div><div class="tool-card" onclick="location='/verktoy/areal-kalkulator'"><span class="tool-card-icon">📏</span><h3>Areal Kalkulator</h3><p>Beregn areal av ulike former med enheter</p></div><div class="tool-card" onclick="location='/verktoy/alder-kalkulator'"><span class="tool-card-icon">📅</span><h3>Alder Kalkulator</h3><p>Beregn nøyaktig alder med sammenligning og statistikk</p></div><div class="tool-card" onclick="location='/verktoy/fart-kalkulator'"><span class="tool-card-icon">⚡</span><h3>Fart Kalkulator</h3><p>Beregn fart, distanse og tid med enhetskonvertering og drivstoffestimat</p></div></div></div>
   </div>
@@ -50,10 +181,10 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-grid">
-      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">449+ gratis kalkulatorer</p></div>
-      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li></ul></div>
+      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">491+ gratis kalkulatorer</p></div>
+      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li><li><a href="/kategori/krypto">₿ Krypto</a></li><li><a href="/kategori/spill">🎮 Spill</a></li></ul></div>
       <div class="footer-col"><h4>Populære</h4><ul><li><a href="/verktoy/bmi-kalkulator">BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator">Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator">Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator">Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator">Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator">pH Kalkulator</a></li><li><a href="/verktoy/molekylvekt-kalkulator">Molekylvektkalkulator</a></li><li><a href="/verktoy/halveringstid-kalkulator">Halveringstid Kalkulator</a></li><li><a href="/verktoy/befolkningsvekst-kalkulator">Befolkningsvekst Kalkulator</a></li><li><a href="/verktoy/terningkaster">Terningkaster</a></li></ul></div>
-      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/konverter-oz-til-cc">OZ til CC Konverter</a></li><li><a href="/verktoy/kcal-til-kalorier">KCAL til Kalorier Omformer</a></li><li><a href="/verktoy/crore-til-milliard">Crore til Milliard Konverterer</a></li><li><a href="/verktoy/ml-til-mg">ML til MG Konvertering</a></li><li><a href="/verktoy/kvadratmiles-til-kvadratkilometer">Kvadratmiles til Kvadratkilometer Kalkulator</a></li><li><a href="/verktoy/kubikkfot-til-kubikkmeter">Kubikkfot til Kubikkmeter Konverter</a></li><li><a href="/verktoy/centimeter-til-tommer">Centimeter til Tommer Konverter</a></li><li><a href="/verktoy/kelvin-til-fahrenheit">Kelvin til Fahrenheit Konverter</a></li></ul></div>
+      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/beste-sjakktrekk">Beste Sjakktrekk Kalkulator</a></li><li><a href="/verktoy/wotlk-talent">WOTLK Talent Kalkulator</a></li><li><a href="/verktoy/sod-talent">SOD Talent Kalkulator</a></li><li><a href="/verktoy/bdo-hest">BDO Hestekalkulator</a></li><li><a href="/verktoy/diablo3-edelsten">Diablo 3 Edelstens Kalkulator</a></li><li><a href="/verktoy/dots-kalkulator">DOTS Kalkulator</a></li><li><a href="/verktoy/chocobo-farge">Chocobo Farge Kalkulator</a></li><li><a href="/verktoy/clash-of-clans">Clash of Clans Kalkulator</a></li></ul></div>
       <div class="footer-col"><h4>Info</h4><ul><li><a href="/om-oss">Om oss</a></li><li><a href="/personvern">Personvern</a></li><li><a href="/kontakt">Kontakt</a></li></ul></div>
     </div>
     <div class="footer-bottom"><p>© 2026 Kalkulator24 — Alle kalkulatorer er gratis</p></div>

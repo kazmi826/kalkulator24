@@ -28,17 +28,161 @@
 <nav class="navbar">
   <div class="navbar-inner">
     <a href="/" class="logo">Kalkulator24</a>
-    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li></ul>
+    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li></ul>
     <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">☰</button>
   </div>
-  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li></ul></div>
+  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li></ul></div>
 </nav>
 <div class="breadcrumb"><a href="/">Hjem</a><span class="sep">›</span><a href="/kategori/konvertering">Konvertering</a><span class="sep">›</span>Kopper til Liter Konverter</div>
 <div class="tool-hero"><div class="tool-badge">🔄 Konvertering</div><h1>Kopper til Liter Konverter</h1><p class="subtitle">Konverter kopper til liter — raskt og gratis</p></div>
 <div class="main-wrap">
   <div class="main-content">
     <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>Kopper</label><div class="input-row"><input type="number" class="calc-input" data-field="cups" placeholder="4"></div></div></div>    <button class="btn-calc" onclick="runCalculator('cups_to_liter')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
-    <div class="ai-loader" id="aiWrap"><p>Last inn detaljert guide</p><button class="btn-ai" id="aiBtn">Vis guide</button><div class="loading-wrap" id="aiLoader"><div class="spinner"></div><span>Laster...</span></div></div><div class="content-card" id="aiContent" style="display:none"></div>
+    <div class="content-card">```html
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kopper til Liter Konverter - Komplett Guide</title>
+</head>
+<body>
+
+<h2>Kopper til Liter Konverter: Den Ultimate Guiden</h2>
+
+<p>En <strong>kopper til liter konverter</strong> er et praktisk verktøy som hjelper deg med å konvertere volumenheter raskt og enkelt. Enten du baker, lager mat eller jobber med væsker, er det viktig å kunne konvertere kopper til liter nøyaktig. I denne artikkelen vil vi utforske alt du trenger å vite om <strong>kopper til liter konverter</strong>.</p>
+
+<h2>Hva Er en Kopper til Liter Konverter?</h2>
+
+<p>En <strong>kopper til liter konverter</strong> er et matematisk verktøy eller en digital kalkulator som gjør det enkelt å konvertere volummål fra kopper til liter. Dette er spesielt nyttig når du jobber med oppskrifter, kjemiske løsninger eller andre situasjoner hvor nøyaktig volummåling er kritisk.</p>
+
+<p>Det finnes flere typer <strong>kopper til liter konverter</strong>:</p>
+
+<ul>
+    <li><strong>Online kalkulatorer</strong> - Gratis verktøy på internett</li>
+    <li><strong>Mobilapplikasjoner</strong> - Apps for smarttelefoner</li>
+    <li><strong>Fysiske konverteringstabeller</strong> - Trykte referanseguider</li>
+    <li><strong>Innebygde funktioner</strong> - I kalkulator-apper på enheter</li>
+</ul>
+
+<p>Uansett hvilken type du bruker, gjør en <strong>kopper til liter konverter</strong> jobben enkel og feilfri.</p>
+
+<h2>Hvorfor Er en Kopper til Liter Konverter Viktig?</h2>
+
+<p>Det finnes mange grunner til at en <strong>kopper til liter konverter</strong> er viktig i hverdagen. La oss se på de viktigste:</p>
+
+<h3>Nøyaktighet i Matlagingen</h3>
+
+<p>Når du baker eller lager mat etter oppskrifter, er nøyaktigheten avgjørende. Feil mengde væske kan ødelegge resultatet. En <strong>kopper til liter konverter</strong> sikrer at du bruker eksakt rett mengde ingredienser.</p>
+
+<h3>Internasjonale Oppskrifter</h3>
+
+<p>Mange oppskrifter fra utlandet bruker liter som måleenhet, mens nordiske oppskrifter ofte bruker kopper. En <strong>kopper til liter konverter</strong> gjør det enkelt å følge oppskrifter fra hele verden.</p>
+
+<h3>Profesjonell Bruk</h3>
+
+<p>Innen kjemi, farmasi og andre vitenskapelige felt er presis konvertering essensielt. En <strong>kopper til liter konverter</strong> sikrer at eksperimenter og prosesser utføres korrekt.</p>
+
+<h3>Tidsbesparelse</h3>
+
+<p>I stedet for å gjøre manuelle beregninger, kan du bruke en <strong>kopper til liter konverter</strong> for å få svar på sekunder.</p>
+
+<h2>Hvordan Bruker Du en Kopper til Liter Konverter?</h2>
+
+<p>Å bruke en <strong>kopper til liter konverter</strong> er enkelt og intuitivt. Her er trinn-for-trinn instruksjoner:</p>
+
+<h3>Steg 1: Velg Ditt Verktøy</h3>
+
+<p>Bestem deg for om du vil bruke en online <strong>kopper til liter konverter</strong>, en app eller en manuell tabell.</p>
+
+<h3>Steg 2: Oppgi Antall Kopper</h3>
+
+<p>Skriv inn antallet kopper du vil konvertere. De fleste <strong>kopper til liter konverter</strong> verktøy har et inputfelt hvor du kan skrive tallet.</p>
+
+<h3>Steg 3: Se Resultatet</h3>
+
+<p>Resultatet i liter vises umiddelbart. De beste <strong>kopper til liter konverter</strong> verktøyene viser også omvendt konvertering automatisk.</p>
+
+<h3>Steg 4: Bruk Resultatet</h3>
+
+<p>Kopier eller noter ned verdien og bruk den i ditt prosjekt.</p>
+
+<h2>Konverteringsformel og Eksempel</h2>
+
+<p>Hvis du vil forstå matematikken bak en <strong>kopper til liter konverter</strong>, er formelen enkel:</p>
+
+<p><strong>Liter = Kopper × 0,2365</strong></p>
+
+<p>Eller omvendt:</p>
+
+<p><strong>Kopper = Liter ÷ 0,2365</strong></p>
+
+<h3>Praktisk Eksempel</h3>
+
+<p>La oss si du har en oppskrift som krever 4 kopper melk, og du vil vite hvor mange liter det er. Ved å bruke <strong>kopper til liter konverter</strong> eller formelen:</p>
+
+<p><strong>4 kopper × 0,2365 = 0,946 liter</strong></p>
+
+<p>Så 4 kopper tilsvarer omtrent 0,95 liter eller nesten 1 liter. En god <strong>kopper til liter konverter</strong> ville gjort denne beregningen for deg øyeblikkelig.</p>
+
+<h2>Praktiske Eksempler fra Hverdagen</h2>
+
+<p>Her er noen situasjoner hvor en <strong>kopper til liter konverter</strong> er svært nyttig:</p>
+
+<h3>Bakverk</h3>
+
+<p>En kakoppskrift fra USA krever 3 kopper mel og 1,5 kopper melk. Med en <strong>kopper til liter konverter</strong> kan du raskt beregne at det er 0,71 liter mel og 0,35 liter melk.</p>
+
+<h3>Drikker og Juicer</h3>
+
+<p>Hvis du lager hjemmelaget saft som krever 8 kopper fruktjuice, kan du bruke en <strong>kopper til liter konverter</strong> for å finne ut at det er 1,89 liter.</p>
+
+<h3>Kjemiske Eksperimenter</h3>
+
+<p>I en vitenskap-klasse kan elevene bruke en <strong>kopper til liter konverter</strong> for å konvertere volummål i laboratorieeksperimenter.</p>
+
+<h3>Vatning av Planter</h3>
+
+<p>Hvis en plante trenger 2 kopper vann daglig, er det 0,47 liter. En <strong>kopper til liter konverter</strong> gjør det enkelt å planlegge ditt vanningsregime.</p>
+
+<h2>Nyttige Tips for Bruk av Kopper til Liter Konverter</h2>
+
+<p>Her er noen tips som hjelper deg å få mest mulig ut av en <strong>kopper til liter konverter</strong>:</p>
+
+<ul>
+    <li><strong>Bookmark verktøyet:</strong> Lagre en favoritt <strong>kopper til liter konverter</strong> i nettleseren din for rask tilgang</li>
+    <li><strong>Lær konverteringsfaktoren:</strong> Husk at 1 kopp = 0,2365 liter, slik at du kan gjøre raske estimater</li>
+    <li><strong>Dobbeltsjekk resultatene:</strong> Ved viktige målinger, bekreft resultatet med en annen <strong>kopper til liter konverter</strong></li>
+    <li><strong>Vær oppmerksom på kopp-typer:</strong> Det finnes amerikanske kopper (237 ml) og metriske kopper (250 ml)</li>
+    <li><strong>Skriv ned vanlige konverteringer:</strong> Lag en liten liste over konverteringer du bruker ofte</li>
+    <li><strong>Bruk en offline app:</strong> Last ned en <strong>kopper til liter konverter</strong> app som fungerer uten internett</li>
+</ul>
+
+<h2>Ofte Stilte Spørsmål (FAQ)</h2>
+
+<h3>Spørsmål 1: Hvor nøyaktig er en Kopper til Liter Konverter?</h3>
+
+<p>En god <strong>kopper til liter konverter</strong> er svært nøyaktig, vanligvis til flere desimaler. For daglig bruk er nøyaktigheten mer enn tilstrekkelig. For vitenskapelig arbeid anbefales det å bruke kalibrede måleenheter.</p>
+
+<h3>Spørsmål 2: Hva er Forskjellen Mellom Amerikanske og Metriske Kopper?</h3>
+
+<p>En amerikansk kopp er 236,6 ml, mens en metrisk kopp er 250 ml. Velg riktig <strong>kopper til liter konverter</strong> basert på hvilket system du bruker. De fleste online verktøy bruker det amerikanske systemet.</p>
+
+<h3>Spørsmål 3: Kan jeg Bruke en Kopper til Liter Konverter for Alle Væsker?</h3>
+
+<p>Ja, en <strong>kopper til liter konverter</strong> fungerer for alle væsker basert på volum. Enten det er vann, melk, olje eller annen væske, er konverteringen den samme.</p>
+
+<h3>Spørsmål 4: Finnes det Gratis Kopper til Liter Konvertere Online?</h3>
+
+<p>Ja, det finnes mange gratis <strong>kopper til liter konverter</strong> verktøy tilgjengelig online. De fleste søkemotorer viser resultatene direkte når du søker etter konvertering.</p>
+
+<h3>Spørsmål 5: Bør jeg Bruke en App eller Online Kopper til Liter Konverter?</h3>
+
+<p>Det avhenger av dine preferanser. En online <strong>kopper til liter konverter</strong> krever internettforbindelse, mens en app kan brukes offline. For hyppig bruk anbefales en app, mens en online versjonstil er perfekt for sporadisk bruk.</p>
+
+<h2>Konklusjon</h2>
+
+<p>En <strong>kopper til liter konverter</strong> er et uunnværlig verktøy for alle som jobber med volummålinger. Enten du baker, lager mat eller jobber vitenskapelig, gjør denne enkle konverteren jobben</div>
     <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/temperatur-konvertering'"><span class="tool-card-icon">🔄</span><h3>Temperatur Konvertering</h3><p>Konverter temperatur mellom alle enheter</p></div><div class="tool-card" onclick="location='/verktoy/fahrenheit-celsius'"><span class="tool-card-icon">🔄</span><h3>Fahrenheit til Celsius</h3><p>Konverter Fahrenheit til Celsius med detaljer</p></div><div class="tool-card" onclick="location='/verktoy/km-til-miles'"><span class="tool-card-icon">🔄</span><h3>Kilometer til Miles</h3><p>Konverter km til miles med nøyaktighet</p></div><div class="tool-card" onclick="location='/verktoy/miles-til-km'"><span class="tool-card-icon">🔄</span><h3>Miles til Kilometer</h3><p>Konverter miles til km med nøyaktighet</p></div><div class="tool-card" onclick="location='/verktoy/kg-til-pund'"><span class="tool-card-icon">🔄</span><h3>Kg til Pund</h3><p>Konverter kilogram til pund med presisjon</p></div><div class="tool-card" onclick="location='/verktoy/pund-til-kg'"><span class="tool-card-icon">🔄</span><h3>Pund til Kg</h3><p>Konverter pund til kilogram med presisjon</p></div><div class="tool-card" onclick="location='/verktoy/meter-til-fot'"><span class="tool-card-icon">🔄</span><h3>Meter til Fot</h3><p>Konverter meter til fot med høy nøyaktighet</p></div><div class="tool-card" onclick="location='/verktoy/cm-til-tommer'"><span class="tool-card-icon">🔄</span><h3>Centimeter til Tommer</h3><p>Konverter cm til tommer med brøker</p></div><div class="tool-card" onclick="location='/verktoy/liter-til-gallon'"><span class="tool-card-icon">🔄</span><h3>Liter til Gallon</h3><p>Konverter liter til gallon (US og UK)</p></div><div class="tool-card" onclick="location='/verktoy/ml-til-ts'"><span class="tool-card-icon">🔄</span><h3>Milliliter til Teskje</h3><p>Konverter ml til ulike måleenheter</p></div><div class="tool-card" onclick="location='/verktoy/bytes-til-mb'"><span class="tool-card-icon">🔄</span><h3>Bytes til MB Kalkulator</h3><p>Konverter bytes, KB, MB, GB, TB</p></div><div class="tool-card" onclick="location='/verktoy/hektar-til-m2'"><span class="tool-card-icon">🔄</span><h3>Hektar til m² Kalkulator</h3><p>Konverter hektar til kvadratmeter</p></div><div class="tool-card" onclick="location='/kategori/konvertering'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle Konvertering</h3><p>Alle kalkulatorer i denne kategorien</p></div></div></div>
     <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/lan-kalkulator'"><span class="tool-card-icon">💰</span><h3>Lån Kalkulator</h3><p>Beregn månedlige låneavdrag med nedbetalingsoversikt</p></div><div class="tool-card" onclick="location='/verktoy/prosent-kalkulator'"><span class="tool-card-icon">📐</span><h3>Prosent Kalkulator</h3><p>Beregn prosent med flere metoder og sammenligninger</p></div><div class="tool-card" onclick="location='/verktoy/areal-kalkulator'"><span class="tool-card-icon">📏</span><h3>Areal Kalkulator</h3><p>Beregn areal av ulike former med enheter</p></div><div class="tool-card" onclick="location='/verktoy/alder-kalkulator'"><span class="tool-card-icon">📅</span><h3>Alder Kalkulator</h3><p>Beregn nøyaktig alder med sammenligning og statistikk</p></div><div class="tool-card" onclick="location='/verktoy/fart-kalkulator'"><span class="tool-card-icon">⚡</span><h3>Fart Kalkulator</h3><p>Beregn fart, distanse og tid med enhetskonvertering og drivstoffestimat</p></div></div></div>
   </div>
@@ -50,10 +194,10 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-grid">
-      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">449+ gratis kalkulatorer</p></div>
-      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li></ul></div>
+      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">491+ gratis kalkulatorer</p></div>
+      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li><li><a href="/kategori/krypto">₿ Krypto</a></li><li><a href="/kategori/spill">🎮 Spill</a></li></ul></div>
       <div class="footer-col"><h4>Populære</h4><ul><li><a href="/verktoy/bmi-kalkulator">BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator">Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator">Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator">Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator">Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator">pH Kalkulator</a></li><li><a href="/verktoy/molekylvekt-kalkulator">Molekylvektkalkulator</a></li><li><a href="/verktoy/halveringstid-kalkulator">Halveringstid Kalkulator</a></li><li><a href="/verktoy/befolkningsvekst-kalkulator">Befolkningsvekst Kalkulator</a></li><li><a href="/verktoy/terningkaster">Terningkaster</a></li></ul></div>
-      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/konverter-oz-til-cc">OZ til CC Konverter</a></li><li><a href="/verktoy/kcal-til-kalorier">KCAL til Kalorier Omformer</a></li><li><a href="/verktoy/crore-til-milliard">Crore til Milliard Konverterer</a></li><li><a href="/verktoy/ml-til-mg">ML til MG Konvertering</a></li><li><a href="/verktoy/kvadratmiles-til-kvadratkilometer">Kvadratmiles til Kvadratkilometer Kalkulator</a></li><li><a href="/verktoy/kubikkfot-til-kubikkmeter">Kubikkfot til Kubikkmeter Konverter</a></li><li><a href="/verktoy/centimeter-til-tommer">Centimeter til Tommer Konverter</a></li><li><a href="/verktoy/kelvin-til-fahrenheit">Kelvin til Fahrenheit Konverter</a></li></ul></div>
+      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/beste-sjakktrekk">Beste Sjakktrekk Kalkulator</a></li><li><a href="/verktoy/wotlk-talent">WOTLK Talent Kalkulator</a></li><li><a href="/verktoy/sod-talent">SOD Talent Kalkulator</a></li><li><a href="/verktoy/bdo-hest">BDO Hestekalkulator</a></li><li><a href="/verktoy/diablo3-edelsten">Diablo 3 Edelstens Kalkulator</a></li><li><a href="/verktoy/dots-kalkulator">DOTS Kalkulator</a></li><li><a href="/verktoy/chocobo-farge">Chocobo Farge Kalkulator</a></li><li><a href="/verktoy/clash-of-clans">Clash of Clans Kalkulator</a></li></ul></div>
       <div class="footer-col"><h4>Info</h4><ul><li><a href="/om-oss">Om oss</a></li><li><a href="/personvern">Personvern</a></li><li><a href="/kontakt">Kontakt</a></li></ul></div>
     </div>
     <div class="footer-bottom"><p>© 2026 Kalkulator24 — Alle kalkulatorer er gratis</p></div>

@@ -28,17 +28,149 @@
 <nav class="navbar">
   <div class="navbar-inner">
     <a href="/" class="logo">Kalkulator24</a>
-    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li></ul>
+    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li></ul>
     <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">☰</button>
   </div>
-  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li></ul></div>
+  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li></ul></div>
 </nav>
 <div class="breadcrumb"><a href="/">Hjem</a><span class="sep">›</span><a href="/kategori/konvertering">Konvertering</a><span class="sep">›</span>Kvadratmeter til Dekar Omformer</div>
 <div class="tool-hero"><div class="tool-badge">🔄 Konvertering</div><h1>Kvadratmeter til Dekar Omformer</h1><p class="subtitle">Konverter kvadratmeter til dekar — raskt og gratis</p></div>
 <div class="main-wrap">
   <div class="main-content">
     <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>m²</label><div class="input-row"><input type="number" class="calc-input" data-field="sqm" placeholder="1000"></div></div></div>    <button class="btn-calc" onclick="runCalculator('sqm_to_dekar')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
-    <div class="ai-loader" id="aiWrap"><p>Last inn detaljert guide</p><button class="btn-ai" id="aiBtn">Vis guide</button><div class="loading-wrap" id="aiLoader"><div class="spinner"></div><span>Laster...</span></div></div><div class="content-card" id="aiContent" style="display:none"></div>
+    <div class="content-card">```html
+<h2>Kvadratmeter til Dekar Omformer - Alt Du Trenger Å Vite</h2>
+
+<p>En <strong>kvadratmeter til dekar omformer</strong> er et praktisk verktøy som hjelper deg med å konvertere arealberegninger fra kvadratmeter (m²) til dekar (daa). Dette er særlig nyttig for personer som arbeider med landbruk, eiendom, bygging og planlegging. I denne artikkelen skal vi utforske alt du trenger å vite om <strong>kvadratmeter til dekar omformer</strong> og hvordan denne kan gjøre dine beregninger enklere og mer nøyaktige.</p>
+
+<h2>Hva Er En Kvadratmeter til Dekar Omformer?</h2>
+
+<h3>Definisjon og Formål</h3>
+
+<p>En <strong>kvadratmeter til dekar omformer</strong> er et digitalt eller matematisk verktøy som konverterer arealmålinger fra kvadratmeter til dekar. Kvadratmeter (m²) er en standard SI-enhet for areal, mens dekar (daa) er en tradisjonell nordisk arealenheter som ofte brukes i landbruk og eiendomsmarkedet.</p>
+
+<p>Definisjonen er ganske enkel: 1 dekar = 1000 kvadratmeter. Dette betyr at når du bruker en <strong>kvadratmeter til dekar omformer</strong>, deler du ganske enkelt antallet kvadratmeter på 1000 for å få dekarer.</p>
+
+<h3>Historisk Bakgrunn</h3>
+
+<p>Dekar har vært brukt i Norden i flere hundre år som et praktisk mål for jordlodder og eiendommer. Selv om verden har gått over til metriske enheter, bruker Norge, Sverige og Danmark fortsatt dekar i mange sammenhenger, spesielt innenfor landbruk og eiendomshandel.</p>
+
+<h2>Hvorfor Er Kvadratmeter til Dekar Omformer Viktig?</h2>
+
+<h3>Praktiske Bruksområder</h3>
+
+<p>Det finnes mange grunner til at en <strong>kvadratmeter til dekar omformer</strong> er verdifull. Her er noen av de viktigste:</p>
+
+<ul>
+<li><strong>Landbruk:</strong> Bønder må ofte arbeide med jordlodder målt i dekar når de søker om landbruksstøtte eller forhandler om jordkjøp.</li>
+<li><strong>Eiendomsmarked:</strong> Eiendomsmeglere og kjøpere benytter dekar når de diskuterer tomtestørrelser, spesielt for større eiendommer.</li>
+<li><strong>Planlegging:</strong> Kommuner og bygningsplanleggere må konvertere mellom disse enhetene for å administrere land og ressurser.</li>
+<li><strong>Skattlegging:</strong> Norske skattemyndigheter bruker dekar som standard for jordeiendommer.</li>
+</ul>
+
+<h3>Unngå Kostbare Feil</h3>
+
+<p>Når du handler med land eller eiendom, kan feil i arealberegninger bli meget dyre. En <strong>kvadratmeter til dekar omformer</strong> sikrer at du har nøyaktige målinger før du inngår avtaler. Dette er spesielt viktig når store summer er involvert.</p>
+
+<h2>Slik Bruker Du Kvadratmeter til Dekar Omformer</h2>
+
+<h3>Steg-for-Steg Guide</h3>
+
+<p>Å bruke en <strong>kvadratmeter til dekar omformer</strong> er enkelt og krever bare noen få steg:</p>
+
+<ol>
+<li><strong>Finn omformeren:</strong> Du kan bruke en online omformer, en kalkulator eller en applikasjon på telefonen din.</li>
+<li><strong>Skriv inn verdien:</strong> Skriv inn antallet kvadratmeter du ønsker å konvertere i det relevante feltet.</li>
+<li><strong>Trykk beregn:</strong> Klikk på "Beregn" eller "Konverter"-knappen.</li>
+<li><strong>Les resultatet:</strong> Resultatet i dekar vil umiddelbart vises på skjermen.</li>
+</ol>
+
+<h3>Manuelle Beregninger</h3>
+
+<p>Hvis du ikke har tilgang til en digital omformer, kan du enkelt gjøre beregningen selv. Ta antallet kvadratmeter, og del det på 1000. Så enkelt er det! En <strong>kvadratmeter til dekar omformer</strong> gjør det samme, bare automatisk og uten risiko for regnefeil.</p>
+
+<h2>Formel med Eksempel</h2>
+
+<h3>Den Matematiske Formelen</h3>
+
+<p>Formelen for konvertering ved hjelp av en <strong>kvadratmeter til dekar omformer</strong> er:</p>
+
+<p><strong>Dekar (daa) = Kvadratmeter (m²) ÷ 1000</strong></p>
+
+<h3>Praktisk Eksempel</h3>
+
+<p>La oss si at du har en jordlodde på 5000 kvadratmeter. Ved å bruke <strong>kvadratmeter til dekar omformer</strong> eller formelen over:</p>
+
+<p><strong>5000 m² ÷ 1000 = 5 dekar</strong></p>
+
+<p>Så din jordlodde er 5 dekar stor. Dette er en stor tomt eller en liten jordbrukseienddom, avhengig av hvor du bor.</p>
+
+<h3>Flere Eksempler</h3>
+
+<p>Her er flere eksempler for å tydeliggjøre hvordan en <strong>kvadratmeter til dekar omformer</strong> fungerer:</p>
+
+<ul>
+<li>1000 m² = 1 dekar</li>
+<li>2500 m² = 2,5 dekar</li>
+<li>10000 m² = 10 dekar</li>
+<li>50000 m² = 50 dekar</li>
+<li>100000 m² = 100 dekar</li>
+</ul>
+
+<h2>Praktiske Eksempler fra Dagliglivet</h2>
+
+<h3>Boligeiendom</h3>
+
+<p>En gjennomsnittlig boligtomte i Norge kan være rundt 2000 kvadratmeter. Ved å bruke en <strong>kvadratmeter til dekar omformer</strong>, kan du raskt beregne at dette er 2 dekar. Dette tallet er ofte det som brukes i eiendomsannonser og juridiske dokumenter.</p>
+
+<h3>Landbrukseiendommer</h3>
+
+<p>En mindre gård kan ha 25 dekar med dyrkbar mark. En <strong>kvadratmeter til dekar omformer</strong> viser deg at dette tilsvarer 25000 kvadratmeter av dyrkbar jord. Dette hjelper bonden med å planlegge planting og høsting.</p>
+
+<h3>Næringseiendommer</h3>
+
+<p>Et større næringsområde kan være 75000 kvadratmeter. Med <strong>kvadratmeter til dekar omformer</strong> får du raskt vite at dette er 75 dekar, noe som er informasjon som potensielle kjøpere og investorer trenger.</p>
+
+<h2>Tips for Effektiv Bruk</h2>
+
+<h3>Nyttige Råd</h3>
+
+<p>Her er noen praktiske tips når du arbeider med en <strong>kvadratmeter til dekar omformer</strong>:</p>
+
+<ul>
+<li><strong>Verifiser dine kilder:</strong> Sørg for at målingene i kvadratmeter som du starter med, er nøyaktige fra start.</li>
+<li><strong>Dobbeltsjekk resultater:</strong> Hvis tallet virker uvanlig, sjekk om du har tastet inn riktig verdi.</li>
+<li><strong>Bruk pålitelige omformere:</strong> Velg online omformere fra anerkjente kilder for sikkerhet.</li>
+<li><strong>Noter både enheter:</strong> Når du lagrer resultater, notér både kvadratmeter og dekar for referanse.</li>
+<li><strong>Lær formelen:</strong> Selv om omformeren er praktisk, er det nyttig å kunne gjøre beregningen i hodet din.</li>
+<li><strong>Vær konsistent:</strong> I forretningsdokumenter, bruk alltid samme enhet gjennomgående.</li>
+</ul>
+
+<h2>Ofte Stilte Spørsmål (FAQ)</h2>
+
+<h3>Spørsmål 1: Hvor nøyaktig er en Kvadratmeter til Dekar Omformer?</h3>
+
+<p>En korrekt implementert <strong>kvadratmeter til dekar omformer</strong> er 100% nøyaktig. Konversjonen er basert på en fast matematisk konstant (1 dekar = 1000 m²), så så lenge du bruker en pålitelig omformer eller beregner manuelt, får du nøyaktige resultater.</p>
+
+<h3>Spørsmål 2: Kan jeg Konvertere fra Dekar til Kvadratmeter?</h3>
+
+<p>Ja, de fleste <strong>kvadratmeter til dekar omformer</strong> verktøy tillater toveis konvertering. Du kan også gjøre det manuelt ved å multiplisere antallet dekar med 1000 for å få kvadratmeter.</p>
+
+<h3>Spørsmål 3: Brukes Dekar Fortsatt i Norge?</h3>
+
+<p>Ja, dekar er fortsatt meget brukt i Norge, spesielt innenfor landbruk, eiendomshandel og offentlig administrasjon. Selv om kvadratmeter er SI-standarden, kan du møte dekar på daglig basis hvis du arbeider med land eller eiendom.</p>
+
+<h3>Spørsmål 4: Hva Er Forholdet Mellom Dekar og Hektar?</h3>
+
+<p>1 hektar = 10 dekar = 10000 kvadratmeter. Hektar er ofte brukt for større områder, mens dekar brukes for mindre jordlodder.</p>
+
+<h3>Spørsmål 5: Finnes Det Gratis Kvadratmeter til Dekar Omformere Online?</h3>
+
+<p>Ja, det finnes mange gratis <strong>kvadratmeter til dekar omformer</strong> verktøy tilgjengelig på internett. Du kan også laste ned mobilapper som gjør disse konversjonene. Søk etter "kvadratmeter til dekar omformer" på Google for å finne flere alternativer.</p>
+
+<h2>Konklusjon</h2>
+
+<p>En <strong>kvadratmeter til dekar omformer</strong> er et uunnværlig verktøy for alle som arbeider med land, eiendom eller landbruk i Norge. Med enkel bruk og nøyaktige resultater, kan denne omformeren</div>
     <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/temperatur-konvertering'"><span class="tool-card-icon">🔄</span><h3>Temperatur Konvertering</h3><p>Konverter temperatur mellom alle enheter</p></div><div class="tool-card" onclick="location='/verktoy/fahrenheit-celsius'"><span class="tool-card-icon">🔄</span><h3>Fahrenheit til Celsius</h3><p>Konverter Fahrenheit til Celsius med detaljer</p></div><div class="tool-card" onclick="location='/verktoy/km-til-miles'"><span class="tool-card-icon">🔄</span><h3>Kilometer til Miles</h3><p>Konverter km til miles med nøyaktighet</p></div><div class="tool-card" onclick="location='/verktoy/miles-til-km'"><span class="tool-card-icon">🔄</span><h3>Miles til Kilometer</h3><p>Konverter miles til km med nøyaktighet</p></div><div class="tool-card" onclick="location='/verktoy/kg-til-pund'"><span class="tool-card-icon">🔄</span><h3>Kg til Pund</h3><p>Konverter kilogram til pund med presisjon</p></div><div class="tool-card" onclick="location='/verktoy/pund-til-kg'"><span class="tool-card-icon">🔄</span><h3>Pund til Kg</h3><p>Konverter pund til kilogram med presisjon</p></div><div class="tool-card" onclick="location='/verktoy/meter-til-fot'"><span class="tool-card-icon">🔄</span><h3>Meter til Fot</h3><p>Konverter meter til fot med høy nøyaktighet</p></div><div class="tool-card" onclick="location='/verktoy/cm-til-tommer'"><span class="tool-card-icon">🔄</span><h3>Centimeter til Tommer</h3><p>Konverter cm til tommer med brøker</p></div><div class="tool-card" onclick="location='/verktoy/liter-til-gallon'"><span class="tool-card-icon">🔄</span><h3>Liter til Gallon</h3><p>Konverter liter til gallon (US og UK)</p></div><div class="tool-card" onclick="location='/verktoy/ml-til-ts'"><span class="tool-card-icon">🔄</span><h3>Milliliter til Teskje</h3><p>Konverter ml til ulike måleenheter</p></div><div class="tool-card" onclick="location='/verktoy/bytes-til-mb'"><span class="tool-card-icon">🔄</span><h3>Bytes til MB Kalkulator</h3><p>Konverter bytes, KB, MB, GB, TB</p></div><div class="tool-card" onclick="location='/verktoy/hektar-til-m2'"><span class="tool-card-icon">🔄</span><h3>Hektar til m² Kalkulator</h3><p>Konverter hektar til kvadratmeter</p></div><div class="tool-card" onclick="location='/kategori/konvertering'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle Konvertering</h3><p>Alle kalkulatorer i denne kategorien</p></div></div></div>
     <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/lan-kalkulator'"><span class="tool-card-icon">💰</span><h3>Lån Kalkulator</h3><p>Beregn månedlige låneavdrag med nedbetalingsoversikt</p></div><div class="tool-card" onclick="location='/verktoy/prosent-kalkulator'"><span class="tool-card-icon">📐</span><h3>Prosent Kalkulator</h3><p>Beregn prosent med flere metoder og sammenligninger</p></div><div class="tool-card" onclick="location='/verktoy/areal-kalkulator'"><span class="tool-card-icon">📏</span><h3>Areal Kalkulator</h3><p>Beregn areal av ulike former med enheter</p></div><div class="tool-card" onclick="location='/verktoy/alder-kalkulator'"><span class="tool-card-icon">📅</span><h3>Alder Kalkulator</h3><p>Beregn nøyaktig alder med sammenligning og statistikk</p></div><div class="tool-card" onclick="location='/verktoy/fart-kalkulator'"><span class="tool-card-icon">⚡</span><h3>Fart Kalkulator</h3><p>Beregn fart, distanse og tid med enhetskonvertering og drivstoffestimat</p></div></div></div>
   </div>
@@ -50,10 +182,10 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-grid">
-      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">449+ gratis kalkulatorer</p></div>
-      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li></ul></div>
+      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">491+ gratis kalkulatorer</p></div>
+      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li><li><a href="/kategori/krypto">₿ Krypto</a></li><li><a href="/kategori/spill">🎮 Spill</a></li></ul></div>
       <div class="footer-col"><h4>Populære</h4><ul><li><a href="/verktoy/bmi-kalkulator">BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator">Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator">Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator">Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator">Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator">pH Kalkulator</a></li><li><a href="/verktoy/molekylvekt-kalkulator">Molekylvektkalkulator</a></li><li><a href="/verktoy/halveringstid-kalkulator">Halveringstid Kalkulator</a></li><li><a href="/verktoy/befolkningsvekst-kalkulator">Befolkningsvekst Kalkulator</a></li><li><a href="/verktoy/terningkaster">Terningkaster</a></li></ul></div>
-      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/konverter-oz-til-cc">OZ til CC Konverter</a></li><li><a href="/verktoy/kcal-til-kalorier">KCAL til Kalorier Omformer</a></li><li><a href="/verktoy/crore-til-milliard">Crore til Milliard Konverterer</a></li><li><a href="/verktoy/ml-til-mg">ML til MG Konvertering</a></li><li><a href="/verktoy/kvadratmiles-til-kvadratkilometer">Kvadratmiles til Kvadratkilometer Kalkulator</a></li><li><a href="/verktoy/kubikkfot-til-kubikkmeter">Kubikkfot til Kubikkmeter Konverter</a></li><li><a href="/verktoy/centimeter-til-tommer">Centimeter til Tommer Konverter</a></li><li><a href="/verktoy/kelvin-til-fahrenheit">Kelvin til Fahrenheit Konverter</a></li></ul></div>
+      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/beste-sjakktrekk">Beste Sjakktrekk Kalkulator</a></li><li><a href="/verktoy/wotlk-talent">WOTLK Talent Kalkulator</a></li><li><a href="/verktoy/sod-talent">SOD Talent Kalkulator</a></li><li><a href="/verktoy/bdo-hest">BDO Hestekalkulator</a></li><li><a href="/verktoy/diablo3-edelsten">Diablo 3 Edelstens Kalkulator</a></li><li><a href="/verktoy/dots-kalkulator">DOTS Kalkulator</a></li><li><a href="/verktoy/chocobo-farge">Chocobo Farge Kalkulator</a></li><li><a href="/verktoy/clash-of-clans">Clash of Clans Kalkulator</a></li></ul></div>
       <div class="footer-col"><h4>Info</h4><ul><li><a href="/om-oss">Om oss</a></li><li><a href="/personvern">Personvern</a></li><li><a href="/kontakt">Kontakt</a></li></ul></div>
     </div>
     <div class="footer-bottom"><p>© 2026 Kalkulator24 — Alle kalkulatorer er gratis</p></div>

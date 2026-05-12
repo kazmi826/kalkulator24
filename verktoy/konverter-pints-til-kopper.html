@@ -28,17 +28,164 @@
 <nav class="navbar">
   <div class="navbar-inner">
     <a href="/" class="logo">Kalkulator24</a>
-    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li></ul>
+    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li></ul>
     <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">☰</button>
   </div>
-  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li></ul></div>
+  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li></ul></div>
 </nav>
 <div class="breadcrumb"><a href="/">Hjem</a><span class="sep">›</span><a href="/kategori/konvertering">Konvertering</a><span class="sep">›</span>Pints til Kopper Konverter</div>
 <div class="tool-hero"><div class="tool-badge">🔄 Konvertering</div><h1>Pints til Kopper Konverter</h1><p class="subtitle">Konverter pint til kopper — raskt og gratis</p></div>
 <div class="main-wrap">
   <div class="main-content">
     <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>Pints</label><div class="input-row"><input type="number" class="calc-input" data-field="pints" placeholder="1"></div></div></div>    <button class="btn-calc" onclick="runCalculator('pints_to_cups')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
-    <div class="ai-loader" id="aiWrap"><p>Last inn detaljert guide</p><button class="btn-ai" id="aiBtn">Vis guide</button><div class="loading-wrap" id="aiLoader"><div class="spinner"></div><span>Laster...</span></div></div><div class="content-card" id="aiContent" style="display:none"></div>
+    <div class="content-card">```html
+<h2>Pints til Kopper Konverter: En Komplett Guide</h2>
+
+<p>Når du lager mat eller drikker basert på engelske eller amerikanske oppskrifter, vil du ofte møte målenheter som pints. En <strong>pints til kopper konverter</strong> er et essensielt verktøy som gjør det enkelt å konvertere flytende pints til kopper. I denne guiden skal vi utforske alt du trenger å vite om denne nyttige konverteren.</p>
+
+<h2>Hva er en Pints til Kopper Konverter?</h2>
+
+<p>En <strong>pints til kopper konverter</strong> er et verktøy eller kalkulator som hjelper deg med å raskt og enkelt konvertere volumenheten pint til kopper. Pint er en volumetat som ofte brukes i engelsktalende land som USA, Storbritannia og Canada. En kopp er en mindre måleenhet som er mye mer vanlig i norske kjøkkener.</p>
+
+<p>Konverteren fungerer ved å bruke en fast omregningsformel som alltid gir nøyaktig resultat. Dette er spesielt viktig når du arbeider med oppskrifter der presisjon kan påvirke sluttresultatet.</p>
+
+<h3>Forskjellige Pint-enheter</h3>
+
+<p>Det finnes to hovedtyper av pints som du må være klar over:</p>
+
+<ul>
+<li><strong>US Pint:</strong> Brukt i USA og inneholder omtrent 473 milliliter</li>
+<li><strong>Imperial Pint:</strong> Brukt i Storbritannia og Canada, og inneholder omtrent 568 milliliter</li>
+</ul>
+
+<p>En <strong>pints til kopper konverter</strong> må ta hensyn til hvilken type pint du jobber med for å gi korrekte resultater.</p>
+
+<h2>Hvorfor er Pints til Kopper Konverter Viktig?</h2>
+
+<p>I en globalisert verden hvor vi deler oppskrifter og matopplevelser på tvers av grenser, er det viktig å kunne konvertere mellom ulike måleenheter. Her er flere grunner til at en <strong>pints til kopper konverter</strong> er viktig:</p>
+
+<h3>Praktisk i Kjøkkenet</h3>
+
+<p>Når du følger en oppskrift som bruker pints, vil du sannsynligvis ikke ha målekjeler i pints. En konverter lar deg raskt finne ut hvor mange kopper du trenger, noe som gjør matlagingen mye enklere og mer praktisk.</p>
+
+<h3>Nøyaktighet</h3>
+
+<p>Feil konverteringer kan ødelegge en oppskrift. En <strong>pints til kopper konverter</strong> sikrer at du alltid får nøyaktige målinger, noe som er spesielt viktig når du baker eller lager drikker.</p>
+
+<h3>Tidsbesparelse</h3>
+
+<p>Istedenfor å slå opp konverteringer i flere kilder, kan du bruke en enkel konverter for å få svaret med en gang.</p>
+
+<h2>Slik Bruker du Pints til Kopper Konverter</h2>
+
+<p>En <strong>pints til kopper konverter</strong> er veldig enkel å bruke. Her er trinn-for-trinn instruksjoner:</p>
+
+<h3>Trinn 1: Identifiser Pint-typen</h3>
+
+<p>Først må du vite om oppskriften bruker US pints eller imperial pints. Amerikanske kilder bruker som regel US pints, mens britiske kilder bruker imperial pints.</p>
+
+<h3>Trinn 2: Skriv Inn Antall Pints</h3>
+
+<p>I konverteren skriver du inn antall pints du ønsker å konvertere. Dette kan være hele tall eller desimaltall.</p>
+
+<h3>Trinn 3: Velg Utgangsenhet</h3>
+
+<p>Bekreft at du har valgt pints som inngangsenhet. En god <strong>pints til kopper konverter</strong> vil tillate deg å velge mellom ulike pint-typer.</p>
+
+<h3>Trinn 4: Få Resultatet</h3>
+
+<p>Konverteren vil automatisk vise hvor mange kopper dette tilsvarer, vanligvis både i hele kopper og brøker (som 1/2 kopp eller 1/4 kopp).</p>
+
+<h2>Konverteringsformel med Eksempel</h2>
+
+<p>Hvis du ønsker å utføre konverteringen manuelt, kan du bruke disse formlene:</p>
+
+<h3>US Pints til Kopper</h3>
+
+<p><strong>Antall kopper = Antall US pints × 2</strong></p>
+
+<p>Dette fordi 1 US pint = 2 kopper.</p>
+
+<h3>Imperial Pints til Kopper</h3>
+
+<p><strong>Antall kopper = Antall imperial pints × 2.4</strong></p>
+
+<p>Dette fordi 1 imperial pint ≈ 2.4 kopper.</p>
+
+<h3>Praktiske Eksempler med Pints til Kopper Konverter</h3>
+
+<p><strong>Eksempel 1: US Pints</strong></p>
+
+<p>Hvis en oppskrift krever 3 US pints melk:</p>
+
+<p>3 pints × 2 = 6 kopper melk</p>
+
+<p><strong>Eksempel 2: Imperial Pints</strong></p>
+
+<p>Hvis en britisk oppskrift krever 2 imperial pints vann:</p>
+
+<p>2 pints × 2.4 = 4.8 kopper, eller cirka 4 og 3/4 kopper</p>
+
+<p><strong>Eksempel 3: Desimale Pints</strong></p>
+
+<p>Hvis du trenger 0.5 US pints:</p>
+
+<p>0.5 pints × 2 = 1 kopp</p>
+
+<h2>Praktiske Eksempler fra Kjøkkenet</h2>
+
+<p>Her er noen reelle situasjoner hvor du vil trenge en <strong>pints til kopper konverter</strong>:</p>
+
+<h3>Drikkeoppskrifter</h3>
+
+<p>En populær smoothie-oppskrift kan kreve 1 pint bærblanding. Med konverteren vet du at du trenger 2 kopper bær.</p>
+
+<h3>Supper og Stuer</h3>
+
+<p>En klassisk engelsk supp-oppskrift kan spesifisere 4 pints kraft. En <strong>pints til kopper konverter</strong> forteller deg at dette er 8-10 kopper, avhengig av pint-type.</p>
+
+<h3>Bakst</h3>
+
+<p>Selv om bakst sjelden bruker pints, kan noen gamle oppskrifter gjøre det. En muffin-oppskrift som krever 1.5 pints melk blir 3 kopper med US pints.</p>
+
+<h3>Konserver og Marmelade</h3>
+
+<p>Når du lager hjemmelaget marmelade eller konserver, kan oppskrifter spesifisere volumer i pints. En <strong>pints til kopper konverter</strong> sikrer at du koker opp riktig mengde.</p>
+
+<h2>Tips for Bruk av Pints til Kopper Konverter</h2>
+
+<p>Her er noen nyttige tips for å få mest mulig ut av konverteren:</p>
+
+<ul>
+<li><strong>Bookmark konverteren:</strong> Lagre en online <strong>pints til kopper konverter</strong> i favoritter for rask tilgang når du trenger det</li>
+<li><strong>Skriv ned vanlige konverteringer:</strong> Hvis du ofte bruker de samme mengdene, skriv dem ned som referanse</li>
+<li><strong>Dobbeltsjekk enhetene:</strong> Vær alltid sikker på om du jobber med US eller imperial pints</li>
+<li><strong>Bruk brøker:</strong> Når konverteren gir desimaler, konverter dem til brøker som 1/4, 1/2 eller 3/4 for lettere måling</li>
+<li><strong>Hold deg til en konverter:</strong> Bruk den samme konverteren konsekvent for å unngå små avvik</li>
+<li><strong>Lær formlene:</strong> Memorering av de enkle formlene gjør deg uavhengig av verktøy</li>
+</ul>
+
+<h2>Ofte Stilte Spørsmål om Pints til Kopper Konverter</h2>
+
+<h3>Spørsmål 1: Hva er forskjellen mellom US pint og imperial pint?</h3>
+
+<p>US pint inneholder 16 flytende ounces og tilsvarer omtrent 473 ml, mens imperial pint inneholder 20 flytende ounces og tilsvarer omtrent 568 ml. En imperial pint er derfor større enn en US pint, noe som gjør at <strong>pints til kopper konverter</strong> vil vise ulike resultater avhengig av hvilken type du bruker.</p>
+
+<h3>Spørsmål 2: Kan jeg bruke en pints til kopper konverter for andre væsker enn vann?</h3>
+
+<p>Ja, absolutt! En <strong>pints til kopper konverter</strong> fungerer for alle væsker. Volumkonverteringer er basert på fysisk rom, ikke på hva som fyller rommet. Enten du konverterer melk, olje, sirup eller juice, vil konverteren gi samme resultat.</p>
+
+<h3>Spørsmål 3: Hvor nøyaktig er en pints til kopper konverter?</h3>
+
+<p>En god digital <strong>pints til kopper konverter</strong> er svært nøyaktig og vil gi deg desimaler om nødvendig. For praktisk bruk i kjøkkenet er denne nøyaktigheten mer enn tilstrekkelig.</p>
+
+<h3>Spørsmål 4: Finnes det offline-versjoner av pints til kopper konverter?</h3>
+
+<p>Ja, du kan finne fysiske konverteringstabeller, eller du kan laste ned applikasjoner som fungerer uten internett. Mange smartphones har også innebygde konverteringsverktøy som kan fungere som en <strong>pints til kopper konverter</strong>.</p>
+
+<h3>Spørsmål 5: Er det andre enheter jeg bør vite om når jeg bruker pints til kopper konverter?</h3>
+
+<p>Ja, det finnes andre relaterte enheter som milliliter, desiliter, liter og flytende ounces. Noen avanserte <strong>pints til kopper konverter</strong>-verktøy tillater konvertering mellom alle disse enhetene, noe som gjør dem ekstra nyttige i kjøkkenet.</p></div>
     <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/temperatur-konvertering'"><span class="tool-card-icon">🔄</span><h3>Temperatur Konvertering</h3><p>Konverter temperatur mellom alle enheter</p></div><div class="tool-card" onclick="location='/verktoy/fahrenheit-celsius'"><span class="tool-card-icon">🔄</span><h3>Fahrenheit til Celsius</h3><p>Konverter Fahrenheit til Celsius med detaljer</p></div><div class="tool-card" onclick="location='/verktoy/km-til-miles'"><span class="tool-card-icon">🔄</span><h3>Kilometer til Miles</h3><p>Konverter km til miles med nøyaktighet</p></div><div class="tool-card" onclick="location='/verktoy/miles-til-km'"><span class="tool-card-icon">🔄</span><h3>Miles til Kilometer</h3><p>Konverter miles til km med nøyaktighet</p></div><div class="tool-card" onclick="location='/verktoy/kg-til-pund'"><span class="tool-card-icon">🔄</span><h3>Kg til Pund</h3><p>Konverter kilogram til pund med presisjon</p></div><div class="tool-card" onclick="location='/verktoy/pund-til-kg'"><span class="tool-card-icon">🔄</span><h3>Pund til Kg</h3><p>Konverter pund til kilogram med presisjon</p></div><div class="tool-card" onclick="location='/verktoy/meter-til-fot'"><span class="tool-card-icon">🔄</span><h3>Meter til Fot</h3><p>Konverter meter til fot med høy nøyaktighet</p></div><div class="tool-card" onclick="location='/verktoy/cm-til-tommer'"><span class="tool-card-icon">🔄</span><h3>Centimeter til Tommer</h3><p>Konverter cm til tommer med brøker</p></div><div class="tool-card" onclick="location='/verktoy/liter-til-gallon'"><span class="tool-card-icon">🔄</span><h3>Liter til Gallon</h3><p>Konverter liter til gallon (US og UK)</p></div><div class="tool-card" onclick="location='/verktoy/ml-til-ts'"><span class="tool-card-icon">🔄</span><h3>Milliliter til Teskje</h3><p>Konverter ml til ulike måleenheter</p></div><div class="tool-card" onclick="location='/verktoy/bytes-til-mb'"><span class="tool-card-icon">🔄</span><h3>Bytes til MB Kalkulator</h3><p>Konverter bytes, KB, MB, GB, TB</p></div><div class="tool-card" onclick="location='/verktoy/hektar-til-m2'"><span class="tool-card-icon">🔄</span><h3>Hektar til m² Kalkulator</h3><p>Konverter hektar til kvadratmeter</p></div><div class="tool-card" onclick="location='/kategori/konvertering'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle Konvertering</h3><p>Alle kalkulatorer i denne kategorien</p></div></div></div>
     <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/lan-kalkulator'"><span class="tool-card-icon">💰</span><h3>Lån Kalkulator</h3><p>Beregn månedlige låneavdrag med nedbetalingsoversikt</p></div><div class="tool-card" onclick="location='/verktoy/prosent-kalkulator'"><span class="tool-card-icon">📐</span><h3>Prosent Kalkulator</h3><p>Beregn prosent med flere metoder og sammenligninger</p></div><div class="tool-card" onclick="location='/verktoy/areal-kalkulator'"><span class="tool-card-icon">📏</span><h3>Areal Kalkulator</h3><p>Beregn areal av ulike former med enheter</p></div><div class="tool-card" onclick="location='/verktoy/alder-kalkulator'"><span class="tool-card-icon">📅</span><h3>Alder Kalkulator</h3><p>Beregn nøyaktig alder med sammenligning og statistikk</p></div><div class="tool-card" onclick="location='/verktoy/fart-kalkulator'"><span class="tool-card-icon">⚡</span><h3>Fart Kalkulator</h3><p>Beregn fart, distanse og tid med enhetskonvertering og drivstoffestimat</p></div></div></div>
   </div>
@@ -50,10 +197,10 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-grid">
-      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">449+ gratis kalkulatorer</p></div>
-      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li></ul></div>
+      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">491+ gratis kalkulatorer</p></div>
+      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li><li><a href="/kategori/krypto">₿ Krypto</a></li><li><a href="/kategori/spill">🎮 Spill</a></li></ul></div>
       <div class="footer-col"><h4>Populære</h4><ul><li><a href="/verktoy/bmi-kalkulator">BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator">Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator">Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator">Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator">Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator">pH Kalkulator</a></li><li><a href="/verktoy/molekylvekt-kalkulator">Molekylvektkalkulator</a></li><li><a href="/verktoy/halveringstid-kalkulator">Halveringstid Kalkulator</a></li><li><a href="/verktoy/befolkningsvekst-kalkulator">Befolkningsvekst Kalkulator</a></li><li><a href="/verktoy/terningkaster">Terningkaster</a></li></ul></div>
-      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/konverter-oz-til-cc">OZ til CC Konverter</a></li><li><a href="/verktoy/kcal-til-kalorier">KCAL til Kalorier Omformer</a></li><li><a href="/verktoy/crore-til-milliard">Crore til Milliard Konverterer</a></li><li><a href="/verktoy/ml-til-mg">ML til MG Konvertering</a></li><li><a href="/verktoy/kvadratmiles-til-kvadratkilometer">Kvadratmiles til Kvadratkilometer Kalkulator</a></li><li><a href="/verktoy/kubikkfot-til-kubikkmeter">Kubikkfot til Kubikkmeter Konverter</a></li><li><a href="/verktoy/centimeter-til-tommer">Centimeter til Tommer Konverter</a></li><li><a href="/verktoy/kelvin-til-fahrenheit">Kelvin til Fahrenheit Konverter</a></li></ul></div>
+      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/beste-sjakktrekk">Beste Sjakktrekk Kalkulator</a></li><li><a href="/verktoy/wotlk-talent">WOTLK Talent Kalkulator</a></li><li><a href="/verktoy/sod-talent">SOD Talent Kalkulator</a></li><li><a href="/verktoy/bdo-hest">BDO Hestekalkulator</a></li><li><a href="/verktoy/diablo3-edelsten">Diablo 3 Edelstens Kalkulator</a></li><li><a href="/verktoy/dots-kalkulator">DOTS Kalkulator</a></li><li><a href="/verktoy/chocobo-farge">Chocobo Farge Kalkulator</a></li><li><a href="/verktoy/clash-of-clans">Clash of Clans Kalkulator</a></li></ul></div>
       <div class="footer-col"><h4>Info</h4><ul><li><a href="/om-oss">Om oss</a></li><li><a href="/personvern">Personvern</a></li><li><a href="/kontakt">Kontakt</a></li></ul></div>
     </div>
     <div class="footer-bottom"><p>© 2026 Kalkulator24 — Alle kalkulatorer er gratis</p></div>

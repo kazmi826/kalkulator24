@@ -28,17 +28,146 @@
 <nav class="navbar">
   <div class="navbar-inner">
     <a href="/" class="logo">Kalkulator24</a>
-    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li></ul>
+    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li></ul>
     <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">☰</button>
   </div>
-  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li></ul></div>
+  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li></ul></div>
 </nav>
 <div class="breadcrumb"><a href="/">Hjem</a><span class="sep">›</span><a href="/kategori/konvertering">Konvertering</a><span class="sep">›</span>ML til Liter Konverter</div>
 <div class="tool-hero"><div class="tool-badge">🔄 Konvertering</div><h1>ML til Liter Konverter</h1><p class="subtitle">Konverter milliliter til liter — raskt og gratis</p></div>
 <div class="main-wrap">
   <div class="main-content">
     <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>Milliliter</label><div class="input-row"><input type="number" class="calc-input" data-field="ml" placeholder="1000"></div></div></div>    <button class="btn-calc" onclick="runCalculator('ml_to_liter')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
-    <div class="ai-loader" id="aiWrap"><p>Last inn detaljert guide</p><button class="btn-ai" id="aiBtn">Vis guide</button><div class="loading-wrap" id="aiLoader"><div class="spinner"></div><span>Laster...</span></div></div><div class="content-card" id="aiContent" style="display:none"></div>
+    <div class="content-card">```html
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML til Liter Konverter - Komplett Guide</title>
+</head>
+<body>
+
+<h2>ML til Liter Konverter: Komplett Guide til Volumkonvertering</h2>
+
+<p>En <strong>ml til liter konverter</strong> er et praktisk verktøy som hjelper deg med å omgjøre milliliter til liter raskt og enkelt. Enten du jobber i kjøkkenet, laboratoriet eller på arbeidsplassen, er det viktig å forstå denne grunnleggende enhetskonverteringen. I denne artikkelen skal vi utforske alt du trenger å vite om volumkonvertering fra milliliter til liter.</p>
+
+<h2>Hva er en ML til Liter Konverter?</h2>
+
+<p>En <strong>ml til liter konverter</strong> er et digitalt eller matematisk hjelpemiddel som oversetter volumenheter fra milliliter (ml) til liter (L). Milliliter er en mindre enhet, mens liter er en større enhet for måling av væske eller volum. Konverteren gjør beregningen automatisk basert på standardiserte omregningsfaktorer.</p>
+
+<p>I det metriske systemet er forholdet mellom disse enhetene meget enkelt: 1 liter tilsvarer nøyaktig 1000 milliliter. Dette gjør konverteringen rett frem når du bruker en <strong>ml til liter konverter</strong> eller gjør beregningen manuelt.</p>
+
+<h3>Enhetssystemet Forklart</h3>
+
+<p>Både milliliter og liter tilhører det metriske systemet, som er standardisert internasjonalt. Denne systemet brukes i vitenskapelige beregninger, kulinariske oppskrifter og kommersielle formål rundt om i verden. En <strong>ml til liter konverter</strong> bygger på dette standardiserte systemet for å sikre nøyaktige resultater.</p>
+
+<h2>Hvorfor Er en ML til Liter Konverter Viktig?</h2>
+
+<p>Det finnes flere praktiske grunner til at en <strong>ml til liter konverter</strong> er et nyttig verktøy i dagligdagen:</p>
+
+<ul>
+<li><strong>Kulinariske behov:</strong> Mange oppskrifter fra ulike land bruker ulike enheter, og en konverter hjelper deg å få riktige mengder</li>
+<li><strong>Vitenskapelige eksperimenter:</strong> Laboratorier krever presise målinger, og en konverter sikrer nøyaktighet</li>
+<li><strong>Medisinsk bruk:</strong> Dosering av medisiner og væsker må være nøyaktig</li>
+<li><strong>Kommersiell handel:</strong> Bedrifter som selger væsker må konvertere mellom enheter for inventar og prising</li>
+<li><strong>Hjemmebedrifter:</strong> Hvis du lager naturlige produkter eller drikker, er en konverter essensiell</li>
+</ul>
+
+<p>Uten en <strong>ml til liter konverter</strong> eller kunnskap om konverteringen, kan feil målinger føre til dårlige resultater i alt fra bakverk til vitenskapelige forsøk.</p>
+
+<h2>Slik Bruker Du en ML til Liter Konverter</h2>
+
+<h3>Trinn for Trinn Guide</h3>
+
+<p>Å bruke en <strong>ml til liter konverter</strong> er svært enkelt. Følg disse enkle trinnene:</p>
+
+<ul>
+<li><strong>Trinn 1:</strong> Identifiser volumet ditt i milliliter som du ønsker å konvertere</li>
+<li><strong>Trinn 2:</strong> Skriv inn tallet i konverteren eller kalkulator</li>
+<li><strong>Trinn 3:</strong> Velg "milliliter til liter" som konverteringstype</li>
+<li><strong>Trinn 4:</strong> Trykk på "Konverter" eller "Beregn" knappen</li>
+<li><strong>Trinn 5:</strong> Les resultatet som vises i liter</li>
+</ul>
+
+<p>Hvis du bruker en online <strong>ml til liter konverter</strong>, vil prosessen være automatisk og du får resultatet øyeblikkelig. Mange konvertere tillater deg å også gjøre omvendt konvertering fra liter til milliliter.</p>
+
+<h2>Konverteringsformel med Eksempler</h2>
+
+<h3>Den Grunnleggende Formelen</h3>
+
+<p>Formelen for å konvertere milliliter til liter er meget enkel:</p>
+
+<p><strong>Liter = Milliliter ÷ 1000</strong></p>
+
+<p>Eller omvendt:</p>
+
+<p><strong>Milliliter = Liter × 1000</strong></p>
+
+<h3>Praktiske Eksempler</h3>
+
+<p>La oss se på noen konkrete eksempler for å illustrere hvordan en <strong>ml til liter konverter</strong> fungerer:</p>
+
+<ul>
+<li><strong>Eksempel 1:</strong> 500 ml ÷ 1000 = 0,5 liter. En 500 ml flaske tilsvarer en halv liter</li>
+<li><strong>Eksempel 2:</strong> 2500 ml ÷ 1000 = 2,5 liter. En stor beholdning på 2500 ml er 2,5 liter</li>
+<li><strong>Eksempel 3:</strong> 250 ml ÷ 1000 = 0,25 liter. En kvart liter flaske er 250 milliliter</li>
+<li><strong>Eksempel 4:</strong> 750 ml ÷ 1000 = 0,75 liter. En standard vinflaske på 750 ml er 0,75 liter</li>
+<li><strong>Eksempel 5:</strong> 1500 ml ÷ 1000 = 1,5 liter. Halvliterflasker tilsvarer 1,5 liter</li>
+</ul>
+
+<p>Som du kan se, er det veldig greit å bruke formelen når du forstår hvordan en <strong>ml til liter konverter</strong> arbeider. Divisjon med 1000 er alt som trengs.</p>
+
+<h2>Praktiske Eksempler fra Dagliglivet</h2>
+
+<h3>Eksempel 1: Kjøkkenet</h3>
+
+<p>Anta at du har en oppskrift som krever 2 liter melk, men målekruset ditt er kalibrert i milliliter. Her kommer en <strong>ml til liter konverter</strong> til nytte. Du konverterer 2 liter til 2000 milliliter og måler det ut i målekruset ditt.</p>
+
+<h3>Eksempel 2: Laboratorium</h3>
+
+<p>En kjemiker må arbeide med 750 ml av en kjemisk løsning. Ved bruk av en <strong>ml til liter konverter</strong> konverterer hun dette til 0,75 liter for dokumentasjonens skyld og labjournal.</p>
+
+<h3>Eksempel 3: Vanninntaking</h3>
+
+<p>Helseprofesjonelle anbefaler ofte at du drikker 2-3 liter vann daglig. Hvis du bruker en 500 ml vannglass, må du drikke 4-6 glass. Her hjelper en <strong>ml til liter konverter</strong> deg å forstå hvor mye det faktisk er.</p>
+
+<h3>Eksempel 4: Automotiv</h3>
+
+<p>En bilmekaniker må fylle olje i motoren. Hvis oljemengden kreves i liter, men du måler i milliliter, bruker du en <strong>ml til liter konverter</strong> for å sikre riktig mengde.</p>
+
+<h2>Tips for Nøyaktig Konvertering</h2>
+
+<ul>
+<li><strong>Husk formelen:</strong> Del med 1000 når du går fra ml til L, multipliser med 1000 når du går fra L til ml</li>
+<li><strong>Bruk pålitelige kilder:</strong> Velg anerkjente online konvertere eller kalkulatorer</li>
+<li><strong>Dobbeltsjekk resultater:</strong> Hvis resultatet virker rart, regn det ut på nytt</li>
+<li><strong>Vær presis:</strong> Ved vitenskapelige eller medisinske formål, bruk dekimaler riktig</li>
+<li><strong>Noter deg systemet:</strong> Husk at 1000 ml = 1 liter alltid, det er den magiske faktoren</li>
+<li><strong>Bruk konsekvent:</strong> Når du først forstår en <strong>ml til liter konverter</strong>, bruker den gjennomgående i dine prosjekter</li>
+</ul>
+
+<h2>Ofte Stilte Spørsmål (FAQ)</h2>
+
+<h3>Spørsmål 1: Hva er nøyaktig forskjellen mellom milliliter og liter?</h3>
+
+<p>Milliliter (ml) er en mindre enhet, hvor 1000 milliliter utgjør nøyaktig 1 liter (L). Liter er derfor 1000 ganger større enn milliliter. Denne standardiserte forholdet gjør en <strong>ml til liter konverter</strong> enkel å bruke.</p>
+
+<h3>Spørsmål 2: Kan jeg bruke en enkel kalkulator som ml til liter konverter?</h3>
+
+<p>Ja, absolutt! Enhver kalkulator kan fungere som en <strong>ml til liter konverter</strong>. Du trenger bare å dele milliliterverdien din på 1000 for å få literverdien. Det er så enkelt som det.</p>
+
+<h3>Spørsmål 3: Hvor er en ml til liter konverter mest nyttig?</h3>
+
+<p>En <strong>ml til liter konverter</strong> er mest nyttig i kjøkkenet, laboratoriet, medisinsk praksis, og i industrier som handler om væsker. Det er også praktisk for daglige oppgaver som å forstå vannforbruk eller væskeintake.</p>
+
+<h3>Spørsmål 4: Er det forskjellige typer litre i ulike land?</h3>
+
+<p>Nei, liter er standardisert internasjonalt som del av det metriske systemet. En liter er en liter overalt i verden, noe som gjør en <strong>ml til liter konverter</strong> universelt gyldig uansett hvor du befinner deg.</p>
+
+<h3>Spørsmål 5: Kan jeg konvertere liter til milliliter med samme konverter?</h3>
+
+<p</div>
     <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/temperatur-konvertering'"><span class="tool-card-icon">🔄</span><h3>Temperatur Konvertering</h3><p>Konverter temperatur mellom alle enheter</p></div><div class="tool-card" onclick="location='/verktoy/fahrenheit-celsius'"><span class="tool-card-icon">🔄</span><h3>Fahrenheit til Celsius</h3><p>Konverter Fahrenheit til Celsius med detaljer</p></div><div class="tool-card" onclick="location='/verktoy/km-til-miles'"><span class="tool-card-icon">🔄</span><h3>Kilometer til Miles</h3><p>Konverter km til miles med nøyaktighet</p></div><div class="tool-card" onclick="location='/verktoy/miles-til-km'"><span class="tool-card-icon">🔄</span><h3>Miles til Kilometer</h3><p>Konverter miles til km med nøyaktighet</p></div><div class="tool-card" onclick="location='/verktoy/kg-til-pund'"><span class="tool-card-icon">🔄</span><h3>Kg til Pund</h3><p>Konverter kilogram til pund med presisjon</p></div><div class="tool-card" onclick="location='/verktoy/pund-til-kg'"><span class="tool-card-icon">🔄</span><h3>Pund til Kg</h3><p>Konverter pund til kilogram med presisjon</p></div><div class="tool-card" onclick="location='/verktoy/meter-til-fot'"><span class="tool-card-icon">🔄</span><h3>Meter til Fot</h3><p>Konverter meter til fot med høy nøyaktighet</p></div><div class="tool-card" onclick="location='/verktoy/cm-til-tommer'"><span class="tool-card-icon">🔄</span><h3>Centimeter til Tommer</h3><p>Konverter cm til tommer med brøker</p></div><div class="tool-card" onclick="location='/verktoy/liter-til-gallon'"><span class="tool-card-icon">🔄</span><h3>Liter til Gallon</h3><p>Konverter liter til gallon (US og UK)</p></div><div class="tool-card" onclick="location='/verktoy/ml-til-ts'"><span class="tool-card-icon">🔄</span><h3>Milliliter til Teskje</h3><p>Konverter ml til ulike måleenheter</p></div><div class="tool-card" onclick="location='/verktoy/bytes-til-mb'"><span class="tool-card-icon">🔄</span><h3>Bytes til MB Kalkulator</h3><p>Konverter bytes, KB, MB, GB, TB</p></div><div class="tool-card" onclick="location='/verktoy/hektar-til-m2'"><span class="tool-card-icon">🔄</span><h3>Hektar til m² Kalkulator</h3><p>Konverter hektar til kvadratmeter</p></div><div class="tool-card" onclick="location='/kategori/konvertering'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle Konvertering</h3><p>Alle kalkulatorer i denne kategorien</p></div></div></div>
     <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/lan-kalkulator'"><span class="tool-card-icon">💰</span><h3>Lån Kalkulator</h3><p>Beregn månedlige låneavdrag med nedbetalingsoversikt</p></div><div class="tool-card" onclick="location='/verktoy/prosent-kalkulator'"><span class="tool-card-icon">📐</span><h3>Prosent Kalkulator</h3><p>Beregn prosent med flere metoder og sammenligninger</p></div><div class="tool-card" onclick="location='/verktoy/areal-kalkulator'"><span class="tool-card-icon">📏</span><h3>Areal Kalkulator</h3><p>Beregn areal av ulike former med enheter</p></div><div class="tool-card" onclick="location='/verktoy/alder-kalkulator'"><span class="tool-card-icon">📅</span><h3>Alder Kalkulator</h3><p>Beregn nøyaktig alder med sammenligning og statistikk</p></div><div class="tool-card" onclick="location='/verktoy/fart-kalkulator'"><span class="tool-card-icon">⚡</span><h3>Fart Kalkulator</h3><p>Beregn fart, distanse og tid med enhetskonvertering og drivstoffestimat</p></div></div></div>
   </div>
@@ -50,10 +179,10 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-grid">
-      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">449+ gratis kalkulatorer</p></div>
-      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li></ul></div>
+      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">491+ gratis kalkulatorer</p></div>
+      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li><li><a href="/kategori/krypto">₿ Krypto</a></li><li><a href="/kategori/spill">🎮 Spill</a></li></ul></div>
       <div class="footer-col"><h4>Populære</h4><ul><li><a href="/verktoy/bmi-kalkulator">BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator">Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator">Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator">Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator">Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator">pH Kalkulator</a></li><li><a href="/verktoy/molekylvekt-kalkulator">Molekylvektkalkulator</a></li><li><a href="/verktoy/halveringstid-kalkulator">Halveringstid Kalkulator</a></li><li><a href="/verktoy/befolkningsvekst-kalkulator">Befolkningsvekst Kalkulator</a></li><li><a href="/verktoy/terningkaster">Terningkaster</a></li></ul></div>
-      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/konverter-oz-til-cc">OZ til CC Konverter</a></li><li><a href="/verktoy/kcal-til-kalorier">KCAL til Kalorier Omformer</a></li><li><a href="/verktoy/crore-til-milliard">Crore til Milliard Konverterer</a></li><li><a href="/verktoy/ml-til-mg">ML til MG Konvertering</a></li><li><a href="/verktoy/kvadratmiles-til-kvadratkilometer">Kvadratmiles til Kvadratkilometer Kalkulator</a></li><li><a href="/verktoy/kubikkfot-til-kubikkmeter">Kubikkfot til Kubikkmeter Konverter</a></li><li><a href="/verktoy/centimeter-til-tommer">Centimeter til Tommer Konverter</a></li><li><a href="/verktoy/kelvin-til-fahrenheit">Kelvin til Fahrenheit Konverter</a></li></ul></div>
+      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/beste-sjakktrekk">Beste Sjakktrekk Kalkulator</a></li><li><a href="/verktoy/wotlk-talent">WOTLK Talent Kalkulator</a></li><li><a href="/verktoy/sod-talent">SOD Talent Kalkulator</a></li><li><a href="/verktoy/bdo-hest">BDO Hestekalkulator</a></li><li><a href="/verktoy/diablo3-edelsten">Diablo 3 Edelstens Kalkulator</a></li><li><a href="/verktoy/dots-kalkulator">DOTS Kalkulator</a></li><li><a href="/verktoy/chocobo-farge">Chocobo Farge Kalkulator</a></li><li><a href="/verktoy/clash-of-clans">Clash of Clans Kalkulator</a></li></ul></div>
       <div class="footer-col"><h4>Info</h4><ul><li><a href="/om-oss">Om oss</a></li><li><a href="/personvern">Personvern</a></li><li><a href="/kontakt">Kontakt</a></li></ul></div>
     </div>
     <div class="footer-bottom"><p>© 2026 Kalkulator24 — Alle kalkulatorer er gratis</p></div>

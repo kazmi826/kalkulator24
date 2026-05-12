@@ -28,17 +28,186 @@
 <nav class="navbar">
   <div class="navbar-inner">
     <a href="/" class="logo">Kalkulator24</a>
-    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li></ul>
+    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li></ul>
     <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">☰</button>
   </div>
-  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li></ul></div>
+  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li></ul></div>
 </nav>
 <div class="breadcrumb"><a href="/">Hjem</a><span class="sep">›</span><a href="/kategori/konvertering">Konvertering</a><span class="sep">›</span>Fahrenheit til Celsius Konverter</div>
 <div class="tool-hero"><div class="tool-badge">🔄 Konvertering</div><h1>Fahrenheit til Celsius Konverter</h1><p class="subtitle">Konverter Fahrenheit til Celsius — raskt og gratis</p></div>
 <div class="main-wrap">
   <div class="main-content">
     <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>Fahrenheit</label><div class="input-row"><input type="number" class="calc-input" data-field="fahrenheit" placeholder="32"></div></div></div>    <button class="btn-calc" onclick="runCalculator('fahrenheit_to_celsius')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
-    <div class="ai-loader" id="aiWrap"><p>Last inn detaljert guide</p><button class="btn-ai" id="aiBtn">Vis guide</button><div class="loading-wrap" id="aiLoader"><div class="spinner"></div><span>Laster...</span></div></div><div class="content-card" id="aiContent" style="display:none"></div>
+    <div class="content-card">```html
+<h2>Fahrenheit til Celsius Konverter – Komplett Guide</h2>
+
+<p>En <strong>fahrenheit til celsius konverter</strong> er et praktisk verktøy som gjør det enkelt å konvertere temperaturer mellom to av verdens mest brukte temperaturskalaer. I denne artikkelen vil vi utforske alt du trenger å vite om temperaturkonvertering, og hvordan du bruker en <strong>fahrenheit til celsius konverter</strong> effektivt.</p>
+
+<h2>Hva er en Fahrenheit til Celsius Konverter?</h2>
+
+<p>En <strong>fahrenheit til celsius konverter</strong> er et verktøy som oversetter temperaturmålinger fra Fahrenheit-skalaen til Celsius-skalaen (også kjent som Centigrade). Dette er nyttig når du har temperaturer i Fahrenheit og trenger dem i Celsius, eller omvendt.</p>
+
+<p>Fahrenheit-skalaen er primært brukt i USA og noen få andre land, mens Celsius er standarden i det meste av verden. En god <strong>fahrenheit til celsius konverter</strong> kan være:</p>
+
+<ul>
+<li>En online kalkulator</li>
+<li>En mobilapplikasjon</li>
+<li>En fysisk konverteringstabell</li>
+<li>En matematisk formel du bruker manuelt</li>
+</ul>
+
+<h2>Hvorfor er Temperaturkonvertering Viktig?</h2>
+
+<h3>Global Kommunikasjon</h3>
+
+<p>I en globalisert verden er det essensielt å kunne forstå og konvertere temperaturer mellom ulike skalaer. En <strong>fahrenheit til celsius konverter</strong> hjelper deg å forstå værmeldinger, kulinariske oppskrifter og vitenskapelige data fra kilder som bruker Fahrenheit.</p>
+
+<h3>Reising og Turisme</h3>
+
+<p>Når du reiser til USA eller andre land som bruker Fahrenheit, vil en <strong>fahrenheit til celsius konverter</strong> være uvurderlig. Du kan raskt sjekke værmeldinger og planlegge passende klær.</p>
+
+<h3>Arbeid og Utdanning</h3>
+
+<p>Fagfolk innen vitenskap, medisin, og teknologi må ofte arbeide med begge temperaturskalaer. En nøyaktig <strong>fahrenheit til celsius konverter</strong> sikrer presisjon i kritiske situasjoner.</p>
+
+<h3>Kjøkkenet</h3>
+
+<p>Mange internasjonale oppskrifter og ovner bruker Fahrenheit. En pålitelig <strong>fahrenheit til celsius konverter</strong> sikrer at maten din blir perfekt tilberedt.</p>
+
+<h2>Slik Bruker Du en Fahrenheit til Celsius Konverter</h2>
+
+<h3>Bruke en Online Konverter</h3>
+
+<p>De fleste <strong>fahrenheit til celsius konverter</strong>-verktøy online er veldig enkle å bruke:</p>
+
+<ul>
+<li>Åpne konverteren i nettleseren din</li>
+<li>Skriv inn temperaturen i Fahrenheit i inntastingsfeltet</li>
+<li>Resultatet i Celsius vises automatisk</li>
+<li>Noen verktøy tillater deg også å konvertere fra Celsius til Fahrenheit</li>
+</ul>
+
+<h3>Bruke en Mobilapp</h3>
+
+<p>Hvis du velger en app-basert <strong>fahrenheit til celsius konverter</strong>, vil prosessen være lik:</p>
+
+<ul>
+<li>Last ned appen fra appbutikken</li>
+<li>Åpne appen</li>
+<li>Velg konverteringsretning (Fahrenheit til Celsius)</li>
+<li>Skriv inn verdien</li>
+<li>Få resultatet umiddelbart</li>
+</ul>
+
+<h2>Formelen for Konvertering</h2>
+
+<h3>Fahrenheit til Celsius Formel</h3>
+
+<p>Den matematiske formelen for å konvertere Fahrenheit til Celsius er:</p>
+
+<p><strong>°C = (°F - 32) × 5/9</strong></p>
+
+<p>Eller alternativt:</p>
+
+<p><strong>°C = (°F - 32) ÷ 1.8</strong></p>
+
+<p>Begge formlene gir samme resultat. Den andre versjonen bruker divisjon i stedet for multiplikasjon, som noen mennesker finner enklere.</p>
+
+<h3>Eksempel på Konvertering</h3>
+
+<p>La oss konvertere 68 °F til Celsius:</p>
+
+<p>Ved å bruke formelen: (68 - 32) × 5/9 = 36 × 5/9 = 20 °C</p>
+
+<p>Eller med den alternative formelen: (68 - 32) ÷ 1.8 = 36 ÷ 1.8 = 20 °C</p>
+
+<p>Så 68 °F tilsvarer 20 °C, som er omtrent romtemperatur.</p>
+
+<h3>Omvendt Konvertering</h3>
+
+<p>Hvis du trenger å konvertere fra Celsius til Fahrenheit, bruker du denne formelen:</p>
+
+<p><strong>°F = (°C × 9/5) + 32</strong></p>
+
+<p>For eksempel: (20 × 9/5) + 32 = 36 + 32 = 68 °F</p>
+
+<h2>Praktiske Eksempler med Fahrenheit til Celsius Konverter</h2>
+
+<h3>Værmeldinger</h3>
+
+<p>Hvis værmeldingen sier det blir 75 °F i morgen, kan du bruke en <strong>fahrenheit til celsius konverter</strong> for å finne ut at det tilsvarer omtrent 24 °C – en behagelig sommerdag.</p>
+
+<h3>Ovntemperatur for Baking</h3>
+
+<p>En oppskrift krever en ovntemperatur på 350 °F. Med en <strong>fahrenheit til celsius konverter</strong> finner du at dette tilsvarer cirka 175-177 °C.</p>
+
+<h3>Medisinsk Bruk</h3>
+
+<p>En pasient har feber på 101.5 °F. En <strong>fahrenheit til celsius konverter</strong> viser at dette er omtrent 38.6 °C, som indikerer feber.</p>
+
+<h3>Kjøleskap Innstillinger</h3>
+
+<p>Hvis kjøleskapet ditt viser temperatur i Fahrenheit og du vil holde det på 37 °F, viser en <strong>fahrenheit til celsius konverter</strong> at det tilsvarer omtrent 3 °C.</p>
+
+<h3>Fritidsaktiverter</h3>
+
+<p>Du planlegger ski og værmeldingen sier -4 °F. En <strong>fahrenheit til celsius konverter</strong> forteller deg at det er omtrent -20 °C – ekstremt kaldt!</p>
+
+<h2>Nyttige Tips for Temperaturkonvertering</h2>
+
+<h3>Husk Kritiske Punkter</h3>
+
+<p>Det er nyttig å huske noen sentrale konverteringspunkter:</p>
+
+<ul>
+<li>32 °F = 0 °C (vannets frysepunkt)</li>
+<li>68 °F = 20 °C (romtemperatur)</li>
+<li>86 °F = 30 °C (varm dag)</li>
+<li>104 °F = 40 °C (veldig varm)</li>
+<li>212 °F = 100 °C (vannets kokepunkt)</li>
+</ul>
+
+<h3>Bruk Bokmerke</h3>
+
+<p>Hvis du ofte bruker en online <strong>fahrenheit til celsius konverter</strong>, kan du bokmerke siden for raskere tilgang.</p>
+
+<h3>Lagre Applikasjonen</h3>
+
+<p>En mobilapp-basert <strong>fahrenheit til celsius konverter</strong> fungerer uten internettforbindelse, så den er perfekt når du reiser.</p>
+
+<h3>Avrunding</h3>
+
+<p>Når du bruker en <strong>fahrenheit til celsius konverter</strong>, husk at noen resultat vil være desimaler. Du kan vanligvis avrunde til nærmeste hele tall for praktisk bruk.</p>
+
+<h3>Dobbeltsjekk Kritiske Målinger</h3>
+
+<p>Når det gjelder medisinsk eller vitenskapelig bruk, dobbeltsjekk alltid resultatet fra en <strong>fahrenheit til celsius konverter</strong>.</p>
+
+<h2>FAQ – Ofte Stilte Spørsmål</h2>
+
+<h3>Spørsmål 1: Hva er den enkleste måten å bruke en fahrenheit til celsius konverter?</h3>
+
+<p>Den enkleste måten er å bruke en online <strong>fahrenheit til celsius konverter</strong>. Du trenger bare å skrive inn tallet og få resultatet øyeblikkelig. Ingen formler å huske eller kalkulasjoner å gjøre.</p>
+
+<h3>Spørsmål 2: Er det nøyaktig å avrunde resultat fra en fahrenheit til celsius konverter?</h3>
+
+<p>For de fleste praktiske formål ja, avrunding er helt akseptabelt. For vitenskapelig eller medisinsk bruk anbefales det å bevare desimaler for større nøyaktighet.</p>
+
+<h3>Spørsmål 3: Kan jeg bruke en fahrenheit til celsius konverter offline?</h3>
+
+<p>Ja, hvis du bruker en mobilapp eller har arkivert en konverteringstabell, kan du bruke en <strong>fahrenheit til celsius konverter</strong> uten internettforbindelse. Online verktøy krever imidlertid internett.</p>
+
+<h3>Spørsmål 4: Hvor nøyaktig er online fahrenheit til celsius konvertere?</h3>
+
+<p>De fleste pålitelige online <strong>fahrenheit til celsius konverter</strong>-verktøy er veldig nøyaktige. De bruker den samme matematiske formelen som håndberegninger, så resultatet er presist.</p>
+
+<h3>Spørsmål 5: Kan jeg konvertere både veier med en fahrenheit til celsius konverter?</h3>
+
+<p>Ja, de fleste moderne <strong>fahrenheit til celsius konverter</strong>-verktøy tillater konvertering i begge retninger – fra Fahrenheit til Celsius og fra Celsius til Fahrenheit. Du kan vanligvis bytte retning med en knapp eller rullegardinmeny.</p>
+
+<h2>Konklusjon</h2>
+
+<p>En <strong>fahrenheit til celsius konverter</strong> er et uunnværlig verktøy i vår globale verden. Enten du reiser, lager mat, jobber i vitenskap eller bare ønsker å forstå værmeldinger, gjør en pålitelig konverter livet lettere. Med de praktiske eksemplene og</div>
     <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/temperatur-konvertering'"><span class="tool-card-icon">🔄</span><h3>Temperatur Konvertering</h3><p>Konverter temperatur mellom alle enheter</p></div><div class="tool-card" onclick="location='/verktoy/fahrenheit-celsius'"><span class="tool-card-icon">🔄</span><h3>Fahrenheit til Celsius</h3><p>Konverter Fahrenheit til Celsius med detaljer</p></div><div class="tool-card" onclick="location='/verktoy/km-til-miles'"><span class="tool-card-icon">🔄</span><h3>Kilometer til Miles</h3><p>Konverter km til miles med nøyaktighet</p></div><div class="tool-card" onclick="location='/verktoy/miles-til-km'"><span class="tool-card-icon">🔄</span><h3>Miles til Kilometer</h3><p>Konverter miles til km med nøyaktighet</p></div><div class="tool-card" onclick="location='/verktoy/kg-til-pund'"><span class="tool-card-icon">🔄</span><h3>Kg til Pund</h3><p>Konverter kilogram til pund med presisjon</p></div><div class="tool-card" onclick="location='/verktoy/pund-til-kg'"><span class="tool-card-icon">🔄</span><h3>Pund til Kg</h3><p>Konverter pund til kilogram med presisjon</p></div><div class="tool-card" onclick="location='/verktoy/meter-til-fot'"><span class="tool-card-icon">🔄</span><h3>Meter til Fot</h3><p>Konverter meter til fot med høy nøyaktighet</p></div><div class="tool-card" onclick="location='/verktoy/cm-til-tommer'"><span class="tool-card-icon">🔄</span><h3>Centimeter til Tommer</h3><p>Konverter cm til tommer med brøker</p></div><div class="tool-card" onclick="location='/verktoy/liter-til-gallon'"><span class="tool-card-icon">🔄</span><h3>Liter til Gallon</h3><p>Konverter liter til gallon (US og UK)</p></div><div class="tool-card" onclick="location='/verktoy/ml-til-ts'"><span class="tool-card-icon">🔄</span><h3>Milliliter til Teskje</h3><p>Konverter ml til ulike måleenheter</p></div><div class="tool-card" onclick="location='/verktoy/bytes-til-mb'"><span class="tool-card-icon">🔄</span><h3>Bytes til MB Kalkulator</h3><p>Konverter bytes, KB, MB, GB, TB</p></div><div class="tool-card" onclick="location='/verktoy/hektar-til-m2'"><span class="tool-card-icon">🔄</span><h3>Hektar til m² Kalkulator</h3><p>Konverter hektar til kvadratmeter</p></div><div class="tool-card" onclick="location='/kategori/konvertering'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle Konvertering</h3><p>Alle kalkulatorer i denne kategorien</p></div></div></div>
     <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/lan-kalkulator'"><span class="tool-card-icon">💰</span><h3>Lån Kalkulator</h3><p>Beregn månedlige låneavdrag med nedbetalingsoversikt</p></div><div class="tool-card" onclick="location='/verktoy/prosent-kalkulator'"><span class="tool-card-icon">📐</span><h3>Prosent Kalkulator</h3><p>Beregn prosent med flere metoder og sammenligninger</p></div><div class="tool-card" onclick="location='/verktoy/areal-kalkulator'"><span class="tool-card-icon">📏</span><h3>Areal Kalkulator</h3><p>Beregn areal av ulike former med enheter</p></div><div class="tool-card" onclick="location='/verktoy/alder-kalkulator'"><span class="tool-card-icon">📅</span><h3>Alder Kalkulator</h3><p>Beregn nøyaktig alder med sammenligning og statistikk</p></div><div class="tool-card" onclick="location='/verktoy/fart-kalkulator'"><span class="tool-card-icon">⚡</span><h3>Fart Kalkulator</h3><p>Beregn fart, distanse og tid med enhetskonvertering og drivstoffestimat</p></div></div></div>
   </div>
@@ -50,10 +219,10 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-grid">
-      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">449+ gratis kalkulatorer</p></div>
-      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li></ul></div>
+      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">491+ gratis kalkulatorer</p></div>
+      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li><li><a href="/kategori/krypto">₿ Krypto</a></li><li><a href="/kategori/spill">🎮 Spill</a></li></ul></div>
       <div class="footer-col"><h4>Populære</h4><ul><li><a href="/verktoy/bmi-kalkulator">BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator">Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator">Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator">Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator">Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator">pH Kalkulator</a></li><li><a href="/verktoy/molekylvekt-kalkulator">Molekylvektkalkulator</a></li><li><a href="/verktoy/halveringstid-kalkulator">Halveringstid Kalkulator</a></li><li><a href="/verktoy/befolkningsvekst-kalkulator">Befolkningsvekst Kalkulator</a></li><li><a href="/verktoy/terningkaster">Terningkaster</a></li></ul></div>
-      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/konverter-oz-til-cc">OZ til CC Konverter</a></li><li><a href="/verktoy/kcal-til-kalorier">KCAL til Kalorier Omformer</a></li><li><a href="/verktoy/crore-til-milliard">Crore til Milliard Konverterer</a></li><li><a href="/verktoy/ml-til-mg">ML til MG Konvertering</a></li><li><a href="/verktoy/kvadratmiles-til-kvadratkilometer">Kvadratmiles til Kvadratkilometer Kalkulator</a></li><li><a href="/verktoy/kubikkfot-til-kubikkmeter">Kubikkfot til Kubikkmeter Konverter</a></li><li><a href="/verktoy/centimeter-til-tommer">Centimeter til Tommer Konverter</a></li><li><a href="/verktoy/kelvin-til-fahrenheit">Kelvin til Fahrenheit Konverter</a></li></ul></div>
+      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/beste-sjakktrekk">Beste Sjakktrekk Kalkulator</a></li><li><a href="/verktoy/wotlk-talent">WOTLK Talent Kalkulator</a></li><li><a href="/verktoy/sod-talent">SOD Talent Kalkulator</a></li><li><a href="/verktoy/bdo-hest">BDO Hestekalkulator</a></li><li><a href="/verktoy/diablo3-edelsten">Diablo 3 Edelstens Kalkulator</a></li><li><a href="/verktoy/dots-kalkulator">DOTS Kalkulator</a></li><li><a href="/verktoy/chocobo-farge">Chocobo Farge Kalkulator</a></li><li><a href="/verktoy/clash-of-clans">Clash of Clans Kalkulator</a></li></ul></div>
       <div class="footer-col"><h4>Info</h4><ul><li><a href="/om-oss">Om oss</a></li><li><a href="/personvern">Personvern</a></li><li><a href="/kontakt">Kontakt</a></li></ul></div>
     </div>
     <div class="footer-bottom"><p>© 2026 Kalkulator24 — Alle kalkulatorer er gratis</p></div>

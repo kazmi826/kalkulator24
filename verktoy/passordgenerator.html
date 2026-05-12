@@ -28,17 +28,132 @@
 <nav class="navbar">
   <div class="navbar-inner">
     <a href="/" class="logo">Kalkulator24</a>
-    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li></ul>
+    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li></ul>
     <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">☰</button>
   </div>
-  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li></ul></div>
+  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li></ul></div>
 </nav>
 <div class="breadcrumb"><a href="/">Hjem</a><span class="sep">›</span><a href="/kategori/konvertering">Konvertering</a><span class="sep">›</span>Passordgenerator</div>
 <div class="tool-hero"><div class="tool-badge">🔄 Konvertering</div><h1>Passordgenerator</h1><p class="subtitle">Generer sikre passord — raskt og gratis</p></div>
 <div class="main-wrap">
   <div class="main-content">
     <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>Lengde</label><div class="input-row"><input type="number" class="calc-input" data-field="length" placeholder="12"></div></div><div class="input-group"><label>Inkluder tall</label><div class="input-row"><select class="calc-input" data-field="include_numbers"><option value="Ja">Ja</option><option value="Nei">Nei</option></select></div></div><div class="input-group"><label>Inkluder symboler</label><div class="input-row"><select class="calc-input" data-field="include_symbols"><option value="Ja">Ja</option><option value="Nei">Nei</option></select></div></div></div>    <button class="btn-calc" onclick="runCalculator('password_gen')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
-    <div class="ai-loader" id="aiWrap"><p>Last inn detaljert guide</p><button class="btn-ai" id="aiBtn">Vis guide</button><div class="loading-wrap" id="aiLoader"><div class="spinner"></div><span>Laster...</span></div></div><div class="content-card" id="aiContent" style="display:none"></div>
+    <div class="content-card">```html
+<h2>Passordgenerator: Sikker og Effektiv Passordhåndtering</h2>
+
+<p>I dagens digitale verden er sikkerhet viktigere enn noen gang. En <strong>passordgenerator</strong> er et essensielt verktøy som hjelper deg med å lage sterke og unike passord for alle dine digitale kontoer. Denne artikkelen vil gjøre deg fullstendig kjent med hvordan en <strong>passordgenerator</strong> fungerer, hvorfor du trenger en, og hvordan du bruker den optimalt.</p>
+
+<h3>Hva er en Passordgenerator?</h3>
+
+<p>En <strong>passordgenerator</strong> er et verktøy som automatisk genererer tilfeldig valgte, sterke passord for deg. I stedet for å lage passord manuelt basert på personlig informasjon eller mønstre, generer en <strong>passordgenerator</strong> komplekse kombinasjoner av bokstaver, tall og spesialtegn.</p>
+
+<p>Disse verktøyene bruker algoritmer for å sikre at hvert generert passord er helt unikt og uforutsigbart. En god <strong>passordgenerator</strong> lar deg også spesifisere kravene til ditt passord, for eksempel lengde, og hvilke tegn som skal inkluderes.</p>
+
+<h3>Hvorfor er en Passordgenerator Viktig?</h3>
+
+<p>Sikkerheten til dine digitale kontoer avhenger direkte av styrken på dine passord. Her er flere grunner til at en <strong>passordgenerator</strong> er uunnværlig:</p>
+
+<ul>
+<li><strong>Styrke:</strong> En <strong>passordgenerator</strong> lager passord som er mye vanskeligere å hacke enn passord laget av mennesker</li>
+<li><strong>Unike passord:</strong> Hver gang du bruker en <strong>passordgenerator</strong>, får du et helt unikt passord som ikke kan gjettes eller forutsies</li>
+<li><strong>Tidsbesparelse:</strong> I stedet for å bruke tid på å lage passord selv, genererer <strong>passordgenerator</strong> dem på sekunder</li>
+<li><strong>Kompleksitet:</strong> En <strong>passordgenerator</strong> sikrer at dine passord oppfyller alle sikkerhetskravene for ulike nettsteder</li>
+<li><strong>Beskyttelse mot bruteforce-angrep:</strong> Komplekse passord generert av en <strong>passordgenerator</strong> motstår datamaskinens forsøk på å gjette passord</li>
+</ul>
+
+<h3>Slik Bruker du en Passordgenerator</h3>
+
+<p>Å bruke en <strong>passordgenerator</strong> er enkelt og intuitivt. Følg disse stegene:</p>
+
+<ul>
+<li><strong>Besøk nettsiden eller åpne appen:</strong> Find en pålitelig <strong>passordgenerator</strong> online eller installer en som en browserutvidelse</li>
+<li><strong>Angi dine preferanser:</strong> Spesifiser passordlengde (minimum 12 tegn anbefales), og velg om du vil inkludere store bokstaver, små bokstaver, tall og spesialtegn</li>
+<li><strong>Generer passordet:</strong> Klikk på "Generer" eller "Generate" knappen</li>
+<li><strong>Kopier passordet:</strong> Kopier det genererte passordet og lim det inn hvor det trengs</li>
+<li><strong>Lagre trygt:</strong> Lagre passordet i en sikker passordbehandler som KeePass eller Bitwarden</li>
+</ul>
+
+<h3>Formel med Eksempel</h3>
+
+<p>For å forstå hvordan en <strong>passordgenerator</strong> fungerer, kan vi bruke en enkel formel:</p>
+
+<p><strong>Sterkt passord = Tilfeldig kombinasjon + Varierte tegn + Tilstrekkelig lengde</strong></p>
+
+<p><strong>Eksempel:</strong></p>
+
+<p>Hvis du bruker en <strong>passordgenerator</strong> med følgende innstillinger:</p>
+
+<ul>
+<li>Lengde: 16 tegn</li>
+<li>Store bokstaver: Ja (A-Z)</li>
+<li>Små bokstaver: Ja (a-z)</li>
+<li>Tall: Ja (0-9)</li>
+<li>Spesialtegn: Ja (!@#$%)</li>
+</ul>
+
+<p>En <strong>passordgenerator</strong> kan produsere: <strong>T7mK#pL9vQx$2rW5</strong></p>
+
+<p>Dette passordet er sterkt fordi det inneholder:</p>
+
+<ul>
+<li>Både store og små bokstaver</li>
+<li>Tall spredt gjennom passordet</li>
+<li>Spesialtegn som gjør det tungt å knekke</li>
+<li>Tilstrekkelig lengde (16 tegn)</li>
+<li>Ingen gjenkjenneligemønstre eller ord</li>
+</ul>
+
+<h3>Praktiske Eksempler på Bruk</h3>
+
+<p>Her er noen praktiske situasjoner hvor en <strong>passordgenerator</strong> er invaluabel:</p>
+
+<p><strong>E-postkonto:</strong> Du setter opp en ny e-postkonto hos Gmail eller Outlook. Bruk en <strong>passordgenerator</strong> til å lage et 16-tegns passord med alle tegntypene. Lagre det i din passordbehandler umiddelbart.</p>
+
+<p><strong>Bankkonto:</strong> For bankkontoer som krever ekstra sikkerhet, generer et 20-tegns passord ved hjelp av en <strong>passordgenerator</strong> som inkluderer spesialtegn og tall.</p>
+
+<p><strong>Sosiale medier:</strong> For hver sosiale mediekonto (Facebook, Instagram, Twitter), bruk en <strong>passordgenerator</strong> til å lage unike passord slik at hvis en blir kompromittert, påvirkes ikke andre kontoer.</p>
+
+<p><strong>Nettbutikker:</strong> Når du registrerer deg hos online butikker, generer sterke passord med en <strong>passordgenerator</strong> for ekstra beskyttelse av betalingsinformasjonen din.</p>
+
+<p><strong>Arbeidskontoer:</strong> Bedrifter kan bruke en <strong>passordgenerator</strong> for å sikre at alle ansatte har sterke passord for firmasystemer og applikasjoner.</p>
+
+<h3>Nyttige Tips for Passordgenerator Bruk</h3>
+
+<ul>
+<li><strong>Velg en pålitelig kilde:</strong> Bruk <strong>passordgenerator</strong> fra etablerte selskaper eller åpen kildekode-alternativer med god dokumentasjon</li>
+<li><strong>Lengde er viktig:</strong> Minst 12-16 tegn anbefales. Jo lengre, desto sikrer. Mange <strong>passordgenerator</strong> verktøy tillater passord på opptil 50+ tegn</li>
+<li><strong>Bruk alle tegntypene:</strong> Sikre at din <strong>passordgenerator</strong> setter på bestand av store bokstaver, små bokstaver, tall og spesialtegn</li>
+<li><strong>Generer unike passord for hver konto:</strong> Aldri bruk samme passord to ganger. La <strong>passordgenerator</strong> lage unikt for hver tjeneste</li>
+<li><strong>Oppgrader din passordbehandler:</strong> Kombiner en <strong>passordgenerator</strong> med en sikker passordbehandler for maksimal sikkerhet</li>
+<li><strong>Oppdater passord regelmessig:</strong> Selv om det ikke er påkrevd, kan du bruke en <strong>passordgenerator</strong> til å oppfrisken viktige passord årlig</li>
+<li><strong>Unngå mønstre:</strong> En god <strong>passordgenerator</strong> produserer helt tilfeldige passord uten gjenkjennelige mønstre</li>
+</ul>
+
+<h2>Vanlige Spørsmål om Passordgenerator</h2>
+
+<h3>1. Er det trygt å bruke en online passordgenerator?</h3>
+
+<p>Ja, det er generelt trygt å bruke en online <strong>passordgenerator</strong> fra pålitelige kilder. For maksimal sikkerhet, velg verktøy som bruker HTTPS-kryptering og ikke lagrer dine passord. Alterna tivt, download en offline <strong>passordgenerator</strong> som en browserutvidelse som fungerer uten internettforbindelse.</p>
+
+<h3>2. Hvor lang bør et passord være?</h3>
+
+<p>En <strong>passordgenerator</strong> bør lage passord på minst 12 tegn. Likevel anbefaler sikkerhet eksperter 16 tegn eller mer for maksimal sikkerhet. Noen kritiske kontoer som bank eller e-post burde ha enda lengre passord generert av din <strong>passordgenerator</strong>.</p>
+
+<h3>3. Kan jeg gjenbruke passord generert fra en passordgenerator?</h3>
+
+<p>Nei, aldri gjenbruk passord. Hvert passord fra en <strong>passordgenerator</strong> bør være unikt for hver konto. Hvis en tjeneste blir hacket, kompromitteres kun den ene kontoen, ikke alle dine kontoer.</p>
+
+<h3>4. Hva gjør jeg hvis jeg glemmer et passord fra passordgenerator?</h3>
+
+<p>Dette er hvorfor en passordbehandler er essensielt. Når du bruker en <strong>passordgenerator</strong> sammen med en passordbehandler som Bitwarden eller 1Password, lagres alle dine genererte passord trygt og enkryptert. Du trenger bare å huske en hovedpassord.</p>
+
+<h3>5. Kan en passordgenerator forhindre hackerangrep?</h3>
+
+<p>En <strong>passordgenerator</strong> reduserer risikoen betydelig ved å lage passord som er nesten umulig å gjette eller knekke med bruteforce-metoder. Imidlertid er det bare en del av sikkerhetsstrategi. Kombiner <strong>passordgenerator</strong> med tofaktorgodkjenning (2FA) og en passordbehandler for optimalt vern.</p>
+
+<h2>Konklusjon</h2>
+
+<p>En <strong>passordgenerator</strong> er et kritisk verktøy i ditt personlige sikkerhetssystem. Ved å bruke en <strong>passordgenerator</strong> regelmessig, sikrer du at alle dine digitale kontoer er beskyttet med sterke, un</div>
     <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/temperatur-konvertering'"><span class="tool-card-icon">🔄</span><h3>Temperatur Konvertering</h3><p>Konverter temperatur mellom alle enheter</p></div><div class="tool-card" onclick="location='/verktoy/fahrenheit-celsius'"><span class="tool-card-icon">🔄</span><h3>Fahrenheit til Celsius</h3><p>Konverter Fahrenheit til Celsius med detaljer</p></div><div class="tool-card" onclick="location='/verktoy/km-til-miles'"><span class="tool-card-icon">🔄</span><h3>Kilometer til Miles</h3><p>Konverter km til miles med nøyaktighet</p></div><div class="tool-card" onclick="location='/verktoy/miles-til-km'"><span class="tool-card-icon">🔄</span><h3>Miles til Kilometer</h3><p>Konverter miles til km med nøyaktighet</p></div><div class="tool-card" onclick="location='/verktoy/kg-til-pund'"><span class="tool-card-icon">🔄</span><h3>Kg til Pund</h3><p>Konverter kilogram til pund med presisjon</p></div><div class="tool-card" onclick="location='/verktoy/pund-til-kg'"><span class="tool-card-icon">🔄</span><h3>Pund til Kg</h3><p>Konverter pund til kilogram med presisjon</p></div><div class="tool-card" onclick="location='/verktoy/meter-til-fot'"><span class="tool-card-icon">🔄</span><h3>Meter til Fot</h3><p>Konverter meter til fot med høy nøyaktighet</p></div><div class="tool-card" onclick="location='/verktoy/cm-til-tommer'"><span class="tool-card-icon">🔄</span><h3>Centimeter til Tommer</h3><p>Konverter cm til tommer med brøker</p></div><div class="tool-card" onclick="location='/verktoy/liter-til-gallon'"><span class="tool-card-icon">🔄</span><h3>Liter til Gallon</h3><p>Konverter liter til gallon (US og UK)</p></div><div class="tool-card" onclick="location='/verktoy/ml-til-ts'"><span class="tool-card-icon">🔄</span><h3>Milliliter til Teskje</h3><p>Konverter ml til ulike måleenheter</p></div><div class="tool-card" onclick="location='/verktoy/bytes-til-mb'"><span class="tool-card-icon">🔄</span><h3>Bytes til MB Kalkulator</h3><p>Konverter bytes, KB, MB, GB, TB</p></div><div class="tool-card" onclick="location='/verktoy/hektar-til-m2'"><span class="tool-card-icon">🔄</span><h3>Hektar til m² Kalkulator</h3><p>Konverter hektar til kvadratmeter</p></div><div class="tool-card" onclick="location='/kategori/konvertering'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle Konvertering</h3><p>Alle kalkulatorer i denne kategorien</p></div></div></div>
     <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/lan-kalkulator'"><span class="tool-card-icon">💰</span><h3>Lån Kalkulator</h3><p>Beregn månedlige låneavdrag med nedbetalingsoversikt</p></div><div class="tool-card" onclick="location='/verktoy/prosent-kalkulator'"><span class="tool-card-icon">📐</span><h3>Prosent Kalkulator</h3><p>Beregn prosent med flere metoder og sammenligninger</p></div><div class="tool-card" onclick="location='/verktoy/areal-kalkulator'"><span class="tool-card-icon">📏</span><h3>Areal Kalkulator</h3><p>Beregn areal av ulike former med enheter</p></div><div class="tool-card" onclick="location='/verktoy/alder-kalkulator'"><span class="tool-card-icon">📅</span><h3>Alder Kalkulator</h3><p>Beregn nøyaktig alder med sammenligning og statistikk</p></div><div class="tool-card" onclick="location='/verktoy/fart-kalkulator'"><span class="tool-card-icon">⚡</span><h3>Fart Kalkulator</h3><p>Beregn fart, distanse og tid med enhetskonvertering og drivstoffestimat</p></div></div></div>
   </div>
@@ -50,10 +165,10 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-grid">
-      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">449+ gratis kalkulatorer</p></div>
-      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li></ul></div>
+      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">491+ gratis kalkulatorer</p></div>
+      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li><li><a href="/kategori/krypto">₿ Krypto</a></li><li><a href="/kategori/spill">🎮 Spill</a></li></ul></div>
       <div class="footer-col"><h4>Populære</h4><ul><li><a href="/verktoy/bmi-kalkulator">BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator">Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator">Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator">Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator">Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator">pH Kalkulator</a></li><li><a href="/verktoy/molekylvekt-kalkulator">Molekylvektkalkulator</a></li><li><a href="/verktoy/halveringstid-kalkulator">Halveringstid Kalkulator</a></li><li><a href="/verktoy/befolkningsvekst-kalkulator">Befolkningsvekst Kalkulator</a></li><li><a href="/verktoy/terningkaster">Terningkaster</a></li></ul></div>
-      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/konverter-oz-til-cc">OZ til CC Konverter</a></li><li><a href="/verktoy/kcal-til-kalorier">KCAL til Kalorier Omformer</a></li><li><a href="/verktoy/crore-til-milliard">Crore til Milliard Konverterer</a></li><li><a href="/verktoy/ml-til-mg">ML til MG Konvertering</a></li><li><a href="/verktoy/kvadratmiles-til-kvadratkilometer">Kvadratmiles til Kvadratkilometer Kalkulator</a></li><li><a href="/verktoy/kubikkfot-til-kubikkmeter">Kubikkfot til Kubikkmeter Konverter</a></li><li><a href="/verktoy/centimeter-til-tommer">Centimeter til Tommer Konverter</a></li><li><a href="/verktoy/kelvin-til-fahrenheit">Kelvin til Fahrenheit Konverter</a></li></ul></div>
+      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/beste-sjakktrekk">Beste Sjakktrekk Kalkulator</a></li><li><a href="/verktoy/wotlk-talent">WOTLK Talent Kalkulator</a></li><li><a href="/verktoy/sod-talent">SOD Talent Kalkulator</a></li><li><a href="/verktoy/bdo-hest">BDO Hestekalkulator</a></li><li><a href="/verktoy/diablo3-edelsten">Diablo 3 Edelstens Kalkulator</a></li><li><a href="/verktoy/dots-kalkulator">DOTS Kalkulator</a></li><li><a href="/verktoy/chocobo-farge">Chocobo Farge Kalkulator</a></li><li><a href="/verktoy/clash-of-clans">Clash of Clans Kalkulator</a></li></ul></div>
       <div class="footer-col"><h4>Info</h4><ul><li><a href="/om-oss">Om oss</a></li><li><a href="/personvern">Personvern</a></li><li><a href="/kontakt">Kontakt</a></li></ul></div>
     </div>
     <div class="footer-bottom"><p>© 2026 Kalkulator24 — Alle kalkulatorer er gratis</p></div>

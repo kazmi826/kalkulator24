@@ -28,17 +28,151 @@
 <nav class="navbar">
   <div class="navbar-inner">
     <a href="/" class="logo">Kalkulator24</a>
-    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li></ul>
+    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li></ul>
     <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">☰</button>
   </div>
-  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li></ul></div>
+  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li></ul></div>
 </nav>
 <div class="breadcrumb"><a href="/">Hjem</a><span class="sep">›</span><a href="/kategori/konvertering">Konvertering</a><span class="sep">›</span>ML til Gallon Konvertering</div>
 <div class="tool-hero"><div class="tool-badge">🔄 Konvertering</div><h1>ML til Gallon Konvertering</h1><p class="subtitle">Konverter milliliter til gallon — raskt og gratis</p></div>
 <div class="main-wrap">
   <div class="main-content">
     <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>Milliliter</label><div class="input-row"><input type="number" class="calc-input" data-field="ml" placeholder="3785"></div></div></div>    <button class="btn-calc" onclick="runCalculator('ml_to_gallon')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
-    <div class="ai-loader" id="aiWrap"><p>Last inn detaljert guide</p><button class="btn-ai" id="aiBtn">Vis guide</button><div class="loading-wrap" id="aiLoader"><div class="spinner"></div><span>Laster...</span></div></div><div class="content-card" id="aiContent" style="display:none"></div>
+    <div class="content-card">```html
+<h2>ML til Gallon Konvertering - Komplett Guide</h2>
+
+<p>Når du arbeider med væsker i dagliglivet eller profesjonelt, vil du før eller senere møte behovet for <strong>ml til gallon konvertering</strong>. Enten du lager oppskrifter, arbeider med kjemikalier, eller handler online, er det viktig å forstå hvordan du konverterer mellom disse måleenhetene. Denne guiden vil hjelpe deg med alt du trenger å vite om <strong>ml til gallon konvertering</strong>.</p>
+
+<h2>Hva er ML til Gallon Konvertering?</h2>
+
+<p><strong>ML til gallon konvertering</strong> er prosessen med å omgjøre volummål fra milliliter (ml) til gallons. Milliliter er en metriskenhet som ofte brukes i Europa, Asia og andre deler av verden, mens gallons er mer vanlig i USA, Storbritannia og andre engelskspråklige land.</p>
+
+<p>Det finnes imidlertid to typer gallons som er viktig å være klar over:</p>
+
+<ul>
+<li><strong>US Gallon</strong> - brukt i USA og inneholder 3,785 liter</li>
+<li><strong>Imperial Gallon</strong> - brukt i Storbritannia og inneholder 4,546 liter</li>
+</ul>
+
+<p>Når du utfører <strong>ml til gallon konvertering</strong>, må du være sikker på hvilken type gallon du arbeider med for å få nøyaktige resultater.</p>
+
+<h2>Hvorfor er ML til Gallon Konvertering Viktig?</h2>
+
+<p>Det er flere grunner til at <strong>ml til gallon konvertering</strong> er en viktig ferdighet å ha:</p>
+
+<ul>
+<li><strong>Internasjonale handler:</strong> Når du kjøper produkter fra andre land, kan måleenheter variere betydelig</li>
+<li><strong>Matlagning og baking:</strong> Mange oppskrifter fra engelskspråklige kilder bruker gallons, mens norske oppskrifter bruker liter eller milliliter</li>
+<li><strong>Kjemiske beregninger:</strong> I vitenskapelige forsøk og industrielle applikasjoner er nøyaktig konvertering kritisk</li>
+<li><strong>Tanking av væsker:</strong> Hvis du fyller bensin, vann eller andre væsker, er det nyttig å vite volumet i begge enheter</li>
+<li><strong>Medisinering:</strong> Dosering av væsker krever ofte nøyaktig konvertering mellom enhetene</li>
+</ul>
+
+<p><strong>ML til gallon konvertering</strong> sikrer at du aldri gjør feil som kan være kostbare eller farlige.</p>
+
+<h2>Slik Bruker Du ML til Gallon Konvertering</h2>
+
+<p>Å utføre <strong>ml til gallon konvertering</strong> er relativt enkelt når du først forstår konverteringsfaktoren. Her er trinn for trinn hvordan du gjør det:</p>
+
+<h3>Steg 1: Bestem hvilken type gallon</h3>
+
+<p>Først må du avgjøre om du arbeider med US gallons eller imperial gallons. De fleste konverteringer i Norge og på internett refererer til US gallons.</p>
+
+<h3>Steg 2: Bruk konverteringsfaktoren</h3>
+
+<p>For US gallons: 1 gallon = 3785,41 ml</p>
+
+<p>For imperial gallons: 1 gallon = 4546,09 ml</p>
+
+<h3>Steg 3: Matematikken</h3>
+
+<p>Når du konverterer fra ml til gallon, deler du antall milliliter på konverteringsfaktoren. Dette gir deg antall gallons.</p>
+
+<h3>Steg 4: Avrunding</h3>
+
+<p>Avhengig av hvor nøyaktig du må være, kan du runde resultatet til ønsket antall desimaler.</p>
+
+<h2>Formel med Praktisk Eksempel</h2>
+
+<p>Her er formelen for <strong>ml til gallon konvertering</strong>:</p>
+
+<p><strong>Antall gallons = Antall ml ÷ 3785,41 (for US gallons)</strong></p>
+
+<p>La oss ta et praktisk eksempel for å illustrere <strong>ml til gallon konvertering</strong>:</p>
+
+<p><strong>Eksempel:</strong> Du har en beholder med 1895 ml væske. Hvor mange US gallons er dette?</p>
+
+<p>Beregning: 1895 ÷ 3785,41 = 0,5 gallons</p>
+
+<p>Svar: 1895 ml tilsvarer 0,5 gallons (eller en halv gallon)</p>
+
+<p>La oss ta et større eksempel:</p>
+
+<p><strong>Eksempel 2:</strong> Du fyller en tank med 7570 ml. Hvor mange gallons?</p>
+
+<p>Beregning: 7570 ÷ 3785,41 = 2 gallons</p>
+
+<p>Svar: 7570 ml tilsvarer 2 gallons</p>
+
+<p>Disse eksemplene viser hvor enkel <strong>ml til gallon konvertering</strong> kan være når du først forstår formelen.</p>
+
+<h2>Praktiske Eksempler fra Hverdagen</h2>
+
+<p>Her er noen praktiske situasjoner hvor du trenger <strong>ml til gallon konvertering</strong>:</p>
+
+<h3>Eksempel 1: Laging av drikke</h3>
+
+<p>Du finner en oppskrift på hjemmebrygging av øl som krever 5 US gallons vann. Du har en målebeholder i ml. Du må konvertere 5 × 3785,41 = 18.927 ml vann.</p>
+
+<h3>Eksempel 2: Kjøp av krem eller løsning</h3>
+
+<p>Du kjøper en flaske hårprodukt fra USA som inneholder 16,9 fl oz, som tilsvarer cirka 500 ml. For å forstå hvor mye dette er i gallons, bruker du <strong>ml til gallon konvertering</strong> og finner at det er omtrent 0,13 gallons.</p>
+
+<h3>Eksempel 3: Hagearbeid og vanning</h3>
+
+<p>En italiensk oppskrift sier at du trenger 2 gallons vann til plantene dine. Ved hjelp av <strong>ml til gallon konvertering</strong> konverterer du dette til 7570 ml for å fylle vanningskannene dine korrekt.</p>
+
+<h3>Eksempel 4: Bilvedlikehold</h3>
+
+<p>Din bilprodusent spesifiserer at du trenger 4,5 liter motorolje. Du vil vite hvor mange gallons dette er. Konvertering av 4500 ml til gallons gir deg cirka 1,19 gallons.</p>
+
+<h2>Tips for Enkel ML til Gallon Konvertering</h2>
+
+<ul>
+<li><strong>Bruk en kalkulator:</strong> For å unngå matematiske feil, bruk alltid en kalkulator når du gjør <strong>ml til gallon konvertering</strong></li>
+<li><strong>Husk konverteringsfaktoren:</strong> Lagre 3785,41 (for US gallons) i minnet eller skriv det ned for rask referanse</li>
+<li><strong>Dobbeltsjekk enheten:</strong> Før du gjør <strong>ml til gallon konvertering</strong>, bekreft at du bruker riktig gallon-type</li>
+<li><strong>Bruk online verktøy:</strong> Hvis du er usikker, kan online konverterings-kalkulatorer hjelpe med øyeblikkelig <strong>ml til gallon konvertering</strong></li>
+<li><strong>Skriv ned tall:</strong> Når du arbeider med større mengder, skriv ned mellomresultatene dine</li>
+<li><strong>Avrund fornuftig:</strong> I de fleste praktiske situasjoner, rund til 2-3 desimaler for enkel <strong>ml til gallon konvertering</strong></li>
+<li><strong>Husk liter som middelvei:</strong> 1 liter = 1000 ml og 1 gallon ≈ 3,785 liter, noe som kan gjøre mental matematikk enklere</li>
+</ul>
+
+<h2>Ofte Stilte Spørsmål om ML til Gallon Konvertering</h2>
+
+<h3>1. Hva er forskjellen mellom US gallon og imperial gallon?</h3>
+
+<p>US gallon inneholder 3785,41 ml, mens imperial gallon (britisk) inneholder 4546,09 ml. Imperial gallons er større og brukes primært i Storbritannia og noen Commonwealth-land. Når du gjør <strong>ml til gallon konvertering</strong>, er det kritisk å bruke riktig faktor.</p>
+
+<h3>2. Kan jeg avrunde konverteringsfaktoren?</h3>
+
+<p>Ja, for de fleste praktiske formål kan du bruke den forenklede faktoren 3,785 i stedet for 3785,41 ml. Dette gjør <strong>ml til gallon konvertering</strong> raskere, men mindre nøyaktig. For vitenskapelig arbeid, bruk alltid den eksakte faktoren.</p>
+
+<h3>3. Hvor nøyaktig trenger min konvertering å være?</h3>
+
+<p>Det avhenger av anvendelsen. For matlagning kan en avrunding være akseptabel, mens for medisinering eller kjemisk arbeid må <strong>ml til gallon konvertering</strong> være meget nøyaktig. Vurder konteksten før du bestemmer presisjonsnivået.</p>
+
+<h3>4. Finnes det en mnemonic for å huske konverteringen?</h3>
+
+<p>En nyttig måte å huske det på er at 1 gallon ≈ 4 liter (litt mindre). Siden 1 liter = 1000 ml, er 1 gallon ≈ 4000 ml. Dette er ikke helt nøyaktig for <strong>ml til gallon konvertering</strong>, men det fungerer som en rask mental sjekk.</p>
+
+<h3>5. Hva hvis jeg må konvertere fra gallon til ml?</h3>
+
+<p>Du gjør det motsatte: multipliser antall gallons med 3785,41 (for US gallons). Hvis <strong>ml til gallon konvertering</strong> deler, gjør gallon til ml multiplikasjon. For eksempel: 2 gallons × 3785,41 = 7570,82 ml.</p>
+
+<h2>Konklusjon</h2>
+
+<p><strong>ML til gallon konvertering</strong> er en essentiell ferdighet i vår globaliserte verden. Enten du arbeider med matlagning, vitenskap, industri eller bare</div>
     <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/temperatur-konvertering'"><span class="tool-card-icon">🔄</span><h3>Temperatur Konvertering</h3><p>Konverter temperatur mellom alle enheter</p></div><div class="tool-card" onclick="location='/verktoy/fahrenheit-celsius'"><span class="tool-card-icon">🔄</span><h3>Fahrenheit til Celsius</h3><p>Konverter Fahrenheit til Celsius med detaljer</p></div><div class="tool-card" onclick="location='/verktoy/km-til-miles'"><span class="tool-card-icon">🔄</span><h3>Kilometer til Miles</h3><p>Konverter km til miles med nøyaktighet</p></div><div class="tool-card" onclick="location='/verktoy/miles-til-km'"><span class="tool-card-icon">🔄</span><h3>Miles til Kilometer</h3><p>Konverter miles til km med nøyaktighet</p></div><div class="tool-card" onclick="location='/verktoy/kg-til-pund'"><span class="tool-card-icon">🔄</span><h3>Kg til Pund</h3><p>Konverter kilogram til pund med presisjon</p></div><div class="tool-card" onclick="location='/verktoy/pund-til-kg'"><span class="tool-card-icon">🔄</span><h3>Pund til Kg</h3><p>Konverter pund til kilogram med presisjon</p></div><div class="tool-card" onclick="location='/verktoy/meter-til-fot'"><span class="tool-card-icon">🔄</span><h3>Meter til Fot</h3><p>Konverter meter til fot med høy nøyaktighet</p></div><div class="tool-card" onclick="location='/verktoy/cm-til-tommer'"><span class="tool-card-icon">🔄</span><h3>Centimeter til Tommer</h3><p>Konverter cm til tommer med brøker</p></div><div class="tool-card" onclick="location='/verktoy/liter-til-gallon'"><span class="tool-card-icon">🔄</span><h3>Liter til Gallon</h3><p>Konverter liter til gallon (US og UK)</p></div><div class="tool-card" onclick="location='/verktoy/ml-til-ts'"><span class="tool-card-icon">🔄</span><h3>Milliliter til Teskje</h3><p>Konverter ml til ulike måleenheter</p></div><div class="tool-card" onclick="location='/verktoy/bytes-til-mb'"><span class="tool-card-icon">🔄</span><h3>Bytes til MB Kalkulator</h3><p>Konverter bytes, KB, MB, GB, TB</p></div><div class="tool-card" onclick="location='/verktoy/hektar-til-m2'"><span class="tool-card-icon">🔄</span><h3>Hektar til m² Kalkulator</h3><p>Konverter hektar til kvadratmeter</p></div><div class="tool-card" onclick="location='/kategori/konvertering'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle Konvertering</h3><p>Alle kalkulatorer i denne kategorien</p></div></div></div>
     <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/lan-kalkulator'"><span class="tool-card-icon">💰</span><h3>Lån Kalkulator</h3><p>Beregn månedlige låneavdrag med nedbetalingsoversikt</p></div><div class="tool-card" onclick="location='/verktoy/prosent-kalkulator'"><span class="tool-card-icon">📐</span><h3>Prosent Kalkulator</h3><p>Beregn prosent med flere metoder og sammenligninger</p></div><div class="tool-card" onclick="location='/verktoy/areal-kalkulator'"><span class="tool-card-icon">📏</span><h3>Areal Kalkulator</h3><p>Beregn areal av ulike former med enheter</p></div><div class="tool-card" onclick="location='/verktoy/alder-kalkulator'"><span class="tool-card-icon">📅</span><h3>Alder Kalkulator</h3><p>Beregn nøyaktig alder med sammenligning og statistikk</p></div><div class="tool-card" onclick="location='/verktoy/fart-kalkulator'"><span class="tool-card-icon">⚡</span><h3>Fart Kalkulator</h3><p>Beregn fart, distanse og tid med enhetskonvertering og drivstoffestimat</p></div></div></div>
   </div>
@@ -50,10 +184,10 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-grid">
-      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">449+ gratis kalkulatorer</p></div>
-      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li></ul></div>
+      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">491+ gratis kalkulatorer</p></div>
+      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li><li><a href="/kategori/krypto">₿ Krypto</a></li><li><a href="/kategori/spill">🎮 Spill</a></li></ul></div>
       <div class="footer-col"><h4>Populære</h4><ul><li><a href="/verktoy/bmi-kalkulator">BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator">Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator">Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator">Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator">Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator">pH Kalkulator</a></li><li><a href="/verktoy/molekylvekt-kalkulator">Molekylvektkalkulator</a></li><li><a href="/verktoy/halveringstid-kalkulator">Halveringstid Kalkulator</a></li><li><a href="/verktoy/befolkningsvekst-kalkulator">Befolkningsvekst Kalkulator</a></li><li><a href="/verktoy/terningkaster">Terningkaster</a></li></ul></div>
-      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/konverter-oz-til-cc">OZ til CC Konverter</a></li><li><a href="/verktoy/kcal-til-kalorier">KCAL til Kalorier Omformer</a></li><li><a href="/verktoy/crore-til-milliard">Crore til Milliard Konverterer</a></li><li><a href="/verktoy/ml-til-mg">ML til MG Konvertering</a></li><li><a href="/verktoy/kvadratmiles-til-kvadratkilometer">Kvadratmiles til Kvadratkilometer Kalkulator</a></li><li><a href="/verktoy/kubikkfot-til-kubikkmeter">Kubikkfot til Kubikkmeter Konverter</a></li><li><a href="/verktoy/centimeter-til-tommer">Centimeter til Tommer Konverter</a></li><li><a href="/verktoy/kelvin-til-fahrenheit">Kelvin til Fahrenheit Konverter</a></li></ul></div>
+      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/beste-sjakktrekk">Beste Sjakktrekk Kalkulator</a></li><li><a href="/verktoy/wotlk-talent">WOTLK Talent Kalkulator</a></li><li><a href="/verktoy/sod-talent">SOD Talent Kalkulator</a></li><li><a href="/verktoy/bdo-hest">BDO Hestekalkulator</a></li><li><a href="/verktoy/diablo3-edelsten">Diablo 3 Edelstens Kalkulator</a></li><li><a href="/verktoy/dots-kalkulator">DOTS Kalkulator</a></li><li><a href="/verktoy/chocobo-farge">Chocobo Farge Kalkulator</a></li><li><a href="/verktoy/clash-of-clans">Clash of Clans Kalkulator</a></li></ul></div>
       <div class="footer-col"><h4>Info</h4><ul><li><a href="/om-oss">Om oss</a></li><li><a href="/personvern">Personvern</a></li><li><a href="/kontakt">Kontakt</a></li></ul></div>
     </div>
     <div class="footer-bottom"><p>© 2026 Kalkulator24 — Alle kalkulatorer er gratis</p></div>

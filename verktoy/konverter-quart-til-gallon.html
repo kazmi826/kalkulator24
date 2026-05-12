@@ -28,17 +28,155 @@
 <nav class="navbar">
   <div class="navbar-inner">
     <a href="/" class="logo">Kalkulator24</a>
-    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li></ul>
+    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li></ul>
     <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">☰</button>
   </div>
-  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li></ul></div>
+  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li></ul></div>
 </nav>
 <div class="breadcrumb"><a href="/">Hjem</a><span class="sep">›</span><a href="/kategori/konvertering">Konvertering</a><span class="sep">›</span>Quart til Gallon Konverter</div>
 <div class="tool-hero"><div class="tool-badge">🔄 Konvertering</div><h1>Quart til Gallon Konverter</h1><p class="subtitle">Konverter quart til gallon — raskt og gratis</p></div>
 <div class="main-wrap">
   <div class="main-content">
     <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>Quart</label><div class="input-row"><input type="number" class="calc-input" data-field="quart" placeholder="4"></div></div></div>    <button class="btn-calc" onclick="runCalculator('quart_to_gallon')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
-    <div class="ai-loader" id="aiWrap"><p>Last inn detaljert guide</p><button class="btn-ai" id="aiBtn">Vis guide</button><div class="loading-wrap" id="aiLoader"><div class="spinner"></div><span>Laster...</span></div></div><div class="content-card" id="aiContent" style="display:none"></div>
+    <div class="content-card">```html
+<h2>Quart til Gallon Konverter: Komplett Guide</h2>
+
+<p>En <strong>quart til gallon konverter</strong> er et praktisk verktøy som hjelper deg å konvertere volumenheter raskt og enkelt. Enten du jobber i kjøkkenet, på laboratoriet eller i industrien, er det viktig å forstå hvordan du konverterer mellom disse enhetene. I denne artikkelen vil vi gå gjennom alt du trenger å vite om <strong>quart til gallon konverter</strong> og hvordan du bruker det effektivt.</p>
+
+<h2>Hva er en Quart til Gallon Konverter?</h2>
+
+<p>En <strong>quart til gallon konverter</strong> er et digitalt eller matematisk verktøy som gjør det mulig å omgjøre volummål fra quarts til gallons. Quarts og gallons er volumenheter som primært brukes i USA, og det kan være forvirrende å konvertere mellom dem hvis du ikke er kjent med forholdet mellom enhetene.</p>
+
+<p>Quart (forkortet qt) er en mindre enhet, mens gallon (forkortet gal) er en større enhet. En gallon tilsvarer nøyaktig fire quarts. Dette betyr at konvertering er relativt enkel når du vet formelen.</p>
+
+<p>Det finnes flere typer <strong>quart til gallon konverter</strong> tilgjengelig:</p>
+
+<ul>
+<li>Online konvertere på websider</li>
+<li>Mobilapplikasjoner for smarttelefoner</li>
+<li>Kalkulatorer med innebygde konverteringsfunksjoner</li>
+<li>Manuelle beregninger ved hjelp av formelen</li>
+</ul>
+
+<h2>Hvorfor er Quart til Gallon Konvertering Viktig?</h2>
+
+<p>Det er flere grunner til at en <strong>quart til gallon konverter</strong> er viktig å forstå og bruke:</p>
+
+<h3>Matlagning og Baking</h3>
+
+<p>I kjøkkenet er presise måleenheter essensielle. Mange oppskrifter bruker enten quarts eller gallons, og du må kunne konvertere raskt for å sikre at ingrediensene blir riktig dosert. En <strong>quart til gallon konverter</strong> gjør det enkelt å tilpasse oppskrifter for større eller mindre portsjoner.</p>
+
+<h3>Industri og Produksjon</h3>
+
+<p>I industrielle innstillinger er nøyaktig volumkonvertering avgjørende. Enten det gjelder væsker, kjemikalier eller andre stoffer, kan feil konvertering føre til kostbare feil. En pålitelig <strong>quart til gallon konverter</strong> sikrer presisjon.</p>
+
+<h3>Internasjonale Handeler</h3>
+
+<p>Hvis du handler eller arbeider med leverandører fra USA, må du forstå deres volumenheter. En <strong>quart til gallon konverter</strong> hjelper deg å kommunisere effektivt og unngå misforståelser.</p>
+
+<h3>Utdanning</h3>
+
+<p>Studenter som lærer om volummål, må forstå konverteringer. En <strong>quart til gallon konverter</strong> er et verdifullt læringsverktøy som gjør matematikken enklere.</p>
+
+<h2>Slik Bruker Du en Quart til Gallon Konverter</h2>
+
+<h3>Steg-for-Steg Guide</h3>
+
+<p>Å bruke en <strong>quart til gallon konverter</strong> er enkelt. Her er hvordan du gjør det:</p>
+
+<ul>
+<li><strong>Trinn 1:</strong> Åpne konverteren (online eller app)</li>
+<li><strong>Trinn 2:</strong> Skriv inn antallet quarts du vil konvertere</li>
+<li><strong>Trinn 3:</strong> Velg "quarts til gallons" som konverteringsretning</li>
+<li><strong>Trinn 4:</strong> Klikk på "Konverter" eller "Beregn"</li>
+<li><strong>Trinn 5:</strong> Les resultatet i gallons</li>
+</ul>
+
+<p>De fleste online <strong>quart til gallon konverter</strong> verktøy viser resultatet øyeblikkelig uten at du trenger å klikke noen knapp. Du kan også konvertere fra gallons til quarts ved å bruke samme verktøy.</p>
+
+<h2>Konverteringsformel og Eksempler</h2>
+
+<h3>Matematisk Formel</h3>
+
+<p>Formelen for å konvertere quarts til gallons er enkel:</p>
+
+<p><strong>Gallons = Quarts ÷ 4</strong></p>
+
+<p>Eller omvendt:</p>
+
+<p><strong>Quarts = Gallons × 4</strong></p>
+
+<h3>Praktiske Eksempler</h3>
+
+<p><strong>Eksempel 1:</strong> Du har 8 quarts melk. Hvor mange gallons er det?</p>
+
+<p>Beregning: 8 ÷ 4 = 2 gallons</p>
+
+<p>Svar: 8 quarts tilsvarer 2 gallons.</p>
+
+<p><strong>Eksempel 2:</strong> En oppskrift krever 3 gallons vann. Hvor mange quarts er det?</p>
+
+<p>Beregning: 3 × 4 = 12 quarts</p>
+
+<p>Svar: 3 gallons tilsvarer 12 quarts.</p>
+
+<p><strong>Eksempel 3:</strong> Du vil konvertere 10 quarts til gallons.</p>
+
+<p>Beregning: 10 ÷ 4 = 2,5 gallons</p>
+
+<p>Svar: 10 quarts tilsvarer 2,5 gallons (eller 2 gallons og 2 quarts).</p>
+
+<h2>Praktiske Eksempler fra Hverdagen</h2>
+
+<h3>Eksempel fra Kjøkkenet</h3>
+
+<p>Anta at du baker en stor kake og trenger 2 gallons melk. Du vet at melk ofte selges i quarts. Ved hjelp av <strong>quart til gallon konverter</strong> eller formelen, kan du raskt beregne at du trenger 8 quarts melk (2 gallons × 4 = 8 quarts).</p>
+
+<h3>Eksempel fra Hagen</h3>
+
+<p>Du har en hageslange og ønsker å fylle en tank som holder 20 quarts vann. For å vite hvor mange gallons dette er, bruker du <strong>quart til gallon konverter</strong>: 20 ÷ 4 = 5 gallons.</p>
+
+<h3>Eksempel fra Bilvedlikehold</h3>
+
+<p>Bilens oljetank trenger 1 gallon olje. For å vite hvor mange quarts dette er, beregner du: 1 × 4 = 4 quarts. Du kjøper derfor en flaske på 4 quarts olje.</p>
+
+<h2>Nyttige Tips for Konvertering</h2>
+
+<ul>
+<li><strong>Husk grundtallet:</strong> 1 gallon = 4 quarts. Dette er det viktigste du trenger å huske.</li>
+<li><strong>Bruk online verktøy:</strong> En <strong>quart til gallon konverter</strong> online er ofte raskere og mer nøyaktig enn manuelle beregninger.</li>
+<li><strong>Dobbeltsjekk resultatene:</strong> Spesielt i viktige situasjoner, er det lurt å verifisere konverteringen.</li>
+<li><strong>Lær formelen:</strong> Hvis du regelmessig må konvertere, er det verdt å huske formelen utenatt.</li>
+<li><strong>Bruk kalkulator:</strong> For større tall, bruk en kalkulator for å unngå regnefeil.</li>
+<li><strong>Vær oppmerksom på desimaler:</strong> Ikke alle konverteringer resulterer i hele tall. 5 quarts er 1,25 gallons.</li>
+<li><strong>Skriv ned resultater:</strong> Når du bruker en <strong>quart til gallon konverter</strong>, skriv ned resultatene for fremtidig referanse.</li>
+</ul>
+
+<h2>Ofte Stilte Spørsmål (FAQ)</h2>
+
+<h3>Spørsmål 1: Hva er forskjellen mellom amerikanske og britiske gallons?</h3>
+
+<p>Det er en viktig forskjell! En amerikansk gallon tilsvarer ca. 3,785 liter, mens en britisk (eller imperial) gallon tilsvarer ca. 4,546 liter. En <strong>quart til gallon konverter</strong> designet for amerikanske målinger vil ikke fungere nøyaktig for britiske målinger. Sørg alltid for at du bruker riktig konverter basert på hvilket land du er i.</p>
+
+<h3>Spørsmål 2: Kan jeg konvertere quarts til liter?</h3>
+
+<p>Ja, det kan du. Én amerikansk quart tilsvarer omtrent 0,946 liter. Mange moderne <strong>quart til gallon konverter</strong> verktøy har også en funksjon for å konvertere til metriske enheter som liter.</p>
+
+<h3>Spørsmål 3: Hva er en pint, og hvordan passer den inn?</h3>
+
+<p>En pint er en mindre enhet. I USA tilsvarer 1 quart 2 pints. Så hvis du arbeider med pints og gallons, kan du først konvertere pints til quarts, deretter bruke <strong>quart til gallon konverter</strong> for å få gallons.</p>
+
+<h3>Spørsmål 4: Finnes det gratis online quart til gallon konvertere?</h3>
+
+<p>Ja, absolutt! Det finnes mange gratis <strong>quart til gallon konverter</strong> verktøy online. Du kan søke på Google etter "quart til gallon konverter" og du vil finne flere pålitelige alternativer. Mange er også tilgjengelige som gratis mobilapplikasjoner.</p>
+
+<h3>Spørsmål 5: Hvorfor er det viktig å få konvertering riktig?</h3>
+
+<p>Feil konvertering kan ha alvorlige konsekvenser. I matlagning kan det påvirke smaken og konsistensen. I industrien kan det føre til produktfeil eller sikkerhetsproblemer. En nøyaktig <strong>quart til gallon konverter</strong> sikrer at du alltid får det riktige resultatet.</p>
+
+<h2>Konklusjon</h2>
+
+<p>En <strong>quart til gallon konverter</strong> er et uunnværlig verktøy for alle som jobber</div>
     <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/temperatur-konvertering'"><span class="tool-card-icon">🔄</span><h3>Temperatur Konvertering</h3><p>Konverter temperatur mellom alle enheter</p></div><div class="tool-card" onclick="location='/verktoy/fahrenheit-celsius'"><span class="tool-card-icon">🔄</span><h3>Fahrenheit til Celsius</h3><p>Konverter Fahrenheit til Celsius med detaljer</p></div><div class="tool-card" onclick="location='/verktoy/km-til-miles'"><span class="tool-card-icon">🔄</span><h3>Kilometer til Miles</h3><p>Konverter km til miles med nøyaktighet</p></div><div class="tool-card" onclick="location='/verktoy/miles-til-km'"><span class="tool-card-icon">🔄</span><h3>Miles til Kilometer</h3><p>Konverter miles til km med nøyaktighet</p></div><div class="tool-card" onclick="location='/verktoy/kg-til-pund'"><span class="tool-card-icon">🔄</span><h3>Kg til Pund</h3><p>Konverter kilogram til pund med presisjon</p></div><div class="tool-card" onclick="location='/verktoy/pund-til-kg'"><span class="tool-card-icon">🔄</span><h3>Pund til Kg</h3><p>Konverter pund til kilogram med presisjon</p></div><div class="tool-card" onclick="location='/verktoy/meter-til-fot'"><span class="tool-card-icon">🔄</span><h3>Meter til Fot</h3><p>Konverter meter til fot med høy nøyaktighet</p></div><div class="tool-card" onclick="location='/verktoy/cm-til-tommer'"><span class="tool-card-icon">🔄</span><h3>Centimeter til Tommer</h3><p>Konverter cm til tommer med brøker</p></div><div class="tool-card" onclick="location='/verktoy/liter-til-gallon'"><span class="tool-card-icon">🔄</span><h3>Liter til Gallon</h3><p>Konverter liter til gallon (US og UK)</p></div><div class="tool-card" onclick="location='/verktoy/ml-til-ts'"><span class="tool-card-icon">🔄</span><h3>Milliliter til Teskje</h3><p>Konverter ml til ulike måleenheter</p></div><div class="tool-card" onclick="location='/verktoy/bytes-til-mb'"><span class="tool-card-icon">🔄</span><h3>Bytes til MB Kalkulator</h3><p>Konverter bytes, KB, MB, GB, TB</p></div><div class="tool-card" onclick="location='/verktoy/hektar-til-m2'"><span class="tool-card-icon">🔄</span><h3>Hektar til m² Kalkulator</h3><p>Konverter hektar til kvadratmeter</p></div><div class="tool-card" onclick="location='/kategori/konvertering'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle Konvertering</h3><p>Alle kalkulatorer i denne kategorien</p></div></div></div>
     <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/lan-kalkulator'"><span class="tool-card-icon">💰</span><h3>Lån Kalkulator</h3><p>Beregn månedlige låneavdrag med nedbetalingsoversikt</p></div><div class="tool-card" onclick="location='/verktoy/prosent-kalkulator'"><span class="tool-card-icon">📐</span><h3>Prosent Kalkulator</h3><p>Beregn prosent med flere metoder og sammenligninger</p></div><div class="tool-card" onclick="location='/verktoy/areal-kalkulator'"><span class="tool-card-icon">📏</span><h3>Areal Kalkulator</h3><p>Beregn areal av ulike former med enheter</p></div><div class="tool-card" onclick="location='/verktoy/alder-kalkulator'"><span class="tool-card-icon">📅</span><h3>Alder Kalkulator</h3><p>Beregn nøyaktig alder med sammenligning og statistikk</p></div><div class="tool-card" onclick="location='/verktoy/fart-kalkulator'"><span class="tool-card-icon">⚡</span><h3>Fart Kalkulator</h3><p>Beregn fart, distanse og tid med enhetskonvertering og drivstoffestimat</p></div></div></div>
   </div>
@@ -50,10 +188,10 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-grid">
-      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">449+ gratis kalkulatorer</p></div>
-      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li></ul></div>
+      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">491+ gratis kalkulatorer</p></div>
+      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li><li><a href="/kategori/krypto">₿ Krypto</a></li><li><a href="/kategori/spill">🎮 Spill</a></li></ul></div>
       <div class="footer-col"><h4>Populære</h4><ul><li><a href="/verktoy/bmi-kalkulator">BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator">Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator">Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator">Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator">Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator">pH Kalkulator</a></li><li><a href="/verktoy/molekylvekt-kalkulator">Molekylvektkalkulator</a></li><li><a href="/verktoy/halveringstid-kalkulator">Halveringstid Kalkulator</a></li><li><a href="/verktoy/befolkningsvekst-kalkulator">Befolkningsvekst Kalkulator</a></li><li><a href="/verktoy/terningkaster">Terningkaster</a></li></ul></div>
-      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/konverter-oz-til-cc">OZ til CC Konverter</a></li><li><a href="/verktoy/kcal-til-kalorier">KCAL til Kalorier Omformer</a></li><li><a href="/verktoy/crore-til-milliard">Crore til Milliard Konverterer</a></li><li><a href="/verktoy/ml-til-mg">ML til MG Konvertering</a></li><li><a href="/verktoy/kvadratmiles-til-kvadratkilometer">Kvadratmiles til Kvadratkilometer Kalkulator</a></li><li><a href="/verktoy/kubikkfot-til-kubikkmeter">Kubikkfot til Kubikkmeter Konverter</a></li><li><a href="/verktoy/centimeter-til-tommer">Centimeter til Tommer Konverter</a></li><li><a href="/verktoy/kelvin-til-fahrenheit">Kelvin til Fahrenheit Konverter</a></li></ul></div>
+      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/beste-sjakktrekk">Beste Sjakktrekk Kalkulator</a></li><li><a href="/verktoy/wotlk-talent">WOTLK Talent Kalkulator</a></li><li><a href="/verktoy/sod-talent">SOD Talent Kalkulator</a></li><li><a href="/verktoy/bdo-hest">BDO Hestekalkulator</a></li><li><a href="/verktoy/diablo3-edelsten">Diablo 3 Edelstens Kalkulator</a></li><li><a href="/verktoy/dots-kalkulator">DOTS Kalkulator</a></li><li><a href="/verktoy/chocobo-farge">Chocobo Farge Kalkulator</a></li><li><a href="/verktoy/clash-of-clans">Clash of Clans Kalkulator</a></li></ul></div>
       <div class="footer-col"><h4>Info</h4><ul><li><a href="/om-oss">Om oss</a></li><li><a href="/personvern">Personvern</a></li><li><a href="/kontakt">Kontakt</a></li></ul></div>
     </div>
     <div class="footer-bottom"><p>© 2026 Kalkulator24 — Alle kalkulatorer er gratis</p></div>

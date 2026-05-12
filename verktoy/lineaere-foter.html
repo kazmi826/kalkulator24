@@ -28,17 +28,148 @@
 <nav class="navbar">
   <div class="navbar-inner">
     <a href="/" class="logo">Kalkulator24</a>
-    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li></ul>
+    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li></ul>
     <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">☰</button>
   </div>
-  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li></ul></div>
+  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li></ul></div>
 </nav>
 <div class="breadcrumb"><a href="/">Hjem</a><span class="sep">›</span><a href="/kategori/konvertering">Konvertering</a><span class="sep">›</span>Lineære Føtter Kalkulator</div>
 <div class="tool-hero"><div class="tool-badge">🔄 Konvertering</div><h1>Lineære Føtter Kalkulator</h1><p class="subtitle">Konverter meter til lineære føtter — raskt og gratis</p></div>
 <div class="main-wrap">
   <div class="main-content">
     <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>Lengde (meter)</label><div class="input-row"><input type="number" class="calc-input" data-field="length" placeholder="1"></div></div></div>    <button class="btn-calc" onclick="runCalculator('linear_feet')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
-    <div class="ai-loader" id="aiWrap"><p>Last inn detaljert guide</p><button class="btn-ai" id="aiBtn">Vis guide</button><div class="loading-wrap" id="aiLoader"><div class="spinner"></div><span>Laster...</span></div></div><div class="content-card" id="aiContent" style="display:none"></div>
+    <div class="content-card">```html
+<h2>Lineære Føtter Kalkulator: En Komplett Veiledning</h2>
+
+<p>En <strong>lineære føtter kalkulator</strong> er et praktisk verktøy som hjelper deg med å konvertere og beregne lineære målinger. Enten du arbeider med konstruksjon, interiørdesign, eller andre prosjekter som krever nøyaktige målinger, er en <strong>lineære føtter kalkulator</strong> uunnværlig. I denne artikkelen skal vi utforske alt du trenger å vite om denne nyttige kalkulatoren.</p>
+
+<h2>Hva er en Lineære Føtter Kalkulator?</h2>
+
+<p>En <strong>lineære føtter kalkulator</strong> er et digitalt verktøy designet for å beregne avstander og lengder i lineære føtter. En lineær fot er en enhet som måler lengde i én dimensjon, i motsetning til kvadratfot som måler areal eller kubikkfot som måler volum.</p>
+
+<p>Lineære føtter brukes hovedsakelig når du trenger å måle lengden på noe uten hensyn til bredde eller høyde. Dette kan være alt fra lengden på et bord til lengden på en vegg eller en kabel. En <strong>lineære føtter kalkulator</strong> gjør det enkelt å konvertere mellom ulike måleenheter og utføre komplekse beregninger raskt og nøyaktig.</p>
+
+<h2>Hvorfor er en Lineære Føtter Kalkulator Viktig?</h2>
+
+<h3>Nøyaktighet i Målinger</h3>
+
+<p>Når du arbeider med byggprosjekter eller andre aktiviteter som krever presise målinger, er det kritisk å få det riktig. En <strong>lineære føtter kalkulator</strong> eliminerer menneskelige feil og sikrer at beregningene dine er nøyaktige til det minste desimal.</p>
+
+<h3>Tidsbesparelse</h3>
+
+<p>Manuell beregning av lineære føtter kan være tidkrevende, spesielt når du arbeider med store tall eller komplekse prosjekter. En kalkulator gjør prosessen raskere og mer effektiv.</p>
+
+<h3>Kostnadseffektivitet</h3>
+
+<p>Ved å bruke en <strong>lineære føtter kalkulator</strong>, kan du unngå dyre feil som oppstår fra feilaktige målinger. Dette spares både tid og penger i lange løp.</p>
+
+<h3>Universell Kompatibilitet</h3>
+
+<p>En god <strong>lineære føtter kalkulator</strong> kan håndtere konverteringer mellom ulike måleenheter, fra meter til tommer til centimeter, noe som gjør den verdifull i internasjonale prosjekter.</p>
+
+<h2>Slik Bruker Du en Lineære Føtter Kalkulator</h2>
+
+<h3>Trinn 1: Samle Målinger</h3>
+
+<p>Først må du få de nøyaktige målingene du trenger. Bruk et målestokk eller målebånd for å få lengdene på objektene dine.</p>
+
+<h3>Trinn 2: Velg Måleenhet</h3>
+
+<p>Bestem hvilken måleenhet du skal bruke. Hvis du måler i tommer, meter eller centimeter, en <strong>lineære føtter kalkulator</strong> kan konvertere alle disse automatisk.</p>
+
+<h3>Trinn 3: Skriv Inn Verdiene</h3>
+
+<p>Skriv inn de målte verdiene i kalkulatoren. De fleste kalkulatorer har separate felt for forskjellige enheter.</p>
+
+<h3>Trinn 4: Velg Operasjon</h3>
+
+<p>Avhengig av kalkulatoren din, kan du velge å legge sammen, trekke fra, eller konvertere målingene dine.</p>
+
+<h3>Trinn 5: Få Resultat</h3>
+
+<p>Kalkulatoren vil vise deg resultatet i lineære føtter eller dine valgte enheter. En <strong>lineære føtter kalkulator</strong> presenterer resultatene klart og tydelig.</p>
+
+<h2>Formel og Eksempel</h2>
+
+<h3>Grunnleggende Formel</h3>
+
+<p>For å konvertere andre enheter til lineære føtter, bruker man følgende formler:</p>
+
+<ul>
+<li>Tommer til føtter: Del antall tommer med 12</li>
+<li>Meter til føtter: Multipliser antall meter med 3,28084</li>
+<li>Centimeter til føtter: Del antall centimeter med 30,48</li>
+</ul>
+
+<h3>Praktisk Eksempel</h3>
+
+<p>La oss si at du har en vegg som er 120 tommer lang, og du vil vite hvor mange lineære føtter det er. Ved å bruke en <strong>lineære føtter kalkulator</strong>:</p>
+
+<p><strong>120 tommer ÷ 12 = 10 lineære føtter</strong></p>
+
+<p>Et annet eksempel: Du har et rom som er 4,5 meter langt. Hvor mange lineære føtter er det?</p>
+
+<p><strong>4,5 meter × 3,28084 = 14,76 lineære føtter</strong></p>
+
+<p>En <strong>lineære føtter kalkulator</strong> gjør disse beregningene øyeblikkelig og feilfritt.</p>
+
+<h2>Praktiske Eksempler på Bruk</h2>
+
+<h3>Konstruksjon og Bygg</h3>
+
+<p>I byggeindustrien er lineære føtter essensielt. Når du bestiller materiale som tre, ledninger eller metallstenger, oppgis ofte prisen per lineær fot. En <strong>lineære føtter kalkulator</strong> hjelper deg å beregne nøyaktig hvor mye materiale du trenger.</p>
+
+<h3>Interiørdesign</h3>
+
+<p>Designere bruker lineære føtter når de måler hvor mye tapet, gardiner eller kabler de trenger. En <strong>lineære føtter kalkulator</strong> sikrer at bestillingene blir nøyaktige.</p>
+
+<h3>Gartnerarbeid og Hage</h3>
+
+<p>Når du planlegger en hage eller anlegger stier, trenger du ofte å beregne lineære føtter for grenser, planker eller andre elementer.</p>
+
+<h3>Tekstil og Stoffarbeid</h3>
+
+<p>Skredderske og tekstilarbeidere bruker lineære føtter for å måle stoff. En <strong>lineære føtter kalkulator</strong> gjør det enkelt å beregne hvor mye stoff som trengs for prosjekter.</p>
+
+<h3>Installasjon av Gulv</h3>
+
+<p>Når du legger nytt gulv, må du vite lengden på området. En <strong>lineære føtter kalkulator</strong> kan hjelpe deg å planlegge og budsjettere for gulvmaterialer.</p>
+
+<h2>Nyttige Tips for Bruk av Lineære Føtter Kalkulator</h2>
+
+<ul>
+<li><strong>Dobbeltsjekk dine målinger:</strong> Sikre at dine originale målinger er nøyaktige før du legger dem inn i kalkulatoren.</li>
+<li><strong>Vite enhetene dine:</strong> Alltid være klar over hvilken måleenhet du starter med. Dette sikrer korrekte konverteringer.</li>
+<li><strong>Rundt opp når nødvendig:</strong> I praksis kan det være lurt å runne opp resultatet for å sikre at du har nok materiale.</li>
+<li><strong>Bruk online kalkulatorer:</strong> Det finnes mange gratis <strong>lineære føtter kalkulator</strong> online som kan spare deg tid og innsats.</li>
+<li><strong>Lagre beregninger:</strong> Mange kalkulatorer lar deg lagre tidligere beregninger. Bruk denne funksjonen for fremtidige referanser.</li>
+<li><strong>Lær konverteringsfaktorene:</strong> Selv om kalkulatoren gjør jobben, er det nyttig å forstå de grunnleggende konverteringsfaktorene.</li>
+<li><strong>Vur avrundingsfeil:</strong> Når du arbeider med konverteringer, kan små avrundingsfeil oppstå. En <strong>lineære føtter kalkulator</strong> minimerer disse.</li>
+</ul>
+
+<h2>Ofte Stilte Spørsmål (FAQ)</h2>
+
+<h3>Spørsmål 1: Hva er forskjellen mellom lineære føtter og kvadratfot?</h3>
+
+<p>Lineære føtter måler lengde i én dimensjon, mens kvadratfot måler areal (lengde × bredde). En lineær fot er simpelthen en rett linje som er 12 tommer lang. Kvadratfot brukes når du trenger å måle overflaten av noe, for eksempel gulvarealet i et rom.</p>
+
+<h3>Spørsmål 2: Kan jeg bruke en lineære føtter kalkulator for både tommer og centimeter?</h3>
+
+<p>Ja, de fleste moderne <strong>lineære føtter kalkulator</strong> støtter flere måleenheter, inkludert tommer, centimeter, meter og yard. Du kan enkelt velge hvilken enhet du vil konvertere fra og til.</p>
+
+<h3>Spørsmål 3: Er det gratis online lineære føtter kalkulatorer?</h3>
+
+<p>Ja, det finnes mange gratis online <strong>lineære føtter kalkulator</strong> tilgjengelig. Du kan enkelt søke på Google etter "lineære føtter kalkulator" og finne flere alternativer som fungerer direkte i nettleseren din.</p>
+
+<h3>Spørsmål 4: Hvordan vet jeg hvor nøyaktig en lineære føtter kalkulator er?</h3>
+
+<p>De fleste digitale kalkulatorer er ekstremt nøyaktige når de brukes riktig. Så lenge du legger inn riktige verdier og velger riktig enhet, vil en <strong>lineære føtter kalkulator</strong> gi deg nøyaktige resultater. Nøyaktigheten avhenger mer av dine inngangsdata enn av kalkulatoren selv.</p>
+
+<h3>Spørsmål 5: Kan jeg bruke en lineære føtter kalkulator for håndverkprosjekter?</h3>
+
+<p>Absolutt! En <strong>lineære føtter kalkulator</strong> er ideell for håndverkprosjekter som å bygge hyller, benker eller andre gjenstander hvor du trenger nøyaktige lineære målinger. Det sparer tid og reduserer feil, noe som gjør prosjektet enklere og mer vellykket.</p>
+
+<h2>Konklusjon</div>
     <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/temperatur-konvertering'"><span class="tool-card-icon">🔄</span><h3>Temperatur Konvertering</h3><p>Konverter temperatur mellom alle enheter</p></div><div class="tool-card" onclick="location='/verktoy/fahrenheit-celsius'"><span class="tool-card-icon">🔄</span><h3>Fahrenheit til Celsius</h3><p>Konverter Fahrenheit til Celsius med detaljer</p></div><div class="tool-card" onclick="location='/verktoy/km-til-miles'"><span class="tool-card-icon">🔄</span><h3>Kilometer til Miles</h3><p>Konverter km til miles med nøyaktighet</p></div><div class="tool-card" onclick="location='/verktoy/miles-til-km'"><span class="tool-card-icon">🔄</span><h3>Miles til Kilometer</h3><p>Konverter miles til km med nøyaktighet</p></div><div class="tool-card" onclick="location='/verktoy/kg-til-pund'"><span class="tool-card-icon">🔄</span><h3>Kg til Pund</h3><p>Konverter kilogram til pund med presisjon</p></div><div class="tool-card" onclick="location='/verktoy/pund-til-kg'"><span class="tool-card-icon">🔄</span><h3>Pund til Kg</h3><p>Konverter pund til kilogram med presisjon</p></div><div class="tool-card" onclick="location='/verktoy/meter-til-fot'"><span class="tool-card-icon">🔄</span><h3>Meter til Fot</h3><p>Konverter meter til fot med høy nøyaktighet</p></div><div class="tool-card" onclick="location='/verktoy/cm-til-tommer'"><span class="tool-card-icon">🔄</span><h3>Centimeter til Tommer</h3><p>Konverter cm til tommer med brøker</p></div><div class="tool-card" onclick="location='/verktoy/liter-til-gallon'"><span class="tool-card-icon">🔄</span><h3>Liter til Gallon</h3><p>Konverter liter til gallon (US og UK)</p></div><div class="tool-card" onclick="location='/verktoy/ml-til-ts'"><span class="tool-card-icon">🔄</span><h3>Milliliter til Teskje</h3><p>Konverter ml til ulike måleenheter</p></div><div class="tool-card" onclick="location='/verktoy/bytes-til-mb'"><span class="tool-card-icon">🔄</span><h3>Bytes til MB Kalkulator</h3><p>Konverter bytes, KB, MB, GB, TB</p></div><div class="tool-card" onclick="location='/verktoy/hektar-til-m2'"><span class="tool-card-icon">🔄</span><h3>Hektar til m² Kalkulator</h3><p>Konverter hektar til kvadratmeter</p></div><div class="tool-card" onclick="location='/kategori/konvertering'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle Konvertering</h3><p>Alle kalkulatorer i denne kategorien</p></div></div></div>
     <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/lan-kalkulator'"><span class="tool-card-icon">💰</span><h3>Lån Kalkulator</h3><p>Beregn månedlige låneavdrag med nedbetalingsoversikt</p></div><div class="tool-card" onclick="location='/verktoy/prosent-kalkulator'"><span class="tool-card-icon">📐</span><h3>Prosent Kalkulator</h3><p>Beregn prosent med flere metoder og sammenligninger</p></div><div class="tool-card" onclick="location='/verktoy/areal-kalkulator'"><span class="tool-card-icon">📏</span><h3>Areal Kalkulator</h3><p>Beregn areal av ulike former med enheter</p></div><div class="tool-card" onclick="location='/verktoy/alder-kalkulator'"><span class="tool-card-icon">📅</span><h3>Alder Kalkulator</h3><p>Beregn nøyaktig alder med sammenligning og statistikk</p></div><div class="tool-card" onclick="location='/verktoy/fart-kalkulator'"><span class="tool-card-icon">⚡</span><h3>Fart Kalkulator</h3><p>Beregn fart, distanse og tid med enhetskonvertering og drivstoffestimat</p></div></div></div>
   </div>
@@ -50,10 +181,10 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-grid">
-      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">449+ gratis kalkulatorer</p></div>
-      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li></ul></div>
+      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">491+ gratis kalkulatorer</p></div>
+      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li><li><a href="/kategori/krypto">₿ Krypto</a></li><li><a href="/kategori/spill">🎮 Spill</a></li></ul></div>
       <div class="footer-col"><h4>Populære</h4><ul><li><a href="/verktoy/bmi-kalkulator">BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator">Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator">Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator">Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator">Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator">pH Kalkulator</a></li><li><a href="/verktoy/molekylvekt-kalkulator">Molekylvektkalkulator</a></li><li><a href="/verktoy/halveringstid-kalkulator">Halveringstid Kalkulator</a></li><li><a href="/verktoy/befolkningsvekst-kalkulator">Befolkningsvekst Kalkulator</a></li><li><a href="/verktoy/terningkaster">Terningkaster</a></li></ul></div>
-      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/konverter-oz-til-cc">OZ til CC Konverter</a></li><li><a href="/verktoy/kcal-til-kalorier">KCAL til Kalorier Omformer</a></li><li><a href="/verktoy/crore-til-milliard">Crore til Milliard Konverterer</a></li><li><a href="/verktoy/ml-til-mg">ML til MG Konvertering</a></li><li><a href="/verktoy/kvadratmiles-til-kvadratkilometer">Kvadratmiles til Kvadratkilometer Kalkulator</a></li><li><a href="/verktoy/kubikkfot-til-kubikkmeter">Kubikkfot til Kubikkmeter Konverter</a></li><li><a href="/verktoy/centimeter-til-tommer">Centimeter til Tommer Konverter</a></li><li><a href="/verktoy/kelvin-til-fahrenheit">Kelvin til Fahrenheit Konverter</a></li></ul></div>
+      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/beste-sjakktrekk">Beste Sjakktrekk Kalkulator</a></li><li><a href="/verktoy/wotlk-talent">WOTLK Talent Kalkulator</a></li><li><a href="/verktoy/sod-talent">SOD Talent Kalkulator</a></li><li><a href="/verktoy/bdo-hest">BDO Hestekalkulator</a></li><li><a href="/verktoy/diablo3-edelsten">Diablo 3 Edelstens Kalkulator</a></li><li><a href="/verktoy/dots-kalkulator">DOTS Kalkulator</a></li><li><a href="/verktoy/chocobo-farge">Chocobo Farge Kalkulator</a></li><li><a href="/verktoy/clash-of-clans">Clash of Clans Kalkulator</a></li></ul></div>
       <div class="footer-col"><h4>Info</h4><ul><li><a href="/om-oss">Om oss</a></li><li><a href="/personvern">Personvern</a></li><li><a href="/kontakt">Kontakt</a></li></ul></div>
     </div>
     <div class="footer-bottom"><p>© 2026 Kalkulator24 — Alle kalkulatorer er gratis</p></div>

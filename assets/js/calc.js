@@ -1713,7 +1713,91 @@ const Calculators = {
 
   kcal_to_cal: (i) => { const k=+i.kcal; if(!k) return null; return {value:(k*1000).toLocaleString('nb-NO'), unit:'kalorier (cal)', desc:k+' kcal = '+(k*1000)+' cal | 1 kcal = 1000 cal'}; },
 
-  oz_to_cc: (i) => { const o=+i.oz; if(!o) return null; return {value:(o*29.5735).toFixed(4), unit:'cc/ml', desc:o+' fl oz = '+(o*29.5735).toFixed(4)+' cc'}; }
+  oz_to_cc: (i) => { const o=+i.oz; if(!o) return null; return {value:(o*29.5735).toFixed(4), unit:'cc/ml', desc:o+' fl oz = '+(o*29.5735).toFixed(4)+' cc'}; },
+
+  hours_to_minutes: (i) => { const h=+i.hours; if(!h) return null; const m=h*60; const s=h*3600; return {value:m.toLocaleString('nb-NO'), unit:'minutter', desc:h+' timer = '+m+' min = '+s.toLocaleString('nb-NO')+' sekunder'}; },
+
+  cubicyard_to_cubicft: (i) => { const y=+i.cubic_yards; if(!y) return null; return {value:(y*27).toFixed(2), unit:'kubikkfot', desc:y+' yd³ = '+(y*27)+' ft³'}; },
+
+  deg_to_rad: (i) => { const d=+i.degrees; if(isNaN(d)) return null; const r=(d*Math.PI/180).toFixed(6); return {value:r, unit:'radianer', desc:d+'° = '+r+' rad | π = '+( d/180).toFixed(4)+'π'}; },
+
+  liter_to_pints: (i) => { const l=+i.liter; if(!l) return null; return {value:(l*2.11338).toFixed(4), unit:'pints', desc:l+' L = '+(l*2.11338).toFixed(4)+' pt'}; },
+
+  feet_to_meter: (i) => { const f=+i.feet; if(!f) return null; return {value:(f*0.3048).toFixed(4), unit:'meter', desc:f+' fot = '+(f*0.3048).toFixed(4)+' m'}; },
+
+  sqm_to_sqft: (i) => { const s=+i.sqm; if(!s) return null; return {value:(s*10.7639).toFixed(4), unit:'ft²', desc:s+' m² = '+(s*10.7639).toFixed(4)+' ft²'}; },
+
+  pressure_convert: (i) => { const v=+i.value; if(!v) return null; const toPa={'Pa':1,'kPa':1000,'MPa':1000000,'bar':100000,'atm':101325,'PSI':6894.76,'mmHg':133.322}; const pa=v*(toPa[i.from_unit]||1); const result=pa/(toPa[i.to_unit]||1000); return {value:result.toFixed(4), unit:i.to_unit, desc:v+' '+i.from_unit+' = '+result.toFixed(4)+' '+i.to_unit}; },
+
+  liter_to_quart: (i) => { const l=+i.liter; if(!l) return null; return {value:(l*1.05669).toFixed(4), unit:'quart', desc:l+' L = '+(l*1.05669).toFixed(4)+' qt'}; },
+
+  inches_to_mm: (i) => { const inch=+i.inches; if(!inch) return null; return {value:(inch*25.4).toFixed(4), unit:'mm', desc:inch+'" = '+(inch*25.4).toFixed(4)+' mm'}; },
+
+  moa_to_inches: (i) => { const m=+i.moa, d=+i.distance; if(!m||!d) return null; const inches=(m*d/100).toFixed(3); return {value:inches, unit:'tommer', desc:m+' MOA @ '+d+' yard = '+inches+'"'}; },
+
+  cbm_calc: (i) => { const l=+i.length, w=+i.width, h=+i.height, q=+i.quantity||1; if(!l||!w||!h) return null; const cbm=(l*w*h/1000000*q).toFixed(4); return {value:cbm, unit:'CBM (m³)', desc:l+'×'+w+'×'+h+'cm × '+q+' stk = '+cbm+' m³'}; },
+
+  roman_numeral: (i) => { const n=+i.number; if(!n||n<1||n>3999) return null; const v=[1000,900,500,400,100,90,50,40,10,9,5,4,1]; const s=['M','CM','D','CD','C','XC','L','XL','X','IX','V','IV','I']; let r='',num=n; v.forEach((val,idx)=>{while(num>=val){r+=s[idx];num-=val;}}); return {value:r, unit:'(romertall)', desc:n+' = '+r}; },
+
+  miles_to_km: (i) => { const m=+i.miles; if(!m) return null; return {value:(m*1.60934).toFixed(4), unit:'km', desc:m+' miles = '+(m*1.60934).toFixed(4)+' km = '+(m*1609.34).toFixed(0)+' m'}; },
+
+  billion_to_crore: (i) => { const b=+i.billion; if(!b) return null; return {value:(b*100).toFixed(2), unit:'crore', desc:b+' milliard = '+(b*100)+' crore = '+(b*1000000000).toLocaleString('nb-NO')}; },
+
+  cubicinch_to_liter: (i) => { const ci=+i.cubic_inches; if(!ci) return null; return {value:(ci*0.0163871).toFixed(6), unit:'liter', desc:ci+' in³ = '+(ci*0.0163871).toFixed(6)+' L'}; },
+
+  celsius_to_fahrenheit: (i) => { const c=+i.celsius; if(isNaN(c)) return null; const f=(c*9/5+32).toFixed(2); return {value:f, unit:'°F', desc:c+'°C = '+f+'°F = '+(c+273.15).toFixed(2)+'K'}; },
+
+  million_to_crore: (i) => { const m=+i.million; if(!m) return null; return {value:(m/10).toFixed(4), unit:'crore', desc:m+' million = '+(m/10)+' crore'}; },
+
+  eth_mining: (i) => { const h=+i.hashrate, p=+i.power, ec=+i.electricity_cost, ep=+i.eth_price; if(!h||!p||!ec||!ep) return null; const daily_eth=h*0.0000002; const daily_revenue=daily_eth*ep; const daily_cost=(p/1000)*24*ec; const profit=(daily_revenue-daily_cost).toFixed(2); return {value:profit, unit:'kr/dag', desc:'Inntekt: '+(daily_revenue).toFixed(2)+'kr | Kostnad: '+daily_cost.toFixed(2)+'kr'}; },
+
+  crypto_profit: (i) => { const buy=+i.buy_price, sell=+i.sell_price, amt=+i.amount, fee=+i.fee||0; if(!buy||!sell||!amt) return null; const gross=(sell-buy)*amt; const fees=(buy*amt+sell*amt)*fee/100; const net=(gross-fees).toFixed(2); const pct=((sell-buy)/buy*100).toFixed(2); return {value:net, unit:'kr fortjeneste', desc:pct+'% | Gebyr: '+fees.toFixed(2)+'kr'}; },
+
+  mining_profit: (i) => { const hc=+i.power_cost, cr=+i.coin_reward, cp=+i.coin_price; if(!cr||!cp) return null; const revenue=(cr*cp).toFixed(2); const profit=(cr*cp-hc).toFixed(2); return {value:profit, unit:'kr/dag', desc:'Inntekt: '+revenue+'kr | Kostnad: '+hc+'kr'}; },
+
+  crypto_tax: (i) => { const p=+i.profit; if(!p) return null; const rate=i.holding_period==='Over 1 år'?0.22:0.22; const tax=(p*rate).toFixed(2); return {value:tax, unit:'kr skatt', desc:'22% skatt på '+p+'kr gevinst | Netto: '+(p-+tax).toFixed(2)+'kr'}; },
+
+  crypto_to_fiat: (i) => { const amt=+i.amount; if(!amt) return null; const prices={'Bitcoin':900000,'Ethereum':30000,'XRP':6,'Solana':1500,'BNB':4000}; const rates={'NOK':1,'USD':0.094,'EUR':0.087}; const nokVal=(prices[i.coin]||1)*amt; const result=(nokVal*(rates[i.currency]||1)).toFixed(2); return {value:result, unit:i.currency, desc:amt+' '+i.coin+' × '+prices[i.coin]+'NOK (estimat)'}; },
+
+  crypto_staking: (i) => { const amt=+i.amount, apy=+i.apy, price=+i.coin_price, months=+i.period; if(!amt||!apy||!price) return null; const rewards=amt*(apy/100)*(months/12); const value=(rewards*price).toFixed(2); return {value:rewards.toFixed(6), unit:'coins', desc:'Verdi: '+value+'kr over '+months+' måneder | APY: '+apy+'%'}; },
+
+  xrp_calc: (i) => { const amt=+i.xrp_amount, curr=+i.current_price, target=+i.target_price; if(!amt||!curr) return null; const current_val=(amt*curr).toFixed(2); const target_val=target?(amt*target).toFixed(2):null; const gain=target?((target-curr)/curr*100).toFixed(2):null; return {value:current_val, unit:'kr (nåværende)', desc:target?'Ved målpris: '+target_val+'kr ('+gain+'%)':'Nåværende verdi'}; },
+
+  crypto_converter: (i) => { const amt=+i.amount; if(!amt) return null; const prices={'Bitcoin':900000,'Ethereum':30000,'XRP':6,'Solana':1500}; const rates={'NOK':1,'USD':0.094,'EUR':0.087}; const nok=(prices[i.from_coin]||1)*amt; const result=(nok*(rates[i.to_currency]||1)).toFixed(2); return {value:result, unit:i.to_currency, desc:amt+' '+i.from_coin+' ≈ '+result+' '+i.to_currency+' (estimat)'}; },
+
+  blockchain_calc: (i) => { const tx=+i.transactions, bs=+i.block_size, bt=+i.block_time; if(!tx||!bs||!bt) return null; const tps=(tx/86400).toFixed(2); const daily_blocks=Math.round(86400/bt); return {value:tps, unit:'TPS', desc:'Blokker/dag: '+daily_blocks+' | Blokkstørrelse: '+bs+'KB'}; },
+
+  blox_fruits: (i) => { const lvl=+i.level; if(!lvl) return null; const multi={'Normal':1,'Sjelden':2,'Legendarisk':3}; const mastery=Math.round(lvl*100*(multi[i.fruit_type]||1)); return {value:mastery.toLocaleString('nb-NO'), unit:'mastery XP', desc:i.fruit_type+' frukt på nivå '+lvl}; },
+
+  dnd_point_buy: (i) => { const stats=[+i.strength||8,+i.dexterity||8,+i.constitution||8,+i.intelligence||8,+i.wisdom||8,+i.charisma||8]; const cost={8:0,9:1,10:2,11:3,12:4,13:5,14:7,15:9}; const total=stats.reduce((sum,s)=>sum+(cost[s]||0),0); const remaining=27-total; return {value:total, unit:'poeng brukt', desc:'Gjenstående: '+remaining+'/27 | '+( remaining<0?'Over budget!':'OK ✓')}; },
+
+  palworld_breeding: (i) => { const p1=+i.parent1_level, p2=+i.parent2_level; if(!p1||!p2) return null; const child=Math.floor((p1+p2)/2); return {value:child, unit:'(barn nivå estimat)', desc:'Forelder 1: '+p1+' | Forelder 2: '+p2}; },
+
+  minecraft_calc: (i) => { const items=+i.items; if(!items) return null; const mats={'Tre':4,'Stein':1,'Jern':1,'Gull':1,'Diamant':1,'Netheritt':1}; const per={'Tre':'4 planker','Stein':'1 blokk','Jern':'1 ingot','Gull':'1 ingot','Diamant':'1 diamant','Netheritt':'1 netheritt'}; return {value:items, unit:'gjenstander', desc:'Materiale: '+i.material+' | '+per[i.material]||'per enhet'}; },
+
+  osrs_calc: (i) => { const curr=+i.current_xp, target=+i.target_level; if(!curr||!target) return null; const xp_table=[0,83,174,276,388,512,650,801,969,1154,1358,1584,1833,2107,2411,2746,3115,3523,3973,4470,5018,5624,6291,7028,7842,8740,9730,10824,12031,13363,14833,16456,18247,20224,22406,247886,274294,303288,335240,370299,409511,452866,500000,552844,613047,680330,757132,843882,941022,1048576,1000000000]; const target_xp=xp_table[Math.min(target-1,98)]||0; const needed=Math.max(0,target_xp-curr); return {value:needed.toLocaleString('nb-NO'), unit:'XP trengs', desc:'Mål: nivå '+target+' ('+target_xp.toLocaleString('nb-NO')+' XP)'}; },
+
+  minecraft_circle: (i) => { const d=+i.diameter; if(!d||d<1) return null; const r=d/2; let blocks=0; for(let x=-r;x<=r;x++){for(let z=-r;z<=r;z++){if(Math.sqrt(x*x+z*z)<=r)blocks++;}} return {value:blocks, unit:'blokker', desc:'Diameter: '+d+' | Radius: '+r+' | Areal: '+blocks+' blokker'}; },
+
+  elden_ring: (i) => { const lvl=+i.level; if(!lvl) return null; const runes=Math.round(0.02*Math.pow(lvl,3)+3.06*Math.pow(lvl,2)+105.6*lvl-895); return {value:runes.toLocaleString('nb-NO'), unit:'runer til neste nivå', desc:'Karakter nivå: '+lvl}; },
+
+  nether_portal: (i) => { const ox=+i.overworld_x, oz=+i.overworld_z; if(isNaN(ox)||isNaN(oz)) return null; const nx=Math.round(ox/8), nz=Math.round(oz/8); return {value:'X:'+nx+' Z:'+nz, unit:'(Nether koordinater)', desc:'Overworld ('+ox+','+oz+') → Nether ('+nx+','+nz+')'}; },
+
+  coc_calc: (i) => { const th=+i.town_hall, builders=+i.builders, hours=+i.upgrade_time; if(!th||!builders||!hours) return null; const boost=builders>=5?0.9:1; const actual=(hours*boost).toFixed(1); return {value:actual, unit:'timer', desc:'TH'+th+' | '+builders+' byggere | '+(hours-+actual).toFixed(1)+'t spart'}; },
+
+  chocobo_color: (i) => { const steps={'Gul→Grønn':20,'Gul→Blå':23,'Gul→Hvit':18,'Grønn→Blå':43}; const key=i.current_color+'→'+i.target_color; const s=steps[key]||25; return {value:s, unit:'frukt trengs', desc:i.current_color+' → '+i.target_color+' (estimat)'}; },
+
+  dots_calc: (i) => { const dpi=+i.dpi, sens=+i.sensitivity, fov=+i.fov||90; if(!dpi||!sens) return null; const cm360=(360/(dpi*sens*0.022)).toFixed(2); return {value:cm360, unit:'cm/360°', desc:'DPI:'+dpi+' Sens:'+sens+' FOV:'+fov+'°'}; },
+
+  diablo3_gem: (i) => { const lvl=+i.gem_level; if(!lvl) return null; const pages=Math.ceil(lvl/10); const mats=lvl*3; return {value:mats.toLocaleString('nb-NO'), unit:'materialer', desc:'Nivå '+lvl+' '+i.gem_type+' | '+pages+' sider trengs'}; },
+
+  bdo_horse: (i) => { const lvl=+i.horse_level, tier=+i.horse_tier; if(!lvl||!tier) return null; const xp=Math.round(lvl*100*tier); const value=Math.round(tier*1000000+lvl*50000); return {value:value.toLocaleString('nb-NO'), unit:'silver (estimat)', desc:'Tier '+tier+' nivå '+lvl+' | '+xp.toLocaleString('nb-NO')+' XP'}; },
+
+  sod_talent: (i) => { const lvl=+i.level; if(!lvl) return null; const points=Math.floor((lvl-10)/2); return {value:Math.max(0,points), unit:'talentpoeng', desc:'Nivå '+lvl+' '+i.class+' | Tilgjengelig fra nivå 10'}; },
+
+  wotlk_talent: (i) => { const lvl=+i.level; if(!lvl) return null; const points=Math.max(0,lvl-9); return {value:points, unit:'talentpoeng', desc:'Nivå '+lvl+' '+i.class+' | 1 poeng per nivå fra 10'}; },
+
+  chess_calc: (i) => { const values={'Bonde':1,'Tårn':5,'Løper':3,'Springer':3,'Dronning':9,'Konge':0}; const val=values[i.pieces]||1; const phase_bonus={'Åpning':1.0,'Midtspill':1.2,'Sluttspill':i.pieces==='Bonde'?2.0:0.9}; const score=(val*(phase_bonus[i.position]||1)).toFixed(1); return {value:score, unit:'poeng', desc:i.pieces+' i '+i.position+' = '+score+' poeng'}; }
 };
 
 // ============================================

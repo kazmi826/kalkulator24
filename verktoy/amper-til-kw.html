@@ -28,17 +28,144 @@
 <nav class="navbar">
   <div class="navbar-inner">
     <a href="/" class="logo">Kalkulator24</a>
-    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li></ul>
+    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li></ul>
     <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">☰</button>
   </div>
-  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li></ul></div>
+  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="active">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li></ul></div>
 </nav>
 <div class="breadcrumb"><a href="/">Hjem</a><span class="sep">›</span><a href="/kategori/konvertering">Konvertering</a><span class="sep">›</span>Ampere til KW Kalkulator</div>
 <div class="tool-hero"><div class="tool-badge">🔄 Konvertering</div><h1>Ampere til KW Kalkulator</h1><p class="subtitle">Konverter ampere og volt til kilowatt — raskt og gratis</p></div>
 <div class="main-wrap">
   <div class="main-content">
     <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>Ampere</label><div class="input-row"><input type="number" class="calc-input" data-field="ampere" placeholder="10"></div></div><div class="input-group"><label>Volt</label><div class="input-row"><input type="number" class="calc-input" data-field="voltage" placeholder="230"></div></div></div>    <button class="btn-calc" onclick="runCalculator('amp_to_kw')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
-    <div class="ai-loader" id="aiWrap"><p>Last inn detaljert guide</p><button class="btn-ai" id="aiBtn">Vis guide</button><div class="loading-wrap" id="aiLoader"><div class="spinner"></div><span>Laster...</span></div></div><div class="content-card" id="aiContent" style="display:none"></div>
+    <div class="content-card">```html
+<h2>Ampere til KW Kalkulator: Din Guide til Elektrisk Energikonvertering</h2>
+
+<p>En <strong>ampere til kw kalkulator</strong> er et essensielt verktøy for alle som jobber med elektrisk installasjoner, energiforbruk eller industrielle applikasjoner. Denne kalkulatoren hjelper deg med å konvertere elektrisk strøm målt i ampere (A) til effekt målt i kilowatt (kW). Å forstå denne konverteringen er viktig for sikkerhet, kostnadsoptimalisering og korrekt dimensjonering av elektriske systemer.</p>
+
+<h2>Hva er en Ampere til KW Kalkulator?</h2>
+
+<p>En <strong>ampere til kw kalkulator</strong> er et digitalt eller fysisk verktøy som konverterer elektrisk strøm fra ampere til kilowatt. Ampere måler hvor mye strøm som strømmer gjennom en leder, mens kilowatt måler den faktiske effekten eller energiforbruket. Disse to enhetene måler ulike aspekter av elektrisitet, og konverteringen avhenger av både spenningen i systemet og om det er enfase eller trefase strøm.</p>
+
+<p>Kalkulatoren tar inn følgende informasjon:</p>
+<ul>
+<li>Strøm i ampere (A)</li>
+<li>Spenning i volt (V)</li>
+<li>Type strøm (enfase eller trefase)</li>
+<li>Effektfaktor (power factor)</li>
+</ul>
+
+<p>Med denne informasjonen beregner den effekten i kilowatt, som gir deg en presis forståelse av energiforbruket.</p>
+
+<h2>Hvorfor er Ampere til KW Kalkulator Viktig?</h2>
+
+<p>Å kunne konvertere ampere til kilowatt er avgjørende av flere grunner. For det første sikrer det at elektriske systemer blir riktig dimensjonert og sikre. En <strong>ampere til kw kalkulator</strong> hjelper deg med å velge riktig størrelse på ledninger, brytere og andre elektriske komponenter.</p>
+
+<p>For det andre er det viktig for budsjettplanlegging. Når du vet hvor mye effekt en enhet eller et system bruker i kilowatt, kan du beregne hvor mye det koster å drive det basert på strømprisene. Dette er særlig viktig for bedrifter som ønsker å redusere energikostnader.</p>
+
+<p>For det tredje er det et sikkerhetsspørsmål. Å overbelaste elektriske systemer kan føre til overoppheting, branner og farlige situasjoner. Ved å bruke en <strong>ampere til kw kalkulator</strong> kan du sikre at systemet ikke blir overbelastet.</p>
+
+<p>Firedel er dette verktøyet uunnværlig for elektrikere, ingeniører og arbeidere i industrien som må beregne effektforbruk daglig.</p>
+
+<h2>Slik Bruker Du Ampere til KW Kalkulator</h2>
+
+<h3>Steg-for-steg guide</h3>
+
+<p>Å bruke en <strong>ampere til kw kalkulator</strong> er enkelt og krever bare noen få grunnleggende opplysninger:</p>
+
+<ul>
+<li><strong>Steg 1:</strong> Finn strømmen i ampere. Dette tallet finner du vanligvis på etiketten på utstyret eller i installasjonen.</li>
+<li><strong>Steg 2:</strong> Finn spenningen. I Norge bruker vi vanligvis 230V for enfase og 400V for trefase.</li>
+<li><strong>Steg 3:</strong> Bestem om det er enfase eller trefase strøm.</li>
+<li><strong>Steg 4:</strong> Skriv inn effektfaktoren. For de fleste husholdningsapparater er denne 0,95 til 1,0. For industrielle apparater kan den være lavere.</li>
+<li><strong>Steg 5:</strong> Klikk beregn, og kalkulatoren viser resultatet i kilowatt.</li>
+</ul>
+
+<p>Mange nettbaserte utgaver av <strong>ampere til kw kalkulator</strong> gjør dette enda enklere med intuitive grensesnitt og automatiske standardverdier for vanlige spenningsnivåer.</p>
+
+<h2>Formel og Praktisk Eksempel</h2>
+
+<h3>Enfase strøm</h3>
+
+<p>Formelen for enfase strøm er:</p>
+
+<p><strong>P (kW) = (I × V × PF) / 1000</strong></p>
+
+<p>Hvor:</p>
+<ul>
+<li>P = Effekt i kilowatt</li>
+<li>I = Strøm i ampere</li>
+<li>V = Spenning i volt</li>
+<li>PF = Effektfaktor (vanligvis 0,95-1,0)</li>
+<li>1000 = Konverteringsfaktor fra watt til kilowatt</li>
+</ul>
+
+<h3>Trefase strøm</h3>
+
+<p>Formelen for trefase strøm er:</p>
+
+<p><strong>P (kW) = (√3 × I × V × PF) / 1000</strong></p>
+
+<p>Hvor √3 ≈ 1,732</p>
+
+<h3>Konkret eksempel</h3>
+
+<p>La oss si at du har en enfase enhet som bruker 20 ampere ved 230 volt, med en effektfaktor på 0,95. Ved å bruke <strong>ampere til kw kalkulator</strong> eller formelen:</p>
+
+<p><strong>P = (20 × 230 × 0,95) / 1000 = 4,37 kW</strong></p>
+
+<p>Dette betyr at enheten bruker 4,37 kilowatt effekt.</p>
+
+<p>For et trefase eksempel: En motor som bruker 30 ampere ved 400 volt med effektfaktor 0,90:</p>
+
+<p><strong>P = (1,732 × 30 × 400 × 0,90) / 1000 = 18,66 kW</strong></p>
+
+<h2>Praktiske Eksempler fra Hverdagen</h2>
+
+<h3>Hjemmet</h3>
+
+<p>La oss se på noen praktiske eksempler der <strong>ampere til kw kalkulator</strong> kan være nyttig. En elektrisk ovn som bruker 16 ampere ved 230 volt forbruker omtrent 3,7 kW. Hvis strømprisen er 1,50 kroner per kWh, koster det rundt 5,55 kroner per time å drifte denne ovnen.</p>
+
+<h3>Industri</h3>
+
+<p>I industrielle miljøer er en <strong>ampere til kw kalkulator</strong> enda mer kritisk. En trefase produksjonslinje som kjører med 50 ampere ved 400 volt bruker cirka 34,6 kW. Hvis fabrikken kjører 24 timer per dag, 300 dager per år, forbrukes det cirka 248.640 kWh årlig, som kan koste millioner av kroner.</p>
+
+<h3>Bilader</h3>
+
+<p>En hurtiglader for elbil som bruker 32 ampere ved 230 volt bruker omtrent 7,36 kW. En trefase hurtiglader ved 63 ampere og 400 volt bruker cirka 43,9 kW.</p>
+
+<h2>Tips for Bruk av Ampere til KW Kalkulator</h2>
+
+<ul>
+<li><strong>Verifiser spenningen:</strong> Forsikre deg om at du bruker riktig spenning. Feil spenning gir helt feil resultat.</li>
+<li><strong>Kontroller effektfaktoren:</strong> For elektriske motorer og induktive belastninger, kan effektfaktoren være betydelig lavere enn 1,0. Dette påvirker resultatet vesentlig.</li>
+<li><strong>Bruk nettbaserte kalkulatorer:</strong> Online versjoner av <strong>ampere til kw kalkulator</strong> er gratis, rask og ofte mer nøyaktige enn manuelle beregninger.</li>
+<li><strong>Dobbeltsjekk resultatene:</strong> Hvis resultatet ser uventet ut, beregn det på nytt og forsikre deg om at du har inntastet riktig informasjon.</li>
+<li><strong>Konsulter en ekspert:</strong> For kritiske installasjoner eller store systemer, konsulter en autorisert elektriker eller ingeniør.</li>
+<li><strong>Hugs sikkerhetsmarginer:</strong> Planlegg alltid for en viss margin på toppen av den beregnede effekten for fremtidige utvidelser eller uforutsette behov.</li>
+</ul>
+
+<h2>Ofte Stilte Spørsmål (FAQ)</h2>
+
+<h3>1. Hva er forskjellen mellom ampere og kilowatt?</h3>
+
+<p>Ampere måler strømstyrken (hvor mye strøm som strømmer), mens kilowatt måler effekten eller energiforbruket. Du trenger spenning og effektfaktor for å konvertere mellom dem. En <strong>ampere til kw kalkulator</strong> gjør denne konverteringen for deg.</p>
+
+<h3>2. Hvorfor trenger jeg effektfaktor i beregningen?</h3>
+
+<p>Effektfaktoren indikerer hvor effektivt systemet bruker strømmen. En perfekt effektfaktor er 1,0, men mange enheter, spesielt motorer, har lavere verdier. Dette påvirker den faktiske effekten som brukes, så <strong>ampere til kw kalkulator</strong> må ta det i betraktning.</p>
+
+<h3>3. Er det forskjell mellom enfase og trefase beregninger?</h3>
+
+<p>Ja, trefase systemer bruker en annen formel som inkluderer √3 (1,732). En god <strong>ampere til kw kalkulator</strong> lar deg velge mellom enfase og trefase for å sikre riktig resultat.</p>
+
+<h3>4. Kan jeg bruke en ampere til kw kalkulator for likestrøm?</h3>
+
+<p>En standard <strong>ampere til kw kalkulator</strong> er designet for vekselstrøm. For likestrøm er formelen enklere: P = I × V (uten effektfaktor), så du trenger kanskje et annet verktøy.</p>
+
+<h3>5. Hvor finner jeg en pålitelig ampere til kw kalkulator?</h3>
+
+<p>Det finnes mange gratis nettbaserte versjoner av <strong>ampere til kw kalkulator</strong> tilgjengelig. Se etter kalkulatorer fra elektrotekniske nettsider, energiselskaper eller utdanningsnettsteder. Forsikre deg om at den tillater</div>
     <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/temperatur-konvertering'"><span class="tool-card-icon">🔄</span><h3>Temperatur Konvertering</h3><p>Konverter temperatur mellom alle enheter</p></div><div class="tool-card" onclick="location='/verktoy/fahrenheit-celsius'"><span class="tool-card-icon">🔄</span><h3>Fahrenheit til Celsius</h3><p>Konverter Fahrenheit til Celsius med detaljer</p></div><div class="tool-card" onclick="location='/verktoy/km-til-miles'"><span class="tool-card-icon">🔄</span><h3>Kilometer til Miles</h3><p>Konverter km til miles med nøyaktighet</p></div><div class="tool-card" onclick="location='/verktoy/miles-til-km'"><span class="tool-card-icon">🔄</span><h3>Miles til Kilometer</h3><p>Konverter miles til km med nøyaktighet</p></div><div class="tool-card" onclick="location='/verktoy/kg-til-pund'"><span class="tool-card-icon">🔄</span><h3>Kg til Pund</h3><p>Konverter kilogram til pund med presisjon</p></div><div class="tool-card" onclick="location='/verktoy/pund-til-kg'"><span class="tool-card-icon">🔄</span><h3>Pund til Kg</h3><p>Konverter pund til kilogram med presisjon</p></div><div class="tool-card" onclick="location='/verktoy/meter-til-fot'"><span class="tool-card-icon">🔄</span><h3>Meter til Fot</h3><p>Konverter meter til fot med høy nøyaktighet</p></div><div class="tool-card" onclick="location='/verktoy/cm-til-tommer'"><span class="tool-card-icon">🔄</span><h3>Centimeter til Tommer</h3><p>Konverter cm til tommer med brøker</p></div><div class="tool-card" onclick="location='/verktoy/liter-til-gallon'"><span class="tool-card-icon">🔄</span><h3>Liter til Gallon</h3><p>Konverter liter til gallon (US og UK)</p></div><div class="tool-card" onclick="location='/verktoy/ml-til-ts'"><span class="tool-card-icon">🔄</span><h3>Milliliter til Teskje</h3><p>Konverter ml til ulike måleenheter</p></div><div class="tool-card" onclick="location='/verktoy/bytes-til-mb'"><span class="tool-card-icon">🔄</span><h3>Bytes til MB Kalkulator</h3><p>Konverter bytes, KB, MB, GB, TB</p></div><div class="tool-card" onclick="location='/verktoy/hektar-til-m2'"><span class="tool-card-icon">🔄</span><h3>Hektar til m² Kalkulator</h3><p>Konverter hektar til kvadratmeter</p></div><div class="tool-card" onclick="location='/kategori/konvertering'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle Konvertering</h3><p>Alle kalkulatorer i denne kategorien</p></div></div></div>
     <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/lan-kalkulator'"><span class="tool-card-icon">💰</span><h3>Lån Kalkulator</h3><p>Beregn månedlige låneavdrag med nedbetalingsoversikt</p></div><div class="tool-card" onclick="location='/verktoy/prosent-kalkulator'"><span class="tool-card-icon">📐</span><h3>Prosent Kalkulator</h3><p>Beregn prosent med flere metoder og sammenligninger</p></div><div class="tool-card" onclick="location='/verktoy/areal-kalkulator'"><span class="tool-card-icon">📏</span><h3>Areal Kalkulator</h3><p>Beregn areal av ulike former med enheter</p></div><div class="tool-card" onclick="location='/verktoy/alder-kalkulator'"><span class="tool-card-icon">📅</span><h3>Alder Kalkulator</h3><p>Beregn nøyaktig alder med sammenligning og statistikk</p></div><div class="tool-card" onclick="location='/verktoy/fart-kalkulator'"><span class="tool-card-icon">⚡</span><h3>Fart Kalkulator</h3><p>Beregn fart, distanse og tid med enhetskonvertering og drivstoffestimat</p></div></div></div>
   </div>
@@ -50,10 +177,10 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-grid">
-      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">449+ gratis kalkulatorer</p></div>
-      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li></ul></div>
+      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">491+ gratis kalkulatorer</p></div>
+      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li><li><a href="/kategori/krypto">₿ Krypto</a></li><li><a href="/kategori/spill">🎮 Spill</a></li></ul></div>
       <div class="footer-col"><h4>Populære</h4><ul><li><a href="/verktoy/bmi-kalkulator">BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator">Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator">Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator">Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator">Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator">pH Kalkulator</a></li><li><a href="/verktoy/molekylvekt-kalkulator">Molekylvektkalkulator</a></li><li><a href="/verktoy/halveringstid-kalkulator">Halveringstid Kalkulator</a></li><li><a href="/verktoy/befolkningsvekst-kalkulator">Befolkningsvekst Kalkulator</a></li><li><a href="/verktoy/terningkaster">Terningkaster</a></li></ul></div>
-      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/konverter-oz-til-cc">OZ til CC Konverter</a></li><li><a href="/verktoy/kcal-til-kalorier">KCAL til Kalorier Omformer</a></li><li><a href="/verktoy/crore-til-milliard">Crore til Milliard Konverterer</a></li><li><a href="/verktoy/ml-til-mg">ML til MG Konvertering</a></li><li><a href="/verktoy/kvadratmiles-til-kvadratkilometer">Kvadratmiles til Kvadratkilometer Kalkulator</a></li><li><a href="/verktoy/kubikkfot-til-kubikkmeter">Kubikkfot til Kubikkmeter Konverter</a></li><li><a href="/verktoy/centimeter-til-tommer">Centimeter til Tommer Konverter</a></li><li><a href="/verktoy/kelvin-til-fahrenheit">Kelvin til Fahrenheit Konverter</a></li></ul></div>
+      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/beste-sjakktrekk">Beste Sjakktrekk Kalkulator</a></li><li><a href="/verktoy/wotlk-talent">WOTLK Talent Kalkulator</a></li><li><a href="/verktoy/sod-talent">SOD Talent Kalkulator</a></li><li><a href="/verktoy/bdo-hest">BDO Hestekalkulator</a></li><li><a href="/verktoy/diablo3-edelsten">Diablo 3 Edelstens Kalkulator</a></li><li><a href="/verktoy/dots-kalkulator">DOTS Kalkulator</a></li><li><a href="/verktoy/chocobo-farge">Chocobo Farge Kalkulator</a></li><li><a href="/verktoy/clash-of-clans">Clash of Clans Kalkulator</a></li></ul></div>
       <div class="footer-col"><h4>Info</h4><ul><li><a href="/om-oss">Om oss</a></li><li><a href="/personvern">Personvern</a></li><li><a href="/kontakt">Kontakt</a></li></ul></div>
     </div>
     <div class="footer-bottom"><p>© 2026 Kalkulator24 — Alle kalkulatorer er gratis</p></div>
