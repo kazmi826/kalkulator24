@@ -38,7 +38,150 @@
 <div class="main-wrap">
   <div class="main-content">
     <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>Lengde (m)</label><div class="input-row"><input type="number" class="calc-input" data-field="length" placeholder="10"></div></div><div class="input-group"><label>Bredde (m)</label><div class="input-row"><input type="number" class="calc-input" data-field="width" placeholder="3"></div></div><div class="input-group"><label>Tykkelse (cm)</label><div class="input-row"><input type="number" class="calc-input" data-field="depth" placeholder="5"></div></div></div>    <button class="btn-calc" onclick="runCalculator('asphalt_calc')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
-    <div class="ai-loader" id="aiWrap"><p>Last inn detaljert guide</p><button class="btn-ai" id="aiBtn">Vis guide</button><div class="loading-wrap" id="aiLoader"><div class="spinner"></div><span>Laster...</span></div></div><div class="content-card" id="aiContent" style="display:none"></div>
+    <div class="content-card">```html
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asfaltkalkulator – Slik beregner du riktig mengde asfalt</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+            line-height: 1.7;
+            max-width: 880px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            color: #1e1e2a;
+            background: #fafafc;
+        }
+        h2 {
+            border-bottom: 3px solid #2a5c7a;
+            padding-bottom: 0.3rem;
+            margin-top: 2.5rem;
+            color: #1a3a4e;
+        }
+        h3 {
+            margin-top: 1.8rem;
+            color: #1f4b63;
+        }
+        p {
+            margin: 1rem 0;
+        }
+        ul, ol {
+            margin: 0.8rem 0 1.2rem 1.8rem;
+        }
+        li {
+            margin-bottom: 0.3rem;
+        }
+        strong {
+            color: #1f4b63;
+        }
+        .formel-boks {
+            background: #e9f0f5;
+            padding: 1rem 1.5rem;
+            border-left: 5px solid #2a5c7a;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+        .faq-item {
+            background: #ffffff;
+            border: 1px solid #dce4ec;
+            border-radius: 10px;
+            padding: 1.2rem 1.5rem;
+            margin: 1.2rem 0;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+        .faq-item p {
+            margin: 0.3rem 0 0 0;
+        }
+        .tips-liste {
+            background: #f3f7fa;
+            padding: 1.2rem 1.8rem;
+            border-radius: 14px;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- H1: Hovedtittel -->
+    <h1>Asfaltkalkulator – en komplett guide for riktig asfaltmengde</h1>
+
+    <p>Å beregne nøyaktig hvor mye asfalt du trenger til en innkjørsel, parkeringsplass eller gangvei kan være utfordrende. For lite asfalt gir dårlig dekke og ekstra transportkostnader, mens for mye asfalt fører til unødvendig avfall og budsjettsprekk. En <strong>asfaltkalkulator</strong> løser dette problemet raskt og presist. I denne artikkelen lærer du alt om verktøyet, hvorfor det er så viktig, og hvordan du bruker det – med konkrete eksempler og en enkel formel.</p>
+
+    <!-- Seksjon 1 -->
+    <h2>Hva er en asfaltkalkulator?</h2>
+    <p>En <strong>asfaltkalkulator</strong> er et digitalt verktøy (ofte tilgjengelig på nett eller som mobilapp) som beregner nødvendig asfaltmengde basert på areal, tykkelse og asfalttype. Ved å taste inn lengde, bredde og ønsket lagtykkelse får du svar i tonn eller kubikkmeter. Kalkulatoren tar hensyn til asfaltens tetthet (typisk 2,2–2,5 tonn/m³ for varmblandet asfalt).</p>
+    <p>De fleste asfaltkalkulatorer inkluderer også en buffer for komprimering (svinn) – vanligvis 5–10 %. Dette sikrer at du ikke går tom for asfalt under utlegging. Noen avanserte kalkulatorer skiller mellom ulike asfalttyper som slitelag, bindelag og bærelag, men for de fleste private prosjekter holder en standard <strong>asfaltkalkulator</strong> godt.</p>
+
+    <!-- Seksjon 2 -->
+    <h2>Hvorfor er en asfaltkalkulator viktig?</h2>
+    <p>Å gjette asfaltmengde kan føre til flere problemer:</p>
+    <ul>
+        <li><strong>Økonomi:</strong> Overflødig asfalt koster penger, og underskudd forsinker prosjektet og øker transportutgiftene.</li>
+        <li><strong>Kvalitet:</strong> For tynt lag gir dårlig bæreevne og sprekker, mens for tykt lag kan føre til unødvendig vekt og dreneringsproblemer.</li>
+        <li><strong>Miljø:</strong> Asfaltproduksjon har CO₂-avtrykk; presis mengde reduserer avfall og ekstra kjøreturer.</li>
+        <li><strong>Planlegging:</strong> Entreprenører og huseiere kan planlegge nøyaktig budsjett og logistikk.</li>
+    </ul>
+    <p>En <strong>asfaltkalkulator</strong> eliminerer gjetting og gir deg trygghet. Du slipper å stå med for lite asfalt midt i jobben, eller betale for tonn du ikke trenger. I tillegg hjelper den deg å sammenligne priser fra asfaltleverandører fordi du vet nøyaktig hva du trenger.</p>
+
+    <!-- Seksjon 3 -->
+    <h2>Slik bruker du en asfaltkalkulator</h2>
+    <p>Bruken er enkel og krever kun grunnleggende mål. Følg disse stegene:</p>
+    <ol>
+        <li><strong>Mål arealet:</strong> Finn lengde og bredde i meter. For uregelmessige flater deler du opp i rektangler og summerer.</li>
+        <li><strong>Bestem tykkelse:</strong> Anbefalt tykkelse for innkjørsel er 4–6 cm (slitelag), for parkeringsplass 5–8 cm. For veier med tung trafikk kan det være 10–15 cm.</li>
+        <li><strong>Velg asfalttype:</strong> De fleste kalkulatorer bruker standard tetthet (ca. 2,35 tonn/m³). Velg eventuelt spesifikk type (Agb, Ab, Ska).</li>
+        <li><strong>Legg til komprimeringsfaktor:</strong> Asfalt komprimeres med 5–10 %. Kalkulatoren legger automatisk til dette hvis du velger «med svinn».</li>
+        <li><strong>Trykk «Beregn»:</strong> Du får resultat i tonn og kubikkmeter. Noter tallet når du bestiller asfalt.</li>
+    </ol>
+    <p>De fleste asfaltkalkulatorer har også en funksjon for å beregne asfalt i sekker (for småreparasjoner) eller i løsvekt for store leveranser. Uansett prosjektstørrelse – en <strong>asfaltkalkulator</strong> sparer tid og penger.</p>
+
+    <!-- Seksjon 4: Formel med eksempel -->
+    <h2>Formel med eksempel</h2>
+    <p>Den matematiske formelen bak en <strong>asfaltkalkulator</strong> er rett frem. Du trenger kun volum og tetthet:</p>
+    <div class="formel-boks">
+        <strong>Masse (tonn) = Lengde (m) × Bredde (m) × Tykkelse (m) × Tetthet (tonn/m³) × (1 + komprimeringsfaktor)</strong>
+    </div>
+    <p><strong>Eksempel:</strong> En innkjørsel på 12 meter lang, 4 meter bred, med 5 cm tykkelse (0,05 m). Tetthet 2,35 tonn/m³. Komprimeringsfaktor 7 % (0,07).</p>
+    <ul>
+        <li>Volum = 12 × 4 × 0,05 = 2,4 m³</li>
+        <li>Masse uten svinn = 2,4 × 2,35 = 5,64 tonn</li>
+        <li>Masse med 7 % svinn = 5,64 × 1,07 = <strong>6,03 tonn</strong></li>
+    </ul>
+    <p>En god <strong>asfaltkalkulator</strong> gjør dette automatisk, men det er nyttig å forstå logikken for å kontrollere resultatet.</p>
+
+    <!-- Seksjon 5: Praktiske eksempler -->
+    <h2>Praktiske eksempler</h2>
+    <h3>Eksempel 1: Ny gangvei i hagen</h3>
+    <p>Du skal lage en gangvei på 20 m × 1,2 m med 4 cm asfalt. Tetthet 2,3 tonn/m³. Uten svinn: 20×1,2×0,04×2,3 = 2,21 tonn. Med 8 % svinn ≈ 2,39 tonn. En <strong>asfaltkalkulator</strong> gir deg 2,4 tonn – perfekt for bestilling.</p>
+
+    <h3>Eksempel 2: Parkeringsplass for 3 biler</h3>
+    <p>Areal 15 m × 8 m = 120 m², tykkelse 6 cm. Tetthet 2,4 tonn/m³. Volum = 120×0,06 = 7,2 m³ → 7,2×2,4 = 17,28 tonn. Legg til 5 % svinn = 18,14 tonn. Med en <strong>asfaltkalkulator</strong> får du eksakt tall og kan bestille 18,2 tonn.</p>
+
+    <h3>Eksempel 3: Reparasjon av hull (småjobber)</h3>
+    <p>For et hull på 1 m², 5 cm dypt: 1×0,05×2,35 = 0,118 tonn = 118 kg. Du kan kjøpe asfalt i sekker (25 kg) – da trenger du 5 sekker. Kalkulatoren hjelper deg å unngå for mange sekker.</p>
+
+    <!-- Seksjon 6: Tips -->
+    <h2>Tips for nøyaktig beregning</h2>
+    <div class="tips-liste">
+        <ul>
+            <li><strong>Mål nøyaktig:</strong> Bruk laser eller målehjul for lengder. Små avvik kan gi flere tonn feil.</li>
+            <li><strong>Husk komprimering:</strong> Asfalt mister 5–10 % volum under valsing. En god <strong>asfaltkalkulator</strong> inkluderer dette, men dobbeltsjekk.</li>
+            <li><strong>Velg riktig tetthet:</strong> Standard asfalt 2,35–2,45 tonn/m³. Skjærfast asfalt (Ska) er lettere, mens støpeasfalt er tyngre.</li>
+            <li><strong>Legg til 5–10 % ekstra:</strong> For å dekke ujevnt underlag, søl og skjøter. Bedre å ha litt for mye enn for lite.</li>
+            <li><strong>Bruk flere kalkulatorer:</strong> Sammenlign resultater fra to ulike asfaltkalkulatorer for å sikre at du ikke gjør tastefeil.</li>
+            <li><strong>Kontakt leverandør:</strong> Oppgi areal og tykkelse – de kan ofte gi deg en eksakt mengde basert på sin erfaring.</li>
+        </ul>
+    </div>
+
+    <!-- Seksjon 7: FAQ (5 spørsmål) -->
+    <h2>Ofte stilte spørsmål om asf</div>
     <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/hvac-belastning-kalkulator'"><span class="tool-card-icon">🏠</span><h3>HVAC Belastningskalkulator</h3><p>Beregn HVAC varme og kjølebehov</p></div><div class="tool-card" onclick="location='/verktoy/isolasjonskalkulator'"><span class="tool-card-icon">🏠</span><h3>Isolasjonskalkulator</h3><p>Beregn isolasjonsbehov og R-verdi</p></div><div class="tool-card" onclick="location='/verktoy/flisekalkulator'"><span class="tool-card-icon">🏠</span><h3>Flisekalkulator</h3><p>Beregn antall fliser og materialbehov</p></div><div class="tool-card" onclick="location='/verktoy/tapetk alkulator'"><span class="tool-card-icon">🏠</span><h3>Tapetkalkulator</h3><p>Beregn antall tapetrull som trengs</p></div><div class="tool-card" onclick="location='/verktoy/takvinkel-kalkulator'"><span class="tool-card-icon">🏠</span><h3>Takvinkel Kalkulator</h3><p>Beregn takvinkel og takflate</p></div><div class="tool-card" onclick="location='/verktoy/betongkalkulator'"><span class="tool-card-icon">🏠</span><h3>Betongkalkulator</h3><p>Beregn betongmengde for støping</p></div><div class="tool-card" onclick="location='/verktoy/gjerdeberegner'"><span class="tool-card-icon">🏠</span><h3>Gjerdekalkulator</h3><p>Beregn gjerdemateriell og kostnad</p></div><div class="tool-card" onclick="location='/verktoy/gulvberegner'"><span class="tool-card-icon">🏠</span><h3>Gulvberegner</h3><p>Beregn gulvmateriale og kostnad</p></div><div class="tool-card" onclick="location='/verktoy/btu-kalkulator'"><span class="tool-card-icon">🏠</span><h3>BTU Kalkulator</h3><p>Beregn BTU behov for varme og kjøling</p></div><div class="tool-card" onclick="location='/verktoy/kvadratmeter-kalkulator'"><span class="tool-card-icon">🏠</span><h3>Kvadratmeterkalkulator</h3><p>Beregn areal for ulike former</p></div><div class="tool-card" onclick="location='/verktoy/sparre-lengde-kalkulator'"><span class="tool-card-icon">🏠</span><h3>Sparre Lengde Kalkulator</h3><p>Beregn sparrelengde for tak</p></div><div class="tool-card" onclick="location='/verktoy/trapp-kalkulator'"><span class="tool-card-icon">🏠</span><h3>Trapp Kalkulator</h3><p>Beregn trappetrinn og dimensjoner</p></div><div class="tool-card" onclick="location='/kategori/bolig'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle Bolig og Bygg</h3><p>Alle kalkulatorer i denne kategorien</p></div></div></div>
     <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/lan-kalkulator'"><span class="tool-card-icon">💰</span><h3>Lån Kalkulator</h3><p>Beregn månedlige låneavdrag med nedbetalingsoversikt</p></div><div class="tool-card" onclick="location='/verktoy/prosent-kalkulator'"><span class="tool-card-icon">📐</span><h3>Prosent Kalkulator</h3><p>Beregn prosent med flere metoder og sammenligninger</p></div><div class="tool-card" onclick="location='/verktoy/temperatur-konvertering'"><span class="tool-card-icon">🔄</span><h3>Temperatur Konvertering</h3><p>Konverter temperatur mellom alle enheter</p></div><div class="tool-card" onclick="location='/verktoy/areal-kalkulator'"><span class="tool-card-icon">📏</span><h3>Areal Kalkulator</h3><p>Beregn areal av ulike former med enheter</p></div><div class="tool-card" onclick="location='/verktoy/alder-kalkulator'"><span class="tool-card-icon">📅</span><h3>Alder Kalkulator</h3><p>Beregn nøyaktig alder med sammenligning og statistikk</p></div></div></div>
   </div>

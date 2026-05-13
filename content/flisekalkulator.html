@@ -1,0 +1,146 @@
+```html
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flisekalkulator – beregn antall fliser riktig</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            max-width: 820px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #f9fafb;
+        }
+        h2 {
+            font-size: 1.8rem;
+            border-bottom: 3px solid #3b82f6;
+            padding-bottom: 0.3rem;
+            margin-top: 2.2rem;
+        }
+        h3 {
+            font-size: 1.35rem;
+            margin-top: 1.8rem;
+            color: #0f172a;
+        }
+        p {
+            margin: 1rem 0;
+        }
+        ul, ol {
+            padding-left: 1.5rem;
+            margin: 0.8rem 0;
+        }
+        li {
+            margin-bottom: 0.4rem;
+        }
+        strong {
+            color: #0b3b5c;
+        }
+        .highlight-box {
+            background: #e8f0fe;
+            border-left: 5px solid #3b82f6;
+            padding: 1rem 1.2rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.8rem 0;
+        }
+        .faq-item {
+            background: #ffffff;
+            border: 1px solid #d1d5db;
+            border-radius: 12px;
+            padding: 1rem 1.3rem;
+            margin: 1.2rem 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+        }
+        .faq-item p {
+            margin-top: 0.3rem;
+        }
+        code {
+            background: #eef2f6;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.95rem;
+        }
+        .example-math {
+            background: #f1f5f9;
+            padding: 0.8rem 1.2rem;
+            border-radius: 10px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Hva er en flisekalkulator?</h2>
+<p>En <strong>flisekalkulator</strong> er et digitalt verktøy – ofte tilgjengelig som nettapp eller innebygd i byggevarebutikker – som raskt beregner hvor mange fliser du trenger til et prosjekt. Du oppgir areal, flisestørrelse, fugbredde og svinnprosent, og kalkulatoren regner ut nøyaktig antall fliser, antall kvadratmeter og ofte også hvor mange esker du må kjøpe. En <strong>flisekalkulator</strong> sparer tid og minimerer risikoen for å stå tom midt i oppussingen.</p>
+<p>Moderne <strong>flisekalkulatorer</strong> tar høyde for både gulv og vegg, rektangulære og kvadratiske fliser, og noen avanserte versjoner håndterer også mønsterlegging som fiskebein eller offset. Uansett om du er gjør-det-selv-entusiast eller profesjonell flislegger, gir en <strong>flisekalkulator</strong> et realistisk estimat før du handler inn materialer.</p>
+
+<h2>Hvorfor er en flisekalkulator viktig?</h2>
+<p>Å kjøpe fliser uten en <strong>flisekalkulator</strong> er som å lage middag uten oppskrift – det kan gå, men sjansen for å bomme er stor. Her er de viktigste grunnene til at dette verktøyet er uunnværlig:</p>
+<ul>
+    <li><strong>Unngår for lite eller for mye</strong> – For få fliser stopper arbeidet i dager, mens for mange gir unødvendig utgift og returproblemer.</li>
+    <li><strong>Tar høyde for svinn</strong> – Fliser kan sprekke under skjæring, eller du trenger ekstra til hjørner og skråskjæringer. En god kalkulator legger til 5–15 prosent svinn.</li>
+    <li><strong>Fugemasse og underlag</strong> – Noen kalkulatorer estimerer også fugesand og lim, slik at du kan planlegge hele budsjettet.</li>
+    <li><strong>Tidsbesparende</strong> – Manuell utregning tar tid og er utsatt for feil. En <strong>flisekalkulator</strong> gir svar på sekunder.</li>
+    <li><strong>Miljøgevinst</strong> – Mindre overforbruk betyr mindre avfall og færre returtransporter.</li>
+</ul>
+<div class="highlight-box">
+    <strong>Visste du?</strong> Ifølge norske byggevarehus ender omtrent 12 % av alle fliser opp som svinn. Med en flisekalkulator kan du redusere dette betraktelig.
+</div>
+
+<h2>Slik bruker du en flisekalkulator</h2>
+<h3>Steg for steg – enkelt og raskt</h3>
+<ol>
+    <li><strong>Mål arealet</strong> – Finn lengde og bredde på gulvet eller veggen. For uregelmessige rom, del opp i rektangler.</li>
+    <li><strong>Velg flisestørrelse</strong> – Oppgi flisens bredde og lengde i centimeter (f.eks. 30x60 cm).</li>
+    <li><strong>Angi fugbredde</strong> – Standard fug er 2–5 mm. Små fliser krever smalere fug, store fliser bredere.</li>
+    <li><strong>Legg til svinnprosent</strong> – Anbefalt: 10 % for enkle mønstre, 15 % for fiskebein eller diagonal leggning.</li>
+    <li><strong>Trykk "Beregn"</strong> – Verktøyet viser antall fliser, kvadratmeter og antall esker (basert på pakningsstørrelse).</li>
+</ol>
+<p>De fleste nettbaserte <strong>flisekalkulatorer</strong> har enkle skyveknapper og forhåndsdefinerte flisstørrelser. Noen lar deg også taste inn prisen per flis for å få total kostnad.</p>
+
+<h2>Formel med eksempel</h2>
+<p>Selv om en <strong>flisekalkulator</strong> gjør jobben, er det nyttig å forstå matematikken. Grunnformelen er:</p>
+<div class="example-math">
+    <strong>Antall fliser = (romareal ÷ flisareal) × (1 + svinnprosent)</strong><br>
+    <em>Hvor:</em> Romareal i m², flisareal i m², svinnprosent som desimal (f.eks. 0,10 for 10 %)
+</div>
+<h3>Praktisk regneeksempel</h3>
+<p>Du skal fliselegge et baderomsgulv på 5 m². Flisene er 30×30 cm (0,09 m² per flis). Du ønsker 10 % svinn.</p>
+<ul>
+    <li>Flisareal: 0,30 m × 0,30 m = 0,09 m²</li>
+    <li>Antall fliser uten svinn: 5 m² ÷ 0,09 m² ≈ 55,56 → 56 fliser</li>
+    <li>Med 10 % svinn: 56 × 1,10 = 61,6 → <strong>62 fliser</strong></li>
+</ul>
+<p>En <strong>flisekalkulator</strong> ville gjort dette på et millisekund og samtidig justert for fugbredde (som påvirker arealet marginalt). For fug på 3 mm reduseres flisens dekningsareal litt, men i praksis kompenserer svinnprosenten for dette.</p>
+
+<h2>Praktiske eksempler</h2>
+<h3>Eksempel 1: Kjøkkengulv med store fliser</h3>
+<p>Du legger 60×60 cm fliser på et kjøkken på 12 m². Med 8 % svinn (rett leggning) og 4 mm fug. En <strong>flisekalkulator</strong> foreslår: 12 ÷ 0,36 = 33,33 → 34 fliser + 8 % = 37 fliser. Butikken selger i esker à 4 fliser (1,44 m²). Kalkulatoren anbefaler 10 esker (40 fliser) for å være trygg. Du unngår å kjøpe 13 esker – sparer penger og lagringsplass.</p>
+
+<h3>Eksempel 2: Veggfliser på bad – fiskebeinsmønster</h3>
+<p>Veggareal 8 m², fliser 15×45 cm lagt i fiskebein. Svinn øker til 18 % på grunn av mange vinkler. Manuell utregning blir fort komplisert. En <strong>flisekalkulator</strong> med mønsterstøtte gir 8 m² ÷ 0,0675 m² ≈ 119 fliser + 18 % = 141 fliser. Uten kalkulator hadde du kanskje kjøpt 130 fliser og måttet bestille flere i siste liten.</p>
+
+<h3>Eksempel 3: Uregelmessig rom med skråvegger</h3>
+<p>Del rommet i to rektangler: 4×3 m + 2×2 m = 12 + 4 = 16 m². Flisestørrelse 45×45 cm. En <strong>flisekalkulator</strong> med arealinndeling håndterer dette sømløst. Resultat: 80 fliser + 12 % svinn = 90 fliser. Du slipper å måle opp hver skråkant manuelt.</p>
+
+<h2>Tips for nøyaktig bruk av flisekalkulator</h2>
+<ul>
+    <li><strong>Mål alltid to ganger</strong> – Små målefeil forplanter seg. Bruk laser eller tomme-stokk.</li>
+    <li><strong>Legg til ekstra svinn ved mønster</strong> – Fiskebein, diagonal eller offset krever 12–18 % svinn istedenfor standard 8–10 %.</li>
+    <li><strong>Oppgi nøyaktig fugbredde</strong> – Spesielt ved store fliser påvirker fugemengden arealet. De fleste kalkulatorer justerer automatisk.</li>
+    <li><strong>Ikke glem sokkel og lister</strong> – Hvis du skal ha fliser på vegg opp til en viss høyde, mål nøyaktig høyde og trekk fra døråpninger.</li>
+    <li><strong>Bruk en kalkulator som håndterer pakningsstørrelse</strong> – Da slipper du å regne om fra antall fliser til antall esker.</li>
+    <li><strong>Sjekk alltid returregler</strong> – Noen butikker tar ikke imot overskuddsfliser som er kuttet. Kjøp heller litt for mange enn for få.</li>
+</ul>
+<div class="highlight-box">
+    <strong>Profftips:</strong> Mange <strong>flisekalkulatorer</strong> har en "del og mål"-funksjon for rom med flere hjørner. Bruk den for å unngå underestimering.
+</div>
+
+<h2>FAQ – Ofte stilte spørsmål om flisekalkulator</h2>
+
+<div class="faq-item">
+    <h3>1. Hvor mye svinn bør jeg legge inn i flisekalkulatoren?</h3>
+    <p>For rektangulære rom med rett leggning: 8–10 %. For diagonal leggning eller mønster: 12–18 %. Har du mange utsparinger (rør, hjør

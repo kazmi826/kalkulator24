@@ -38,7 +38,108 @@
 <div class="main-wrap">
   <div class="main-content">
     <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>Romlengde (m)</label><div class="input-row"><input type="number" class="calc-input" data-field="length" placeholder="6"></div></div><div class="input-group"><label>Rombredde (m)</label><div class="input-row"><input type="number" class="calc-input" data-field="width" placeholder="4"></div></div><div class="input-group"><label>Svinn (%)</label><div class="input-row"><input type="number" class="calc-input" data-field="waste" placeholder="10"></div></div><div class="input-group"><label>Pris per m² (kr)</label><div class="input-row"><input type="number" class="calc-input" data-field="price_per_m2" placeholder="300"></div></div></div>    <button class="btn-calc" onclick="runCalculator('floor_calc')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
-    <div class="ai-loader" id="aiWrap"><p>Last inn detaljert guide</p><button class="btn-ai" id="aiBtn">Vis guide</button><div class="loading-wrap" id="aiLoader"><div class="spinner"></div><span>Laster...</span></div></div><div class="content-card" id="aiContent" style="display:none"></div>
+    <div class="content-card">```html
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gulvberegner – Slik beregner du perfekt gulvmengde</title>
+    <style>
+        body { font-family: 'Segoe UI', Roboto, sans-serif; line-height: 1.7; max-width: 860px; margin: 2rem auto; padding: 0 1.5rem; color: #1a1a1a; background: #fafafa; }
+        h2 { border-left: 5px solid #2b7a4b; padding-left: 1rem; margin-top: 2.8rem; color: #1e3f2f; }
+        h3 { color: #2b5a3e; margin-top: 2rem; }
+        p { margin: 1.2rem 0; }
+        ul, ol { padding-left: 1.5rem; }
+        li { margin: 0.6rem 0; }
+        strong { color: #1d4e33; }
+        .faq-item { background: #f0f7f2; padding: 1rem 1.2rem; border-radius: 12px; margin: 1.8rem 0; }
+        .faq-item p { margin: 0.3rem 0; }
+        .formel-boks { background: #e6f0ea; padding: 1.2rem 1.8rem; border-radius: 16px; border: 1px solid #bcd9c8; margin: 1.8rem 0; }
+        .eksempel-boks { background: #ffffff; border: 1px solid #d9e6df; padding: 1rem 1.5rem; border-radius: 12px; margin: 1.5rem 0; }
+        .tips-liste { background: #f8fcf9; border-left: 5px solid #2b7a4b; padding: 1rem 1.5rem; border-radius: 8px; }
+    </style>
+</head>
+<body>
+
+    <!-- Introduksjon -->
+    <h2>Hva er en gulvberegner?</h2>
+    <p>En <strong>gulvberegner</strong> er et verktøy – digitalt eller manuelt – som hjelper deg med å regne ut nøyaktig hvor mye gulvbelegg, parkett, laminat, vinyl eller fliser du trenger til et rom. I stedet for å gjette eller måle på øyemål, bruker du en <strong>gulvberegner</strong> for å unngå både overskudd og underskudd. De fleste nettbaserte gulvberegnere tar inn lengde, bredde, eventuelt svinnprosent og format på gulvet, og spytter ut eksakt antall kvadratmeter du må kjøpe.</p>
+    <p>Enten du skal legge nytt gulv i stua, soverommet eller et kjøkken, er en <strong>gulvberegner</strong> første steg mot et vellykket prosjekt. Uten en slik beregning risikerer du å kjøpe for lite – og da stopper arbeidet opp – eller for mye, som gir unødvendige kostnader og avfall.</p>
+
+    <!-- Hvorfor viktig -->
+    <h2>Hvorfor er en gulvberegner viktig?</h2>
+    <p>Å legge nytt gulv er en investering. Feilberegning kan føre til forsinkelser, ekstra kjøreturer til byggevarehuset og dårlig utnyttelse av materialet. Her er de viktigste grunnene til at en <strong>gulvberegner</strong> er helt avgjørende:</p>
+    <ul>
+        <li><strong>Nøyaktig mengde</strong> – du unngår å kjøpe for mye eller for lite.</li>
+        <li><strong>Budsjettkontroll</strong> – du vet eksakt hva gulvet koster før du handler.</li>
+        <li><strong>Mindre svinn</strong> – med riktig beregning av mønster og skjæring reduserer du avfallet.</li>
+        <li><strong>Tidsbesparende</strong> – du slipper å måle om igjen eller stresse med ekstra bestillinger.</li>
+        <li><strong>Profesjonelt resultat</strong> – jevne skjøter og riktig antall plater gir et pent gulv.</li>
+    </ul>
+    <p>I tillegg tar en god <strong>gulvberegner</strong> høyde for svinn (typisk 5–15 % avhengig av mønster og romform), slik at du har nok til skjæring, tilpasning og eventuelle feilkutt.</p>
+
+    <!-- Slik bruker du -->
+    <h2>Slik bruker du en gulvberegner</h2>
+    <p>Å bruke en <strong>gulvberegner</strong> er enkelt, men du må ha noen målinger klare. Følg denne fremgangsmåten:</p>
+    <ol>
+        <li><strong>Mål rommets lengde og bredde</strong> – bruk et målebånd og notér i meter (f.eks. 5,40 m x 4,20 m).</li>
+        <li><strong>Bestem gulvformatet</strong> – for eksempel parkettstav 1,20 m x 0,20 m eller flis 0,60 m x 0,60 m. Noen gulvberegnere trenger formatet for å regne ut antall enheter.</li>
+        <li><strong>Velg svinnprosent</strong> – standard er 5–10 % for rett legging, men 10–15 % ved mønsterlegging (fiskebein, sildebein).</li>
+        <li><strong>Legg inn målene i verktøyet</strong> – de fleste nettbaserte gulvberegnere har enkle felt for lengde, bredde, svinn og eventuelt stykkformat.</li>
+        <li><strong>Les resultatet</strong> – du får oppgitt antall kvadratmeter, antall pakker (hvis gulvet selges i pakker) og ofte anbefalt antall ekstra prosent.</li>
+    </ol>
+    <p>Hvis du foretrekker å regne manuelt, kan du bruke formelen nedenfor. En <strong>gulvberegner</strong> gjør alt dette automatisk, men det er alltid lurt å forstå matematikken bak.</p>
+
+    <!-- Formel med eksempel -->
+    <h2>Formel for gulvberegning – med eksempel</h2>
+    <div class="formel-boks">
+        <p><strong>Grunnformel:</strong></p>
+        <p><strong>Areal (m²) = Lengde (m) × Bredde (m)</strong></p>
+        <p><strong>Nødvendig mengde = Areal × (1 + (svinnprosent / 100))</strong></p>
+        <p><strong>Antall pakker = Nødvendig mengde / areal per pakke</strong> (rundet opp til nærmeste hele pakke)</p>
+    </div>
+    <h3>Praktisk eksempel</h3>
+    <div class="eksempel-boks">
+        <p><strong>Rom:</strong> 6,20 m langt og 4,50 m bredt.</p>
+        <p><strong>Gulv:</strong> Laminat som selges i pakker à 2,40 m². Vi legger rett (10 % svinn).</p>
+        <ul>
+            <li>Areal = 6,20 × 4,50 = <strong>27,90 m²</strong></li>
+            <li>Med 10 % svinn: 27,90 × 1,10 = <strong>30,69 m²</strong></li>
+            <li>Antall pakker: 30,69 / 2,40 = 12,79 → <strong>13 pakker</strong> (rundet opp)</li>
+            <li>Faktisk mengde kjøpt: 13 × 2,40 = <strong>31,20 m²</strong> (du har 1,3 m² i reserve)</li>
+        </ul>
+        <p>Uten en <strong>gulvberegner</strong> kunne du lett ha glemt svinnet og endt opp med 27,90 m² – altfor lite!</p>
+    </div>
+
+    <!-- Praktiske eksempler -->
+    <h2>Praktiske eksempler på gulvberegning</h2>
+    <h3>Eksempel 1: Rett legging i rektangulært rom</h3>
+    <p>Rom: 5,00 m × 3,50 m = 17,50 m². Legger vinylplanker med 8 % svinn. Nødvendig: 17,50 × 1,08 = 18,90 m². Hvis hver pakke dekker 2,00 m², trenger du 10 pakker (19,00 m²). En <strong>gulvberegner</strong> gir deg dette på sekunder.</p>
+    <h3>Eksempel 2: Mønsterlegging (fiskebein) i L-formet rom</h3>
+    <p>Her må du dele rommet i to rektangler: Del A: 4,00 m × 3,00 m = 12,00 m². Del B: 2,00 m × 2,50 m = 5,00 m². Totalt areal = 17,00 m². Fiskebein krever ofte 15 % svinn. Nødvendig mengde: 17,00 × 1,15 = 19,55 m². Med en <strong>gulvberegner</strong> kan du legge inn L-form eller tegne rommet direkte i noen verktøy.</p>
+    <h3>Eksempel 3: Fliser på bad med våtsone</h3>
+    <p>Bad: 2,40 m × 1,80 m = 4,32 m². Flisformat 30×30 cm (0,09 m² per flis). Legging med 10 % svinn. Nødvendig: 4,32 × 1,10 = 4,75 m². Antall fliser: 4,75 / 0,09 = 52,8 → 53 fliser. En <strong>gulvberegner</strong> for fliser vil også ta hensyn til fuger og eventuell skjæring rundt rør.</p>
+
+    <!-- Tips -->
+    <h2>Tips for nøyaktig gulvberegning</h2>
+    <div class="tips-liste">
+        <ul>
+            <li><strong>Mål flere ganger</strong> – mål både på det bredeste og lengste punktet; gamle hus kan ha skjeve vegger.</li>
+            <li><strong>Legg alltid til svinn</strong> – 5 % for rett legging, 10–15 % for mønster. En <strong>gulvberegner</strong> gjør dette automatisk.</li>
+            <li><strong>Kjøp en ekstra pakke</strong> – selv med nøyaktig beregning kan en skadet bord eller fremtidig reparasjon kreve ekstra.</li>
+            <li><strong>Noter pakningsnummer</strong> – gulv fra forskjellige batcher kan variere i nyanse. Kjøp alt fra samme parti.</li>
+            <li><strong>Bruk digital gulvberegner med romtegning</strong> – for kriker og kroker, skråvegger eller L-form er visuell beregning gull.</li>
+            <li><strong>Ikke glem døråpninger og skap</strong> – mål helt inn til veggen, ikke bare synlig gulvflate.</li>
+        </ul>
+    </div>
+
+    <!-- FAQ 5 spørsmål -->
+    <h2>Ofte stilte spørsmål om gulvberegner</h2>
+
+    <div class="faq-item">
+        <p><strong>1. Hvor mye svinn bør jeg legge inn i en gulvberegner?</strong></p>
+        <p>For rett legging uten mønster anbefales </div>
     <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/hvac-belastning-kalkulator'"><span class="tool-card-icon">🏠</span><h3>HVAC Belastningskalkulator</h3><p>Beregn HVAC varme og kjølebehov</p></div><div class="tool-card" onclick="location='/verktoy/isolasjonskalkulator'"><span class="tool-card-icon">🏠</span><h3>Isolasjonskalkulator</h3><p>Beregn isolasjonsbehov og R-verdi</p></div><div class="tool-card" onclick="location='/verktoy/flisekalkulator'"><span class="tool-card-icon">🏠</span><h3>Flisekalkulator</h3><p>Beregn antall fliser og materialbehov</p></div><div class="tool-card" onclick="location='/verktoy/tapetk alkulator'"><span class="tool-card-icon">🏠</span><h3>Tapetkalkulator</h3><p>Beregn antall tapetrull som trengs</p></div><div class="tool-card" onclick="location='/verktoy/takvinkel-kalkulator'"><span class="tool-card-icon">🏠</span><h3>Takvinkel Kalkulator</h3><p>Beregn takvinkel og takflate</p></div><div class="tool-card" onclick="location='/verktoy/betongkalkulator'"><span class="tool-card-icon">🏠</span><h3>Betongkalkulator</h3><p>Beregn betongmengde for støping</p></div><div class="tool-card" onclick="location='/verktoy/gjerdeberegner'"><span class="tool-card-icon">🏠</span><h3>Gjerdekalkulator</h3><p>Beregn gjerdemateriell og kostnad</p></div><div class="tool-card" onclick="location='/verktoy/btu-kalkulator'"><span class="tool-card-icon">🏠</span><h3>BTU Kalkulator</h3><p>Beregn BTU behov for varme og kjøling</p></div><div class="tool-card" onclick="location='/verktoy/kvadratmeter-kalkulator'"><span class="tool-card-icon">🏠</span><h3>Kvadratmeterkalkulator</h3><p>Beregn areal for ulike former</p></div><div class="tool-card" onclick="location='/verktoy/sparre-lengde-kalkulator'"><span class="tool-card-icon">🏠</span><h3>Sparre Lengde Kalkulator</h3><p>Beregn sparrelengde for tak</p></div><div class="tool-card" onclick="location='/verktoy/trapp-kalkulator'"><span class="tool-card-icon">🏠</span><h3>Trapp Kalkulator</h3><p>Beregn trappetrinn og dimensjoner</p></div><div class="tool-card" onclick="location='/verktoy/sand-kalkulator'"><span class="tool-card-icon">🏠</span><h3>Sand Kalkulator</h3><p>Beregn sandmengde for prosjekter</p></div><div class="tool-card" onclick="location='/kategori/bolig'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle Bolig og Bygg</h3><p>Alle kalkulatorer i denne kategorien</p></div></div></div>
     <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/lan-kalkulator'"><span class="tool-card-icon">💰</span><h3>Lån Kalkulator</h3><p>Beregn månedlige låneavdrag med nedbetalingsoversikt</p></div><div class="tool-card" onclick="location='/verktoy/prosent-kalkulator'"><span class="tool-card-icon">📐</span><h3>Prosent Kalkulator</h3><p>Beregn prosent med flere metoder og sammenligninger</p></div><div class="tool-card" onclick="location='/verktoy/temperatur-konvertering'"><span class="tool-card-icon">🔄</span><h3>Temperatur Konvertering</h3><p>Konverter temperatur mellom alle enheter</p></div><div class="tool-card" onclick="location='/verktoy/areal-kalkulator'"><span class="tool-card-icon">📏</span><h3>Areal Kalkulator</h3><p>Beregn areal av ulike former med enheter</p></div><div class="tool-card" onclick="location='/verktoy/alder-kalkulator'"><span class="tool-card-icon">📅</span><h3>Alder Kalkulator</h3><p>Beregn nøyaktig alder med sammenligning og statistikk</p></div></div></div>
   </div>

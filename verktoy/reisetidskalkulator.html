@@ -38,7 +38,199 @@
 <div class="main-wrap">
   <div class="main-content">
     <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>Avstand (km)</label><div class="input-row"><input type="number" class="calc-input" data-field="distance" placeholder="500"></div></div><div class="input-group"><label>Gjennomsnittshastighet (km/t)</label><div class="input-row"><input type="number" class="calc-input" data-field="speed" placeholder="100"></div></div><div class="input-group"><label>Antall stopp (minutter)</label><div class="input-row"><input type="number" class="calc-input" data-field="stops" placeholder="30"></div></div></div>    <button class="btn-calc" onclick="runCalculator('travel_time')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
-    <div class="ai-loader" id="aiWrap"><p>Last inn detaljert guide</p><button class="btn-ai" id="aiBtn">Vis guide</button><div class="loading-wrap" id="aiLoader"><div class="spinner"></div><span>Laster...</span></div></div><div class="content-card" id="aiContent" style="display:none"></div>
+    <div class="content-card">```html
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reisetidskalkulator – Planlegg reisen din som en proff</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+      line-height: 1.7;
+      max-width: 860px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+      color: #1e293b;
+      background: #f8fafc;
+    }
+    h2 {
+      border-bottom: 2px solid #3b82f6;
+      padding-bottom: 0.25rem;
+      margin-top: 2.5rem;
+      color: #0f172a;
+    }
+    h3 {
+      margin-top: 1.8rem;
+      color: #1e293b;
+    }
+    p {
+      margin: 1rem 0;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    li {
+      margin-bottom: 0.4rem;
+    }
+    strong {
+      color: #0f172a;
+    }
+    .faq-item {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 1.2rem 1.5rem;
+      margin: 1.5rem 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+      border: 1px solid #e2e8f0;
+    }
+    .faq-item p {
+      margin-top: 0.3rem;
+    }
+    .highlight {
+      background: #eef2ff;
+      padding: 0.1rem 0.3rem;
+      border-radius: 6px;
+      font-weight: 500;
+    }
+    .formel-boks {
+      background: #ffffff;
+      border-left: 4px solid #3b82f6;
+      padding: 1rem 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 0 12px 12px 0;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+    .eksempel-boks {
+      background: #f1f5f9;
+      padding: 0.8rem 1.2rem;
+      border-radius: 14px;
+      margin: 1.2rem 0;
+    }
+    .tips-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    @media (max-width: 600px) {
+      .tips-grid { grid-template-columns: 1fr; }
+    }
+    .tips-grid li {
+      background: white;
+      list-style: none;
+      padding: 0.8rem 1rem;
+      border-radius: 30px;
+      border: 1px solid #dbeafe;
+      font-weight: 500;
+      color: #1e40af;
+    }
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #64748b;
+      text-align: center;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Hva er en reisetidskalkulator?</h2>
+<p>
+  En <strong>reisetidskalkulator</strong> er et digitalt verktøy – ofte tilgjengelig som nettapp, mobilapp eller innebygd i karttjenester – som beregner hvor lang tid det tar å komme seg fra ett sted til et annet. Den tar hensyn til flere variabler: avstand, gjennomsnittshastighet, trafikkforhold, transportmiddel (bil, buss, sykkel, gange), og i avanserte versjoner også kø, vær og veiarbeid. 
+</p>
+<p>
+  En <strong>reisetidskalkulator</strong> skiller seg fra en enkel avstandsmåler ved at den ikke bare viser kilometer, men omsetter distanse til faktisk tidsbruk. For pendlere, logistikkplanleggere og feriereisende er dette uunnværlig for å unngå forsinkelser og for å kunne planlegge hverdagen presist. De fleste <strong>reisetidskalkulatorer</strong> i dag bruker sanntidsdata fra GPS, trafikksensorer og historiske mønstre for å gi et realistisk estimat.
+</p>
+
+<h2>Hvorfor er en reisetidskalkulator viktig?</h2>
+<p>
+  Tidsstyring er en av de mest verdifulle ressursene vi har. En <strong>reisetidskalkulator</strong> hjelper deg å ta informerte valg før du setter deg i bilen eller på sykkelen. Her er tre grunner til at verktøyet er kritisk:
+</p>
+<ul>
+  <li><strong>Unngå stress og forsinkelser:</strong> Ved å vite nøyaktig hvor lang tid en reise tar, kan du legge inn buffere og unngå å komme for sent til møter, fly eller avtaler.</li>
+  <li><strong>Optimalisering av pendling:</strong> Pendler du daglig, kan en reisetidskalkulator sammenligne ulike ruter og tidspunkter – for eksempel om det lønner seg å reise 15 minutter tidligere for å unngå kø.</li>
+  <li><strong>Bedre logistikk og økonomi:</strong> For bedrifter som driver med transport, er nøyaktig reisetid avgjørende for leveringsplaner, drivstoffkostnader og arbeidstid. En feilberegning på 10 minutter per levering kan hope seg opp.</li>
+</ul>
+<p>
+  I en tid der vi alle har travle timeplaner, gir en <strong>reisetidskalkulator</strong> kontroll og forutsigbarhet. Den reduserer usikkerhet og gjør at du kan bruke tiden på det som virkelig betyr noe.
+</p>
+
+<h2>Slik bruker du en reisetidskalkulator</h2>
+<p>
+  De fleste moderne <strong>reisetidskalkulatorer</strong> er intuitive, men for å få mest mulig nøyaktige resultater bør du følge disse trinnene:
+</p>
+<ol>
+  <li><strong>Angi start- og sluttpunkt:</strong> Skriv inn adresse, stedsnavn eller koordinater. Jo mer presis adresse, jo bedre estimat.</li>
+  <li><strong>Velg transportmiddel:</strong> Bil, kollektiv, sykkel, gange eller taxi. Hver modus har ulik gjennomsnittshastighet og begrensninger.</li>
+  <li><strong>Angi avreise- eller ankomsttid:</strong> Mange kalkulatorer lar deg velge "avreise nå" eller en spesifikk tid. Dette påvirker trafikkberegningen.</li>
+  <li><strong>Inkluder eventuelle stopp:</strong> Skal du hente noen eller ta en pause? Noen avanserte verktøy lar deg legge til mellomlandinger.</li>
+  <li><strong>Trykk "Beregn" og les resultatet:</strong> Du får opp estimert reisetid, distanse, og ofte et tidsintervall (f.eks. 35–45 minutter) basert på usikkerhet.</li>
+</ol>
+<p>
+  <strong>Tips:</strong> Bruk en <strong>reisetidskalkulator</strong> med sanntidstrafikk for de beste resultatene. Google Maps, Waze og Apple Maps er kjente eksempler, men det finnes også spesialiserte verktøy for lastebilsjåfører og syklister.
+</p>
+
+<h2>Formel med eksempel</h2>
+<p>
+  Den grunnleggende formelen bak en <strong>reisetidskalkulator</strong> er enkel fysikk:
+</p>
+<div class="formel-boks">
+  <p><strong>Reisetid = Distanse / Gjennomsnittshastighet</strong></p>
+  <p>der distanse måles i kilometer (km) og hastighet i kilometer per time (km/t). Resultatet blir timer. For å få minutter multipliserer du med 60.</p>
+</div>
+<p><strong>Eksempel:</strong></p>
+<ul>
+  <li>Distanse: 120 km</li>
+  <li>Gjennomsnittshastighet: 60 km/t (inkludert tett trafikk og kryss)</li>
+  <li>Beregning: 120 km / 60 km/t = 2 timer</li>
+  <li>Reisetid: 2 timer (120 minutter)</li>
+</ul>
+<p>
+  I virkeligheten justerer en <strong>reisetidskalkulator</strong> hastigheten dynamisk basert på veitype (motorvei, landevei, bykjøring) og trafikk. For eksempel: Hvis du kjører 110 km/t på motorvei i 80 km, og 40 km/t i by i 40 km, regner kalkulatoren ut tiden for hver del og summerer.
+</p>
+
+<h2>Praktiske eksempler</h2>
+
+<h3>Eksempel 1: Daglig pendling</h3>
+<div class="eksempel-boks">
+  <p><strong>Rute:</strong> Oslo sentrum til Fornebu (14 km).</p>
+  <p><strong>Uten reisetidskalkulator:</strong> Du antar 20 minutter, men ender opp med 40 minutter i rushtrafikk.</p>
+  <p><strong>Med reisetidskalkulator:</strong> Du legger inn avreise kl. 08:00. Kalkulatoren sier 32–42 minutter. Du legger til 10 minutters buffer og kommer presis.</p>
+</div>
+
+<h3>Eksempel 2: Langkjøring med ferge</h3>
+<div class="eksempel-boks">
+  <p><strong>Rute:</strong> Bergen til Stavanger (ca. 210 km via E39).</p>
+  <p><strong>Uten verktøy:</strong> Du tror 3 timer, men glemmer fergetid og kø ved fergeleiet.</p>
+  <p><strong>Med reisetidskalkulator:</strong> Du velger "bil med ferge". Kalkulatoren inkluderer fergeoverfart (40 min) og ventetid. Total reisetid: 4 timer 15 minutter. Du planlegger pause underveis.</p>
+</div>
+
+<h3>Eksempel 3: Sykkel i by</h3>
+<div class="eksempel-boks">
+  <p><strong>Rute:</strong> Trondheim sentrum til Gløshaugen (3,5 km).</p>
+  <p><strong>Reisetidskalkulator for sykkel:</strong> Beregner 12–15 minutter basert på stigning og sykkelfelt. Uten kalkulator kunne du ha underestimert motbakken og kommet for sent til forelesning.</p>
+</div>
+
+<h2>Tips for å få mest mulig ut av en reisetidskalkulator</h2>
+<div class="tips-grid">
+  <li>✔️ Oppdater alltid appen – sanntidsdata blir bedre med nyeste versjon.</li>
+  <li>✔️ Sammenlign flere ruter – noen ganger er en litt lengre vei raskere i rushtiden.</li>
+  <li>✔️ Bruk historisk trafikk – hvis du skal reise på et bestemt tidspunkt neste uke.</li>
+  <li>✔️ Legg inn faste stopp – henting av barn eller matpause påvirker totaltiden.</li>
+  <li>✔️ Sjekk værmeldingen – regn og snø kan redusere hastigheten med 20–30 %.</li>
+  <li>✔️ Ikke stol blindt på estimatet – bruk det som et veiledende verktøy, ikke en fasit.</li>
+</div>
+<p>
+  En god <strong>reisetidskalkulator</strong> er bare så presis som dataene den får. Ved å kombinere den med sunn fornuft og lokalkunnskap, blir du en mester i tidsplanlegging.
+</p>
+
+<h2>FAQ – Ofte stilte spørsmål om reisetidskalkulator</h2>
+
+<div class</div>
     <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/alder-kalkulator'"><span class="tool-card-icon">📅</span><h3>Alder Kalkulator</h3><p>Beregn nøyaktig alder med sammenligning og statistikk</p></div><div class="tool-card" onclick="location='/verktoy/dato-kalkulator'"><span class="tool-card-icon">📅</span><h3>Dato Kalkulator</h3><p>Legg til eller trekk fra dager med arbeidsdager og helligdager</p></div><div class="tool-card" onclick="location='/verktoy/tidskalkulator'"><span class="tool-card-icon">📅</span><h3>Tidskalkulator</h3><p>Beregn tidsforskjell med tidssoner og pauser</p></div><div class="tool-card" onclick="location='/verktoy/nedtelling-kalkulator'"><span class="tool-card-icon">📅</span><h3>Nedtelling Kalkulator</h3><p>Tell ned til en dato med detaljer og hendelser</p></div><div class="tool-card" onclick="location='/verktoy/arbeidsdager-kalkulator'"><span class="tool-card-icon">📅</span><h3>Arbeidsdager Kalkulator</h3><p>Beregn arbeidsdager og helligdager</p></div><div class="tool-card" onclick="location='/verktoy/pensjon-nedtelling'"><span class="tool-card-icon">📅</span><h3>Pensjon Nedtelling</h3><p>Tell ned til pensjonsalder</p></div><div class="tool-card" onclick="location='/verktoy/bursdag-nedtelling'"><span class="tool-card-icon">📅</span><h3>Bursdag Nedtelling</h3><p>Tell ned til neste bursdag</p></div><div class="tool-card" onclick="location='/verktoy/tidssone-kalkulator'"><span class="tool-card-icon">📅</span><h3>Tidssone Kalkulator</h3><p>Konverter tid mellom tidssoner</p></div><div class="tool-card" onclick="location='/verktoy/unix-tidsstempel'"><span class="tool-card-icon">📅</span><h3>Unix Tidsstempel Kalkulator</h3><p>Konverter mellom Unix tid og dato</p></div><div class="tool-card" onclick="location='/verktoy/skuddår-kalkulator'"><span class="tool-card-icon">📅</span><h3>Skuddår Kalkulator</h3><p>Sjekk om år er skuddår</p></div><div class="tool-card" onclick="location='/verktoy/ukenummer-kalkulator'"><span class="tool-card-icon">📅</span><h3>Ukenummer Kalkulator</h3><p>Finn ukenummer for dato</p></div><div class="tool-card" onclick="location='/verktoy/semester-kalkulator'"><span class="tool-card-icon">📅</span><h3>Semester Kalkulator</h3><p>Beregn semesterdatoer og varighet</p></div><div class="tool-card" onclick="location='/kategori/tid'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle Tid og Dato</h3><p>Alle kalkulatorer i denne kategorien</p></div></div></div>
     <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/lan-kalkulator'"><span class="tool-card-icon">💰</span><h3>Lån Kalkulator</h3><p>Beregn månedlige låneavdrag med nedbetalingsoversikt</p></div><div class="tool-card" onclick="location='/verktoy/prosent-kalkulator'"><span class="tool-card-icon">📐</span><h3>Prosent Kalkulator</h3><p>Beregn prosent med flere metoder og sammenligninger</p></div><div class="tool-card" onclick="location='/verktoy/temperatur-konvertering'"><span class="tool-card-icon">🔄</span><h3>Temperatur Konvertering</h3><p>Konverter temperatur mellom alle enheter</p></div><div class="tool-card" onclick="location='/verktoy/areal-kalkulator'"><span class="tool-card-icon">📏</span><h3>Areal Kalkulator</h3><p>Beregn areal av ulike former med enheter</p></div><div class="tool-card" onclick="location='/verktoy/fart-kalkulator'"><span class="tool-card-icon">⚡</span><h3>Fart Kalkulator</h3><p>Beregn fart, distanse og tid med enhetskonvertering og drivstoffestimat</p></div></div></div>
   </div>

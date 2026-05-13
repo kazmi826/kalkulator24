@@ -38,7 +38,92 @@
 <div class="main-wrap">
   <div class="main-content">
     <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>Lokal tid</label><div class="input-row"><input type="time" class="calc-input" data-field="local_time"></div></div><div class="input-group"><label>Fra UTC offset (timer)</label><div class="input-row"><input type="number" class="calc-input" data-field="from_offset" placeholder="1"></div></div><div class="input-group"><label>Til UTC offset (timer)</label><div class="input-row"><input type="number" class="calc-input" data-field="to_offset" placeholder="-5"></div></div></div>    <button class="btn-calc" onclick="runCalculator('timezone_calc')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
-    <div class="ai-loader" id="aiWrap"><p>Last inn detaljert guide</p><button class="btn-ai" id="aiBtn">Vis guide</button><div class="loading-wrap" id="aiLoader"><div class="spinner"></div><span>Laster...</span></div></div><div class="content-card" id="aiContent" style="display:none"></div>
+    <div class="content-card">```html
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tidssonekalkulator – en komplett guide</title>
+</head>
+<body>
+
+    <h1>Tidssonekalkulator – en komplett guide for reisende og nettverksarbeidere</h1>
+
+    <p>I en verden hvor vi jobber på tvers av kontinenter, deltar i internasjonale webinarer og planlegger reiser på tvers av tidssoner, har <strong>tidssonekalkulator</strong> blitt et uunnværlig verktøy. Uansett om du er en globetrotter, en fjernarbeider eller bare har venner i utlandet, hjelper en <strong>tidssonekalkulator</strong> deg med å unngå forvirring og planlegge møter med presisjon. Denne artikkelen gir deg alt du trenger å vite – fra grunnleggende prinsipper til avanserte tips.</p>
+
+    <h2>Hva er en tidssonekalkulator?</h2>
+    <p>En <strong>tidssonekalkulator</strong> er et digitalt verktøy (nettbasert eller app) som raskt konverterer klokkeslett mellom ulike geografiske tidssoner. Den tar hensyn til sommer- og vintertid (DST), halvtimes- og kvarttimesavvik, og viser deg nøyaktig hva klokken er et annet sted i verden. Moderne kalkulatorer oppdateres automatisk i henhold til politiske endringer i tidssoner, slik at du alltid får korrekt informasjon.</p>
+
+    <h3>Hvordan en tidssonekalkulator skiller seg fra et vanlig klokkeslett</h3>
+    <p>Et vanlig ur viser kun lokal tid. En <strong>tidssonekalkulator</strong> derimot, lar deg legge inn en by, et land eller en tidssonekode (som CET, EST, JST) og umiddelbart se korresponderende tid i andre soner. De beste verktøyene har også funksjoner for å planlegge møter på tvers av flere tidssoner samtidig.</p>
+
+    <h2>Hvorfor er en tidssonekalkulator viktig?</h2>
+    <p>Feilberegning av tidssoner kan føre til tapte flyavganger, bommete møter og forvirring i kommunikasjonen. Her er noen konkrete grunner til at en pålitelig <strong>tidssonekalkulator</strong> er avgjørende:</p>
+    <ul>
+        <li><strong>Internasjonalt samarbeid:</strong> Når teammedlemmer sitter i New York, London og Tokyo, er en <strong>tidssonekalkulator</strong> limet som holder timeplanen sammen.</li>
+        <li><strong>Reiseplanlegging:</strong> Unngå jetlag og gå glipp av flyforbindelser ved å alltid vite lokal tid på destinasjonen.</li>
+        <li><strong>Webinarer og events:</strong> Annonser riktig tidspunkt for globale deltakere uten å måtte regne manuelt.</li>
+        <li><strong>Finans og børshandel:</strong> Børser åpner og stenger til bestemte lokale tider – en feil kan koste penger.</li>
+        <li><strong>Personlige relasjoner:</strong> Ringe venner eller familie i utlandet til en passende tid, uten å vekke dem midt på natten.</li>
+    </ul>
+
+    <h2>Slik bruker du en tidssonekalkulator</h2>
+    <p>De fleste <strong>tidssonekalkulator</strong>-verktøy er intuitive, men her er en trinnvis veiledning for å få mest mulig ut av dem:</p>
+    <ol>
+        <li><strong>Velg kildeby eller tidssone:</strong> Skriv inn byen du befinner deg i, eller velg tidssone direkte (f.eks. UTC+1).</li>
+        <li><strong>Angi tidspunkt:</strong> Velg dato og klokkeslett i kildesonen. Mange kalkulatorer lar deg også velge «nå» for sanntidsvisning.</li>
+        <li><strong>Legg til måldestinasjon(er):</strong> Du kan ofte legge til flere byer samtidig – perfekt for møter med deltakere fra flere land.</li>
+        <li><strong>Les resultatet:</strong> Kalkulatoren viser automatisk konvertert tid, inkludert eventuelle DST-justeringer.</li>
+        <li><strong>Bruk planleggingsmodus (valgfritt):</strong> Noen verktøy har en «møteplanlegger» som viser overlappende arbeidstimer i en grafisk oversikt.</li>
+    </ol>
+    <p><strong>Tips:</strong> Lagre favorittbyer i verktøyet for rask tilgang. De fleste nettbaserte <strong>tidssonekalkulator</strong>-tjenester er gratis og krever ingen registrering.</p>
+
+    <h2>Formel med eksempel – manuell tidssoneberegning</h2>
+    <p>Selv om en <strong>tidssonekalkulator</strong> gjør jobben automatisk, er det nyttig å forstå den underliggende matematikken. Grunnformelen er:</p>
+    <p><strong>Måltid = Kildetid + (Tidsforskjell i timer)</strong></p>
+    <p>Hvor tidsforskjellen er differansen mellom UTC-offset til målet og kilden. Husk at sommertid kan endre offset med +1 time.</p>
+
+    <h3>Eksempel: Oslo til New York</h3>
+    <ul>
+        <li><strong>Kilde:</strong> Oslo, Norge (CET, UTC+1 om vinteren, UTC+2 om sommeren).</li>
+        <li><strong>Mål:</strong> New York, USA (EST, UTC-5 om vinteren, UTC-4 om sommeren).</li>
+        <li><strong>Scenario:</strong> Vintertid i begge soner. Klokken 14:00 i Oslo.</li>
+        <li><strong>Beregning:</strong> New York ligger UTC-5, Oslo UTC+1. Forskjell = -6 timer. 14:00 - 6 timer = <strong>08:00</strong> samme dag i New York.</li>
+        <li><strong>Med sommertid:</strong> Hvis Oslo er UTC+2 og New York UTC-4, er forskjellen -6 timer fortsatt (2 - (-4) = 6). Samme regnestykke.</li>
+    </ul>
+    <p><strong>Merk:</strong> En <strong>tidssonekalkulator</strong> tar automatisk høyde for disse variablene, men det er alltid lurt å dobbeltsjekke DST-status for å unngå feil.</p>
+
+    <h2>Praktiske eksempler på bruk av tidssonekalkulator</h2>
+
+    <h3>Eksempel 1: Planlegging av globalt team-møte</h3>
+    <p>Du har et team med folk i San Francisco (PST), London (GMT) og Sydney (AEST). Du vil finne et tidspunkt som fungerer for alle i arbeidstiden. Bruk en <strong>tidssonekalkulator</strong> og legg inn alle tre byene. Velg for eksempel kl. 09:00 i San Francisco. Kalkulatoren viser da kl. 17:00 i London og kl. 03:00 neste dag i Sydney – ikke ideelt. Prøv i stedet kl. 08:00 SF = 16:00 London = 02:00 Sydney. Beste overlapp er ofte tidlig morgen i USA og sen ettermiddag i Europa, men en <strong>tidssonekalkulator</strong> hjelper deg å visualisere dette raskt.</p>
+
+    <h3>Eksempel 2: Reiseplanlegging</h3>
+    <p>Du flyr fra Dubai (GST, UTC+4) til São Paulo (BRT, UTC-3). Avgang 22:00 lokal tid i Dubai, flytid 15 timer. Uten en <strong>tidssonekalkulator</strong> er det lett å regne feil. Kalkulatoren viser: 22:00 Dubai + 15 timer = 13:00 neste dag i Dubai-tid. Men i São Paulo (UTC-3) blir dette 13:00 - 7 timer = <strong>06:00</strong> lokal tid. Du ankommer tidlig om morgenen – perfekt for å starte dagen.</p>
+
+    <h3>Eksempel 3: Webinar med globalt publikum</h3>
+    <p>Du skal holde et webinar kl. 15:00 CEST (Oslo-tid). Deltakere kommer fra India (IST, UTC+5:30) og Mexico (CST, UTC-6). En <strong>tidssonekalkulator</strong> konverterer: 15:00 CEST = 18:30 IST = 07:00 CST. Du ser at meksikanske deltakere må stå opp tidlig – kanskje du justerer til 14:00 CEST for å være mer inkluderende.</p>
+
+    <h2>Tips for å bruke tidssonekalkulator effektivt</h2>
+    <ul>
+        <li><strong>Alltid dobbeltsjekk sommertid:</strong> Selv om de fleste kalkulatorer oppdaterer DST automatisk, kan det være feil i enkelte regioner (f.eks. deler av Australia eller USA). Kryssjekk med offisielle kilder ved viktige avtaler.</li>
+        <li><strong>Bruk IANA-tidssoneidentifikatorer:</strong> I stedet for å skrive «EST» (som kan være tvetydig), bruk bynavn som «America/New_York» eller «Europe/Oslo». Dette gir mer presise resultater i avanserte <strong>tidssonekalkulator</strong>-verktøy.</li>
+        <li><strong>Lagre ofte brukte soner:</strong> De fleste verktøy lar deg fiksere favoritter. Dette sparer tid når du daglig jobber med de samme regionene.</li>
+        <li><strong>Bruk mobilvennlige verktøy:</strong> På reise er en app ofte raskere enn en nettleser. Last ned en pålitelig <strong>tidssonekalkulator</strong> på forhånd.</li>
+        <li><strong>Vær oppmerksom på halvtimes- og kvarttimesavvik:</strong> Land som India (UTC+5:30), Nepal (UTC+5:45) og deler av Australia (UTC+9:30) har ikke hele timers avvik. En god kalkulator håndterer dette sømløst.</li>
+    </ul>
+
+    <h2>FAQ – Ofte stilte spørsmål om tidssonekalkulator</h2>
+
+    <h3>1. Hva er den beste tidssonekalkulatoren for reisende?</h3>
+    <p>Det finnes flere gode alternativer, men verktøy som Timeanddate.com, World Time Buddy og Every Time Zone er populære. For mobil anbefales apper som Clocks (iOS) eller Timezone Converter (Android). En god <strong>tidssonekalkulator</strong> bør være rask, ha DST-støtte og tillate flere byer samtidig.</p>
+
+    <h3>2. Kan jeg stole på at tidssonekalkulatoren tar hensyn til sommertid?</h3>
+    <p>De fleste seriøse <strong>tidssonekalkulator</strong>-tjenester oppdateres automatisk i henhold til offisielle DST-endringer. Likevel kan det forekomme feil i svært nye endringer (f.eks. politiske vedtak). For kritiske møter bør du verifisere med en sekundær kilde eller sjekke lokale nyheter.</p>
+
+    <h3>3. Hvorfor viser tidssonekalkulatoren min feil tid for enkelte land?</h3>
+    <p>Dette kan sky</div>
     <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/alder-kalkulator'"><span class="tool-card-icon">📅</span><h3>Alder Kalkulator</h3><p>Beregn nøyaktig alder med sammenligning og statistikk</p></div><div class="tool-card" onclick="location='/verktoy/dato-kalkulator'"><span class="tool-card-icon">📅</span><h3>Dato Kalkulator</h3><p>Legg til eller trekk fra dager med arbeidsdager og helligdager</p></div><div class="tool-card" onclick="location='/verktoy/tidskalkulator'"><span class="tool-card-icon">📅</span><h3>Tidskalkulator</h3><p>Beregn tidsforskjell med tidssoner og pauser</p></div><div class="tool-card" onclick="location='/verktoy/nedtelling-kalkulator'"><span class="tool-card-icon">📅</span><h3>Nedtelling Kalkulator</h3><p>Tell ned til en dato med detaljer og hendelser</p></div><div class="tool-card" onclick="location='/verktoy/arbeidsdager-kalkulator'"><span class="tool-card-icon">📅</span><h3>Arbeidsdager Kalkulator</h3><p>Beregn arbeidsdager og helligdager</p></div><div class="tool-card" onclick="location='/verktoy/pensjon-nedtelling'"><span class="tool-card-icon">📅</span><h3>Pensjon Nedtelling</h3><p>Tell ned til pensjonsalder</p></div><div class="tool-card" onclick="location='/verktoy/bursdag-nedtelling'"><span class="tool-card-icon">📅</span><h3>Bursdag Nedtelling</h3><p>Tell ned til neste bursdag</p></div><div class="tool-card" onclick="location='/verktoy/tidssone-kalkulator'"><span class="tool-card-icon">📅</span><h3>Tidssone Kalkulator</h3><p>Konverter tid mellom tidssoner</p></div><div class="tool-card" onclick="location='/verktoy/unix-tidsstempel'"><span class="tool-card-icon">📅</span><h3>Unix Tidsstempel Kalkulator</h3><p>Konverter mellom Unix tid og dato</p></div><div class="tool-card" onclick="location='/verktoy/skuddår-kalkulator'"><span class="tool-card-icon">📅</span><h3>Skuddår Kalkulator</h3><p>Sjekk om år er skuddår</p></div><div class="tool-card" onclick="location='/verktoy/ukenummer-kalkulator'"><span class="tool-card-icon">📅</span><h3>Ukenummer Kalkulator</h3><p>Finn ukenummer for dato</p></div><div class="tool-card" onclick="location='/verktoy/semester-kalkulator'"><span class="tool-card-icon">📅</span><h3>Semester Kalkulator</h3><p>Beregn semesterdatoer og varighet</p></div><div class="tool-card" onclick="location='/kategori/tid'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle Tid og Dato</h3><p>Alle kalkulatorer i denne kategorien</p></div></div></div>
     <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/lan-kalkulator'"><span class="tool-card-icon">💰</span><h3>Lån Kalkulator</h3><p>Beregn månedlige låneavdrag med nedbetalingsoversikt</p></div><div class="tool-card" onclick="location='/verktoy/prosent-kalkulator'"><span class="tool-card-icon">📐</span><h3>Prosent Kalkulator</h3><p>Beregn prosent med flere metoder og sammenligninger</p></div><div class="tool-card" onclick="location='/verktoy/temperatur-konvertering'"><span class="tool-card-icon">🔄</span><h3>Temperatur Konvertering</h3><p>Konverter temperatur mellom alle enheter</p></div><div class="tool-card" onclick="location='/verktoy/areal-kalkulator'"><span class="tool-card-icon">📏</span><h3>Areal Kalkulator</h3><p>Beregn areal av ulike former med enheter</p></div><div class="tool-card" onclick="location='/verktoy/fart-kalkulator'"><span class="tool-card-icon">⚡</span><h3>Fart Kalkulator</h3><p>Beregn fart, distanse og tid med enhetskonvertering og drivstoffestimat</p></div></div></div>
   </div>

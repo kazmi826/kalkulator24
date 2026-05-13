@@ -1,0 +1,80 @@
+```html
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HVAC Belastningskalkulator – komplett guide for riktig dimensjonering</title>
+    <style>
+        body { font-family: 'Segoe UI', Roboto, Arial, sans-serif; line-height: 1.7; max-width: 920px; margin: 2rem auto; padding: 0 1.5rem; color: #1e2a3a; background: #fafbfc; }
+        h2 { color: #0b3b5c; border-bottom: 3px solid #2a7faa; padding-bottom: 0.3rem; margin-top: 2.8rem; }
+        h3 { color: #1a5f7a; margin-top: 2rem; }
+        p { margin-bottom: 1.2rem; }
+        ul { margin: 1rem 0 1.5rem 1.2rem; }
+        li { margin-bottom: 0.5rem; }
+        strong { color: #0a4b6e; }
+        .formel-boks { background: #e6f0f6; padding: 1.2rem 1.5rem; border-left: 5px solid #2a7faa; border-radius: 0 8px 8px 0; margin: 1.8rem 0; font-family: 'Courier New', monospace; }
+        .tips-boks { background: #f0f7ed; padding: 1rem 1.5rem; border-radius: 12px; border: 1px solid #bcd9b2; margin: 1.8rem 0; }
+        .faq-item { background: white; padding: 0.8rem 1.2rem; margin-bottom: 0.8rem; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); border: 1px solid #dde7ed; }
+        .faq-item strong { display: block; margin-bottom: 0.3rem; }
+        @media (max-width: 600px) { body { padding: 0 1rem; } }
+    </style>
+</head>
+<body>
+
+<h2>Hva er en HVAC belastningskalkulator?</h2>
+<p>En <strong>hvac belastningskalkulator</strong> er et verktøy (digitalt eller manuelt) som beregner hvor mye varme- eller kjøleenergi et bygg trenger for å opprettholde ønsket inneklima. Den tar hensyn til faktorer som isolasjon, vinduer, tak, gulv, luftlekkasjer, solinnstråling, antall personer og elektrisk utstyr. Kort sagt: den finner den nøyaktige <strong>varmebelastningen</strong> (oppvarmingsbehov) og <strong>kjølebelastningen</strong> (nedkjølingsbehov).</p>
+<p>I praksis brukes en <strong>hvac belastningskalkulator</strong> av ingeniører, rådgivere og installatører for å dimensjonere varmepumper, kjeler, ventilasjonsanlegg, klimaanlegg og kanaler. Uten en korrekt belastningsberegning risikerer man både overdimensjonering (dyrt og ineffektivt) og underdimensjonering (dårlig inneklima og høyere energikostnader).</p>
+<p>De fleste moderne <strong>hvac belastningskalkulator</strong>-verktøy følger standarder som NS 3031 (norsk energiberegning) eller ASHRAE-metoder, og kan utføre både manuelle regneark og automatiske simuleringer.</p>
+
+<h2>Hvorfor er en HVAC belastningskalkulator viktig?</h2>
+<p>Å dimensjonere et HVAC-anlegg uten en nøyaktig belastningskalkyle er som å kjøpe en dress uten å måle størrelsen – det passer sjelden. Her er de viktigste grunnene til at en <strong>hvac belastningskalkulator</strong> er uunnværlig:</p>
+<ul>
+    <li><strong>Energieffektivitet:</strong> Riktig dimensjonerte systemer bruker mindre energi. Overdimensjonerte anlegg sykler på/av for ofte, sliter mer og gir høyere strømregning.</li>
+    <li><strong>Inneklima og komfort:</strong> For liten kapasitet gir kalde rom om vinteren og for varme rom om sommeren. En kalkulator sikrer jevn temperatur og fuktighet.</li>
+    <li><strong>Kostnadsbesparelser:</strong> Unngå unødvendig store og dyre aggregater, rør og kanaler. Riktig størrelse gir lavere innkjøps- og driftskostnader.</li>
+    <li><strong>Overholdelse av forskrifter:</strong> Norske byggeregler (TEK17) krever dokumentert energiberegning. En belastningskalkulator er grunnlaget for denne dokumentasjonen.</li>
+    <li><strong>Miljøgevinst:</strong> Mindre energibruk = lavere CO₂-avtrykk. Riktig dimensjonerte varmepumper reduserer strømforbruket betydelig.</li>
+</ul>
+<p>Uansett om du prosjekterer en enebolig, et kontorbygg eller et industrilokale, er en <strong>hvac belastningskalkulator</strong> første steg mot et velfungerende anlegg.</p>
+
+<h2>Slik bruker du en HVAC belastningskalkulator</h2>
+<p>Bruken av en <strong>hvac belastningskalkulator</strong> kan deles inn i fire hovedtrinn. De fleste verktøy (både nettbaserte og avanserte programmer) følger samme logikk:</p>
+<ol style="margin-bottom: 1.5rem;">
+    <li><strong>Samle inn data om bygget:</strong> Areal (oppvarmet bruttoareal), takhøyde, etasjer, isolasjonsstandard (U-verdier for vegger, tak, gulv), vinduer og dører (type, størrelse, solskjerming).</li>
+    <li><strong>Angi klimadata:</strong> Geografisk plassering (utetemperatur, solinnstråling, vindforhold). I Norge brukes ofte klimasoner fra NS 3031.</li>
+    <li><strong>Legg til interne laster:</strong> Antall personer, belysning, utstyr (PC-er, maskiner), og eventuell prosessvarme. Hver kilde avgir varme som påvirker kjølebehovet.</li>
+    <li><strong>Kjør beregningen og tolk resultatet:</strong> Verktøyet gir deg varmetap (kW) for dimensjonerende vinterdag og kjølelast (kW) for dimensjonerende sommerdag. Resultatet brukes til å velge riktig varmepumpe, kjølemaskin eller kjel.</li>
+</ol>
+<p>Mange moderne <strong>hvac belastningskalkulator</strong>-løsninger har også mulighet for å simulere time for time over et helt år, noe som gir mer nøyaktig energibehov enn en statisk beregning.</p>
+
+<h2>Formel med eksempel</h2>
+<p>En forenklet formel for varmetap (oppvarmingsbehov) er:</p>
+<div class="formel-boks">
+    <strong>Q = U × A × ΔT</strong><br>
+    Q = varmetap (W)<br>
+    U = U-verdi (W/m²K) – varmegjennomgangskoeffisient<br>
+    A = areal (m²)<br>
+    ΔT = temperaturdifferanse mellom inne og ute (K)
+</div>
+<p>For en komplett <strong>hvac belastningskalkulator</strong> summeres varmetapet for alle bygningsdeler (vegger, tak, gulv, vinduer) pluss infiltrasjon (luftlekkasjer) og ventilasjon. Kjølelasten inkluderer også solinnstråling og interne laster.</p>
+<p><strong>Eksempel – varmetap for en vegg:</strong><br>
+En yttervegg har U-verdi 0,22 W/m²K, areal 25 m², og temperaturdifferanse ute/inne på 30 °C (inne 21 °C, ute -9 °C).<br>
+Q = 0,22 × 25 × 30 = <strong>165 W</strong>.<br>
+Gjør du dette for alle flater og legger til infiltrasjon (ca. 0,5 luftskifter/time), får du totalt varmetap. En <strong>hvac belastningskalkulator</strong> gjør disse 100+ beregningene automatisk.</p>
+
+<h2>Praktiske eksempler</h2>
+<h3>Eksempel 1: Enebolig på 150 m²</h3>
+<p>En bolig fra 2010 (god isolasjon) i Oslo. Med en <strong>hvac belastningskalkulator</strong> finner man et varmetap på ca. 4,5 kW ved dimensjonerende utetemperatur -20 °C. Kjølebehovet en varm sommerdag er ca. 2,8 kW. Dette betyr at en luft-til-vann varmepumpe på 5 kW (med god COP) dekker både oppvarming og kjøling. Uten kalkulatoren kunne man ha valgt en 8 kW-pumpe, noe som ville gitt dårligere effektivitet og høyere pris.</p>
+<h3>Eksempel 2: Kontorlandskap 200 m²</h3>
+<p>Et kontor med 20 arbeidsplasser, store vinduer mot sør, og mye elektronikk. En <strong>hvac belastningskalkulator</strong> viser at kjølelasten domineres av solinnstråling (ca. 40 %) og personer/utstyr (ca. 45 %). Totalt kjølebehov: 12,5 kW. Varmetapet om vinteren er bare 6 kW på grunn av internvarme. Løsningen blir et VAV-anlegg med behovsstyrt ventilasjon og en kjølemaskin på 13 kW.</p>
+<h3>Eksempel 3: Hytte med dårlig isolasjon</h3>
+<p>En eldre hytte på fjellet med U-verdier på 0,5–0,8 W/m²K. Kalkulatoren gir et varmetap på hele 9 kW for 80 m². Her må man vurdere etterisolering før man velger varmekilde. En <strong>hvac belastningskalkulator</strong> avslører at varmetapet er så høyt at en luft-luft varmepumpe alene ikke vil klare å holde temperaturen på kalde dager – man trenger en vedovn eller en større varmepumpe.</p>
+
+<h2>Tips for nøyaktig belastningsberegning</h2>
+<div class="tips-boks">
+    <ul>
+        <li><strong>Bruk korrekte U-verdier:</strong> Ikke gjett – sjekk byggets faktiske isolasjon eller bruk standardverdier fra NS 3031. Feil U-verdi gir størst avvik.</li>
+        <li><strong>Ta med solskjerming:</strong> Persienner, markiser eller solfilm reduserer kjølelasten med 30–50 %. En god <strong>hvac belastningskalkulator</strong> lar deg justere dette.</li>
+        <li><strong>Infiltrasjon (luftlekkasjer):</strong> Mål eller anslå lufttetthet (n50-verdi). En tett bolig har n50 ≤ 1,0, en eldre kan ha 3–5. Dette påvirker både varme- og kjølelast.</li>
+        <li><strong>Interne laster:</strong> Ikke glem belysning, TV,

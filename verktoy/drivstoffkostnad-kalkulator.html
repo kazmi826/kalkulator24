@@ -38,7 +38,141 @@
 <div class="main-wrap">
   <div class="main-content">
     <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>Distanse (km)</label><div class="input-row"><input type="number" class="calc-input" data-field="distance" placeholder="500"></div></div><div class="input-group"><label>Forbruk (L/100km)</label><div class="input-row"><input type="number" class="calc-input" data-field="consumption" placeholder="7"></div></div><div class="input-group"><label>Drivstoffpris (kr/L)</label><div class="input-row"><input type="number" class="calc-input" data-field="fuel_price" placeholder="20"></div></div></div>    <button class="btn-calc" onclick="runCalculator('fuel_cost')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
-    <div class="ai-loader" id="aiWrap"><p>Last inn detaljert guide</p><button class="btn-ai" id="aiBtn">Vis guide</button><div class="loading-wrap" id="aiLoader"><div class="spinner"></div><span>Laster...</span></div></div><div class="content-card" id="aiContent" style="display:none"></div>
+    <div class="content-card">```html
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drivstoffkostnadskalkulator – Spar penger på veien</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            max-width: 860px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            color: #1a1a1a;
+            background: #fafafa;
+        }
+        h2 {
+            border-bottom: 3px solid #2b7a4b;
+            padding-bottom: 0.3rem;
+            margin-top: 2.5rem;
+            color: #0b3b2b;
+        }
+        h3 {
+            margin-top: 1.8rem;
+            color: #1e5631;
+        }
+        p {
+            margin: 1rem 0;
+        }
+        ul {
+            padding-left: 1.8rem;
+        }
+        li {
+            margin: 0.5rem 0;
+        }
+        strong {
+            color: #1e3c2b;
+        }
+        .highlight-box {
+            background: #e6f2ec;
+            padding: 1.2rem 1.5rem;
+            border-left: 5px solid #2b7a4b;
+            border-radius: 0 8px 8px 0;
+            margin: 1.8rem 0;
+        }
+        .faq-item {
+            background: white;
+            padding: 1rem 1.3rem;
+            margin: 1.2rem 0;
+            border-radius: 12px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        }
+        .faq-item h3 {
+            margin-top: 0;
+        }
+        code {
+            background: #eaeaea;
+            padding: 0.1rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.95rem;
+        }
+        .example-table {
+            background: white;
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            border: 1px solid #d0e0d6;
+        }
+        @media (max-width: 600px) {
+            body { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<h2>Hva er en drivstoffkostnadskalkulator?</h2>
+<p>En <strong>drivstoffkostnadskalkulator</strong> er et digitalt verktøy – ofte tilgjengelig som nettapp, mobilapp eller innebygd i ruteplanleggere – som beregner hvor mye penger du bruker på bensin, diesel, strøm eller andre drivstofftyper for en gitt kjøretur. Ved å taste inn parametere som kjørelengde, forbruk per mil eller kilometer, og gjeldende drivstoffpris, gir kalkulatoren et presis kostnadsanslag. Mange avanserte versjoner tar også hensyn til kjørestil, vekt, veiforhold og til og med ladestopp for elbiler. En <strong>drivstoffkostnadskalkulator</strong> kan være like enkel som et regneark eller så sofistikert som en integrert del av en flåtestyringsplattform. Uansett formål er målet det samme: å gjøre deg bevisst på hva hver kilometer faktisk koster.</p>
+
+<h2>Hvorfor er en drivstoffkostnadskalkulator viktig?</h2>
+<p>I en tid med svingende drivstoffpriser og økt fokus på bærekraft, er det å ha kontroll på drivstoffutgiftene avgjørende – både for privatpersoner og bedrifter. Her er noen grunner til at en <strong>drivstoffkostnadskalkulator</strong> er mer enn bare en gimmick:</p>
+<ul>
+    <li><strong>Budskapskontroll:</strong> Du får et øyeblikksbilde av hvor mye en reise faktisk koster, slik at du kan ta informerte valg – for eksempel om du bør kjøre eller ta toget.</li>
+    <li><strong>Sammenligning av kjøretøy:</strong> Vurderer du å bytte til en mer drivstoffeffektiv bil? Kalkulatoren viser tydelig forskjellen i kostnad per mil.</li>
+    <li><strong>Ruteoptimalisering:</strong> Noen kalkulatorer lar deg sammenligne ulike ruter (kortere vs. raskere) og dermed velge den mest økonomiske.</li>
+    <li><strong>Bedriftsøkonomi:</strong> For varebiler, drosjer eller lastebiler utgjør drivstoff ofte 20–30 % av driftskostnadene. En nøyaktig kalkulator hjelper med prising, fakturering og kostnadsrapportering.</li>
+    <li><strong>Miljøbevissthet:</strong> Lavere drivstofforbruk betyr færre utslipp. Når du ser kostnaden, blir du også motivert til å kjøre mer økonomisk.</li>
+</ul>
+<p>Kort sagt: Uten en <strong>drivstoffkostnadskalkulator</strong> kjører du i blinde. Med den får du full kontroll over en av de største variable kostnadene ved bilhold.</p>
+
+<h2>Slik bruker du en drivstoffkostnadskalkulator</h2>
+<p>De fleste kalkulatorer følger en enkel, intuitiv prosess. Slik går du frem i tre steg:</p>
+<ul>
+    <li><strong>Steg 1 – Samle grunnleggende data:</strong> Du trenger kjørelengde (i kilometer), bilens gjennomsnittlige forbruk (liter per mil eller kWh per mil) og gjeldende pris per liter/kWh. For elbiler kan du også oppgi ladetap (typisk 5–15 %).</li>
+    <li><strong>Steg 2 – Legg inn i kalkulatoren:</strong> De fleste nettbaserte verktøy har klare felt for disse verdiene. Noen lar deg også legge til antall passasjerer eller ekstra last, men grunnberegningen er alltid den samme.</li>
+    <li><strong>Steg 3 – Les resultatet:</strong> Kalkulatoren viser total kostnad for turen, ofte også kostnad per kilometer eller per mil. Mange gir også en sammenligning med andre drivstofftyper eller en estimert CO₂-utslipp.</li>
+</ul>
+<p>For å få mest mulig nøyaktige resultater bør du bruke bilens faktiske forbruk (hentet fra måleren eller OBD-II) i stedet for oppgitt WLTP-verdi. En god <strong>drivstoffkostnadskalkulator</strong> lar deg også lagre profiler for ulike biler.</p>
+
+<h2>Formel med eksempel</h2>
+<p>Den matematiske formelen bak en <strong>drivstoffkostnadskalkulator</strong> er rett frem. For bensin-/dieselbiler:</p>
+<div class="highlight-box">
+    <p><strong>Kostnad = (Kjørelengde i km / 10) × Forbruk (l/mil) × Pris per liter</strong></p>
+    <p>Eller direkte: <strong>Kostnad = (km × forbruk l/km) × literpris</strong></p>
+</div>
+<p><strong>Eksempel:</strong> Du skal kjøre 340 km. Bilen din bruker 0,72 liter per mil (tilsvarer 7,2 l/100 km). Prisen på bensin er 21,50 kr/l. Beregningen blir:</p>
+<p>(340 km / 10) = 34 mil → 34 mil × 0,72 l/mil = 24,48 liter → 24,48 l × 21,50 kr = <strong>526,32 kr</strong>.</p>
+<p>For elbiler: <strong>Kostnad = (km × forbruk kWh/km) × strømpris per kWh</strong>. Hvis du kjører 340 km, bruker 0,20 kWh/km og strømmen koster 1,20 kr/kWh (inkl. ladetap), blir regnestykket: 340 × 0,20 = 68 kWh → 68 × 1,20 = <strong>81,60 kr</strong>. Forskjellen er dramatisk – og viser hvorfor en <strong>drivstoffkostnadskalkulator</strong> er så nyttig for å sammenligne teknologier.</p>
+
+<h2>Praktiske eksempler</h2>
+<div class="example-table">
+    <h3>Eksempel 1: Familieferie med dieselbil</h3>
+    <p>En familie på fire kjører fra Oslo til Bergen (t/r 930 km). Bilen bruker 0,65 l/mil, dieselpris 19,80 kr/l. <strong>Drivstoffkostnadskalkulator</strong> viser: 930 km = 93 mil → 93 × 0,65 = 60,45 l → 60,45 × 19,80 = <strong>1 196,91 kr</strong>. Kostnaden per person blir ca. 300 kr – nyttig når dere skal fordele utgifter.</p>
+    
+    <h3>Eksempel 2: Daglig pendling med elbil</h3>
+    <p>Du pendler 48 km hver dag (20 dager i måneden = 960 km). Elbilen bruker 0,18 kWh/km, strømpris 1,10 kr/kWh. Månedskostnad: 960 × 0,18 = 172,8 kWh → 172,8 × 1,10 = <strong>190,08 kr</strong>. Til sammenligning ville en bensinbil koste over 1500 kr. Kalkulatoren viser tydelig besparelsen.</p>
+    
+    <h3>Eksempel 3: Varebil i distribusjon</h3>
+    <p>Et budfirma kjører 2200 km per uke med en dieselvarebil som bruker 0,92 l/mil. Dieselpris 19,50 kr/l. Ukentlig kostnad: 2200 km = 220 mil → 220 × 0,92 = 202,4 l → 202,4 × 19,50 = <strong>3 946,80 kr</strong>. Med en <strong>drivstoffkostnadskalkulator</strong> kan firmaet simulere effekten av å bytte til en hybridbil med 0,55 l/mil – en potensiell besparelse på over 1600 kr per uke.</p>
+</div>
+
+<h2>Tips for å få mest ut av kalkulatoren</h2>
+<ul>
+    <li><strong>Oppdater alltid prisen:</strong> Drivstoffpriser endres ukentlig. Bruk dagens pris eller et gjennomsnitt for din region.</li>
+    <li><strong>Bruk faktisk forbruk:</strong> Bilens måler viser reelt forbruk. WLTP-tall er ofte lavere enn virkeligheten, spesielt om vinteren eller ved tung last.</li>
+    <li><strong>Inkluder ladetap for elbil:</strong> Legg til 10–15 % for å få reell strømkostnad.</li>
+    <li><strong>Sammenlign flere scenarier:</strong> Prøv ulike hastigheter, ruter eller biler. En god <strong>drivstoffkostnadskalkulator</strong> lar deg lagre scenarioer.</li>
+    <li><strong>Bruk den til å sette budsjett:</strong> Beregn månedlige kjørekostnader og sammenlign med andre faste utgifter.</li>
+    <li><strong>Ikke glem bompenger og slitasje:</strong> Noen kalkulatorer inkluderer disse – men rene drivstoffkalkulatorer fokuserer kun på energikostnaden.</li>
+</ul>
+
+<h2>FAQ – Ofte stilte spørsmål om drivstoffkostnadskalkulator</h2>
+
+<div class="faq-item">
+    <h3>1. Hvor nøyaktig er en drivstoffkostnadskalkulator?</h3>
+    <p>Nøyaktigheten avhenger av dataene du mater inn. Hvis du</div>
     <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/ev-besparelseskalkulator'"><span class="tool-card-icon">🌱</span><h3>EV Besparelseskalkulator</h3><p>Beregn besparelser med elbil vs bensinbil</p></div><div class="tool-card" onclick="location='/verktoy/ladeberegner-elbil'"><span class="tool-card-icon">🌱</span><h3>Ladeberegner for Elbil</h3><p>Beregn ladetid og kostnad for elbil</p></div><div class="tool-card" onclick="location='/verktoy/karbonfotavtrykk-kalkulator'"><span class="tool-card-icon">🌱</span><h3>Karbonfotavtrykk Kalkulator</h3><p>Beregn ditt personlige karbonfotavtrykk</p></div><div class="tool-card" onclick="location='/verktoy/bilens-karbonfotavtrykk'"><span class="tool-card-icon">🌱</span><h3>Bilens Karbonfotavtrykk Kalkulator</h3><p>Beregn CO2 utslipp fra bilkjøring</p></div><div class="tool-card" onclick="location='/verktoy/solcellekalkulator'"><span class="tool-card-icon">🌱</span><h3>Solcellekalkulator</h3><p>Beregn solcellekapasitet og besparelse</p></div><div class="tool-card" onclick="location='/verktoy/kjørelengde-kalkulator'"><span class="tool-card-icon">🌱</span><h3>Kjørelengdekalkulator</h3><p>Beregn kjørelengde og drivstofforbruk</p></div><div class="tool-card" onclick="location='/verktoy/flyreise-karbonfotavtrykk'"><span class="tool-card-icon">🌱</span><h3>Flyreise Karbonfotavtrykk Kalkulator</h3><p>Beregn CO2 utslipp fra flyreiser</p></div><div class="tool-card" onclick="location='/verktoy/akvarium-kalkulator'"><span class="tool-card-icon">🌱</span><h3>Akvarium Kalkulator</h3><p>Beregn akvarium volum og fiskekapasitet</p></div><div class="tool-card" onclick="location='/verktoy/vpd-kalkulator'"><span class="tool-card-icon">🌱</span><h3>VPD Kalkulator</h3><p>Beregn Vapour Pressure Deficit for planter</p></div><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/kalorikalkulator'"><span class="tool-card-icon">❤️</span><h3>Kalorikalkulator</h3><p>Beregn daglig kaloriinntak med BMR, TDEE og makrofordeling</p></div><div class="tool-card" onclick="location='/verktoy/idealvekt-kalkulator'"><span class="tool-card-icon">❤️</span><h3>Idealvekt Kalkulator</h3><p>Finn din idealvekt med flere metoder og helseområder</p></div><div class="tool-card" onclick="location='/kategori/okologi'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle Økologi</h3><p>Alle kalkulatorer i denne kategorien</p></div></div></div>
     <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/lan-kalkulator'"><span class="tool-card-icon">💰</span><h3>Lån Kalkulator</h3><p>Beregn månedlige låneavdrag med nedbetalingsoversikt</p></div><div class="tool-card" onclick="location='/verktoy/prosent-kalkulator'"><span class="tool-card-icon">📐</span><h3>Prosent Kalkulator</h3><p>Beregn prosent med flere metoder og sammenligninger</p></div><div class="tool-card" onclick="location='/verktoy/temperatur-konvertering'"><span class="tool-card-icon">🔄</span><h3>Temperatur Konvertering</h3><p>Konverter temperatur mellom alle enheter</p></div><div class="tool-card" onclick="location='/verktoy/areal-kalkulator'"><span class="tool-card-icon">📏</span><h3>Areal Kalkulator</h3><p>Beregn areal av ulike former med enheter</p></div><div class="tool-card" onclick="location='/verktoy/alder-kalkulator'"><span class="tool-card-icon">📅</span><h3>Alder Kalkulator</h3><p>Beregn nøyaktig alder med sammenligning og statistikk</p></div></div></div>
   </div>
