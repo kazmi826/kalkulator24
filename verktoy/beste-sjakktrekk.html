@@ -38,7 +38,142 @@
 <div class="main-wrap">
   <div class="main-content">
     <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>Brikke</label><div class="input-row"><select class="calc-input" data-field="pieces"><option value="Bonde">Bonde</option><option value="Tårn">Tårn</option><option value="Løper">Løper</option><option value="Springer">Springer</option><option value="Dronning">Dronning</option><option value="Konge">Konge</option></select></div></div><div class="input-group"><label>Posisjon</label><div class="input-row"><select class="calc-input" data-field="position"><option value="Åpning">Åpning</option><option value="Midtspill">Midtspill</option><option value="Sluttspill">Sluttspill</option></select></div></div></div>    <button class="btn-calc" onclick="runCalculator('chess_calc')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
-    <div class="ai-loader" id="aiWrap"><p>Last inn detaljert guide</p><button class="btn-ai" id="aiBtn">Vis guide</button><div class="loading-wrap" id="aiLoader"><div class="spinner"></div><span>Laster...</span></div></div><div class="content-card" id="aiContent" style="display:none"></div>
+    <div class="content-card">```html
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beste Sjakktrekk Kalkulator – Guide og Verktøy</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            max-width: 860px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            background: #f9f8f6;
+            color: #1e1e1e;
+        }
+        h2 {
+            border-left: 5px solid #2b6e4f;
+            padding-left: 1rem;
+            margin-top: 2.5rem;
+            color: #1f3b2c;
+        }
+        h3 {
+            margin-top: 1.8rem;
+            color: #2d5a3d;
+        }
+        p {
+            margin: 1rem 0;
+        }
+        ul {
+            padding-left: 1.8rem;
+            margin: 1rem 0;
+        }
+        li {
+            margin-bottom: 0.4rem;
+        }
+        strong {
+            color: #1f4a2e;
+        }
+        .faq-item {
+            background: #ffffff;
+            border: 1px solid #dde5dd;
+            border-radius: 12px;
+            padding: 1rem 1.5rem;
+            margin: 1.2rem 0;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+        }
+        .faq-item p {
+            margin: 0.4rem 0 0 0;
+        }
+        .highlight {
+            background: #eaf3eb;
+            padding: 0.1rem 0.3rem;
+            border-radius: 4px;
+        }
+        hr {
+            margin: 2rem 0;
+            border: 0;
+            border-top: 2px dashed #cbd9ce;
+        }
+        .formel-boks {
+            background: #f0f5f1;
+            padding: 1rem 1.5rem;
+            border-radius: 14px;
+            border-left: 4px solid #2b6e4f;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Hva er en sjakktrekk-kalkulator?</h2>
+<p>En <strong>beste sjakktrekk kalkulator</strong> er et digitalt verktøy som analyserer en sjakkposisjon og foreslår det sterkeste trekket basert på algoritmer, åpningsteori, slutspilltabeller og dyp beregning. I motsetning til enkel sjakkmotor, er denne kalkulatoren ofte spesialisert på å gi et raskt, men presist svar – perfekt for både nybegynnere og klubbspillere som vil forstå <em>hvorfor</em> et bestemt trekk er best.</p>
+<p>Verktøyet kombinerer evalueringsfunksjoner (materiale, brikkeaktivitet, kongesikkerhet) med moderne nevrale nettverk. Mange av de <strong>beste sjakktrekk kalkulator</strong>-løsningene i dag er tilgjengelige som nettapper eller innebygd i sjakkplattformer, og de oppdaterer seg kontinuerlig med nye åpningsvarianter.</p>
+
+<h2>Hvorfor er en sjakktrekk-kalkulator viktig?</h2>
+<p>Sjakk er et spill med uendelige muligheter, og selv erfarne spillere overser kritiske varianter. En <strong>beste sjakktrekk kalkulator</strong> gir deg:</p>
+<ul>
+    <li><strong>Objektiv evaluering</strong> – ingen følelser eller tretthet påvirker analysen.</li>
+    <li><strong>Tidsbesparelse</strong> – i stedet for å gruble i 20 minutter, får du et pålitelig forslag på sekunder.</li>
+    <li><strong>Læringseffekt</strong> – du ser hvorfor et trekk er bedre enn alternativene, ofte med forklarende linjer.</li>
+    <li><strong>Forbedret beslutningstaking</strong> – spesielt i kompliserte mellomspill og taktiske stillinger.</li>
+</ul>
+<p>For trenere og foreldre er kalkulatoren et pedagogisk verktøy som viser nyansene i stillingen. Uten en <strong>beste sjakktrekk kalkulator</strong> er man overlatt til intuisjon og begrenset kunnskap – noe som ofte fører til feil i kritiske øyeblikk.</p>
+
+<h2>Slik bruker du en sjakktrekk-kalkulator</h2>
+<p>De fleste <strong>beste sjakktrekk kalkulator</strong>-verktøy har en enkel arbeidsflyt. Følg disse trinnene:</p>
+<ol style="list-style-type: decimal; padding-left: 2rem; margin: 1rem 0;">
+    <li><strong>Legg inn posisjonen</strong> – enten ved å dra brikker på et virtuelt brett, lime inn FEN-streng, eller velge et parti fra databasen.</li>
+    <li><strong>Velg dybde/nivå</strong> – for raske svar velg grunnanalyse (dybde 12–16), for grundig vurdering velg dybde 20+.</li>
+    <li><strong>Klikk "Beregn"</strong> – motoren jobber og viser det beste trekket med evaluering (f.eks. +0.8 betyr hvit fordel).</li>
+    <li><strong>Studer forslaget</strong> – se på hovedvarianten og alternative trekk. Mange kalkulatorer viser også enkle forklaringer.</li>
+    <li><strong>Gjenta ved behov</strong> – etter hvert trekk kan du oppdatere posisjonen og kjøre på nytt.</li>
+</ol>
+<p>Avanserte brukere kan justere parametere som kontempt (motstanderens antatte styrke) eller spesifikke åpningsfiltre. De <strong>beste sjakktrekk kalkulator</strong>-appene har også talestyring og integrasjon med sjakkbrett.</p>
+
+<h2>Formel med eksempel</h2>
+<p>En sjakktrekk-kalkulator bruker ikke én enkel formel, men en vektet evalueringsfunksjon. En forenklet versjon ser slik ut:</p>
+<div class="formel-boks">
+    <strong>Evalueringsverdi = (Materiale × vekt₁) + (Bonde struktur × vekt₂) + (Konge-sikkerhet × vekt₃) + (Brikkeaktivitet × vekt₄) + (Taktiske trusler × vekt₅)</strong>
+</div>
+<p><strong>Eksempel (menneskelig forenklet):</strong><br>
+Hvit har dronning + tårn (9+5=14), svart har dronning + springer (9+3=12). Materiale = +2. Bondestruktur: svart har dobbeltbonde (straff -0.3). Kongesikkerhet: svart konge står åpen (straff -0.5). Brikkeaktivitet: hvits offiserer er mer sentralisert (fordel +0.4). Taktiske trusler: hvit truer sjakk matt i 2 trekk (tillegg +1.0).<br>
+<strong>Total = +2 -0.3 -0.5 +0.4 +1.0 = +2.6</strong> – hvit har klar fordel, og den <strong>beste sjakktrekk kalkulator</strong> vil foreslå et trekk som utnytter matt-trusselen.</p>
+<p>I virkeligheten bruker kalkulatorer millioner av beregninger per sekund og alpha-beta pruning for å finne det optimale trekket. Men den underliggende logikken er alltid en vektet vurdering av stillingsfaktorer.</p>
+
+<h2>Praktiske eksempler</h2>
+<h3>Eksempel 1: Åpningsfelle (Italiensk)</h3>
+<p>Stilling: 1.e4 e5 2.Sf3 Sc6 3.Lc4 Lc5 4.c3 Sf6 5.d4 exd4 6.cxd4 Lb4+ 7.Ld2 Lxd2+ 8.Sbxd2 d5 9.exd5 Sxd5 10.Db3 Sce7?<br>
+Her er svarts siste trekk en tabbe. En <strong>beste sjakktrekk kalkulator</strong> finner umiddelbart 11.0-0! med trussel om Lxd5 og vinst av bonde. Hvis 11...0-0 12.Lxd5 Dxd5?? 13.Dxd5 Sxd5 14.Te1 og hvit vinner en offiser. Kalkulatoren viser at 11.0-0 gir +1.8 fordel.</p>
+
+<h3>Eksempel 2: Mellomspill (kombinasjon)</h3>
+<p>Stilling: Hvit har Te1, Dd2, Lf4, bønder på e5, f3. Svart har Dc7, Td8, Ld6, bønder på e6, f7. Det er svarts tur. Den <strong>beste sjakktrekk kalkulator</strong> foreslår 1...Lxf4! (ofrer løperen) 2.Dxf4 Dxe5 3.Txe5?? (taper) 3...Td1+ og matt. Kalkulatoren viser at 2.Dxf4 er tvunget, men etter 2...Dxe5 har svart vunnet en bonde og initiativ. Evalueringsverdi: -1.2 for hvit.</p>
+
+<h3>Eksempel 3: Sluttspill (kongebonde mot konge)</h3>
+<p>Konger på e4 og e6, bonde på d5 (hvit). Hvit i trekket. En <strong>beste sjakktrekk kalkulator</strong> regner ut at 1.d6! vinner fordi svart ikke kan hindre bondens forvandling. Hvis 1...Kxd6 2.Kf5 og hvit vinner bonden og partiet. Kalkulatoren viser +5.0 for hvit.</p>
+
+<h2>Tips for å få mest mulig ut av kalkulatoren</h2>
+<ul>
+    <li><strong>Bruk alltid oppdatert programvare</strong> – de <strong>beste sjakktrekk kalkulator</strong>-verktøyene oppdateres med nye åpningsdatabaser og forbedret nevralt nettverk.</li>
+    <li><strong>Kombiner med egen tenkning</strong> – la kalkulatoren foreslå, men prøv å forstå hvorfor trekket er best. Det styrker din strategiske forståelse.</li>
+    <li><strong>Still inn dybde etter tid</strong> – til lynsjakk bruk dybde 12–14, til langsjakk dybde 20+.</li>
+    <li><strong>Sjekk alternative trekk</strong> – noen ganger finnes det flere gode trekk. Kalkulatoren viser ofte topp 3 forslag.</li>
+    <li><strong>Lagre posisjoner</strong> – bruk FEN-kopier for å gå tilbake til interessante stillinger.</li>
+    <li><strong>Ikke stol blindt på evalueringen</strong> – i svært kompliserte stillinger kan kalkulatoren overse langsiktige planer. Bruk sunn fornuft.</li>
+</ul>
+
+<hr>
+
+<h2>FAQ – Ofte stilte spørsmål</h2>
+
+<div class="faq-item">
+    <h3>1. Hva er forskjellen på en sjakkmotor og en sjakktrekk-kalkulator?</h3>
+    <p>En sjakkmotor (som Stockfish) er et analyseverktøy for dyp beregning, mens en <strong>beste sjakktrekk kalkulator</strong> ofte er en forenklet, brukervennlig app som raskt</div>
     <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/blox-fruits-kalkulator'"><span class="tool-card-icon">🎮</span><h3>Blox Fruits Kalkulator</h3><p>Beregn Blox Fruits mastery XP</p></div><div class="tool-card" onclick="location='/verktoy/dnd-poengkjop'"><span class="tool-card-icon">🎮</span><h3>D&D 5e Poengkjøps Kalkulator</h3><p>Beregn D&D 5e poengkjøp for stats</p></div><div class="tool-card" onclick="location='/verktoy/palworld-avl'"><span class="tool-card-icon">🎮</span><h3>Palworld Avls Kalkulator</h3><p>Beregn Palworld avl nivå</p></div><div class="tool-card" onclick="location='/verktoy/minecraft-kalkulator'"><span class="tool-card-icon">🎮</span><h3>Minecraft Kalkulator</h3><p>Beregn Minecraft materialer</p></div><div class="tool-card" onclick="location='/verktoy/osrs-kalkulator'"><span class="tool-card-icon">🎮</span><h3>OSRS Kalkulator</h3><p>Beregn OSRS XP til neste nivå</p></div><div class="tool-card" onclick="location='/verktoy/minecraft-sirkel'"><span class="tool-card-icon">🎮</span><h3>Minecraft Sirkelgenerator</h3><p>Beregn Minecraft sirkel blokker</p></div><div class="tool-card" onclick="location='/verktoy/elden-ring-bygg'"><span class="tool-card-icon">🎮</span><h3>Elden Ring Byggekalkulator</h3><p>Beregn Elden Ring runer til nivå</p></div><div class="tool-card" onclick="location='/verktoy/nether-portal'"><span class="tool-card-icon">🎮</span><h3>Nether Portal Kalkulator</h3><p>Beregn Nether portal koordinater</p></div><div class="tool-card" onclick="location='/verktoy/clash-of-clans'"><span class="tool-card-icon">🎮</span><h3>Clash of Clans Kalkulator</h3><p>Beregn Clash of Clans oppgraderingstid</p></div><div class="tool-card" onclick="location='/verktoy/chocobo-farge'"><span class="tool-card-icon">🎮</span><h3>Chocobo Farge Kalkulator</h3><p>Beregn Chocobo fargeavl</p></div><div class="tool-card" onclick="location='/verktoy/dots-kalkulator'"><span class="tool-card-icon">🎮</span><h3>DOTS Kalkulator</h3><p>Beregn DOTS cm/360°</p></div><div class="tool-card" onclick="location='/verktoy/diablo3-edelsten'"><span class="tool-card-icon">🎮</span><h3>Diablo 3 Edelstens Kalkulator</h3><p>Beregn Diablo 3 edelsten materialer</p></div><div class="tool-card" onclick="location='/kategori/spill'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle Spill</h3><p>Alle kalkulatorer i denne kategorien</p></div></div></div>
     <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/lan-kalkulator'"><span class="tool-card-icon">💰</span><h3>Lån Kalkulator</h3><p>Beregn månedlige låneavdrag med nedbetalingsoversikt</p></div><div class="tool-card" onclick="location='/verktoy/prosent-kalkulator'"><span class="tool-card-icon">📐</span><h3>Prosent Kalkulator</h3><p>Beregn prosent med flere metoder og sammenligninger</p></div><div class="tool-card" onclick="location='/verktoy/temperatur-konvertering'"><span class="tool-card-icon">🔄</span><h3>Temperatur Konvertering</h3><p>Konverter temperatur mellom alle enheter</p></div><div class="tool-card" onclick="location='/verktoy/areal-kalkulator'"><span class="tool-card-icon">📏</span><h3>Areal Kalkulator</h3><p>Beregn areal av ulike former med enheter</p></div><div class="tool-card" onclick="location='/verktoy/alder-kalkulator'"><span class="tool-card-icon">📅</span><h3>Alder Kalkulator</h3><p>Beregn nøyaktig alder med sammenligning og statistikk</p></div></div></div>
   </div>

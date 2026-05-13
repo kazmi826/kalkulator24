@@ -38,7 +38,103 @@
 <div class="main-wrap">
   <div class="main-content">
     <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>Edelstennivå</label><div class="input-row"><input type="number" class="calc-input" data-field="gem_level" placeholder="50"></div></div><div class="input-group"><label>Edelstentype</label><div class="input-row"><select class="calc-input" data-field="gem_type"><option value="Ruby">Ruby</option><option value="Emerald">Emerald</option><option value="Topaz">Topaz</option><option value="Amethyst">Amethyst</option><option value="Diamond">Diamond</option></select></div></div></div>    <button class="btn-calc" onclick="runCalculator('diablo3_gem')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
-    <div class="ai-loader" id="aiWrap"><p>Last inn detaljert guide</p><button class="btn-ai" id="aiBtn">Vis guide</button><div class="loading-wrap" id="aiLoader"><div class="spinner"></div><span>Laster...</span></div></div><div class="content-card" id="aiContent" style="display:none"></div>
+    <div class="content-card">```html
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diablo 3 Edelstens Kalkulator – komplett guide</title>
+    <style>
+        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.7; max-width: 920px; margin: 2rem auto; padding: 0 1.5rem; color: #1e1e2f; background: #f9fafc; }
+        h2 { border-left: 6px solid #b8860b; padding-left: 1rem; margin-top: 2.8rem; color: #1e2a3a; }
+        h3 { margin-top: 2rem; color: #2c3e50; }
+        p { margin: 1rem 0; }
+        ul, ol { margin: 0.8rem 0 1.5rem 1.8rem; }
+        li { margin: 0.4rem 0; }
+        strong { color: #b22222; }
+        .highlight { background: #f1e8d9; padding: 0.2rem 0.4rem; border-radius: 4px; font-weight: 600; }
+        .faq-item { background: white; border-radius: 12px; padding: 1rem 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.04); margin: 1.2rem 0; }
+        .faq-item p { margin: 0.3rem 0; }
+        .exempel-box { background: #eef3f7; padding: 1.2rem 1.6rem; border-radius: 18px; margin: 1.8rem 0; border: 1px solid #d0dbe8; }
+        code { background: #2d2d44; color: #f0e68c; padding: 0.2rem 0.6rem; border-radius: 6px; font-size: 0.95rem; }
+        .kalkulator-note { background: #fff3e0; border-left: 5px solid #ff9800; padding: 1rem 1.5rem; border-radius: 12px; margin: 2rem 0; }
+        @media (max-width: 600px) { body { padding: 0 1rem; } }
+    </style>
+</head>
+<body>
+
+    <!-- Introduksjon -->
+    <h2>Hva er en Diablo 3 Edelstens Kalkulator?</h2>
+    <p>En <strong>diablo 3 edelstens kalkulator</strong> er et verktøy (ofte et webbasert skjema, regneark eller innebygd app) som hjelper deg å beregne nøyaktig hvor mange edelstener og kombinasjonsforsøk du trenger for å oppgradere en edelsten fra et gitt nivå til et ønsket nivå i <em>Diablo 3</em>. I spillet kan du oppgradere legendariske edelstener via <strong>Urshi</strong> i større rift-portaler, men prosessen krever planlegging – særlig når sannsynligheten for suksess synker på høye nivåer.</p>
+    <p>Kalkulatoren tar hensyn til <strong>oppgraderingssjanse</strong>, <strong>nåværende nivå</strong>, <strong>målnivå</strong> og hvor mange ganger du må kjøre Greater Rifts (eller bruke edelstener som materiale). Den mest avanserte varianten av en <strong>diablo 3 edelstens kalkulator</strong> inkluderer også «safety margin» og forventet antall forsøk basert på statistikk.</p>
+    
+    <div class="kalkulator-note">
+        <strong>💎 Visste du?</strong> I Diablo 3 kan du oppgradere en edelsten maksimalt til nivå 150 (per 2025). Sjansen for oppgradering synker med 10 % per nivå over 60, og kalkulatoren hjelper deg å unngå sløsing med edelstener.
+    </div>
+
+    <!-- Hvorfor viktig -->
+    <h2>Hvorfor er en edelstens kalkulator viktig?</h2>
+    <p>Å oppgradere edelstener i Diablo 3 er både tidkrevende og ressurskrevende. Uten en <strong>diablo 3 edelstens kalkulator</strong> risikerer du å:</p>
+    <ul>
+        <li><strong>Bruke for mange edelstener</strong> – du trenger ofte 3 like edelstener for å prøve en oppgradering, og ved feil mister du dem.</li>
+        <li><strong>Overskride nødvendig antall Greater Rifts</strong> – hver oppgradering krever at du fullfører en rift, og kalkulatoren viser hvor mange kjøringer du faktisk trenger.</li>
+        <li><strong>Miste motivasjon</strong> – å satse blindt på oppgraderinger med lav sjanse kan føre til frustrasjon. Kalkulatoren gir realistiske forventninger.</li>
+        <li><strong>Sløse med tid</strong> – ved å vite nøyaktig hvor mange edelstener du må samle, kan du fokusere på farming i stedet for gjetting.</li>
+    </ul>
+    <p>Spesielt for <strong>«season players»</strong> og <strong>«hardcore»-spillere</strong> er en <strong>diablo 3 edelstens kalkulator</strong> nesten uunnværlig. Den lar deg optimalisere ressursbruken og nå høyere nivåer på en forutsigbar måte.</p>
+
+    <!-- Slik bruker du -->
+    <h2>Slik bruker du en Diablo 3 Edelstens Kalkulator</h2>
+    <p>De fleste kalkulatorer følger samme logikk. Slik går du frem:</p>
+    <ol>
+        <li><strong>Finn en pålitelig kalkulator</strong> – søk etter «diablo 3 edelstens kalkulator» på nettet, eller bruk en kjent community-ressurs som <em>d3planner</em> eller <em>maxroll.gg</em>.</li>
+        <li><strong>Skriv inn nåværende nivå</strong> – for eksempel nivå 80.</li>
+        <li><strong>Skriv inn ønsket nivå</strong> – for eksempel nivå 100.</li>
+        <li><strong>Angi om du bruker «empowered»-oppgraderinger</strong> (ekstra sjanse via forbruk av edelstener) eller standard.</li>
+        <li><strong>Kalkulatoren viser</strong>:
+            <ul>
+                <li>Antall edelstener som kreves (inkludert tap ved feil).</li>
+                <li>Forventet antall forsøk (oppgraderingsforsøk).</li>
+                <li>Antall Greater Rifts du må kjøre (hvis du ikke har edelstener på lager).</li>
+                <li>Sannsynlighet for å lykkes innen et gitt antall forsøk.</li>
+            </ul>
+        </li>
+    </ol>
+    <p>Noen kalkulatorer har også en <strong>«batch mode»</strong> der du kan legge inn flere edelstener samtidig. Uansett hvilken du velger, sørg for at den støtter <strong>sannsynlighetsberegning</strong> – ikke bare enkel divisjon.</p>
+
+    <!-- Formel med eksempel -->
+    <h2>Formel med eksempel – matematikken bak kalkulatoren</h2>
+    <p>En <strong>diablo 3 edelstens kalkulator</strong> bruker i praksis en kombinasjon av <strong>geometrisk sannsynlighet</strong> og <strong>forventningsverdi</strong>. Her er den underliggende formelen for forventet antall forsøk:</p>
+    <div class="exempel-box">
+        <p><strong>Formel:</strong> <code>Forventet forsøk = 1 / oppgraderingssjanse</code> (per nivå)</p>
+        <p><strong>Men</strong> – fordi du trenger 3 edelstener per forsøk, blir <strong>forventet antall edelstener</strong> = <code>3 × (1 / sjanse)</code> per nivå.</p>
+    </div>
+    <p><strong>Eksempel:</strong> Du vil oppgradere en edelsten fra nivå 90 til 91. Sjansen ved nivå 90 er 40 % (0,4). Forventet antall forsøk = 1 / 0,4 = 2,5. Forventet antall edelstener = 3 × 2,5 = 7,5. Siden du ikke kan bruke halve edelstener, runder du opp til 8. Men dette er kun for <strong>ett nivå</strong>. For å gå fra nivå 90 til 100 må du summere forventningen for hvert nivå, fordi sjansen synker.</p>
+    <p>La oss ta en mer komplett kalkulasjon for nivå 90 → 100:</p>
+    <ul>
+        <li>Nivå 90: sjanse 40 % → forventet 2,5 forsøk → 7,5 edelstener.</li>
+        <li>Nivå 91: sjanse 39 % → 2,56 forsøk → 7,69 edelstener.</li>
+        <li>Nivå 92: sjanse 38 % → 2,63 forsøk → 7,89 edelstener.</li>
+        <li>… og så videre ned til nivå 100 med sjanse 30 %.</li>
+    </ul>
+    <p>En <strong>diablo 3 edelstens kalkulator</strong> summerer alt automatisk og gir deg et presist tall. I eksempelet over vil totalen være omtrent <strong>85–95 edelstener</strong> avhengig av om du runder opp eller bruker streng forventning.</p>
+
+    <!-- Praktiske eksempler -->
+    <h2>Praktiske eksempler fra spillet</h2>
+    <p>Her er tre scenarioer der en <strong>diablo 3 edelstens kalkulator</strong> redder dagen:</p>
+    
+    <h3>Eksempel 1: Push build – fra nivå 120 til 130</h3>
+    <p>Du spiller en <strong>Wizard</strong> og trenger <em>Bane of the Stricken</em> på nivå 130 for å maksimere skade mot sjefer. Uten kalkulator ville du kanskje trodd at 30 edelstener er nok. Kalkulatoren viser at du trenger omtrent 140 edelstener og 45–50 Greater Rifts. Du justerer forventningene og farmet smartere.</p>
+    
+    <h3>Eksempel 2: Sesongstart – oppgradering av <em>Legacy of Dreams</em></h3>
+    <p>Du har en edelsten på nivå 25 og vil ha den til 50. Kalkulatoren sier: <strong>10 edelstener</strong> (siden sjansen er høy på lave nivåer). Du sparer tid ved å ikke samle overflødige edelstener.</p>
+    
+    <h3>Eksempel 3: Hardcore – minimere risiko</h3>
+    <p>På hardcore ønsker du å redusere antall turer til Urshi for å unngå død. Kalkulatoren viser at du kan <strong>«empower»</strong> hver oppgradering med ekstra edelstener for å øke sjansen. Du velger å bruke 3 ekstra edelstener per forsøk for å øke sjansen fra 30 % til 60 %, noe som halverer antall forsøk. Kalkulatoren hjelper deg å velge riktig strategi.</p>
+
+    <!-- Tips -->
+    <h2>Tips for å bru</div>
     <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/blox-fruits-kalkulator'"><span class="tool-card-icon">🎮</span><h3>Blox Fruits Kalkulator</h3><p>Beregn Blox Fruits mastery XP</p></div><div class="tool-card" onclick="location='/verktoy/dnd-poengkjop'"><span class="tool-card-icon">🎮</span><h3>D&D 5e Poengkjøps Kalkulator</h3><p>Beregn D&D 5e poengkjøp for stats</p></div><div class="tool-card" onclick="location='/verktoy/palworld-avl'"><span class="tool-card-icon">🎮</span><h3>Palworld Avls Kalkulator</h3><p>Beregn Palworld avl nivå</p></div><div class="tool-card" onclick="location='/verktoy/minecraft-kalkulator'"><span class="tool-card-icon">🎮</span><h3>Minecraft Kalkulator</h3><p>Beregn Minecraft materialer</p></div><div class="tool-card" onclick="location='/verktoy/osrs-kalkulator'"><span class="tool-card-icon">🎮</span><h3>OSRS Kalkulator</h3><p>Beregn OSRS XP til neste nivå</p></div><div class="tool-card" onclick="location='/verktoy/minecraft-sirkel'"><span class="tool-card-icon">🎮</span><h3>Minecraft Sirkelgenerator</h3><p>Beregn Minecraft sirkel blokker</p></div><div class="tool-card" onclick="location='/verktoy/elden-ring-bygg'"><span class="tool-card-icon">🎮</span><h3>Elden Ring Byggekalkulator</h3><p>Beregn Elden Ring runer til nivå</p></div><div class="tool-card" onclick="location='/verktoy/nether-portal'"><span class="tool-card-icon">🎮</span><h3>Nether Portal Kalkulator</h3><p>Beregn Nether portal koordinater</p></div><div class="tool-card" onclick="location='/verktoy/clash-of-clans'"><span class="tool-card-icon">🎮</span><h3>Clash of Clans Kalkulator</h3><p>Beregn Clash of Clans oppgraderingstid</p></div><div class="tool-card" onclick="location='/verktoy/chocobo-farge'"><span class="tool-card-icon">🎮</span><h3>Chocobo Farge Kalkulator</h3><p>Beregn Chocobo fargeavl</p></div><div class="tool-card" onclick="location='/verktoy/dots-kalkulator'"><span class="tool-card-icon">🎮</span><h3>DOTS Kalkulator</h3><p>Beregn DOTS cm/360°</p></div><div class="tool-card" onclick="location='/verktoy/bdo-hest'"><span class="tool-card-icon">🎮</span><h3>BDO Hestekalkulator</h3><p>Beregn BDO hesteverdi og XP</p></div><div class="tool-card" onclick="location='/kategori/spill'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle Spill</h3><p>Alle kalkulatorer i denne kategorien</p></div></div></div>
     <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/lan-kalkulator'"><span class="tool-card-icon">💰</span><h3>Lån Kalkulator</h3><p>Beregn månedlige låneavdrag med nedbetalingsoversikt</p></div><div class="tool-card" onclick="location='/verktoy/prosent-kalkulator'"><span class="tool-card-icon">📐</span><h3>Prosent Kalkulator</h3><p>Beregn prosent med flere metoder og sammenligninger</p></div><div class="tool-card" onclick="location='/verktoy/temperatur-konvertering'"><span class="tool-card-icon">🔄</span><h3>Temperatur Konvertering</h3><p>Konverter temperatur mellom alle enheter</p></div><div class="tool-card" onclick="location='/verktoy/areal-kalkulator'"><span class="tool-card-icon">📏</span><h3>Areal Kalkulator</h3><p>Beregn areal av ulike former med enheter</p></div><div class="tool-card" onclick="location='/verktoy/alder-kalkulator'"><span class="tool-card-icon">📅</span><h3>Alder Kalkulator</h3><p>Beregn nøyaktig alder med sammenligning og statistikk</p></div></div></div>
   </div>

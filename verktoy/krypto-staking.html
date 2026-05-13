@@ -38,7 +38,201 @@
 <div class="main-wrap">
   <div class="main-content">
     <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>Antall coins</label><div class="input-row"><input type="number" class="calc-input" data-field="amount" placeholder="100"></div></div><div class="input-group"><label>APY (%)</label><div class="input-row"><input type="number" class="calc-input" data-field="apy" placeholder="5"></div></div><div class="input-group"><label>Pris (kr)</label><div class="input-row"><input type="number" class="calc-input" data-field="coin_price" placeholder="100"></div></div><div class="input-group"><label>Periode (måneder)</label><div class="input-row"><input type="number" class="calc-input" data-field="period" placeholder="12"></div></div></div>    <button class="btn-calc" onclick="runCalculator('crypto_staking')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
-    <div class="ai-loader" id="aiWrap"><p>Last inn detaljert guide</p><button class="btn-ai" id="aiBtn">Vis guide</button><div class="loading-wrap" id="aiLoader"><div class="spinner"></div><span>Laster...</span></div></div><div class="content-card" id="aiContent" style="display:none"></div>
+    <div class="content-card">```html
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krypto Staking Kalkulator – Guide for 2025</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.7;
+            max-width: 860px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            color: #1e1e2f;
+            background: #fafbfc;
+        }
+        h2 {
+            border-bottom: 3px solid #3b82f6;
+            padding-bottom: 0.4rem;
+            margin-top: 2.5rem;
+            color: #0a0a23;
+        }
+        h3 {
+            margin-top: 1.8rem;
+            color: #1e293b;
+        }
+        p {
+            margin: 1rem 0;
+        }
+        ul, ol {
+            padding-left: 1.2rem;
+            margin: 1rem 0;
+        }
+        li {
+            margin-bottom: 0.4rem;
+        }
+        strong {
+            color: #0b3b5c;
+        }
+        .highlight-box {
+            background: #eef2ff;
+            border-left: 5px solid #3b82f6;
+            padding: 1rem 1.5rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.8rem 0;
+        }
+        .faq-item {
+            background: white;
+            border-radius: 16px;
+            padding: 1.2rem 1.5rem;
+            margin: 1.2rem 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            border: 1px solid #e9edf2;
+        }
+        .faq-item p {
+            margin: 0.5rem 0 0 0;
+        }
+        .formel {
+            background: #f1f5f9;
+            padding: 1rem 1.8rem;
+            border-radius: 20px;
+            font-family: 'Courier New', monospace;
+            font-weight: 500;
+            display: inline-block;
+            margin: 0.5rem 0;
+        }
+        code {
+            background: #e8ecf3;
+            padding: 0.2rem 0.5rem;
+            border-radius: 8px;
+            font-size: 0.95em;
+        }
+        .eksempel-boks {
+            background: white;
+            border-radius: 20px;
+            padding: 1.2rem 1.8rem;
+            border: 1px solid #dce3ec;
+            margin: 1.5rem 0;
+        }
+        .tips-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        @media (max-width: 600px) {
+            .tips-grid { grid-template-columns: 1fr; }
+        }
+        .tips-grid li {
+            background: #f8fafc;
+            padding: 0.8rem 1rem;
+            border-radius: 16px;
+            list-style: none;
+            border: 1px solid #e2e8f0;
+        }
+        .tips-grid li::before {
+            content: "⚡ ";
+            font-weight: bold;
+        }
+        .ord-teller {
+            font-size: 0.8rem;
+            color: #6b7280;
+            text-align: right;
+            margin-top: 2rem;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>📈 Krypto Staking Kalkulator: Slik maksimerer du avkastningen</h1>
+    <p>Staking er en av de mest populære metodene for å tjene passiv inntekt på kryptovaluta. Men hvor mye kan du egentlig tjene? Uten en <strong>krypto staking kalkulator</strong> er det lett å gjette feil. I denne guiden forklarer vi alt du trenger – fra formel til praktiske eksempler, tips og svar på vanlige spørsmål.</p>
+
+    <!-- Seksjon 1 -->
+    <h2>Hva er en krypto staking kalkulator?</h2>
+    <p>En <strong>krypto staking kalkulator</strong> er et verktøy som estimerer hvor mye du kan tjene ved å låse kryptovaluta i en staking-protokoll. Den tar hensyn til faktorer som:</p>
+    <ul>
+        <li><strong>Innsatsbeløp</strong> – antall mynter du staker</li>
+        <li><strong>Årlig prosentandel (APY / APR)</strong> – avkastningen plattformen tilbyr</li>
+        <li><strong>Stakingsperiode</strong> – antall dager eller måneder</li>
+        <li><strong>Valutakurs</strong> – prisen på kryptovalutaen i USD, EUR eller NOK</li>
+        <li><strong>Gebyrer</strong> – eventuelle validator- eller plattformavgifter</li>
+    </ul>
+    <p>Kalkulatoren gir deg et realistisk bilde av potensiell avkastning, slik at du kan sammenligne ulike staking-muligheter uten å binde kapital først.</p>
+
+    <!-- Seksjon 2 -->
+    <h2>Hvorfor er en staking-kalkulator viktig?</h2>
+    <p>Mange nybegynnere staker krypto uten å beregne avkastningen. Resultatet? Overraskelser når belønningene viser seg å være lavere enn forventet. En <strong>krypto staking kalkulator</strong> gir deg flere fordeler:</p>
+    <ul>
+        <li><strong>Realistiske forventninger</strong> – unngår skuffelser og feilinvesteringer.</li>
+        <li><strong>Sammenligning av plattformer</strong> – se hvilken protokoll som gir best avkastning.</li>
+        <li><strong>Skatt og rapportering</strong> – enkelte kalkulatorer viser estimert skattbar inntekt.</li>
+        <li><strong>Risikostyring</strong> – forstå hvordan prissvingninger påvirker den totale verdien.</li>
+        <li><strong>Optimalisering av lock-up perioder</strong> – velg riktig bindingsperiode for dine mål.</li>
+    </ul>
+    <p>Uten en kalkulator staker du i blinde. Med den kan du ta datadrevne valg og maksimere avkastningen over tid.</p>
+
+    <!-- Seksjon 3 -->
+    <h2>Slik bruker du en krypto staking kalkulator</h2>
+    <p>De fleste kalkulatorer følger samme logikk. Slik kommer du i gang:</p>
+    <ol>
+        <li><strong>Finn en pålitelig kalkulator</strong> – mange børser (Binance, Kraken, Coinbase) har innebygde verktøy. Alternativt finnes uavhengige nettsider som <em>StakingRewards.com</em>.</li>
+        <li><strong>Skriv inn antall mynter</strong> – for eksempel 1000 Ethereum (ETH) eller 50 000 Cardano (ADA).</li>
+        <li><strong>Legg inn APY/APR</strong> – sjekk protokollens oppgitte rente. Merk at APY inkluderer rentes rente, APR gjør ikke.</li>
+        <li><strong>Velg tidsperiode</strong> – 30 dager, 6 måneder eller 1 år.</li>
+        <li><strong>Oppdater valutakurs</strong> – hvis kalkulatoren støtter det, legg inn dagens kurs i NOK for å se verdi i norske kroner.</li>
+        <li><strong>Inkluder gebyrer</strong> – validator-avgifter (ofte 5–15%) trekkes fra belønningen.</li>
+    </ol>
+    <p>Trykk på “Beregn” og du får estimert avkastning i mynter og/eller fiat-verdi. <strong>Krypto staking kalkulator</strong> gjør jobben på sekunder.</p>
+
+    <!-- Seksjon 4 – Formel + eksempel -->
+    <h2>Formel med eksempel</h2>
+    <p>Bak de fleste staking-kalkulatorer ligger en enkel formel for rentes rente (compound interest). Slik ser den ut:</p>
+    <div class="formel">
+        A = P × (1 + r/n)<sup>n×t</sup>
+    </div>
+    <p>Hvor:</p>
+    <ul>
+        <li><strong>A</strong> = sluttbeløp (mynt eller verdi)</li>
+        <li><strong>P</strong> = opprinnelig innsats (principal)</li>
+        <li><strong>r</strong> = årlig rente (APY som desimal, f.eks. 0,12 for 12 %)</li>
+        <li><strong>n</strong> = antall ganger renten tilskrives per år (daglig = 365, ukentlig = 52, månedlig = 12)</li>
+        <li><strong>t</strong> = antall år</li>
+    </ul>
+
+    <h3>🔢 Eksempel med Cardano (ADA)</h3>
+    <div class="eksempel-boks">
+        <p><strong>Forutsetninger:</strong></p>
+        <ul>
+            <li>Innsats: 5 000 ADA</li>
+            <li>APY: 5,5 % (0,055)</li>
+            <li>Rente tilskrives daglig (n = 365)</li>
+            <li>Periode: 1 år (t = 1)</li>
+        </ul>
+        <p><strong>Beregning:</strong></p>
+        <p>A = 5000 × (1 + 0,055/365)<sup>365×1</sup> ≈ 5000 × 1,0565 ≈ 5 282,5 ADA</p>
+        <p><strong>Avkastning:</strong> 282,5 ADA (≈ 5,65 % effektiv avkastning). En <strong>krypto staking kalkulator</strong> gir deg dette på et sekund, uten manuell matte.</p>
+    </div>
+
+    <!-- Seksjon 5 – Praktiske eksempler -->
+    <h2>Praktiske eksempler</h2>
+    <p>La oss se på tre reelle scenarioer der en <strong>krypto staking kalkulator</strong> hjelper deg å ta smarte valg.</p>
+
+    <h3>📌 Eksempel 1: Ethereum (ETH) via Lido</h3>
+    <p><strong>Innsats:</strong> 10 ETH · <strong>APY:</strong> 3,8 % · <strong>Periode:</strong> 6 måneder · <strong>Gebyr:</strong> 10 % av belønning</p>
+    <p>Uten kalkulator: “3,8 % høres greit ut”. Med kalkulator: Etter 6 måneder har du tjent ca. 0,19 ETH, men etter gebyr sitter du igjen med 0,171 ETH. Til kurs 25 000 NOK gir det ~4 275 NOK. Du ser raskt at gebyrene spiser 10 % av fortjenesten.</p>
+
+    <h3>📌 Eksempel 2: Solana (SOL) – høy APY, høy risiko</h3>
+    <p><strong>Innsats:</strong> 500 SOL · <strong>APY:</strong> 7,2 % · <strong>Periode:</strong> 1 år · <strong>Validator-avgift:</strong> 6 %</p>
+    <p>Kalkulatoren viser: 500 SOL → 536 SOL (før avgift). Etter avgift: ~533,8 SOL. Hvis SOL-prisen faller 20 % i løpet av året, taper du mer på kurs enn du tjener på staking. Kalkulatoren med prisprognose (avansert) advarer deg.</p>
+
+    <h3>📌 Eksempel 3: Sammenligning av plattformer</h3>
+    <p>Du v</div>
     <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/ethereum-gruve-kalkulator'"><span class="tool-card-icon">₿</span><h3>Ethereum Gruve Kalkulator</h3><p>Beregn Ethereum gruvedrift lønnsomhet</p></div><div class="tool-card" onclick="location='/verktoy/krypto-fortjeneste'"><span class="tool-card-icon">₿</span><h3>Krypto Fortjenestekalkulator</h3><p>Beregn kryptovaluta fortjeneste</p></div><div class="tool-card" onclick="location='/verktoy/gruvedrift-lonnsomhet'"><span class="tool-card-icon">₿</span><h3>Gruvedriftens Lønnsomhet Kalkulator</h3><p>Beregn gruvedrift lønnsomhet</p></div><div class="tool-card" onclick="location='/verktoy/krypto-skatt'"><span class="tool-card-icon">₿</span><h3>Krypto Skatte Kalkulator</h3><p>Beregn kryptovaluta skatt i Norge</p></div><div class="tool-card" onclick="location='/verktoy/krypto-til-fiat'"><span class="tool-card-icon">₿</span><h3>Krypto til Fiat Kalkulator</h3><p>Konverter kryptovaluta til fiat valuta</p></div><div class="tool-card" onclick="location='/verktoy/xrp-kalkulator'"><span class="tool-card-icon">₿</span><h3>XRP Kalkulator</h3><p>Beregn XRP verdier og fortjeneste</p></div><div class="tool-card" onclick="location='/verktoy/kryptovaluta-omformer'"><span class="tool-card-icon">₿</span><h3>Kryptovalutaomformer</h3><p>Konverter mellom kryptovalutaer</p></div><div class="tool-card" onclick="location='/verktoy/blockchain-kalkulator'"><span class="tool-card-icon">₿</span><h3>Blockchain Kalkulator</h3><p>Beregn blockchain statistikk</p></div><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/kalorikalkulator'"><span class="tool-card-icon">❤️</span><h3>Kalorikalkulator</h3><p>Beregn daglig kaloriinntak med BMR, TDEE og makrofordeling</p></div><div class="tool-card" onclick="location='/verktoy/idealvekt-kalkulator'"><span class="tool-card-icon">❤️</span><h3>Idealvekt Kalkulator</h3><p>Finn din idealvekt med flere metoder og helseområder</p></div><div class="tool-card" onclick="location='/verktoy/kroppsfett-kalkulator'"><span class="tool-card-icon">❤️</span><h3>Kroppsfett Kalkulator</h3><p>Beregn din fettprosent med flere metoder og helseklassifisering</p></div><div class="tool-card" onclick="location='/kategori/krypto'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle Krypto</h3><p>Alle kalkulatorer i denne kategorien</p></div></div></div>
     <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/lan-kalkulator'"><span class="tool-card-icon">💰</span><h3>Lån Kalkulator</h3><p>Beregn månedlige låneavdrag med nedbetalingsoversikt</p></div><div class="tool-card" onclick="location='/verktoy/prosent-kalkulator'"><span class="tool-card-icon">📐</span><h3>Prosent Kalkulator</h3><p>Beregn prosent med flere metoder og sammenligninger</p></div><div class="tool-card" onclick="location='/verktoy/temperatur-konvertering'"><span class="tool-card-icon">🔄</span><h3>Temperatur Konvertering</h3><p>Konverter temperatur mellom alle enheter</p></div><div class="tool-card" onclick="location='/verktoy/areal-kalkulator'"><span class="tool-card-icon">📏</span><h3>Areal Kalkulator</h3><p>Beregn areal av ulike former med enheter</p></div><div class="tool-card" onclick="location='/verktoy/alder-kalkulator'"><span class="tool-card-icon">📅</span><h3>Alder Kalkulator</h3><p>Beregn nøyaktig alder med sammenligning og statistikk</p></div></div></div>
   </div>
