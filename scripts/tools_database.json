@@ -83,7 +83,7 @@
       "title": "BMI Kalkulator",
       "category": "helse",
       "description": "Beregn din kroppsmasseindeks med avanserte analyser",
-      "formula": "bmi_advanced",
+      "formula": "bmi",
       "keywords": "bmi kalkulator norsk avansert",
       "inputs": [
         {
@@ -144,7 +144,7 @@
       "title": "Kalorikalkulator",
       "category": "helse",
       "description": "Beregn daglig kaloriinntak med BMR, TDEE og makrofordeling",
-      "formula": "calories_advanced",
+      "formula": "calories",
       "keywords": "kalorikalkulator norsk avansert",
       "inputs": [
         {
@@ -221,7 +221,7 @@
       "title": "Idealvekt Kalkulator",
       "category": "helse",
       "description": "Finn din idealvekt med flere metoder og helseområder",
-      "formula": "idealweight_advanced",
+      "formula": "idealweight",
       "keywords": "idealvekt kalkulator avansert",
       "inputs": [
         {
@@ -350,7 +350,7 @@
       "title": "BMR Kalkulator",
       "category": "helse",
       "description": "Beregn din basalmetabolisme med aktivitetsmultiplikator og mål",
-      "formula": "bmr_advanced",
+      "formula": "bmr",
       "keywords": "bmr kalkulator basalmetabolisme avansert",
       "inputs": [
         {
@@ -427,7 +427,7 @@
       "title": "TDEE Kalkulator",
       "category": "helse",
       "description": "Totalt daglig energiforbruk med detaljert aktivitetsanalyse",
-      "formula": "tdee_advanced",
+      "formula": "tdee",
       "keywords": "tdee kalkulator norsk avansert",
       "inputs": [
         {
@@ -504,7 +504,7 @@
       "title": "Vekttap Kalkulator",
       "category": "helse",
       "description": "Beregn tid for å nå vektmål med detaljert plan",
-      "formula": "weightloss_advanced",
+      "formula": "weightloss",
       "keywords": "vekttap kalkulator avansert",
       "inputs": [
         {
@@ -575,7 +575,7 @@
       "title": "Vanninntak Kalkulator",
       "category": "helse",
       "description": "Beregn daglig vannbehov med klima og aktivitet",
-      "formula": "water_advanced",
+      "formula": "water",
       "keywords": "vanninntak kalkulator daglig avansert",
       "inputs": [
         {
@@ -648,7 +648,7 @@
       "title": "Hjertefrekvens Kalkulator",
       "category": "helse",
       "description": "Beregn målpulssoner og treningsintensitet",
-      "formula": "heartrate_advanced",
+      "formula": "heartrate",
       "keywords": "hjertefrekvens kalkulator puls avansert",
       "inputs": [
         {
@@ -714,7 +714,7 @@
       "title": "Protein Kalkulator",
       "category": "helse",
       "description": "Beregn daglig proteinbehov med aktivitet og mål",
-      "formula": "protein_advanced",
+      "formula": "protein",
       "keywords": "protein kalkulator daglig behov avansert",
       "inputs": [
         {
@@ -787,7 +787,7 @@
       "title": "Graviditetskalkulator",
       "category": "helse",
       "description": "Beregn termindato og graviditetsdetaljer",
-      "formula": "pregnancy_advanced",
+      "formula": "pregnancy",
       "keywords": "graviditetskalkulator termin avansert",
       "inputs": [
         {
@@ -844,7 +844,7 @@
       "title": "Blodtrykk Kalkulator",
       "category": "helse",
       "description": "Tolke blodtrykksverdier med risikovurdering",
-      "formula": "bloodpressure_advanced",
+      "formula": "bloodpressure",
       "keywords": "blodtrykk kalkulator normal avansert",
       "inputs": [
         {
@@ -920,7 +920,7 @@
       "title": "Søvnkalkulator",
       "category": "helse",
       "description": "Finn optimal leggetid med søvnkvalitet og sykluser",
-      "formula": "sleep_advanced",
+      "formula": "sleep",
       "keywords": "søvnkalkulator leggetid avansert",
       "inputs": [
         {
@@ -982,7 +982,7 @@
       "title": "Lån Kalkulator",
       "category": "finans",
       "description": "Beregn månedlige låneavdrag med nedbetalingsoversikt",
-      "formula": "loan_advanced",
+      "formula": "loan",
       "keywords": "lån kalkulator månedlige avdrag avansert",
       "inputs": [
         {
@@ -1117,7 +1117,7 @@
       "title": "Rente Kalkulator",
       "category": "finans",
       "description": "Beregn renter på lån med sammensetning og perioder",
-      "formula": "interest_advanced",
+      "formula": "interest",
       "keywords": "rente kalkulator norsk avansert",
       "inputs": [
         {
@@ -1181,7 +1181,7 @@
       "title": "Sparing Kalkulator",
       "category": "finans",
       "description": "Beregn fremtidig sparebeløp med inflasjon og skatt",
-      "formula": "savings_advanced",
+      "formula": "savings",
       "keywords": "sparing kalkulator fremtidig avansert",
       "inputs": [
         {
@@ -1249,7 +1249,7 @@
       "title": "MVA Kalkulator",
       "category": "finans",
       "description": "Beregn merverdiavgift med alle satser og fradrag",
-      "formula": "vat_advanced",
+      "formula": "vat",
       "keywords": "mva kalkulator norge 25% avansert",
       "inputs": [
         {
@@ -1310,7 +1310,7 @@
       "title": "Timelønn Kalkulator",
       "category": "finans",
       "description": "Beregn timelønn fra årslønn med alle tillegg og fradrag",
-      "formula": "hourly_advanced",
+      "formula": "hourly",
       "keywords": "timelønn kalkulator årslønn avansert",
       "inputs": [
         {
@@ -1368,7 +1368,7 @@
       "title": "Skatt Kalkulator",
       "category": "finans",
       "description": "Beregn norsk inntektsskatt med alle fradrag og skatteklasse",
-      "formula": "tax_advanced",
+      "formula": "tax",
       "keywords": "skatt kalkulator norge 2024 avansert",
       "inputs": [
         {
@@ -1440,7 +1440,7 @@
       "title": "Investering Kalkulator",
       "category": "finans",
       "description": "Beregn investeringsavkastning med risiko og skatt",
-      "formula": "investment_advanced",
+      "formula": "investment",
       "keywords": "investering kalkulator avkastning avansert",
       "inputs": [
         {
@@ -1509,7 +1509,7 @@
       "title": "Valutakalkulator",
       "category": "finans",
       "description": "Konverter mellom valutaer med historiske kurser og gebyrer",
-      "formula": "currency_advanced",
+      "formula": "currency",
       "keywords": "valutakalkulator nok eur usd avansert",
       "inputs": [
         {
@@ -1587,7 +1587,7 @@
       "title": "Pensjon Kalkulator",
       "category": "finans",
       "description": "Beregn fremtidig pensjon med detaljert analyse",
-      "formula": "pension_advanced",
+      "formula": "pension",
       "keywords": "pensjon kalkulator norge avansert",
       "inputs": [
         {
@@ -1650,7 +1650,7 @@
       "title": "Prosent Kalkulator",
       "category": "matematikk",
       "description": "Beregn prosent med flere metoder og sammenligninger",
-      "formula": "percent_advanced",
+      "formula": "percent",
       "keywords": "prosent kalkulator norsk avansert",
       "inputs": [
         {
@@ -1705,7 +1705,7 @@
       "title": "Kvadratrot Kalkulator",
       "category": "matematikk",
       "description": "Beregn kvadratroter og andre røtter",
-      "formula": "sqrt_advanced",
+      "formula": "sqrt",
       "keywords": "kvadratrot kalkulator avansert",
       "inputs": [
         {
@@ -1753,7 +1753,7 @@
       "title": "Potens Kalkulator",
       "category": "matematikk",
       "description": "Beregn potens av tall med store eksponenter",
-      "formula": "power_advanced",
+      "formula": "power",
       "keywords": "potens kalkulator eksponent avansert",
       "inputs": [
         {
@@ -1799,7 +1799,7 @@
       "title": "Brøk Kalkulator",
       "category": "matematikk",
       "description": "Beregn med brøker og forenkle resultater",
-      "formula": "fraction_advanced",
+      "formula": "fraction",
       "keywords": "brøk kalkulator norsk avansert",
       "inputs": [
         {
@@ -1862,7 +1862,7 @@
       "title": "Gjennomsnitt Kalkulator",
       "category": "matematikk",
       "description": "Beregn gjennomsnitt og statistiske mål",
-      "formula": "average_advanced",
+      "formula": "average",
       "keywords": "gjennomsnitt kalkulator mean avansert",
       "inputs": [
         {
@@ -1910,7 +1910,7 @@
       "title": "Logaritme Kalkulator",
       "category": "matematikk",
       "description": "Beregn logaritmer og eksponentialfunksjoner",
-      "formula": "log_advanced",
+      "formula": "log",
       "keywords": "logaritme kalkulator ln log avansert",
       "inputs": [
         {
@@ -1960,7 +1960,7 @@
       "title": "Temperatur Konvertering",
       "category": "konvertering",
       "description": "Konverter temperatur mellom alle enheter",
-      "formula": "temperature_advanced",
+      "formula": "temperature",
       "keywords": "temperatur konvertering alle enheter",
       "inputs": [
         {
@@ -2006,7 +2006,7 @@
       "title": "Fahrenheit til Celsius",
       "category": "konvertering",
       "description": "Konverter Fahrenheit til Celsius med detaljer",
-      "formula": "fahrenheit_to_celsius_advanced",
+      "formula": "fahrenheit_to_celsius",
       "keywords": "fahrenheit celsius konvertering avansert",
       "inputs": [
         {
@@ -2046,7 +2046,7 @@
       "title": "Kilometer til Miles",
       "category": "konvertering",
       "description": "Konverter km til miles med nøyaktighet",
-      "formula": "km_to_miles_advanced",
+      "formula": "km_to_miles",
       "keywords": "kilometer miles konvertering avansert",
       "inputs": [
         {
@@ -2086,7 +2086,7 @@
       "title": "Miles til Kilometer",
       "category": "konvertering",
       "description": "Konverter miles til km med nøyaktighet",
-      "formula": "miles_to_km_advanced",
+      "formula": "miles_to_km",
       "keywords": "miles kilometer konvertering avansert",
       "inputs": [
         {
@@ -2126,7 +2126,7 @@
       "title": "Kg til Pund",
       "category": "konvertering",
       "description": "Konverter kilogram til pund med presisjon",
-      "formula": "kg_to_lbs_advanced",
+      "formula": "kg_to_lbs",
       "keywords": "kg pund konvertering avansert",
       "inputs": [
         {
@@ -2166,7 +2166,7 @@
       "title": "Pund til Kg",
       "category": "konvertering",
       "description": "Konverter pund til kilogram med presisjon",
-      "formula": "lbs_to_kg_advanced",
+      "formula": "lbs_to_kg",
       "keywords": "pund kg konvertering avansert",
       "inputs": [
         {
@@ -2206,7 +2206,7 @@
       "title": "Meter til Fot",
       "category": "konvertering",
       "description": "Konverter meter til fot med høy nøyaktighet",
-      "formula": "meter_to_feet_advanced",
+      "formula": "meter_to_feet",
       "keywords": "meter fot konvertering avansert",
       "inputs": [
         {
@@ -2246,7 +2246,7 @@
       "title": "Centimeter til Tommer",
       "category": "konvertering",
       "description": "Konverter cm til tommer med brøker",
-      "formula": "cm_to_inches_advanced",
+      "formula": "cm_to_inches",
       "keywords": "centimeter tommer konvertering avansert",
       "inputs": [
         {
@@ -2286,7 +2286,7 @@
       "title": "Liter til Gallon",
       "category": "konvertering",
       "description": "Konverter liter til gallon (US og UK)",
-      "formula": "liter_to_gallon_advanced",
+      "formula": "liter_to_gallon",
       "keywords": "liter gallon konvertering avansert",
       "inputs": [
         {
@@ -2335,7 +2335,7 @@
       "title": "Milliliter til Teskje",
       "category": "konvertering",
       "description": "Konverter ml til ulike måleenheter",
-      "formula": "ml_to_tsp_advanced",
+      "formula": "ml_to_tsp",
       "keywords": "milliliter teskje konvertering avansert",
       "inputs": [
         {
@@ -2388,7 +2388,7 @@
       "title": "Areal Kalkulator",
       "category": "geometri",
       "description": "Beregn areal av ulike former med enheter",
-      "formula": "area_advanced",
+      "formula": "area",
       "keywords": "areal kalkulator kvadratmeter avansert",
       "inputs": [
         {
@@ -2462,7 +2462,7 @@
       "title": "Sirkel Kalkulator",
       "category": "geometri",
       "description": "Beregn areal, omkrets og diameter av sirkel",
-      "formula": "circle_advanced",
+      "formula": "circle",
       "keywords": "sirkel kalkulator areal omkrets avansert",
       "inputs": [
         {
@@ -2525,7 +2525,7 @@
       "title": "Trekant Kalkulator",
       "category": "geometri",
       "description": "Beregn areal, omkrets og vinkler av trekant",
-      "formula": "triangle_advanced",
+      "formula": "triangle",
       "keywords": "trekant kalkulator areal avansert",
       "inputs": [
         {
@@ -2599,7 +2599,7 @@
       "title": "Pythagoras Kalkulator",
       "category": "geometri",
       "description": "Beregn hypotenusen og andre sider med Pythagoras",
-      "formula": "pythagoras_advanced",
+      "formula": "pythagoras",
       "keywords": "pythagoras kalkulator hypotenus avansert",
       "inputs": [
         {
@@ -2664,7 +2664,7 @@
       "title": "Volum Kalkulator",
       "category": "geometri",
       "description": "Beregn volum av ulike 3D-figurer",
-      "formula": "volume_advanced",
+      "formula": "volume",
       "keywords": "volum kalkulator kubikkmeter avansert",
       "inputs": [
         {
@@ -2737,7 +2737,7 @@
       "title": "Kule Kalkulator",
       "category": "geometri",
       "description": "Beregn volum, overflateareal og diameter av kule",
-      "formula": "sphere_advanced",
+      "formula": "sphere",
       "keywords": "kule kalkulator volum areal avansert",
       "inputs": [
         {
@@ -2857,7 +2857,7 @@
       "title": "Dato Kalkulator",
       "category": "tid",
       "description": "Legg til eller trekk fra dager med arbeidsdager og helligdager",
-      "formula": "date_add_advanced",
+      "formula": "date_add",
       "keywords": "dato kalkulator dager avansert",
       "inputs": [
         {
@@ -2919,7 +2919,7 @@
       "title": "Tidskalkulator",
       "category": "tid",
       "description": "Beregn tidsforskjell med tidssoner og pauser",
-      "formula": "time_diff_advanced",
+      "formula": "time_diff",
       "keywords": "tidskalkulator timer minutter avansert",
       "inputs": [
         {
@@ -2980,7 +2980,7 @@
       "title": "Nedtelling Kalkulator",
       "category": "tid",
       "description": "Tell ned til en dato med detaljer og hendelser",
-      "formula": "countdown_advanced",
+      "formula": "countdown",
       "keywords": "nedtelling kalkulator dato avansert",
       "inputs": [
         {
@@ -3034,7 +3034,7 @@
       "title": "Fart Kalkulator",
       "category": "fysikk",
       "description": "Beregn fart, distanse og tid med enhetskonvertering og drivstoffestimat",
-      "formula": "speed_advanced",
+      "formula": "speed",
       "keywords": "fart kalkulator hastighet avansert",
       "inputs": [
         {
@@ -3114,7 +3114,7 @@
       "title": "Energi Kalkulator",
       "category": "fysikk",
       "description": "Beregn kinetisk og potensiell energi",
-      "formula": "energy_advanced",
+      "formula": "energy",
       "keywords": "energi kalkulator kinetisk avansert",
       "inputs": [
         {
@@ -3182,7 +3182,7 @@
       "title": "Kraft Kalkulator",
       "category": "fysikk",
       "description": "Beregn kraft med Newtons lover",
-      "formula": "force_advanced",
+      "formula": "force",
       "keywords": "kraft kalkulator newton avansert",
       "inputs": [
         {
@@ -3246,7 +3246,7 @@
       "title": "Standardavvik Kalkulator",
       "category": "statistikk",
       "description": "Beregn standardavvik og statistiske mål",
-      "formula": "stddev_advanced",
+      "formula": "stddev",
       "keywords": "standardavvik kalkulator statistikk avansert",
       "inputs": [
         {
@@ -3292,7 +3292,7 @@
       "title": "Median Kalkulator",
       "category": "statistikk",
       "description": "Finn median og kvartiler i tallrekke",
-      "formula": "median_advanced",
+      "formula": "median",
       "keywords": "median kalkulator statistikk avansert",
       "inputs": [
         {
@@ -3338,7 +3338,7 @@
       "title": "Kalorier i Mat",
       "category": "mat",
       "description": "Finn kalorier og næringsinnhold i matvarer",
-      "formula": "food_calories_advanced",
+      "formula": "food_calories",
       "keywords": "kalorier mat kalkulator avansert",
       "inputs": [
         {
@@ -3408,7 +3408,7 @@
       "title": "Betong Kalkulator",
       "category": "bygg",
       "description": "Beregn betongmengde med forsterkning og kostnader",
-      "formula": "concrete_advanced",
+      "formula": "concrete",
       "keywords": "betong kalkulator kubikkmeter avansert",
       "inputs": [
         {
@@ -3480,7 +3480,7 @@
       "title": "Maling Kalkulator",
       "category": "bygg",
       "description": "Beregn malingsbehov med overflater og kostnader",
-      "formula": "paint_advanced",
+      "formula": "paint",
       "keywords": "maling kalkulator vegg liter avansert",
       "inputs": [
         {
@@ -3556,7 +3556,7 @@
       "title": "Barn BMI Kalkulator",
       "category": "helse",
       "description": "Beregn BMI for barn og ungdom",
-      "formula": "child_bmi",
+      "formula": "bmi",
       "keywords": "barn bmi kalkulator norsk",
       "inputs": [
         {
@@ -3593,7 +3593,7 @@
       "title": "Blodsukker Kalkulator",
       "category": "helse",
       "description": "Beregn blodsukkernivå og tolk verdier",
-      "formula": "blood_sugar",
+      "formula": "bloodsugar",
       "keywords": "blodsukker kalkulator diabetes",
       "inputs": [
         {
@@ -3636,7 +3636,7 @@
       "title": "Kolesterol Kalkulator",
       "category": "helse",
       "description": "Beregn kolesterolnivå og risikofaktorer",
-      "formula": "cholesterol",
+      "formula": "generic",
       "keywords": "kolesterol kalkulator norsk",
       "inputs": [
         {
@@ -3713,7 +3713,7 @@
       "title": "Nikotin Kalkulator",
       "category": "helse",
       "description": "Beregn nikotinforbruk og avvenningstid",
-      "formula": "nicotine",
+      "formula": "generic",
       "keywords": "nikotin røyk kalkulator",
       "inputs": [
         {
@@ -3747,7 +3747,7 @@
       "title": "Graviditetsvekt Kalkulator",
       "category": "helse",
       "description": "Beregn sunn vektøkning under graviditet",
-      "formula": "pregnancy_weight",
+      "formula": "generic",
       "keywords": "graviditet vektøkning kalkulator",
       "inputs": [
         {
@@ -3781,7 +3781,7 @@
       "title": "Amming Kalkulator",
       "category": "helse",
       "description": "Beregn ernæringsbehov ved amming",
-      "formula": "breastfeeding",
+      "formula": "generic",
       "keywords": "amming ernæring kalkulator",
       "inputs": [
         {
@@ -3812,7 +3812,7 @@
       "title": "Feber Kalkulator",
       "category": "helse",
       "description": "Tolk kroppstemperatur og febergrader",
-      "formula": "fever",
+      "formula": "generic",
       "keywords": "feber temperatur kalkulator",
       "inputs": [
         {
@@ -3845,7 +3845,7 @@
       "title": "Medisin Dosering",
       "category": "helse",
       "description": "Beregn riktig medisindosering",
-      "formula": "medication_dosage",
+      "formula": "generic",
       "keywords": "medisin dosering kalkulator",
       "inputs": [
         {
@@ -3907,7 +3907,7 @@
       "title": "Sykkel Kalkulator",
       "category": "helse",
       "description": "Beregn kaloriforbrennelse og distanse",
-      "formula": "cycling",
+      "formula": "generic",
       "keywords": "sykkel kalorier kalkulator",
       "inputs": [
         {
@@ -3945,7 +3945,7 @@
       "title": "Løpe Kalkulator",
       "category": "helse",
       "description": "Beregn løpehastighet og kaloriforbrennelse",
-      "formula": "running",
+      "formula": "generic",
       "keywords": "løping tempo kalorier kalkulator",
       "inputs": [
         {
@@ -3973,7 +3973,7 @@
       "title": "Svømme Kalkulator",
       "category": "helse",
       "description": "Beregn kaloriforbrennelse ved svømming",
-      "formula": "swimming",
+      "formula": "generic",
       "keywords": "svømming kalorier kalkulator",
       "inputs": [
         {
@@ -4006,7 +4006,7 @@
       "title": "Yoga Kalkulator",
       "category": "helse",
       "description": "Beregn kaloriforbrennelse ved yoga",
-      "formula": "yoga",
+      "formula": "generic",
       "keywords": "yoga kalorier kalkulator",
       "inputs": [
         {
@@ -4040,7 +4040,7 @@
       "title": "Stresstest Kalkulator",
       "category": "helse",
       "description": "Vurder stressnivå og få råd",
-      "formula": "stress_test",
+      "formula": "generic",
       "keywords": "stress test kalkulator norsk",
       "inputs": [
         {
@@ -4074,7 +4074,7 @@
       "title": "Søvnkvalitet Kalkulator",
       "category": "helse",
       "description": "Analyser søvnkvalitet og få forbedringstips",
-      "formula": "sleep_quality",
+      "formula": "generic",
       "keywords": "søvnkvalitet analyse kalkulator",
       "inputs": [
         {
@@ -4108,7 +4108,7 @@
       "title": "Vitamin Kalkulator",
       "category": "helse",
       "description": "Beregn daglig vitaminbehov",
-      "formula": "vitamins",
+      "formula": "generic",
       "keywords": "vitamin behov kalkulator norsk",
       "inputs": [
         {
@@ -4149,7 +4149,7 @@
       "title": "Mineral Kalkulator",
       "category": "helse",
       "description": "Beregn daglig mineralbehov",
-      "formula": "minerals",
+      "formula": "generic",
       "keywords": "mineral behov kalkulator norsk",
       "inputs": [
         {
@@ -4180,7 +4180,7 @@
       "title": "Allergi Kalkulator",
       "category": "helse",
       "description": "Vurder allergirisiko og symptomer",
-      "formula": "allergy",
+      "formula": "generic",
       "keywords": "allergi symptomer kalkulator",
       "inputs": [
         {
@@ -4214,7 +4214,7 @@
       "title": "Øye Kalkulator",
       "category": "helse",
       "description": "Beregn synsstyrke og brillestyrke",
-      "formula": "vision",
+      "formula": "generic",
       "keywords": "syn brillestyrke kalkulator",
       "inputs": [
         {
@@ -4314,7 +4314,7 @@
       "title": "Kredittkort Kalkulator",
       "category": "finans",
       "description": "Beregn kredittkortgjeld og nedbetaling",
-      "formula": "credit_card",
+      "formula": "loan",
       "keywords": "kredittkort gjeld kalkulator",
       "inputs": [
         {
@@ -4342,7 +4342,7 @@
       "title": "Utbytte Kalkulator",
       "category": "finans",
       "description": "Beregn aksjeutbytte og avkastning",
-      "formula": "dividend",
+      "formula": "investment",
       "keywords": "utbytte aksjer kalkulator",
       "inputs": [
         {
@@ -4370,7 +4370,7 @@
       "title": "Nettoverdi Kalkulator",
       "category": "finans",
       "description": "Beregn personlig nettoverdi",
-      "formula": "net_worth",
+      "formula": "generic",
       "keywords": "nettoverdi formue kalkulator",
       "inputs": [
         {
@@ -4460,7 +4460,7 @@
       "title": "Sammensatt Rente",
       "category": "finans",
       "description": "Beregn sammensatt rente over tid",
-      "formula": "compound_interest",
+      "formula": "interest",
       "keywords": "sammensatt rente kalkulator",
       "inputs": [
         {
@@ -4549,7 +4549,7 @@
       "title": "Aksje Kalkulator",
       "category": "finans",
       "description": "Beregn aksjeavkastning og portefølje",
-      "formula": "stocks",
+      "formula": "stock",
       "keywords": "aksjer portefølje kalkulator",
       "inputs": [
         {
@@ -4577,7 +4577,7 @@
       "title": "Fond Kalkulator",
       "category": "finans",
       "description": "Beregn fondsavkastning og risiko",
-      "formula": "mutual_funds",
+      "formula": "investment",
       "keywords": "fond sparing kalkulator",
       "inputs": [
         {
@@ -4605,7 +4605,7 @@
       "title": "Eiendom Kalkulator",
       "category": "finans",
       "description": "Beregn eiendomsinvestering og avkastning",
-      "formula": "real_estate",
+      "formula": "investment",
       "keywords": "eiendom investering kalkulator",
       "inputs": [
         {
@@ -4633,7 +4633,7 @@
       "title": "Leieinntekt Kalkulator",
       "category": "finans",
       "description": "Beregn leieinntekter og skatt",
-      "formula": "rental_income",
+      "formula": "roi",
       "keywords": "leieinntekt skatt kalkulator",
       "inputs": [
         {
@@ -4661,7 +4661,7 @@
       "title": "Forretningsbudsjett",
       "category": "finans",
       "description": "Lag bedriftsbudsjett og lønnsomhetsanalyse",
-      "formula": "business_budget",
+      "formula": "generic",
       "keywords": "forretningsbudsjett bedrift kalkulator",
       "inputs": [
         {
@@ -4689,7 +4689,7 @@
       "title": "Lønnsvekst Kalkulator",
       "category": "finans",
       "description": "Beregn lønnsvekst over tid",
-      "formula": "salary_growth",
+      "formula": "generic",
       "keywords": "lønn vekst kalkulator",
       "inputs": [
         {
@@ -4717,7 +4717,7 @@
       "title": "Tips Kalkulator",
       "category": "finans",
       "description": "Beregn tips og drikkepenger",
-      "formula": "tips",
+      "formula": "tip",
       "keywords": "tips drikkepenger kalkulator",
       "inputs": [
         {
@@ -4773,7 +4773,7 @@
       "title": "Faktura Kalkulator",
       "category": "finans",
       "description": "Lag faktura og beregn totalbeløp",
-      "formula": "invoice",
+      "formula": "generic",
       "keywords": "faktura regning kalkulator",
       "inputs": [
         {
@@ -4801,7 +4801,7 @@
       "title": "Valutaomregner",
       "category": "finans",
       "description": "Konverter valuta med dagens kurser",
-      "formula": "currency_converter",
+      "formula": "currency",
       "keywords": "valutaomregner kurs kalkulator",
       "inputs": [
         {
@@ -4843,7 +4843,7 @@
       "title": "Primtall Kalkulator",
       "category": "matematikk",
       "description": "Finn primtall og faktoriser tall",
-      "formula": "prime_numbers",
+      "formula": "prime",
       "keywords": "primtall faktorisering kalkulator",
       "inputs": [
         {
@@ -4969,7 +4969,7 @@
       "title": "Absoluttverdi Kalkulator",
       "category": "matematikk",
       "description": "Beregn absoluttverdi av tall",
-      "formula": "absolute_value",
+      "formula": "generic",
       "keywords": "absoluttverdi absolutt verdi kalkulator",
       "inputs": [
         {
@@ -4985,7 +4985,7 @@
       "title": "Avrunding Kalkulator",
       "category": "matematikk",
       "description": "Rund tall til spesifisert presisjon",
-      "formula": "rounding",
+      "formula": "generic",
       "keywords": "avrunding presisjon kalkulator",
       "inputs": [
         {
@@ -5007,7 +5007,7 @@
       "title": "Vitenskapelig Notasjon Kalkulator",
       "category": "matematikk",
       "description": "Konverter tall til vitenskapelig notasjon",
-      "formula": "scientific_notation",
+      "formula": "generic",
       "keywords": "vitenskapelig notasjon kalkulator",
       "inputs": [
         {
@@ -5048,7 +5048,7 @@
       "title": "Heksadesimal Kalkulator",
       "category": "matematikk",
       "description": "Konverter mellom heksadesimale og desimale tall",
-      "formula": "hexadecimal",
+      "formula": "hex",
       "keywords": "heksadesimal desimal konvertering kalkulator",
       "inputs": [
         {
@@ -5073,7 +5073,7 @@
       "title": "Matriseregner",
       "category": "matematikk",
       "description": "Utfør operasjoner på matriser",
-      "formula": "matrix",
+      "formula": "generic",
       "keywords": "matrise addisjon multiplikasjon kalkulator",
       "inputs": [
         {
@@ -5105,7 +5105,7 @@
       "title": "Vektor Kalkulator",
       "category": "matematikk",
       "description": "Beregn vektoroperasjoner",
-      "formula": "vector",
+      "formula": "generic",
       "keywords": "vektor addisjon prikkprodukt kalkulator",
       "inputs": [
         {
@@ -5138,7 +5138,7 @@
       "title": "Komplekse Tall Kalkulator",
       "category": "matematikk",
       "description": "Beregn med komplekse tall",
-      "formula": "complex_numbers",
+      "formula": "generic",
       "keywords": "komplekse tall i j kalkulator",
       "inputs": [
         {
@@ -5172,7 +5172,7 @@
       "title": "Trigonometri Kalkulator",
       "category": "matematikk",
       "description": "Beregn trigonometriske funksjoner",
-      "formula": "trigonometry",
+      "formula": "generic",
       "keywords": "sinus cosinus tangens kalkulator",
       "inputs": [
         {
@@ -5201,7 +5201,7 @@
       "title": "Derivasjon Kalkulator",
       "category": "matematikk",
       "description": "Beregn derivasjon av funksjoner",
-      "formula": "derivative",
+      "formula": "generic",
       "keywords": "derivasjon differensiering kalkulator",
       "inputs": [
         {
@@ -5223,7 +5223,7 @@
       "title": "Integral Kalkulator",
       "category": "matematikk",
       "description": "Beregn integral av funksjoner",
-      "formula": "integral",
+      "formula": "generic",
       "keywords": "integral integrasjon kalkulator",
       "inputs": [
         {
@@ -5251,7 +5251,7 @@
       "title": "Statistikk Kalkulator",
       "category": "matematikk",
       "description": "Beregn grunnleggende statistikk",
-      "formula": "statistics",
+      "formula": "stddev",
       "keywords": "statistikk gjennomsnitt median kalkulator",
       "inputs": [
         {
@@ -5289,7 +5289,7 @@
       "title": "Fibonacci Kalkulator",
       "category": "matematikk",
       "description": "Generer Fibonacci-tallrekke",
-      "formula": "fibonacci",
+      "formula": "generic",
       "keywords": "fibonacci tallrekke kalkulator",
       "inputs": [
         {
@@ -5305,7 +5305,7 @@
       "title": "Bytes til MB Kalkulator",
       "category": "konvertering",
       "description": "Konverter bytes, KB, MB, GB, TB",
-      "formula": "data_storage",
+      "formula": "bytes_to_mb",
       "keywords": "bytes mb gb tb konvertering",
       "inputs": [
         {
@@ -5345,7 +5345,7 @@
       "title": "Hektar til m² Kalkulator",
       "category": "konvertering",
       "description": "Konverter hektar til kvadratmeter",
-      "formula": "area_conversion",
+      "formula": "acres_to_m2",
       "keywords": "hektar m² areal konvertering",
       "inputs": [
         {
@@ -5367,7 +5367,7 @@
       "title": "Hestekrefter Kalkulator",
       "category": "konvertering",
       "description": "Konverter hestekrefter og kilowatt",
-      "formula": "power_conversion",
+      "formula": "horsepower",
       "keywords": "hestekrefter kilowatt hk kw konvertering",
       "inputs": [
         {
@@ -5392,7 +5392,7 @@
       "title": "Bar til PSI Kalkulator",
       "category": "konvertering",
       "description": "Konverter trykk mellom bar og PSI",
-      "formula": "pressure_conversion",
+      "formula": "bar_to_psi",
       "keywords": "bar psi trykk konvertering",
       "inputs": [
         {
@@ -5430,7 +5430,7 @@
       "title": "Knop til km/t Kalkulator",
       "category": "konvertering",
       "description": "Konverter knop til km/t og mph",
-      "formula": "speed_conversion",
+      "formula": "knots_to_kmh",
       "keywords": "knop km/t mph hastighet konvertering",
       "inputs": [
         {
@@ -5457,7 +5457,7 @@
       "title": "Lysår Kalkulator",
       "category": "konvertering",
       "description": "Konverter lysår til kilometer og astronomiske enheter",
-      "formula": "light_year",
+      "formula": "generic",
       "keywords": "lysår km au avstand konvertering",
       "inputs": [
         {
@@ -5484,7 +5484,7 @@
       "title": "Nanometer Kalkulator",
       "category": "konvertering",
       "description": "Konverter nanometer til mikrometer og millimeter",
-      "formula": "nanometer",
+      "formula": "generic",
       "keywords": "nanometer mikrometer millimeter konvertering",
       "inputs": [
         {
@@ -5511,7 +5511,7 @@
       "title": "Troy Unse Kalkulator",
       "category": "konvertering",
       "description": "Konverter troy unse og gram for edle metaller",
-      "formula": "troy_ounce",
+      "formula": "generic",
       "keywords": "troy unse gram gull sølv konvertering",
       "inputs": [
         {
@@ -5538,7 +5538,7 @@
       "title": "Megawatt Kalkulator",
       "category": "konvertering",
       "description": "Konverter megawatt, kilowatt og watt",
-      "formula": "megawatt",
+      "formula": "generic",
       "keywords": "megawatt kilowatt watt konvertering",
       "inputs": [
         {
@@ -5576,7 +5576,7 @@
       "title": "Dekkstørrelse Kalkulator",
       "category": "konvertering",
       "description": "Konverter dekkstørrelser og beregn diameter",
-      "formula": "tire_size",
+      "formula": "generic",
       "keywords": "dekkstørrelse diameter konvertering",
       "inputs": [
         {
@@ -5682,7 +5682,7 @@
       "title": "Papirstørrelse Kalkulator",
       "category": "konvertering",
       "description": "Konverter papirstørrelser og beregn areal",
-      "formula": "paper_size",
+      "formula": "generic",
       "keywords": "papirstørrelse a4 a3 konvertering",
       "inputs": [
         {
@@ -5716,7 +5716,7 @@
       "title": "Fargekonvertering Kalkulator",
       "category": "konvertering",
       "description": "Konverter farger mellom HEX, RGB og HSL",
-      "formula": "color_conversion",
+      "formula": "generic",
       "keywords": "farge hex rgb hsl konvertering",
       "inputs": [
         {
@@ -5754,7 +5754,7 @@
       "title": "Energi Konvertering",
       "category": "konvertering",
       "description": "Konverter energi mellom ulike enheter",
-      "formula": "energy_conversion",
+      "formula": "generic",
       "keywords": "energi joule kalori konvertering",
       "inputs": [
         {
@@ -5794,7 +5794,7 @@
       "title": "Effekt Konvertering",
       "category": "konvertering",
       "description": "Konverter effekt mellom ulike enheter",
-      "formula": "power_conversion_advanced",
+      "formula": "horsepower",
       "keywords": "effekt hk kw konvertering",
       "inputs": [
         {
@@ -5832,7 +5832,7 @@
       "title": "Data Konvertering",
       "category": "konvertering",
       "description": "Konverter dataenheter og hastigheter",
-      "formula": "data_conversion",
+      "formula": "bytes_to_mb",
       "keywords": "data mb gb tb konvertering",
       "inputs": [
         {
@@ -5874,7 +5874,7 @@
       "title": "Vinkel Konvertering",
       "category": "konvertering",
       "description": "Konverter vinkler mellom grader, radianer og grader",
-      "formula": "angle_conversion",
+      "formula": "deg_to_rad",
       "keywords": "vinkel grader radianer konvertering",
       "inputs": [
         {
@@ -5910,7 +5910,7 @@
       "title": "Frekvens Konvertering",
       "category": "konvertering",
       "description": "Konverter frekvens mellom Hz, kHz og MHz",
-      "formula": "frequency_conversion",
+      "formula": "frequency",
       "keywords": "frekvens hz khz mhz konvertering",
       "inputs": [
         {
@@ -5948,7 +5948,7 @@
       "title": "Tetthet Kalkulator",
       "category": "konvertering",
       "description": "Konverter tetthet mellom ulike enheter",
-      "formula": "density_conversion",
+      "formula": "density_calc",
       "keywords": "tetthet kg/m3 g/cm3 konvertering",
       "inputs": [
         {
@@ -6058,7 +6058,7 @@
       "title": "Rombe Kalkulator",
       "category": "geometri",
       "description": "Beregn areal og omkrets av rombe",
-      "formula": "rhombus",
+      "formula": "generic",
       "keywords": "rombe areal omkrets kalkulator",
       "inputs": [
         {
@@ -6102,7 +6102,7 @@
       "title": "Parallellogram Kalkulator",
       "category": "geometri",
       "description": "Beregn areal og omkrets av parallellogram",
-      "formula": "parallelogram",
+      "formula": "generic",
       "keywords": "parallellogram areal omkrets kalkulator",
       "inputs": [
         {
@@ -6130,7 +6130,7 @@
       "title": "Regulær Polygon Kalkulator",
       "category": "geometri",
       "description": "Beregn areal og omkrets av regulær polygon",
-      "formula": "regular_polygon",
+      "formula": "generic",
       "keywords": "polygon areal omkrets kalkulator",
       "inputs": [
         {
@@ -6152,7 +6152,7 @@
       "title": "Sektor Areal Kalkulator",
       "category": "geometri",
       "description": "Beregn areal av sirkel sektor",
-      "formula": "sector_area",
+      "formula": "generic",
       "keywords": "sektor areal sirkel kalkulator",
       "inputs": [
         {
@@ -6174,7 +6174,7 @@
       "title": "Bue Lengde Kalkulator",
       "category": "geometri",
       "description": "Beregn lengde av sirkelbue",
-      "formula": "arc_length",
+      "formula": "generic",
       "keywords": "bue lengde sirkel kalkulator",
       "inputs": [
         {
@@ -6338,7 +6338,7 @@
       "title": "Koordinat Kalkulator",
       "category": "geometri",
       "description": "Beregn avstand og midtpunkt mellom koordinater",
-      "formula": "coordinates",
+      "formula": "generic",
       "keywords": "koordinat avstand midtpunkt kalkulator",
       "inputs": [
         {
@@ -6416,7 +6416,7 @@
       "title": "Arbeidsdager Kalkulator",
       "category": "tid",
       "description": "Beregn arbeidsdager og helligdager",
-      "formula": "work_days",
+      "formula": "working_days",
       "keywords": "arbeidsdager helligdager kalkulator",
       "inputs": [
         {
@@ -6458,7 +6458,7 @@
       "title": "Pensjon Nedtelling",
       "category": "tid",
       "description": "Tell ned til pensjonsalder",
-      "formula": "pension_countdown",
+      "formula": "retirement_countdown",
       "keywords": "pensjon nedtelling kalkulator",
       "inputs": [
         {
@@ -6486,7 +6486,7 @@
       "title": "Bursdag Nedtelling",
       "category": "tid",
       "description": "Tell ned til neste bursdag",
-      "formula": "birthday_countdown",
+      "formula": "countdown",
       "keywords": "bursdag nedtelling kalkulator",
       "inputs": [
         {
@@ -6508,7 +6508,7 @@
       "title": "Tidssone Kalkulator",
       "category": "tid",
       "description": "Konverter tid mellom tidssoner",
-      "formula": "timezone_converter",
+      "formula": "timezone_calc",
       "keywords": "tidssone konvertering kalkulator",
       "inputs": [
         {
@@ -6573,7 +6573,7 @@
       "title": "Skuddår Kalkulator",
       "category": "tid",
       "description": "Sjekk om år er skuddår",
-      "formula": "leap_year",
+      "formula": "generic",
       "keywords": "skuddår sjekk kalkulator",
       "inputs": [
         {
@@ -6589,7 +6589,7 @@
       "title": "Ukenummer Kalkulator",
       "category": "tid",
       "description": "Finn ukenummer for dato",
-      "formula": "week_number",
+      "formula": "generic",
       "keywords": "ukenummer iso uke kalkulator",
       "inputs": [
         {
@@ -6605,7 +6605,7 @@
       "title": "Semester Kalkulator",
       "category": "tid",
       "description": "Beregn semesterdatoer og varighet",
-      "formula": "semester",
+      "formula": "generic",
       "keywords": "semester dato varighet kalkulator",
       "inputs": [
         {
@@ -6627,7 +6627,7 @@
       "title": "Ferie Kalkulator",
       "category": "tid",
       "description": "Beregn feriepenger og feriedager",
-      "formula": "vacation",
+      "formula": "generic",
       "keywords": "ferie penger dager kalkulator",
       "inputs": [
         {
@@ -6655,7 +6655,7 @@
       "title": "Overtid Kalkulator",
       "category": "tid",
       "description": "Beregn overtid og tillegg",
-      "formula": "overtime",
+      "formula": "generic",
       "keywords": "overtid tillegg kalkulator",
       "inputs": [
         {
@@ -6689,7 +6689,7 @@
       "title": "Timelogg Kalkulator",
       "category": "tid",
       "description": "Logg arbeidstid og beregn lønn",
-      "formula": "time_log",
+      "formula": "generic",
       "keywords": "timelogg arbeidstid lønn kalkulator",
       "inputs": [
         {
@@ -6723,7 +6723,7 @@
       "title": "Prosjekt Tid Kalkulator",
       "category": "tid",
       "description": "Beregn prosjektvarighet og sluttdato",
-      "formula": "project_time",
+      "formula": "generic",
       "keywords": "prosjekt varighet sluttdato kalkulator",
       "inputs": [
         {
@@ -6779,7 +6779,7 @@
       "title": "Produktivitet Kalkulator",
       "category": "tid",
       "description": "Mål og analyser produktivitet",
-      "formula": "productivity",
+      "formula": "generic",
       "keywords": "produktivitet effektivitet kalkulator",
       "inputs": [
         {
@@ -6863,7 +6863,7 @@
       "title": "Effekt Kalkulator",
       "category": "fysikk",
       "description": "Beregn elektrisk effekt og energi",
-      "formula": "power_physics",
+      "formula": "watt_calc",
       "keywords": "effekt spenning strøm energi kalkulator",
       "inputs": [
         {
@@ -6891,7 +6891,7 @@
       "title": "Frekvens Kalkulator",
       "category": "fysikk",
       "description": "Beregn frekvens og periode",
-      "formula": "frequency_physics",
+      "formula": "frequency",
       "keywords": "frekvens periode bølge kalkulator",
       "inputs": [
         {
@@ -6963,7 +6963,7 @@
       "title": "Trykk Kalkulator",
       "category": "fysikk",
       "description": "Beregn trykk og kraft per areal",
-      "formula": "pressure_physics",
+      "formula": "pressure_calc",
       "keywords": "trykk kraft areal kalkulator",
       "inputs": [
         {
@@ -6985,7 +6985,7 @@
       "title": "Temperatur Kalkulator",
       "category": "fysikk",
       "description": "Beregn temperaturkonvertering og termodynamikk",
-      "formula": "temperature_physics",
+      "formula": "celsius_to_fahrenheit",
       "keywords": "temperatur konvertering termodynamikk kalkulator",
       "inputs": [
         {
@@ -7012,7 +7012,7 @@
       "title": "Tetthet Kalkulator Fysikk",
       "category": "fysikk",
       "description": "Beregn tetthet og massevolum",
-      "formula": "density_physics",
+      "formula": "density_calc",
       "keywords": "tetthet masse volum fysikk kalkulator",
       "inputs": [
         {
@@ -7034,7 +7034,7 @@
       "title": "Oppdrift Kalkulator",
       "category": "fysikk",
       "description": "Beregn oppdrift i væsker og gasser",
-      "formula": "buoyancy",
+      "formula": "generic",
       "keywords": "oppdrift arkimedes fysikk kalkulator",
       "inputs": [
         {
@@ -7134,7 +7134,7 @@
       "title": "Magnetisme Kalkulator",
       "category": "fysikk",
       "description": "Beregn magnetfelt og magnetiske krefter",
-      "formula": "magnetism",
+      "formula": "magnetic_force",
       "keywords": "magnetisme magnetfelt fysikk kalkulator",
       "inputs": [
         {
@@ -7162,7 +7162,7 @@
       "title": "Optikk Kalkulator",
       "category": "fysikk",
       "description": "Beregn lysbrytning og optiske egenskaper",
-      "formula": "optics",
+      "formula": "snells_law",
       "keywords": "optikk lysbrytning linse fysikk kalkulator",
       "inputs": [
         {
@@ -7190,7 +7190,7 @@
       "title": "Kjernefysikk Kalkulator",
       "category": "fysikk",
       "description": "Beregn kjernefysiske prosesser og energi",
-      "formula": "nuclear_physics",
+      "formula": "half_life",
       "keywords": "kjernefysikk energi fisjon fusjon kalkulator",
       "inputs": [
         {
@@ -7274,7 +7274,7 @@
       "title": "Sannsynlighet Fordeling Kalkulator",
       "category": "statistikk",
       "description": "Beregn sannsynlighetsfordelinger",
-      "formula": "probability_distribution",
+      "formula": "probability",
       "keywords": "sannsynlighet fordeling normalfordeling kalkulator",
       "inputs": [
         {
@@ -7307,7 +7307,7 @@
       "title": "Z-Score Kalkulator",
       "category": "statistikk",
       "description": "Beregn Z-score og standardavvik",
-      "formula": "z_score",
+      "formula": "zscore",
       "keywords": "z-score standardavvik statistikk kalkulator",
       "inputs": [
         {
@@ -7335,7 +7335,7 @@
       "title": "Konfidensintervall Kalkulator",
       "category": "statistikk",
       "description": "Beregn konfidensintervall for gjennomsnitt",
-      "formula": "confidence_interval",
+      "formula": "generic",
       "keywords": "konfidensintervall statistikk kalkulator",
       "inputs": [
         {
@@ -7369,7 +7369,7 @@
       "title": "Regresjonsanalyse Kalkulator",
       "category": "statistikk",
       "description": "Utfør lineær regresjonsanalyse",
-      "formula": "regression",
+      "formula": "generic",
       "keywords": "regresjon korrelasjon statistikk kalkulator",
       "inputs": [
         {
@@ -7391,7 +7391,7 @@
       "title": "Korrelasjons Kalkulator",
       "category": "statistikk",
       "description": "Beregn korrelasjonskoeffisient",
-      "formula": "correlation",
+      "formula": "generic",
       "keywords": "korrelasjon sammenheng statistikk kalkulator",
       "inputs": [
         {
@@ -7413,7 +7413,7 @@
       "title": "Histogram Kalkulator",
       "category": "statistikk",
       "description": "Lag histogram og analyser fordeling",
-      "formula": "histogram",
+      "formula": "generic",
       "keywords": "histogram fordeling statistikk kalkulator",
       "inputs": [
         {
@@ -7435,7 +7435,7 @@
       "title": "Boksplott Kalkulator",
       "category": "statistikk",
       "description": "Lag boksplott og finn kvartiler",
-      "formula": "box_plot",
+      "formula": "generic",
       "keywords": "boksplott kvartil statistikk kalkulator",
       "inputs": [
         {
@@ -7479,7 +7479,7 @@
       "title": "Protein Mat Kalkulator",
       "category": "mat",
       "description": "Beregn proteininnhold i matvarer",
-      "formula": "protein_food",
+      "formula": "food_calories",
       "keywords": "protein matvarer ernæring kalkulator",
       "inputs": [
         {
@@ -7511,7 +7511,7 @@
       "title": "Karbohydrat Kalkulator",
       "category": "mat",
       "description": "Beregn karbohydratinnhold i matvarer",
-      "formula": "carbohydrate",
+      "formula": "food_calories",
       "keywords": "karbohydrat matvarer ernæring kalkulator",
       "inputs": [
         {
@@ -7542,7 +7542,7 @@
       "title": "Fett Kalkulator",
       "category": "mat",
       "description": "Beregn fettinnhold i matvarer",
-      "formula": "fat_food",
+      "formula": "food_calories",
       "keywords": "fett matvarer ernæring kalkulator",
       "inputs": [
         {
@@ -7573,7 +7573,7 @@
       "title": "Fiber Kalkulator",
       "category": "mat",
       "description": "Beregn fiberinnhold i matvarer",
-      "formula": "fiber_food",
+      "formula": "food_calories",
       "keywords": "fiber matvarer ernæring kalkulator",
       "inputs": [
         {
@@ -7604,7 +7604,7 @@
       "title": "Sukker Kalkulator",
       "category": "mat",
       "description": "Beregn sukkerinnhold i matvarer",
-      "formula": "sugar_food",
+      "formula": "food_calories",
       "keywords": "sukker matvarer ernæring kalkulator",
       "inputs": [
         {
@@ -7634,7 +7634,7 @@
       "title": "Salt Kalkulator",
       "category": "mat",
       "description": "Beregn saltinnhold i matvarer",
-      "formula": "salt_food",
+      "formula": "food_calories",
       "keywords": "salt matvarer ernæring kalkulator",
       "inputs": [
         {
@@ -7663,7 +7663,7 @@
       "title": "Vann Mat Kalkulator",
       "category": "mat",
       "description": "Beregn vanninnhold i matvarer",
-      "formula": "water_food",
+      "formula": "food_calories",
       "keywords": "vann matvarer ernæring kalkulator",
       "inputs": [
         {
@@ -7693,7 +7693,7 @@
       "title": "Alkohol Mat Kalkulator",
       "category": "mat",
       "description": "Beregn alkoholinnhold i matvarer",
-      "formula": "alcohol_food",
+      "formula": "food_calories",
       "keywords": "alkohol matvarer ernæring kalkulator",
       "inputs": [
         {
@@ -7722,7 +7722,7 @@
       "title": "Koffein Kalkulator",
       "category": "mat",
       "description": "Beregn koffeininnhold i drikkevarer",
-      "formula": "caffeine_food",
+      "formula": "food_calories",
       "keywords": "koffein drikkevarer ernæring kalkulator",
       "inputs": [
         {
@@ -7751,7 +7751,7 @@
       "title": "Glykemisk Indeks Kalkulator",
       "category": "mat",
       "description": "Beregn glykemisk indeks for matvarer",
-      "formula": "glycemic_index",
+      "formula": "generic",
       "keywords": "glykemisk indeks blodsukker mat kalkulator",
       "inputs": [
         {
@@ -7782,7 +7782,7 @@
       "title": "Matvare Bytte Kalkulator",
       "category": "mat",
       "description": "Finn erstatninger for matvarer",
-      "formula": "food_substitution",
+      "formula": "generic",
       "keywords": "matvare bytte erstatning allergi kalkulator",
       "inputs": [
         {
@@ -7818,7 +7818,7 @@
       "title": "Porsjon Kalkulator",
       "category": "mat",
       "description": "Beregn porsjonsstørrelser og kostnader",
-      "formula": "portion",
+      "formula": "recipe",
       "keywords": "porsjon størrelse kostnad mat kalkulator",
       "inputs": [
         {
@@ -7846,7 +7846,7 @@
       "title": "Restaurantpris Kalkulator",
       "category": "mat",
       "description": "Beregn restaurantpriser med tips og MVA",
-      "formula": "restaurant_price",
+      "formula": "unit_price",
       "keywords": "restaurant pris tips mva kalkulator",
       "inputs": [
         {
@@ -7874,7 +7874,7 @@
       "title": "Matbudsjett Kalkulator",
       "category": "mat",
       "description": "Lag matbudsjett og spor utgifter",
-      "formula": "food_budget",
+      "formula": "generic",
       "keywords": "matbudsjett utgifter økonomi kalkulator",
       "inputs": [
         {
@@ -8109,7 +8109,7 @@
       "title": "Elektrisk Kalkulator",
       "category": "bygg",
       "description": "Beregn elektriske installasjoner og kostnader",
-      "formula": "electrical",
+      "formula": "electricity",
       "keywords": "elektrisk installasjon kostnad kalkulator",
       "inputs": [
         {
@@ -8137,7 +8137,7 @@
       "title": "Rør Kalkulator",
       "category": "bygg",
       "description": "Beregn rørdimensjoner og materialer",
-      "formula": "plumbing",
+      "formula": "pipe_volume",
       "keywords": "rør dimensjoner materialer kalkulator",
       "inputs": [
         {
@@ -8210,7 +8210,7 @@
       "title": "Terrasse Kalkulator",
       "category": "bygg",
       "description": "Beregn terrasjematerialer og kostnader",
-      "formula": "terrace",
+      "formula": "deck_calc",
       "keywords": "terrasse materialer kostnad kalkulator",
       "inputs": [
         {
@@ -8278,7 +8278,7 @@
       "title": "Hage Kalkulator",
       "category": "bygg",
       "description": "Beregn hageareal og jordbehov",
-      "formula": "garden",
+      "formula": "soil",
       "keywords": "hage areal jord kalkulator",
       "inputs": [
         {
@@ -8339,7 +8339,7 @@
       "title": "Garasje Kalkulator",
       "category": "bygg",
       "description": "Beregn garasjestørrelse og materialer",
-      "formula": "garage",
+      "formula": "concrete_calc",
       "keywords": "garasje størrelse materialer kostnad kalkulator",
       "inputs": [
         {
@@ -8371,7 +8371,7 @@
       "title": "Loft Kalkulator",
       "category": "bygg",
       "description": "Beregn loftareal og beboelig areal",
-      "formula": "attic",
+      "formula": "sqm_calculator",
       "keywords": "loft areal boligareal kalkulator",
       "inputs": [
         {
