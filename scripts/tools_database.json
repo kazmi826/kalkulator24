@@ -63,6 +63,18 @@
     "odds": {
       "name": "Odds og Statistikk",
       "icon": "🎲"
+    },
+    "okologi": {
+      "name": "Økologi",
+      "icon": "🌱"
+    },
+    "bolig": {
+      "name": "Bolig og Bygg",
+      "icon": "🏠"
+    },
+    "musikk": {
+      "name": "Musikk",
+      "icon": "🎵"
     }
   },
   "tools": [
@@ -15851,6 +15863,1323 @@
           "label": "Totalt antall minutter",
           "type": "number",
           "placeholder": "150"
+        }
+      ]
+    },
+    {
+      "slug": "tidsforlops-kalkulator",
+      "title": "Tidsforløps Kalkulator",
+      "category": "tid",
+      "description": "Beregn tidsforløp mellom datoer og klokkeslett",
+      "formula": "time_elapsed",
+      "keywords": "tidsforløp kalkulator tid mellom datoer",
+      "inputs": [
+        {
+          "id": "start_date",
+          "label": "Startdato",
+          "type": "date",
+          "placeholder": ""
+        },
+        {
+          "id": "start_time",
+          "label": "Starttid",
+          "type": "time",
+          "placeholder": "00:00"
+        },
+        {
+          "id": "end_date",
+          "label": "Sluttdato",
+          "type": "date",
+          "placeholder": ""
+        },
+        {
+          "id": "end_time",
+          "label": "Sluttid",
+          "type": "time",
+          "placeholder": "00:00"
+        }
+      ]
+    },
+    {
+      "slug": "reisetidskalkulator",
+      "title": "Reisetidskalkulator",
+      "category": "tid",
+      "description": "Beregn reisetid basert på avstand og hastighet",
+      "formula": "travel_time",
+      "keywords": "reisetid kalkulator avstand hastighet",
+      "inputs": [
+        {
+          "id": "distance",
+          "label": "Avstand (km)",
+          "type": "number",
+          "placeholder": "500"
+        },
+        {
+          "id": "speed",
+          "label": "Gjennomsnittshastighet (km/t)",
+          "type": "number",
+          "placeholder": "100"
+        },
+        {
+          "id": "stops",
+          "label": "Antall stopp (minutter)",
+          "type": "number",
+          "placeholder": "30"
+        }
+      ]
+    },
+    {
+      "slug": "justert-alder-kalkulator",
+      "title": "Justert Alder Kalkulator",
+      "category": "tid",
+      "description": "Beregn justert alder for premature barn",
+      "formula": "adjusted_age",
+      "keywords": "justert alder kalkulator prematur barn",
+      "inputs": [
+        {
+          "id": "actual_age",
+          "label": "Faktisk alder (uker)",
+          "type": "number",
+          "placeholder": "40"
+        },
+        {
+          "id": "weeks_premature",
+          "label": "Uker for tidlig",
+          "type": "number",
+          "placeholder": "8"
+        }
+      ]
+    },
+    {
+      "slug": "militaertid-konverter",
+      "title": "Militærtid Konverter",
+      "category": "tid",
+      "description": "Konverter mellom militærtid og standard tid",
+      "formula": "military_time",
+      "keywords": "militærtid konverter 24 timer format",
+      "inputs": [
+        {
+          "id": "time_input",
+          "label": "Tid (standard HH:MM AM/PM eller militær)",
+          "type": "text",
+          "placeholder": "14:30 eller 2:30 PM"
+        }
+      ]
+    },
+    {
+      "slug": "tidssonekalkulator",
+      "title": "Tidssonekalkulator",
+      "category": "tid",
+      "description": "Konverter tid mellom tidssoner",
+      "formula": "timezone_calc",
+      "keywords": "tidssone kalkulator konverter verden",
+      "inputs": [
+        {
+          "id": "local_time",
+          "label": "Lokal tid",
+          "type": "time",
+          "placeholder": "12:00"
+        },
+        {
+          "id": "from_offset",
+          "label": "Fra UTC offset (timer)",
+          "type": "number",
+          "placeholder": "1"
+        },
+        {
+          "id": "to_offset",
+          "label": "Til UTC offset (timer)",
+          "type": "number",
+          "placeholder": "-5"
+        }
+      ]
+    },
+    {
+      "slug": "manefase-kalkulator",
+      "title": "Månefasekalkulator",
+      "category": "tid",
+      "description": "Finn månefase for en bestemt dato",
+      "formula": "moon_phase",
+      "keywords": "månefase kalkulator dato fullmåne",
+      "inputs": [
+        {
+          "id": "date",
+          "label": "Dato",
+          "type": "date",
+          "placeholder": ""
+        }
+      ]
+    },
+    {
+      "slug": "alder-gap-kalkulator",
+      "title": "Aldersgap Kalkulator",
+      "category": "tid",
+      "description": "Beregn aldersforskjell mellom to personer",
+      "formula": "age_gap",
+      "keywords": "aldersgap kalkulator aldersforskjell",
+      "inputs": [
+        {
+          "id": "birth1",
+          "label": "Person 1 fødselsdato",
+          "type": "date",
+          "placeholder": ""
+        },
+        {
+          "id": "birth2",
+          "label": "Person 2 fødselsdato",
+          "type": "date",
+          "placeholder": ""
+        }
+      ]
+    },
+    {
+      "slug": "tidtaking-kalkulator",
+      "title": "Tidtakingskalkulator",
+      "category": "tid",
+      "description": "Beregn gjennomsnittlig løpstid og tempo",
+      "formula": "stopwatch_calc",
+      "keywords": "tidtaking kalkulator løpstid tempo",
+      "inputs": [
+        {
+          "id": "distance",
+          "label": "Distanse (km)",
+          "type": "number",
+          "placeholder": "5"
+        },
+        {
+          "id": "time_hours",
+          "label": "Timer",
+          "type": "number",
+          "placeholder": "0"
+        },
+        {
+          "id": "time_minutes",
+          "label": "Minutter",
+          "type": "number",
+          "placeholder": "25"
+        },
+        {
+          "id": "time_seconds",
+          "label": "Sekunder",
+          "type": "number",
+          "placeholder": "30"
+        }
+      ]
+    },
+    {
+      "slug": "rettsdato-kalkulator",
+      "title": "Rettsdato Kalkulator",
+      "category": "tid",
+      "description": "Beregn juridiske frister og rettsdatoer",
+      "formula": "legal_date",
+      "keywords": "rettsdato kalkulator juridisk frist",
+      "inputs": [
+        {
+          "id": "start_date",
+          "label": "Startdato",
+          "type": "date",
+          "placeholder": ""
+        },
+        {
+          "id": "days",
+          "label": "Antall dager (juridisk frist)",
+          "type": "number",
+          "placeholder": "30"
+        },
+        {
+          "id": "type",
+          "label": "Type frist",
+          "type": "select",
+          "options": [
+            "Kalenderdager",
+            "Virkedager"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "tid-til-desimal",
+      "title": "Tid til Desimal Kalkulator",
+      "category": "tid",
+      "description": "Konverter tid til desimaltimer",
+      "formula": "time_to_decimal",
+      "keywords": "tid til desimal kalkulator timer",
+      "inputs": [
+        {
+          "id": "hours",
+          "label": "Timer",
+          "type": "number",
+          "placeholder": "2"
+        },
+        {
+          "id": "minutes",
+          "label": "Minutter",
+          "type": "number",
+          "placeholder": "45"
+        },
+        {
+          "id": "seconds",
+          "label": "Sekunder",
+          "type": "number",
+          "placeholder": "0"
+        }
+      ]
+    },
+    {
+      "slug": "ev-besparelseskalkulator",
+      "title": "EV Besparelseskalkulator",
+      "category": "okologi",
+      "description": "Beregn besparelser med elbil vs bensinbil",
+      "formula": "ev_savings",
+      "keywords": "elbil besparelse kalkulator elektrisk bil",
+      "inputs": [
+        {
+          "id": "km_per_year",
+          "label": "Km per år",
+          "type": "number",
+          "placeholder": "15000"
+        },
+        {
+          "id": "fuel_price",
+          "label": "Bensinpris (kr/L)",
+          "type": "number",
+          "placeholder": "20"
+        },
+        {
+          "id": "electricity_price",
+          "label": "Strømpris (kr/kWh)",
+          "type": "number",
+          "placeholder": "1.5"
+        },
+        {
+          "id": "fuel_consumption",
+          "label": "Bensinforbruk (L/100km)",
+          "type": "number",
+          "placeholder": "7"
+        },
+        {
+          "id": "ev_consumption",
+          "label": "Strømforbruk (kWh/100km)",
+          "type": "number",
+          "placeholder": "18"
+        }
+      ]
+    },
+    {
+      "slug": "ladeberegner-elbil",
+      "title": "Ladeberegner for Elbil",
+      "category": "okologi",
+      "description": "Beregn ladetid og kostnad for elbil",
+      "formula": "ev_charging",
+      "keywords": "ladeberegner elbil ladetid kostnad",
+      "inputs": [
+        {
+          "id": "battery_capacity",
+          "label": "Batteristørrelse (kWh)",
+          "type": "number",
+          "placeholder": "77"
+        },
+        {
+          "id": "current_charge",
+          "label": "Nåværende lading (%)",
+          "type": "number",
+          "placeholder": "20"
+        },
+        {
+          "id": "target_charge",
+          "label": "Målading (%)",
+          "type": "number",
+          "placeholder": "80"
+        },
+        {
+          "id": "charger_power",
+          "label": "Ladereffekt (kW)",
+          "type": "number",
+          "placeholder": "11"
+        },
+        {
+          "id": "electricity_cost",
+          "label": "Strømpris (kr/kWh)",
+          "type": "number",
+          "placeholder": "1.5"
+        }
+      ]
+    },
+    {
+      "slug": "karbonfotavtrykk-kalkulator",
+      "title": "Karbonfotavtrykk Kalkulator",
+      "category": "okologi",
+      "description": "Beregn ditt personlige karbonfotavtrykk",
+      "formula": "carbon_footprint",
+      "keywords": "karbonfotavtrykk kalkulator CO2 klima",
+      "inputs": [
+        {
+          "id": "car_km",
+          "label": "Bilkjøring (km/år)",
+          "type": "number",
+          "placeholder": "15000"
+        },
+        {
+          "id": "flights",
+          "label": "Flyreiser (timer/år)",
+          "type": "number",
+          "placeholder": "10"
+        },
+        {
+          "id": "meat_kg",
+          "label": "Kjøttforbruk (kg/uke)",
+          "type": "number",
+          "placeholder": "1"
+        },
+        {
+          "id": "electricity_kwh",
+          "label": "Strøm (kWh/mnd)",
+          "type": "number",
+          "placeholder": "400"
+        }
+      ]
+    },
+    {
+      "slug": "drivstoffkostnad-kalkulator",
+      "title": "Drivstoffkostnadskalkulator",
+      "category": "okologi",
+      "description": "Beregn drivstoffkostnader for reiser",
+      "formula": "fuel_cost",
+      "keywords": "drivstoffkostnad kalkulator bensin diesel",
+      "inputs": [
+        {
+          "id": "distance",
+          "label": "Distanse (km)",
+          "type": "number",
+          "placeholder": "500"
+        },
+        {
+          "id": "consumption",
+          "label": "Forbruk (L/100km)",
+          "type": "number",
+          "placeholder": "7"
+        },
+        {
+          "id": "fuel_price",
+          "label": "Drivstoffpris (kr/L)",
+          "type": "number",
+          "placeholder": "20"
+        }
+      ]
+    },
+    {
+      "slug": "bilens-karbonfotavtrykk",
+      "title": "Bilens Karbonfotavtrykk Kalkulator",
+      "category": "okologi",
+      "description": "Beregn CO2 utslipp fra bilkjøring",
+      "formula": "car_carbon",
+      "keywords": "bil karbonfotavtrykk CO2 utslipp",
+      "inputs": [
+        {
+          "id": "distance",
+          "label": "Kjørelengde (km)",
+          "type": "number",
+          "placeholder": "15000"
+        },
+        {
+          "id": "fuel_type",
+          "label": "Drivstofftype",
+          "type": "select",
+          "options": [
+            "Bensin",
+            "Diesel",
+            "Hybrid",
+            "Elektrisk"
+          ]
+        },
+        {
+          "id": "consumption",
+          "label": "Forbruk (L/100km)",
+          "type": "number",
+          "placeholder": "7"
+        }
+      ]
+    },
+    {
+      "slug": "solcellekalkulator",
+      "title": "Solcellekalkulator",
+      "category": "okologi",
+      "description": "Beregn solcellekapasitet og besparelse",
+      "formula": "solar_calc",
+      "keywords": "solcelle kalkulator panel besparelse",
+      "inputs": [
+        {
+          "id": "roof_area",
+          "label": "Takareal (m²)",
+          "type": "number",
+          "placeholder": "30"
+        },
+        {
+          "id": "sunhours",
+          "label": "Soltimer per dag",
+          "type": "number",
+          "placeholder": "4"
+        },
+        {
+          "id": "electricity_price",
+          "label": "Strømpris (kr/kWh)",
+          "type": "number",
+          "placeholder": "1.5"
+        }
+      ]
+    },
+    {
+      "slug": "kjørelengde-kalkulator",
+      "title": "Kjørelengdekalkulator",
+      "category": "okologi",
+      "description": "Beregn kjørelengde og drivstofforbruk",
+      "formula": "mileage_calc",
+      "keywords": "kjørelengde kalkulator forbruk drivstoff",
+      "inputs": [
+        {
+          "id": "fuel_used",
+          "label": "Drivstoff brukt (liter)",
+          "type": "number",
+          "placeholder": "50"
+        },
+        {
+          "id": "distance",
+          "label": "Kjørt distanse (km)",
+          "type": "number",
+          "placeholder": "600"
+        }
+      ]
+    },
+    {
+      "slug": "flyreise-karbonfotavtrykk",
+      "title": "Flyreise Karbonfotavtrykk Kalkulator",
+      "category": "okologi",
+      "description": "Beregn CO2 utslipp fra flyreiser",
+      "formula": "flight_carbon",
+      "keywords": "flyreise karbonfotavtrykk CO2 fly",
+      "inputs": [
+        {
+          "id": "distance",
+          "label": "Flyavstand (km)",
+          "type": "number",
+          "placeholder": "1000"
+        },
+        {
+          "id": "class",
+          "label": "Kabinklasse",
+          "type": "select",
+          "options": [
+            "Økonomi",
+            "Business",
+            "Første klasse"
+          ]
+        },
+        {
+          "id": "trips",
+          "label": "Antall turer",
+          "type": "number",
+          "placeholder": "2"
+        }
+      ]
+    },
+    {
+      "slug": "akvarium-kalkulator",
+      "title": "Akvarium Kalkulator",
+      "category": "okologi",
+      "description": "Beregn akvarium volum og fiskekapasitet",
+      "formula": "aquarium_calc",
+      "keywords": "akvarium kalkulator volum fisk kapasitet",
+      "inputs": [
+        {
+          "id": "length",
+          "label": "Lengde (cm)",
+          "type": "number",
+          "placeholder": "100"
+        },
+        {
+          "id": "width",
+          "label": "Bredde (cm)",
+          "type": "number",
+          "placeholder": "40"
+        },
+        {
+          "id": "height",
+          "label": "Høyde (cm)",
+          "type": "number",
+          "placeholder": "50"
+        },
+        {
+          "id": "fish_size",
+          "label": "Gjennomsnittlig fiskestørrelse (cm)",
+          "type": "number",
+          "placeholder": "5"
+        }
+      ]
+    },
+    {
+      "slug": "vpd-kalkulator",
+      "title": "VPD Kalkulator",
+      "category": "okologi",
+      "description": "Beregn Vapour Pressure Deficit for planter",
+      "formula": "vpd_calc",
+      "keywords": "vpd kalkulator damp trykk plante vekst",
+      "inputs": [
+        {
+          "id": "temperature",
+          "label": "Temperatur (°C)",
+          "type": "number",
+          "placeholder": "25"
+        },
+        {
+          "id": "humidity",
+          "label": "Relativ luftfuktighet (%)",
+          "type": "number",
+          "placeholder": "60"
+        },
+        {
+          "id": "leaf_temp_diff",
+          "label": "Bladtemperatur diff (°C)",
+          "type": "number",
+          "placeholder": "2"
+        }
+      ]
+    },
+    {
+      "slug": "hvac-belastning-kalkulator",
+      "title": "HVAC Belastningskalkulator",
+      "category": "bolig",
+      "description": "Beregn HVAC varme og kjølebehov",
+      "formula": "hvac_load",
+      "keywords": "hvac belastning kalkulator varme kjøling",
+      "inputs": [
+        {
+          "id": "area",
+          "label": "Areal (m²)",
+          "type": "number",
+          "placeholder": "100"
+        },
+        {
+          "id": "ceiling_height",
+          "label": "Takhøyde (m)",
+          "type": "number",
+          "placeholder": "2.4"
+        },
+        {
+          "id": "insulation",
+          "label": "Isolasjonskvalitet",
+          "type": "select",
+          "options": [
+            "Dårlig",
+            "Standard",
+            "God",
+            "Utmerket"
+          ]
+        },
+        {
+          "id": "climate",
+          "label": "Klima",
+          "type": "select",
+          "options": [
+            "Kaldt (Nord-Norge)",
+            "Moderat (Midt-Norge)",
+            "Mildt (Sør-Norge)"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "isolasjonskalkulator",
+      "title": "Isolasjonskalkulator",
+      "category": "bolig",
+      "description": "Beregn isolasjonsbehov og R-verdi",
+      "formula": "insulation_calc",
+      "keywords": "isolasjon kalkulator r-verdi varmetap",
+      "inputs": [
+        {
+          "id": "area",
+          "label": "Areal å isolere (m²)",
+          "type": "number",
+          "placeholder": "50"
+        },
+        {
+          "id": "thickness",
+          "label": "Isolasjonstykkelse (mm)",
+          "type": "number",
+          "placeholder": "200"
+        },
+        {
+          "id": "type",
+          "label": "Isolasjonstype",
+          "type": "select",
+          "options": [
+            "Glassvatt",
+            "Steinull",
+            "Cellulose",
+            "EPS",
+            "XPS"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "flisekalkulator",
+      "title": "Flisekalkulator",
+      "category": "bolig",
+      "description": "Beregn antall fliser og materialbehov",
+      "formula": "tile_calc",
+      "keywords": "flise kalkulator antall areal materialbehov",
+      "inputs": [
+        {
+          "id": "room_length",
+          "label": "Romlengde (m)",
+          "type": "number",
+          "placeholder": "5"
+        },
+        {
+          "id": "room_width",
+          "label": "Rombredde (m)",
+          "type": "number",
+          "placeholder": "4"
+        },
+        {
+          "id": "tile_length",
+          "label": "Flislengde (cm)",
+          "type": "number",
+          "placeholder": "60"
+        },
+        {
+          "id": "tile_width",
+          "label": "Flisbredde (cm)",
+          "type": "number",
+          "placeholder": "30"
+        },
+        {
+          "id": "waste",
+          "label": "Svinn (%)",
+          "type": "number",
+          "placeholder": "10"
+        }
+      ]
+    },
+    {
+      "slug": "tapetk alkulator",
+      "title": "Tapetkalkulator",
+      "category": "bolig",
+      "description": "Beregn antall tapetrull som trengs",
+      "formula": "wallpaper_calc",
+      "keywords": "tapet kalkulator ruller vegg areal",
+      "inputs": [
+        {
+          "id": "room_perimeter",
+          "label": "Romets omkrets (m)",
+          "type": "number",
+          "placeholder": "16"
+        },
+        {
+          "id": "ceiling_height",
+          "label": "Takhøyde (m)",
+          "type": "number",
+          "placeholder": "2.4"
+        },
+        {
+          "id": "doors_windows",
+          "label": "Antall dører/vinduer",
+          "type": "number",
+          "placeholder": "3"
+        },
+        {
+          "id": "roll_length",
+          "label": "Rullelengde (m)",
+          "type": "number",
+          "placeholder": "10"
+        },
+        {
+          "id": "roll_width",
+          "label": "Rullebredde (cm)",
+          "type": "number",
+          "placeholder": "53"
+        }
+      ]
+    },
+    {
+      "slug": "takvinkel-kalkulator",
+      "title": "Takvinkel Kalkulator",
+      "category": "bolig",
+      "description": "Beregn takvinkel og takflate",
+      "formula": "roof_angle",
+      "keywords": "takvinkel kalkulator grad takflate",
+      "inputs": [
+        {
+          "id": "rise",
+          "label": "Stigning (cm per 30cm)",
+          "type": "number",
+          "placeholder": "15"
+        },
+        {
+          "id": "span",
+          "label": "Spenvidde (m)",
+          "type": "number",
+          "placeholder": "8"
+        }
+      ]
+    },
+    {
+      "slug": "betongkalkulator",
+      "title": "Betongkalkulator",
+      "category": "bolig",
+      "description": "Beregn betongmengde for støping",
+      "formula": "concrete_calc",
+      "keywords": "betong kalkulator mengde støping m3",
+      "inputs": [
+        {
+          "id": "length",
+          "label": "Lengde (m)",
+          "type": "number",
+          "placeholder": "5"
+        },
+        {
+          "id": "width",
+          "label": "Bredde (m)",
+          "type": "number",
+          "placeholder": "3"
+        },
+        {
+          "id": "depth",
+          "label": "Tykkelse (m)",
+          "type": "number",
+          "placeholder": "0.1"
+        }
+      ]
+    },
+    {
+      "slug": "gjerdeberegner",
+      "title": "Gjerdekalkulator",
+      "category": "bolig",
+      "description": "Beregn gjerdemateriell og kostnad",
+      "formula": "fence_calc_adv",
+      "keywords": "gjerde kalkulator materiell meter stolper",
+      "inputs": [
+        {
+          "id": "length",
+          "label": "Gjerdelengde (m)",
+          "type": "number",
+          "placeholder": "50"
+        },
+        {
+          "id": "height",
+          "label": "Gjerdehøyde (m)",
+          "type": "number",
+          "placeholder": "1.8"
+        },
+        {
+          "id": "post_spacing",
+          "label": "Stolpeavstand (m)",
+          "type": "number",
+          "placeholder": "2.5"
+        },
+        {
+          "id": "rails",
+          "label": "Antall grinder",
+          "type": "number",
+          "placeholder": "2"
+        }
+      ]
+    },
+    {
+      "slug": "gulvberegner",
+      "title": "Gulvberegner",
+      "category": "bolig",
+      "description": "Beregn gulvmateriale og kostnad",
+      "formula": "floor_calc",
+      "keywords": "gulv kalkulator m2 materiell parkett",
+      "inputs": [
+        {
+          "id": "length",
+          "label": "Romlengde (m)",
+          "type": "number",
+          "placeholder": "6"
+        },
+        {
+          "id": "width",
+          "label": "Rombredde (m)",
+          "type": "number",
+          "placeholder": "4"
+        },
+        {
+          "id": "waste",
+          "label": "Svinn (%)",
+          "type": "number",
+          "placeholder": "10"
+        },
+        {
+          "id": "price_per_m2",
+          "label": "Pris per m² (kr)",
+          "type": "number",
+          "placeholder": "300"
+        }
+      ]
+    },
+    {
+      "slug": "btu-kalkulator",
+      "title": "BTU Kalkulator",
+      "category": "bolig",
+      "description": "Beregn BTU behov for varme og kjøling",
+      "formula": "btu_calc",
+      "keywords": "btu kalkulator varme kjøling rom",
+      "inputs": [
+        {
+          "id": "area",
+          "label": "Areal (m²)",
+          "type": "number",
+          "placeholder": "25"
+        },
+        {
+          "id": "ceiling",
+          "label": "Takhøyde (m)",
+          "type": "number",
+          "placeholder": "2.4"
+        },
+        {
+          "id": "windows",
+          "label": "Antall vinduer",
+          "type": "number",
+          "placeholder": "2"
+        },
+        {
+          "id": "climate",
+          "label": "Klima",
+          "type": "select",
+          "options": [
+            "Kaldt",
+            "Moderat",
+            "Varmt"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "kvadratmeter-kalkulator",
+      "title": "Kvadratmeterkalkulator",
+      "category": "bolig",
+      "description": "Beregn areal for ulike former",
+      "formula": "sqm_calculator",
+      "keywords": "kvadratmeter kalkulator areal rom",
+      "inputs": [
+        {
+          "id": "length",
+          "label": "Lengde (m)",
+          "type": "number",
+          "placeholder": "6"
+        },
+        {
+          "id": "width",
+          "label": "Bredde (m)",
+          "type": "number",
+          "placeholder": "4"
+        },
+        {
+          "id": "shape",
+          "label": "Form",
+          "type": "select",
+          "options": [
+            "Rektangel",
+            "Trekant",
+            "Sirkel",
+            "Trapez"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "sparre-lengde-kalkulator",
+      "title": "Sparre Lengde Kalkulator",
+      "category": "bolig",
+      "description": "Beregn sparrelengde for tak",
+      "formula": "rafter_calc",
+      "keywords": "sparre lengde kalkulator tak konstruksjon",
+      "inputs": [
+        {
+          "id": "span",
+          "label": "Spenvidde (m)",
+          "type": "number",
+          "placeholder": "8"
+        },
+        {
+          "id": "pitch",
+          "label": "Takvinkel (grader)",
+          "type": "number",
+          "placeholder": "30"
+        },
+        {
+          "id": "overhang",
+          "label": "Takutstikk (m)",
+          "type": "number",
+          "placeholder": "0.5"
+        }
+      ]
+    },
+    {
+      "slug": "trapp-kalkulator",
+      "title": "Trapp Kalkulator",
+      "category": "bolig",
+      "description": "Beregn trappetrinn og dimensjoner",
+      "formula": "stair_calc",
+      "keywords": "trapp kalkulator trinn høyde dybde",
+      "inputs": [
+        {
+          "id": "total_height",
+          "label": "Total høyde (cm)",
+          "type": "number",
+          "placeholder": "270"
+        },
+        {
+          "id": "step_height",
+          "label": "Ønsket trinnh øyde (cm)",
+          "type": "number",
+          "placeholder": "18"
+        },
+        {
+          "id": "tread_depth",
+          "label": "Trinndybde (cm)",
+          "type": "number",
+          "placeholder": "28"
+        }
+      ]
+    },
+    {
+      "slug": "sand-kalkulator",
+      "title": "Sand Kalkulator",
+      "category": "bolig",
+      "description": "Beregn sandmengde for prosjekter",
+      "formula": "sand_calc",
+      "keywords": "sand kalkulator mengde tonn kubikk",
+      "inputs": [
+        {
+          "id": "length",
+          "label": "Lengde (m)",
+          "type": "number",
+          "placeholder": "5"
+        },
+        {
+          "id": "width",
+          "label": "Bredde (m)",
+          "type": "number",
+          "placeholder": "3"
+        },
+        {
+          "id": "depth",
+          "label": "Dybde (cm)",
+          "type": "number",
+          "placeholder": "10"
+        }
+      ]
+    },
+    {
+      "slug": "asfalt-kalkulator",
+      "title": "Asfaltkalkulator",
+      "category": "bolig",
+      "description": "Beregn asfaltmengde for innkjørsler",
+      "formula": "asphalt_calc",
+      "keywords": "asfalt kalkulator mengde innkjørsel",
+      "inputs": [
+        {
+          "id": "length",
+          "label": "Lengde (m)",
+          "type": "number",
+          "placeholder": "10"
+        },
+        {
+          "id": "width",
+          "label": "Bredde (m)",
+          "type": "number",
+          "placeholder": "3"
+        },
+        {
+          "id": "depth",
+          "label": "Tykkelse (cm)",
+          "type": "number",
+          "placeholder": "5"
+        }
+      ]
+    },
+    {
+      "slug": "murstein-kalkulator",
+      "title": "Murstein Kalkulator",
+      "category": "bolig",
+      "description": "Beregn antall murstein for vegger",
+      "formula": "brick_calc_adv",
+      "keywords": "murstein kalkulator antall vegg",
+      "inputs": [
+        {
+          "id": "wall_length",
+          "label": "Veggengde (m)",
+          "type": "number",
+          "placeholder": "5"
+        },
+        {
+          "id": "wall_height",
+          "label": "Vegghøyde (m)",
+          "type": "number",
+          "placeholder": "2.5"
+        },
+        {
+          "id": "brick_length",
+          "label": "Steinstørrelse",
+          "type": "select",
+          "options": [
+            "Standard 228x108x63mm",
+            "Halvstein 228x108x30mm",
+            "Lecastein 400x200x200mm"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "basseng-kalkulator",
+      "title": "Bassengkalkulator",
+      "category": "bolig",
+      "description": "Beregn bassengvolum og kjemikaliebehov",
+      "formula": "pool_calc",
+      "keywords": "basseng kalkulator volum kjemikalier",
+      "inputs": [
+        {
+          "id": "length",
+          "label": "Lengde (m)",
+          "type": "number",
+          "placeholder": "8"
+        },
+        {
+          "id": "width",
+          "label": "Bredde (m)",
+          "type": "number",
+          "placeholder": "4"
+        },
+        {
+          "id": "depth",
+          "label": "Gjennomsnittsdybde (m)",
+          "type": "number",
+          "placeholder": "1.5"
+        },
+        {
+          "id": "shape",
+          "label": "Form",
+          "type": "select",
+          "options": [
+            "Rektangel",
+            "Oval",
+            "Sirkel"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "akkordprogresjon-generator",
+      "title": "Akkordprogresjonsgenerator",
+      "category": "musikk",
+      "description": "Generer akkordprogresjoner i ulike tonearter",
+      "formula": "chord_progression",
+      "keywords": "akkordprogresjon generator musikk toneart",
+      "inputs": [
+        {
+          "id": "key",
+          "label": "Toneart",
+          "type": "select",
+          "options": [
+            "C",
+            "C#/Db",
+            "D",
+            "D#/Eb",
+            "E",
+            "F",
+            "F#/Gb",
+            "G",
+            "G#/Ab",
+            "A",
+            "A#/Bb",
+            "B"
+          ]
+        },
+        {
+          "id": "mode",
+          "label": "Modus",
+          "type": "select",
+          "options": [
+            "Dur (Ionisk)",
+            "Moll (Eolisk)",
+            "Dorisk",
+            "Frygisk",
+            "Lydisk",
+            "Miksolydisk",
+            "Lokrisk"
+          ]
+        },
+        {
+          "id": "progression",
+          "label": "Progresjon",
+          "type": "select",
+          "options": [
+            "I-IV-V-I",
+            "I-V-vi-IV",
+            "ii-V-I",
+            "I-vi-IV-V",
+            "I-IV-vi-V"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "vokalrekkevidde-kalkulator",
+      "title": "Vokalrekkevidde Kalkulator",
+      "category": "musikk",
+      "description": "Finn din vokalrekkevidde og stemmetype",
+      "formula": "vocal_range",
+      "keywords": "vokalrekkevidde kalkulator stemmetype sang",
+      "inputs": [
+        {
+          "id": "lowest_note",
+          "label": "Laveste note",
+          "type": "select",
+          "options": [
+            "C2",
+            "D2",
+            "E2",
+            "F2",
+            "G2",
+            "A2",
+            "B2",
+            "C3",
+            "D3",
+            "E3",
+            "F3",
+            "G3",
+            "A3",
+            "B3",
+            "C4",
+            "D4",
+            "E4",
+            "F4",
+            "G4",
+            "A4"
+          ]
+        },
+        {
+          "id": "highest_note",
+          "label": "Høyeste note",
+          "type": "select",
+          "options": [
+            "C4",
+            "D4",
+            "E4",
+            "F4",
+            "G4",
+            "A4",
+            "B4",
+            "C5",
+            "D5",
+            "E5",
+            "F5",
+            "G5",
+            "A5",
+            "B5",
+            "C6",
+            "D6",
+            "E6",
+            "F6",
+            "G6",
+            "A6"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "forsinkelse-reverb-kalkulator",
+      "title": "Forsinkelse og Reverb Kalkulator",
+      "category": "musikk",
+      "description": "Beregn delay og reverb tider for BPM",
+      "formula": "delay_reverb",
+      "keywords": "forsinkelse reverb kalkulator delay bpm musikk",
+      "inputs": [
+        {
+          "id": "bpm",
+          "label": "BPM (slag per minutt)",
+          "type": "number",
+          "placeholder": "120"
+        },
+        {
+          "id": "note_value",
+          "label": "NoteVerdi",
+          "type": "select",
+          "options": [
+            "Helnote",
+            "Halvnote",
+            "Kvartnote",
+            "Åttendedelsnote",
+            "Sekstendedelsnote",
+            "Triol"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "gitarstreng-spenning-kalkulator",
+      "title": "Gitarstrengspenningskalkulator",
+      "category": "musikk",
+      "description": "Beregn strengspenning for gitarstemming",
+      "formula": "guitar_tension",
+      "keywords": "gitarstreng spenning kalkulator stemming",
+      "inputs": [
+        {
+          "id": "string_gauge",
+          "label": "Strengtykkelse (mm)",
+          "type": "number",
+          "placeholder": "0.254"
+        },
+        {
+          "id": "scale_length",
+          "label": "Mensur (mm)",
+          "type": "number",
+          "placeholder": "648"
+        },
+        {
+          "id": "tuning",
+          "label": "Stemming",
+          "type": "select",
+          "options": [
+            "Standard E",
+            "Drop D",
+            "DADGAD",
+            "Open G",
+            "Open D",
+            "Half step down"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "baandkalkulator",
+      "title": "Båndkalkulator",
+      "category": "musikk",
+      "description": "Beregn bandets inntekter og utgifter",
+      "formula": "band_calc",
+      "keywords": "band kalkulator inntekt utgift musikk",
+      "inputs": [
+        {
+          "id": "gig_fee",
+          "label": "Spillhonorar (kr)",
+          "type": "number",
+          "placeholder": "10000"
+        },
+        {
+          "id": "members",
+          "label": "Antall bandmedlemmer",
+          "type": "number",
+          "placeholder": "4"
+        },
+        {
+          "id": "expenses",
+          "label": "Utgifter (kr)",
+          "type": "number",
+          "placeholder": "2000"
         }
       ]
     }
