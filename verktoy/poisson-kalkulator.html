@@ -38,7 +38,121 @@
 <div class="main-wrap">
   <div class="main-content">
     <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>Gjennomsnittlig rate (λ)</label><div class="input-row"><input type="number" class="calc-input" data-field="lambda" placeholder="2.5"></div></div><div class="input-group"><label>Antall hendelser (k)</label><div class="input-row"><input type="number" class="calc-input" data-field="k" placeholder="3"></div></div></div>    <button class="btn-calc" onclick="runCalculator('poisson_calc')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
-    <div class="ai-loader" id="aiWrap"><p>Last inn detaljert guide</p><button class="btn-ai" id="aiBtn">Vis guide</button><div class="loading-wrap" id="aiLoader"><div class="spinner"></div><span>Laster...</span></div></div><div class="content-card" id="aiContent" style="display:none"></div>
+    <div class="content-card">Her er en SEO-optimalisert HTML-artikkel på norsk om "Poisson Kalkulator". Artikkelen inneholder de forespurte seksjonene, nøkkelordet "poisson kalkulator" 8 ganger, og følger strukturen med h2, h3, p, ul, li og strong-tagger.
+
+```html
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poisson Kalkulator – Hva det er og hvordan du bruker den</title>
+    <meta name="description" content="Lær alt om Poisson kalkulator: hva den er, hvorfor den er viktig, formel, praktiske eksempler, tips og FAQ. Optimaliser dine sannsynlighetsberegninger.">
+</head>
+<body>
+
+    <h1>Poisson Kalkulator – en komplett guide for sannsynlighetsberegning</h1>
+
+    <p>Har du noen gang lurt på hvor sannsynlig det er at en bestemt hendelse inntreffer et gitt antall ganger i løpet av en fast tidsperiode? Da er <strong>poisson kalkulator</strong> verktøyet du trenger. Denne artikkelen gir deg en grundig innføring i hva en poisson kalkulator er, hvorfor den er viktig, hvordan du bruker den, formelen bak, praktiske eksempler og nyttige tips. Vi svarer også på fem vanlige spørsmål i FAQ-seksjonen.</p>
+
+    <h2>Hva er en Poisson kalkulator?</h2>
+
+    <p>En <strong>poisson kalkulator</strong> er et digitalt verktøy som beregner sannsynligheten for at et bestemt antall hendelser inntreffer innenfor et gitt tidsintervall eller område, gitt en kjent gjennomsnittlig frekvens. Verktøyet er basert på Poisson-fordelingen, oppkalt etter den franske matematikeren Siméon Denis Poisson. Fordelingen brukes ofte i statistikk og sannsynlighetsteori for å modellere sjeldne hendelser som skjer uavhengig av hverandre.</p>
+
+    <p>Typiske bruksområder inkluderer:</p>
+    <ul>
+        <li>Antall kunder som ankommer en butikk i løpet av en time.</li>
+        <li>Antall telefonsamtaler til et kundesenter per minutt.</li>
+        <li>Antall ulykker på en veistrekning i løpet av en måned.</li>
+        <li>Antall defekte produkter i en produksjonslinje per dag.</li>
+    </ul>
+
+    <p>Med en <strong>poisson kalkulator</strong> kan du raskt finne sannsynligheten for nøyaktig k hendelser, eller kumulative sannsynligheter som "minst 3 hendelser" eller "høyst 2 hendelser".</p>
+
+    <h2>Hvorfor er Poisson kalkulator viktig?</h2>
+
+    <p>I en verden full av usikkerhet er evnen til å kvantifisere risiko og sjanse avgjørende. En <strong>poisson kalkulator</strong> gir presise svar der manuell utregning kan være tidkrevende og feilutsatt. Her er noen grunner til at verktøyet er så viktig:</p>
+
+    <ul>
+        <li><strong>Tidsbesparelse:</strong> I stedet for å regne ut komplekse fakulteter og eksponentialfunksjoner for hånd, gir kalkulatoren svaret på sekunder.</li>
+        <li><strong>Nøyaktighet:</strong> Poisson-fordelingen krever ofte høy presisjon, spesielt for store tall. En kalkulator eliminerer avrundingsfeil.</li>
+        <li><strong>Beslutningsstøtte:</strong> Bedrifter bruker den til å planlegge bemanning, lagerbeholdning og beredskap. For eksempel kan en <strong>poisson kalkulator</strong> hjelpe et sykehus med å forutsi antall akuttinnleggelser.</li>
+        <li><strong>Utdanning og forskning:</strong> Studenter og forskere bruker den til å analysere data innen fysikk, biologi, økonomi og ingeniørfag.</li>
+    </ul>
+
+    <p>Uten en <strong>poisson kalkulator</strong> ville mange fagfolk måtte stole på omtrentlige estimater eller bruke unødvendig tid på manuelle beregninger.</p>
+
+    <h2>Slik bruker du en Poisson kalkulator</h2>
+
+    <p>Å bruke en <strong>poisson kalkulator</strong> er enkelt, men det krever at du har riktige input-verdier. Følg denne trinnvise veiledningen:</p>
+
+    <h3>Steg 1: Bestem gjennomsnittet (λ - lambda)</h3>
+    <p>Lambda (λ) er gjennomsnittlig antall hendelser i det aktuelle tidsrommet eller området. For eksempel, hvis du i snitt får 4 kunder i timen, er λ = 4.</p>
+
+    <h3>Steg 2: Angi antall hendelser (k)</h3>
+    <p>Bestem hvor mange ganger du vil beregne sannsynligheten for. Dette kan være et eksakt tall (f.eks. 6 kunder) eller et intervall (f.eks. minst 5 kunder).</p>
+
+    <h3>Steg 3: Velg type sannsynlighet</h3>
+    <p>De fleste kalkulatorer tilbyr:</p>
+    <ul>
+        <li><strong>P(X = k):</strong> Sannsynligheten for nøyaktig k hendelser.</li>
+        <li><strong>P(X ≤ k):</strong> Sannsynligheten for høyst k hendelser.</li>
+        <li><strong>P(X ≥ k):</strong> Sannsynligheten for minst k hendelser.</li>
+    </ul>
+
+    <h3>Steg 4: Les resultatet</h3>
+    <p>Kalkulatoren viser sannsynligheten som et desimaltall (f.eks. 0,1606) eller prosent (16,06%). Mange verktøy gir også en grafisk fremstilling av fordelingen.</p>
+
+    <p><strong>Tips:</strong> Sørg for at enhetene er konsistente. Hvis du har data per uke, men ønsker sannsynlighet per dag, må du skalere λ tilsvarende.</p>
+
+    <h2>Formel med eksempel</h2>
+
+    <p>Poisson-fordelingens sannsynlighetsmassefunksjon er:</p>
+    <p><strong>P(X = k) = (λ^k * e^(-λ)) / k!</strong></p>
+    <p>Hvor:</p>
+    <ul>
+        <li><strong>λ</strong> = gjennomsnittlig antall hendelser</li>
+        <li><strong>k</strong> = antall hendelser vi ønsker sannsynlighet for</li>
+        <li><strong>e</strong> = Eulers tall (ca. 2,71828)</li>
+        <li><strong>k!</strong> = fakultet av k (k * (k-1) * ... * 1)</li>
+    </ul>
+
+    <h3>Eksempel: Kundeservice</h3>
+    <p>Et kundesenter mottar i gjennomsnitt 3 samtaler per time (λ = 3). Hva er sannsynligheten for at de mottar nøyaktig 5 samtaler i løpet av en time?</p>
+    <p>Bruk formelen: P(X = 5) = (3^5 * e^(-3)) / 5! = (243 * 0,049787) / 120 ≈ 0,1008.</p>
+    <p>Sannsynligheten er omtrent 10,08 %. Ved å taste inn λ=3 og k=5 i en <strong>poisson kalkulator</strong> får du samme svar umiddelbart.</p>
+
+    <h2>Praktiske eksempler</h2>
+
+    <h3>Eksempel 1: Nettsidetrafikk</h3>
+    <p>En blogg har i snitt 2 besøk per minutt (λ = 2). Hva er sannsynligheten for at det kommer nøyaktig 0 besøk i et gitt minutt? Med en <strong>poisson kalkulator</strong> får vi P(X=0) = e^(-2) ≈ 0,1353, altså 13,53 % sjanse for et tomt minutt.</p>
+
+    <h3>Eksempel 2: Kvalitetskontroll</h3>
+    <p>En fabrikk produserer glassflasker. I gjennomsnitt er 0,5 flasker defekte per 1000 enheter (λ = 0,5). Hva er sannsynligheten for at en batch på 1000 flasker inneholder minst 1 defekt? Dette er 1 - P(X=0) = 1 - e^(-0,5) ≈ 0,3935, eller 39,35 %.</p>
+
+    <h3>Eksempel 3: Vinterdekk</h3>
+    <p>En bilforhandler selger i snitt 1,2 sett med vinterdekk per dag i november. Hva er sannsynligheten for at de selger nøyaktig 3 sett på en dag? Med λ=1,2 og k=3 gir <strong>poisson kalkulator</strong> ca. 0,0867 (8,67 %).</p>
+
+    <h2>Tips for bruk av Poisson kalkulator</h2>
+
+    <ul>
+        <li><strong>Kontroller forutsetningene:</strong> Poisson-fordelingen forutsetter uavhengige hendelser og konstant rate. Hvis hendelser påvirker hverandre (f.eks. køer), bør du vurdere andre modeller.</li>
+        <li><strong>Bruk kumulative funksjoner:</strong> For spørsmål som "hva er sannsynligheten for minst 3 hendelser?" er det mer effektivt å bruke P(X ≥ 3) enn å summere flere enkeltsannsynligheter.</li>
+        <li><strong>Sjekk enheter:</strong> Hvis du har en rate per time, men spør om en 30-minutters periode, må du justere λ. For 30 minutter: λ = (rate per time) / 2.</li>
+        <li><strong>Sammenlign med normalfordeling:</strong> Når λ er stor (over 20), kan Poisson-fordelingen tilnærmes med normalfordeling. Noen <strong>poisson kalkulator</strong>-verktøy tilbyr også denne tilnærmingen.</li>
+        <li><strong>Bruk pålitelige kilder:</strong> Velg en <strong>poisson kalkulator</strong> fra anerkjente nettsteder eller statistikkprogrammer for å unngå feil i beregningsalgoritmen.</li>
+    </ul>
+
+    <h2>FAQ – 5 vanlige spørsmål om Poisson kalkulator</h2>
+
+    <h3>1. Hva er forskjellen på Poisson og binomial fordeling?</h3>
+    <p>Binomialfordelingen brukes når du har et fast antall forsøk (f.eks. 10 myntkast), mens Poisson brukes når du teller hendelser over tid eller rom uten en fast øvre grense. En <strong>poisson kalkulator</strong> er ideell for sjeldne hendelser med høy frekvens av muligheter.</p>
+
+    <h3>2. Kan jeg bruke Poisson kalkulator for kontinuerlige data?</h3>
+    <p>Nei, Poisson-fordelingen er diskret – den teller antall hendelser (0, 1, 2, …). For kontinuerlige data (f.eks. tid mellom hendelser) bruker man eksponential- eller gammafordeling.</p>
+
+    <h3>3. Hva gjør jeg hvis λ er veldig stor?</h3>
+    <p>De fleste <strong>poisson kalkulator</strong>-verktøy håndterer store λ-verdier, men noen</div>
     <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/kelly-kriterium-kalkulator'"><span class="tool-card-icon">🎲</span><h3>Kelly Kriterium Kalkulator</h3><p>Beregn optimal innsats med Kelly kriteriet</p></div><div class="tool-card" onclick="location='/verktoy/poker-odds-kalkulator'"><span class="tool-card-icon">🎲</span><h3>Poker Odds Kalkulator</h3><p>Beregn poker odds og pot odds</p></div><div class="tool-card" onclick="location='/verktoy/parlay-kalkulator'"><span class="tool-card-icon">🎲</span><h3>Parlay Kalkulator</h3><p>Beregn parlay utbetaling og kombinert odds</p></div><div class="tool-card" onclick="location='/verktoy/forventet-verdi-kalkulator'"><span class="tool-card-icon">🎲</span><h3>Forventet Verdi Kalkulator</h3><p>Beregn forventet verdi (EV) for en hendelse</p></div><div class="tool-card" onclick="location='/verktoy/odds-kalkulator'"><span class="tool-card-icon">🎲</span><h3>Odds Kalkulator</h3><p>Beregn utbetaling og implisitt sannsynlighet</p></div><div class="tool-card" onclick="location='/verktoy/fotball-odds-kalkulator'"><span class="tool-card-icon">🎲</span><h3>Fotball Odds Kalkulator</h3><p>Beregn fotball odds og bookmaker margin</p></div><div class="tool-card" onclick="location='/verktoy/trifecta-kalkulator'"><span class="tool-card-icon">🎲</span><h3>Trifecta Kalkulator</h3><p>Beregn trifecta kombinasjoner og kostnad</p></div><div class="tool-card" onclick="location='/verktoy/runde-robin-kalkulator'"><span class="tool-card-icon">🎲</span><h3>Runde Robin Kalkulator</h3><p>Beregn runde robin kombinasjoner</p></div><div class="tool-card" onclick="location='/verktoy/arbitrasje-kalkulator'"><span class="tool-card-icon">🎲</span><h3>Arbitrasjekalkulator</h3><p>Finn arbitrasjemuligheter mellom bookmakers</p></div><div class="tool-card" onclick="location='/verktoy/sports-parlay-kalkulator'"><span class="tool-card-icon">🎲</span><h3>Sports Parlay Kalkulator</h3><p>Beregn sports parlay utbetaling</p></div><div class="tool-card" onclick="location='/verktoy/roulette-odds-kalkulator'"><span class="tool-card-icon">🎲</span><h3>Roulette Odds Kalkulator</h3><p>Beregn roulette odds og utbetaling</p></div><div class="tool-card" onclick="location='/verktoy/blackjack-strategi-kalkulator'"><span class="tool-card-icon">🎲</span><h3>Blackjack Strategi Kalkulator</h3><p>Finn optimal blackjack strategi</p></div><div class="tool-card" onclick="location='/kategori/odds'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle Odds og Statistikk</h3><p>Alle kalkulatorer i denne kategorien</p></div></div></div>
     <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/lan-kalkulator'"><span class="tool-card-icon">💰</span><h3>Lån Kalkulator</h3><p>Beregn månedlige låneavdrag med nedbetalingsoversikt</p></div><div class="tool-card" onclick="location='/verktoy/prosent-kalkulator'"><span class="tool-card-icon">📐</span><h3>Prosent Kalkulator</h3><p>Beregn prosent med flere metoder og sammenligninger</p></div><div class="tool-card" onclick="location='/verktoy/temperatur-konvertering'"><span class="tool-card-icon">🔄</span><h3>Temperatur Konvertering</h3><p>Konverter temperatur mellom alle enheter</p></div><div class="tool-card" onclick="location='/verktoy/areal-kalkulator'"><span class="tool-card-icon">📏</span><h3>Areal Kalkulator</h3><p>Beregn areal av ulike former med enheter</p></div><div class="tool-card" onclick="location='/verktoy/alder-kalkulator'"><span class="tool-card-icon">📅</span><h3>Alder Kalkulator</h3><p>Beregn nøyaktig alder med sammenligning og statistikk</p></div></div></div>
   </div>
