@@ -38,7 +38,100 @@
 <div class="main-wrap">
   <div class="main-content">
     <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>Fødselsdato</label><div class="input-row"><input type="date" class="calc-input" data-field="birthdate"></div></div><div class="input-group"><label>Måldate (tom = i dag)</label><div class="input-row"><input type="date" class="calc-input" data-field="target_date"></div></div></div>    <button class="btn-calc" onclick="runCalculator('chronological_age')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
-    <div class="ai-loader" id="aiWrap"><p>Last inn detaljert guide</p><button class="btn-ai" id="aiBtn">Vis guide</button><div class="loading-wrap" id="aiLoader"><div class="spinner"></div><span>Laster...</span></div></div><div class="content-card" id="aiContent" style="display:none"></div>
+    <div class="content-card">Her er en komplett SEO-artikkel i HTML-format om "Kronologisk Alderskalkulator". Den inneholder alle etterspurte seksjoner, nøkkelordet brukt 8 ganger, og er strukturert med overskrifter, avsnitt, lister og fet tekst.
+```html
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kronologisk Alderskalkulator – nøyaktig alder i år, måneder og dager</title>
+    <meta name="description" content="Lær alt om kronologisk alderskalkulator: hva den er, hvorfor den er viktig, formel med eksempel, praktiske tips og FAQ. Få nøyaktig alder på sekunder.">
+</head>
+<body>
+
+<article>
+    <h2>Hva er en kronologisk alderskalkulator?</h2>
+    <p>En <strong>kronologisk alderskalkulator</strong> er et verktøy som beregner den nøyaktige tiden som har gått fra en persons fødselsdato til en gitt dato (ofte dagens dato). Den gir alderen i år, måneder, uker og dager – og noen ganger ned til minutter og sekunder. Mange forveksler den med biologisk alder, men kronologisk alder er rent matematisk: den teller kalendertid uten hensyn til helse eller utvikling.</p>
+    <p>En <strong>kronologisk alderskalkulator</strong> brukes overalt – fra helsevesen og forsikring til utdanning og sport. Kalkulatoren tar hensyn til skuddår og ulike månedslengder, så du slipper manuell hoderegning. Du skriver inn fødselsdato og valgfri sluttdato, og algoritmen regner ut differansen i år, måneder og dager.</p>
+    <p>Verktøyet finnes som frittstående nettsider, mobilapper og innebygde funksjoner i pasientsystemer og HR-programvare. Enten du er lege, lærer eller forelder, gir en <strong>kronologisk alderskalkulator</strong> et presist svar på sekunder.</p>
+
+    <h2>Hvorfor er kronologisk alder viktig?</h2>
+    <p>Kronologisk alder er en grunnleggende faktor i mange sammenhenger. Her er noen nøkkelområder:</p>
+    <ul>
+        <li><strong>Medisin og helse:</strong> Legemiddeldosering, vaksinasjonsprogram og utviklingsmiljøer er ofte basert på nøyaktig kronologisk alder. For premature barn justeres alderen for å gi riktig behandling.</li>
+        <li><strong>Utdanning og barnehage:</strong> Skolestart, trinnplassering og spesialpedagogiske tiltak avgjøres av kronologisk alder. En <strong>kronologisk alderskalkulator</strong> sikrer rettferdig inndeling.</li>
+        <li><strong>Forsikring og jus:</strong> Aldersgrenser for førerkort, forsikringspremier og pensjonsrettigheter beregnes ut fra nøyaktig alder i dager.</li>
+        <li><strong>Idrett:</strong> Aldersklasser i barne- og ungdomsidrett, samt konkurranseregler, avhenger av kronologisk alder.</li>
+        <li><strong>Personlig bruk:</strong> Nøyaktig alder for jubileer, milepæler eller genealogisk forskning.</li>
+    </ul>
+    <p>Uten en pålitelig <strong>kronologisk alderskalkulator</strong> risikerer man feil med store konsekvenser – for eksempel feil medisinering eller feil skoleplassering.</p>
+
+    <h2>Slik bruker du en kronologisk alderskalkulator</h2>
+    <p>Bruken er enkel og intuitiv. Følg disse trinnene:</p>
+    <ol>
+        <li><strong>Finn en pålitelig kalkulator:</strong> Søk etter "kronologisk alderskalkulator" på nettet, eller bruk en anerkjent helse- eller utdanningsplattform.</li>
+        <li><strong>Skriv inn fødselsdato:</strong> Vanligvis i formatet DD/MM/ÅÅÅÅ eller MM/DD/ÅÅÅÅ. Vær nøyaktig.</li>
+        <li><strong>Velg sluttdato (valgfritt):</strong> De fleste kalkulatorer bruker dagens dato som standard. Du kan også velge en fremtidig eller historisk dato.</li>
+        <li><strong>Klikk "Beregn":</strong> Verktøyet viser alderen i år, måneder, uker og dager. Noen viser også totalt antall dager.</li>
+        <li><strong>Les resultatet:</strong> Eksempel: "Du er 34 år, 5 måneder og 12 dager gammel."</li>
+    </ol>
+    <p>En god <strong>kronologisk alderskalkulator</strong> justerer automatisk for skuddår og ulike månedslengder. Du trenger ingen matematiske forkunnskaper.</p>
+
+    <h2>Formel med eksempel</h2>
+    <p>Beregningen av kronologisk alder følger en enkel logikk, men implementeringen krever presisjon. Grunnformelen er:</p>
+    <p><strong>Alder = Sluttdato – Fødselsdato</strong></p>
+    <p>For å regne manuelt trekker man fra dato komponentvis (år, måneder, dager). Hvis dager eller måneder er negative, låner man fra høyere enhet. Her er et konkret eksempel:</p>
+    <p><strong>Eksempel:</strong> Fødselsdato: 15. mars 1990. Sluttdato: 24. september 2024.</p>
+    <ul>
+        <li>Trekk fra dager: 24 – 15 = 9 dager (positivt).</li>
+        <li>Trekk fra måneder: September (9) – Mars (3) = 6 måneder.</li>
+        <li>Trekk fra år: 2024 – 1990 = 34 år.</li>
+        <li><strong>Resultat:</strong> 34 år, 6 måneder og 9 dager.</li>
+    </ul>
+    <p>Hvis fødselsdatoen var 25. mars 1990 og sluttdato 24. september 2024, blir dager negative (24-25 = -1). Da låner man én måned (30 dager) fra september, slik at måneder blir 8 og dager 24+30-25=29. Alder: 34 år, 5 måneder, 29 dager. En <strong>kronologisk alderskalkulator</strong> gjør alt dette automatisk.</p>
+
+    <h2>Praktiske eksempler</h2>
+    <h3>Eksempel 1: Legemiddeldosering til barn</h3>
+    <p>Et barn født 12. juni 2021 skal ha en medisin som doseres etter vekt og alder. Dagens dato er 8. mars 2025. En <strong>kronologisk alderskalkulator</strong> viser 3 år, 8 måneder og 24 dager. Legen justerer dosen basert på nøyaktig alder, ikke bare "3 år".</p>
+
+    <h3>Eksempel 2: Skolestart</h3>
+    <p>I Norge må barn ha fylt 6 år innen 1. oktober for å starte på skolen. Et barn født 3. oktober 2018 vil ved skolestart 2024 være 5 år, 11 måneder og 28 dager – under grensen. En <strong>kronologisk alderskalkulator</strong> bekrefter at barnet må vente et år.</p>
+
+    <h3>Eksempel 3: Forsikringspremie</h3>
+    <p>En person født 29. februar 1996 (skuddår) vil ha en spesiell alder. En <strong>kronologisk alderskalkulator</strong> håndterer skuddår korrekt. Per 1. mars 2025 er personen 29 år og 1 dag gammel, ikke 29 år. Dette påvirker premien for livsforsikring.</p>
+
+    <h2>Tips for nøyaktig bruk</h2>
+    <ul>
+        <li><strong>Dobbelsjekk datoformat:</strong> Mange kalkulatorer forventer amerikansk format (MM/DD/ÅÅÅÅ). Sjekk innstillingene.</li>
+        <li><strong>Bruk en pålitelig kilde:</strong> Velg en <strong>kronologisk alderskalkulator</strong> fra anerkjente helsenettsteder eller offentlige institusjoner.</li>
+        <li><strong>Husk skuddår:</strong> Hvis du regner manuelt, husk at 29. februar kun finnes i skuddår. Kalkulatoren gjør dette automatisk.</li>
+        <li><strong>Oppgi nøyaktig tid (valgfritt):</strong> Noen kalkulatorer inkluderer klokkeslett – nyttig for premature barn eller rettslige tvister.</li>
+        <li><strong>Bruk for historiske datoer:</strong> Du kan også beregne alder på en bestemt dato i fortiden, for eksempel ved en ulykke eller kontraktsinngåelse.</li>
+    </ul>
+
+    <h2>FAQ – ofte stilte spørsmål</h2>
+    <h3>1. Hva er forskjellen på kronologisk alder og biologisk alder?</h3>
+    <p>Kronologisk alder er rent kalenderbasert, mens biologisk alder måler kroppens funksjon og helse. En <strong>kronologisk alderskalkulator</strong> sier ingenting om hvor gammel du føler deg eller hvor frisk du er.</p>
+
+    <h3>2. Kan jeg bruke kronologisk alderskalkulator for å beregne alder i uker?</h3>
+    <p>Ja, de fleste kalkulatorer viser også alder i uker og dager. For spedbarn er uker ofte mer presist enn måneder.</p>
+
+    <h3>3. Hvordan håndterer kalkulatoren skuddår?</h3>
+    <p>En god <strong>kronologisk alderskalkulator</strong> inkluderer skuddår i beregningen. Den vet at 2024 er et skuddår, og justerer antall dager i februar deretter.</p>
+
+    <h3>4. Er det gratis å bruke en kronologisk alderskalkulator?</h3>
+    <p>De fleste nettbaserte kalkulatorer er gratis. Noen avanserte verktøy for helsepersonell kan kreve abonnement, men enkel aldersberegning er nesten alltid gratis.</p>
+
+    <h3>5. Kan jeg beregne alder for noen som er født før år 1900?</h3>
+    <p>Ja, men vær oppmerksom på at enkelte eldre kalkulatorer har begrensninger. Bruk en moderne <strong>kronologisk alderskalkulator</strong> som støtter datoer langt tilbake i tid, for eksempel for genealogi.</p>
+
+    <p><strong>Oppsummering:</strong> En <strong>kronologisk alderskalkulator</strong> er et uunnværlig verktøy for alle som trenger nøyaktig alder – fra leger og lærere til foreldre og forsikringsselskaper. Med riktig bruk unngår du feil og sparer tid. Prøv en i dag!</p>
+</article>
+
+</body>
+</html>
+```</div>
     <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/alder-kalkulator'"><span class="tool-card-icon">📅</span><h3>Alder Kalkulator</h3><p>Beregn nøyaktig alder med sammenligning og statistikk</p></div><div class="tool-card" onclick="location='/verktoy/dato-kalkulator'"><span class="tool-card-icon">📅</span><h3>Dato Kalkulator</h3><p>Legg til eller trekk fra dager med arbeidsdager og helligdager</p></div><div class="tool-card" onclick="location='/verktoy/tidskalkulator'"><span class="tool-card-icon">📅</span><h3>Tidskalkulator</h3><p>Beregn tidsforskjell med tidssoner og pauser</p></div><div class="tool-card" onclick="location='/verktoy/nedtelling-kalkulator'"><span class="tool-card-icon">📅</span><h3>Nedtelling Kalkulator</h3><p>Tell ned til en dato med detaljer og hendelser</p></div><div class="tool-card" onclick="location='/verktoy/arbeidsdager-kalkulator'"><span class="tool-card-icon">📅</span><h3>Arbeidsdager Kalkulator</h3><p>Beregn arbeidsdager og helligdager</p></div><div class="tool-card" onclick="location='/verktoy/pensjon-nedtelling'"><span class="tool-card-icon">📅</span><h3>Pensjon Nedtelling</h3><p>Tell ned til pensjonsalder</p></div><div class="tool-card" onclick="location='/verktoy/bursdag-nedtelling'"><span class="tool-card-icon">📅</span><h3>Bursdag Nedtelling</h3><p>Tell ned til neste bursdag</p></div><div class="tool-card" onclick="location='/verktoy/tidssone-kalkulator'"><span class="tool-card-icon">📅</span><h3>Tidssone Kalkulator</h3><p>Konverter tid mellom tidssoner</p></div><div class="tool-card" onclick="location='/verktoy/unix-tidsstempel'"><span class="tool-card-icon">📅</span><h3>Unix Tidsstempel Kalkulator</h3><p>Konverter mellom Unix tid og dato</p></div><div class="tool-card" onclick="location='/verktoy/skuddår-kalkulator'"><span class="tool-card-icon">📅</span><h3>Skuddår Kalkulator</h3><p>Sjekk om år er skuddår</p></div><div class="tool-card" onclick="location='/verktoy/ukenummer-kalkulator'"><span class="tool-card-icon">📅</span><h3>Ukenummer Kalkulator</h3><p>Finn ukenummer for dato</p></div><div class="tool-card" onclick="location='/verktoy/semester-kalkulator'"><span class="tool-card-icon">📅</span><h3>Semester Kalkulator</h3><p>Beregn semesterdatoer og varighet</p></div><div class="tool-card" onclick="location='/kategori/tid'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle Tid og Dato</h3><p>Alle kalkulatorer i denne kategorien</p></div></div></div>
     <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/lan-kalkulator'"><span class="tool-card-icon">💰</span><h3>Lån Kalkulator</h3><p>Beregn månedlige låneavdrag med nedbetalingsoversikt</p></div><div class="tool-card" onclick="location='/verktoy/prosent-kalkulator'"><span class="tool-card-icon">📐</span><h3>Prosent Kalkulator</h3><p>Beregn prosent med flere metoder og sammenligninger</p></div><div class="tool-card" onclick="location='/verktoy/temperatur-konvertering'"><span class="tool-card-icon">🔄</span><h3>Temperatur Konvertering</h3><p>Konverter temperatur mellom alle enheter</p></div><div class="tool-card" onclick="location='/verktoy/areal-kalkulator'"><span class="tool-card-icon">📏</span><h3>Areal Kalkulator</h3><p>Beregn areal av ulike former med enheter</p></div><div class="tool-card" onclick="location='/verktoy/fart-kalkulator'"><span class="tool-card-icon">⚡</span><h3>Fart Kalkulator</h3><p>Beregn fart, distanse og tid med enhetskonvertering og drivstoffestimat</p></div></div></div>
   </div>

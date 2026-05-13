@@ -1,0 +1,157 @@
+```html
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unix Tid Kalkulator – Komplett guide for utviklere og systemadministratorer</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+            line-height: 1.7;
+            max-width: 860px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            color: #1e293b;
+            background: #f8fafc;
+        }
+        h2 {
+            border-bottom: 3px solid #3b82f6;
+            padding-bottom: 0.4rem;
+            margin-top: 2.5rem;
+            color: #0f172a;
+        }
+        h3 {
+            margin-top: 1.8rem;
+            color: #1e293b;
+        }
+        p {
+            margin: 1rem 0;
+        }
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 1.8rem;
+        }
+        li {
+            margin: 0.4rem 0;
+        }
+        strong {
+            color: #0f172a;
+        }
+        .eksempel-boks {
+            background: #eef2ff;
+            border-left: 5px solid #3b82f6;
+            padding: 1rem 1.5rem;
+            margin: 1.8rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .faq-item {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 1rem 1.5rem;
+            margin: 1.2rem 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+        }
+        .faq-item strong {
+            display: block;
+            margin-bottom: 0.3rem;
+            font-size: 1.05rem;
+        }
+        code {
+            background: #e2e8f0;
+            padding: 0.2rem 0.5rem;
+            border-radius: 6px;
+            font-size: 0.95rem;
+        }
+        .tips-list {
+            background: #f1f5f9;
+            padding: 1.2rem 1.8rem;
+            border-radius: 16px;
+        }
+        .tips-list li {
+            margin: 0.7rem 0;
+        }
+        .keyword-highlight {
+            font-weight: 600;
+            color: #2563eb;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #cbd5e1;
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Hva er en Unix Tid Kalkulator?</h2>
+    <p>En <strong>unix tid kalkulator</strong> er et verktøy (ofte et nettbasert skript, kommandolinjeverktøy eller en funksjon i programmeringsspråk) som konverterer mellom Unix-tidsstempel (epoch time) og lesbar dato/klokkeslett. Unix-tid teller antall sekunder som har gått siden 1. januar 1970 kl. 00:00:00 UTC – et tidspunkt kjent som <strong>Unix-epoken</strong>. Kalkulatoren kan også gjøre omvendte konverteringer, og noen avanserte varianter håndterer millisekunder, tidssoner og tidsdifferanser.</p>
+    <p>De fleste utviklere og systemadministratorer støter på Unix-tid i loggfiler, databaser (for eksempel i MySQL eller PostgreSQL), API-responser (JSON/Unix-tidsstempel) og i filsystemmetadata. En <span class="keyword-highlight">unix tid kalkulator</span> gjør det raskt å tolke disse tallene uten å måtte regne manuelt.</p>
+    <p>Mange kalkulatorer er tilgjengelige som nettjenester, men du kan også lage din egen med noen få linjer kode i Python, JavaScript eller Bash. Uansett plattform er hensikten den samme: å oversette mellom maskinlesbar tid og menneskelig forståelig format.</p>
+
+    <h2>Hvorfor er Unix Tid Kalkulator viktig?</h2>
+    <p>I en verden av distribuert programvare, skyløsninger og globale tjenester er <strong>unix tid kalkulator</strong> uunnværlig av flere grunner:</p>
+    <ul>
+        <li><strong>Feilsøking av logger:</strong> De fleste serverlogger (Apache, Nginx, systemd) bruker Unix-tidsstempel. Uten en kalkulator ville du måttet dekode sekunder manuelt.</li>
+        <li><strong>Database-spørringer:</strong> Mange databaser lagrer tidspunkter som Unix-tid (heltall). For å filtrere på datoer må du konvertere frem og tilbake.</li>
+        <li><strong>API-integrasjon:</strong> REST APIer returnerer ofte tidsstempel i Unix-format. En kalkulator hjelper deg å validere og teste data.</li>
+        <li><strong>Tidssoneuavhengighet:</strong> Unix-tid er alltid UTC. Dette eliminerer forvirring rundt sommertid og lokale tidssoner – en <span class="keyword-highlight">unix tid kalkulator</span> viser deg nøyaktig det globale øyeblikket.</li>
+        <li><strong>Automatisering og skripting:</strong> Ved å kombinere kalkulatoren med Bash eller Python kan du automatisere tidsberegninger for backup, rotasjon av logger eller planlagte jobber.</li>
+    </ul>
+    <p>Kort sagt: Enten du er utvikler, IT-driftsansvarlig eller dataanalytiker, sparer en pålitelig <strong>unix tid kalkulator</strong> tid og reduserer feil.</p>
+
+    <h2>Slik bruker du en Unix Tid Kalkulator</h2>
+    <p>Bruksmønsteret er enkelt, men varierer litt etter verktøy. Her er de vanligste måtene:</p>
+    <h3>1. Nettbasert kalkulator</h3>
+    <ul>
+        <li>Åpne en nettside som tilbyr <strong>unix tid kalkulator</strong> (f.eks. epochconverter.com eller lignende).</li>
+        <li>Skriv inn et Unix-tidsstempel (heltall som <code>1719964800</code>) i feltet for "Unix-tid".</li>
+        <li>Kalkulatoren viser umiddelbart tilsvarende dato og klokkeslett i UTC og ofte i lokal tid.</li>
+        <li>For omvendt konvertering: velg dato og tid, få Unix-tidsstempelet.</li>
+    </ul>
+    <h3>2. Kommandolinje (Linux/macOS)</h3>
+    <ul>
+        <li>Bruk <code>date</code>-kommandoen: <code>date -d @1719964800</code> (GNU date).</li>
+        <li>For å få nåværende Unix-tid: <code>date +%s</code>.</li>
+        <li>På macOS: <code>date -r 1719964800</code>.</li>
+    </ul>
+    <h3>3. I programmeringsspråk</h3>
+    <ul>
+        <li><strong>Python:</strong> <code>from datetime import datetime; datetime.utcfromtimestamp(1719964800)</code></li>
+        <li><strong>JavaScript:</strong> <code>new Date(1719964800 * 1000)</code> (merk: millisekunder).</li>
+        <li><strong>PHP:</strong> <code>echo date('Y-m-d H:i:s', 1719964800);</code></li>
+    </ul>
+    <p>Uansett metode er prinsippet det samme: en <span class="keyword-highlight">unix tid kalkulator</span> oversetter mellom sekunder og kalenderdato.</p>
+
+    <h2>Formel med eksempel</h2>
+    <p>For å forstå hvordan <strong>unix tid kalkulator</strong> fungerer internt, er det nyttig å kjenne den underliggende matematikken. Formelen for å konvertere fra en dato til Unix-tid er:</p>
+    <div class="eksempel-boks">
+        <p><strong>Unix-tid = (dato i sekunder siden 1970-01-01) – (antall skuddsekunder, men disse ignoreres ofte)</strong></p>
+        <p>Forenklet: Antall dager fra epoken til datoen × 86400 + antall sekunder siste dag.</p>
+    </div>
+    <h3>Praktisk eksempel</h3>
+    <p><strong>Oppgave:</strong> Finn Unix-tid for 3. juli 2024 kl. 12:00:00 UTC.</p>
+    <ol>
+        <li>Antall dager fra 1970-01-01 til 2024-07-03: 19904 dager (inkluderer skuddår).</li>
+        <li>19904 × 86400 = 1 719 705 600 sekunder.</li>
+        <li>Legg til 12 timer = 12 × 3600 = 43 200 sekunder.</li>
+        <li><strong>Resultat:</strong> 1 719 748 800 (dette er et eksempel; nøyaktig verdi kan variere med skuddsekunder).</li>
+    </ol>
+    <p>Med en <span class="keyword-highlight">unix tid kalkulator</span> skjer dette automatisk, men formelen viser hvorfor verktøyet er så presist.</p>
+
+    <h2>Praktiske eksempler</h2>
+    <p>Her er tre virkelige situasjoner der en <strong>unix tid kalkulator</strong> redder dagen:</p>
+    <h3>Eksempel 1: Analysere en sikkerhetslogg</h3>
+    <p>Du finner en linje i <code>/var/log/auth.log</code>: <code>2024-07-03T14:23:11.000Z server sshd[1234]: Failed password for root</code>. Men loggen viser også et tidsstempel som <code>1719998591</code>. Ved å bruke en <strong>unix tid kalkulator</strong> ser du at dette tilsvarer 3. juli 2024 kl. 14:23:11 UTC. Du kan nå korrelere med andre hendelser.</p>
+    <h3>Eksempel 2: Planlegge en cron-job</h3>
+    <p>Du vil kjøre et skript hver natt kl. 02:00 lokal tid (CEST, UTC+2). I stedet for å regne ut manuelt, konverterer du "2024-08-15 00:00:00 UTC" til Unix-tid via kalkulatoren: <code>1723680000</code>. Deretter bruker du dette i et skript for å beregne forsinkelser.</p>
+    <h3>Eksempel 3: Feilsøke en API-forespørsel</h3>
+    <p>Et API returnerer <code>"created_at": 1719964800</code>. Uten en <span class="keyword-highlight">unix tid kalkulator</span> ville du gjettet feil. Med kalkulatoren ser du at det er 3. juli 2024 kl. 00:00:00 UTC – perfekt for å validere om dataene er oppdaterte.</p>
+
+    <h2>Tips for effektiv bruk</h2>
+    <div class="tips-list">
+        <ul>
+            <li><strong>Alltid sjekk om tidsstempelet er i sekunder eller millisekunder.</strong> JavaScript og noen APIer bruker millisekunder (13 sifre). Del på 1000 før du bruker en <strong>unix tid kalkulator</strong>.</li>
+            <li><strong>Bruk UTC som referanse.</strong> Unix-tid er tidssoneuavhengig. Hvis du trenger lokal tid, konverter etter at du har fått UTC-resultatet.</li>
+            <li><strong>Lær deg hurtigtaster på kommandolinjen

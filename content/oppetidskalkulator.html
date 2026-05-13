@@ -1,0 +1,146 @@
+```html
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppetidskalkulator – guide, formel og praktiske tips</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            max-width: 850px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            color: #1e293b;
+            background: #f8fafc;
+        }
+        h2 {
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 0.3rem;
+            margin-top: 2.5rem;
+            color: #0f172a;
+        }
+        h3 {
+            margin-top: 1.8rem;
+            color: #1e293b;
+        }
+        p {
+            margin: 1.2rem 0;
+        }
+        ul, ol {
+            padding-left: 1.5rem;
+            margin: 1rem 0;
+        }
+        li {
+            margin: 0.5rem 0;
+        }
+        strong {
+            color: #0f172a;
+        }
+        .highlight {
+            background: #e2e8f0;
+            padding: 0.1rem 0.3rem;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+        .faq-item {
+            background: white;
+            border-radius: 12px;
+            padding: 1rem 1.5rem;
+            margin: 1.2rem 0;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+            border: 1px solid #e2e8f0;
+        }
+        .faq-item p {
+            margin: 0.3rem 0 0 0;
+        }
+        .formel-boks {
+            background: white;
+            border-left: 5px solid #2563eb;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+        }
+        .tips-liste {
+            background: #f1f5f9;
+            padding: 1rem 1.5rem 1rem 2.5rem;
+            border-radius: 14px;
+        }
+        .kalkulator-eksempel {
+            background: white;
+            padding: 0.8rem 1.2rem;
+            border-radius: 10px;
+            border: 1px dashed #94a3b8;
+            display: inline-block;
+            margin: 0.5rem 0;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Hva er en oppetidskalkulator?</h2>
+    <p>En <strong>oppetidskalkulator</strong> er et verktøy – ofte et nettbasert skjema, et regneark eller en innebygd funksjon – som beregner systemets oppetid (uptime) i prosent eller i absolutte tall. Den tar utgangspunkt i total tid og nedetid, og gir deg et nøyaktig mål på hvor pålitelig en tjeneste, server, nettverk eller maskinvare har vært over en gitt periode.</p>
+    <p>I praksis brukes en <strong>oppetidskalkulator</strong> av IT-ansvarlige, driftsteam og leverandører for å dokumentere serviceavtaler (SLA), analysere stabilitet og identifisere flaskehalser. Kalkulatoren kan være så enkel som en manuell formel, eller avansert med automatisk innhenting av driftsdata. Uansett variant: <strong>oppetidskalkulator</strong> gir deg et tall du kan stole på – for eksempel 99,9 % eller 99,99 % oppetid.</p>
+    <p>Mange forveksler oppetid med tilgjengelighet, men en <strong>oppetidskalkulator</strong> fokuserer på tid systemet faktisk er operativt, ikke bare respons eller funksjonalitet. Derfor er den uunnværlig for alt fra skytjenester til lokale servere.</p>
+
+    <h2>Hvorfor er oppetidskalkulator viktig?</h2>
+    <p>I en digital hverdag er nedetid kostbart – både i tapte inntekter, omdømme og produktivitet. En <strong>oppetidskalkulator</strong> gir deg fakta, ikke gjetning. Her er de viktigste grunnene til at du bør bruke den:</p>
+    <ul>
+        <li><strong>SLA-rapportering:</strong> Leverandører garanterer ofte 99,9 % oppetid. Med en <strong>oppetidskalkulator</strong> kan du kontrollere om avtalen overholdes.</li>
+        <li><strong>Beslutningsgrunnlag:</strong> Skal du bytte leverandør eller oppgradere infrastruktur? Oppetidsdata viser reell stabilitet.</li>
+        <li><strong>Kostnadskontroll:</strong> Hver times nedetid koster penger. Kalkulatoren synliggjør hvor mye du faktisk taper.</li>
+        <li><strong>Forebyggende vedlikehold:</strong> Gjentatte avvik avsløres, slik at du kan iverksette tiltak før større brudd oppstår.</li>
+        <li><strong>Dokumentasjon:</strong> For revisjon, kunder og ledelse – enkel å forstå og presentere.</li>
+    </ul>
+    <p>Uten en <strong>oppetidskalkulator</strong> risikerer du å basere deg på magefølelse. I driftssammenheng er det ikke godt nok. Den gjør deg i stand til å måle, forbedre og forsvare driftskvaliteten.</p>
+
+    <h2>Slik bruker du en oppetidskalkulator</h2>
+    <p>Å bruke en <strong>oppetidskalkulator</strong> krever kun to eller tre datapunkter. Følg denne fremgangsmåten:</p>
+    <ul>
+        <li><strong>1. Finn total tid:</strong> Hvor lang periode måler du? Eksempel: 30 dager = 720 timer, 24 timer = 1 dag, eller et helt år (8760 timer).</li>
+        <li><strong>2. Mål nedetid:</strong> Summer alle perioder hvor systemet var utilgjengelig. Bruk overvåkingsverktøy eller loggføring.</li>
+        <li><strong>3. Velg kalkulator:</strong> Bruk et nettbasert verktøy, Excel eller formelen nedenfor. Legg inn tallene.</li>
+        <li><strong>4. Les resultatet:</strong> Du får oppetid i prosent (f.eks. 99,95 %) og ofte også maks tillatt nedetid for å møte en bestemt prosent.</li>
+    </ul>
+    <p>Mange <strong>oppetidskalkulator</strong>-verktøy har også en omvendt funksjon: du skriver inn ønsket prosent (f.eks. 99,99 %) og får vite hvor mye nedetid som er tillatt per måned. Dette er gull verdt når du forhandler SLA.</p>
+
+    <div class="formel-boks">
+        <h3>Formel med eksempel</h3>
+        <p><strong>Grunnformel for oppetid:</strong></p>
+        <p style="font-size: 1.2rem; background: #f1f5f9; padding: 0.5rem 1rem; border-radius: 6px; display: inline-block;">
+            <strong>Oppetid (%) = ((Total tid – Nedetid) / Total tid) × 100</strong>
+        </p>
+        <p><strong>Eksempel:</strong> En webshop har total tid 720 timer (30 dager). Nedetiden er 2 timer og 15 minutter (2,25 timer).</p>
+        <p>Beregning: (720 – 2,25) / 720 × 100 = 717,75 / 720 × 100 = <strong>99,6875 %</strong>.</p>
+        <p>Du kan også regne ut maksimal nedetid for en gitt prosent: <strong>Maks nedetid = Total tid × (100 – ønsket %) / 100</strong>. For 99,9 % i løpet av en måned (720 t): 720 × 0,001 = 0,72 timer ≈ 43 minutter.</p>
+        <p>En <strong>oppetidskalkulator</strong> gjør disse utregningene automatisk, men det er nyttig å forstå logikken.</p>
+    </div>
+
+    <h2>Praktiske eksempler</h2>
+    <p><strong>Eksempel 1: Nettside for et reisebyrå</strong><br>
+    Reisebyrået har en <strong>oppetidskalkulator</strong> som viser 99,8 % oppetid siste kvartal. Nedetiden skyldtes planlagt vedlikehold. Ledelsen ønsker 99,95 %. Kalkulatoren viser at maksimal nedetid per måned bare er 21 minutter. Byrået må legge om vedlikeholdsrutinene.</p>
+    <p><strong>Eksempel 2: Skylagringstjeneste</strong><br>
+    En leverandør lover 99,99 % oppetid. Kunden bruker en <strong>oppetidskalkulator</strong> og oppdager at reell oppetid er 99,97 % – tilsvarende 2,6 timer ekstra nedetid i året. Dette blir grunnlag for kompensasjonskrav.</p>
+    <p><strong>Eksempel 3: Internt IT-miljø</strong><br>
+    En bedrift har 10 servere. De samler inn data manuelt hver uke og legger inn i en <strong>oppetidskalkulator</strong>. Resultatet viser at én server har 97 % oppetid, mens resten har 99,9 %. Den dårlige serveren byttes ut, og total oppetid øker.</p>
+    <p><strong>Eksempel 4: Strømbrudd og nødstrøm</strong><br>
+    En <strong>oppetidskalkulator</strong> for UPS-anlegg viser at strømbrudd utgjør 0,5 % nedetid i løpet av et år. Med formelen finner de ut at backup-generatoren må starte innen 15 sekunder for å opprettholde 99,99 % oppetid.</p>
+
+    <h2>Tips for pålitelig oppetidsberegning</h2>
+    <div class="tips-liste">
+        <ul>
+            <li><strong>Bruk automatisk overvåking:</strong> Manuell logging gir ofte feil. Integrer en <strong>oppetidskalkulator</strong> med verktøy som Pingdom, UptimeRobot eller Nagios.</li>
+            <li><strong>Definer nedetid tydelig:</strong> Er nedetid kun når tjenesten er helt nede, eller inkluderer du treg responstid? Vær konsistent.</li>
+            <li><strong>Mål over riktig tidsrom:</strong> Månedlig, kvartalsvis eller årlig? Velg periode som matcher SLA-en.</li>
+            <li><strong>Inkluder planlagt vedlikehold:</strong> Noen velger å ekskludere det, men for et reelt bilde bør du inkludere all nedetid, med mindre avtalen sier noe annet.</li>
+            <li><strong>Dokumenter hver hendelse:</strong> Noter start, slutt og årsak. Det gjør <strong>oppetidskalkulator</strong>-resultatet mer verdifullt.</li>
+            <li><strong>Sjekk avrunding:</strong> Mange kalkulatorer runder til to desimaler. For høy tilgjengelighet (99,999 %) bruk fire desimaler.</li>
+        </ul>
+    </div>
+
+    <h2>FAQ – ofte stilte spørs

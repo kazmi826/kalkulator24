@@ -38,7 +38,116 @@
 <div class="main-wrap">
   <div class="main-content">
     <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>Odds format</label><div class="input-row"><select class="calc-input" data-field="odds_type"><option value="Desimal">Desimal</option><option value="Amerikansk">Amerikansk</option><option value="Fraksjon">Fraksjon</option></select></div></div><div class="input-group"><label>Odds verdi</label><div class="input-row"><input type="text" class="calc-input" data-field="odds_value" placeholder="2.50"></div></div></div>    <button class="btn-calc" onclick="runCalculator('implied_probability')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
-    <div class="ai-loader" id="aiWrap"><p>Last inn detaljert guide</p><button class="btn-ai" id="aiBtn">Vis guide</button><div class="loading-wrap" id="aiLoader"><div class="spinner"></div><span>Laster...</span></div></div><div class="content-card" id="aiContent" style="display:none"></div>
+    <div class="content-card">```html
+<h2>Hva er en implisert sannsynlighetskalkulator?</h2>
+
+<p>En <strong>implisert sannsynlighetskalkulator</strong> er et verktøy som konverterer odds fra en bookmaker til en prosentvis sannsynlighet. Denne prosentandelen kalles "implisert sannsynlighet" og representerer bookmakerens vurdering av sjansen for at et utfall skal inntreffe. Ved å bruke en <strong>implisert sannsynlighetskalkulator</strong> kan du raskt regne ut hva oddsen egentlig betyr i form av prosent, og dermed sammenligne den med din egen vurdering av utfallet.</p>
+
+<p>For eksempel: Hvis en bookmaker gir odds 2.00 på et lag, tilsvarer det en implisert sannsynlighet på 50 %. Kalkulatoren gjør denne utregningen automatisk, og den tar også hensyn til bookmakerens margin (overround) slik at du får et mer realistisk bilde av den underliggende sannsynligheten.</p>
+
+<h3>Hvordan skiller den seg fra vanlig sannsynlighet?</h3>
+<p>Mens vanlig sannsynlighet er basert på statistikk og objektive data, er implisert sannsynlighet påvirket av bookmakerens margin. En <strong>implisert sannsynlighetskalkulator</strong> viser derfor ikke den "sanne" sannsynligheten, men den sannsynligheten som oddsen representerer. Dette er et viktig skille for alle som driver med sportsbetting eller finansiell analyse.</p>
+
+<h2>Hvorfor er en implisert sannsynlighetskalkulator viktig?</h2>
+
+<p>Uten en <strong>implisert sannsynlighetskalkulator</strong> er det lett å bli lurt av høye odds. En odds på 5.00 høres kanskje bra ut, men den tilsvarer bare 20 % sannsynlighet. For å ta informerte beslutninger innen betting, investering eller risikovurdering, må du forstå den underliggende prosenten.</p>
+
+<ul>
+  <li><strong>Unngå overbetaling:</strong> Du ser raskt om oddsen er lavere enn den reelle sannsynligheten.</li>
+  <li><strong>Sammenligne markeder:</strong> Du kan sammenligne implisert sannsynlighet på tvers av bookmakere for å finne best verdi.</li>
+  <li><strong>Forstå marginen:</strong> Kalkulatoren avslører bookmakerens fortjeneste, noe som er avgjørende for langsiktig lønnsomhet.</li>
+  <li><strong>Bedre beslutninger:</strong> Du erstatter magefølelse med matematikk.</li>
+</ul>
+
+<p>I dagens bettingmarked, hvor marginene ofte er små, kan en <strong>implisert sannsynlighetskalkulator</strong> være forskjellen mellom å tape og vinne penger over tid. Den hjelper deg også å identifisere "value bets" – spill hvor din vurderte sannsynlighet er høyere enn bookmakerens impliserte sannsynlighet.</p>
+
+<h2>Slik bruker du en implisert sannsynlighetskalkulator</h2>
+
+<p>Å bruke en <strong>implisert sannsynlighetskalkulator</strong> er enkelt. Følg disse trinnene:</p>
+
+<ol>
+  <li><strong>Finn oddsen:</strong> Noter oddsen fra bookmakeren (desimalodds, brøkodds eller amerikanske odds).</li>
+  <li><strong>Velg format:</strong> De fleste kalkulatorer støtter desimalodds (f.eks. 2.50), brøkodds (f.eks. 3/2) eller amerikanske odds (f.eks. +150).</li>
+  <li><strong>Skriv inn oddsen:</strong> Legg inn tallet i kalkulatoren.</li>
+  <li><strong>Les resultatet:</strong> Kalkulatoren viser den impliserte sannsynligheten i prosent, ofte med og uten bookmakerens margin.</li>
+  <li><strong>Sammenlign:</strong> Sammenlign prosenten med din egen vurdering av sannsynligheten.</li>
+</ol>
+
+<p>Mange avanserte kalkulatorer lar deg også legge inn flere utfall (f.eks. hjemme, uavgjort, borte) for å beregne den totale marginen. Dette er spesielt nyttig i fotball og andre idretter med flere utfall.</p>
+
+<h3>Vanlige feil å unngå</h3>
+<ul>
+  <li><strong>Bruke feil oddsformat:</strong> Sørg for at du velger riktig format (desimal, brøk eller amerikansk).</li>
+  <li><strong>Glemme marginen:</strong> Husk at summen av implisert sannsynlighet for alle utfall alltid er over 100 % hos en bookmaker.</li>
+  <li><strong>Ikke sjekke flere kilder:</strong> Bruk alltid flere kalkulatorer eller bookmakere for å bekrefte.</li>
+</ul>
+
+<h2>Formel med eksempel</h2>
+
+<p>Formelen for å regne ut implisert sannsynlighet fra desimalodds er:</p>
+
+<p><strong>Implisert sannsynlighet (%) = (1 / Desimalodds) × 100</strong></p>
+
+<p>La oss ta et konkret eksempel med en <strong>implisert sannsynlighetskalkulator</strong>:</p>
+
+<ul>
+  <li><strong>Odds:</strong> 1.80 (desimal)</li>
+  <li><strong>Utregning:</strong> 1 / 1.80 = 0.5556</li>
+  <li><strong>Implisert sannsynlighet:</strong> 0.5556 × 100 = 55.56 %</li>
+</ul>
+
+<p>Dette betyr at bookmakeren mener utfallet har 55.56 % sjanse for å skje. Hvis du mener sjansen er høyere, for eksempel 65 %, har du funnet et value bet.</p>
+
+<h3>Hvordan regne med margin</h3>
+<p>Hvis du har flere utfall (f.eks. hjemme: 1.80, uavgjort: 3.50, borte: 4.00), summerer du de impliserte sannsynlighetene:</p>
+<ul>
+  <li>Hjemme: 1/1.80 = 55.56 %</li>
+  <li>Uavgjort: 1/3.50 = 28.57 %</li>
+  <li>Borte: 1/4.00 = 25.00 %</li>
+  <li><strong>Sum:</strong> 55.56 + 28.57 + 25.00 = 109.13 %</li>
+</ul>
+<p>Bookmakerens margin er 9.13 %. En <strong>implisert sannsynlighetskalkulator</strong> gjør denne utregningen automatisk og viser deg den rene sannsynligheten uten margin.</p>
+
+<h2>Praktiske eksempler</h2>
+
+<h3>Eksempel 1: Fotballkamp</h3>
+<p>Du vurderer å satse på Manchester United til odds 2.40. Ved hjelp av en <strong>implisert sannsynlighetskalkulator</strong> finner du ut at dette tilsvarer 41.67 % sannsynlighet. Etter å ha analysert lagets form, skader og motstander, vurderer du sjansen til 50 %. Du har da et value bet, fordi din sannsynlighet er høyere enn bookmakerens.</p>
+
+<h3>Eksempel 2: Tennis</h3>
+<p>I en tenniskamp får du odds 1.50 på Novak Djokovic. Kalkulatoren viser 66.67 % implisert sannsynlighet. Hvis du vet at han har vunnet 8 av 10 kamper på samme underlag (80 % sannsynlighet), er oddsen for lav. Du velger derfor å ikke spille, eller du ser etter en annen bookmaker med bedre odds.</p>
+
+<h3>Eksempel 3: Finansielle markeder</h3>
+<p>En <strong>implisert sannsynlighetskalkulator</strong> brukes også i aksje- og opsjonsmarkedet. Hvis en aksje har 70 % sjanse for å stige ifølge opsjonsprisingen, men du mener den reelle sjansen er 85 %, kan du handle deretter. Kalkulatoren hjelper deg å kvantifisere markedets forventninger.</p>
+
+<h2>Tips for å bruke en implisert sannsynlighetskalkulator effektivt</h2>
+
+<ul>
+  <li><strong>Bruk den før hvert spill:</strong> Gjør det til en vane å sjekke implisert sannsynlighet før du legger inn et spill.</li>
+  <li><strong>Sammenlign med din egen analyse:</strong> Kombiner kalkulatoren med statistikk, form og nyheter.</li>
+  <li><strong>Se etter verdi:</strong> Hvis din vurderte sannsynlighet er minst 5 % høyere enn den impliserte, kan det være et godt spill.</li>
+  <li><strong>Bruk den for å finne margin:</strong> Sjekk bookmakerens margin på forskjellige markeder. Lav margin gir bedre odds.</li>
+  <li><strong>Ikke stol blindt:</strong> En <strong>implisert sannsynlighetskalkulator</strong> er et verktøy, ikke en fasit. Den viser bare bookmakerens syn.</li>
+  <li><strong>Lær formelen:</strong> Selv om kalkulatoren gjør jobben, er det nyttig å forstå matematikken bak.</li>
+</ul>
+
+<h2>FAQ – 5 vanlige spørsmål om implisert sannsynlighetskalkulator</h2>
+
+<h3>1. Hva er forskjellen på implisert sannsynlighet og reell sannsynlighet?</h3>
+<p>Implisert sannsynlighet er prosenten som oddsen representerer, inkludert bookmakerens margin. Reell sannsynlighet er den faktiske sjansen for at et utfall skal skje, basert på statistikk og analyse. En <strong>implisert sannsynlighetskalkulator</strong> viser kun den impliserte sannsynligheten.</p>
+
+<h3>2. Hvordan finner jeg bookmakerens margin med kalkulatoren?</h3>
+<p>Legg inn oddsen for alle utfall i et marked (f.eks. hjemme, uavgjort, borte). Kalkulatoren summerer de impliserte sannsynlighetene. Hvis summen er over 100 %, er differansen bookmakerens margin. For eksempel: 105 % sum = 5 % margin.</p>
+
+<h3>3. Kan jeg bruke kalkulatoren for amerikanske odds?</h3>
+<p>Ja, de fleste <strong>implisert sannsynlighetskalkulator</strong>-verktøy støtter amerikanske odds (+150, -200 osv.). For positive odds: (100 / (odds + 100)) × 100. For negative odds: (odds / (odds + 100)) × 100.</p>
+
+<h3>4. Hvorfor er summen av implisert sannsynlighet alltid over 100 %?</h3>
+<p>Fordi bookmakere legger til en margin (overround) for å sikre profitt. Uten margin ville summen vært nøyaktig 100 %. En <strong>implisert sannsynlighetskalkulator</strong> viser dette tydelig.</p>
+
+<h3>5. Er en implisert sannsynlighetskalkulator gratis?</h3>
+<p>Ja, det finnes mange gratis kalkulatorer på nettet. Mange bettingapper og oddsammenligningssider har innebygde verktøy. Du kan også lage din egen i Excel eller Google Sheets ved hjelp av formelen (1/odds)*100.</p>
+
+<p>Ved å integrere en <strong>implisert sannsynlighetskalkulator</strong> i</div>
     <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/kelly-kriterium-kalkulator'"><span class="tool-card-icon">🎲</span><h3>Kelly Kriterium Kalkulator</h3><p>Beregn optimal innsats med Kelly kriteriet</p></div><div class="tool-card" onclick="location='/verktoy/poker-odds-kalkulator'"><span class="tool-card-icon">🎲</span><h3>Poker Odds Kalkulator</h3><p>Beregn poker odds og pot odds</p></div><div class="tool-card" onclick="location='/verktoy/parlay-kalkulator'"><span class="tool-card-icon">🎲</span><h3>Parlay Kalkulator</h3><p>Beregn parlay utbetaling og kombinert odds</p></div><div class="tool-card" onclick="location='/verktoy/forventet-verdi-kalkulator'"><span class="tool-card-icon">🎲</span><h3>Forventet Verdi Kalkulator</h3><p>Beregn forventet verdi (EV) for en hendelse</p></div><div class="tool-card" onclick="location='/verktoy/poisson-kalkulator'"><span class="tool-card-icon">🎲</span><h3>Poisson Kalkulator</h3><p>Beregn Poisson sannsynlighetsfordeling</p></div><div class="tool-card" onclick="location='/verktoy/odds-kalkulator'"><span class="tool-card-icon">🎲</span><h3>Odds Kalkulator</h3><p>Beregn utbetaling og implisitt sannsynlighet</p></div><div class="tool-card" onclick="location='/verktoy/fotball-odds-kalkulator'"><span class="tool-card-icon">🎲</span><h3>Fotball Odds Kalkulator</h3><p>Beregn fotball odds og bookmaker margin</p></div><div class="tool-card" onclick="location='/verktoy/trifecta-kalkulator'"><span class="tool-card-icon">🎲</span><h3>Trifecta Kalkulator</h3><p>Beregn trifecta kombinasjoner og kostnad</p></div><div class="tool-card" onclick="location='/verktoy/runde-robin-kalkulator'"><span class="tool-card-icon">🎲</span><h3>Runde Robin Kalkulator</h3><p>Beregn runde robin kombinasjoner</p></div><div class="tool-card" onclick="location='/verktoy/arbitrasje-kalkulator'"><span class="tool-card-icon">🎲</span><h3>Arbitrasjekalkulator</h3><p>Finn arbitrasjemuligheter mellom bookmakers</p></div><div class="tool-card" onclick="location='/verktoy/sports-parlay-kalkulator'"><span class="tool-card-icon">🎲</span><h3>Sports Parlay Kalkulator</h3><p>Beregn sports parlay utbetaling</p></div><div class="tool-card" onclick="location='/verktoy/roulette-odds-kalkulator'"><span class="tool-card-icon">🎲</span><h3>Roulette Odds Kalkulator</h3><p>Beregn roulette odds og utbetaling</p></div><div class="tool-card" onclick="location='/kategori/odds'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle Odds og Statistikk</h3><p>Alle kalkulatorer i denne kategorien</p></div></div></div>
     <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/lan-kalkulator'"><span class="tool-card-icon">💰</span><h3>Lån Kalkulator</h3><p>Beregn månedlige låneavdrag med nedbetalingsoversikt</p></div><div class="tool-card" onclick="location='/verktoy/prosent-kalkulator'"><span class="tool-card-icon">📐</span><h3>Prosent Kalkulator</h3><p>Beregn prosent med flere metoder og sammenligninger</p></div><div class="tool-card" onclick="location='/verktoy/temperatur-konvertering'"><span class="tool-card-icon">🔄</span><h3>Temperatur Konvertering</h3><p>Konverter temperatur mellom alle enheter</p></div><div class="tool-card" onclick="location='/verktoy/areal-kalkulator'"><span class="tool-card-icon">📏</span><h3>Areal Kalkulator</h3><p>Beregn areal av ulike former med enheter</p></div><div class="tool-card" onclick="location='/verktoy/alder-kalkulator'"><span class="tool-card-icon">📅</span><h3>Alder Kalkulator</h3><p>Beregn nøyaktig alder med sammenligning og statistikk</p></div></div></div>
   </div>
