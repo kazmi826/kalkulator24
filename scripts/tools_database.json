@@ -75,6 +75,14 @@
     "musikk": {
       "name": "Musikk",
       "icon": "🎵"
+    },
+    "teknologi": {
+      "name": "Teknologi",
+      "icon": "💻"
+    },
+    "ki": {
+      "name": "Kunstig Intelligens",
+      "icon": "🤖"
     }
   },
   "tools": [
@@ -17180,6 +17188,110 @@
           "label": "Utgifter (kr)",
           "type": "number",
           "placeholder": "2000"
+        }
+      ]
+    },
+    {
+      "slug": "bpm-kalkulator",
+      "title": "BPM Kalkulator",
+      "category": "helse",
+      "description": "Beregn din puls i slag per minutt basert på alder og aktivitetsnivå.",
+      "keywords": "puls, bpm, hjertefrekvens, trening, helse, kalkulator",
+      "formula": "bpm_calculator",
+      "inputs": [
+        {
+          "id": "age",
+          "label": "Alder (år)",
+          "type": "number",
+          "placeholder": "f.eks. 30"
+        },
+        {
+          "id": "activity",
+          "label": "Aktivitetsnivå",
+          "type": "select",
+          "options": [
+            "Hvile",
+            "Lett aktivitet",
+            "Moderat aktivitet",
+            "Høy intensitet",
+            "Maksimal"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "portlengde-kalkulator",
+      "title": "Portlengde Kalkulator",
+      "category": "bygg",
+      "description": "Beregn nødvendig portlengde for garasjeport basert på bilbredde og klaring.",
+      "keywords": "portlengde, garasjeport, portbredde, bilbredde, klaring, bygg, kalkulator",
+      "formula": "portlengde_beregning",
+      "inputs": [
+        {
+          "id": "bilbredde",
+          "label": "Bilbredde (cm)",
+          "type": "number",
+          "placeholder": "f.eks. 190"
+        },
+        {
+          "id": "klaring",
+          "label": "Ønsket klaring på hver side (cm)",
+          "type": "number",
+          "placeholder": "f.eks. 30"
+        },
+        {
+          "id": "porttype",
+          "label": "Porttype",
+          "type": "select",
+          "options": [
+            "Seksjonsport",
+            "Vippeport",
+            "Rullegardin"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "akkordfinner",
+      "title": "Akkordfinner Kalkulator",
+      "category": "musikk",
+      "description": "Finn akkordnavn og intervallstruktur basert på noter. Avansert analyse med besifring.",
+      "keywords": "akkord, besifring, musikk, intervall, dur, moll, septim, tone, gitar, piano",
+      "formula": "akkordfinner_formula",
+      "inputs": [
+        {
+          "id": "notes",
+          "label": "Noter (kommaseparert, f.eks. C,E,G)",
+          "type": "text",
+          "placeholder": "C,E,G"
+        },
+        {
+          "id": "root",
+          "label": "Grunnnote (valgfri)",
+          "type": "text",
+          "placeholder": "C"
+        }
+      ]
+    },
+    {
+      "slug": "halvtoneskalkulator",
+      "title": "Halvtoneskalkulator",
+      "category": "musikk",
+      "description": "Beregn avstand i halvtoner mellom to toner, vis intervallnavn og frekvensforhold.",
+      "keywords": "halvtoner, intervall, musikkteori, toneavstand, frekvens, piano, gitar, musikkalkulator",
+      "formula": "halvtone_avstand",
+      "inputs": [
+        {
+          "id": "tone1",
+          "label": "Tone 1 (f.eks. C4)",
+          "type": "text",
+          "placeholder": "C4"
+        },
+        {
+          "id": "tone2",
+          "label": "Tone 2 (f.eks. E4)",
+          "type": "text",
+          "placeholder": "E4"
         }
       ]
     }
