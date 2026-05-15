@@ -92,7 +92,7 @@ const Calculators = {
   mm_to_inches: (i) => {
     const mm=+i.mm;
     if(!mm) return null;
-    return {value:(mm/25.4).toFixed(4), unit:'tommer', desc:mm+' mm = '+(mm/25.4).toFixed(4)'""'};
+    return {value:(mm/25.4).toFixed(4), unit:'tommer', desc:mm+' mm = '+(mm/25.4).toFixed(4)+' mm'};
   },
 
   height_calc: (i) => {
