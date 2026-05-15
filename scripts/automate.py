@@ -260,10 +260,14 @@ def main():
         
         print("Committing to git...")
         os.chdir('..')
-        subprocess.run(['git', 'add', '.'], check=True)
-        subprocess.run(['git', 'commit', '-m', f'auto: add {added_tools} new tools'], check=True)
-        subprocess.run(['git', 'push', 'origin', 'main'], check=True)
-        print("✅ Deployed!")
+        subprocess.run(['git', 'add', '.'])
+        subprocess.run(['git', 'commit', '-m', f'auto: add {added_tools} new tools'])
+        result = subprocess.run(['git', 'push', 'origin', 'main'])
+        if result.returncode == 0:
+            print("✅ Pushed to GitHub!")
+        else:
+            print("⚠️ Push failed - run manually: git push origin main")
+        print("✅ Done!")
 
 if __name__ == '__main__':
     main()
