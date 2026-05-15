@@ -17294,6 +17294,622 @@
           "placeholder": "E4"
         }
       ]
+    },
+    {
+      "slug": "hoyttalerkasse-kalkulator",
+      "title": "Høyttalerkasse Kalkulator",
+      "category": "musikk",
+      "description": "Beregn optimalt volum og portlengde for en lukket eller bassrefleks høyttalerkasse.",
+      "keywords": "høyttalerkasse, bassrefleks, lukket kasse, portlengde, Thiele-Small, høyttalerdesign, subwoofer kalkulator",
+      "formula": "hoyttalerkasse_beregning",
+      "inputs": [
+        {
+          "id": "vas",
+          "label": "Vas (liter)",
+          "type": "number",
+          "placeholder": "f.eks. 50"
+        },
+        {
+          "id": "qts",
+          "label": "Qts",
+          "type": "number",
+          "placeholder": "f.eks. 0.38"
+        },
+        {
+          "id": "fs",
+          "label": "Fs (Hz)",
+          "type": "number",
+          "placeholder": "f.eks. 28"
+        },
+        {
+          "id": "kasse_type",
+          "label": "Kassetype",
+          "type": "select",
+          "options": [
+            "Lukket",
+            "Bassrefleks"
+          ]
+        },
+        {
+          "id": "sd",
+          "label": "Sd (cm²)",
+          "type": "number",
+          "placeholder": "f.eks. 350"
+        },
+        {
+          "id": "xmax",
+          "label": "Xmax (mm)",
+          "type": "number",
+          "placeholder": "f.eks. 12"
+        }
+      ]
+    },
+    {
+      "slug": "akkordtransponering",
+      "title": "Akkordtransponering Kalkulator",
+      "category": "musikk",
+      "description": "Transponer akkorder mellom tonearter. Støtter dur, moll, septim og mer.",
+      "keywords": "akkordtransponering, transponere akkorder, toneart, musikkteori, akkordprogresjon, nøkkelendring",
+      "formula": "transpose_chord",
+      "inputs": [
+        {
+          "id": "chord_input",
+          "label": "Akkord (f.eks. C, Dm, G7, Am, Bdim)",
+          "type": "text",
+          "placeholder": "C"
+        },
+        {
+          "id": "from_key",
+          "label": "Fra toneart",
+          "type": "select",
+          "options": [
+            "C",
+            "C#",
+            "Db",
+            "D",
+            "D#",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "Gb",
+            "G",
+            "G#",
+            "Ab",
+            "A",
+            "A#",
+            "Bb",
+            "B"
+          ]
+        },
+        {
+          "id": "to_key",
+          "label": "Til toneart",
+          "type": "select",
+          "options": [
+            "C",
+            "C#",
+            "Db",
+            "D",
+            "D#",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "Gb",
+            "G",
+            "G#",
+            "Ab",
+            "A",
+            "A#",
+            "Bb",
+            "B"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "ai-energibruks-kalkulator",
+      "title": "AI Energibruks Kalkulator",
+      "category": "teknologi",
+      "description": "Beregn strømforbruk og kostnad for AI-modeller som ChatGPT, med sammenligning og miljøtips.",
+      "keywords": "AI energibruk, strømforbruk AI, ChatGPT strøm, AI kostnad kalkulator, miljøavtrykk AI",
+      "formula": "ai_energy_usage_calculator",
+      "inputs": [
+        {
+          "id": "model_type",
+          "label": "AI Modelltype",
+          "type": "select",
+          "options": [
+            "ChatGPT-3.5",
+            "ChatGPT-4",
+            "GPT-4o",
+            "Claude 3.5 Sonnet",
+            "Gemini 1.5 Pro",
+            "Llama 3 70B"
+          ]
+        },
+        {
+          "id": "queries_per_day",
+          "label": "Antall spørringer per dag",
+          "type": "number",
+          "placeholder": "f.eks. 100"
+        },
+        {
+          "id": "avg_tokens_per_query",
+          "label": "Gjennomsnittlig tokens per spørring",
+          "type": "number",
+          "placeholder": "f.eks. 500"
+        },
+        {
+          "id": "hours_per_day",
+          "label": "Timer aktiv bruk per dag",
+          "type": "number",
+          "placeholder": "f.eks. 8"
+        },
+        {
+          "id": "electricity_price",
+          "label": "Strømpris (øre/kWh)",
+          "type": "number",
+          "placeholder": "f.eks. 100"
+        }
+      ]
+    },
+    {
+      "slug": "ai-skaleringskostnader-kalkulator",
+      "title": "AI Skaleringskostnader Kalkulator",
+      "category": "teknologi",
+      "description": "Beregn kostnader og ressursbehov ved skalering av AI-modeller (trening/inferens).",
+      "keywords": "AI kostnader, skaleringskostnader, maskinlæring, GPU, trening, inferens, skykostnader, modellstørrelse, parameterantall",
+      "formula": "ai_skaleringskostnader",
+      "inputs": [
+        {
+          "id": "modell_parametere",
+          "label": "Antall parametere (milliarder)",
+          "type": "number",
+          "placeholder": "f.eks. 7"
+        },
+        {
+          "id": "trening_tokens",
+          "label": "Treningstokens (milliarder)",
+          "type": "number",
+          "placeholder": "f.eks. 2000"
+        },
+        {
+          "id": "gpu_type",
+          "label": "GPU-type",
+          "type": "select",
+          "options": [
+            "A100 80GB",
+            "H100 80GB",
+            "H200 141GB",
+            "B200 192GB"
+          ]
+        },
+        {
+          "id": "gpu_antall",
+          "label": "Antall GPUer",
+          "type": "number",
+          "placeholder": "f.eks. 256"
+        },
+        {
+          "id": "strompris_per_kwh",
+          "label": "Strømpris (NOK/kWh)",
+          "type": "number",
+          "placeholder": "f.eks. 1.2"
+        },
+        {
+          "id": "sky_pris_per_gpu_time",
+          "label": "Skypris per GPU-time (NOK)",
+          "type": "number",
+          "placeholder": "f.eks. 50"
+        }
+      ]
+    },
+    {
+      "slug": "kostnad-ved-ai-bildegenerering-kalkulator",
+      "title": "Kostnad ved AI Bildegenerering Kalkulator",
+      "category": "teknologi",
+      "description": "Beregn kostnaden for å generere bilder med AI-modeller som DALL-E, Midjourney og Stable Diffusion.",
+      "keywords": "AI bildegenerering, kostnad, DALL-E, Midjourney, Stable Diffusion, bildegenerering kalkulator, AI kunst kostnad",
+      "formula": "kostnad_ai_bildegenerering",
+      "inputs": [
+        {
+          "id": "antall_bilder",
+          "label": "Antall bilder",
+          "type": "number",
+          "placeholder": "f.eks. 10"
+        },
+        {
+          "id": "modell",
+          "label": "AI-modell",
+          "type": "select",
+          "options": [
+            "DALL-E 3 (HD)",
+            "DALL-E 3 (Standard)",
+            "Midjourney (Standard)",
+            "Midjourney (Pro)",
+            "Stable Diffusion (Lokal)",
+            "Stable Diffusion (API)"
+          ]
+        },
+        {
+          "id": "opplosning",
+          "label": "Oppløsning",
+          "type": "select",
+          "options": [
+            "1024x1024",
+            "1024x1792",
+            "1792x1024",
+            "512x512",
+            "768x768"
+          ]
+        },
+        {
+          "id": "antall_genereringer_per_bilde",
+          "label": "Genereringer per bilde (gjennomsnitt)",
+          "type": "number",
+          "placeholder": "f.eks. 3"
+        }
+      ]
+    },
+    {
+      "slug": "ai-matematikk-kalkulator",
+      "title": "AI Matematikk Kalkulator",
+      "category": "matematikk",
+      "description": "Avansert AI-assistert matematikk-kalkulator med formler, statistikk og prediksjon.",
+      "keywords": "AI matematikk, kalkulator, maskinlæring, lineær regresjon, prediksjon, statistikk, norsk",
+      "formula": "ai_matematikk_kalkulator",
+      "inputs": [
+        {
+          "id": "x_verdier",
+          "label": "X-verdier (kommaseparert)",
+          "type": "text",
+          "placeholder": "f.eks. 1,2,3,4,5"
+        },
+        {
+          "id": "y_verdier",
+          "label": "Y-verdier (kommaseparert)",
+          "type": "text",
+          "placeholder": "f.eks. 2,4,5,4,5"
+        },
+        {
+          "id": "prediksjon_x",
+          "label": "Prediksjon X-verdi",
+          "type": "number",
+          "placeholder": "f.eks. 6"
+        }
+      ]
+    },
+    {
+      "slug": "ai-voiceover-kostnads-og-tidskalkulator",
+      "title": "AI Voiceover Kostnads- og Tidskalkulator",
+      "category": "teknologi",
+      "description": "Beregn kostnad og tid for AI-genererte voiceover-prosjekter med avanserte sammenligninger.",
+      "keywords": "AI voiceover, kostnad, tid, kalkulator, norsk, tekst-til-tale, TTS, prosjektkalkulator",
+      "formula": "ai_voiceover_cost_time_calculator",
+      "inputs": [
+        {
+          "id": "word_count",
+          "label": "Antall ord i manus",
+          "type": "number",
+          "placeholder": "f.eks. 500"
+        },
+        {
+          "id": "voice_type",
+          "label": "Stemmetype",
+          "type": "select",
+          "options": [
+            "Standard (enkel)",
+            "Premium (naturtro)",
+            "Ultra-realistisk (avansert)"
+          ]
+        },
+        {
+          "id": "language",
+          "label": "Språk",
+          "type": "select",
+          "options": [
+            "Norsk bokmål",
+            "Engelsk",
+            "Andre språk"
+          ]
+        },
+        {
+          "id": "speed",
+          "label": "Talehastighet (ord per minutt)",
+          "type": "number",
+          "placeholder": "f.eks. 150"
+        }
+      ]
+    },
+    {
+      "slug": "ai-sosiale-medier-innhold-tidsbesparelses-kalkulator",
+      "title": "AI Sosiale Medier Innhold Tidsbesparelses Kalkulator",
+      "category": "ki",
+      "description": "Beregn tidsbesparelsen ved å bruke AI til å lage innhold for sosiale medier.",
+      "keywords": "AI, sosiale medier, innhold, tidsbesparelse, kalkulator, produktivitet, automatisering",
+      "formula": "ai_social_media_time_savings",
+      "inputs": [
+        {
+          "id": "antall_innlegg_per_uke",
+          "label": "Antall innlegg per uke",
+          "type": "number",
+          "placeholder": "f.eks. 10"
+        },
+        {
+          "id": "tid_per_innlegg_manuelt",
+          "label": "Tid per innlegg manuelt (minutter)",
+          "type": "number",
+          "placeholder": "f.eks. 60"
+        },
+        {
+          "id": "tid_per_innlegg_ai",
+          "label": "Tid per innlegg med AI (minutter)",
+          "type": "number",
+          "placeholder": "f.eks. 15"
+        },
+        {
+          "id": "antall_plattformer",
+          "label": "Antall plattformer",
+          "type": "number",
+          "placeholder": "f.eks. 3"
+        }
+      ]
+    },
+    {
+      "slug": "ai-token-kalkulator",
+      "title": "AI Token Kalkulator",
+      "category": "ki",
+      "description": "Beregn kostnad og antall tokens for AI-modeller som GPT-4 og Claude.",
+      "keywords": "AI token kalkulator, token kostnad, GPT-4 pris, Claude token, AI modell sammenligning, token forbruk",
+      "formula": "ai_token_calculator",
+      "inputs": [
+        {
+          "id": "model",
+          "label": "AI Modell",
+          "type": "select",
+          "options": [
+            "GPT-4",
+            "GPT-3.5",
+            "Claude 3 Opus",
+            "Claude 3 Sonnet",
+            "Llama 3 70B",
+            "Mistral Large"
+          ]
+        },
+        {
+          "id": "input_tokens",
+          "label": "Antall input tokens",
+          "type": "number",
+          "placeholder": "f.eks. 1000"
+        },
+        {
+          "id": "output_tokens",
+          "label": "Antall output tokens",
+          "type": "number",
+          "placeholder": "f.eks. 500"
+        }
+      ]
+    },
+    {
+      "slug": "treningskostnader-ai-modeller-kalkulator",
+      "title": "Treningskostnader for AI Modeller Kalkulator",
+      "category": "ki",
+      "description": "Beregn kostnad, tid og strømforbruk for trening av AI-modeller. Sammenlign med populære modeller.",
+      "keywords": "AI trening, kostnad, strømforbruk, GPU, maskinlæring, modelltrening, kalkulator, Norge",
+      "formula": "ai_training_cost_calculator",
+      "inputs": [
+        {
+          "id": "gpu_type",
+          "label": "GPU-type",
+          "type": "select",
+          "options": [
+            "NVIDIA A100 80GB",
+            "NVIDIA H100 80GB",
+            "NVIDIA RTX 4090",
+            "NVIDIA RTX 3090",
+            "AMD MI250X",
+            "Google TPU v4"
+          ]
+        },
+        {
+          "id": "gpu_count",
+          "label": "Antall GPUer",
+          "type": "number",
+          "placeholder": "f.eks. 8"
+        },
+        {
+          "id": "training_hours",
+          "label": "Treningstid (timer)",
+          "type": "number",
+          "placeholder": "f.eks. 1000"
+        },
+        {
+          "id": "electricity_price",
+          "label": "Strømpris (NOK/kWh)",
+          "type": "number",
+          "placeholder": "f.eks. 1.2"
+        },
+        {
+          "id": "cloud_cost_per_hour",
+          "label": "Skyleie per GPU-time (NOK)",
+          "type": "number",
+          "placeholder": "f.eks. 50"
+        }
+      ]
+    },
+    {
+      "slug": "chatgpt-kalkulator",
+      "title": "ChatGPT Kalkulator",
+      "category": "ki",
+      "description": "Beregn kostnad, tid og effektivitet ved bruk av ChatGPT-modeller.",
+      "keywords": "ChatGPT, kalkulator, KI, kostnad, tokens, OpenAI, språkmodell, AI-verktøy",
+      "formula": "chatgpt_calculator",
+      "inputs": [
+        {
+          "id": "model_type",
+          "label": "Modelltype",
+          "type": "select",
+          "options": [
+            "GPT-4o",
+            "GPT-4 Turbo",
+            "GPT-3.5 Turbo",
+            "GPT-4o mini"
+          ]
+        },
+        {
+          "id": "input_tokens",
+          "label": "Inndata-tokens (prompt)",
+          "type": "number",
+          "placeholder": "f.eks. 1000"
+        },
+        {
+          "id": "output_tokens",
+          "label": "Utdata-tokens (svar)",
+          "type": "number",
+          "placeholder": "f.eks. 500"
+        },
+        {
+          "id": "requests_per_day",
+          "label": "Forespørsler per dag",
+          "type": "number",
+          "placeholder": "f.eks. 100"
+        }
+      ]
+    },
+    {
+      "slug": "token-teller-kalkulator",
+      "title": "Token Teller Kalkulator",
+      "category": "krypto",
+      "description": "Beregn antall tokens, verdi og potensiell avkastning for dine kryptoinvesteringer.",
+      "keywords": "token teller, kryptovaluta kalkulator, token verdi, avkastning krypto, investering krypto, token mengde, krypto beregning",
+      "formula": "token_teller_beregning",
+      "inputs": [
+        {
+          "id": "antall_tokens",
+          "label": "Antall tokens",
+          "type": "number",
+          "placeholder": "f.eks. 1000"
+        },
+        {
+          "id": "pris_per_token",
+          "label": "Pris per token (NOK)",
+          "type": "number",
+          "placeholder": "f.eks. 0.50"
+        },
+        {
+          "id": "investert_belop",
+          "label": "Investert beløp (NOK)",
+          "type": "number",
+          "placeholder": "f.eks. 5000"
+        },
+        {
+          "id": "forventet_pris",
+          "label": "Forventet fremtidig pris (NOK)",
+          "type": "number",
+          "placeholder": "f.eks. 2.00"
+        }
+      ]
+    },
+    {
+      "slug": "batterikapasitetskalkulator",
+      "title": "Batterikapasitetskalkulator",
+      "category": "teknologi",
+      "description": "Beregn batterikapasitet, ladetid og rekkevidde for elbiler og enheter.",
+      "keywords": "batterikapasitet, batterikalkulator, ladetid, rekkevidde, elbil, batteri, energi, kWh, Ah, volt, watt",
+      "formula": "batterikapasitet_beregning",
+      "inputs": [
+        {
+          "id": "spenning",
+          "label": "Spenning (V)",
+          "type": "number",
+          "placeholder": "f.eks. 12"
+        },
+        {
+          "id": "kapasitet_ah",
+          "label": "Kapasitet (Ah)",
+          "type": "number",
+          "placeholder": "f.eks. 100"
+        },
+        {
+          "id": "ladeeffekt",
+          "label": "Ladeeffekt (W)",
+          "type": "number",
+          "placeholder": "f.eks. 1000"
+        },
+        {
+          "id": "forbruk_w",
+          "label": "Enhetens forbruk (W)",
+          "type": "number",
+          "placeholder": "f.eks. 50"
+        },
+        {
+          "id": "batteritype",
+          "label": "Batteritype",
+          "type": "select",
+          "options": [
+            "Bly-syre",
+            "Li-ion",
+            "LiFePO4",
+            "NiMH",
+            "Alkaline"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "ip-subnett-kalkulator",
+      "title": "IP Subnett Kalkulator",
+      "category": "teknologi",
+      "description": "Beregn nettverk, broadcast, maske og antall verter for en IP-adresse og CIDR.",
+      "keywords": "IP subnett, CIDR, nettverkskalkulator, subnettmaske, broadcast, nettverk, verter, IPv4",
+      "formula": "ip_subnet_calculator",
+      "inputs": [
+        {
+          "id": "ip_address",
+          "label": "IP-adresse",
+          "type": "text",
+          "placeholder": "f.eks. 192.168.1.0"
+        },
+        {
+          "id": "cidr",
+          "label": "CIDR-prefiks (0-32)",
+          "type": "number",
+          "placeholder": "f.eks. 24"
+        }
+      ]
+    },
+    {
+      "slug": "nedlastingshastighetskalkulator",
+      "title": "Nedlastingshastighetskalkulator",
+      "category": "teknologi",
+      "description": "Beregn nedlastingstid basert på filstørrelse og hastighet. Sammenlign med bredbåndshastigheter.",
+      "keywords": "nedlasting, hastighet, kalkulator, tid, filstørrelse, bredbånd, MB, GB, Mbps, sekunder, minutter",
+      "formula": "nedlastingshastighet_formel",
+      "inputs": [
+        {
+          "id": "filstorrelse",
+          "label": "Filstørrelse (MB eller GB)",
+          "type": "number",
+          "placeholder": "f.eks. 5000 (MB) eller 5 (GB)"
+        },
+        {
+          "id": "enhet",
+          "label": "Enhet for filstørrelse",
+          "type": "select",
+          "options": [
+            "MB",
+            "GB"
+          ]
+        },
+        {
+          "id": "hastighet",
+          "label": "Nedlastingshastighet (Mbps)",
+          "type": "number",
+          "placeholder": "f.eks. 50"
+        }
+      ]
     }
   ]
 }
