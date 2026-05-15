@@ -1,0 +1,162 @@
+```html
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Kostnad Kalkulator – Guide og tips</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            color: #1a1a1a;
+            background-color: #f9fafb;
+        }
+        h1, h2, h3 {
+            color: #0b2b4a;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.3rem;
+        }
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+        h2 {
+            font-size: 1.7rem;
+            margin-top: 2.5rem;
+        }
+        h3 {
+            font-size: 1.3rem;
+            margin-top: 1.8rem;
+            border-bottom: none;
+        }
+        p {
+            margin-bottom: 1.2rem;
+        }
+        ul {
+            margin: 1rem 0 1.5rem 1.5rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        strong {
+            color: #0b3b5e;
+        }
+        .highlight-box {
+            background: #e6f0fa;
+            padding: 1rem 1.5rem;
+            border-left: 4px solid #1a73e8;
+            border-radius: 0 8px 8px 0;
+            margin: 1.8rem 0;
+        }
+        .faq-item {
+            background: white;
+            padding: 0.8rem 1.2rem;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        }
+        .faq-item p {
+            margin: 0.3rem 0;
+        }
+        .faq-item strong {
+            display: block;
+            font-size: 1.1rem;
+        }
+        code {
+            background: #eef2f6;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-family: 'Consolas', monospace;
+            font-size: 0.95rem;
+        }
+        hr {
+            margin: 2.5rem 0;
+            border: 0;
+            border-top: 1px solid #dde3ea;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>AWS Kostnad Kalkulator – full guide for deg som vil ha kontroll på skykostnadene</h1>
+
+    <p>Å estimere kostnader i Amazon Web Services kan fort bli komplekst. Med hundrevis av tjenester, ulike prisingsmodeller og regionale forskjeller er det lett å miste oversikten. Derfor er <strong>AWS kostnad kalkulator</strong> et uunnværlig verktøy for både arkitekter, utviklere og økonomiansvarlige. I denne artikkelen går vi gjennom alt du trenger å vite – fra hva verktøyet er, til konkrete eksempler og tips for å unngå overraskelser på fakturaen.</p>
+
+    <h2>Hva er AWS Kostnad Kalkulator?</h2>
+    <p><strong>AWS kostnad kalkulator</strong> (offisielt kalt <em>AWS Pricing Calculator</em>) er et nettbasert verktøy fra Amazon Web Services som lar deg estimere månedlige kostnader for AWS-tjenester. Du bygger opp et scenario ved å velge tjenester som EC2, S3, Lambda, RDS, og justerer parametere som antall instanser, lagringsstørrelse, dataoverføring og region. Kalkulatoren gir deg et detaljert estimat som inkluderer både timebasert og månedlig pris.</p>
+    <p>Verktøyet er gratis å bruke og krever ingen innlogging for grunnleggende estimater, men du kan også lagre og dele konfigurasjoner ved å opprette en konto. Det er viktig å merke seg at kalkulatoren gir estimater – ikke bindende priser. Den tar hensyn til AWS' offentlige prisliste, men ikke spesielle avtaler eller rabatter som Reserved Instances eller Savings Plans med mindre du spesifiserer dem.</p>
+
+    <div class="highlight-box">
+        <p><strong>💡 Kort oppsummert:</strong> <strong>AWS kostnad kalkulator</strong> hjelper deg å simulere infrastrukturkostnader før du faktisk oppretter ressurser. Perfekt for budsjettering og sammenligning av ulike arkitekturer.</p>
+    </div>
+
+    <h2>Hvorfor er en AWS Kostnad Kalkulator viktig?</h2>
+    <p>Skykostnader kan eskalere raskt hvis du ikke har kontroll. Mange bedrifter opplever «kostnadssjokk» fordi de undervurderer løpende utgifter til dataoverføring, lagring eller ubrukte ressurser. Her er grunnene til at <strong>AWS kostnad kalkulator</strong> bør være en del av din arbeidsflyt:</p>
+    <ul>
+        <li><strong>Unngå overraskelser:</strong> Få et realistisk bilde av månedlige kostnader før du går i gang.</li>
+        <li><strong>Sammenlign alternativer:</strong> Test ulike instansfamilier, lagringstyper eller regioner for å finne den mest kostnadseffektive løsningen.</li>
+        <li><strong>Budsjettering og forecasting:</strong> Bruk estimatene til å sette budsjetter i AWS Budgets eller for interne rapporter.</li>
+        <li><strong>Optimalisering:</strong> Identifiser hvilke tjenester som driver kostnadene, og vurder Reserved Instances eller Spot Instances.</li>
+        <li><strong>Forankre beslutninger:</strong> Presenter konkrete tall for ledelsen eller kunder når du foreslår en arkitektur.</li>
+    </ul>
+    <p>Uten en kalkulator risikerer du å basere deg på gjetninger. Med <strong>AWS kostnad kalkulator</strong> får du datadrevne estimater som gjør deg tryggere i dine skybeslutninger.</p>
+
+    <h2>Slik bruker du AWS Kostnad Kalkulator</h2>
+    <p>Å komme i gang er enkelt. Følg denne trinnvise veiledningen:</p>
+    <ul>
+        <li><strong>Trinn 1:</strong> Gå til <a href="https://calculator.aws" target="_blank">calculator.aws</a> (ingen innlogging nødvendig for enkle estimater).</li>
+        <li><strong>Trinn 2:</strong> Klikk på «Create estimate» eller «Legg til tjeneste» for å bygge ditt scenario.</li>
+        <li><strong>Trinn 3:</strong> Velg en tjeneste, for eksempel <strong>Amazon EC2</strong>. Du vil bli bedt om å spesifisere:
+            <ul>
+                <li>Region (f.eks. eu-west-1 – Irland)</li>
+                <li>Instanstype (f.eks. t3.medium, m5.large)</li>
+                <li>Antall instanser</li>
+                <li>Betalingsalternativ (On-Demand, Reserved, Spot)</li>
+                <li>Lagringsvolum (EBS) og dataoverføring</li>
+            </ul>
+        </li>
+        <li><strong>Trinn 4:</strong> Gjenta for andre tjenester som S3, RDS eller Lambda. Legg til flere komponenter etter behov.</li>
+        <li><strong>Trinn 5:</strong> Se estimatet i høyre panel. Du kan eksportere til CSV eller dele lenken med teamet.</li>
+    </ul>
+    <p>En nyttig funksjon er «Group»-verktøyet som lar deg organisere ressurser i prosjekter eller miljøer (dev, test, prod). Dette gjør det lettere å holde oversikt over totale kostnader per avdeling.</p>
+
+    <h3>Formel med eksempel</h3>
+    <p>Selv om kalkulatoren gjør regnestykket automatisk, er det nyttig å forstå logikken. En forenklet formel for en EC2-instans ser slik ut:</p>
+    <p><strong>Månedlig kostnad = (Antall timer i måneden × Pris per time) + (Lagring per GB × Pris per GB) + (Dataoverføring × Pris per GB)</strong></p>
+    <p><strong>Eksempel:</strong> Du vil kjøre en <code>t3.medium</code> i region eu-west-1 (Irland) i 730 timer per måned (24/7). On-Demand prisen er ca. $0.0416 per time. I tillegg legger du til 50 GB gp3 EBS-lagring ($0.08/GB/mnd) og 100 GB dataoverføring ut av AWS ($0.09/GB).</p>
+    <ul>
+        <li>EC2: 730 × $0.0416 = $30.37</li>
+        <li>EBS: 50 × $0.08 = $4.00</li>
+        <li>Dataoverføring: 100 × $0.09 = $9.00</li>
+        <li><strong>Totalt estimat: $43.37 per måned</strong></li>
+    </ul>
+    <p>Med <strong>AWS kostnad kalkulator</strong> får du dette regnestykket presentert grafisk, med mulighet for å justere hver parameter. Du kan også legge til flere instanser og tjenester for et mer komplekst estimat.</p>
+
+    <h2>Praktiske eksempler</h2>
+    <p>Her er to scenarier som viser hvordan <strong>AWS kostnad kalkulator</strong> kan brukes i praksis:</p>
+
+    <h3>Eksempel 1: Nettside med høy trafikk</h3>
+    <p>Du skal sette opp en WordPress-side forventet 500 000 sidevisninger per måned. Arkitekturen inkluderer:</p>
+    <ul>
+        <li>2 × t3.medium EC2 (lastbalansert)</li>
+        <li>1 × RDS db.t3.small (MySQL, 20 GB lagring)</li>
+        <li>S3 for statiske filer (50 GB)</li>
+        <li>CloudFront for CDN (1 TB dataoverføring)</li>
+    </ul>
+    <p>Ved å legge disse inn i kalkulatoren får du et estimat på rundt $120–$150 per måned, avhengig av region. Dette gir deg et solid grunnlag for å presentere kostnader for kunden eller ledelsen.</p>
+
+    <h3>Eksempel 2: Dataanalyse med serverløs arkitektur</h3>
+    <p>Du skal kjøre sporadiske ETL-jobber med AWS Lambda og lagre resultater i S3. Du forventer 10 millioner kjøringer per måned, hver med 256 MB minne og 3 sekunders varighet. I tillegg lagres 200 GB i S3 Standard. Kalkulatoren viser at Lambda-kostnaden blir ca. $25 og S3 ca. $6 – totalt under $35 per måned. Dette er et godt eksempel på hvorfor serverløs arkitektur kan være svært kostnadseffektiv.</p>
+
+    <div class="highlight-box">
+        <p><strong>🔍 Tips:</strong> I begge eksemplene kan du eksperimentere med Reserved Instances eller Savings Plans i kalkulatoren for å se potensielle besparelser på 30–60 %.</p>
+    </div>
+
+    <h2>Tips for å få mest mulig ut av AWS Kostnad Kalkulator</h2>
+    <ul>
+        <li><strong>Vær spesifikk på region:</strong> Priser varierer kraftig mellom regioner. Velg den regionen du faktisk skal bruke.</li>
+        <li><strong>Inkluder dataoverføring:</strong> Mange glemmer kostnader for data ut av AWS. Legg inn realistiske tall for e

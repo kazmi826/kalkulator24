@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CIDR Kalkulator — Gratis Online Kalkulator | Kalkulator24</title>
+  <meta name="description" content="Beregn nettverksadresse, broadcast, antall verter og mer fra en CIDR-notasjon. — Gratis kalkulator online">
+  <meta name="keywords" content="CIDR, nettverkskalkulator, subnett, IP-adresse, nettverksmaske, verter, broadcast, nettverksadresse, IPv4, subnettkalkulator">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="Norwegian">
+  <meta name="google-site-verification" content="U-ZiCQHLID9ShjKIWBJI0Xi7xJDNrx9bwP4tRBEYzSQ">
+  <meta name="theme-color" content="#2563eb">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CIDR Kalkulator — Gratis Online Kalkulator | Kalkulator24">
+  <meta property="og:description" content="Beregn nettverksadresse, broadcast, antall verter og mer fra en CIDR-notasjon. — Gratis kalkulator online">
+  <meta property="og:url" content="https://kalkulator24.guru/verktoy/cidr-kalkulator">
+  <meta property="og:locale" content="nb_NO">
+  <link rel="canonical" href="https://kalkulator24.guru/verktoy/cidr-kalkulator">
+  <link rel="alternate" hreflang="nb" href="https://kalkulator24.guru/verktoy/cidr-kalkulator">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+</head>
+<body>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"CIDR Kalkulator","description":"Beregn nettverksadresse, broadcast, antall verter og mer fra en CIDR-notasjon.","url":"https://kalkulator24.guru/verktoy/cidr-kalkulator","applicationCategory":"UtilityApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"NOK"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Hjem","item":"https://kalkulator24.guru"},{"@type":"ListItem","position":2,"name":"Teknologi","item":"https://kalkulator24.guru/kategori/teknologi"},{"@type":"ListItem","position":3,"name":"CIDR Kalkulator","item":"https://kalkulator24.guru/verktoy/cidr-kalkulator"}]}</script>
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="/" class="logo">Kalkulator24</a>
+    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li><li><a href="/kategori/odds" class="">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi" class="">🌱 Økologi</a></li><li><a href="/kategori/bolig" class="">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk" class="">🎵 Musikk</a></li><li><a href="/kategori/teknologi" class="active">💻 Teknologi</a></li><li><a href="/kategori/ki" class="">🤖 Kunstig Intelligens</a></li></ul>
+    <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">☰</button>
+  </div>
+  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li><li><a href="/kategori/odds" class="">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi" class="">🌱 Økologi</a></li><li><a href="/kategori/bolig" class="">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk" class="">🎵 Musikk</a></li><li><a href="/kategori/teknologi" class="active">💻 Teknologi</a></li><li><a href="/kategori/ki" class="">🤖 Kunstig Intelligens</a></li></ul></div>
+</nav>
+<div class="breadcrumb"><a href="/">Hjem</a><span class="sep">›</span><a href="/kategori/teknologi">Teknologi</a><span class="sep">›</span>CIDR Kalkulator</div>
+<div class="tool-hero"><div class="tool-badge">💻 Teknologi</div><h1>CIDR Kalkulator</h1><p class="subtitle">Beregn nettverksadresse, broadcast, antall verter og mer fra en CIDR-notasjon. — raskt og gratis</p></div>
+<div class="main-wrap">
+  <div class="main-content">
+    <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>CIDR-notasjon (f.eks. 192.168.1.0/24)</label><div class="input-row"><input type="text" class="calc-input" data-field="cidr" placeholder="192.168.1.0/24"></div></div><div class="input-group"><label>Antall subnett (valgfritt)</label><div class="input-row"><input type="number" class="calc-input" data-field="subnet_count" placeholder="f.eks. 4"></div></div></div>    <button class="btn-calc" onclick="runCalculator('cidr_calculator')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
+    <div class="content-card">Her er en komplett SEO-artikkel på norsk om "CIDR Kalkulator", strukturert i ren HTML med de forespurte seksjonene og nøkkelordbruk.
+
+```html
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIDR Kalkulator – Hva det er, hvordan bruke det og praktiske eksempler</title>
+    <meta name="description" content="Lær alt om CIDR kalkulator: hva det er, hvorfor det er viktig, hvordan du bruker det, formel med eksempel, praktiske tips og FAQ. Perfekt for nettverksadministrasjon.">
+</head>
+<body>
+
+    <h1>CIDR Kalkulator – Din guide til effektiv IP-adressering</h1>
+
+    <p>I en verden hvor nettverk blir stadig mer komplekse, er presis IP-adressering avgjørende. En <strong>cidr kalkulator</strong> er et uunnværlig verktøy for både nettverksadministratorer, IT-studenter og alle som jobber med subnett. Denne artikkelen gir deg en komplett forståelse av hva en CIDR-kalkulator er, hvorfor den er viktig, og hvordan du bruker den i praksis.</p>
+
+    <!-- Seksjon 1: Hva er det -->
+    <h2>Hva er en CIDR kalkulator?</h2>
+    <p>En <strong>cidr kalkulator</strong> (Classless Inter-Domain Routing-kalkulator) er et digitalt verktøy som hjelper deg med å beregne nettverksdetaljer basert på en IP-adresse og en CIDR-notasjon (f.eks. 192.168.1.0/24). Den konverterer mellom desimal- og binærform, finner nettverksadresse, broadcast-adresse, tilgjengelige vertsadresser, subnet-maske og mye mer.</p>
+    <p>CIDR ble introdusert for å erstatte det eldre klassebaserte systemet (A, B, C) og gir langt mer fleksibel adressering. En <strong>cidr kalkulator</strong> automatiserer de komplekse binære beregningene og reduserer risikoen for menneskelige feil.</p>
+    <ul>
+        <li><strong>Nettverksadresse</strong> – Den første adressen i et subnett.</li>
+        <li><strong>Broadcast-adresse</strong> – Den siste adressen, brukt til å sende data til alle vertene.</li>
+        <li><strong>Subnet-maske</strong> – En 32-biters maske som skiller nettverksdelen fra vertsdelen.</li>
+        <li><strong>Antall vertsadresser</strong> – Hvor mange enheter som kan kobles til.</li>
+    </ul>
+
+    <!-- Seksjon 2: Hvorfor viktig -->
+    <h2>Hvorfor er en CIDR kalkulator viktig?</h2>
+    <p>Uten en <strong>cidr kalkulator</strong> ville nettverksplanlegging vært tidkrevende og feilutsatt. Her er noen grunner til at den er kritisk:</p>
+    <ul>
+        <li><strong>Presisjon:</strong> Manuelle binære beregninger fører ofte til feil, spesielt ved komplekse subnett. Kalkulatoren eliminerer dette.</li>
+        <li><strong>Tidsbesparelse:</strong> I stedet for å bruke 10 minutter på en subnett-beregning, får du svaret på sekunder.</li>
+        <li><strong>Optimal utnyttelse av IP-adresser:</strong> Med CIDR kan du tildele akkurat så mange adresser som trengs, noe som reduserer sløsing.</li>
+        <li><strong>Feilsøking:</strong> Når du skal identifisere om to enheter er i samme subnett, gir en <strong>cidr kalkulator</strong> et umiddelbart svar.</li>
+        <li><strong>Skalerbarhet:</strong> Store nettverk med tusenvis av subnett krever raske og nøyaktige verktøy – her er kalkulatoren uunnværlig.</li>
+    </ul>
+
+    <!-- Seksjon 3: Slik bruker du -->
+    <h2>Slik bruker du en CIDR kalkulator</h2>
+    <p>Å bruke en <strong>cidr kalkulator</strong> er enkelt, men det krever at du forstår inputene. Følg denne steg-for-steg-guiden:</p>
+    <ol>
+        <li><strong>Skriv inn IP-adressen:</strong> For eksempel 10.0.0.0.</li>
+        <li><strong>Legg til CIDR-notasjonen:</strong> For eksempel /23 (angir antall biter i nettverksdelen).</li>
+        <li><strong>Klikk "Beregn":</strong> Verktøyet viser umiddelbart nettverksadresse, broadcast-adresse, subnet-maske (f.eks. 255.255.254.0), og antall vertsadresser (510 for /23).</li>
+        <li><strong>Avanserte funksjoner:</strong> Noen kalkulatorer lar deg også dele opp et subnett i mindre deler (subnetting) eller slå sammen flere subnett (supernetting).</li>
+    </ol>
+    <p>De fleste nettbaserte <strong>cidr kalkulator</strong>-verktøy har et intuitivt grensesnitt. Prøv gjerne flere for å finne den som passer deg best.</p>
+
+    <!-- Seksjon 4: Formel med eksempel -->
+    <h2>Formel med eksempel</h2>
+    <p>Selv om en <strong>cidr kalkulator</strong> gjør jobben, er det nyttig å forstå den underliggende formelen. For et subnett med CIDR /n:</p>
+    <ul>
+        <li><strong>Subnet-maske:</strong> Sett de første n bitene til 1, resten til 0. For /23: 11111111.11111111.11111110.00000000 = 255.255.254.0.</li>
+        <li><strong>Nettverksadresse:</strong> Utfør en bitvis OG-operasjon mellom IP-adressen og subnet-masken.</li>
+        <li><strong>Broadcast-adresse:</strong> Sett alle vertsbitene til 1.</li>
+        <li><strong>Antall vertsadresser:</strong> 2^(32-n) – 2 (trekker fra nettverks- og broadcast-adressen).</li>
+    </ul>
+    <h3>Eksempel med IP 172.16.5.0/23</h3>
+    <p><strong>Trinn 1:</strong> Subnet-maske = 255.255.254.0 (binært: 11111111.11111111.11111110.00000000).</p>
+    <p><strong>Trinn 2:</strong> Nettverksadresse: 172.16.5.0 OG 255.255.254.0 = 172.16.4.0 (fordi 5 i binært er 00000101, og med maske 11111110 blir siste oktett 00000100 = 4).</p>
+    <p><strong>Trinn 3:</strong> Broadcast-adresse: Nettverksadresse + (2^9 – 1) = 172.16.4.0 + 511 = 172.16.5.255.</p>
+    <p><strong>Trinn 4:</strong> Antall vertsadresser: 2^(32-23) – 2 = 2^9 – 2 = 512 – 2 = 510.</p>
+    <p>Med en <strong>cidr kalkulator</strong> får du disse svarene på et øyeblikk, men formelen gir deg innsikten du trenger for å forstå hvorfor.</p>
+
+    <!-- Seksjon 5: Praktiske eksempler -->
+    <h2>Praktiske eksempler</h2>
+    <p>Her er to scenarioer hvor en <strong>cidr kalkulator</strong> løser virkelige problemer:</p>
+    <h3>Eksempel 1: Kontornettverk med 200 ansatte</h3>
+    <p>Du har IP-blokken 192.168.1.0/24 (256 adresser). For å unngå sløsing vil du dele den i to subnett: ett for ansatte (200 enheter) og ett for gjester (50 enheter).</p>
+    <ul>
+        <li>Bruk en <strong>cidr kalkulator</strong> til å subnette /24 til /25 (128 adresser) og /26 (64 adresser).</li>
+        <li>Resultat: Subnett 1: 192.168.1.0/25 (nettverk 192.168.1.0, broadcast 192.168.1.127, 126 vertsadresser). Subnett 2: 192.168.1.128/26 (nettverk 192.168.1.128, broadcast 192.168.1.191, 62 vertsadresser).</li>
+    </ul>
+    <h3>Eksempel 2: Samle flere subnett (supernetting)</h3>
+    <p>Du har tre subnett: 10.0.0.0/24, 10.0.1.0/24 og 10.0.2.0/24. Du vil slå dem sammen til ett større nettverk.</p>
+    <ul>
+        <li>En <strong>cidr kalkulator</strong> viser at de kan aggregeres til 10.0.0.0/22 (1024 adresser).</li>
+        <li>Dette reduserer rutetabellen og forenkler administrasjonen.</li>
+    </ul>
+
+    <!-- Seksjon 6: Tips -->
+    <h2>Tips for effektiv bruk av CIDR kalkulator</h2>
+    <ul>
+        <li><strong>Forstå binært:</strong> Selv om kalkulatoren gjør jobben, hjelper det å kunne binære tall for å tolke resultatene.</li>
+        <li><strong>Bruk pålitelige verktøy:</strong> Velg en <strong>cidr kalkulator</strong> fra anerkjente kilder som støtter både IPv4 og IPv6.</li>
+        <li><strong>Kontroller alltid nettverksadressen:</strong> Sørg for at den første adressen i subnettet er riktig – en feil her kan føre til konflikter.</li>
+        <li><strong>Planlegg for vekst:</strong> Når du oppretter subnett, legg inn litt ekstra kapasitet. En <strong>cidr kalkulator</strong> hjelper deg å finne riktig størrelse.</li>
+        <li><strong>Dokumenter:</strong> Noter ned subnett, masker og broadcast-adresser. Kalkulatoren kan eksportere data i mange tilfeller.</li>
+    </ul>
+
+    <!-- Seksjon 7: FAQ 5 spørsmål -->
+    <h2>Ofte stilte spørsmål om CIDR kalkulator</h2>
+    <h3>1. Hva er forskjellen mellom en vanlig subnet-mask og CIDR-notasjon?</h3>
+    <p>En subnet-mask (f.eks. 255.255.255.0) er desimalformen, mens CIDR-notasjon (f.eks. /24) er en kortere måte å angi antall biter i nettverksdelen. En <strong>cidr kalkulator</strong> konverterer enkelt mellom disse.</p>
+
+    <h3>2. Kan en CIDR kalkulator brukes for IPv6?</h3>
+    <p>Ja, mange avanserte <strong>cidr kalkulator</strong>-verktøy støtter også IPv6. Da brukes notasjon som 2001:db8::/32, og kalkulatoren finner nettverksprefiks og antall subnett.</p>
+
+    <h3>3. H</div>
+    <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/ai-energibruks-kalkulator'"><span class="tool-card-icon">💻</span><h3>AI Energibruks Kalkulator</h3><p>Beregn strømforbruk og kostnad for AI-modeller som ChatGPT, med sammenligning og miljøtips.</p></div><div class="tool-card" onclick="location='/verktoy/ai-skaleringskostnader-kalkulator'"><span class="tool-card-icon">💻</span><h3>AI Skaleringskostnader Kalkulator</h3><p>Beregn kostnader og ressursbehov ved skalering av AI-modeller (trening/inferens).</p></div><div class="tool-card" onclick="location='/verktoy/kostnad-ved-ai-bildegenerering-kalkulator'"><span class="tool-card-icon">💻</span><h3>Kostnad ved AI Bildegenerering Kalkulator</h3><p>Beregn kostnaden for å generere bilder med AI-modeller som DALL-E, Midjourney og Stable Diffusion.</p></div><div class="tool-card" onclick="location='/verktoy/ai-voiceover-kostnads-og-tidskalkulator'"><span class="tool-card-icon">💻</span><h3>AI Voiceover Kostnads- og Tidskalkulator</h3><p>Beregn kostnad og tid for AI-genererte voiceover-prosjekter med avanserte sammenligninger.</p></div><div class="tool-card" onclick="location='/verktoy/batterikapasitetskalkulator'"><span class="tool-card-icon">💻</span><h3>Batterikapasitetskalkulator</h3><p>Beregn batterikapasitet, ladetid og rekkevidde for elbiler og enheter.</p></div><div class="tool-card" onclick="location='/verktoy/ip-subnett-kalkulator'"><span class="tool-card-icon">💻</span><h3>IP Subnett Kalkulator</h3><p>Beregn nettverk, broadcast, maske og antall verter for en IP-adresse og CIDR.</p></div><div class="tool-card" onclick="location='/verktoy/nedlastingshastighetskalkulator'"><span class="tool-card-icon">💻</span><h3>Nedlastingshastighetskalkulator</h3><p>Beregn nedlastingstid basert på filstørrelse og hastighet. Sammenlign med bredbåndshastigheter.</p></div><div class="tool-card" onclick="location='/verktoy/pcb-spor-strom-kalkulator'"><span class="tool-card-icon">💻</span><h3>PCB Spor Strøm Kalkulator</h3><p>Beregn maksimal strømføringsevne for PCB-spor basert på bredde, tykkelse og temperaturøkning.</p></div><div class="tool-card" onclick="location='/verktoy/dpi-kalkulator'"><span class="tool-card-icon">💻</span><h3>DPI Kalkulator</h3><p>Beregn DPI, oppløsning og skjermstørrelse for skjermer og bilder.</p></div><div class="tool-card" onclick="location='/verktoy/projektor-kalkulator'"><span class="tool-card-icon">💻</span><h3>Projektor Kalkulator</h3><p>Beregn optimal projeksjonsavstand, bildebredde og lysstyrke for din projektor.</p></div><div class="tool-card" onclick="location='/verktoy/datamaskinlagring-kalkulator'"><span class="tool-card-icon">💻</span><h3>Datamaskinlagring Kalkulator</h3><p>Konverter og sammenlign datalagringsenheter (byte, KB, MB, GB, TB, PB) med presisjon.</p></div><div class="tool-card" onclick="location='/verktoy/pcb-spor-bredde-kalkulator'"><span class="tool-card-icon">💻</span><h3>PCB Spor Bredde Kalkulator</h3><p>Beregn nødvendig PCB-sporbredde basert på strøm, tykkelse og temperaturøkning.</p></div><div class="tool-card" onclick="location='/kategori/teknologi'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle Teknologi</h3><p>Alle kalkulatorer i denne kategorien</p></div></div></div>
+    <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/lan-kalkulator'"><span class="tool-card-icon">💰</span><h3>Lån Kalkulator</h3><p>Beregn månedlige låneavdrag med nedbetalingsoversikt</p></div><div class="tool-card" onclick="location='/verktoy/prosent-kalkulator'"><span class="tool-card-icon">📐</span><h3>Prosent Kalkulator</h3><p>Beregn prosent med flere metoder og sammenligninger</p></div><div class="tool-card" onclick="location='/verktoy/temperatur-konvertering'"><span class="tool-card-icon">🔄</span><h3>Temperatur Konvertering</h3><p>Konverter temperatur mellom alle enheter</p></div><div class="tool-card" onclick="location='/verktoy/areal-kalkulator'"><span class="tool-card-icon">📏</span><h3>Areal Kalkulator</h3><p>Beregn areal av ulike former med enheter</p></div><div class="tool-card" onclick="location='/verktoy/alder-kalkulator'"><span class="tool-card-icon">📅</span><h3>Alder Kalkulator</h3><p>Beregn nøyaktig alder med sammenligning og statistikk</p></div></div></div>
+  </div>
+  <aside class="sidebar">
+    <div class="sidebar-card"><h3>Teknologi kalkulatorer</h3><ul class="sidebar-links"><li><a href="/verktoy/ai-energibruks-kalkulator"><span class="icon">💻</span>AI Energibruks Kalkulator</a></li><li><a href="/verktoy/ai-skaleringskostnader-kalkulator"><span class="icon">💻</span>AI Skaleringskostnader Kalkulator</a></li><li><a href="/verktoy/kostnad-ved-ai-bildegenerering-kalkulator"><span class="icon">💻</span>Kostnad ved AI Bildegenerering Kalkulator</a></li><li><a href="/verktoy/ai-voiceover-kostnads-og-tidskalkulator"><span class="icon">💻</span>AI Voiceover Kostnads- og Tidskalkulator</a></li><li><a href="/verktoy/batterikapasitetskalkulator"><span class="icon">💻</span>Batterikapasitetskalkulator</a></li><li><a href="/verktoy/ip-subnett-kalkulator"><span class="icon">💻</span>IP Subnett Kalkulator</a></li><li><a href="/verktoy/nedlastingshastighetskalkulator"><span class="icon">💻</span>Nedlastingshastighetskalkulator</a></li><li><a href="/verktoy/pcb-spor-strom-kalkulator"><span class="icon">💻</span>PCB Spor Strøm Kalkulator</a></li><li><a href="/kategori/teknologi" style="color:var(--primary)">Se alle Teknologi →</a></li></ul></div>
+    <div class="sidebar-card"><h3>Populære verktøy</h3><ul class="sidebar-links"><li><a href="/verktoy/bmi-kalkulator"><span class="icon">❤️</span>BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator"><span class="icon">💰</span>Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator"><span class="icon">📐</span>Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator"><span class="icon">📅</span>Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator"><span class="icon">❤️</span>Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator"><span class="icon">⚗️</span>pH Kalkulator</a></li></ul></div>
+  </aside>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">678+ gratis kalkulatorer</p></div>
+      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li><li><a href="/kategori/krypto">₿ Krypto</a></li><li><a href="/kategori/spill">🎮 Spill</a></li><li><a href="/kategori/odds">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi">🌱 Økologi</a></li><li><a href="/kategori/bolig">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk">🎵 Musikk</a></li><li><a href="/kategori/teknologi">💻 Teknologi</a></li><li><a href="/kategori/ki">🤖 Kunstig Intelligens</a></li></ul></div>
+      <div class="footer-col"><h4>Populære</h4><ul><li><a href="/verktoy/bmi-kalkulator">BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator">Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator">Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator">Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator">Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator">pH Kalkulator</a></li><li><a href="/verktoy/molekylvekt-kalkulator">Molekylvektkalkulator</a></li><li><a href="/verktoy/halveringstid-kalkulator">Halveringstid Kalkulator</a></li><li><a href="/verktoy/befolkningsvekst-kalkulator">Befolkningsvekst Kalkulator</a></li><li><a href="/verktoy/terningkaster">Terningkaster</a></li></ul></div>
+      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/revers-kalkulator">Revers Kalkulator</a></li><li><a href="/verktoy/rasjonelle-nullpunkter-kalkulator">Rasjonelle Nullpunkter Kalkulator</a></li><li><a href="/verktoy/utvidet-form-kalkulator">Utvidet Form Kalkulator</a></li><li><a href="/verktoy/logaritme-med-base-2-kalkulator">Logaritme med base 2 Kalkulator</a></li><li><a href="/verktoy/forenkling-av-radikaler-kalkulator">Forenkling av Radikaler Kalkulator</a></li><li><a href="/verktoy/restkalkulator">Restkalkulator</a></li><li><a href="/verktoy/binar-subtraksjonskalkulator">Binær Subtraksjonskalkulator</a></li><li><a href="/verktoy/foil-kalkulator">FOIL Kalkulator</a></li></ul></div>
+      <div class="footer-col"><h4>Info</h4><ul><li><a href="/om-oss">Om oss</a></li><li><a href="/personvern">Personvern</a></li><li><a href="/kontakt">Kontakt</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Kalkulator24 — Alle kalkulatorer er gratis</p></div>
+  </div>
+</footer>
+<script>
+function toggleMenu(){var m=document.getElementById("mobileMenu");m.classList.toggle("open");}
+document.addEventListener("click",function(e){var m=document.getElementById("mobileMenu");var b=document.getElementById("hamburgerBtn");if(m&&b&&!m.contains(e.target)&&!b.contains(e.target))m.classList.remove("open");});
+</script>
+<script src="/assets/js/calc.js"></script>
+</body></html>

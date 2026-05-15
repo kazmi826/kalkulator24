@@ -17910,6 +17910,2630 @@
           "placeholder": "f.eks. 50"
         }
       ]
+    },
+    {
+      "slug": "musikkintervallkalkulator",
+      "title": "Musikkintervallkalkulator",
+      "category": "musikk",
+      "description": "Beregn musikkintervaller mellom to toner, med frekvensforhold, halvtoner og beskrivelse.",
+      "keywords": "musikkintervall, intervallkalkulator, tonefrekvens, halvtoner, musikkteori, frekvensforhold, intervallnavn",
+      "formula": "musikkintervall_beregning",
+      "inputs": [
+        {
+          "id": "tone1",
+          "label": "Tone 1 (f.eks. C4)",
+          "type": "text",
+          "placeholder": "C4"
+        },
+        {
+          "id": "tone2",
+          "label": "Tone 2 (f.eks. E4)",
+          "type": "text",
+          "placeholder": "E4"
+        }
+      ]
+    },
+    {
+      "slug": "treningskostnader-ai-modeller-kalkulator-kalkulator",
+      "title": "Treningskostnader for AI Modeller Kalkulator",
+      "category": "ki",
+      "description": "Beregn kostnader for trening av AI-modeller basert på GPU-timer, strømpris og maskinvare.",
+      "keywords": "AI trening, kostnadskalkulator, GPU, maskinlæring, strømforbruk, skykostnad, modelltrening",
+      "formula": "ai_training_cost",
+      "inputs": [
+        {
+          "id": "gpu_hours",
+          "label": "Antall GPU-timer",
+          "type": "number",
+          "placeholder": "f.eks. 1000"
+        },
+        {
+          "id": "gpu_type",
+          "label": "GPU-type",
+          "type": "select",
+          "options": [
+            "NVIDIA A100 80GB",
+            "NVIDIA H100 80GB",
+            "NVIDIA RTX 4090",
+            "AMD MI250X",
+            "Google TPU v4"
+          ]
+        },
+        {
+          "id": "power_consumption_watt",
+          "label": "Strømforbruk per GPU (Watt)",
+          "type": "number",
+          "placeholder": "f.eks. 400"
+        },
+        {
+          "id": "electricity_price_kwh",
+          "label": "Strømpris (NOK/kWh)",
+          "type": "number",
+          "placeholder": "f.eks. 1.2"
+        },
+        {
+          "id": "cloud_cost_per_hour",
+          "label": "Skykostnad per GPU-time (NOK)",
+          "type": "number",
+          "placeholder": "f.eks. 50"
+        },
+        {
+          "id": "num_gpus",
+          "label": "Antall GPUer i parallell",
+          "type": "number",
+          "placeholder": "f.eks. 8"
+        }
+      ]
+    },
+    {
+      "slug": "pcb-spor-strom-kalkulator",
+      "title": "PCB Spor Strøm Kalkulator",
+      "category": "teknologi",
+      "description": "Beregn maksimal strømføringsevne for PCB-spor basert på bredde, tykkelse og temperaturøkning.",
+      "keywords": "PCB spor strøm, kalkulator, strømføringsevne, spor bredde, kobber tykkelse, temperaturøkning, IPC-2221",
+      "formula": "pcb_trace_current_calculator",
+      "inputs": [
+        {
+          "id": "spor_bredde",
+          "label": "Sporbredde (mm)",
+          "type": "number",
+          "placeholder": "f.eks. 1.0"
+        },
+        {
+          "id": "kobber_tykkelse",
+          "label": "Kobbertykkelse (oz)",
+          "type": "select",
+          "options": [
+            "0.5 oz",
+            "1 oz",
+            "2 oz",
+            "3 oz",
+            "4 oz"
+          ]
+        },
+        {
+          "id": "temperatur_okning",
+          "label": "Temperaturøkning (°C)",
+          "type": "number",
+          "placeholder": "f.eks. 10"
+        },
+        {
+          "id": "spor_lengde",
+          "label": "Sporlengde (mm)",
+          "type": "number",
+          "placeholder": "f.eks. 50"
+        }
+      ]
+    },
+    {
+      "slug": "dpi-kalkulator",
+      "title": "DPI Kalkulator",
+      "category": "teknologi",
+      "description": "Beregn DPI, oppløsning og skjermstørrelse for skjermer og bilder.",
+      "keywords": "DPI, punkter per tomme, oppløsning, skjermstørrelse, pikseltetthet, bildeoppløsning, skjermkalkulator",
+      "formula": "dpi_calculator",
+      "inputs": [
+        {
+          "id": "bredde_piksler",
+          "label": "Bredde (piksler)",
+          "type": "number",
+          "placeholder": "f.eks. 1920"
+        },
+        {
+          "id": "hoyde_piksler",
+          "label": "Høyde (piksler)",
+          "type": "number",
+          "placeholder": "f.eks. 1080"
+        },
+        {
+          "id": "skjerm_diagonal_tommer",
+          "label": "Skjermdiagonal (tommer)",
+          "type": "number",
+          "placeholder": "f.eks. 24"
+        },
+        {
+          "id": "forhold",
+          "label": "Sideforhold",
+          "type": "select",
+          "options": [
+            "16:9",
+            "16:10",
+            "4:3",
+            "21:9",
+            "3:2",
+            "1:1"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "ppi-kalkulator",
+      "title": "PPI Kalkulator",
+      "category": "helse",
+      "description": "Beregn Puls Pressure Index (PPI) for hjertehelse. Få risikovurdering og sammenligning med normalområder.",
+      "keywords": "PPI, puls pressure index, hjertehelse, blodtrykk, kardiovaskulær risiko, kalkulator, helse",
+      "formula": "ppi_calculator",
+      "inputs": [
+        {
+          "id": "systolic_bp",
+          "label": "Systolisk blodtrykk (mmHg)",
+          "type": "number",
+          "placeholder": "f.eks. 120"
+        },
+        {
+          "id": "diastolic_bp",
+          "label": "Diastolisk blodtrykk (mmHg)",
+          "type": "number",
+          "placeholder": "f.eks. 80"
+        },
+        {
+          "id": "age",
+          "label": "Alder (år)",
+          "type": "number",
+          "placeholder": "f.eks. 45"
+        },
+        {
+          "id": "gender",
+          "label": "Kjønn",
+          "type": "select",
+          "options": [
+            "Mann",
+            "Kvinne"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "blindeskriftoversetter",
+      "title": "Blindeskrift Oversetter Kalkulator",
+      "category": "konvertering",
+      "description": "Konverter tekst til blindeskrift (punktskrift) og omvendt med detaljert utdata.",
+      "keywords": "blindeskrift, punktskrift, braille, oversetter, konvertering, norsk, synshemmet",
+      "formula": "braille_converter",
+      "inputs": [
+        {
+          "id": "input_text",
+          "label": "Tekst å oversette",
+          "type": "text",
+          "placeholder": "Skriv inn tekst (f.eks. Hei)"
+        },
+        {
+          "id": "direction",
+          "label": "Retning",
+          "type": "select",
+          "options": [
+            "Tekst til blindeskrift",
+            "Blindeskrift til tekst"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "projektor-kalkulator",
+      "title": "Projektor Kalkulator",
+      "category": "teknologi",
+      "description": "Beregn optimal projeksjonsavstand, bildebredde og lysstyrke for din projektor.",
+      "keywords": "projektor, kalkulator, projeksjonsavstand, bildebredde, lysstyrke, lumen, lerret, hjemmekino",
+      "formula": "projektor_kalkulator",
+      "inputs": [
+        {
+          "id": "kast_forhold",
+          "label": "Kastforhold (f.eks. 1.5:1)",
+          "type": "number",
+          "placeholder": "1.5"
+        },
+        {
+          "id": "lerret_bredde",
+          "label": "Ønsket lerretbredde (cm)",
+          "type": "number",
+          "placeholder": "200"
+        },
+        {
+          "id": "projektor_lumen",
+          "label": "Projektor lysstyrke (ANSI lumen)",
+          "type": "number",
+          "placeholder": "3000"
+        },
+        {
+          "id": "rom_lys",
+          "label": "Romlysnivå",
+          "type": "select",
+          "options": [
+            "Mørkt rom",
+            "Dempet belysning",
+            "Normalt rom",
+            "Lyst rom"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "datamaskinlagring-kalkulator",
+      "title": "Datamaskinlagring Kalkulator",
+      "category": "teknologi",
+      "description": "Konverter og sammenlign datalagringsenheter (byte, KB, MB, GB, TB, PB) med presisjon.",
+      "keywords": "datamaskinlagring, byte, kilobyte, megabyte, gigabyte, terabyte, petabyte, konvertering, lagring, harddisk, SSD, minne",
+      "formula": "datamaskinlagring_konvertering",
+      "inputs": [
+        {
+          "id": "verdi",
+          "label": "Verdi",
+          "type": "number",
+          "placeholder": "f.eks. 1024"
+        },
+        {
+          "id": "fra_enhet",
+          "label": "Fra enhet",
+          "type": "select",
+          "options": [
+            "Byte (B)",
+            "Kilobyte (KB)",
+            "Megabyte (MB)",
+            "Gigabyte (GB)",
+            "Terabyte (TB)",
+            "Petabyte (PB)"
+          ]
+        },
+        {
+          "id": "til_enhet",
+          "label": "Til enhet",
+          "type": "select",
+          "options": [
+            "Byte (B)",
+            "Kilobyte (KB)",
+            "Megabyte (MB)",
+            "Gigabyte (GB)",
+            "Terabyte (TB)",
+            "Petabyte (PB)"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "frekvenskonverterer",
+      "title": "Frekvenskonverterer Kalkulator",
+      "category": "konvertering",
+      "description": "Konverter mellom frekvensenheter (Hz, kHz, MHz, GHz) med presisjon og sammenligninger.",
+      "keywords": "frekvens, hertz, kilohertz, megahertz, gigahertz, konvertering, frekvensomformer, bølgelengde, radiofrekvens",
+      "formula": "frekvenskonverterer",
+      "inputs": [
+        {
+          "id": "frekvens",
+          "label": "Frekvensverdi",
+          "type": "number",
+          "placeholder": "f.eks. 1000"
+        },
+        {
+          "id": "enhet_fra",
+          "label": "Fra enhet",
+          "type": "select",
+          "options": [
+            "Hz",
+            "kHz",
+            "MHz",
+            "GHz"
+          ]
+        },
+        {
+          "id": "enhet_til",
+          "label": "Til enhet",
+          "type": "select",
+          "options": [
+            "Hz",
+            "kHz",
+            "MHz",
+            "GHz"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "kompresjonskalkulator",
+      "title": "Kompresjonskalkulator",
+      "category": "fysikk",
+      "description": "Beregn kompresjonsforhold, trykk og temperatur i en sylinder. Inkluderer advarsler og sammenligninger.",
+      "keywords": "kompresjon, kompresjonsforhold, sylinder, trykk, temperatur, motor, fysikk, kalkulator",
+      "formula": "kompresjon_beregning",
+      "inputs": [
+        {
+          "id": "slagvolum",
+          "label": "Slagvolum (cm³)",
+          "type": "number",
+          "placeholder": "f.eks. 500"
+        },
+        {
+          "id": "klaringvolum",
+          "label": "Klaringvolum (cm³)",
+          "type": "number",
+          "placeholder": "f.eks. 50"
+        },
+        {
+          "id": "starttrykk",
+          "label": "Starttrykk (bar)",
+          "type": "number",
+          "placeholder": "f.eks. 1.0"
+        },
+        {
+          "id": "starttemperatur",
+          "label": "Starttemperatur (°C)",
+          "type": "number",
+          "placeholder": "f.eks. 20"
+        },
+        {
+          "id": "gasskonstant",
+          "label": "Gasskonstant (J/(kg·K))",
+          "type": "number",
+          "placeholder": "f.eks. 287 (luft)"
+        },
+        {
+          "id": "spesifikk_varmeratio",
+          "label": "Spesifikk varmeratio (γ)",
+          "type": "number",
+          "placeholder": "f.eks. 1.4 (luft)"
+        }
+      ]
+    },
+    {
+      "slug": "ctr-kalkulator",
+      "title": "CTR Kalkulator",
+      "category": "konvertering",
+      "description": "Beregn klikkfrekvens (CTR) for annonser og kampanjer. Få innsikt i effektivitet.",
+      "keywords": "CTR, klikkfrekvens, annonsekalkulator, markedsføring, digital annonsering, kampanjeanalyse",
+      "formula": "ctr_kalkulator",
+      "inputs": [
+        {
+          "id": "klikk",
+          "label": "Antall klikk",
+          "type": "number",
+          "placeholder": "f.eks. 150"
+        },
+        {
+          "id": "visninger",
+          "label": "Antall visninger",
+          "type": "number",
+          "placeholder": "f.eks. 10000"
+        }
+      ]
+    },
+    {
+      "slug": "pcb-spor-bredde-kalkulator",
+      "title": "PCB Spor Bredde Kalkulator",
+      "category": "teknologi",
+      "description": "Beregn nødvendig PCB-sporbredde basert på strøm, tykkelse og temperaturøkning.",
+      "keywords": "PCB, sporbredde, kretskort, strøm, temperatur, kalkulator, elektronikk, design",
+      "formula": "pcb_trace_width_calculator",
+      "inputs": [
+        {
+          "id": "current",
+          "label": "Strøm (A)",
+          "type": "number",
+          "placeholder": "f.eks. 2.5"
+        },
+        {
+          "id": "thickness",
+          "label": "Kobbertykkelse (oz)",
+          "type": "select",
+          "options": [
+            "0.5",
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "id": "temp_rise",
+          "label": "Temperaturøkning (°C)",
+          "type": "select",
+          "options": [
+            "10",
+            "20",
+            "30",
+            "40",
+            "50"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "chmod-kalkulator",
+      "title": "CHMOD Kalkulator",
+      "category": "teknologi",
+      "description": "Beregn CHMOD-tillatelser for filer og mapper i Linux/Unix-systemer.",
+      "keywords": "chmod, tillatelser, linux, unix, filrettigheter, kalkulator, numerisk, symbolsk",
+      "formula": "chmod_calculator",
+      "inputs": [
+        {
+          "id": "owner",
+          "label": "Eier (Owner)",
+          "type": "select",
+          "options": [
+            "0 (ingen)",
+            "1 (x)",
+            "2 (w)",
+            "3 (wx)",
+            "4 (r)",
+            "5 (rx)",
+            "6 (rw)",
+            "7 (rwx)"
+          ]
+        },
+        {
+          "id": "group",
+          "label": "Gruppe (Group)",
+          "type": "select",
+          "options": [
+            "0 (ingen)",
+            "1 (x)",
+            "2 (w)",
+            "3 (wx)",
+            "4 (r)",
+            "5 (rx)",
+            "6 (rw)",
+            "7 (rwx)"
+          ]
+        },
+        {
+          "id": "others",
+          "label": "Andre (Others)",
+          "type": "select",
+          "options": [
+            "0 (ingen)",
+            "1 (x)",
+            "2 (w)",
+            "3 (wx)",
+            "4 (r)",
+            "5 (rx)",
+            "6 (rw)",
+            "7 (rwx)"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "edpi-kalkulator",
+      "title": "eDPI Kalkulator",
+      "category": "spill",
+      "description": "Beregn effektiv DPI (eDPI) for spill. Sammenlign med proffinnstillinger og få anbefalinger.",
+      "keywords": "eDPI kalkulator, effektiv DPI, musefølsomhet, gaming, spillinnstillinger, DPI, sensitivitet, proffinnstillinger",
+      "formula": "edpi_calculator",
+      "inputs": [
+        {
+          "id": "dpi",
+          "label": "DPI (punkter per tomme)",
+          "type": "number",
+          "placeholder": "f.eks. 800"
+        },
+        {
+          "id": "sens",
+          "label": "Spillfølsomhet (in-game)",
+          "type": "number",
+          "placeholder": "f.eks. 2.5"
+        },
+        {
+          "id": "game",
+          "label": "Spill",
+          "type": "select",
+          "options": [
+            "Valorant",
+            "CS:GO/CS2",
+            "Overwatch",
+            "Apex Legends",
+            "Fortnite",
+            "Rainbow Six Siege",
+            "Call of Duty",
+            "Battlefield",
+            "Destiny 2",
+            "Annet"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "nedlastingstid-kalkulator",
+      "title": "Nedlastingstid Kalkulator",
+      "category": "teknologi",
+      "description": "Beregn hvor lang tid det tar å laste ned en fil basert på hastighet og størrelse.",
+      "keywords": "nedlastingstid, nedlastingshastighet, filstørrelse, båndbredde, kalkulator, tid, internetthastighet",
+      "formula": "nedlastingstid_formel",
+      "inputs": [
+        {
+          "id": "filstorrelse",
+          "label": "Filstørrelse",
+          "type": "number",
+          "placeholder": "f.eks. 500"
+        },
+        {
+          "id": "enhet_filstorrelse",
+          "label": "Enhet for filstørrelse",
+          "type": "select",
+          "options": [
+            "MB",
+            "GB",
+            "TB"
+          ]
+        },
+        {
+          "id": "hastighet",
+          "label": "Nedlastingshastighet",
+          "type": "number",
+          "placeholder": "f.eks. 50"
+        },
+        {
+          "id": "enhet_hastighet",
+          "label": "Enhet for hastighet",
+          "type": "select",
+          "options": [
+            "Mbps",
+            "Gbps"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "utvikleropplevelse-kalkulator",
+      "title": "Utvikleropplevelse Kalkulator",
+      "category": "teknologi",
+      "description": "Mål og optimaliser utvikleropplevelsen (DX) i teamet ditt med avanserte beregninger.",
+      "keywords": "utvikleropplevelse, dx, kalkulator, utviklerproduktivitet, teamverktøy, devops, programvareutvikling",
+      "formula": "developer_experience_score",
+      "inputs": [
+        {
+          "id": "deploy_freq",
+          "label": "Deploy-frekvens (per uke)",
+          "type": "number",
+          "placeholder": "f.eks. 10"
+        },
+        {
+          "id": "lead_time",
+          "label": "Gjennomsnittlig ledetid (timer)",
+          "type": "number",
+          "placeholder": "f.eks. 2"
+        },
+        {
+          "id": "mtbf",
+          "label": "Mean Time Between Failures (timer)",
+          "type": "number",
+          "placeholder": "f.eks. 168"
+        },
+        {
+          "id": "code_review_time",
+          "label": "Gjennomsnittlig kodereview-tid (timer)",
+          "type": "number",
+          "placeholder": "f.eks. 4"
+        },
+        {
+          "id": "dev_satisfaction",
+          "label": "Utviklertilfredshet (1-10)",
+          "type": "number",
+          "placeholder": "f.eks. 7"
+        },
+        {
+          "id": "tool_quality",
+          "label": "Verktøykvalitet (1-10)",
+          "type": "number",
+          "placeholder": "f.eks. 8"
+        },
+        {
+          "id": "documentation_score",
+          "label": "Dokumentasjonsscore (1-10)",
+          "type": "number",
+          "placeholder": "f.eks. 6"
+        },
+        {
+          "id": "team_size",
+          "label": "Teamstørrelse",
+          "type": "number",
+          "placeholder": "f.eks. 5"
+        }
+      ]
+    },
+    {
+      "slug": "imac-kalkulator",
+      "title": "iMac Kalkulator",
+      "category": "teknologi",
+      "description": "Beregn ytelse, strømforbruk og varmeutvikling for iMac-modeller.",
+      "keywords": "iMac, kalkulator, ytelse, strømforbruk, varme, Mac, Apple, teknologi, beregning",
+      "formula": "imac_calculator",
+      "inputs": [
+        {
+          "id": "cpu_cores",
+          "label": "Antall CPU-kjerner",
+          "type": "number",
+          "placeholder": "f.eks. 8"
+        },
+        {
+          "id": "ram_gb",
+          "label": "RAM (GB)",
+          "type": "number",
+          "placeholder": "f.eks. 16"
+        },
+        {
+          "id": "gpu_cores",
+          "label": "Antall GPU-kjerner",
+          "type": "number",
+          "placeholder": "f.eks. 8"
+        },
+        {
+          "id": "skjerm_storrelse",
+          "label": "Skjermstørrelse (tommer)",
+          "type": "select",
+          "options": [
+            "21.5",
+            "24",
+            "27",
+            "32"
+          ]
+        },
+        {
+          "id": "brukstid_timer",
+          "label": "Brukstid per dag (timer)",
+          "type": "number",
+          "placeholder": "f.eks. 8"
+        }
+      ]
+    },
+    {
+      "slug": "big-o-kalkulator",
+      "title": "Big O Kalkulator",
+      "category": "matematikk",
+      "description": "Beregn og sammenlign tidskompleksiteten til algoritmer med Big O-notasjon.",
+      "keywords": "Big O, tidskompleksitet, algoritmeanalyse, O(1), O(n), O(n^2), O(log n), O(n log n), O(2^n), O(n!), kalkulator",
+      "formula": "big_o_calculator",
+      "inputs": [
+        {
+          "id": "algoritme_type",
+          "label": "Algoritmetype",
+          "type": "select",
+          "options": [
+            "O(1) - Konstant",
+            "O(log n) - Logaritmisk",
+            "O(n) - Lineær",
+            "O(n log n) - Lineærlogaritmisk",
+            "O(n^2) - Kvadratisk",
+            "O(2^n) - Eksponentiell",
+            "O(n!) - Faktoriell"
+          ]
+        },
+        {
+          "id": "input_storrelse",
+          "label": "Inndatastørrelse (n)",
+          "type": "number",
+          "placeholder": "f.eks. 1000"
+        },
+        {
+          "id": "tid_per_operasjon",
+          "label": "Tid per operasjon (ms)",
+          "type": "number",
+          "placeholder": "f.eks. 1"
+        }
+      ]
+    },
+    {
+      "slug": "lukkertid-kalkulator",
+      "title": "Lukkertid Kalkulator",
+      "category": "konvertering",
+      "description": "Beregn optimal lukkertid for skarpe bilder basert på brennvidde, kameratype og motivbevegelse.",
+      "keywords": "lukkertid, kalkulator, fotografi, skarpe bilder, brennvidde, kameratype, motivbevegelse, eksponering",
+      "formula": "lukkertid_beregning",
+      "inputs": [
+        {
+          "id": "brennvidde",
+          "label": "Brennvidde (mm)",
+          "type": "number",
+          "placeholder": "f.eks. 50"
+        },
+        {
+          "id": "kameratype",
+          "label": "Kameratype",
+          "type": "select",
+          "options": [
+            "Fullformat",
+            "APS-C",
+            "Micro Four Thirds"
+          ]
+        },
+        {
+          "id": "motivtype",
+          "label": "Motivtype",
+          "type": "select",
+          "options": [
+            "Stille motiv",
+            "Langsom bevegelse",
+            "Rask bevegelse"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "stromforsyningskalkulator",
+      "title": "Strømforsyningskalkulator",
+      "category": "teknologi",
+      "description": "Beregn nødvendig strømforsyning (PSU) for PC-komponenter med margin og effektivitet.",
+      "keywords": "strømforsyning, PSU, watt, PC, strømberegning, effektivitet, komponenter",
+      "formula": "psu_calculator",
+      "inputs": [
+        {
+          "id": "cpu_tdp",
+          "label": "CPU TDP (W)",
+          "type": "number",
+          "placeholder": "f.eks. 125"
+        },
+        {
+          "id": "gpu_tdp",
+          "label": "GPU TDP (W)",
+          "type": "number",
+          "placeholder": "f.eks. 250"
+        },
+        {
+          "id": "ram_sticks",
+          "label": "Antall RAM-moduler",
+          "type": "number",
+          "placeholder": "f.eks. 2"
+        },
+        {
+          "id": "storage_drives",
+          "label": "Antall lagringsenheter (SSD/HDD)",
+          "type": "number",
+          "placeholder": "f.eks. 2"
+        },
+        {
+          "id": "fans",
+          "label": "Antall vifter",
+          "type": "number",
+          "placeholder": "f.eks. 4"
+        },
+        {
+          "id": "usb_devices",
+          "label": "Antall USB-enheter",
+          "type": "number",
+          "placeholder": "f.eks. 3"
+        },
+        {
+          "id": "overclock",
+          "label": "Overklokking?",
+          "type": "select",
+          "options": [
+            "Nei",
+            "Lett",
+            "Moderat",
+            "Ekstrem"
+          ]
+        },
+        {
+          "id": "efficiency",
+          "label": "PSU effektivitetsklasse",
+          "type": "select",
+          "options": [
+            "80+ Standard",
+            "80+ Bronze",
+            "80+ Silver",
+            "80+ Gold",
+            "80+ Platinum",
+            "80+ Titanium"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "hva-er-min-ip-adresse-kalkulator",
+      "title": "Hva er min IP-adresse Kalkulator",
+      "category": "teknologi",
+      "description": "Finn din offentlige IPv4- og IPv6-adresse, ISP og geografisk plassering.",
+      "keywords": "IP-adresse, min IP, offentlig IP, IPv4, IPv6, ISP, geolokasjon, nettverksverktøy",
+      "formula": "ip_address_lookup",
+      "inputs": [
+        {
+          "id": "ip_type",
+          "label": "Velg IP-type",
+          "type": "select",
+          "options": [
+            "IPv4",
+            "IPv6",
+            "Begge"
+          ]
+        },
+        {
+          "id": "show_details",
+          "label": "Vis detaljer",
+          "type": "select",
+          "options": [
+            "Ja",
+            "Nei"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "batterilevetid-kalkulator",
+      "title": "Batterilevetid Kalkulator",
+      "category": "teknologi",
+      "description": "Beregn hvor lenge et batteri varer basert på kapasitet og strømforbruk.",
+      "keywords": "batterilevetid, batterikapasitet, strømforbruk, mAh, watt, kalkulator, norsk",
+      "formula": "batterilevetid_formel",
+      "inputs": [
+        {
+          "id": "batteri_kapasitet",
+          "label": "Batterikapasitet (mAh)",
+          "type": "number",
+          "placeholder": "f.eks. 3000"
+        },
+        {
+          "id": "spenning",
+          "label": "Spenning (V)",
+          "type": "number",
+          "placeholder": "f.eks. 3.7"
+        },
+        {
+          "id": "stromforbruk",
+          "label": "Strømforbruk (mA)",
+          "type": "number",
+          "placeholder": "f.eks. 500"
+        },
+        {
+          "id": "enhet",
+          "label": "Vis resultat i",
+          "type": "select",
+          "options": [
+            "Timer",
+            "Dager",
+            "Minutter"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "raid-kalkulator",
+      "title": "Raid Kalkulator",
+      "category": "spill",
+      "description": "Beregn skade, overlevelsesevne og ressursbehov for raid i MMO-spill.",
+      "keywords": "raid kalkulator, skadeberegning, overlevelsesevne, ressursbehov, MMO, spillkalkulator",
+      "formula": "raid_calculator",
+      "inputs": [
+        {
+          "id": "player_level",
+          "label": "Spillernivå",
+          "type": "number",
+          "placeholder": "f.eks. 60"
+        },
+        {
+          "id": "attack_power",
+          "label": "Angrepsstyrke",
+          "type": "number",
+          "placeholder": "f.eks. 500"
+        },
+        {
+          "id": "defense",
+          "label": "Forsvar",
+          "type": "number",
+          "placeholder": "f.eks. 300"
+        },
+        {
+          "id": "health",
+          "label": "Liv (HP)",
+          "type": "number",
+          "placeholder": "f.eks. 10000"
+        },
+        {
+          "id": "boss_attack",
+          "label": "Boss-angrep",
+          "type": "number",
+          "placeholder": "f.eks. 800"
+        },
+        {
+          "id": "raid_duration",
+          "label": "Raid-varighet (minutter)",
+          "type": "number",
+          "placeholder": "f.eks. 10"
+        },
+        {
+          "id": "team_size",
+          "label": "Antall i team",
+          "type": "number",
+          "placeholder": "f.eks. 10"
+        },
+        {
+          "id": "healing_per_second",
+          "label": "Helbredelse per sekund",
+          "type": "number",
+          "placeholder": "f.eks. 200"
+        }
+      ]
+    },
+    {
+      "slug": "pcb-spor-motstand-kalkulator",
+      "title": "PCB Spor Motstand Kalkulator",
+      "category": "teknologi",
+      "description": "Beregn elektrisk motstand i PCB-spor basert på lengde, bredde, tykkelse og temperatur.",
+      "keywords": "PCB, spor, motstand, kalkulator, elektrisk, kobber, temperatur, kretskort, impedans",
+      "formula": "pcb_trace_resistance",
+      "inputs": [
+        {
+          "id": "length",
+          "label": "Sporlengde (mm)",
+          "type": "number",
+          "placeholder": "f.eks. 100"
+        },
+        {
+          "id": "width",
+          "label": "Sporbredde (mm)",
+          "type": "number",
+          "placeholder": "f.eks. 0.25"
+        },
+        {
+          "id": "thickness",
+          "label": "Kobbertykkelse (oz)",
+          "type": "select",
+          "options": [
+            "0.5 oz (17.5 µm)",
+            "1 oz (35 µm)",
+            "2 oz (70 µm)",
+            "3 oz (105 µm)",
+            "4 oz (140 µm)"
+          ]
+        },
+        {
+          "id": "temperature",
+          "label": "Temperatur (°C)",
+          "type": "number",
+          "placeholder": "f.eks. 25"
+        }
+      ]
+    },
+    {
+      "slug": "3d-utskriftskostnad-kalkulator",
+      "title": "3D Utskriftskostnad Kalkulator",
+      "category": "teknologi",
+      "description": "Beregn nøyaktig kostnad for 3D-utskrift basert på filament, strøm og tid.",
+      "keywords": "3D-utskrift, kostnad, kalkulator, filament, strømforbruk, printkostnad, 3D-printer",
+      "formula": "beregn_3d_utskriftskostnad",
+      "inputs": [
+        {
+          "id": "filament_pris_per_kg",
+          "label": "Filamentpris per kg (NOK)",
+          "type": "number",
+          "placeholder": "f.eks. 250"
+        },
+        {
+          "id": "filament_vekt_gram",
+          "label": "Filamentvekt (gram)",
+          "type": "number",
+          "placeholder": "f.eks. 50"
+        },
+        {
+          "id": "strom_forbruk_watt",
+          "label": "Strømforbruk (Watt)",
+          "type": "number",
+          "placeholder": "f.eks. 200"
+        },
+        {
+          "id": "utskriftstid_timer",
+          "label": "Utskriftstid (timer)",
+          "type": "number",
+          "placeholder": "f.eks. 8"
+        },
+        {
+          "id": "strompris_per_kwh",
+          "label": "Strømpris per kWh (NOK)",
+          "type": "number",
+          "placeholder": "f.eks. 1.5"
+        },
+        {
+          "id": "filament_type",
+          "label": "Filamenttype",
+          "type": "select",
+          "options": [
+            "PLA",
+            "ABS",
+            "PETG",
+            "TPU",
+            "Nylon",
+            "Polycarbonat"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "internettfart-kalkulator",
+      "title": "Internettfart Kalkulator",
+      "category": "teknologi",
+      "description": "Beregn nedlastingstid, overføringshastighet og båndbreddebehov for filer og strømming.",
+      "keywords": "internettfart, nedlastingshastighet, båndbredde, overføringshastighet, kalkulator, nedlastingstid, strømming, nettverk",
+      "formula": "internettfart_kalkulator",
+      "inputs": [
+        {
+          "id": "hastighet",
+          "label": "Nedlastingshastighet (Mbps)",
+          "type": "number",
+          "placeholder": "f.eks. 50"
+        },
+        {
+          "id": "filstorrelse",
+          "label": "Filstørrelse (MB)",
+          "type": "number",
+          "placeholder": "f.eks. 500"
+        },
+        {
+          "id": "strommekvalitet",
+          "label": "Strømmekvalitet",
+          "type": "select",
+          "options": [
+            "Lav (480p)",
+            "Middels (720p)",
+            "Høy (1080p)",
+            "Ultra HD (4K)"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "aws-kalkulator",
+      "title": "AWS Kostnad Kalkulator",
+      "category": "teknologi",
+      "description": "Beregn månedlig AWS-kostnad basert på tjenester, timer og dataoverføring.",
+      "keywords": "aws, kostnad, kalkulator, sky, pris, månedlig, dataoverføring, EC2, S3",
+      "formula": "aws_cost_calculator",
+      "inputs": [
+        {
+          "id": "ec2_instances",
+          "label": "Antall EC2-instanser",
+          "type": "number",
+          "placeholder": "f.eks. 5"
+        },
+        {
+          "id": "hours_per_month",
+          "label": "Timer per måned per instans",
+          "type": "number",
+          "placeholder": "f.eks. 720"
+        },
+        {
+          "id": "instance_type",
+          "label": "EC2-instans type",
+          "type": "select",
+          "options": [
+            "t3.micro",
+            "t3.small",
+            "t3.medium",
+            "t3.large",
+            "m5.large",
+            "m5.xlarge",
+            "c5.large",
+            "c5.xlarge"
+          ]
+        },
+        {
+          "id": "data_transfer_gb",
+          "label": "Dataoverføring per måned (GB)",
+          "type": "number",
+          "placeholder": "f.eks. 100"
+        },
+        {
+          "id": "s3_storage_gb",
+          "label": "S3-lagring (GB)",
+          "type": "number",
+          "placeholder": "f.eks. 500"
+        }
+      ]
+    },
+    {
+      "slug": "pcb-impedans-kalkulator",
+      "title": "PCB Impedans Kalkulator",
+      "category": "teknologi",
+      "description": "Beregn karakteristisk impedans for mikrostrip og stripline PCB-spor. Inkluderer sammenligning med standardverdier.",
+      "keywords": "PCB impedans, mikrostrip impedans, stripline impedans, karakteristisk impedans, PCB design, signalintegritet, impedansberegning",
+      "formula": "pcb_impedans",
+      "inputs": [
+        {
+          "id": "spor_bredde",
+          "label": "Sporbredde (mm)",
+          "type": "number",
+          "placeholder": "f.eks. 0.25"
+        },
+        {
+          "id": "dielektrisk_tykkelse",
+          "label": "Dielektrisk tykkelse (mm)",
+          "type": "number",
+          "placeholder": "f.eks. 0.2"
+        },
+        {
+          "id": "kobber_tykkelse",
+          "label": "Kobbertykkelse (mm)",
+          "type": "number",
+          "placeholder": "f.eks. 0.035"
+        },
+        {
+          "id": "dielektrisk_konstant",
+          "label": "Dielektrisk konstant (Er)",
+          "type": "number",
+          "placeholder": "f.eks. 4.5"
+        },
+        {
+          "id": "type",
+          "label": "Linjetype",
+          "type": "select",
+          "options": [
+            "Mikrostrip",
+            "Stripline"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "bildeforhold-kalkulator",
+      "title": "Bildeforhold Kalkulator",
+      "category": "matematikk",
+      "description": "Beregn bredde, høyde eller diagonal ut fra bildeforhold og én kjent verdi.",
+      "keywords": "bildeforhold, aspect ratio, bredde, høyde, diagonal, skjermstørrelse, 16:9, 4:3, 21:9",
+      "formula": "bildeforhold_beregning",
+      "inputs": [
+        {
+          "id": "ratio_width",
+          "label": "Bildeforhold bredde (f.eks. 16)",
+          "type": "number",
+          "placeholder": "16"
+        },
+        {
+          "id": "ratio_height",
+          "label": "Bildeforhold høyde (f.eks. 9)",
+          "type": "number",
+          "placeholder": "9"
+        },
+        {
+          "id": "known_value",
+          "label": "Kjent verdi (bredde, høyde eller diagonal)",
+          "type": "number",
+          "placeholder": "100"
+        },
+        {
+          "id": "known_type",
+          "label": "Kjent type",
+          "type": "select",
+          "options": [
+            "Bredde",
+            "Høyde",
+            "Diagonal"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "overforingshastighetskalkulator",
+      "title": "Overføringshastighetskalkulator",
+      "category": "teknologi",
+      "description": "Beregn overføringstid for filer basert på hastighet og størrelse. Sammenlign med typiske bredbåndshastigheter.",
+      "keywords": "overføringshastighet, filoverføring, båndbredde, nedlastingstid, opplastingstid, hastighetskalkulator, dataoverføring",
+      "formula": "overforingshastighet_formel",
+      "inputs": [
+        {
+          "id": "filstorrelse",
+          "label": "Filstørrelse (MB)",
+          "type": "number",
+          "placeholder": "f.eks. 500"
+        },
+        {
+          "id": "hastighet",
+          "label": "Nedlastingshastighet (Mbps)",
+          "type": "number",
+          "placeholder": "f.eks. 50"
+        },
+        {
+          "id": "hastighet_enhet",
+          "label": "Hastighetsenhet",
+          "type": "select",
+          "options": [
+            "Mbps",
+            "Gbps",
+            "KB/s",
+            "MB/s"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "cidr-kalkulator",
+      "title": "CIDR Kalkulator",
+      "category": "teknologi",
+      "description": "Beregn nettverksadresse, broadcast, antall verter og mer fra en CIDR-notasjon.",
+      "keywords": "CIDR, nettverkskalkulator, subnett, IP-adresse, nettverksmaske, verter, broadcast, nettverksadresse, IPv4, subnettkalkulator",
+      "formula": "cidr_calculator",
+      "inputs": [
+        {
+          "id": "cidr",
+          "label": "CIDR-notasjon (f.eks. 192.168.1.0/24)",
+          "type": "text",
+          "placeholder": "192.168.1.0/24"
+        },
+        {
+          "id": "subnet_count",
+          "label": "Antall subnett (valgfritt)",
+          "type": "number",
+          "placeholder": "f.eks. 4"
+        }
+      ]
+    },
+    {
+      "slug": "algebra-kalkulator",
+      "title": "Algebra Kalkulator",
+      "category": "matematikk",
+      "description": "Løs andregradslikninger, faktoriser og finn nullpunkter med detaljert forklaring.",
+      "keywords": "algebra, andregradslikning, faktorisering, nullpunkter, abc-formel, matematikk, norsk",
+      "formula": "algebra_solver",
+      "inputs": [
+        {
+          "id": "a",
+          "label": "a (koeffisient for x²)",
+          "type": "number",
+          "placeholder": "f.eks. 1"
+        },
+        {
+          "id": "b",
+          "label": "b (koeffisient for x)",
+          "type": "number",
+          "placeholder": "f.eks. -3"
+        },
+        {
+          "id": "c",
+          "label": "c (konstantledd)",
+          "type": "number",
+          "placeholder": "f.eks. 2"
+        }
+      ]
+    },
+    {
+      "slug": "prosentfeil-kalkulator",
+      "title": "Prosentfeil Kalkulator",
+      "category": "matematikk",
+      "description": "Beregn prosentvis feil mellom en teoretisk og en eksperimentell verdi.",
+      "keywords": "prosentfeil, feilprosent, relativ feil, målefeil, nøyaktighet, kalkulator",
+      "formula": "prosentfeil_beregning",
+      "inputs": [
+        {
+          "id": "teoretisk_verdi",
+          "label": "Teoretisk verdi (forventet)",
+          "type": "number",
+          "placeholder": "f.eks. 100"
+        },
+        {
+          "id": "eksperimentell_verdi",
+          "label": "Eksperimentell verdi (målt)",
+          "type": "number",
+          "placeholder": "f.eks. 95"
+        }
+      ]
+    },
+    {
+      "slug": "broek-kalkulator",
+      "title": "Brøk Kalkulator",
+      "category": "matematikk",
+      "description": "Avansert brøkkalkulator med addisjon, subtraksjon, multiplikasjon og divisjon. Forenkler og viser blandet tall.",
+      "keywords": "brøk, kalkulator, brøkregning, addisjon, subtraksjon, multiplikasjon, divisjon, forenkling, blandet tall, matematikk",
+      "formula": "broek_kalkulator",
+      "inputs": [
+        {
+          "id": "teller1",
+          "label": "Teller 1",
+          "type": "number",
+          "placeholder": "f.eks. 3"
+        },
+        {
+          "id": "nevner1",
+          "label": "Nevner 1",
+          "type": "number",
+          "placeholder": "f.eks. 4"
+        },
+        {
+          "id": "operasjon",
+          "label": "Operasjon",
+          "type": "select",
+          "options": [
+            "+",
+            "-",
+            "*",
+            "/"
+          ]
+        },
+        {
+          "id": "teller2",
+          "label": "Teller 2",
+          "type": "number",
+          "placeholder": "f.eks. 2"
+        },
+        {
+          "id": "nevner2",
+          "label": "Nevner 2",
+          "type": "number",
+          "placeholder": "f.eks. 5"
+        }
+      ]
+    },
+    {
+      "slug": "hex-kalkulator",
+      "title": "Hex Kalkulator",
+      "category": "matematikk",
+      "description": "Konverter og regn med heksadesimale tall. Støtter addisjon, subtraksjon, multiplikasjon og divisjon.",
+      "keywords": "hex kalkulator, heksadesimal, base 16, konvertering, addisjon, subtraksjon, multiplikasjon, divisjon, programmering, data",
+      "formula": "hex_calculator",
+      "inputs": [
+        {
+          "id": "hex1",
+          "label": "Første heksadesimale tall",
+          "type": "text",
+          "placeholder": "f.eks. 1A3F"
+        },
+        {
+          "id": "hex2",
+          "label": "Andre heksadesimale tall",
+          "type": "text",
+          "placeholder": "f.eks. B4"
+        },
+        {
+          "id": "operation",
+          "label": "Operasjon",
+          "type": "select",
+          "options": [
+            "Addisjon (+)",
+            "Subtraksjon (-)",
+            "Multiplikasjon (×)",
+            "Divisjon (÷)"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "stor-talls-kalkulator",
+      "title": "Stor Talls Kalkulator",
+      "category": "matematikk",
+      "description": "Beregn og sammenlign ekstremt store tall, med vitenskapelig notasjon og ord.",
+      "keywords": "stor tall, kalkulator, eksponent, vitenskapelig notasjon, milliard, billion, kvadrillion",
+      "formula": "stor_tall_beregning",
+      "inputs": [
+        {
+          "id": "tall1",
+          "label": "Tall 1 (heltall)",
+          "type": "number",
+          "placeholder": "f.eks. 12345678901234567890"
+        },
+        {
+          "id": "tall2",
+          "label": "Tall 2 (heltall)",
+          "type": "number",
+          "placeholder": "f.eks. 98765432109876543210"
+        },
+        {
+          "id": "operasjon",
+          "label": "Operasjon",
+          "type": "select",
+          "options": [
+            "Addisjon",
+            "Subtraksjon",
+            "Multiplikasjon",
+            "Divisjon",
+            "Potens (tall1^tall2)",
+            "Sammenlign"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "vitenskapelig-kalkulator",
+      "title": "Vitenskapelig Kalkulator",
+      "category": "vitenskap",
+      "description": "Avansert vitenskapelig kalkulator med trigonometri, logaritmer, eksponentialfunksjoner og mer.",
+      "keywords": "vitenskapelig kalkulator, trigonometri, logaritmer, eksponentialfunksjoner, sinus, cosinus, tangens, naturlig logaritme, base 10 logaritme, potens, rot, pi, e, avansert matematikk",
+      "formula": "vitenskapelig_kalkulator",
+      "inputs": [
+        {
+          "id": "verdi",
+          "label": "Verdi",
+          "type": "number",
+          "placeholder": "f.eks. 45"
+        },
+        {
+          "id": "operasjon",
+          "label": "Operasjon",
+          "type": "select",
+          "options": [
+            "sin (grader)",
+            "cos (grader)",
+            "tan (grader)",
+            "arcsin",
+            "arccos",
+            "arctan",
+            "ln (naturlig log)",
+            "log10",
+            "eksponential (e^x)",
+            "kvadratrot",
+            "opphøyd i 2",
+            "opphøyd i 3",
+            "fakultet",
+            "pi",
+            "e (Eulers tall)"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "matrixkalkulator",
+      "title": "Matrisekalkulator",
+      "category": "matematikk",
+      "description": "Beregn determinanten, inversen, rangen og egenverdiene til en matrise.",
+      "keywords": "matrise, determinant, invers, rang, egenverdi, matrisekalkulator, lineær algebra",
+      "formula": "matrix_calculator",
+      "inputs": [
+        {
+          "id": "matrix_input",
+          "label": "Matrise (radvis, semikolon-separert)",
+          "type": "text",
+          "placeholder": "f.eks. 1,2;3,4"
+        }
+      ]
+    },
+    {
+      "slug": "binaer-kalkulator",
+      "title": "Binær Kalkulator",
+      "category": "matematikk",
+      "description": "Konverter og regn med binære tall. Støtter addisjon, subtraksjon, multiplikasjon og divisjon.",
+      "keywords": "binær kalkulator, binære tall, binær omregning, binær addisjon, binær subtraksjon, binær multiplikasjon, binær divisjon, binær konvertering",
+      "formula": "binaer_kalkulator",
+      "inputs": [
+        {
+          "id": "tall1",
+          "label": "Binært tall 1",
+          "type": "text",
+          "placeholder": "f.eks. 1010"
+        },
+        {
+          "id": "tall2",
+          "label": "Binært tall 2",
+          "type": "text",
+          "placeholder": "f.eks. 1101"
+        },
+        {
+          "id": "operasjon",
+          "label": "Operasjon",
+          "type": "select",
+          "options": [
+            "Addisjon (+)",
+            "Subtraksjon (-)",
+            "Multiplikasjon (×)",
+            "Divisjon (÷)"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "forholdsberegner",
+      "title": "Forholdsberegner Kalkulator",
+      "category": "matematikk",
+      "description": "Beregn forholdet mellom to tall, finn manglende verdi eller skaler opp/ned proporsjonalt.",
+      "keywords": "forhold, proporsjon, ratio, skaleringsfaktor, forholdsberegning, matematikk, andel",
+      "formula": "forholdsberegner_formula",
+      "inputs": [
+        {
+          "id": "a",
+          "label": "Første tall (A)",
+          "type": "number",
+          "placeholder": "f.eks. 4"
+        },
+        {
+          "id": "b",
+          "label": "Andre tall (B)",
+          "type": "number",
+          "placeholder": "f.eks. 6"
+        },
+        {
+          "id": "c",
+          "label": "Tredje tall (C) – valgfri",
+          "type": "number",
+          "placeholder": "f.eks. 8 (for å finne D)"
+        },
+        {
+          "id": "skaleringsfaktor",
+          "label": "Skaleringsfaktor (valgfri)",
+          "type": "number",
+          "placeholder": "f.eks. 2.5"
+        },
+        {
+          "id": "modus",
+          "label": "Beregningsmodus",
+          "type": "select",
+          "options": [
+            "Forhold A:B",
+            "Finn manglende D (A:B = C:D)",
+            "Skaler opp/ned"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "loggkalkulator",
+      "title": "Logaritme Kalkulator",
+      "category": "matematikk",
+      "description": "Beregn logaritmer med ulike baser, naturlig logaritme og tiende logaritme. Få forklaring og sammenligning.",
+      "keywords": "logaritme kalkulator, ln, log10, log base, naturlig logaritme, tiende logaritme, logaritme regning, matematikk",
+      "formula": "logaritme_beregner",
+      "inputs": [
+        {
+          "id": "tall",
+          "label": "Tall",
+          "type": "number",
+          "placeholder": "f.eks. 100"
+        },
+        {
+          "id": "base",
+          "label": "Base",
+          "type": "select",
+          "options": [
+            "10 (tiende logaritme)",
+            "e (naturlig logaritme)",
+            "2",
+            "3",
+            "5",
+            "7",
+            "8",
+            "9",
+            "11",
+            "12",
+            "16",
+            "20",
+            "50",
+            "100"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "avrundingskalkulator",
+      "title": "Avrundingskalkulator",
+      "category": "matematikk",
+      "description": "Avrund tall til ønsket antall desimaler eller signifikante sifre med nøyaktige resultater.",
+      "keywords": "avrunding, rund av, desimaler, signifikante sifre, norsk kalkulator, matematikk",
+      "formula": "avrunding_formel",
+      "inputs": [
+        {
+          "id": "tall",
+          "label": "Tall som skal avrundes",
+          "type": "number",
+          "placeholder": "f.eks. 3.14159"
+        },
+        {
+          "id": "desimaler",
+          "label": "Antall desimaler",
+          "type": "number",
+          "placeholder": "f.eks. 2"
+        },
+        {
+          "id": "signifikante_sifre",
+          "label": "Antall signifikante sifre (valgfritt)",
+          "type": "number",
+          "placeholder": "f.eks. 3"
+        },
+        {
+          "id": "avrundingsmetode",
+          "label": "Avrundingsmetode",
+          "type": "select",
+          "options": [
+            "Standard (avrund opp/ned)",
+            "Alltid opp",
+            "Alltid ned",
+            "Bankers avrunding"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "rotkalkulator",
+      "title": "Rotkalkulator",
+      "category": "matematikk",
+      "description": "Beregn kvadratrot, kubikkrot og n-te rot av et tall med detaljert analyse.",
+      "keywords": "kvadratrot, kubikkrot, n-te rot, rotkalkulator, matematikk, potens, eksponent, tallanalyse",
+      "formula": "rotkalkulator_formel",
+      "inputs": [
+        {
+          "id": "tall",
+          "label": "Tall (radikand)",
+          "type": "number",
+          "placeholder": "f.eks. 27"
+        },
+        {
+          "id": "rotgrad",
+          "label": "Rotgrad (n)",
+          "type": "number",
+          "placeholder": "f.eks. 2 for kvadratrot"
+        },
+        {
+          "id": "desimaler",
+          "label": "Antall desimaler",
+          "type": "number",
+          "placeholder": "f.eks. 4"
+        }
+      ]
+    },
+    {
+      "slug": "prosentkalkulator",
+      "title": "Prosentkalkulator",
+      "category": "matematikk",
+      "description": "Beregn prosent av tall, prosentvis endring, og prosentpoeng. Inkluderer tolkning og advarsler.",
+      "keywords": "prosent, prosentkalkulator, prosentvis endring, prosentpoeng, andel, økning, reduksjon, matematikk",
+      "formula": "prosentkalkulator",
+      "inputs": [
+        {
+          "id": "type",
+          "label": "Beregningstype",
+          "type": "select",
+          "options": [
+            "Prosent av tall",
+            "Prosentvis endring",
+            "Prosentpoeng"
+          ]
+        },
+        {
+          "id": "verdi1",
+          "label": "Verdi 1",
+          "type": "number",
+          "placeholder": "f.eks. 200"
+        },
+        {
+          "id": "verdi2",
+          "label": "Verdi 2",
+          "type": "number",
+          "placeholder": "f.eks. 50"
+        },
+        {
+          "id": "prosent",
+          "label": "Prosent (%)",
+          "type": "number",
+          "placeholder": "f.eks. 25"
+        }
+      ]
+    },
+    {
+      "slug": "andregradsligning-kalkulator",
+      "title": "Andregradsligning Kalkulator",
+      "category": "matematikk",
+      "description": "Løs andregradsligninger (ax² + bx + c = 0) med reelle og komplekse røtter.",
+      "keywords": "andregradsligning, kvadratisk ligning, abc-formel, diskriminant, røtter, matematikk, kalkulator",
+      "formula": "andregradsligning_formel",
+      "inputs": [
+        {
+          "id": "a",
+          "label": "a (koeffisient for x²)",
+          "type": "number",
+          "placeholder": "f.eks. 1"
+        },
+        {
+          "id": "b",
+          "label": "b (koeffisient for x)",
+          "type": "number",
+          "placeholder": "f.eks. -3"
+        },
+        {
+          "id": "c",
+          "label": "c (konstantledd)",
+          "type": "number",
+          "placeholder": "f.eks. 2"
+        }
+      ]
+    },
+    {
+      "slug": "eksponent-kalkulator",
+      "title": "Eksponent Kalkulator",
+      "category": "matematikk",
+      "description": "Beregn potenser og eksponenter med avansert analyse og sammenligninger.",
+      "keywords": "eksponent, potens, kalkulator, matematikk, eksponentiell vekst, potensregning, eksponentregning",
+      "formula": "eksponent_kalkulator",
+      "inputs": [
+        {
+          "id": "base",
+          "label": "Grunntall (base)",
+          "type": "number",
+          "placeholder": "f.eks. 2"
+        },
+        {
+          "id": "exponent",
+          "label": "Eksponent",
+          "type": "number",
+          "placeholder": "f.eks. 3"
+        },
+        {
+          "id": "modulus",
+          "label": "Modulus (valgfritt)",
+          "type": "number",
+          "placeholder": "f.eks. 10"
+        }
+      ]
+    },
+    {
+      "slug": "minste-felles-multiplum-kalkulator",
+      "title": "Minste Felles Multiplum Kalkulator",
+      "category": "matematikk",
+      "description": "Beregn minste felles multiplum (MFM) for to eller flere tall. Inkluderer faktorisering og steg-for-steg forklaring.",
+      "keywords": "minste felles multiplum, MFM, LCM, felles multiplum, minste felles multiplum kalkulator, matematikk, tallteori, faktorisering",
+      "formula": "minste_felles_multiplum",
+      "inputs": [
+        {
+          "id": "tall1",
+          "label": "Tall 1",
+          "type": "number",
+          "placeholder": "f.eks. 12"
+        },
+        {
+          "id": "tall2",
+          "label": "Tall 2",
+          "type": "number",
+          "placeholder": "f.eks. 18"
+        },
+        {
+          "id": "tall3",
+          "label": "Tall 3 (valgfritt)",
+          "type": "number",
+          "placeholder": "f.eks. 24"
+        },
+        {
+          "id": "tall4",
+          "label": "Tall 4 (valgfritt)",
+          "type": "number",
+          "placeholder": "f.eks. 30"
+        }
+      ]
+    },
+    {
+      "slug": "faktorkalkulator",
+      "title": "Faktorkalkulator",
+      "category": "matematikk",
+      "description": "Beregn alle faktorer av et tall, inkludert primtallsfaktorisering og antall faktorer.",
+      "keywords": "faktorer, primtallsfaktorisering, faktorisering, matematikk, tallteori, delelighet",
+      "formula": "faktor_kalkulator",
+      "inputs": [
+        {
+          "id": "tall",
+          "label": "Tall",
+          "type": "number",
+          "placeholder": "f.eks. 60"
+        }
+      ]
+    },
+    {
+      "slug": "tilfeldig-tallgenerator",
+      "title": "Tilfeldig Tallgenerator",
+      "category": "underholdning",
+      "description": "Generer tilfeldige tall med avansert statistikk og sannsynlighetsanalyse.",
+      "keywords": "tilfeldig tall, generator, random, sannsynlighet, statistikk, lotto, terning, kast, simulering",
+      "formula": "tilfeldig_tallgenerator",
+      "inputs": [
+        {
+          "id": "min",
+          "label": "Minimumsverdi",
+          "type": "number",
+          "placeholder": "f.eks. 1"
+        },
+        {
+          "id": "max",
+          "label": "Maksimumsverdi",
+          "type": "number",
+          "placeholder": "f.eks. 100"
+        },
+        {
+          "id": "antall",
+          "label": "Antall tall",
+          "type": "number",
+          "placeholder": "f.eks. 5"
+        },
+        {
+          "id": "unik",
+          "label": "Unike tall?",
+          "type": "select",
+          "options": [
+            "Ja",
+            "Nei"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "vitenskapelig-notasjonskalkulator",
+      "title": "Vitenskapelig Notasjonskalkulator",
+      "category": "matematikk",
+      "description": "Konverter tall til og fra vitenskapelig notasjon med presisjon og trinn-for-trinn forklaring.",
+      "keywords": "vitenskapelig notasjon, standardform, konvertering, eksponent, mantisse, desimaltall, kalkulator",
+      "formula": "vitenskapelig_notasjon_kalkulator",
+      "inputs": [
+        {
+          "id": "tall_input",
+          "label": "Tall (desimaltall eller vitenskapelig notasjon)",
+          "type": "number",
+          "placeholder": "f.eks. 12345.67 eller 1.234e4"
+        },
+        {
+          "id": "desimaler",
+          "label": "Antall desimaler i mantisse",
+          "type": "number",
+          "placeholder": "f.eks. 4"
+        }
+      ]
+    },
+    {
+      "slug": "storste-felles-faktor-kalkulator",
+      "title": "Største Felles Faktor Kalkulator",
+      "category": "matematikk",
+      "description": "Beregn største felles faktor (GCF) for to eller flere tall med trinnvis forklaring.",
+      "keywords": "største felles faktor, GCF, felles divisor, største felles divisor, matematikk, faktorisering, tallteori",
+      "formula": "gcf_calculator",
+      "inputs": [
+        {
+          "id": "numbers",
+          "label": "Tall (kommaseparert)",
+          "type": "text",
+          "placeholder": "f.eks. 12, 18, 24"
+        },
+        {
+          "id": "method",
+          "label": "Metode",
+          "type": "select",
+          "options": [
+            "Faktorisering",
+            "Euklids algoritme",
+            "Primtallsfaktorisering"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "fullfore-kvadratsetningen-kalkulator",
+      "title": "Fullføre Kvadratsetningen Kalkulator",
+      "category": "matematikk",
+      "description": "Fullfør kvadratet for andregradsuttrykk. Finn a, b, c og løsning.",
+      "keywords": "fullføre kvadratet, kvadratsetning, andregradslikning, kvadratkomplettering, algebra, matematikk kalkulator",
+      "formula": "fullfor_kvadratet",
+      "inputs": [
+        {
+          "id": "a",
+          "label": "Koeffisient a (foran x²)",
+          "type": "number",
+          "placeholder": "f.eks. 1"
+        },
+        {
+          "id": "b",
+          "label": "Koeffisient b (foran x)",
+          "type": "number",
+          "placeholder": "f.eks. 6"
+        },
+        {
+          "id": "c",
+          "label": "Konstantledd c",
+          "type": "number",
+          "placeholder": "f.eks. 5"
+        }
+      ]
+    },
+    {
+      "slug": "felles-variasjon-kalkulator",
+      "title": "Felles Variasjon Kalkulator",
+      "category": "statistikk",
+      "description": "Beregn kovarians, korrelasjon og felles variasjon mellom to datasett.",
+      "keywords": "felles variasjon, kovarians, korrelasjon, statistikk, datasett, samvariasjon, lineær sammenheng",
+      "formula": "felles_variasjon_beregning",
+      "inputs": [
+        {
+          "id": "dataset_x",
+          "label": "Datasett X (kommaseparert)",
+          "type": "text",
+          "placeholder": "f.eks. 1,2,3,4,5"
+        },
+        {
+          "id": "dataset_y",
+          "label": "Datasett Y (kommaseparert)",
+          "type": "text",
+          "placeholder": "f.eks. 2,4,5,4,5"
+        }
+      ]
+    },
+    {
+      "slug": "linjekalkulator",
+      "title": "Linjekalkulator",
+      "category": "bygg",
+      "description": "Beregn lengde, stigning og materialbehov for linjer og skråninger.",
+      "keywords": "linje, lengde, stigning, materialbehov, bygg, kalkulator, norsk",
+      "formula": "linje_kalkulator",
+      "inputs": [
+        {
+          "id": "start_x",
+          "label": "Start X (meter)",
+          "type": "number",
+          "placeholder": "0"
+        },
+        {
+          "id": "start_y",
+          "label": "Start Y (meter)",
+          "type": "number",
+          "placeholder": "0"
+        },
+        {
+          "id": "end_x",
+          "label": "Slutt X (meter)",
+          "type": "number",
+          "placeholder": "10"
+        },
+        {
+          "id": "end_y",
+          "label": "Slutt Y (meter)",
+          "type": "number",
+          "placeholder": "5"
+        },
+        {
+          "id": "material_type",
+          "label": "Materialtype",
+          "type": "select",
+          "options": [
+            "Tre",
+            "Stål",
+            "Aluminium",
+            "Betonn"
+          ]
+        },
+        {
+          "id": "pris_per_meter",
+          "label": "Pris per meter (NOK)",
+          "type": "number",
+          "placeholder": "150"
+        }
+      ]
+    },
+    {
+      "slug": "invers-variasjon-kalkulator",
+      "title": "Invers Variasjon Kalkulator",
+      "category": "matematikk",
+      "description": "Beregn konstanten k og ukjent verdi ved invers variasjon (y = k/x).",
+      "keywords": "invers variasjon, proporsjonalitet, kalkulator, matematikk, y=k/x, omvendt proporsjonal",
+      "formula": "invers_variasjon",
+      "inputs": [
+        {
+          "id": "x1",
+          "label": "Første x-verdi (x₁)",
+          "type": "number",
+          "placeholder": "f.eks. 2"
+        },
+        {
+          "id": "y1",
+          "label": "Første y-verdi (y₁)",
+          "type": "number",
+          "placeholder": "f.eks. 6"
+        },
+        {
+          "id": "x2",
+          "label": "Andre x-verdi (x₂)",
+          "type": "number",
+          "placeholder": "f.eks. 4"
+        }
+      ]
+    },
+    {
+      "slug": "primtallsfaktorisering-kalkulator",
+      "title": "Primtallsfaktorisering Kalkulator",
+      "category": "matematikk",
+      "description": "Faktoriser et tall i primtallsfaktorer med detaljert forklaring og kontroll.",
+      "keywords": "primtallsfaktorisering, faktorisering, primtall, faktor, delelighet, matematikk, kalkulator",
+      "formula": "primtallsfaktorisering",
+      "inputs": [
+        {
+          "id": "tall",
+          "label": "Tall som skal faktoriseres",
+          "type": "number",
+          "placeholder": "f.eks. 84"
+        }
+      ]
+    },
+    {
+      "slug": "vinkelrett-linje-kalkulator",
+      "title": "Vinkelrett Linje Kalkulator",
+      "category": "geometri",
+      "description": "Finn ligningen for en linje vinkelrett på en gitt linje gjennom et punkt.",
+      "keywords": "vinkelrett linje, normal linje, geometri, linje kalkulator, stigningstall, punkt, ligning",
+      "formula": "vinkelrett_linje_formel",
+      "inputs": [
+        {
+          "id": "stigningstall_a",
+          "label": "Stigningstall for gitt linje (a)",
+          "type": "number",
+          "placeholder": "f.eks. 2"
+        },
+        {
+          "id": "punkt_x",
+          "label": "Punktets x-koordinat",
+          "type": "number",
+          "placeholder": "f.eks. 3"
+        },
+        {
+          "id": "punkt_y",
+          "label": "Punktets y-koordinat",
+          "type": "number",
+          "placeholder": "f.eks. 5"
+        }
+      ]
+    },
+    {
+      "slug": "parallell-linjekalkulator",
+      "title": "Parallell Linjekalkulator",
+      "category": "matematikk",
+      "description": "Beregn om to linjer er parallelle, finn parallell linje gjennom punkt, og få stigningstall.",
+      "keywords": "parallell linje, stigningstall, linje gjennom punkt, geometri, matematikk, linjekalkulator",
+      "formula": "parallell_linje_kalkulator",
+      "inputs": [
+        {
+          "id": "linje1_stigning",
+          "label": "Stigningstall linje 1 (a1)",
+          "type": "number",
+          "placeholder": "f.eks. 2"
+        },
+        {
+          "id": "linje1_konstant",
+          "label": "Konstantledd linje 1 (b1)",
+          "type": "number",
+          "placeholder": "f.eks. 3"
+        },
+        {
+          "id": "linje2_stigning",
+          "label": "Stigningstall linje 2 (a2)",
+          "type": "number",
+          "placeholder": "f.eks. 2"
+        },
+        {
+          "id": "linje2_konstant",
+          "label": "Konstantledd linje 2 (b2)",
+          "type": "number",
+          "placeholder": "f.eks. -1"
+        },
+        {
+          "id": "punkt_x",
+          "label": "Punkt x (for parallell linje)",
+          "type": "number",
+          "placeholder": "f.eks. 4"
+        },
+        {
+          "id": "punkt_y",
+          "label": "Punkt y (for parallell linje)",
+          "type": "number",
+          "placeholder": "f.eks. 5"
+        }
+      ]
+    },
+    {
+      "slug": "faktorisering-av-polynomer-kalkulator",
+      "title": "Faktorisering av Polynomer Kalkulator",
+      "category": "matematikk",
+      "description": "Faktoriser polynomer av grad 2 og 3 med trinnvis forklaring og kontroll.",
+      "keywords": "faktorisering, polynom, andregradsligning, tredjegradsligning, nullpunkter, algebra, matematikk, norsk",
+      "formula": "faktorisering_polynom",
+      "inputs": [
+        {
+          "id": "koeffisient_a",
+          "label": "Koeffisient a (foran x² eller x³)",
+          "type": "number",
+          "placeholder": "f.eks. 1"
+        },
+        {
+          "id": "koeffisient_b",
+          "label": "Koeffisient b (foran x)",
+          "type": "number",
+          "placeholder": "f.eks. -3"
+        },
+        {
+          "id": "koeffisient_c",
+          "label": "Koeffisient c (konstantledd)",
+          "type": "number",
+          "placeholder": "f.eks. 2"
+        },
+        {
+          "id": "polynom_grad",
+          "label": "Polynomets grad",
+          "type": "select",
+          "options": [
+            "2 (andregrad)",
+            "3 (tredjegrad)"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "stigningstall-intercept-form-kalkulator",
+      "title": "Stigningstall og Intercept Kalkulator",
+      "category": "matematikk",
+      "description": "Beregn stigningstall og skjæringspunkt for en linje basert på to punkter.",
+      "keywords": "stigningstall, intercept, lineær funksjon, kalkulator, matematikk, linje, punkt, y-akse, x-akse",
+      "formula": "stigningstall_intercept_form",
+      "inputs": [
+        {
+          "id": "x1",
+          "label": "X1 (første punkt)",
+          "type": "number",
+          "placeholder": "f.eks. 2"
+        },
+        {
+          "id": "y1",
+          "label": "Y1 (første punkt)",
+          "type": "number",
+          "placeholder": "f.eks. 3"
+        },
+        {
+          "id": "x2",
+          "label": "X2 (andre punkt)",
+          "type": "number",
+          "placeholder": "f.eks. 5"
+        },
+        {
+          "id": "y2",
+          "label": "Y2 (andre punkt)",
+          "type": "number",
+          "placeholder": "f.eks. 7"
+        }
+      ]
+    },
+    {
+      "slug": "brok-til-prosent-kalkulator",
+      "title": "Brøk til Prosent Kalkulator",
+      "category": "matematikk",
+      "description": "Konverter brøk til prosent med forklaring og sammenligning.",
+      "keywords": "brøk til prosent, prosentkalkulator, brøk omregning, prosentregning, matematikk",
+      "formula": "brok_til_prosent",
+      "inputs": [
+        {
+          "id": "teller",
+          "label": "Teller (øverste tall)",
+          "type": "number",
+          "placeholder": "f.eks. 3"
+        },
+        {
+          "id": "nevner",
+          "label": "Nevner (nederste tall)",
+          "type": "number",
+          "placeholder": "f.eks. 4"
+        }
+      ]
+    },
+    {
+      "slug": "polynomdivisjon-kalkulator",
+      "title": "Polynomdivisjon Kalkulator",
+      "category": "matematikk",
+      "description": "Del polynomer med trinnvis forklaring og rest. Støtter heltalls- og brøkkoeffisienter.",
+      "keywords": "polynomdivisjon, polynom, divisjon, algebra, kalkulator, matematikk, faktorisering, rest, kvotient",
+      "formula": "polynom_divisjon",
+      "inputs": [
+        {
+          "id": "dividend_coeffs",
+          "label": "Dividend (koeffisienter, høyeste grad først)",
+          "type": "text",
+          "placeholder": "f.eks. 2, -3, 0, 5"
+        },
+        {
+          "id": "divisor_coeffs",
+          "label": "Divisor (koeffisienter, høyeste grad først)",
+          "type": "text",
+          "placeholder": "f.eks. 1, -2"
+        }
+      ]
+    },
+    {
+      "slug": "gpa-kalkulator",
+      "title": "GPA Kalkulator",
+      "category": "matematikk",
+      "description": "Beregn din GPA (Grade Point Average) basert på karakterer og studiepoeng. Få vurdering og sammenligning.",
+      "keywords": "GPA, grade point average, karakterpoeng, studiepoeng, karakterkalkulator, snitt, utdanning, Norge",
+      "formula": "gpa_calculator",
+      "inputs": [
+        {
+          "id": "grades_credits",
+          "label": "Karakterer og studiepoeng (f.eks. A:5, B:10, C:15)",
+          "type": "text",
+          "placeholder": "A:5, B:10, C:15"
+        },
+        {
+          "id": "grade_scale",
+          "label": "Karakter skala",
+          "type": "select",
+          "options": [
+            "4.0 skala (A=4.0, B=3.0, C=2.0, D=1.0, F=0.0)",
+            "5.0 skala (A=5.0, B=4.0, C=3.0, D=2.0, E=1.0, F=0.0)",
+            "Norsk (A=5, B=4, C=3, D=2, E=1, F=0)"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "uekte-brok-til-blandet-tall-kalkulator",
+      "title": "Uekte Brøk til Blandet Tall Kalkulator",
+      "category": "matematikk",
+      "description": "Konverter uekte brøk til blandet tall med steg-for-steg forklaring.",
+      "keywords": "uekte brøk, blandet tall, brøk omregning, matematikk, konvertering, brøk kalkulator",
+      "formula": "uekte_brok_til_blandet_tall",
+      "inputs": [
+        {
+          "id": "teller",
+          "label": "Teller (øverste tall)",
+          "type": "number",
+          "placeholder": "f.eks. 7"
+        },
+        {
+          "id": "nevner",
+          "label": "Nevner (nederste tall)",
+          "type": "number",
+          "placeholder": "f.eks. 3"
+        }
+      ]
+    },
+    {
+      "slug": "restteoremet-kalkulator",
+      "title": "Restteoremet Kalkulator",
+      "category": "matematikk",
+      "description": "Beregn resten av et polynom dividert med (x - a) ved hjelp av restteoremet.",
+      "keywords": "restteoremet, polynom, divisjon, rest, algebra, matematikk, kalkulator",
+      "formula": "restteoremet_beregning",
+      "inputs": [
+        {
+          "id": "koeffisienter",
+          "label": "Polynomkoeffisienter (kommaseparert, høyeste grad først)",
+          "type": "text",
+          "placeholder": "f.eks. 3, -5, 2, -7"
+        },
+        {
+          "id": "a_verdi",
+          "label": "Verdi av a (x - a)",
+          "type": "number",
+          "placeholder": "f.eks. 2"
+        }
+      ]
+    },
+    {
+      "slug": "prosent-til-desimal-kalkulator",
+      "title": "Prosent til Desimal Kalkulator",
+      "category": "matematikk",
+      "description": "Konverter prosent til desimaltall raskt og enkelt. Inkluderer forklaring og eksempler.",
+      "keywords": "prosent til desimal, prosent kalkulator, konverter prosent, desimaltall, prosentregning",
+      "formula": "prosent_til_desimal",
+      "inputs": [
+        {
+          "id": "prosent",
+          "label": "Prosent (%)",
+          "type": "number",
+          "placeholder": "f.eks. 25.5"
+        }
+      ]
+    },
+    {
+      "slug": "brok-til-desimal-kalkulator",
+      "title": "Brøk til Desimal Kalkulator",
+      "category": "matematikk",
+      "description": "Konverter brøk til desimaltall med presisjon og forklaring.",
+      "keywords": "brøk til desimal, konverter brøk, desimaltall, brøkregning, matematikk, kalkulator",
+      "formula": "brok_til_desimal",
+      "inputs": [
+        {
+          "id": "teller",
+          "label": "Teller (øverste tall)",
+          "type": "number",
+          "placeholder": "f.eks. 3"
+        },
+        {
+          "id": "nevner",
+          "label": "Nevner (nederste tall)",
+          "type": "number",
+          "placeholder": "f.eks. 4"
+        },
+        {
+          "id": "presisjon",
+          "label": "Desimaler",
+          "type": "select",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "karakterkalkulator",
+      "title": "Karakterkalkulator",
+      "category": "matematikk",
+      "description": "Beregn gjennomsnittskarakter, poengsum og vurdering basert på karakterer og studiepoeng.",
+      "keywords": "karakterkalkulator, gjennomsnittskarakter, poengsum, karakterberegning, vitnemål, karakterutregning, norsk skole",
+      "formula": "karakterkalkulator_formel",
+      "inputs": [
+        {
+          "id": "karakterer_og_poeng",
+          "label": "Karakterer og studiepoeng (f.eks. A:10, B:15, C:20)",
+          "type": "text",
+          "placeholder": "A:10, B:15, C:20"
+        },
+        {
+          "id": "skala",
+          "label": "Karakterskala",
+          "type": "select",
+          "options": [
+            "A-F (norsk)",
+            "1-6 (dansk)",
+            "1-10 (svensk)",
+            "0-100 (prosent)"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "eliminasjonsmetode-kalkulator",
+      "title": "Eliminasjonsmetode Kalkulator",
+      "category": "matematikk",
+      "description": "Løs lineære ligningssystemer med eliminasjonsmetoden. Få steg-for-steg løsning.",
+      "keywords": "eliminasjonsmetode, lineære ligninger, ligningssystem, algebra, løsning, kalkulator, matematikk",
+      "formula": "eliminasjonsmetode_formel",
+      "inputs": [
+        {
+          "id": "ligning1_a",
+          "label": "Ligning 1: a (koeffisient x)",
+          "type": "number",
+          "placeholder": "f.eks. 2"
+        },
+        {
+          "id": "ligning1_b",
+          "label": "Ligning 1: b (koeffisient y)",
+          "type": "number",
+          "placeholder": "f.eks. 3"
+        },
+        {
+          "id": "ligning1_c",
+          "label": "Ligning 1: c (konstantledd)",
+          "type": "number",
+          "placeholder": "f.eks. 7"
+        },
+        {
+          "id": "ligning2_a",
+          "label": "Ligning 2: a (koeffisient x)",
+          "type": "number",
+          "placeholder": "f.eks. 4"
+        },
+        {
+          "id": "ligning2_b",
+          "label": "Ligning 2: b (koeffisient y)",
+          "type": "number",
+          "placeholder": "f.eks. -1"
+        },
+        {
+          "id": "ligning2_c",
+          "label": "Ligning 2: c (konstantledd)",
+          "type": "number",
+          "placeholder": "f.eks. 5"
+        }
+      ]
+    },
+    {
+      "slug": "forenkle-broker-kalkulator",
+      "title": "Forenkle Brøker Kalkulator",
+      "category": "matematikk",
+      "description": "Forenkler brøker til laveste ledd med steg-for-steg forklaring.",
+      "keywords": "forenkle brøker, brøkforenkling, største felles divisor, forkorte brøk, laveste ledd, brøkregning",
+      "formula": "forenkle_brok",
+      "inputs": [
+        {
+          "id": "teller",
+          "label": "Teller (øverste tall)",
+          "type": "number",
+          "placeholder": "f.eks. 12"
+        },
+        {
+          "id": "nevner",
+          "label": "Nevner (nederste tall)",
+          "type": "number",
+          "placeholder": "f.eks. 18"
+        }
+      ]
+    },
+    {
+      "slug": "foil-kalkulator",
+      "title": "FOIL Kalkulator",
+      "category": "matematikk",
+      "description": "Beregn produktet av to binomialer ved hjelp av FOIL-metoden (First, Outer, Inner, Last).",
+      "keywords": "FOIL, binomial, multiplikasjon, algebra, polynom, kalkulator, matematikk, første, ytre, indre, siste",
+      "formula": "foil_calculator",
+      "inputs": [
+        {
+          "id": "a",
+          "label": "Første ledd i første binomial (a)",
+          "type": "number",
+          "placeholder": "f.eks. 2"
+        },
+        {
+          "id": "b",
+          "label": "Andre ledd i første binomial (b)",
+          "type": "number",
+          "placeholder": "f.eks. 3"
+        },
+        {
+          "id": "c",
+          "label": "Første ledd i andre binomial (c)",
+          "type": "number",
+          "placeholder": "f.eks. 4"
+        },
+        {
+          "id": "d",
+          "label": "Andre ledd i andre binomial (d)",
+          "type": "number",
+          "placeholder": "f.eks. 5"
+        }
+      ]
+    },
+    {
+      "slug": "binar-subtraksjonskalkulator",
+      "title": "Binær Subtraksjonskalkulator",
+      "category": "matematikk",
+      "description": "Trekk fra binære tall med trinnvis forklaring og resultat i desimal.",
+      "keywords": "binær subtraksjon, binær kalkulator, subtraksjon binært, binærtall, toer-komplement, binær aritmetikk",
+      "formula": "binar_subtraksjon",
+      "inputs": [
+        {
+          "id": "bin1",
+          "label": "Første binære tall",
+          "type": "text",
+          "placeholder": "f.eks. 1101"
+        },
+        {
+          "id": "bin2",
+          "label": "Andre binære tall",
+          "type": "text",
+          "placeholder": "f.eks. 101"
+        }
+      ]
+    },
+    {
+      "slug": "restkalkulator",
+      "title": "Restkalkulator",
+      "category": "matematikk",
+      "description": "Beregn rest ved divisjon, med forklaring og kontroll.",
+      "keywords": "rest, divisjon, modulo, restkalkulator, deling, matematikk",
+      "formula": "restkalkulator_formula",
+      "inputs": [
+        {
+          "id": "tall",
+          "label": "Tall (dividend)",
+          "type": "number",
+          "placeholder": "f.eks. 17"
+        },
+        {
+          "id": "deler",
+          "label": "Deler (divisor)",
+          "type": "number",
+          "placeholder": "f.eks. 5"
+        }
+      ]
+    },
+    {
+      "slug": "forenkling-av-radikaler-kalkulator",
+      "title": "Forenkling av Radikaler Kalkulator",
+      "category": "matematikk",
+      "description": "Forenkler kvadratrøtter og høyere røtter trinn for trinn.",
+      "keywords": "forenkle radikaler, kvadratrot forenkling, radikal kalkulator, matematikk, algebra, rotuttrykk",
+      "formula": "forenkle_radikal",
+      "inputs": [
+        {
+          "id": "radikand",
+          "label": "Radikand (tallet under roten)",
+          "type": "number",
+          "placeholder": "f.eks. 72"
+        },
+        {
+          "id": "rotgrad",
+          "label": "Rotgrad (2 for kvadratrot, 3 for kubikkrot, osv.)",
+          "type": "number",
+          "placeholder": "f.eks. 2"
+        }
+      ]
+    },
+    {
+      "slug": "logaritme-med-base-2-kalkulator",
+      "title": "Logaritme med base 2 Kalkulator",
+      "category": "matematikk",
+      "description": "Beregn logaritme med base 2 (binær logaritme) for et tall. Få resultat, heltallsdel og forklaring.",
+      "keywords": "logaritme, base 2, binær logaritme, log2, logaritme kalkulator, matematikk, logaritme beregning",
+      "formula": "log2_calculator",
+      "inputs": [
+        {
+          "id": "tall",
+          "label": "Tall (x)",
+          "type": "number",
+          "placeholder": "f.eks. 8, 16, 100"
+        }
+      ]
+    },
+    {
+      "slug": "utvidet-form-kalkulator",
+      "title": "Utvidet Form Kalkulator",
+      "category": "matematikk",
+      "description": "Regn ut utvidet form av tall, inkludert plassverdi, ordform og vitenskapelig notasjon.",
+      "keywords": "utvidet form, plassverdi, tall, matematikk, kalkulator, norsk",
+      "formula": "utvidet_form_kalkulator",
+      "inputs": [
+        {
+          "id": "tall",
+          "label": "Tall",
+          "type": "number",
+          "placeholder": "f.eks. 12345.67"
+        }
+      ]
+    },
+    {
+      "slug": "rasjonelle-nullpunkter-kalkulator",
+      "title": "Rasjonelle Nullpunkter Kalkulator",
+      "category": "matematikk",
+      "description": "Finn rasjonelle nullpunkter til polynom med heltallskoeffisienter. Viser faktorer og løsninger.",
+      "keywords": "rasjonelle nullpunkter, polynom, nullpunkter, faktorisering, heltallskoeffisienter, matematikk, kalkulator",
+      "formula": "rasjonelle_nullpunkter",
+      "inputs": [
+        {
+          "id": "koeffisienter",
+          "label": "Polynomkoeffisienter (kommaseparert, høyeste grad først)",
+          "type": "text",
+          "placeholder": "f.eks. 2, -3, -11, 6"
+        }
+      ]
+    },
+    {
+      "slug": "revers-kalkulator",
+      "title": "Revers Kalkulator",
+      "category": "matematikk",
+      "description": "Regn ut hva et tall må være for å få et gitt resultat i en operasjon.",
+      "keywords": "revers kalkulator, omvendt utregning, finn startverdi, matematikk, prosent, addisjon, subtraksjon, multiplikasjon, divisjon",
+      "formula": "revers_kalkulator",
+      "inputs": [
+        {
+          "id": "operasjon",
+          "label": "Operasjon",
+          "type": "select",
+          "options": [
+            "Addisjon (+)",
+            "Subtraksjon (-)",
+            "Multiplikasjon (×)",
+            "Divisjon (÷)",
+            "Prosent av",
+            "Prosent endring"
+          ]
+        },
+        {
+          "id": "resultat",
+          "label": "Ønsket resultat",
+          "type": "number",
+          "placeholder": "f.eks. 100"
+        },
+        {
+          "id": "operand",
+          "label": "Operand (tallet du legger til, trekker fra, ganger med, deler på, eller prosent)",
+          "type": "number",
+          "placeholder": "f.eks. 25"
+        }
+      ]
     }
   ]
 }

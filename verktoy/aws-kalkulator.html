@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AWS Kostnad Kalkulator — Gratis Online Kalkulator | Kalkulator24</title>
+  <meta name="description" content="Beregn månedlig AWS-kostnad basert på tjenester, timer og dataoverføring. — Gratis kalkulator online">
+  <meta name="keywords" content="aws, kostnad, kalkulator, sky, pris, månedlig, dataoverføring, EC2, S3">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="Norwegian">
+  <meta name="google-site-verification" content="U-ZiCQHLID9ShjKIWBJI0Xi7xJDNrx9bwP4tRBEYzSQ">
+  <meta name="theme-color" content="#2563eb">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AWS Kostnad Kalkulator — Gratis Online Kalkulator | Kalkulator24">
+  <meta property="og:description" content="Beregn månedlig AWS-kostnad basert på tjenester, timer og dataoverføring. — Gratis kalkulator online">
+  <meta property="og:url" content="https://kalkulator24.guru/verktoy/aws-kalkulator">
+  <meta property="og:locale" content="nb_NO">
+  <link rel="canonical" href="https://kalkulator24.guru/verktoy/aws-kalkulator">
+  <link rel="alternate" hreflang="nb" href="https://kalkulator24.guru/verktoy/aws-kalkulator">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+</head>
+<body>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"AWS Kostnad Kalkulator","description":"Beregn månedlig AWS-kostnad basert på tjenester, timer og dataoverføring.","url":"https://kalkulator24.guru/verktoy/aws-kalkulator","applicationCategory":"UtilityApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"NOK"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Hjem","item":"https://kalkulator24.guru"},{"@type":"ListItem","position":2,"name":"Teknologi","item":"https://kalkulator24.guru/kategori/teknologi"},{"@type":"ListItem","position":3,"name":"AWS Kostnad Kalkulator","item":"https://kalkulator24.guru/verktoy/aws-kalkulator"}]}</script>
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="/" class="logo">Kalkulator24</a>
+    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li><li><a href="/kategori/odds" class="">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi" class="">🌱 Økologi</a></li><li><a href="/kategori/bolig" class="">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk" class="">🎵 Musikk</a></li><li><a href="/kategori/teknologi" class="active">💻 Teknologi</a></li><li><a href="/kategori/ki" class="">🤖 Kunstig Intelligens</a></li></ul>
+    <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">☰</button>
+  </div>
+  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li><li><a href="/kategori/odds" class="">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi" class="">🌱 Økologi</a></li><li><a href="/kategori/bolig" class="">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk" class="">🎵 Musikk</a></li><li><a href="/kategori/teknologi" class="active">💻 Teknologi</a></li><li><a href="/kategori/ki" class="">🤖 Kunstig Intelligens</a></li></ul></div>
+</nav>
+<div class="breadcrumb"><a href="/">Hjem</a><span class="sep">›</span><a href="/kategori/teknologi">Teknologi</a><span class="sep">›</span>AWS Kostnad Kalkulator</div>
+<div class="tool-hero"><div class="tool-badge">💻 Teknologi</div><h1>AWS Kostnad Kalkulator</h1><p class="subtitle">Beregn månedlig AWS-kostnad basert på tjenester, timer og dataoverføring. — raskt og gratis</p></div>
+<div class="main-wrap">
+  <div class="main-content">
+    <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>Antall EC2-instanser</label><div class="input-row"><input type="number" class="calc-input" data-field="ec2_instances" placeholder="f.eks. 5"></div></div><div class="input-group"><label>Timer per måned per instans</label><div class="input-row"><input type="number" class="calc-input" data-field="hours_per_month" placeholder="f.eks. 720"></div></div><div class="input-group"><label>EC2-instans type</label><div class="input-row"><select class="calc-input" data-field="instance_type"><option value="t3.micro">t3.micro</option><option value="t3.small">t3.small</option><option value="t3.medium">t3.medium</option><option value="t3.large">t3.large</option><option value="m5.large">m5.large</option><option value="m5.xlarge">m5.xlarge</option><option value="c5.large">c5.large</option><option value="c5.xlarge">c5.xlarge</option></select></div></div><div class="input-group"><label>Dataoverføring per måned (GB)</label><div class="input-row"><input type="number" class="calc-input" data-field="data_transfer_gb" placeholder="f.eks. 100"></div></div><div class="input-group"><label>S3-lagring (GB)</label><div class="input-row"><input type="number" class="calc-input" data-field="s3_storage_gb" placeholder="f.eks. 500"></div></div></div>    <button class="btn-calc" onclick="runCalculator('aws_cost_calculator')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
+    <div class="content-card">```html
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Kostnad Kalkulator – Guide og tips</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            color: #1a1a1a;
+            background-color: #f9fafb;
+        }
+        h1, h2, h3 {
+            color: #0b2b4a;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.3rem;
+        }
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+        h2 {
+            font-size: 1.7rem;
+            margin-top: 2.5rem;
+        }
+        h3 {
+            font-size: 1.3rem;
+            margin-top: 1.8rem;
+            border-bottom: none;
+        }
+        p {
+            margin-bottom: 1.2rem;
+        }
+        ul {
+            margin: 1rem 0 1.5rem 1.5rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        strong {
+            color: #0b3b5e;
+        }
+        .highlight-box {
+            background: #e6f0fa;
+            padding: 1rem 1.5rem;
+            border-left: 4px solid #1a73e8;
+            border-radius: 0 8px 8px 0;
+            margin: 1.8rem 0;
+        }
+        .faq-item {
+            background: white;
+            padding: 0.8rem 1.2rem;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        }
+        .faq-item p {
+            margin: 0.3rem 0;
+        }
+        .faq-item strong {
+            display: block;
+            font-size: 1.1rem;
+        }
+        code {
+            background: #eef2f6;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-family: 'Consolas', monospace;
+            font-size: 0.95rem;
+        }
+        hr {
+            margin: 2.5rem 0;
+            border: 0;
+            border-top: 1px solid #dde3ea;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>AWS Kostnad Kalkulator – full guide for deg som vil ha kontroll på skykostnadene</h1>
+
+    <p>Å estimere kostnader i Amazon Web Services kan fort bli komplekst. Med hundrevis av tjenester, ulike prisingsmodeller og regionale forskjeller er det lett å miste oversikten. Derfor er <strong>AWS kostnad kalkulator</strong> et uunnværlig verktøy for både arkitekter, utviklere og økonomiansvarlige. I denne artikkelen går vi gjennom alt du trenger å vite – fra hva verktøyet er, til konkrete eksempler og tips for å unngå overraskelser på fakturaen.</p>
+
+    <h2>Hva er AWS Kostnad Kalkulator?</h2>
+    <p><strong>AWS kostnad kalkulator</strong> (offisielt kalt <em>AWS Pricing Calculator</em>) er et nettbasert verktøy fra Amazon Web Services som lar deg estimere månedlige kostnader for AWS-tjenester. Du bygger opp et scenario ved å velge tjenester som EC2, S3, Lambda, RDS, og justerer parametere som antall instanser, lagringsstørrelse, dataoverføring og region. Kalkulatoren gir deg et detaljert estimat som inkluderer både timebasert og månedlig pris.</p>
+    <p>Verktøyet er gratis å bruke og krever ingen innlogging for grunnleggende estimater, men du kan også lagre og dele konfigurasjoner ved å opprette en konto. Det er viktig å merke seg at kalkulatoren gir estimater – ikke bindende priser. Den tar hensyn til AWS' offentlige prisliste, men ikke spesielle avtaler eller rabatter som Reserved Instances eller Savings Plans med mindre du spesifiserer dem.</p>
+
+    <div class="highlight-box">
+        <p><strong>💡 Kort oppsummert:</strong> <strong>AWS kostnad kalkulator</strong> hjelper deg å simulere infrastrukturkostnader før du faktisk oppretter ressurser. Perfekt for budsjettering og sammenligning av ulike arkitekturer.</p>
+    </div>
+
+    <h2>Hvorfor er en AWS Kostnad Kalkulator viktig?</h2>
+    <p>Skykostnader kan eskalere raskt hvis du ikke har kontroll. Mange bedrifter opplever «kostnadssjokk» fordi de undervurderer løpende utgifter til dataoverføring, lagring eller ubrukte ressurser. Her er grunnene til at <strong>AWS kostnad kalkulator</strong> bør være en del av din arbeidsflyt:</p>
+    <ul>
+        <li><strong>Unngå overraskelser:</strong> Få et realistisk bilde av månedlige kostnader før du går i gang.</li>
+        <li><strong>Sammenlign alternativer:</strong> Test ulike instansfamilier, lagringstyper eller regioner for å finne den mest kostnadseffektive løsningen.</li>
+        <li><strong>Budsjettering og forecasting:</strong> Bruk estimatene til å sette budsjetter i AWS Budgets eller for interne rapporter.</li>
+        <li><strong>Optimalisering:</strong> Identifiser hvilke tjenester som driver kostnadene, og vurder Reserved Instances eller Spot Instances.</li>
+        <li><strong>Forankre beslutninger:</strong> Presenter konkrete tall for ledelsen eller kunder når du foreslår en arkitektur.</li>
+    </ul>
+    <p>Uten en kalkulator risikerer du å basere deg på gjetninger. Med <strong>AWS kostnad kalkulator</strong> får du datadrevne estimater som gjør deg tryggere i dine skybeslutninger.</p>
+
+    <h2>Slik bruker du AWS Kostnad Kalkulator</h2>
+    <p>Å komme i gang er enkelt. Følg denne trinnvise veiledningen:</p>
+    <ul>
+        <li><strong>Trinn 1:</strong> Gå til <a href="https://calculator.aws" target="_blank">calculator.aws</a> (ingen innlogging nødvendig for enkle estimater).</li>
+        <li><strong>Trinn 2:</strong> Klikk på «Create estimate» eller «Legg til tjeneste» for å bygge ditt scenario.</li>
+        <li><strong>Trinn 3:</strong> Velg en tjeneste, for eksempel <strong>Amazon EC2</strong>. Du vil bli bedt om å spesifisere:
+            <ul>
+                <li>Region (f.eks. eu-west-1 – Irland)</li>
+                <li>Instanstype (f.eks. t3.medium, m5.large)</li>
+                <li>Antall instanser</li>
+                <li>Betalingsalternativ (On-Demand, Reserved, Spot)</li>
+                <li>Lagringsvolum (EBS) og dataoverføring</li>
+            </ul>
+        </li>
+        <li><strong>Trinn 4:</strong> Gjenta for andre tjenester som S3, RDS eller Lambda. Legg til flere komponenter etter behov.</li>
+        <li><strong>Trinn 5:</strong> Se estimatet i høyre panel. Du kan eksportere til CSV eller dele lenken med teamet.</li>
+    </ul>
+    <p>En nyttig funksjon er «Group»-verktøyet som lar deg organisere ressurser i prosjekter eller miljøer (dev, test, prod). Dette gjør det lettere å holde oversikt over totale kostnader per avdeling.</p>
+
+    <h3>Formel med eksempel</h3>
+    <p>Selv om kalkulatoren gjør regnestykket automatisk, er det nyttig å forstå logikken. En forenklet formel for en EC2-instans ser slik ut:</p>
+    <p><strong>Månedlig kostnad = (Antall timer i måneden × Pris per time) + (Lagring per GB × Pris per GB) + (Dataoverføring × Pris per GB)</strong></p>
+    <p><strong>Eksempel:</strong> Du vil kjøre en <code>t3.medium</code> i region eu-west-1 (Irland) i 730 timer per måned (24/7). On-Demand prisen er ca. $0.0416 per time. I tillegg legger du til 50 GB gp3 EBS-lagring ($0.08/GB/mnd) og 100 GB dataoverføring ut av AWS ($0.09/GB).</p>
+    <ul>
+        <li>EC2: 730 × $0.0416 = $30.37</li>
+        <li>EBS: 50 × $0.08 = $4.00</li>
+        <li>Dataoverføring: 100 × $0.09 = $9.00</li>
+        <li><strong>Totalt estimat: $43.37 per måned</strong></li>
+    </ul>
+    <p>Med <strong>AWS kostnad kalkulator</strong> får du dette regnestykket presentert grafisk, med mulighet for å justere hver parameter. Du kan også legge til flere instanser og tjenester for et mer komplekst estimat.</p>
+
+    <h2>Praktiske eksempler</h2>
+    <p>Her er to scenarier som viser hvordan <strong>AWS kostnad kalkulator</strong> kan brukes i praksis:</p>
+
+    <h3>Eksempel 1: Nettside med høy trafikk</h3>
+    <p>Du skal sette opp en WordPress-side forventet 500 000 sidevisninger per måned. Arkitekturen inkluderer:</p>
+    <ul>
+        <li>2 × t3.medium EC2 (lastbalansert)</li>
+        <li>1 × RDS db.t3.small (MySQL, 20 GB lagring)</li>
+        <li>S3 for statiske filer (50 GB)</li>
+        <li>CloudFront for CDN (1 TB dataoverføring)</li>
+    </ul>
+    <p>Ved å legge disse inn i kalkulatoren får du et estimat på rundt $120–$150 per måned, avhengig av region. Dette gir deg et solid grunnlag for å presentere kostnader for kunden eller ledelsen.</p>
+
+    <h3>Eksempel 2: Dataanalyse med serverløs arkitektur</h3>
+    <p>Du skal kjøre sporadiske ETL-jobber med AWS Lambda og lagre resultater i S3. Du forventer 10 millioner kjøringer per måned, hver med 256 MB minne og 3 sekunders varighet. I tillegg lagres 200 GB i S3 Standard. Kalkulatoren viser at Lambda-kostnaden blir ca. $25 og S3 ca. $6 – totalt under $35 per måned. Dette er et godt eksempel på hvorfor serverløs arkitektur kan være svært kostnadseffektiv.</p>
+
+    <div class="highlight-box">
+        <p><strong>🔍 Tips:</strong> I begge eksemplene kan du eksperimentere med Reserved Instances eller Savings Plans i kalkulatoren for å se potensielle besparelser på 30–60 %.</p>
+    </div>
+
+    <h2>Tips for å få mest mulig ut av AWS Kostnad Kalkulator</h2>
+    <ul>
+        <li><strong>Vær spesifikk på region:</strong> Priser varierer kraftig mellom regioner. Velg den regionen du faktisk skal bruke.</li>
+        <li><strong>Inkluder dataoverføring:</strong> Mange glemmer kostnader for data ut av AWS. Legg inn realistiske tall for e</div>
+    <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/ai-energibruks-kalkulator'"><span class="tool-card-icon">💻</span><h3>AI Energibruks Kalkulator</h3><p>Beregn strømforbruk og kostnad for AI-modeller som ChatGPT, med sammenligning og miljøtips.</p></div><div class="tool-card" onclick="location='/verktoy/ai-skaleringskostnader-kalkulator'"><span class="tool-card-icon">💻</span><h3>AI Skaleringskostnader Kalkulator</h3><p>Beregn kostnader og ressursbehov ved skalering av AI-modeller (trening/inferens).</p></div><div class="tool-card" onclick="location='/verktoy/kostnad-ved-ai-bildegenerering-kalkulator'"><span class="tool-card-icon">💻</span><h3>Kostnad ved AI Bildegenerering Kalkulator</h3><p>Beregn kostnaden for å generere bilder med AI-modeller som DALL-E, Midjourney og Stable Diffusion.</p></div><div class="tool-card" onclick="location='/verktoy/ai-voiceover-kostnads-og-tidskalkulator'"><span class="tool-card-icon">💻</span><h3>AI Voiceover Kostnads- og Tidskalkulator</h3><p>Beregn kostnad og tid for AI-genererte voiceover-prosjekter med avanserte sammenligninger.</p></div><div class="tool-card" onclick="location='/verktoy/batterikapasitetskalkulator'"><span class="tool-card-icon">💻</span><h3>Batterikapasitetskalkulator</h3><p>Beregn batterikapasitet, ladetid og rekkevidde for elbiler og enheter.</p></div><div class="tool-card" onclick="location='/verktoy/ip-subnett-kalkulator'"><span class="tool-card-icon">💻</span><h3>IP Subnett Kalkulator</h3><p>Beregn nettverk, broadcast, maske og antall verter for en IP-adresse og CIDR.</p></div><div class="tool-card" onclick="location='/verktoy/nedlastingshastighetskalkulator'"><span class="tool-card-icon">💻</span><h3>Nedlastingshastighetskalkulator</h3><p>Beregn nedlastingstid basert på filstørrelse og hastighet. Sammenlign med bredbåndshastigheter.</p></div><div class="tool-card" onclick="location='/verktoy/pcb-spor-strom-kalkulator'"><span class="tool-card-icon">💻</span><h3>PCB Spor Strøm Kalkulator</h3><p>Beregn maksimal strømføringsevne for PCB-spor basert på bredde, tykkelse og temperaturøkning.</p></div><div class="tool-card" onclick="location='/verktoy/dpi-kalkulator'"><span class="tool-card-icon">💻</span><h3>DPI Kalkulator</h3><p>Beregn DPI, oppløsning og skjermstørrelse for skjermer og bilder.</p></div><div class="tool-card" onclick="location='/verktoy/projektor-kalkulator'"><span class="tool-card-icon">💻</span><h3>Projektor Kalkulator</h3><p>Beregn optimal projeksjonsavstand, bildebredde og lysstyrke for din projektor.</p></div><div class="tool-card" onclick="location='/verktoy/datamaskinlagring-kalkulator'"><span class="tool-card-icon">💻</span><h3>Datamaskinlagring Kalkulator</h3><p>Konverter og sammenlign datalagringsenheter (byte, KB, MB, GB, TB, PB) med presisjon.</p></div><div class="tool-card" onclick="location='/verktoy/pcb-spor-bredde-kalkulator'"><span class="tool-card-icon">💻</span><h3>PCB Spor Bredde Kalkulator</h3><p>Beregn nødvendig PCB-sporbredde basert på strøm, tykkelse og temperaturøkning.</p></div><div class="tool-card" onclick="location='/kategori/teknologi'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle Teknologi</h3><p>Alle kalkulatorer i denne kategorien</p></div></div></div>
+    <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/lan-kalkulator'"><span class="tool-card-icon">💰</span><h3>Lån Kalkulator</h3><p>Beregn månedlige låneavdrag med nedbetalingsoversikt</p></div><div class="tool-card" onclick="location='/verktoy/prosent-kalkulator'"><span class="tool-card-icon">📐</span><h3>Prosent Kalkulator</h3><p>Beregn prosent med flere metoder og sammenligninger</p></div><div class="tool-card" onclick="location='/verktoy/temperatur-konvertering'"><span class="tool-card-icon">🔄</span><h3>Temperatur Konvertering</h3><p>Konverter temperatur mellom alle enheter</p></div><div class="tool-card" onclick="location='/verktoy/areal-kalkulator'"><span class="tool-card-icon">📏</span><h3>Areal Kalkulator</h3><p>Beregn areal av ulike former med enheter</p></div><div class="tool-card" onclick="location='/verktoy/alder-kalkulator'"><span class="tool-card-icon">📅</span><h3>Alder Kalkulator</h3><p>Beregn nøyaktig alder med sammenligning og statistikk</p></div></div></div>
+  </div>
+  <aside class="sidebar">
+    <div class="sidebar-card"><h3>Teknologi kalkulatorer</h3><ul class="sidebar-links"><li><a href="/verktoy/ai-energibruks-kalkulator"><span class="icon">💻</span>AI Energibruks Kalkulator</a></li><li><a href="/verktoy/ai-skaleringskostnader-kalkulator"><span class="icon">💻</span>AI Skaleringskostnader Kalkulator</a></li><li><a href="/verktoy/kostnad-ved-ai-bildegenerering-kalkulator"><span class="icon">💻</span>Kostnad ved AI Bildegenerering Kalkulator</a></li><li><a href="/verktoy/ai-voiceover-kostnads-og-tidskalkulator"><span class="icon">💻</span>AI Voiceover Kostnads- og Tidskalkulator</a></li><li><a href="/verktoy/batterikapasitetskalkulator"><span class="icon">💻</span>Batterikapasitetskalkulator</a></li><li><a href="/verktoy/ip-subnett-kalkulator"><span class="icon">💻</span>IP Subnett Kalkulator</a></li><li><a href="/verktoy/nedlastingshastighetskalkulator"><span class="icon">💻</span>Nedlastingshastighetskalkulator</a></li><li><a href="/verktoy/pcb-spor-strom-kalkulator"><span class="icon">💻</span>PCB Spor Strøm Kalkulator</a></li><li><a href="/kategori/teknologi" style="color:var(--primary)">Se alle Teknologi →</a></li></ul></div>
+    <div class="sidebar-card"><h3>Populære verktøy</h3><ul class="sidebar-links"><li><a href="/verktoy/bmi-kalkulator"><span class="icon">❤️</span>BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator"><span class="icon">💰</span>Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator"><span class="icon">📐</span>Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator"><span class="icon">📅</span>Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator"><span class="icon">❤️</span>Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator"><span class="icon">⚗️</span>pH Kalkulator</a></li></ul></div>
+  </aside>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">678+ gratis kalkulatorer</p></div>
+      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li><li><a href="/kategori/krypto">₿ Krypto</a></li><li><a href="/kategori/spill">🎮 Spill</a></li><li><a href="/kategori/odds">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi">🌱 Økologi</a></li><li><a href="/kategori/bolig">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk">🎵 Musikk</a></li><li><a href="/kategori/teknologi">💻 Teknologi</a></li><li><a href="/kategori/ki">🤖 Kunstig Intelligens</a></li></ul></div>
+      <div class="footer-col"><h4>Populære</h4><ul><li><a href="/verktoy/bmi-kalkulator">BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator">Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator">Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator">Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator">Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator">pH Kalkulator</a></li><li><a href="/verktoy/molekylvekt-kalkulator">Molekylvektkalkulator</a></li><li><a href="/verktoy/halveringstid-kalkulator">Halveringstid Kalkulator</a></li><li><a href="/verktoy/befolkningsvekst-kalkulator">Befolkningsvekst Kalkulator</a></li><li><a href="/verktoy/terningkaster">Terningkaster</a></li></ul></div>
+      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/revers-kalkulator">Revers Kalkulator</a></li><li><a href="/verktoy/rasjonelle-nullpunkter-kalkulator">Rasjonelle Nullpunkter Kalkulator</a></li><li><a href="/verktoy/utvidet-form-kalkulator">Utvidet Form Kalkulator</a></li><li><a href="/verktoy/logaritme-med-base-2-kalkulator">Logaritme med base 2 Kalkulator</a></li><li><a href="/verktoy/forenkling-av-radikaler-kalkulator">Forenkling av Radikaler Kalkulator</a></li><li><a href="/verktoy/restkalkulator">Restkalkulator</a></li><li><a href="/verktoy/binar-subtraksjonskalkulator">Binær Subtraksjonskalkulator</a></li><li><a href="/verktoy/foil-kalkulator">FOIL Kalkulator</a></li></ul></div>
+      <div class="footer-col"><h4>Info</h4><ul><li><a href="/om-oss">Om oss</a></li><li><a href="/personvern">Personvern</a></li><li><a href="/kontakt">Kontakt</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Kalkulator24 — Alle kalkulatorer er gratis</p></div>
+  </div>
+</footer>
+<script>
+function toggleMenu(){var m=document.getElementById("mobileMenu");m.classList.toggle("open");}
+document.addEventListener("click",function(e){var m=document.getElementById("mobileMenu");var b=document.getElementById("hamburgerBtn");if(m&&b&&!m.contains(e.target)&&!b.contains(e.target))m.classList.remove("open");});
+</script>
+<script src="/assets/js/calc.js"></script>
+</body></html>

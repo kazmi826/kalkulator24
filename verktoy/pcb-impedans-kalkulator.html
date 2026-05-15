@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PCB Impedans Kalkulator — Gratis Online Kalkulator | Kalkulator24</title>
+  <meta name="description" content="Beregn karakteristisk impedans for mikrostrip og stripline PCB-spor. Inkluderer sammenligning med standardverdier. — Gratis kalkulator online">
+  <meta name="keywords" content="PCB impedans, mikrostrip impedans, stripline impedans, karakteristisk impedans, PCB design, signalintegritet, impedansberegning">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="Norwegian">
+  <meta name="google-site-verification" content="U-ZiCQHLID9ShjKIWBJI0Xi7xJDNrx9bwP4tRBEYzSQ">
+  <meta name="theme-color" content="#2563eb">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PCB Impedans Kalkulator — Gratis Online Kalkulator | Kalkulator24">
+  <meta property="og:description" content="Beregn karakteristisk impedans for mikrostrip og stripline PCB-spor. Inkluderer sammenligning med standardverdier. — Gratis kalkulator online">
+  <meta property="og:url" content="https://kalkulator24.guru/verktoy/pcb-impedans-kalkulator">
+  <meta property="og:locale" content="nb_NO">
+  <link rel="canonical" href="https://kalkulator24.guru/verktoy/pcb-impedans-kalkulator">
+  <link rel="alternate" hreflang="nb" href="https://kalkulator24.guru/verktoy/pcb-impedans-kalkulator">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+</head>
+<body>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"PCB Impedans Kalkulator","description":"Beregn karakteristisk impedans for mikrostrip og stripline PCB-spor. Inkluderer sammenligning med standardverdier.","url":"https://kalkulator24.guru/verktoy/pcb-impedans-kalkulator","applicationCategory":"UtilityApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"NOK"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Hjem","item":"https://kalkulator24.guru"},{"@type":"ListItem","position":2,"name":"Teknologi","item":"https://kalkulator24.guru/kategori/teknologi"},{"@type":"ListItem","position":3,"name":"PCB Impedans Kalkulator","item":"https://kalkulator24.guru/verktoy/pcb-impedans-kalkulator"}]}</script>
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="/" class="logo">Kalkulator24</a>
+    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li><li><a href="/kategori/odds" class="">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi" class="">🌱 Økologi</a></li><li><a href="/kategori/bolig" class="">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk" class="">🎵 Musikk</a></li><li><a href="/kategori/teknologi" class="active">💻 Teknologi</a></li><li><a href="/kategori/ki" class="">🤖 Kunstig Intelligens</a></li></ul>
+    <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">☰</button>
+  </div>
+  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li><li><a href="/kategori/odds" class="">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi" class="">🌱 Økologi</a></li><li><a href="/kategori/bolig" class="">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk" class="">🎵 Musikk</a></li><li><a href="/kategori/teknologi" class="active">💻 Teknologi</a></li><li><a href="/kategori/ki" class="">🤖 Kunstig Intelligens</a></li></ul></div>
+</nav>
+<div class="breadcrumb"><a href="/">Hjem</a><span class="sep">›</span><a href="/kategori/teknologi">Teknologi</a><span class="sep">›</span>PCB Impedans Kalkulator</div>
+<div class="tool-hero"><div class="tool-badge">💻 Teknologi</div><h1>PCB Impedans Kalkulator</h1><p class="subtitle">Beregn karakteristisk impedans for mikrostrip og stripline PCB-spor. Inkluderer sammenligning med standardverdier. — raskt og gratis</p></div>
+<div class="main-wrap">
+  <div class="main-content">
+    <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>Sporbredde (mm)</label><div class="input-row"><input type="number" class="calc-input" data-field="spor_bredde" placeholder="f.eks. 0.25"></div></div><div class="input-group"><label>Dielektrisk tykkelse (mm)</label><div class="input-row"><input type="number" class="calc-input" data-field="dielektrisk_tykkelse" placeholder="f.eks. 0.2"></div></div><div class="input-group"><label>Kobbertykkelse (mm)</label><div class="input-row"><input type="number" class="calc-input" data-field="kobber_tykkelse" placeholder="f.eks. 0.035"></div></div><div class="input-group"><label>Dielektrisk konstant (Er)</label><div class="input-row"><input type="number" class="calc-input" data-field="dielektrisk_konstant" placeholder="f.eks. 4.5"></div></div><div class="input-group"><label>Linjetype</label><div class="input-row"><select class="calc-input" data-field="type"><option value="Mikrostrip">Mikrostrip</option><option value="Stripline">Stripline</option></select></div></div></div>    <button class="btn-calc" onclick="runCalculator('pcb_impedans')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
+    <div class="content-card"><!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCB Impedans Kalkulator – En komplett guide</title>
+</head>
+<body>
+
+<h2>Hva er en PCB Impedans Kalkulator?</h2>
+<p>
+    En <strong>pcb impedans kalkulator</strong> er et verktøy som brukes til å beregne den karakteristiske impedansen til kobberspor på et kretskort (PCB). Impedans er motstanden mot vekselstrøm i et spor, målt i ohm (Ω). Kalkulatoren tar hensyn til faktorer som sporbredde, tykkelse, avstand til referanseplan, dielektrisk materiale og frekvens. Målet er å oppnå en spesifikk impedans – ofte 50 Ω, 75 Ω eller 100 Ω – for å sikre signalintegritet i høyhastighetsdesign.
+</p>
+<p>
+    Moderne <strong>pcb impedans kalkulator</strong> verktøy finnes både som frittstående programvare, nettbaserte løsninger og innebygde funksjoner i EDA-verktøy (som Altium, Eagle eller KiCad). De fleste kalkulatorer støtter ulike spormodeller, inkludert mikrostripe (microstrip), stripline, coplanar waveguide og differensialpar.
+</p>
+
+<h2>Hvorfor er en PCB Impedans Kalkulator viktig?</h2>
+<p>
+    Uten en presis <strong>pcb impedans kalkulator</strong> risikerer du signalrefleksjoner, tap av data og elektromagnetisk støy (EMI) i høyfrekvente kretser. Dette er spesielt kritisk for:
+</p>
+<ul>
+    <li><strong>Høyhastighets digitale signaler</strong> – som USB, HDMI, PCIe og DDR-minne.</li>
+    <li><strong>RF- og mikrobølgekretser</strong> – der impedansmatchning er avgjørende for effektiv kraftoverføring.</li>
+    <li><strong>Differensialpar</strong> – for eksempel i Ethernet eller LVDS, der både enkeltspor og parimpedans må kontrolleres.</li>
+</ul>
+<p>
+    Ved å bruke en <strong>pcb impedans kalkulator</strong> kan du forutsi og justere spordimensjoner før produksjon, noe som reduserer behovet for kostbare iterasjoner og prototyping. Kalkulatoren hjelper også med å oppfylle produksjonsspesifikasjoner, ettersom PCB-produsenter ofte krever impedanskontroll for flerlags kort.
+</p>
+
+<h2>Slik bruker du en PCB Impedans Kalkulator</h2>
+<p>
+    For å bruke en <strong>pcb impedans kalkulator</strong> effektivt, må du ha følgende parametere klare:
+</p>
+<ul>
+    <li><strong>Spormodell</strong> – Velg mikrostripe, stripline eller coplanar waveguide.</li>
+    <li><strong>Sporbredde (W)</strong> – Bredden på kobbersporet i mm eller mils.</li>
+    <li><strong>Kobbertykkelse (T)</strong> – Tykkelsen på kobberlaget (f.eks. 1 oz = 35 µm).</li>
+    <li><strong>Dielektrisk høyde (H)</strong> – Avstanden fra sporet til nærmeste referanseplan.</li>
+    <li><strong>Dielektrisk konstant (Dk/Er)</strong> – Materialets permittivitet (f.eks. FR4 har typisk Dk ≈ 4,5).</li>
+    <li><strong>Frekvens</strong> – Arbeidsfrekvensen (valgfritt, men påvirker impedans ved høye frekvenser).</li>
+</ul>
+<p>
+    Skriv inn verdiene i kalkulatoren, og den vil gi deg den karakteristiske impedansen. Juster sporbredden eller dielektrisk høyde til du når ønsket impedansverdi. Mange kalkulatorer har også en "reverse" funksjon der du angir mål-impedans, og verktøyet foreslår sporbredde.
+</p>
+
+<h3>Formel med eksempel</h3>
+<p>
+    Den vanligste formelen for mikrostripe-impedans (overflatespor) er:
+</p>
+<p>
+    <strong>Z₀ = (87 / √(Er + 1,41)) × ln(5,98 × H / (0,8 × W + T))</strong>
+</p>
+<p>
+    <strong>Eksempel:</strong> Anta at du har et FR4-kort med Er = 4,5, H = 0,2 mm, W = 0,3 mm og T = 0,035 mm (1 oz kobber).
+    <br>
+    √(4,5 + 1,41) = √5,91 ≈ 2,43
+    <br>
+    87 / 2,43 ≈ 35,8
+    <br>
+    5,98 × 0,2 / (0,8 × 0,3 + 0,035) = 1,196 / (0,24 + 0,035) = 1,196 / 0,275 ≈ 4,35
+    <br>
+    ln(4,35) ≈ 1,47
+    <br>
+    Z₀ ≈ 35,8 × 1,47 ≈ 52,6 Ω
+</p>
+<p>
+    Med en <strong>pcb impedans kalkulator</strong> får du dette resultatet umiddelbart, men det er nyttig å forstå formelen for å vite hvilke parametere som påvirker impedansen mest.
+</p>
+
+<h2>Praktiske eksempler</h2>
+<h3>Eksempel 1: 50 Ω mikrostripe for antenne</h3>
+<p>
+    Du designer en IoT-enhet med en 2,4 GHz antenne. Målet er 50 Ω impedans. Ved hjelp av en <strong>pcb impedans kalkulator</strong> setter du inn Er = 4,5, H = 0,8 mm, T = 0,035 mm. Kalkulatoren foreslår en sporbredde på ca. 1,5 mm for å oppnå 50 Ω. Du justerer bredden til 1,45 mm for å kompensere for produksjonstoleranser.
+</p>
+<h3>Eksempel 2: 100 Ω differensialpar for USB 2.0</h3>
+<p>
+    For et USB-differensialpar trenger du 100 Ω differensiell impedans. Med en <strong>pcb impedans kalkulator</strong> som støtter differensialpar, angir du sporbredde = 0,3 mm, avstand mellom spor = 0,2 mm, H = 0,2 mm, Er = 4,5. Kalkulatoren gir en differensiell impedans på 98,5 Ω, som er innenfor spesifikasjonen.
+</p>
+<h3>Eksempel 3: Stripline for høyhastighets klokke</h3>
+<p>
+    En 100 MHz klokke på et indre lag krever stripline-struktur. Du bruker en <strong>pcb impedans kalkulator</strong> med H1 = H2 = 0,4 mm, Er = 4,2, W = 0,2 mm, T = 0,035 mm. Resultatet blir 55,3 Ω. For å redusere til 50 Ω øker du sporbredden til 0,25 mm, noe som gir 49,8 Ω.
+</p>
+
+<h2>Tips for nøyaktig bruk av PCB Impedans Kalkulator</h2>
+<ul>
+    <li><strong>Bruk riktig materialdata</strong> – Dielektrisk konstant (Dk) varierer med frekvens og produsent. Skaff data fra PCB-produsenten.</li>
+    <li><strong>Ta hensyn til etsningsfaktor</strong> – Kobberets kanter blir ikke helt rette; noen kalkulatorer har en korreksjonsfaktor for dette.</li>
+    <li><strong>Bruk 2D- eller 3D-feltløsere for komplekse design</strong> – Enkle kalkulatorer er gode for estimater, men for kritisk impedans bør du simulere med verktøy som HyperLynx eller CST.</li>
+    <li><strong>Kontroller produksjonsbegrensninger</strong> – Noen PCB-fabrikker har minimum sporbredde eller avstand som påvirker impedansen.</li>
+    <li><strong>Dokumenter alle parametere</strong> – Noter Dk, H, W og T for hvert lag, slik at du kan reprodusere resultatene.</li>
+</ul>
+<p>
+    En pålitelig <strong>pcb impedans kalkulator</strong> er et uunnværlig verktøy, men kombiner den alltid med praktisk testing (f.eks. TDR-målinger) for å verifisere resultatene.
+</p>
+
+<h2>FAQ – Ofte stilte spørsmål</h2>
+<h3>1. Hva er forskjellen mellom mikrostripe og stripline i en PCB impedans kalkulator?</h3>
+<p>
+    Mikrostripe har sporet på overflaten med ett referanseplan under, mens stripline er innebygd mellom to referanseplan. En <strong>pcb impedans kalkulator</strong> gir ulike formler for hver type, og stripline gir generelt bedre støyimmunitet.
+</p>
+
+<h3>2. Kan jeg bruke en PCB impedans kalkulator for alle frekvenser?</h3>
+<p>
+    Ja, men nøyaktigheten avtar ved svært høye frekvenser (over 10 GHz) på grunn av dielektrisk tap og overflateruhet. For slike frekvenser bør du bruke en avansert <strong>pcb impedans kalkulator</strong> med frekvensavhengige modeller.
+</p>
+
+<h3>3. Hvorfor får jeg forskjellige resultater fra ulike kalkulatorer?</h3>
+<p>
+    Ulike <strong>pcb impedans kalkulator</strong> verktøy bruker variasjoner av formler (f.eks. IPC-2141, Hammerstad eller Jensen). De kan også ha ulike standardverdier for dielektrisk konstant. Sjekk alltid hvilken modell som brukes, og kalibrer mot produsentens data.
+</p>
+
+<h3>4. Hva er typisk impedans for USB, HDMI og Ethernet?</h3>
+<p>
+    USB 2.0/3.0: 90 Ω differensielt (45 Ω single-ended). HDMI: 100 Ω differensielt. Ethernet (100BASE-TX): 100 Ω differensielt. En <strong>pcb impedans kalkulator</strong> kan hjelpe deg med å oppnå disse verdiene nøyaktig.
+</p>
+
+<h3>5. Må jeg ta hensyn til soldermaske i impedansberegningen?</h3>
+<p>
+    Ja, soldermaske reduserer impedansen med 2-5 Ω avhengig av tykkelse og dielektrisk konstant. Mange moderne <strong>pcb impedans kalkulator</strong> verktøy har en egen innstilling for soldermaske for å kompensere for dette.
+</p>
+
+</body>
+</html></div>
+    <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/ai-energibruks-kalkulator'"><span class="tool-card-icon">💻</span><h3>AI Energibruks Kalkulator</h3><p>Beregn strømforbruk og kostnad for AI-modeller som ChatGPT, med sammenligning og miljøtips.</p></div><div class="tool-card" onclick="location='/verktoy/ai-skaleringskostnader-kalkulator'"><span class="tool-card-icon">💻</span><h3>AI Skaleringskostnader Kalkulator</h3><p>Beregn kostnader og ressursbehov ved skalering av AI-modeller (trening/inferens).</p></div><div class="tool-card" onclick="location='/verktoy/kostnad-ved-ai-bildegenerering-kalkulator'"><span class="tool-card-icon">💻</span><h3>Kostnad ved AI Bildegenerering Kalkulator</h3><p>Beregn kostnaden for å generere bilder med AI-modeller som DALL-E, Midjourney og Stable Diffusion.</p></div><div class="tool-card" onclick="location='/verktoy/ai-voiceover-kostnads-og-tidskalkulator'"><span class="tool-card-icon">💻</span><h3>AI Voiceover Kostnads- og Tidskalkulator</h3><p>Beregn kostnad og tid for AI-genererte voiceover-prosjekter med avanserte sammenligninger.</p></div><div class="tool-card" onclick="location='/verktoy/batterikapasitetskalkulator'"><span class="tool-card-icon">💻</span><h3>Batterikapasitetskalkulator</h3><p>Beregn batterikapasitet, ladetid og rekkevidde for elbiler og enheter.</p></div><div class="tool-card" onclick="location='/verktoy/ip-subnett-kalkulator'"><span class="tool-card-icon">💻</span><h3>IP Subnett Kalkulator</h3><p>Beregn nettverk, broadcast, maske og antall verter for en IP-adresse og CIDR.</p></div><div class="tool-card" onclick="location='/verktoy/nedlastingshastighetskalkulator'"><span class="tool-card-icon">💻</span><h3>Nedlastingshastighetskalkulator</h3><p>Beregn nedlastingstid basert på filstørrelse og hastighet. Sammenlign med bredbåndshastigheter.</p></div><div class="tool-card" onclick="location='/verktoy/pcb-spor-strom-kalkulator'"><span class="tool-card-icon">💻</span><h3>PCB Spor Strøm Kalkulator</h3><p>Beregn maksimal strømføringsevne for PCB-spor basert på bredde, tykkelse og temperaturøkning.</p></div><div class="tool-card" onclick="location='/verktoy/dpi-kalkulator'"><span class="tool-card-icon">💻</span><h3>DPI Kalkulator</h3><p>Beregn DPI, oppløsning og skjermstørrelse for skjermer og bilder.</p></div><div class="tool-card" onclick="location='/verktoy/projektor-kalkulator'"><span class="tool-card-icon">💻</span><h3>Projektor Kalkulator</h3><p>Beregn optimal projeksjonsavstand, bildebredde og lysstyrke for din projektor.</p></div><div class="tool-card" onclick="location='/verktoy/datamaskinlagring-kalkulator'"><span class="tool-card-icon">💻</span><h3>Datamaskinlagring Kalkulator</h3><p>Konverter og sammenlign datalagringsenheter (byte, KB, MB, GB, TB, PB) med presisjon.</p></div><div class="tool-card" onclick="location='/verktoy/pcb-spor-bredde-kalkulator'"><span class="tool-card-icon">💻</span><h3>PCB Spor Bredde Kalkulator</h3><p>Beregn nødvendig PCB-sporbredde basert på strøm, tykkelse og temperaturøkning.</p></div><div class="tool-card" onclick="location='/kategori/teknologi'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle Teknologi</h3><p>Alle kalkulatorer i denne kategorien</p></div></div></div>
+    <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/lan-kalkulator'"><span class="tool-card-icon">💰</span><h3>Lån Kalkulator</h3><p>Beregn månedlige låneavdrag med nedbetalingsoversikt</p></div><div class="tool-card" onclick="location='/verktoy/prosent-kalkulator'"><span class="tool-card-icon">📐</span><h3>Prosent Kalkulator</h3><p>Beregn prosent med flere metoder og sammenligninger</p></div><div class="tool-card" onclick="location='/verktoy/temperatur-konvertering'"><span class="tool-card-icon">🔄</span><h3>Temperatur Konvertering</h3><p>Konverter temperatur mellom alle enheter</p></div><div class="tool-card" onclick="location='/verktoy/areal-kalkulator'"><span class="tool-card-icon">📏</span><h3>Areal Kalkulator</h3><p>Beregn areal av ulike former med enheter</p></div><div class="tool-card" onclick="location='/verktoy/alder-kalkulator'"><span class="tool-card-icon">📅</span><h3>Alder Kalkulator</h3><p>Beregn nøyaktig alder med sammenligning og statistikk</p></div></div></div>
+  </div>
+  <aside class="sidebar">
+    <div class="sidebar-card"><h3>Teknologi kalkulatorer</h3><ul class="sidebar-links"><li><a href="/verktoy/ai-energibruks-kalkulator"><span class="icon">💻</span>AI Energibruks Kalkulator</a></li><li><a href="/verktoy/ai-skaleringskostnader-kalkulator"><span class="icon">💻</span>AI Skaleringskostnader Kalkulator</a></li><li><a href="/verktoy/kostnad-ved-ai-bildegenerering-kalkulator"><span class="icon">💻</span>Kostnad ved AI Bildegenerering Kalkulator</a></li><li><a href="/verktoy/ai-voiceover-kostnads-og-tidskalkulator"><span class="icon">💻</span>AI Voiceover Kostnads- og Tidskalkulator</a></li><li><a href="/verktoy/batterikapasitetskalkulator"><span class="icon">💻</span>Batterikapasitetskalkulator</a></li><li><a href="/verktoy/ip-subnett-kalkulator"><span class="icon">💻</span>IP Subnett Kalkulator</a></li><li><a href="/verktoy/nedlastingshastighetskalkulator"><span class="icon">💻</span>Nedlastingshastighetskalkulator</a></li><li><a href="/verktoy/pcb-spor-strom-kalkulator"><span class="icon">💻</span>PCB Spor Strøm Kalkulator</a></li><li><a href="/kategori/teknologi" style="color:var(--primary)">Se alle Teknologi →</a></li></ul></div>
+    <div class="sidebar-card"><h3>Populære verktøy</h3><ul class="sidebar-links"><li><a href="/verktoy/bmi-kalkulator"><span class="icon">❤️</span>BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator"><span class="icon">💰</span>Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator"><span class="icon">📐</span>Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator"><span class="icon">📅</span>Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator"><span class="icon">❤️</span>Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator"><span class="icon">⚗️</span>pH Kalkulator</a></li></ul></div>
+  </aside>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">678+ gratis kalkulatorer</p></div>
+      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li><li><a href="/kategori/krypto">₿ Krypto</a></li><li><a href="/kategori/spill">🎮 Spill</a></li><li><a href="/kategori/odds">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi">🌱 Økologi</a></li><li><a href="/kategori/bolig">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk">🎵 Musikk</a></li><li><a href="/kategori/teknologi">💻 Teknologi</a></li><li><a href="/kategori/ki">🤖 Kunstig Intelligens</a></li></ul></div>
+      <div class="footer-col"><h4>Populære</h4><ul><li><a href="/verktoy/bmi-kalkulator">BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator">Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator">Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator">Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator">Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator">pH Kalkulator</a></li><li><a href="/verktoy/molekylvekt-kalkulator">Molekylvektkalkulator</a></li><li><a href="/verktoy/halveringstid-kalkulator">Halveringstid Kalkulator</a></li><li><a href="/verktoy/befolkningsvekst-kalkulator">Befolkningsvekst Kalkulator</a></li><li><a href="/verktoy/terningkaster">Terningkaster</a></li></ul></div>
+      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/revers-kalkulator">Revers Kalkulator</a></li><li><a href="/verktoy/rasjonelle-nullpunkter-kalkulator">Rasjonelle Nullpunkter Kalkulator</a></li><li><a href="/verktoy/utvidet-form-kalkulator">Utvidet Form Kalkulator</a></li><li><a href="/verktoy/logaritme-med-base-2-kalkulator">Logaritme med base 2 Kalkulator</a></li><li><a href="/verktoy/forenkling-av-radikaler-kalkulator">Forenkling av Radikaler Kalkulator</a></li><li><a href="/verktoy/restkalkulator">Restkalkulator</a></li><li><a href="/verktoy/binar-subtraksjonskalkulator">Binær Subtraksjonskalkulator</a></li><li><a href="/verktoy/foil-kalkulator">FOIL Kalkulator</a></li></ul></div>
+      <div class="footer-col"><h4>Info</h4><ul><li><a href="/om-oss">Om oss</a></li><li><a href="/personvern">Personvern</a></li><li><a href="/kontakt">Kontakt</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Kalkulator24 — Alle kalkulatorer er gratis</p></div>
+  </div>
+</footer>
+<script>
+function toggleMenu(){var m=document.getElementById("mobileMenu");m.classList.toggle("open");}
+document.addEventListener("click",function(e){var m=document.getElementById("mobileMenu");var b=document.getElementById("hamburgerBtn");if(m&&b&&!m.contains(e.target)&&!b.contains(e.target))m.classList.remove("open");});
+</script>
+<script src="/assets/js/calc.js"></script>
+</body></html>

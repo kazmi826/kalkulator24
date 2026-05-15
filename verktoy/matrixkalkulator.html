@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matrisekalkulator — Gratis Online Kalkulator | Kalkulator24</title>
+  <meta name="description" content="Beregn determinanten, inversen, rangen og egenverdiene til en matrise. — Gratis kalkulator online">
+  <meta name="keywords" content="matrise, determinant, invers, rang, egenverdi, matrisekalkulator, lineær algebra">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="Norwegian">
+  <meta name="google-site-verification" content="U-ZiCQHLID9ShjKIWBJI0Xi7xJDNrx9bwP4tRBEYzSQ">
+  <meta name="theme-color" content="#2563eb">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Matrisekalkulator — Gratis Online Kalkulator | Kalkulator24">
+  <meta property="og:description" content="Beregn determinanten, inversen, rangen og egenverdiene til en matrise. — Gratis kalkulator online">
+  <meta property="og:url" content="https://kalkulator24.guru/verktoy/matrixkalkulator">
+  <meta property="og:locale" content="nb_NO">
+  <link rel="canonical" href="https://kalkulator24.guru/verktoy/matrixkalkulator">
+  <link rel="alternate" hreflang="nb" href="https://kalkulator24.guru/verktoy/matrixkalkulator">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+</head>
+<body>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Matrisekalkulator","description":"Beregn determinanten, inversen, rangen og egenverdiene til en matrise.","url":"https://kalkulator24.guru/verktoy/matrixkalkulator","applicationCategory":"UtilityApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"NOK"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Hjem","item":"https://kalkulator24.guru"},{"@type":"ListItem","position":2,"name":"Matematikk","item":"https://kalkulator24.guru/kategori/matematikk"},{"@type":"ListItem","position":3,"name":"Matrisekalkulator","item":"https://kalkulator24.guru/verktoy/matrixkalkulator"}]}</script>
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="/" class="logo">Kalkulator24</a>
+    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="active">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li><li><a href="/kategori/odds" class="">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi" class="">🌱 Økologi</a></li><li><a href="/kategori/bolig" class="">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk" class="">🎵 Musikk</a></li><li><a href="/kategori/teknologi" class="">💻 Teknologi</a></li><li><a href="/kategori/ki" class="">🤖 Kunstig Intelligens</a></li></ul>
+    <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">☰</button>
+  </div>
+  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="active">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li><li><a href="/kategori/odds" class="">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi" class="">🌱 Økologi</a></li><li><a href="/kategori/bolig" class="">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk" class="">🎵 Musikk</a></li><li><a href="/kategori/teknologi" class="">💻 Teknologi</a></li><li><a href="/kategori/ki" class="">🤖 Kunstig Intelligens</a></li></ul></div>
+</nav>
+<div class="breadcrumb"><a href="/">Hjem</a><span class="sep">›</span><a href="/kategori/matematikk">Matematikk</a><span class="sep">›</span>Matrisekalkulator</div>
+<div class="tool-hero"><div class="tool-badge">📐 Matematikk</div><h1>Matrisekalkulator</h1><p class="subtitle">Beregn determinanten, inversen, rangen og egenverdiene til en matrise. — raskt og gratis</p></div>
+<div class="main-wrap">
+  <div class="main-content">
+    <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>Matrise (radvis, semikolon-separert)</label><div class="input-row"><input type="text" class="calc-input" data-field="matrix_input" placeholder="f.eks. 1,2;3,4"></div></div></div>    <button class="btn-calc" onclick="runCalculator('matrix_calculator')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
+    <div class="content-card"><h2>Hva er en matrisekalkulator?</h2>
+<p>En <strong>matrisekalkulator</strong> er et digitalt verktøy designet for å utføre matematiske operasjoner på matriser. Matriser er rektangulære tabeller med tall, symboler eller uttrykk, arrangert i rader og kolonner. I stedet for å manuelt regne ut komplekse operasjoner som addisjon, subtraksjon, multiplikasjon, inversjon eller determinantberegning, kan du bruke en <strong>matrisekalkulator</strong> for å få raske og nøyaktige resultater. Verktøyet er spesielt nyttig innen lineær algebra, fysikk, datavitenskap og økonomi, der matriser ofte brukes til å modellere systemer og løse ligninger.</p>
+<p>En typisk <strong>matrisekalkulator</strong> lar deg taste inn matriser manuelt eller importere dem fra regneark, og deretter velge ønsket operasjon. Mange avanserte kalkulatorer støtter også symbolsk beregning, noe som betyr at de kan håndtere variabler i stedet for bare tall. Dette gjør dem uvurderlige for studenter, ingeniører og forskere som trenger å utføre repeterende eller tidkrevende matriseberegninger.</p>
+<p>Det finnes både nettbaserte <strong>matrisekalkulator</strong>-verktøy og programvare som kan installeres lokalt. De fleste nettbaserte versjoner er gratis og krever ingen nedlasting, noe som gjør dem tilgjengelige for alle med internettforbindelse. Uansett hvilken type du velger, er målet det samme: å forenkle og akselerere arbeidet med matriser.</p>
+
+<h2>Hvorfor er en matrisekalkulator viktig?</h2>
+<p>Matriser er fundamentale i mange fagområder, men manuelle beregninger kan være både tidkrevende og feilutsatte, spesielt når matrisene er store eller inneholder desimaltall. En <strong>matrisekalkulator</strong> eliminerer risikoen for regnefeil og sparer verdifull tid. I utdanningssammenheng lar den studenter fokusere på konseptene i stedet for mekanisk regning, noe som fremmer dypere forståelse av lineær algebra.</p>
+<p>I profesjonelle sammenhenger, som i ingeniørfag eller dataanalyse, er nøyaktighet avgjørende. En feil i en matriseoperasjon kan føre til feilaktige konklusjoner i simuleringer eller økonomiske modeller. En <strong>matrisekalkulator</strong> sikrer at resultatene er korrekte, samtidig som den håndterer komplekse operasjoner som egenverdiberegning eller singulærverdidekomponering (SVD) på sekunder. Dette gjør den til et uunnværlig verktøy for optimalisering av arbeidsflyter.</p>
+<p>Videre er <strong>matrisekalkulator</strong> viktig fordi den demokratiserer avansert matematikk. Tidligere krevde matriseberegninger dyp kunnskap om algoritmer og ofte tilgang til dyre programvarepakker. I dag kan hvem som helst med en nettleser utføre de samme beregningene gratis. Dette senker terskelen for læring og innovasjon, spesielt for studenter i utviklingsland eller for hobbyentusiaster som utforsker kunstig intelligens eller 3D-grafikk.</p>
+
+<h2>Slik bruker du en matrisekalkulator</h2>
+<p>Å bruke en <strong>matrisekalkulator</strong> er enkelt, men det krever at du forstår grunnleggende matriseterminologi. Følg denne trinnvise veiledningen for å komme i gang:</p>
+<ul>
+<li><strong>Trinn 1: Velg dimensjoner.</strong> Angi antall rader og kolonner for matrisen din. For eksempel kan du lage en 2x2-matrise (2 rader, 2 kolonner) eller en 3x3-matrise.</li>
+<li><strong>Trinn 2: Fyll inn verdier.</strong> Skriv inn tallene i hver celle. De fleste <strong>matrisekalkulator</strong>-verktøy lar deg også kopiere og lime inn data fra regneark.</li>
+<li><strong>Trinn 3: Velg operasjon.</strong> Velg om du vil addere, subtrahere, multiplisere, finne determinanten, inversen eller transponere matrisen. Noen verktøy tilbyr også mer avanserte funksjoner som LU-dekomponering.</li>
+<li><strong>Trinn 4: Utfør beregningen.</strong> Klikk på "Beregn" eller tilsvarende knapp. Resultatet vises umiddelbart, ofte med mellomregning for å vise fremgangsmåten.</li>
+<li><strong>Trinn 5: Tolk resultatet.</strong> Sjekk at dimensjonene stemmer overens med forventningene. For multiplikasjon må antall kolonner i første matrise være lik antall rader i andre.</li>
+</ul>
+<p>Ved å følge disse stegene kan du effektivt bruke en <strong>matrisekalkulator</strong> til å løse alt fra enkle likningssystemer til komplekse lineære transformasjoner.</p>
+
+<h2>Formel med eksempel: Matrisemultiplikasjon</h2>
+<p>En av de vanligste operasjonene i en <strong>matrisekalkulator</strong> er matrisemultiplikasjon. Formelen for å multiplisere to matriser A (m x n) og B (n x p) er: C_ij = Σ (A_ik * B_kj) for k = 1 til n. Dette betyr at elementet i rad i og kolonne j i resultatmatrisen C er summen av produktene av elementene fra rad i i A og kolonne j i B.</p>
+<p><strong>Eksempel:</strong> La oss multiplisere matrise A (2x2) og matrise B (2x2):</p>
+<ul>
+<li>A = [[1, 2], [3, 4]]</li>
+<li>B = [[5, 6], [7, 8]]</li>
+</ul>
+<p>Beregning med en <strong>matrisekalkulator</strong>:</p>
+<ul>
+<li>C_11 = (1*5) + (2*7) = 5 + 14 = 19</li>
+<li>C_12 = (1*6) + (2*8) = 6 + 16 = 22</li>
+<li>C_21 = (3*5) + (4*7) = 15 + 28 = 43</li>
+<li>C_22 = (3*6) + (4*8) = 18 + 32 = 50</li>
+</ul>
+<p>Resultatet er C = [[19, 22], [43, 50]]. Uten en <strong>matrisekalkulator</strong> ville denne beregningen tatt lengre tid og vært mer utsatt for feil, spesielt med større matriser.</p>
+
+<h2>Praktiske eksempler på bruk av matrisekalkulator</h2>
+<p><strong>Eksempel 1: Løse lineære likningssystemer.</strong> Anta at du har systemet: 2x + 3y = 8 og 4x - y = 2. Dette kan representeres som en matriseligning AX = B, der A = [[2, 3], [4, -1]], X = [[x], [y]] og B = [[8], [2]]. Ved å bruke en <strong>matrisekalkulator</strong> til å finne inversen av A og multiplisere med B, får du løsningen x = 1, y = 2.</p>
+<p><strong>Eksempel 2: Transformasjon i 3D-grafikk.</strong> I dataspill brukes matriser til å rotere, skalere og flytte objekter. En <strong>matrisekalkulator</strong> kan raskt beregne den kombinerte transformasjonsmatrisen ved å multiplisere rotasjons- og translasjonsmatriser, slik at utviklere kan teste effektene uten å skrive kompleks kode.</p>
+<p><strong>Eksempel 3: Økonomisk porteføljeanalyse.</strong> En investor kan bruke en <strong>matrisekalkulator</strong> til å beregne kovariansmatrisen for flere aksjer, noe som er avgjørende for risikostyring og optimalisering av porteføljevekter. Manuelle beregninger av kovarians for 10 aksjer ville være svært tidkrevende, men en kalkulator gjør det på sekunder.</p>
+
+<h2>Tips for effektiv bruk av matrisekalkulator</h2>
+<ul>
+<li><strong>Kontroller dimensjoner:</strong> Før du utfører operasjoner, sørg for at matrisene har kompatible dimensjoner. For multiplikasjon må antall kolonner i første matrise være lik antall rader i andre.</li>
+<li><strong>Bruk brøker og desimaler:</strong> Mange <strong>matrisekalkulator</strong>-verktøy støtter brøkformatering. Bruk dette for å unngå avrundingsfeil i mellomregninger.</li>
+<li><strong>Lagre mellomresultater:</strong> Hvis du jobber med flere operasjoner, noter ned eller lagre resultatene i kalkulatoren for å unngå å taste inn på nytt.</li>
+<li><strong>Test med små matriser:</strong> Før du stoler på resultatet for store matriser, test verktøyet med enkle 2x2-matriser der du kjenner svaret på forhånd.</li>
+<li><strong>Utforsk avanserte funksjoner:</strong> Ikke nøl med å prøve funksjoner som egenverdier, QR-dekomponering eller rangberegning. Disse kan gi innsikt i dataene dine som enkle operasjoner ikke kan.</li>
+</ul>
+
+<h2>FAQ - Ofte stilte spørsmål om matrisekalkulator</h2>
+<p><strong>Spørsmål 1: Hva er forskjellen på en matrisekalkulator og en vanlig kalkulator?</strong><br>En vanlig kalkulator håndterer enkelt tall og grunnleggende aritmetikk, mens en <strong>matrisekalkulator</strong> er spesialisert på matriseoperasjoner som addisjon, multiplikasjon og inversjon. Den kan håndtere flere tall samtidig og utføre komplekse lineære algebra-beregninger.</p>
+<p><strong>Spørsmål 2: Kan jeg bruke en matrisekalkulator til å løse ligningssystemer?</strong><br>Ja, absolutt. Ved å representere ligningssystemet som en matriseligning AX = B, kan du bruke en <strong>matrisekalkulator</strong> til å finne løsningen via inversjon eller Gauss-eliminasjon. Dette er en av de vanligste bruksområdene.</p>
+<p><strong>Spørsmål 3: Er nettbaserte matrisekalkulatorer trygge å bruke?</strong><br>De fleste anerkjente nettbaserte <strong>matrisekalkulator</strong>-verktøy er trygge, men unngå å taste inn sensitiv informasjon. For sensitive data, bruk programvare som kjører lokalt på datamaskinen din. Sjekk alltid personvernerklæringen.</p>
+<p><strong>Spørsmål 4: Hvorfor får jeg feilmelding når jeg multipliserer matriser?</strong><br>Feilmeldingen skyldes nesten alltid uoverensstemmende dimensjoner. For eksempel kan du ikke multiplisere en 3x2-matrise med en 3x3-matrise. Sjekk at antall kolonner i den første matrisen matcher antall rader i den andre.</p>
+<p><strong>Spørsmål 5: Kan en matrisekalkulator hånd</div>
+    <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/prosent-kalkulator'"><span class="tool-card-icon">📐</span><h3>Prosent Kalkulator</h3><p>Beregn prosent med flere metoder og sammenligninger</p></div><div class="tool-card" onclick="location='/verktoy/kvadratrot-kalkulator'"><span class="tool-card-icon">📐</span><h3>Kvadratrot Kalkulator</h3><p>Beregn kvadratroter og andre røtter</p></div><div class="tool-card" onclick="location='/verktoy/potens-kalkulator'"><span class="tool-card-icon">📐</span><h3>Potens Kalkulator</h3><p>Beregn potens av tall med store eksponenter</p></div><div class="tool-card" onclick="location='/verktoy/brøk-kalkulator'"><span class="tool-card-icon">📐</span><h3>Brøk Kalkulator</h3><p>Beregn med brøker og forenkle resultater</p></div><div class="tool-card" onclick="location='/verktoy/gjennomsnitt-kalkulator'"><span class="tool-card-icon">📐</span><h3>Gjennomsnitt Kalkulator</h3><p>Beregn gjennomsnitt og statistiske mål</p></div><div class="tool-card" onclick="location='/verktoy/logaritme-kalkulator'"><span class="tool-card-icon">📐</span><h3>Logaritme Kalkulator</h3><p>Beregn logaritmer og eksponentialfunksjoner</p></div><div class="tool-card" onclick="location='/verktoy/primtall-kalkulator'"><span class="tool-card-icon">📐</span><h3>Primtall Kalkulator</h3><p>Finn primtall og faktoriser tall</p></div><div class="tool-card" onclick="location='/verktoy/fakultet-kalkulator'"><span class="tool-card-icon">📐</span><h3>Fakultet Kalkulator</h3><p>Beregn fakultet av tall</p></div><div class="tool-card" onclick="location='/verktoy/kombinasjon-kalkulator'"><span class="tool-card-icon">📐</span><h3>Kombinasjon Kalkulator</h3><p>Beregn antall kombinasjoner</p></div><div class="tool-card" onclick="location='/verktoy/permutasjon-kalkulator'"><span class="tool-card-icon">📐</span><h3>Permutasjon Kalkulator</h3><p>Beregn antall permutasjoner</p></div><div class="tool-card" onclick="location='/verktoy/gcd-kalkulator'"><span class="tool-card-icon">📐</span><h3>Største Felles Divisor Kalkulator</h3><p>Finn største felles divisor (SFD)</p></div><div class="tool-card" onclick="location='/verktoy/lcm-kalkulator'"><span class="tool-card-icon">📐</span><h3>Minste Felles Multiplum Kalkulator</h3><p>Finn minste felles multiplum (MFM)</p></div><div class="tool-card" onclick="location='/kategori/matematikk'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle Matematikk</h3><p>Alle kalkulatorer i denne kategorien</p></div></div></div>
+    <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/lan-kalkulator'"><span class="tool-card-icon">💰</span><h3>Lån Kalkulator</h3><p>Beregn månedlige låneavdrag med nedbetalingsoversikt</p></div><div class="tool-card" onclick="location='/verktoy/temperatur-konvertering'"><span class="tool-card-icon">🔄</span><h3>Temperatur Konvertering</h3><p>Konverter temperatur mellom alle enheter</p></div><div class="tool-card" onclick="location='/verktoy/areal-kalkulator'"><span class="tool-card-icon">📏</span><h3>Areal Kalkulator</h3><p>Beregn areal av ulike former med enheter</p></div><div class="tool-card" onclick="location='/verktoy/alder-kalkulator'"><span class="tool-card-icon">📅</span><h3>Alder Kalkulator</h3><p>Beregn nøyaktig alder med sammenligning og statistikk</p></div><div class="tool-card" onclick="location='/verktoy/fart-kalkulator'"><span class="tool-card-icon">⚡</span><h3>Fart Kalkulator</h3><p>Beregn fart, distanse og tid med enhetskonvertering og drivstoffestimat</p></div></div></div>
+  </div>
+  <aside class="sidebar">
+    <div class="sidebar-card"><h3>Matematikk kalkulatorer</h3><ul class="sidebar-links"><li><a href="/verktoy/prosent-kalkulator"><span class="icon">📐</span>Prosent Kalkulator</a></li><li><a href="/verktoy/kvadratrot-kalkulator"><span class="icon">📐</span>Kvadratrot Kalkulator</a></li><li><a href="/verktoy/potens-kalkulator"><span class="icon">📐</span>Potens Kalkulator</a></li><li><a href="/verktoy/brøk-kalkulator"><span class="icon">📐</span>Brøk Kalkulator</a></li><li><a href="/verktoy/gjennomsnitt-kalkulator"><span class="icon">📐</span>Gjennomsnitt Kalkulator</a></li><li><a href="/verktoy/logaritme-kalkulator"><span class="icon">📐</span>Logaritme Kalkulator</a></li><li><a href="/verktoy/primtall-kalkulator"><span class="icon">📐</span>Primtall Kalkulator</a></li><li><a href="/verktoy/fakultet-kalkulator"><span class="icon">📐</span>Fakultet Kalkulator</a></li><li><a href="/kategori/matematikk" style="color:var(--primary)">Se alle Matematikk →</a></li></ul></div>
+    <div class="sidebar-card"><h3>Populære verktøy</h3><ul class="sidebar-links"><li><a href="/verktoy/bmi-kalkulator"><span class="icon">❤️</span>BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator"><span class="icon">💰</span>Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator"><span class="icon">📐</span>Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator"><span class="icon">📅</span>Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator"><span class="icon">❤️</span>Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator"><span class="icon">⚗️</span>pH Kalkulator</a></li></ul></div>
+  </aside>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">678+ gratis kalkulatorer</p></div>
+      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li><li><a href="/kategori/krypto">₿ Krypto</a></li><li><a href="/kategori/spill">🎮 Spill</a></li><li><a href="/kategori/odds">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi">🌱 Økologi</a></li><li><a href="/kategori/bolig">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk">🎵 Musikk</a></li><li><a href="/kategori/teknologi">💻 Teknologi</a></li><li><a href="/kategori/ki">🤖 Kunstig Intelligens</a></li></ul></div>
+      <div class="footer-col"><h4>Populære</h4><ul><li><a href="/verktoy/bmi-kalkulator">BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator">Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator">Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator">Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator">Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator">pH Kalkulator</a></li><li><a href="/verktoy/molekylvekt-kalkulator">Molekylvektkalkulator</a></li><li><a href="/verktoy/halveringstid-kalkulator">Halveringstid Kalkulator</a></li><li><a href="/verktoy/befolkningsvekst-kalkulator">Befolkningsvekst Kalkulator</a></li><li><a href="/verktoy/terningkaster">Terningkaster</a></li></ul></div>
+      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/revers-kalkulator">Revers Kalkulator</a></li><li><a href="/verktoy/rasjonelle-nullpunkter-kalkulator">Rasjonelle Nullpunkter Kalkulator</a></li><li><a href="/verktoy/utvidet-form-kalkulator">Utvidet Form Kalkulator</a></li><li><a href="/verktoy/logaritme-med-base-2-kalkulator">Logaritme med base 2 Kalkulator</a></li><li><a href="/verktoy/forenkling-av-radikaler-kalkulator">Forenkling av Radikaler Kalkulator</a></li><li><a href="/verktoy/restkalkulator">Restkalkulator</a></li><li><a href="/verktoy/binar-subtraksjonskalkulator">Binær Subtraksjonskalkulator</a></li><li><a href="/verktoy/foil-kalkulator">FOIL Kalkulator</a></li></ul></div>
+      <div class="footer-col"><h4>Info</h4><ul><li><a href="/om-oss">Om oss</a></li><li><a href="/personvern">Personvern</a></li><li><a href="/kontakt">Kontakt</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Kalkulator24 — Alle kalkulatorer er gratis</p></div>
+  </div>
+</footer>
+<script>
+function toggleMenu(){var m=document.getElementById("mobileMenu");m.classList.toggle("open");}
+document.addEventListener("click",function(e){var m=document.getElementById("mobileMenu");var b=document.getElementById("hamburgerBtn");if(m&&b&&!m.contains(e.target)&&!b.contains(e.target))m.classList.remove("open");});
+</script>
+<script src="/assets/js/calc.js"></script>
+</body></html>

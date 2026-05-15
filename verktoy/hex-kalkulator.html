@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hex Kalkulator — Gratis Online Kalkulator | Kalkulator24</title>
+  <meta name="description" content="Konverter og regn med heksadesimale tall. Støtter addisjon, subtraksjon, multiplikasjon og divisjon. — Gratis kalkulator online">
+  <meta name="keywords" content="hex kalkulator, heksadesimal, base 16, konvertering, addisjon, subtraksjon, multiplikasjon, divisjon, programmering, data">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="Norwegian">
+  <meta name="google-site-verification" content="U-ZiCQHLID9ShjKIWBJI0Xi7xJDNrx9bwP4tRBEYzSQ">
+  <meta name="theme-color" content="#2563eb">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hex Kalkulator — Gratis Online Kalkulator | Kalkulator24">
+  <meta property="og:description" content="Konverter og regn med heksadesimale tall. Støtter addisjon, subtraksjon, multiplikasjon og divisjon. — Gratis kalkulator online">
+  <meta property="og:url" content="https://kalkulator24.guru/verktoy/hex-kalkulator">
+  <meta property="og:locale" content="nb_NO">
+  <link rel="canonical" href="https://kalkulator24.guru/verktoy/hex-kalkulator">
+  <link rel="alternate" hreflang="nb" href="https://kalkulator24.guru/verktoy/hex-kalkulator">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+</head>
+<body>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Hex Kalkulator","description":"Konverter og regn med heksadesimale tall. Støtter addisjon, subtraksjon, multiplikasjon og divisjon.","url":"https://kalkulator24.guru/verktoy/hex-kalkulator","applicationCategory":"UtilityApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"NOK"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Hjem","item":"https://kalkulator24.guru"},{"@type":"ListItem","position":2,"name":"Matematikk","item":"https://kalkulator24.guru/kategori/matematikk"},{"@type":"ListItem","position":3,"name":"Hex Kalkulator","item":"https://kalkulator24.guru/verktoy/hex-kalkulator"}]}</script>
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="/" class="logo">Kalkulator24</a>
+    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="active">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li><li><a href="/kategori/odds" class="">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi" class="">🌱 Økologi</a></li><li><a href="/kategori/bolig" class="">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk" class="">🎵 Musikk</a></li><li><a href="/kategori/teknologi" class="">💻 Teknologi</a></li><li><a href="/kategori/ki" class="">🤖 Kunstig Intelligens</a></li></ul>
+    <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">☰</button>
+  </div>
+  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="active">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li><li><a href="/kategori/odds" class="">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi" class="">🌱 Økologi</a></li><li><a href="/kategori/bolig" class="">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk" class="">🎵 Musikk</a></li><li><a href="/kategori/teknologi" class="">💻 Teknologi</a></li><li><a href="/kategori/ki" class="">🤖 Kunstig Intelligens</a></li></ul></div>
+</nav>
+<div class="breadcrumb"><a href="/">Hjem</a><span class="sep">›</span><a href="/kategori/matematikk">Matematikk</a><span class="sep">›</span>Hex Kalkulator</div>
+<div class="tool-hero"><div class="tool-badge">📐 Matematikk</div><h1>Hex Kalkulator</h1><p class="subtitle">Konverter og regn med heksadesimale tall. Støtter addisjon, subtraksjon, multiplikasjon og divisjon. — raskt og gratis</p></div>
+<div class="main-wrap">
+  <div class="main-content">
+    <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>Første heksadesimale tall</label><div class="input-row"><input type="text" class="calc-input" data-field="hex1" placeholder="f.eks. 1A3F"></div></div><div class="input-group"><label>Andre heksadesimale tall</label><div class="input-row"><input type="text" class="calc-input" data-field="hex2" placeholder="f.eks. B4"></div></div><div class="input-group"><label>Operasjon</label><div class="input-row"><select class="calc-input" data-field="operation"><option value="Addisjon (+)">Addisjon (+)</option><option value="Subtraksjon (-)">Subtraksjon (-)</option><option value="Multiplikasjon (×)">Multiplikasjon (×)</option><option value="Divisjon (÷)">Divisjon (÷)</option></select></div></div></div>    <button class="btn-calc" onclick="runCalculator('hex_calculator')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
+    <div class="content-card">Her er en SEO-optimalisert HTML-artikkel på norsk om "Hex Kalkulator", med de spesifiserte seksjonene, nøkkelordet brukt 8 ganger, og kun tillatte HTML-tagger.
+
+```html
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hex Kalkulator – Hva er det, hvordan bruke den og praktiske eksempler</title>
+    <meta name="description" content="Lær alt om hex kalkulator: hva det er, hvorfor det er viktig, formel med eksempel, praktisk bruk og tips. Perfekt for programmerere og dataentusiaster.">
+</head>
+<body>
+
+    <h2>Hva er en hex kalkulator?</h2>
+    <p>
+        En <strong>hex kalkulator</strong> er et verktøy som utfører aritmetiske og logiske operasjoner på tall i det heksadesimale tallsystemet (base 16). 
+        I motsetning til desimale kalkulatorer som bruker sifrene 0–9, bruker en hex kalkulator sifrene 0–9 og bokstavene A–F (hvor A=10, B=11, C=12, D=13, E=14, F=15). 
+        Dette gjør den uunnværlig for utviklere, dataingeniører og alle som jobber med minneadresser, fargekoder i webdesign, maskinkode eller registerverdier.
+    </p>
+    <p>
+        En <strong>hex kalkulator</strong> kan konvertere mellom heksadesimale, desimale, binære og oktale tall, samt utføre addisjon, subtraksjon, multiplikasjon, divisjon, 
+        og bitvise operasjoner som AND, OR, XOR og NOT. Mange avanserte hex kalkulatorer inkluderer også støtte for flyttall og minnebufferanalyse.
+    </p>
+
+    <h2>Hvorfor er en hex kalkulator viktig?</h2>
+    <p>
+        I en digital verden hvor datamaskiner kommuniserer på binært nivå, er <strong>hex kalkulator</strong> et kritisk verktøy for å oversette mellom menneskelig lesbare tall og maskinforståelige formater. 
+        Her er noen grunner til at den er uunnværlig:
+    </p>
+    <ul>
+        <li><strong>Feilsøking i programmering:</strong> Når du debugger minnelekkasjer eller leser stack-traces, vises adresser ofte i hex. En hex kalkulator lar deg raskt regne ut offset og absolutte adresser.</li>
+        <li><strong>Nettverksprotokoller:</strong> IP-adresser, MAC-adresser og pakkeheadere er ofte representert i heksadesimalt format. Kalkulatoren hjelper med å tolke og manipulere disse.</li>
+        <li><strong>Webdesign og farger:</strong> HTML- og CSS-fargekoder som #FF5733 er hex-verdier. Med en hex kalkulator kan du blande farger eller konvertere til RGB.</li>
+        <li><strong>Embedded systemer:</strong> Mikrokontrollere og FPGA-konfigurasjoner krever ofte hex-representasjon av minneinnhold og registre.</li>
+        <li><strong>Kryptografi og sikkerhet:</strong> Hash-verdier, nøkler og sifre lagres og vises som hex-strenger. En hex kalkulator muliggjør rask validering og transformasjon.</li>
+    </ul>
+    <p>
+        Uten en <strong>hex kalkulator</strong> ville mange oppgaver innen IT og elektronikk vært betydelig mer tidkrevende og feilutsatte.
+    </p>
+
+    <h2>Slik bruker du en hex kalkulator</h2>
+    <p>
+        De fleste hex kalkulatorer har et enkelt grensesnitt. Slik kommer du i gang:
+    </p>
+    <ul>
+        <li><strong>Velg tallsystem:</strong> De fleste kalkulatorer har knapper for HEX, DEC, BIN og OCT. Velg HEX for inndata.</li>
+        <li><strong>Skriv inn tall:</strong> Bruk tastene 0-9 og A-F. For eksempel: “1A3F”.</li>
+        <li><strong>Velg operasjon:</strong> Trykk på +, -, *, / for aritmetikk, eller AND, OR, XOR for bitvise operasjoner.</li>
+        <li><strong>Legg til neste tall:</strong> Skriv inn det andre hex-tallet.</li>
+        <li><strong>Vis resultat:</strong> Kalkulatoren viser svaret i hex, men du kan ofte veksle til desimal eller binær for å dobbeltsjekke.</li>
+    </ul>
+    <p>
+        Mange online hex kalkulatorer har også en “konverteringsmodus” hvor du kan lime inn en hex-streng og få desimalverdi umiddelbart.
+    </p>
+
+    <h2>Formel med eksempel</h2>
+    <p>
+        For å forstå hvordan en <strong>hex kalkulator</strong> regner, må vi se på konverteringsformelen. Hvert siffer i et hex-tall har en vekt på 16^n, hvor n er posisjonen fra høyre (startende på 0).
+    </p>
+    <p><strong>Formel:</strong> Desimalverdi = (d<sub>n</sub> × 16<sup>n</sup>) + (d<sub>n-1</sub> × 16<sup>n-1</sup>) + … + (d<sub>0</sub> × 16<sup>0</sup>)</p>
+    <p><strong>Eksempel:</strong> Konverter hex-tallet “2F” til desimal.</p>
+    <ul>
+        <li>“2” står i posisjon 1 (16<sup>1</sup>): 2 × 16 = 32</li>
+        <li>“F” står i posisjon 0 (16<sup>0</sup>): 15 × 1 = 15</li>
+        <li>Sum: 32 + 15 = 47 desimal</li>
+    </ul>
+    <p>
+        En hex kalkulator gjør dette automatisk, men forståelse av formelen hjelper deg å verifisere resultater og jobbe mer effektivt.
+    </p>
+
+    <h2>Praktiske eksempler</h2>
+    <h3>Eksempel 1: Minneadresseberegning</h3>
+    <p>
+        Du har en minneadresse 0x7FFF og en offset på 0x100. Hva er den resulterende adressen? 
+        Bruk en <strong>hex kalkulator</strong>: 0x7FFF + 0x100 = 0x80FF. Dette er avgjørende når du jobber med pekere i C eller assembler.
+    </p>
+    <h3>Eksempel 2: Fargeblanding i webdesign</h3>
+    <p>
+        Du har fargen #FF5733 (rød-oransje) og vil legge til en blå tone. Konverter til hex: R=FF, G=57, B=33. 
+        Legg til 0x40 på blåkanalen: 0x33 + 0x40 = 0x73. Ny farge: #FF5773. En hex kalkulator gjør dette raskt.
+    </p>
+    <h3>Eksempel 3: Bitvis operasjon for maskering</h3>
+    <p>
+        Du har en registerverdi 0xABCD og vil maskere bort de 4 minst signifikante bitene. Bruk AND med 0xFFF0: 
+        0xABCD AND 0xFFF0 = 0xABC0. Dette er typisk i embedded systemer.
+    </p>
+
+    <h2>Tips for effektiv bruk av hex kalkulator</h2>
+    <ul>
+        <li><strong>Lær deg vanlige konverteringer utenat:</strong> For eksempel at 0xFF = 255, 0x100 = 256, 0xA = 10. Dette sparer tid.</li>
+        <li><strong>Bruk parenteser ved komplekse uttrykk:</strong> Noen hex kalkulatorer støtter flerleddete operasjoner; bruk parenteser for å sikre riktig rekkefølge.</li>
+        <li><strong>Dobbeltsjekk med desimalmodus:</strong> Hvis du er usikker på et resultat, bytt til desimalvisning for å verifisere at summen stemmer.</li>
+        <li><strong>Utforsk bitvise operasjoner:</strong> AND, OR, XOR er svært nyttige for flagg og maskering. Prøv å sette en bit med OR, eller nullstille med AND.</li>
+        <li><strong>Lagre ofte brukte verdier:</strong> Mange hex kalkulatorer har minnefunksjon (M+, MR). Bruk den for å holde styr på konstanter som minneadresser.</li>
+        <li><strong>Forstå to-komplement:</strong> Negative tall i hex vises ofte som to-komplement. En god hex kalkulator håndterer dette automatisk.</li>
+    </ul>
+
+    <h2>FAQ – Ofte stilte spørsmål om hex kalkulator</h2>
+    <h3>1. Hva er forskjellen mellom en hex kalkulator og en vanlig kalkulator?</h3>
+    <p>
+        En vanlig kalkulator jobber i base 10 (desimal), mens en <strong>hex kalkulator</strong> jobber i base 16. 
+        I tillegg støtter hex kalkulatoren bokstavene A-F og bitvise operasjoner som ikke finnes på standard kalkulatorer.
+    </p>
+    <h3>2. Kan jeg bruke en hex kalkulator til å konvertere fargekoder?</h3>
+    <p>
+        Ja, absolutt. En <strong>hex kalkulator</strong> kan konvertere mellom hex-farger (som #FF0000) og RGB-verdier (255,0,0). 
+        Du kan også legge til eller trekke fra fargekomponenter for å lage nye nyanser.
+    </p>
+    <h3>3. Hvordan regner jeg ut to-komplement i en hex kalkulator?</h3>
+    <p>
+        For å finne to-komplement av et hex-tall, inverter alle bitene (bruk NOT-operasjonen) og legg til 1. 
+        For eksempel: 0x0001 blir 0xFFFE + 1 = 0xFFFF. Mange hex kalkulatorer har en dedikert “NEG” eller “2’s complement” knapp.
+    </p>
+    <h3>4. Er det gratis hex kalkulatorer på nettet?</h3>
+    <p>
+        Ja, det finnes mange gratis online hex kalkulatorer. Søk etter “hex kalkulator” i nettleseren din, 
+        og du vil finne verktøy som tilbyr både grunnleggende og avanserte funksjoner uten kostnad.
+    </p>
+    <h3>5. Hva er den største feilen nybegynnere gjør med hex kalkulator?</h3>
+    <p>
+        Den vanligste feilen er å blande tallsystemer – for eksempel å skrive inn desimale tall når kalkulatoren forventer hex, 
+        eller å glemme at bokstaver som “A” representerer tall. Alltid sjekk at innstillingen er satt til HEX før du starter.
+    </p>
+
+</body>
+</html>
+```</div>
+    <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/prosent-kalkulator'"><span class="tool-card-icon">📐</span><h3>Prosent Kalkulator</h3><p>Beregn prosent med flere metoder og sammenligninger</p></div><div class="tool-card" onclick="location='/verktoy/kvadratrot-kalkulator'"><span class="tool-card-icon">📐</span><h3>Kvadratrot Kalkulator</h3><p>Beregn kvadratroter og andre røtter</p></div><div class="tool-card" onclick="location='/verktoy/potens-kalkulator'"><span class="tool-card-icon">📐</span><h3>Potens Kalkulator</h3><p>Beregn potens av tall med store eksponenter</p></div><div class="tool-card" onclick="location='/verktoy/brøk-kalkulator'"><span class="tool-card-icon">📐</span><h3>Brøk Kalkulator</h3><p>Beregn med brøker og forenkle resultater</p></div><div class="tool-card" onclick="location='/verktoy/gjennomsnitt-kalkulator'"><span class="tool-card-icon">📐</span><h3>Gjennomsnitt Kalkulator</h3><p>Beregn gjennomsnitt og statistiske mål</p></div><div class="tool-card" onclick="location='/verktoy/logaritme-kalkulator'"><span class="tool-card-icon">📐</span><h3>Logaritme Kalkulator</h3><p>Beregn logaritmer og eksponentialfunksjoner</p></div><div class="tool-card" onclick="location='/verktoy/primtall-kalkulator'"><span class="tool-card-icon">📐</span><h3>Primtall Kalkulator</h3><p>Finn primtall og faktoriser tall</p></div><div class="tool-card" onclick="location='/verktoy/fakultet-kalkulator'"><span class="tool-card-icon">📐</span><h3>Fakultet Kalkulator</h3><p>Beregn fakultet av tall</p></div><div class="tool-card" onclick="location='/verktoy/kombinasjon-kalkulator'"><span class="tool-card-icon">📐</span><h3>Kombinasjon Kalkulator</h3><p>Beregn antall kombinasjoner</p></div><div class="tool-card" onclick="location='/verktoy/permutasjon-kalkulator'"><span class="tool-card-icon">📐</span><h3>Permutasjon Kalkulator</h3><p>Beregn antall permutasjoner</p></div><div class="tool-card" onclick="location='/verktoy/gcd-kalkulator'"><span class="tool-card-icon">📐</span><h3>Største Felles Divisor Kalkulator</h3><p>Finn største felles divisor (SFD)</p></div><div class="tool-card" onclick="location='/verktoy/lcm-kalkulator'"><span class="tool-card-icon">📐</span><h3>Minste Felles Multiplum Kalkulator</h3><p>Finn minste felles multiplum (MFM)</p></div><div class="tool-card" onclick="location='/kategori/matematikk'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle Matematikk</h3><p>Alle kalkulatorer i denne kategorien</p></div></div></div>
+    <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/lan-kalkulator'"><span class="tool-card-icon">💰</span><h3>Lån Kalkulator</h3><p>Beregn månedlige låneavdrag med nedbetalingsoversikt</p></div><div class="tool-card" onclick="location='/verktoy/temperatur-konvertering'"><span class="tool-card-icon">🔄</span><h3>Temperatur Konvertering</h3><p>Konverter temperatur mellom alle enheter</p></div><div class="tool-card" onclick="location='/verktoy/areal-kalkulator'"><span class="tool-card-icon">📏</span><h3>Areal Kalkulator</h3><p>Beregn areal av ulike former med enheter</p></div><div class="tool-card" onclick="location='/verktoy/alder-kalkulator'"><span class="tool-card-icon">📅</span><h3>Alder Kalkulator</h3><p>Beregn nøyaktig alder med sammenligning og statistikk</p></div><div class="tool-card" onclick="location='/verktoy/fart-kalkulator'"><span class="tool-card-icon">⚡</span><h3>Fart Kalkulator</h3><p>Beregn fart, distanse og tid med enhetskonvertering og drivstoffestimat</p></div></div></div>
+  </div>
+  <aside class="sidebar">
+    <div class="sidebar-card"><h3>Matematikk kalkulatorer</h3><ul class="sidebar-links"><li><a href="/verktoy/prosent-kalkulator"><span class="icon">📐</span>Prosent Kalkulator</a></li><li><a href="/verktoy/kvadratrot-kalkulator"><span class="icon">📐</span>Kvadratrot Kalkulator</a></li><li><a href="/verktoy/potens-kalkulator"><span class="icon">📐</span>Potens Kalkulator</a></li><li><a href="/verktoy/brøk-kalkulator"><span class="icon">📐</span>Brøk Kalkulator</a></li><li><a href="/verktoy/gjennomsnitt-kalkulator"><span class="icon">📐</span>Gjennomsnitt Kalkulator</a></li><li><a href="/verktoy/logaritme-kalkulator"><span class="icon">📐</span>Logaritme Kalkulator</a></li><li><a href="/verktoy/primtall-kalkulator"><span class="icon">📐</span>Primtall Kalkulator</a></li><li><a href="/verktoy/fakultet-kalkulator"><span class="icon">📐</span>Fakultet Kalkulator</a></li><li><a href="/kategori/matematikk" style="color:var(--primary)">Se alle Matematikk →</a></li></ul></div>
+    <div class="sidebar-card"><h3>Populære verktøy</h3><ul class="sidebar-links"><li><a href="/verktoy/bmi-kalkulator"><span class="icon">❤️</span>BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator"><span class="icon">💰</span>Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator"><span class="icon">📐</span>Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator"><span class="icon">📅</span>Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator"><span class="icon">❤️</span>Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator"><span class="icon">⚗️</span>pH Kalkulator</a></li></ul></div>
+  </aside>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">678+ gratis kalkulatorer</p></div>
+      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li><li><a href="/kategori/krypto">₿ Krypto</a></li><li><a href="/kategori/spill">🎮 Spill</a></li><li><a href="/kategori/odds">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi">🌱 Økologi</a></li><li><a href="/kategori/bolig">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk">🎵 Musikk</a></li><li><a href="/kategori/teknologi">💻 Teknologi</a></li><li><a href="/kategori/ki">🤖 Kunstig Intelligens</a></li></ul></div>
+      <div class="footer-col"><h4>Populære</h4><ul><li><a href="/verktoy/bmi-kalkulator">BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator">Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator">Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator">Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator">Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator">pH Kalkulator</a></li><li><a href="/verktoy/molekylvekt-kalkulator">Molekylvektkalkulator</a></li><li><a href="/verktoy/halveringstid-kalkulator">Halveringstid Kalkulator</a></li><li><a href="/verktoy/befolkningsvekst-kalkulator">Befolkningsvekst Kalkulator</a></li><li><a href="/verktoy/terningkaster">Terningkaster</a></li></ul></div>
+      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/revers-kalkulator">Revers Kalkulator</a></li><li><a href="/verktoy/rasjonelle-nullpunkter-kalkulator">Rasjonelle Nullpunkter Kalkulator</a></li><li><a href="/verktoy/utvidet-form-kalkulator">Utvidet Form Kalkulator</a></li><li><a href="/verktoy/logaritme-med-base-2-kalkulator">Logaritme med base 2 Kalkulator</a></li><li><a href="/verktoy/forenkling-av-radikaler-kalkulator">Forenkling av Radikaler Kalkulator</a></li><li><a href="/verktoy/restkalkulator">Restkalkulator</a></li><li><a href="/verktoy/binar-subtraksjonskalkulator">Binær Subtraksjonskalkulator</a></li><li><a href="/verktoy/foil-kalkulator">FOIL Kalkulator</a></li></ul></div>
+      <div class="footer-col"><h4>Info</h4><ul><li><a href="/om-oss">Om oss</a></li><li><a href="/personvern">Personvern</a></li><li><a href="/kontakt">Kontakt</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Kalkulator24 — Alle kalkulatorer er gratis</p></div>
+  </div>
+</footer>
+<script>
+function toggleMenu(){var m=document.getElementById("mobileMenu");m.classList.toggle("open");}
+document.addEventListener("click",function(e){var m=document.getElementById("mobileMenu");var b=document.getElementById("hamburgerBtn");if(m&&b&&!m.contains(e.target)&&!b.contains(e.target))m.classList.remove("open");});
+</script>
+<script src="/assets/js/calc.js"></script>
+</body></html>
