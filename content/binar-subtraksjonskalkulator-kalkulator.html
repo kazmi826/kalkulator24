@@ -1,0 +1,108 @@
+```html
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binær subtraksjonskalkulator – komplett guide</title>
+</head>
+<body>
+
+<h2>Hva er en binær subtraksjonskalkulator?</h2>
+<p>
+    En <strong>binær subtraksjonskalkulator</strong> er et digitalt verktøy (eller en algoritme) som utfører subtraksjon av binære tall – altså tall som kun består av sifrene 0 og 1. I motsetning til vanlige desimalkalkulatorer jobber denne kalkulatoren direkte med totallsystemet, som er grunnlaget for all datateknologi. Kalkulatoren håndterer låning (borrowing) på samme måte som i desimal subtraksjon, men i base 2. En <strong>binær subtraksjonskalkulator</strong> kan være en frittstående nettside, en funksjon i et programmeringsspråk, eller til og med en krets i en prosessor. Den gjør det raskt og feilfritt å trekke binære tall fra hverandre, uten at du trenger å konvertere til desimal først.
+</p>
+<p>
+    For eksempel: Hvis du har binærtallet <strong>1101</strong> (13 i desimal) og trekker fra <strong>0110</strong> (6 i desimal), vil en <strong>binær subtraksjonskalkulator</strong> gi svaret <strong>0111</strong> (7 i desimal). Verktøyet er spesielt nyttig for studenter som lærer datamaskinarkitektur, utviklere som jobber med lavnivåprogrammering, eller ingeniører som designer digitale kretser.
+</p>
+
+<h2>Hvorfor er binær subtraksjon viktig?</h2>
+<p>
+    Binær subtraksjon er ikke bare en akademisk øvelse – den er helt avgjørende for moderne databehandling. Her er noen grunner til at en <strong>binær subtraksjonskalkulator</strong> er et viktig verktøy:
+</p>
+<ul>
+    <li><strong>Grunnlag for ALU-en</strong>: Aritmetisk logisk enhet (ALU) i CPU-en utfører subtraksjon ved hjelp av binære kretser. Å forstå subtraksjon er nødvendig for å designe effektive prosessorer.</li>
+    <li><strong>Feildeteksjon</strong>: I kommunikasjonssystemer brukes binær subtraksjon for å beregne kontrollsummer og sjekke dataintegritet.</li>
+    <li><strong>Adresseberegning</strong>: Minneadresser i datamaskiner er binære. Subtraksjon brukes til å finne offset eller relativ adresse.</li>
+    <li><strong>Læring og debugging</strong>: For utviklere som skriver assembler eller jobber med bitmanipulasjon, er en <strong>binær subtraksjonskalkulator</strong> raskere og mer pålitelig enn hoderegning.</li>
+    <li><strong>Konvertering mellom tallsystemer</strong>: Subtraksjon er en del av algoritmer for å konvertere desimaltall til binære (f.eks. gjentatt subtraksjon).</li>
+</ul>
+<p>
+    Uten binær subtraksjon ville datamaskiner ikke kunne utføre enkle regneoperasjoner som lønnsberegning, spillfysikk eller kryptering. Derfor er verktøy som en <strong>binær subtraksjonskalkulator</strong> uunnværlige for både utdanning og profesjonell utvikling.
+</p>
+
+<h2>Slik bruker du en binær subtraksjonskalkulator</h2>
+<p>
+    Bruk av en <strong>binær subtraksjonskalkulator</strong> er enkelt, men krever at du forstår noen grunnleggende regler. Følg denne trinnvise veiledningen:
+</p>
+<ul>
+    <li><strong>Trinn 1: Finn to binære tall</strong> – sørg for at de har samme antall sifre (fyll eventuelt på med ledende nuller). For eksempel: trekk <strong>0110</strong> fra <strong>1101</strong>.</li>
+    <li><strong>Trinn 2: Start fra høyre (minst signifikante bit)</strong> – akkurat som i desimal subtraksjon. Hvis sifferet i subtrahend (tallet som trekkes fra) er større enn sifferet i minuend (tallet det trekkes fra), må du låne fra neste venstre siffer.</li>
+    <li><strong>Trinn 3: Låneregler i binær</strong> – Når du låner, blir lånekilden redusert med 1 (fra 1 til 0), og sifferet du låner til blir 2 (siden base 2). For eksempel: 0 – 1 = 1 med lån.</li>
+    <li><strong>Trinn 4: Noter resultatet</strong> – etter at alle sifre er behandlet, får du differansen. Hvis det er et siste lån som ikke kan betales, indikerer det negativt tall (ofte håndtert med toer-komplement).</li>
+</ul>
+<p>
+    De fleste nettbaserte <strong>binær subtraksjonskalkulator</strong>-verktøy har et enkelt grensesnitt: du skriver inn to binære tall i to felt, trykker på "Beregn", og får svaret umiddelbart. Noen avanserte kalkulatorer viser også lånetrinnene.
+</p>
+
+<h2>Formel med eksempel</h2>
+<p>
+    Den matematiske formelen for binær subtraksjon kan uttrykkes som:
+</p>
+<p>
+    <strong>Differanse = Minuend – Subtrahend</strong> (i base 2)
+</p>
+<p>
+    For å utføre subtraksjonen bruker vi lånealgoritmen. La oss ta et konkret eksempel med en <strong>binær subtraksjonskalkulator</strong>:
+</p>
+<p>
+    <strong>Eksempel:</strong> Beregn <strong>1010</strong> (10 i desimal) – <strong>0011</strong> (3 i desimal).
+</p>
+<ul>
+    <li>Skriv tallene oppå hverandre: <br>
+        Minuend:  1 0 1 0 <br>
+        Subtrahend: 0 0 1 1 <br>
+        <em>(Merk: vi har fylt på med ledende null for å få like sifre)</em>
+    </li>
+    <li>Start fra høyre (posisjon 0): 0 – 1 = kan ikke, så lån fra posisjon 1 (venstre). Posisjon 1 har 1, som blir 0 etter lån. Posisjon 0 får 2 (base 2). Nå: 2 – 1 = 1.</li>
+    <li>Neste posisjon (posisjon 1): minuend er nå 0 (etter lån), subtrahend er 1. 0 – 1 = kan ikke, lån fra posisjon 2. Posisjon 2 har 1, blir 0, og posisjon 1 får 2. 2 – 1 = 1.</li>
+    <li>Posisjon 2: minuend er 0 (etter lån), subtrahend er 0. 0 – 0 = 0.</li>
+    <li>Posisjon 3: minuend er 1, subtrahend er 0. 1 – 0 = 1.</li>
+    <li>Resultat: <strong>0111</strong> (7 i desimal).</li>
+</ul>
+<p>
+    En <strong>binær subtraksjonskalkulator</strong> ville gjort dette på millisekunder, men forståelsen av lånetrinnene er viktig for å kunne kontrollere resultatet.
+</p>
+
+<h2>Praktiske eksempler</h2>
+<p>
+    Her er tre praktiske scenarier der en <strong>binær subtraksjonskalkulator</strong> kommer til nytte:
+</p>
+<ul>
+    <li><strong>Nettverksadressering:</strong> En IP-adresse er et 32-bits binært tall. For å beregne antall vertsadresser i et subnett, trekker du subnetmasken fra 2^32. En <strong>binær subtraksjonskalkulator</strong> forenkler dette.</li>
+    <li><strong>Mikrokontrollerprogrammering:</strong> Når du jobber med registerverdier i C eller assembler, må du ofte trekke fra binære verdier for å justere tellere eller indekser. En rask kalkulasjon med en <strong>binær subtraksjonskalkulator</strong> forhindrer feil.</li>
+    <li><strong>Kryptografi og sjekksummer:</strong> I CRC (Cyclic Redundancy Check) utføres binær subtraksjon (XOR) for å generere kontrollsummer. Selv om det er bitvis XOR, ligner mekanikken på subtraksjon uten lån.</li>
+</ul>
+<p>
+    I alle disse tilfellene sparer en <strong>binær subtraksjonskalkulator</strong> tid og reduserer risikoen for hoderegning-feil, spesielt når tallene er lange (f.eks. 16 eller 32 bits).
+</p>
+
+<h2>Tips for nøyaktig binær subtraksjon</h2>
+<ul>
+    <li><strong>Alltid like sifre:</strong> Fyll på med ledende nuller på det korteste tallet. En <strong>binær subtraksjonskalkulator</strong> gjør dette automatisk, men ved manuell beregning er det avgjørende.</li>
+    <li><strong>Bruk toer-komplement for negative tall:</strong> Hvis du forventer et negativt resultat, konverter subtrahenden til toer-komplement og adder i stedet. Mange <strong>binær subtraksjonskalkulator</strong>-verktøy har en egen modus for dette.</li>
+    <li><strong>Kontroller med desimal:</strong> Konverter både minuend og subtrahend til desimal, trekk fra, og konverter tilbake for å verifisere. Dette er en god vane når du lærer.</li>
+    <li><strong>Lån nøye:</strong> I binær er lån alltid 2 (base 2), ikke 10. Husk at når du låner, blir sifferet til venstre redusert med 1, og det aktuelle sifferet øker med 2.</li>
+    <li><strong>Bruk parenteser ved komplekse uttrykk:</strong> Hvis du har flere subtraksjoner, utfør dem trinnvis eller bruk en <strong>binær subtraksjonskalkulator</strong> som støtter kjedede operasjoner.</li>
+</ul>
+
+<h2>FAQ – Ofte stilte spørsmål om binær subtraksjonskalkulator</h2>
+
+<h3>1. Hva er forskjellen på en binær subtraksjonskalkulator og en vanlig kalkulator?</h3>
+<p>
+    En vanlig kalkulator jobber med desimaltall (base 10), mens en <strong>binær subtraksjonskalkulator</strong> opererer utelukkende med binære tall (base 2). Den håndterer låning i base 2 og viser ofte mellomtrinnene. Noen avanserte kalkulatorer kan også konvertere mellom tallsystemer.
+</p>
+
+<h3>2. Kan en binær subtraksjonskalkulator håndtere negative tall?</h3>
+<p>
+    Ja, de fleste moderne <strong>binær subtraksjonskalkulator</strong>-verktøy bruker toer-komplement for å representere negative tall. Hvis minuenden er mindre enn subtrahenden, vil resultatet vises som et negativt binært tall (med fortegns

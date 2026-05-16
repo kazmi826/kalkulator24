@@ -20534,6 +20534,189 @@
           "placeholder": "f.eks. 25"
         }
       ]
+    },
+    {
+      "slug": "treningskostnader-ai-modeller-kalkulator-kalkulator",
+      "title": "Treningskostnader for AI-modeller Kalkulator",
+      "category": "ki",
+      "description": "Beregn kostnad, tid og strømforbruk for trening av AI-modeller. Sammenlign med populære modeller.",
+      "keywords": "AI trening kostnad, maskinlæring kostnad, GPU trening, strømforbruk AI, modelltrening kalkulator, deep learning kostnad",
+      "formula": "ai_training_cost_calculator",
+      "inputs": [
+        {
+          "id": "gpu_type",
+          "label": "GPU-type",
+          "type": "select",
+          "options": [
+            "NVIDIA A100 80GB",
+            "NVIDIA H100 80GB",
+            "NVIDIA RTX 4090",
+            "NVIDIA RTX 3090",
+            "NVIDIA V100 32GB",
+            "AMD MI250X",
+            "Google TPU v4"
+          ]
+        },
+        {
+          "id": "gpu_count",
+          "label": "Antall GPUer",
+          "type": "number",
+          "placeholder": "f.eks. 8"
+        },
+        {
+          "id": "training_hours",
+          "label": "Treningstid (timer)",
+          "type": "number",
+          "placeholder": "f.eks. 100"
+        },
+        {
+          "id": "electricity_price",
+          "label": "Strømpris (NOK/kWh)",
+          "type": "number",
+          "placeholder": "f.eks. 1.5"
+        },
+        {
+          "id": "cloud_cost_per_gpu_hour",
+          "label": "Skyleie per GPU-time (NOK)",
+          "type": "number",
+          "placeholder": "f.eks. 50"
+        },
+        {
+          "id": "model_size_billions",
+          "label": "Modellstørrelse (milliarder parametre)",
+          "type": "number",
+          "placeholder": "f.eks. 7"
+        },
+        {
+          "id": "training_data_tokens",
+          "label": "Treningsdata (milliarder tokens)",
+          "type": "number",
+          "placeholder": "f.eks. 1000"
+        }
+      ]
+    },
+    {
+      "slug": "algebra-kalkulator-kalkulator",
+      "title": "Algebra Kalkulator",
+      "category": "matematikk",
+      "description": "Løs andregradslikninger, faktoriser og finn nullpunkter med trinnvis forklaring.",
+      "keywords": "algebra, andregradslikning, faktorisering, nullpunkter, abc-formel, matematikk, norsk",
+      "formula": "algebra_calculator",
+      "inputs": [
+        {
+          "id": "a",
+          "label": "a (koeffisient)",
+          "type": "number",
+          "placeholder": "f.eks. 1"
+        },
+        {
+          "id": "b",
+          "label": "b (koeffisient)",
+          "type": "number",
+          "placeholder": "f.eks. -3"
+        },
+        {
+          "id": "c",
+          "label": "c (konstantledd)",
+          "type": "number",
+          "placeholder": "f.eks. 2"
+        }
+      ]
+    },
+    {
+      "slug": "brok-kalkulator",
+      "title": "Brøk Kalkulator",
+      "category": "matematikk",
+      "description": "Regn ut, forenkle og sammenlign brøker. Få svar som desimaltall og prosent.",
+      "keywords": "brøk, brøkregning, forenkle brøk, addere brøk, subtrahere brøk, multiplisere brøk, dividere brøk, brøk til desimal, brøk til prosent, matematikk",
+      "formula": "brok_kalkulator",
+      "inputs": [
+        {
+          "id": "teller1",
+          "label": "Teller 1",
+          "type": "number",
+          "placeholder": "f.eks. 3"
+        },
+        {
+          "id": "nevner1",
+          "label": "Nevner 1",
+          "type": "number",
+          "placeholder": "f.eks. 4"
+        },
+        {
+          "id": "operasjon",
+          "label": "Operasjon",
+          "type": "select",
+          "options": [
+            "+",
+            "-",
+            "*",
+            "/"
+          ]
+        },
+        {
+          "id": "teller2",
+          "label": "Teller 2",
+          "type": "number",
+          "placeholder": "f.eks. 2"
+        },
+        {
+          "id": "nevner2",
+          "label": "Nevner 2",
+          "type": "number",
+          "placeholder": "f.eks. 5"
+        }
+      ]
+    },
+    {
+      "slug": "vinkelrett-linje-kalkulator-kalkulator",
+      "title": "Vinkelrett Linje Kalkulator",
+      "category": "geometri",
+      "description": "Finn ligningen for en linje vinkelrett på en gitt linje gjennom et punkt.",
+      "keywords": "vinkelrett linje, normal linje, geometri, linje kalkulator, stigningstall, perpendikulær",
+      "formula": "vinkelrett_linje_formel",
+      "inputs": [
+        {
+          "id": "stigningstall_a",
+          "label": "Stigningstall for gitt linje (a)",
+          "type": "number",
+          "placeholder": "f.eks. 2"
+        },
+        {
+          "id": "punkt_x",
+          "label": "Punktets x-koordinat",
+          "type": "number",
+          "placeholder": "f.eks. 3"
+        },
+        {
+          "id": "punkt_y",
+          "label": "Punktets y-koordinat",
+          "type": "number",
+          "placeholder": "f.eks. 5"
+        }
+      ]
+    },
+    {
+      "slug": "binar-subtraksjonskalkulator-kalkulator",
+      "title": "Binær Subtraksjonskalkulator",
+      "category": "matematikk",
+      "description": "Trekk fra to binære tall med trinnvis forklaring og sjekk av overløp.",
+      "keywords": "binær subtraksjon, binærtall, toerkomplement, overløp, digitalteknikk, datamaskin aritmetikk",
+      "formula": "binar_subtraksjon",
+      "inputs": [
+        {
+          "id": "bin1",
+          "label": "Første binære tall (f.eks. 1101)",
+          "type": "text",
+          "placeholder": "1101"
+        },
+        {
+          "id": "bin2",
+          "label": "Andre binære tall (f.eks. 101)",
+          "type": "text",
+          "placeholder": "101"
+        }
+      ]
     }
   ]
 }
