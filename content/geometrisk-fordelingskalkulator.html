@@ -1,0 +1,183 @@
+```html
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometrisk Fordelingskalkulator – komplett guide</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            max-width: 820px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            color: #1e1e1e;
+            background: #fafafa;
+        }
+        h2 {
+            border-bottom: 3px solid #2c7da0;
+            padding-bottom: 0.3rem;
+            margin-top: 2.5rem;
+            color: #1a3e4c;
+        }
+        h3 {
+            margin-top: 1.8rem;
+            color: #2a5f73;
+        }
+        p {
+            margin-bottom: 1.2rem;
+        }
+        ul, ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.8rem;
+        }
+        li {
+            margin-bottom: 0.4rem;
+        }
+        strong {
+            color: #1f5063;
+        }
+        .faq-item {
+            background: #f0f7fa;
+            border-left: 5px solid #2c7da0;
+            padding: 0.8rem 1.2rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .faq-item p {
+            margin: 0.3rem 0;
+        }
+        .formula-box {
+            background: #e6f2f5;
+            padding: 1.2rem 1.5rem;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1rem;
+            margin: 1.5rem 0;
+            border: 1px solid #bcd8e0;
+        }
+        .example-box {
+            background: #ffffff;
+            border: 1px solid #d0e2e8;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+            margin: 1.2rem 0;
+        }
+        .tip-list {
+            background: #f5fafc;
+            padding: 1rem 1.5rem 1rem 2.5rem;
+            border-radius: 10px;
+            border: 1px solid #cde3eb;
+        }
+        .keyword-highlight {
+            background: #f1f9ff;
+            padding: 0 0.2rem;
+            font-weight: 500;
+        }
+        hr {
+            margin: 2rem 0;
+            border: 0;
+            border-top: 1px solid #d4e3ea;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<h2>Hva er en geometrisk fordelingskalkulator?</h2>
+
+<p>En <strong>geometrisk fordelingskalkulator</strong> er et verktøy som beregner sannsynligheten for at en gitt hendelse inntreffer første gang på et bestemt forsøksnummer i en serie av uavhengige forsøk. Den geometriske fordelingen er en diskret sannsynlighetsfordeling som modellerer antall mislykkede forsøk før den første suksessen – eller alternativt antall forsøk frem til og med første suksess.</p>
+
+<p>Kalkulatoren krever vanligvis to parametere: sannsynligheten for suksess per forsøk (p) og antall forsøk (k) eller antall feil før suksess. Noen versjoner gir også kumulative sannsynligheter, forventningsverdi og varians. En <strong>geometrisk fordelingskalkulator</strong> sparer tid og reduserer risikoen for regnefeil, spesielt når du jobber med flere scenarier eller komplekse sannsynligheter.</p>
+
+<p>Fordelingen har to vanlige varianter:</p>
+<ul>
+    <li><strong>Type I:</strong> Antall forsøk til første suksess (inkluderer suksessen).</li>
+    <li><strong>Type II:</strong> Antall mislykkede forsøk før første suksess.</li>
+</ul>
+<p>De fleste nettbaserte kalkulatorer lar deg velge variant, og en <strong>geometrisk fordelingskalkulator</strong> håndterer begge.</p>
+
+<h2>Hvorfor er en geometrisk fordelingskalkulator viktig?</h2>
+
+<p>Geometrisk fordeling dukker opp i en rekke praktiske situasjoner – fra kvalitetskontroll og spillteori til ventetidsanalyse og medisinsk testing. Uten en kalkulator må du manuelt regne ut sannsynligheter ved hjelp av formelen, noe som fort blir tidkrevende når du skal analysere flere scenarioer.</p>
+
+<ul>
+    <li><strong>Nøyaktighet:</strong> Manuelle beregninger med desimaltall og potenser gir lett feil. En <strong>geometrisk fordelingskalkulator</strong> gir presise svar.</li>
+    <li><strong>Tidseffektivitet:</strong> Du får svar på sekunder – ideelt for studenter, dataanalytikere og forskere.</li>
+    <li><strong>Visualisering:</strong> Mange kalkulatorer viser sannsynlighetsfordelingen grafisk, noe som gjør det lettere å forstå mønstre.</li>
+    <li><strong>Beslutningsstøtte:</strong> I risikovurdering (f.eks. “hvor mange tester trengs for å oppdage en feil?”) gir kalkulatoren konkrete tall.</li>
+</ul>
+
+<p>Uansett om du forbereder deg til en statistikk-eksamen eller analyserer feilrate i en produksjonslinje, er en <strong>geometrisk fordelingskalkulator</strong> et uunnværlig hjelpemiddel.</p>
+
+<h2>Slik bruker du en geometrisk fordelingskalkulator</h2>
+
+<p>De fleste geometriske fordelingskalkulatorer på nett har et enkelt grensesnitt. Slik går du frem:</p>
+
+<ol>
+    <li><strong>Angi sannsynlighet for suksess (p):</strong> Skriv inn verdien som desimaltall (f.eks. 0.25 for 25 % sjanse).</li>
+    <li><strong>Velg type fordeling:</strong> 
+        <ul>
+            <li>Antall forsøk til og med første suksess (k)</li>
+            <li>Antall feil før første suksess (x)</li>
+        </ul>
+    </li>
+    <li><strong>Skriv inn antall (k eller x):</strong> For eksempel “5” hvis du vil vite sannsynligheten for at første suksess skjer i 5. forsøk.</li>
+    <li><strong>Velg kumulativ eller punkt-sannsynlighet:</strong> 
+        <ul>
+            <li>Punkt: P(X = k)</li>
+            <li>Kumulativ: P(X ≤ k) eller P(X ≥ k)</li>
+        </ul>
+    </li>
+    <li><strong>Klikk “Beregn”:</strong> Resultatet vises umiddelbart, ofte sammen med forventning og varians.</li>
+</ol>
+
+<p>En god <strong>geometrisk fordelingskalkulator</strong> lar deg også justere p og k i sanntid, slik at du kan sammenligne utfall. Mange verktøy eksporterer resultater til tabeller eller grafer.</p>
+
+<h2>Formel med eksempel</h2>
+
+<p>For en geometrisk fordeling (Type I – antall forsøk til første suksess) er sannsynlighetsmassefunksjonen:</p>
+
+<div class="formula-box">
+    P(X = k) = (1 - p)<sup>k-1</sup> · p
+</div>
+
+<p>der:</p>
+<ul>
+    <li><strong>p</strong> = sannsynlighet for suksess i ett enkelt forsøk</li>
+    <li><strong>k</strong> = antall forsøk frem til og med første suksess (k = 1, 2, 3, …)</li>
+</ul>
+
+<p><strong>Eksempel:</strong> Du kaster en terning og vil ha en sekser. Sannsynligheten for sekser er p = 1/6 ≈ 0.1667. Hva er sannsynligheten for at første sekser kommer i 4. kast?</p>
+
+<div class="example-box">
+    <p><strong>Inndata:</strong> p = 1/6, k = 4</p>
+    <p><strong>Beregning:</strong> P(X=4) = (1 - 1/6)<sup>4-1</sup> · (1/6) = (5/6)<sup>3</sup> · (1/6)</p>
+    <p>(5/6)<sup>3</sup> = 125/216 ≈ 0.5787</p>
+    <p>0.5787 · 1/6 ≈ 0.09645</p>
+    <p><strong>Svar:</strong> Omtrent 9,65 % sjanse for at første sekser kommer i 4. kast.</p>
+</div>
+
+<p>Bruker du en <strong>geometrisk fordelingskalkulator</strong>, skriver du bare p = 0.1667, k = 4 og får 0.0965 umiddelbart. Kalkulatoren håndterer også kumulative spørsmål som “sannsynligheten for at det trengs 4 eller færre kast”.</p>
+
+<h2>Praktiske eksempler</h2>
+
+<h3>Kvalitetskontroll i fabrikk</h3>
+<p>En produsent av lyspærer har en defektrate på 3 % (p = 0.03). En inspektør tester pærer én etter én. Hva er sannsynligheten for at den første defekte pæren oppdages i test nummer 10? Med en <strong>geometrisk fordelingskalkulator</strong> får vi P(X=10) = (0.97)<sup>9</sup> · 0.03 ≈ 0.0228 (2,28 %). Dette hjelper planlegging av stikkprøvestørrelser.</p>
+
+<h3>Spill og lotterier</h3>
+<p>I et digitalt kortspill har du 15 % sjanse for å trekke et sjeldent kort per pakke. Du vil vite sannsynligheten for å måtte åpne minst 8 pakker før du får det første sjeldne kortet. En kumulativ beregning i kalkulatoren (P(X ≥ 8)) gir deg svaret raskt – uten manuell summering av uendelige rekker.</p>
+
+<h3>Medisinsk screening</h3>
+<p>En hurtigtest for en sykdom har 99 % sensitivitet (p = 0.99). Du tester personer etter hverandre. Hva er sannsynligheten for at de to første testene er negative, og den tredje positive? Dette er et klassisk geometrisk problem: (0.01)<sup>2</sup> · 0.99 ≈ 0.000099, altså 0,0099 %. En <strong>geometrisk fordelingskalkulator</strong> gir presisjon uten avrundingsfeil.</p>
+
+<h2>Tips for effektiv bruk</h2>
+
+<ul class="tip-list">
+    <li><strong>Kontroller p-verdien:</strong> Sørg for at sannsynligheten er mellom 0 og 1, og at den uttrykkes som desimaltall (f.eks. 0.05 for 5 %).</li>
+    <li><strong>Velg riktig variant:</strong> Noen kalkulatorer spør om du vil beregne “antall forsøk” eller “antall feil”. Les beskrivelsen nøye.</li>
+    <li><strong>Bruk kumulativ funksjon:</strong

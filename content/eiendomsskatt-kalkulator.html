@@ -1,0 +1,156 @@
+```html
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eiendomsskatt Kalkulator – Slik beregner du selv</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            max-width: 820px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background: #fafafa;
+            color: #1e1e2a;
+        }
+        h2 {
+            border-bottom: 3px solid #2c7a4f;
+            padding-bottom: 0.4rem;
+            margin-top: 2.8rem;
+            color: #1f3b2c;
+        }
+        h3 {
+            color: #2c5f3a;
+            margin-top: 2rem;
+        }
+        p {
+            margin: 1.2rem 0;
+        }
+        ul, ol {
+            margin: 1rem 0 1.5rem 1.5rem;
+        }
+        li {
+            margin-bottom: 0.4rem;
+        }
+        strong {
+            color: #1f4a2e;
+        }
+        .highlight {
+            background: #e6f0ea;
+            padding: 0.15rem 0.4rem;
+            border-radius: 4px;
+        }
+        .faq-item {
+            background: white;
+            border-radius: 12px;
+            padding: 1.2rem 1.5rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        .faq-item p {
+            margin: 0.5rem 0 0 0;
+        }
+        .formel-boks {
+            background: #f4f9f6;
+            border-left: 6px solid #2c7a4f;
+            padding: 1.2rem 1.8rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.8rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1rem;
+        }
+        .eksempel-boks {
+            background: #ffffff;
+            border: 1px solid #d5e3db;
+            border-radius: 16px;
+            padding: 1.2rem 1.8rem;
+            margin: 1.8rem 0;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+        }
+        .tips-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin: 1.5rem 0;
+        }
+        .tips-grid li {
+            flex: 1 1 200px;
+            background: white;
+            list-style: none;
+            padding: 1rem 1.2rem;
+            border-radius: 20px;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+            border: 1px solid #e2eee8;
+        }
+        .tips-grid li::before {
+            content: "💡 ";
+            font-size: 1.2rem;
+        }
+        @media (max-width: 600px) {
+            body { padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Hva er en eiendomsskatt kalkulator?</h2>
+    <p>En <strong>eiendomsskatt kalkulator</strong> er et digitalt verktøy som hjelper deg med å anslå hvor mye du må betale i eiendomsskatt for en bestemt bolig, tomt eller næringseiendom. Kalkulatoren tar hensyn til kommunens skattesats, eventuelle bunnfradrag, og den aktuelle eiendommens takstverdi. I Norge varierer eiendomsskatten fra kommune til kommune, og en <strong>eiendomsskatt kalkulator</strong> gir deg et raskt estimat uten at du må sette deg inn i kompliserte formler.</p>
+    <p>Mange tror at eiendomsskatt bare gjelder for dyre villaer, men stadig flere kommuner innfører skatt på alle boligeiendommer. Derfor er en pålitelig <strong>eiendomsskatt kalkulator</strong> nyttig for både boligeiere, kjøpere og investorer. Du finner både enkle versjoner på nettet og mer avanserte kalkulatorer som også tar hensyn til alder, standard og beliggenhet.</p>
+
+    <h2>Hvorfor er en eiendomsskatt kalkulator viktig?</h2>
+    <p>Å forstå eiendomsskatten din er avgjørende for privatøkonomien. Mange blir overrasket over årlige kostnader, spesielt etter en takstøkning eller ved kjøp av ny bolig. Med en <strong>eiendomsskatt kalkulator</strong> kan du:</p>
+    <ul>
+        <li><strong>Planlegge budsjettet</strong> – du vet nøyaktig hva du må sette av til skatt hvert år.</li>
+        <li><strong>Sammenligne kommuner</strong> – før du flytter, kan du sjekke hva skatten blir i ulike områder.</li>
+        <li><strong>Vurdere kjøp</strong> – en høy eiendomsskatt kan påvirke den totale boligkostnaden.</li>
+        <li><strong>Unngå overraskelser</strong> – spesielt ved arv eller ombygging som endrer taksten.</li>
+    </ul>
+    <p>Uten en kalkulator risikerer du å basere deg på gamle tall eller feilaktige antagelser. Kommunene oppdaterer satser og bunnfradrag årlig, og en oppdatert <strong>eiendomsskatt kalkulator</strong> gir deg trygghet i en ellers tungvint byråkratisk prosess.</p>
+
+    <h2>Slik bruker du en eiendomsskatt kalkulator</h2>
+    <p>De fleste kalkulatorer er intuitive, men her er en trinn-for-trinn-guide for å få mest mulig nøyaktig resultat:</p>
+    <ol>
+        <li><strong>Finn kommunens skattesats</strong> – den oppgis ofte i promille (f.eks. 2,5 ‰ eller 3,0 ‰). Sjekk kommunens hjemmeside.</li>
+        <li><strong>Finn eiendommens takstverdi</strong> – dette er ofte lik markedsverdi, men noen kommuner bruker en lavere verdi. Du finner den i eiendomsskattevedtaket eller via Skatteetaten.</li>
+        <li><strong>Sjekk bunnfradrag</strong> – mange kommuner gir et bunnfradrag (f.eks. 500 000 kr) som trekkes fra taksten før skatten beregnes.</li>
+        <li><strong>Skriv inn verdiene i kalkulatoren</strong> – de fleste har felt for takst, sats og bunnfradrag.</li>
+        <li><strong>Les resultatet</strong> – du får et årlig beløp. Noen kalkulatorer viser også månedlig kostnad.</li>
+    </ol>
+    <p>Husk at en <strong>eiendomsskatt kalkulator</strong> gir et estimat. Endelig vedtak kommer fra kommunen, men avviket er sjelden stort dersom du legger inn korrekte data.</p>
+
+    <h2>Formel med eksempel</h2>
+    <p>Den grunnleggende formelen for eiendomsskatt er enkel. De fleste kommuner bruker denne:</p>
+    <div class="formel-boks">
+        (Takstverdi – bunnfradrag) × (skattesats i promille / 1000) = årlig eiendomsskatt
+    </div>
+    <p><strong>Eksempel:</strong> En bolig har takstverdi 3 200 000 kr. Kommunen har skattesats 2,8 promille og bunnfradrag på 600 000 kr.</p>
+    <div class="eksempel-boks">
+        (3 200 000 – 600 000) = 2 600 000 kr<br>
+        2 600 000 × (2,8 / 1000) = 2 600 000 × 0,0028 = <strong>7 280 kr per år</strong>
+    </div>
+    <p>Bruker du en <strong>eiendomsskatt kalkulator</strong>, får du samme svar på sekunder. Noen kalkulatorer inkluderer også ekstra faktorer som sjøliv, aldersfradrag eller nedsatt sats for nye boliger – men grunnformelen er alltid den samme.</p>
+
+    <h2>Praktiske eksempler</h2>
+    <p>Her er tre realistiske scenarioer som viser hvorfor en <strong>eiendomsskatt kalkulator</strong> er så nyttig i hverdagen.</p>
+
+    <h3>Eksempel 1: Førstegangskjøper i Oslo</h3>
+    <p>Kari kjøper en leilighet til 4 500 000 kr i en bydel med eiendomsskatt. Kommunen bruker 3,0 promille og bunnfradrag på 1 000 000 kr. Uten kalkulator trodde hun skatten ble 13 500 kr, men med riktig bunnfradrag blir regnestykket:</p>
+    <p><strong>(4 500 000 – 1 000 000) × 0,003 = 10 500 kr/år</strong>. Kalkulatoren viste 10 500 kr – hun sparte 3 000 kr i året sammenlignet med feilberegningen.</p>
+
+    <h3>Eksempel 2: Hytteeier i fjellkommune</h3>
+    <p>Morten har en hytte takst 2 100 000 kr. Kommunen har sats 2,2 promille, men <em>ingen</em> bunnfradrag for fritidseiendom. Med en <strong>eiendomsskatt kalkulator</strong> fant han ut at skatten blir 4 620 kr/år. Han kunne sammenligne med nabokommunen som hadde 1,8 promille – der ville skatten vært 3 780 kr. Kalkulatoren hjalp ham å vurdere om det var verdt å protestere på taksten.</p>
+
+    <h3>Eksempel 3: Utleiebolig med økt takst</h3>
+    <p>Et boligselskap eier en utleiegård med takst 12 000 000 kr. Kommunen økte satsen fra 2,0 til 2,5 promille. Ved å legge inn tallene i en <strong>eiendomsskatt kalkulator</strong> så de at skatten økte fra 24 000 kr til 30 000 kr årlig. Dette ble avgjørende for justering av leieprisene.</p>
+
+    <h2>Tips for å få mest mulig ut av eiendomsskatt kalkulatoren</h2>
+    <div class="tips-grid">
+        <li>Bruk alltid <strong>oppdatert skattesats</strong> – sjekk kommunens nettside for gjeldende år.</li>
+        <li>Kontroller om boligen din har <strong>spesielle fradrag</strong> (for eksempel for nybygg eller vernede bygg).</li>
+        <li>Sammenlign flere kalkulatorer – noen inkluderer <strong>renter og gebyrer</strong> som kan påvirke totalen.</li>
+        <li>Hvis du har <strong>samtykke til deling</strong> av eiendom, kan skatten bli annerledes – sjekk med kommunen.</li>
+        <li>Bruk kalkulatoren <strong>før du kjøper</strong> – skatten kan påvirke lånekapasiteten.</li>
+    </div>
+    <p>Husk at en <strong>eiendomsskatt kalkulator</strong> bare er et verktøy. Dersom du har en komplisert eiendom med flere bygninger eller næringsareal, bør du kontakte kommunen direkte for

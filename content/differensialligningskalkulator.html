@@ -1,0 +1,82 @@
+```html
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Differensialligningskalkulator – komplett guide</title>
+    <style>
+        body { font-family: 'Segoe UI', Roboto, system-ui, sans-serif; line-height: 1.7; max-width: 880px; margin: 2rem auto; padding: 0 1.5rem; color: #1e1e2a; background: #fafafa; }
+        h2 { color: #0b3b5c; border-bottom: 2px solid #d0e3f0; padding-bottom: 0.4rem; margin-top: 2.6rem; }
+        h3 { color: #1e5a7a; margin-top: 1.8rem; }
+        p { margin: 1rem 0; }
+        ul { padding-left: 1.6rem; margin: 0.8rem 0; }
+        li { margin: 0.5rem 0; }
+        strong { color: #0a2d44; }
+        .highlight { background: #e8f0fe; padding: 0.1rem 0.3rem; border-radius: 4px; }
+        .faq-item { background: #f3f7fb; padding: 0.8rem 1.2rem; border-radius: 12px; margin: 1rem 0; }
+        .example-box { background: #ffffff; border: 1px solid #d6e2ed; border-radius: 14px; padding: 1.2rem 1.6rem; margin: 1.2rem 0; box-shadow: 0 2px 6px rgba(0,0,0,0.03); }
+        code { background: #eef3f8; padding: 0.2rem 0.6rem; border-radius: 6px; font-size: 0.95rem; }
+        .kwd { font-weight: 700; color: #0b4b6b; }
+    </style>
+</head>
+<body>
+
+<h2>Hva er en differensialligningskalkulator?</h2>
+<p>En <strong>differensialligningskalkulator</strong> er et digitalt verktøy som løser ordinære og partielle differensialligninger automatisk. I stedet for å utføre kompliserte integrasjoner og algebraiske manipulasjoner for hånd, skriver du inn ligningen – ofte med startbetingelser – og kalkulatoren returnerer den eksakte eller numeriske løsningen. Moderne <strong>differensialligningskalkulator</strong>-verktøy støtter alt fra førsteordens separable ligninger til systemer av ikke-lineære høyereordens ligninger.</p>
+<p>De fleste nettbaserte kalkulatorene bruker symbolsk matematikk (som SymPy eller Mathematica-kjerner) eller numeriske metoder (Runge-Kutta, Euler) for å produsere løsninger. Noen avanserte varianter kan også tegne retningsfelt, faseportretter og gi analytiske uttrykk. Uansett om du er student, ingeniør eller forsker, fungerer en <strong>differensialligningskalkulator</strong> som en rask feilsøker og en læringsassistent.</p>
+
+<h2>Hvorfor er en differensialligningskalkulator viktig?</h2>
+<p>Differensialligninger beskriver alt fra bevegelse og varmeledning til populasjonsdynamikk og elektriske kretser. Å løse dem manuelt kan være tidkrevende og feilutsatt. Her er grunnene til at en <strong>differensialligningskalkulator</strong> har blitt uunnværlig:</p>
+<ul>
+    <li><strong>Tidsbesparelse:</strong> En kompleks andreordens ligning kan løses på sekunder i stedet for timer.</li>
+    <li><strong>Redusere feil:</strong> Manuell integrasjon og algebra gir ofte fortegnsfeil eller manglende konstanter. Kalkulatoren minimerer risikoen.</li>
+    <li><strong>Læring og visualisering:</strong> Mange kalkulatorer viser steg-for-steg-løsninger og grafiske fremstillinger, noe som styrker forståelsen.</li>
+    <li><strong>Anvendbarhet:</strong> Ingeniører bruker verktøyet til å simulere dynamiske systemer, forskere til å validere modeller, og studenter til å sjekke besvarelser.</li>
+    <li><strong>Tilgjengelighet:</strong> De fleste <strong>differensialligningskalkulator</strong>-tjenester er gratis og nettbaserte, uten installasjonskrav.</li>
+</ul>
+<p>Kort sagt: en <strong>differensialligningskalkulator</strong> demokratiserer avansert matematikk og gjør komplekse analyser tilgjengelige for alle med internettilgang.</p>
+
+<h2>Slik bruker du en differensialligningskalkulator</h2>
+<p>De fleste nettbaserte kalkulatorene følger en liknende arbeidsflyt. Slik kommer du i gang:</p>
+<ol style="margin: 0.8rem 0; padding-left: 1.8rem;">
+    <li><strong>Åpne verktøyet:</strong> Gå til en pålitelig <strong>differensialligningskalkulator</strong> (f.eks. Symbolab, Wolfram Alpha, eller en norsk tilpasset variant).</li>
+    <li><strong>Skriv inn ligningen:</strong> Bruk standard matematisk notasjon. For eksempel: <code>y'' + 3y' + 2y = 0</code> eller <code>dy/dx = x*y</code>. De fleste aksepterer <code>y'</code>, <code>y''</code>, <code>d^2y/dx^2</code>.</li>
+    <li><strong>Angi startbetingelser (valgfritt):</strong> For initialverdiproblemer legger du til f.eks. <code>y(0)=1, y'(0)=0</code>. Dette gir en unik løsning.</li>
+    <li><strong>Velg løsningsmetode:</strong> Noen kalkulatorer lar deg velge «Analytisk» eller «Numerisk». For ikke-lineære ligninger er numerisk ofte eneste mulighet.</li>
+    <li><strong>Klikk «Løs» eller «Beregn»:</strong> Verktøyet behandler ligningen og returnerer løsningen, ofte med trinnvise forklaringer.</li>
+    <li><strong>Analyser resultatet:</strong> Se etter generell løsning, partikulær løsning, og eventuelle grafer. Noter at konstanten C vises i ubestemte løsninger.</li>
+</ol>
+<p><strong>Tips:</strong> Hvis du får en feilmelding, sjekk parenteser og tegn. De fleste <strong>differensialligningskalkulator</strong>-plattformer har innebygde eksempler du kan kopiere for å lære syntaksen.</p>
+
+<h2>Formel med eksempel – førsteordens lineær differensialligning</h2>
+<div class="example-box">
+    <h3>Standard formel</h3>
+    <p>En førsteordens lineær differensialligning skrives som:</p>
+    <p><strong>dy/dx + P(x)y = Q(x)</strong></p>
+    <p>Løsningen finnes ved hjelp av integrerende faktor: <strong>μ(x) = e<sup>∫P(x)dx</sup></strong> og deretter <strong>y = (1/μ(x)) ∫ μ(x)Q(x) dx</strong>.</p>
+    
+    <h3>Praktisk eksempel med differensialligningskalkulator</h3>
+    <p><strong>Oppgave:</strong> Løs <code>y' + 2y = 4e^x</code> med startbetingelse <code>y(0)=1</code>.</p>
+    <p><strong>Manuell fremgang (kort):</strong> Integrerende faktor μ = e<sup>∫2dx</sup> = e<sup>2x</sup>. Løsningen blir y = e<sup>–2x</sup>∫ e<sup>2x</sup>·4e<sup>x</sup> dx = e<sup>–2x</sup>·(4/3)e<sup>3x</sup> + Ce<sup>–2x</sup>. Med y(0)=1 får vi C = –1/3. Altså y = (4/3)e<sup>x</sup> – (1/3)e<sup>–2x</sup>.</p>
+    <p><strong>Bruke kalkulatoren:</strong> Skriv inn <code>y' + 2y = 4e^x, y(0)=1</code>. En <strong>differensialligningskalkulator</strong> returnerer umiddelbart: <code>y(x) = (4e^x)/3 – e^(–2x)/3</code>. Steg-for-steg viser den integrerende faktor, integrasjon og innsetting av grensebetingelser. Du sparer tid og får bekreftet at håndregningen er korrekt.</p>
+</div>
+
+<h2>Praktiske eksempler på bruk</h2>
+<p>Her er tre konkrete scenarioer der en <strong>differensialligningskalkulator</strong> gjør en forskjell:</p>
+<ul>
+    <li><strong>Eksempel 1: Populasjonsvekst (logistisk modell)</strong><br>
+    Ligningen: <code>dP/dt = 0.03P(1 – P/1000)</code>, P(0)=50. En kalkulator gir den analytiske løsningen P(t) = 1000/(1+19e<sup>–0.03t</sup>). Du kan justere parametere og se hvordan bæreevnen påvirker veksten.</li>
+    <li><strong>Eksempel 2: Mekanisk svingning (dempet fjær)</strong><br>
+    Ligning: <code>y'' + 0.5y' + 4y = 0</code>, y(0)=1, y'(0)=0. Kalkulatoren løser den karakteristiske ligningen og gir y(t) = e<sup>–0.25t</sup>(cos(1.984t) + 0.126 sin(1.984t)). Grafisk fremstilling viser demping over tid.</li>
+    <li><strong>Eksempel 3: RC-krets (spenning)</strong><br>
+    Ligning: <code>R·dq/dt + q/C = V(t)</code>, med R=10, C=0.01, V(t)=5. En <strong>differensialligningskalkulator</strong> gir q(t) = 0.05(1 – e<sup>–10t</sup>). Dette brukes direkte i kretsanalyse.</li>
+</ul>
+<p>I alle tilfellene kan du endre parametere og umiddelbart se hvordan løsningen endrer seg – noe som er uvurderlig i prosjektering og læring.</p>
+
+<h2>Tips for å få mest mulig ut av en differensialligningskalkulator</h2>
+<ul>
+    <li><strong>Bruk riktig syntaks:</strong> De fleste kalkulatorer skiller mellom «vanlig» multiplikasjon (skriv <code>2*x</code>) og eksponenter (<code>e^(2x)</code>). Sjekk hjelpesiden for tegnsetting.</li>
+    <li><strong>Angi alltid initialbetingelser</strong> når du trenger én spesifikk løsning. Uten dem får du generell løsning med konstant C.</li>
+    <li><strong>Sammenlign flere metoder:</strong> Prøv både analytisk og numerisk løsning for ikke-lineære systemer. Numeriske metoder (Runge-Kutta) gir tilnærminger, men er ofte nødvendige.</li>
+    <li><strong>Bruk steg-for-steg-mod

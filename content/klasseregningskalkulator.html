@@ -1,0 +1,205 @@
+```html
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klasseregningskalkulator – komplett guide og verktøy</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            max-width: 820px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            color: #1e1e2a;
+            background: #fafbfc;
+        }
+        h2 {
+            border-bottom: 3px solid #2c7da0;
+            padding-bottom: 0.3rem;
+            margin-top: 2.5rem;
+            color: #1a3e4c;
+        }
+        h3 {
+            margin-top: 1.8rem;
+            color: #2a5f73;
+        }
+        p {
+            margin-bottom: 1.1rem;
+        }
+        ul, ol {
+            margin: 1rem 0 1.5rem 1.2rem;
+        }
+        li {
+            margin-bottom: 0.4rem;
+        }
+        strong {
+            color: #1e4d5e;
+        }
+        .eksempel-boks {
+            background: #e5f0f5;
+            padding: 1rem 1.5rem;
+            border-left: 5px solid #2c7da0;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+        }
+        .tips-boks {
+            background: #f0f7e8;
+            padding: 0.8rem 1.3rem;
+            border-radius: 10px;
+            border: 1px solid #bcd0a4;
+            margin: 1.5rem 0;
+        }
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px dashed #cbd5d9;
+            padding-bottom: 1rem;
+        }
+        .faq-item p {
+            margin: 0.3rem 0;
+        }
+        .kalkulator-sim {
+            background: #ffffff;
+            border: 1px solid #d0dee5;
+            padding: 1.2rem 1.5rem;
+            border-radius: 14px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            margin: 2rem 0;
+        }
+        .kalkulator-sim label {
+            display: inline-block;
+            width: 140px;
+            font-weight: 500;
+        }
+        .kalkulator-sim input {
+            padding: 0.4rem 0.6rem;
+            border: 1px solid #bccbd4;
+            border-radius: 6px;
+            width: 100px;
+            margin: 0.3rem 0;
+        }
+        .kalkulator-sim .btn {
+            background: #2c7da0;
+            color: white;
+            border: none;
+            padding: 0.5rem 1.8rem;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 0.5rem;
+        }
+        .kalkulator-sim .btn:hover {
+            background: #1f5f79;
+        }
+        .kode {
+            background: #edf2f5;
+            padding: 0.3rem 0.6rem;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+        }
+        .ord-teller {
+            font-size: 0.85rem;
+            color: #5b7a88;
+            text-align: right;
+            border-top: 1px solid #dce5ea;
+            padding-top: 0.8rem;
+            margin-top: 2.5rem;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Hva er en klasseregningskalkulator?</h2>
+<p>
+    En <strong>klasseregningskalkulator</strong> er et digitalt verktøy som raskt beregner karakterer, poengsummer eller prosentandeler basert på vektede eller uvektede poeng. 
+    Enten du er lærer, student eller kursholder, hjelper en <strong>klasseregningskalkulator</strong> deg med å summere oppgaver, prøver og eksamener for å finne en endelig karakter med få klikk. 
+    I stedet for manuelle utregninger med brøk og desimaler, automatiserer kalkulatoren alt – og minimerer feil.
+</p>
+<p>
+    Mange <strong>klasseregningskalkulator</strong>-løsninger inkluderer også muligheten til å legge inn vekting (for eksempel 40% muntlig, 60% skriftlig) og støtter både bokstavkarakterer og tallkarakterer. 
+    Verktøyet kan brukes direkte i nettleseren, som frittstående app eller innebygd i læringsplattformer.
+</p>
+
+<h2>Hvorfor er en klasseregningskalkulator viktig?</h2>
+<p>
+    <strong>Nøyaktighet og tidsbesparelse</strong> – manuell karakterberegning er tidkrevende og utsatt for feil, spesielt når flere vurderingskomponenter har ulik vekt. 
+    En <strong>klasseregningskalkulator</strong> reduserer risikoen for regnefeil og gir et pålitelig resultat på sekunder.
+</p>
+<ul>
+    <li><strong>Rettferdighet:</strong> Sikrer at alle elever vurderes etter samme matematiske standard.</li>
+    <li><strong>Gjennomsiktighet:</strong> Elever og foresatte kan selv taste inn poeng og forstå hvordan sluttkarakteren blir til.</li>
+    <li><strong>Fleksibilitet:</strong> Håndterer både prosentbaserte systemer, poenggrenser og vektede modeller.</li>
+    <li><strong>Planlegging:</strong> Lærere kan simulere «hva hvis»-scenarioer for å veilede elever før eksamen.</li>
+</ul>
+<p>
+    I en tid med økt fokus på vurderingspraksis og dokumentasjon, blir en pålitelig <strong>klasseregningskalkulator</strong> nesten uunnværlig for profesjonelle og studenter.
+</p>
+
+<h2>Slik bruker du en klasseregningskalkulator</h2>
+<p>
+    Brukergrensesnittet varierer, men de fleste <strong>klasseregningskalkulator</strong>-verktøy følger en enkel flyt:
+</p>
+<ol>
+    <li><strong>Legg inn vurderingskomponenter:</strong> Skriv inn navn på oppgave, prøve eller eksamen (f.eks. «Delprøve 1», «Muntlig fremføring»).</li>
+    <li><strong>Angi oppnådd poeng / karakter:</strong> Fyll ut poengsum eller prosent for hver komponent.</li>
+    <li><strong>Definer vekting (valgfritt):</strong> Dersom karakteren er vektet (f.eks. 30% – 70%), skriver du inn vektprosenten for hver rad.</li>
+    <li><strong>Trykk “Beregn”:</strong> Kalkulatoren summerer automatisk og viser sluttkarakter, ofte både som tall og bokstav.</li>
+    <li><strong>Juster og simuler:</strong> Endre én eller flere verdier for å se hvordan sluttresultatet påvirkes.</li>
+</ol>
+<p>
+    De fleste moderne <strong>klasseregningskalkulator</strong>-tjenester lagrer ikke data lokalt, så personvernet er ivaretatt. 
+    Du kan også skrive ut eller ta skjermbilde av resultatet for dokumentasjon.
+</p>
+
+<h2>Formel med eksempel</h2>
+<p>
+    En standard formel for vektet karakterberegning er:
+</p>
+<div class="eksempel-boks">
+    <p><strong>Sluttkarakter = Σ (oppnådd poengprosent × vektprosent) / Σ vektprosent</strong></p>
+    <p>Ved uvektet (gjennomsnitt): <strong>Sluttkarakter = (sum av alle poengprosenter) / antall vurderinger</strong></p>
+</div>
+<p><strong>Eksempel med vekting:</strong></p>
+<ul>
+    <li>Skriftlig prøve: 85% (vekt 40%)</li>
+    <li>Muntlig presentasjon: 72% (vekt 25%)</li>
+    <li>Prosjektoppgave: 91% (vekt 35%)</li>
+</ul>
+<p>
+    Beregning: <strong>(85 × 0,40) + (72 × 0,25) + (91 × 0,35)</strong> = 34 + 18 + 31,85 = <strong>83,85%</strong>.<br>
+    Dersom skalaen er 100% som toppkarakter, blir sluttkarakteren B (eller tilsvarende). En <strong>klasseregningskalkulator</strong> gjør denne utregningen på et brøkdels sekund.
+</p>
+
+<h2>Praktiske eksempler</h2>
+<h3>Eksempel 1: Ungdomsskole – norsk</h3>
+<p>
+    En norsklærer har tre vurderinger: skriftlig essay (60% vekt), leseprøve (20%) og muntlig (20%). 
+    Eleven får 68% på essay, 82% på leseprøve og 90% på muntlig. Ved å bruke en <strong>klasseregningskalkulator</strong> får læreren: 
+    <strong>(68×0,60)+(82×0,20)+(90×0,20) = 40,8+16,4+18 = 75,2%</strong> – en solid C/D.
+</p>
+<h3>Eksempel 2: Universitet – vektede moduler</h3>
+<p>
+    Et emne består av tre deleksamener: modul A (30 studiepoeng), modul B (20 sp) og modul C (10 sp). 
+    Studenten får karakterene B (tilsvarer 85%), C (70%) og A (92%). 
+    Vekting basert på studiepoeng: <strong>(85×30)+(70×20)+(92×10) / (30+20+10)</strong> = (2550+1400+920)/60 = 4870/60 ≈ 81,17% → B.
+</p>
+<p>
+    Uten en <strong>klasseregningskalkulator</strong> måtte man regnet ut hvert ledd manuelt og dobbeltsjekket desimalene. 
+    Verktøyet gjør også om til bokstavkarakterer automatisk i de fleste systemer.
+</p>
+
+<h2>Tips for å få mest mulig ut av en klasseregningskalkulator</h2>
+<div class="tips-boks">
+    <ul>
+        <li><strong>Bruk alltid samme skala:</strong> Sørg for at alle prosenter eller poeng er på samme skala (f.eks. 0–100) før du legger dem inn. En god <strong>klasseregningskalkulator</strong> håndterer ulike skalaer, men dobbeltsjekk.</li>
+        <li><strong>Test med “hva hvis”-scenarioer:</strong> Endre én poengsum om gangen for å se hvor mye som skal til for å nå neste karaktergrense.</li>
+        <li><strong>Lagre eller skjermdump:</strong> Ta vare på beregningen som dokumentasjon, spesielt i tvilstilfeller.</li>
+        <li><strong>Sjekk vektingen:</strong> Noen systemer bruker desimalvekt (0,4 i stedet for 40%). Pass på at du skriver inn riktig format.</li>
+        <li><strong>Bruk mobilvennlige verktøy:</strong> Mange <strong>klasseregningskalkulator</strong>-apper fungerer offline – perfekt i klasserommet uten nett.</li>
+    </ul>
+</div>
+
+<h2>Ofte stilte spørsmål (FAQ)</h2>
+<div class

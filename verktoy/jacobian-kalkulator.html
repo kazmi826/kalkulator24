@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jacobian Kalkulator — Gratis Online Kalkulator | Kalkulator24</title>
+  <meta name="description" content="Beregn Jacobi-matrisen for en funksjon med flere variabler. Avansert matematisk verktøy. — Gratis kalkulator online">
+  <meta name="keywords" content="jacobian, jacobi matrise, derivasjon, flervariabel analyse, matematikk kalkulator, gradient, vektor funksjon">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="Norwegian">
+  <meta name="google-site-verification" content="U-ZiCQHLID9ShjKIWBJI0Xi7xJDNrx9bwP4tRBEYzSQ">
+  <meta name="theme-color" content="#2563eb">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Jacobian Kalkulator — Gratis Online Kalkulator | Kalkulator24">
+  <meta property="og:description" content="Beregn Jacobi-matrisen for en funksjon med flere variabler. Avansert matematisk verktøy. — Gratis kalkulator online">
+  <meta property="og:url" content="https://kalkulator24.guru/verktoy/jacobian-kalkulator">
+  <meta property="og:locale" content="nb_NO">
+  <link rel="canonical" href="https://kalkulator24.guru/verktoy/jacobian-kalkulator">
+  <link rel="alternate" hreflang="nb" href="https://kalkulator24.guru/verktoy/jacobian-kalkulator">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+</head>
+<body>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Jacobian Kalkulator","description":"Beregn Jacobi-matrisen for en funksjon med flere variabler. Avansert matematisk verktøy.","url":"https://kalkulator24.guru/verktoy/jacobian-kalkulator","applicationCategory":"UtilityApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"NOK"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Hjem","item":"https://kalkulator24.guru"},{"@type":"ListItem","position":2,"name":"Matematikk","item":"https://kalkulator24.guru/kategori/matematikk"},{"@type":"ListItem","position":3,"name":"Jacobian Kalkulator","item":"https://kalkulator24.guru/verktoy/jacobian-kalkulator"}]}</script>
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="/" class="logo">Kalkulator24</a>
+    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="active">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li><li><a href="/kategori/odds" class="">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi" class="">🌱 Økologi</a></li><li><a href="/kategori/bolig" class="">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk" class="">🎵 Musikk</a></li><li><a href="/kategori/teknologi" class="">💻 Teknologi</a></li><li><a href="/kategori/ki" class="">🤖 Kunstig Intelligens</a></li></ul>
+    <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">☰</button>
+  </div>
+  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="active">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li><li><a href="/kategori/odds" class="">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi" class="">🌱 Økologi</a></li><li><a href="/kategori/bolig" class="">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk" class="">🎵 Musikk</a></li><li><a href="/kategori/teknologi" class="">💻 Teknologi</a></li><li><a href="/kategori/ki" class="">🤖 Kunstig Intelligens</a></li></ul></div>
+</nav>
+<div class="breadcrumb"><a href="/">Hjem</a><span class="sep">›</span><a href="/kategori/matematikk">Matematikk</a><span class="sep">›</span>Jacobian Kalkulator</div>
+<div class="tool-hero"><div class="tool-badge">📐 Matematikk</div><h1>Jacobian Kalkulator</h1><p class="subtitle">Beregn Jacobi-matrisen for en funksjon med flere variabler. Avansert matematisk verktøy. — raskt og gratis</p></div>
+<div class="main-wrap">
+  <div class="main-content">
+    <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>Funksjon (f.eks. x^2 + y^2, x*y)</label><div class="input-row"><input type="text" class="calc-input" data-field="function_input" placeholder="x^2 + y^2, x*y"></div></div><div class="input-group"><label>Variabler (kommaseparert)</label><div class="input-row"><input type="text" class="calc-input" data-field="variables" placeholder="x, y"></div></div><div class="input-group"><label>Punkt x-verdi</label><div class="input-row"><input type="number" class="calc-input" data-field="point_x" placeholder="1"></div></div><div class="input-group"><label>Punkt y-verdi</label><div class="input-row"><input type="number" class="calc-input" data-field="point_y" placeholder="1"></div></div></div>    <button class="btn-calc" onclick="runCalculator('jacobian_calculator')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
+    <div class="content-card"><h2>Hva er en Jacobian Kalkulator?</h2>
+<p>En <strong>jacobian kalkulator</strong> er et digitalt verktøy som automatisk beregner Jacobi-matrisen for et gitt system av funksjoner. Jacobi-matrisen inneholder alle førsteordens partielle deriverte for en vektorverdi funksjon. Dette verktøyet sparer tid og reduserer risikoen for regnefeil, spesielt når du jobber med komplekse multivariable funksjoner. Enten du er student, ingeniør eller forsker, gjør en <strong>jacobian kalkulator</strong> det enkelt å finne determinanten eller matrisen uten manuelle utregninger.</p>
+
+<h3>Hvordan fungerer en Jacobian Kalkulator?</h3>
+<p>Verktøyet tar inn et sett med funksjoner og variabler, for eksempel f(x,y) og g(x,y), og beregner deriverte med hensyn på hver variabel. Resultatet presenteres som en matrise eller determinant. Moderne <strong>jacobian kalkulator</strong> verktøy støtter også flerdimensjonale systemer og symbolsk derivasjon.</p>
+
+<h2>Hvorfor er Jacobian Kalkulator viktig?</h2>
+<p>Jacobi-matrisen er sentral i mange matematiske og fysiske anvendelser. En <strong>jacobian kalkulator</strong> gjør det mulig å fokusere på tolkning fremfor mekanisk regning. Her er noen grunner til at den er viktig:</p>
+<ul>
+    <li><strong>Effektivitet:</strong> Reduserer tiden brukt på derivasjon, spesielt for systemer med flere variabler.</li>
+    <li><strong>Nøyaktighet:</strong> Eliminerer menneskelige feil ved manuell derivasjon.</li>
+    <li><strong>Anvendelser:</strong> Brukes i transformasjoner av koordinatsystemer, optimalisering, og numerisk analyse.</li>
+    <li><strong>Utdanning:</strong> Hjelper studenter å visualisere og forstå konsepter som lineær tilnærming og endring av variabler.</li>
+</ul>
+<p>Uten en <strong>jacobian kalkulator</strong> kan selv enkle flervariabelproblemer bli tidkrevende. Verktøyet er derfor uunnværlig i fag som fysikk, økonomi og ingeniørvitenskap.</p>
+
+<h2>Slik bruker du en Jacobian Kalkulator</h2>
+<p>De fleste <strong>jacobian kalkulator</strong> verktøy har et intuitivt grensesnitt. Følg disse trinnene for å få maksimalt utbytte:</p>
+<ol>
+    <li><strong>Angi funksjoner:</strong> Skriv inn funksjonene dine, for eksempel f(x,y) = x^2 + y og g(x,y) = x*y.</li>
+    <li><strong>Spesifiser variabler:</strong> Oppgi variablene som funksjonene avhenger av, som x og y.</li>
+    <li><strong>Velg type:</strong> Velg om du vil ha hele matrisen eller bare determinanten (Jacobian-determinanten).</li>
+    <li><strong>Klikk "Beregn":</strong> Verktøyet genererer resultatet umiddelbart, ofte med steg-for-steg forklaring.</li>
+</ol>
+<p>Avanserte <strong>jacobian kalkulator</strong> tjenester lar deg også jobbe med symbolsk algebra og vektorverdier funksjoner med flere dimensjoner.</p>
+
+<h2>Formel med eksempel</h2>
+<p>Jacobi-matrisen for en funksjon F: ℝⁿ → ℝᵐ er definert som:</p>
+<p><strong>J = [∂fᵢ/∂xⱼ]</strong> for i = 1,...,m og j = 1,...,n</p>
+<p>La oss ta et konkret eksempel: F(x,y) = (f₁, f₂) = (x²y, x + y³)</p>
+<p>Da blir Jacobi-matrisen:</p>
+<ul>
+    <li>∂f₁/∂x = 2xy</li>
+    <li>∂f₁/∂y = x²</li>
+    <li>∂f₂/∂x = 1</li>
+    <li>∂f₂/∂y = 3y²</li>
+</ul>
+<p>Matrisen er: <strong>J = [[2xy, x²], [1, 3y²]]</strong></p>
+<p>Med en <strong>jacobian kalkulator</strong> kan du skrive inn funksjonene "x^2*y" og "x + y^3", og få matrisen på sekunder. Determinanten (Jacobian) blir: (2xy)*(3y²) - (x²)*1 = 6xy³ - x².</p>
+
+<h2>Praktiske eksempler</h2>
+<h3>Eksempel 1: Koordinattransformasjon</h3>
+<p>I polarkoordinater: x = r cos(θ), y = r sin(θ). Jacobi-determinanten er r. En <strong>jacobian kalkulator</strong> bekrefter at determinanten er r, noe som er avgjørende for arealberegninger i dobbeltintegraler.</p>
+
+<h3>Eksempel 2: Robotikk</h3>
+<p>En robotarm med to ledd har posisjon (x,y) = (L₁cos(θ₁)+L₂cos(θ₁+θ₂), L₁sin(θ₁)+L₂sin(θ₁+θ₂)). Jacobi-matrisen kobler leddhastigheter til ende-effektorens hastighet. En <strong>jacobian kalkulator</strong> beregner denne matrisen raskt, slik at ingeniører kan styre bevegelser presist.</p>
+
+<h3>Eksempel 3: Økonomisk modellering</h3>
+<p>I en Cobb-Douglas produksjonsfunksjon Q(K,L) = AK^α L^β, gir Jacobi-matrisen marginalprodukter. En <strong>jacobian kalkulator</strong> forenkler analysen av substitusjonsforhold og optimal ressursallokering.</p>
+
+<h2>Tips for effektiv bruk</h2>
+<ul>
+    <li><strong>Bruk parenteser:</strong> Skriv funksjoner som "x^2*y" eller "sin(x)*e^y" for å unngå tolkningsfeil.</li>
+    <li><strong>Kontroller variabler:</strong> Sørg for at antall funksjoner og variabler stemmer overens.</li>
+    <li><strong>Utforsk steg-for-steg:</strong> Mange <strong>jacobian kalkulator</strong> verktøy viser mellomregninger – bruk dette for læring.</li>
+    <li><strong>Test med enkle tilfeller:</strong> Prøv med lineære funksjoner først for å verifisere at verktøyet fungerer.</li>
+    <li><strong>Lagre resultater:</strong> Noen kalkulatorer lar deg eksportere matrisen som LaTeX eller CSV for videre arbeid.</li>
+</ul>
+
+<h2>FAQ – Ofte stilte spørsmål</h2>
+<h3>1. Hva er forskjellen på Jacobi-matrise og Jacobian-determinant?</h3>
+<p>Jacobi-matrisen inneholder alle partielle deriverte, mens Jacobian-determinanten er determinanten av denne matrisen (kun for kvadratiske systemer). En <strong>jacobian kalkulator</strong> kan beregne begge deler.</p>
+
+<h3>2. Kan jeg bruke en Jacobian Kalkulator for ikke-lineære systemer?</h3>
+<p>Ja, det er nettopp for ikke-lineære systemer at verktøyet er mest nyttig. Det håndterer alle typer funksjoner, inkludert trigonometriske, eksponentielle og logaritmiske.</p>
+
+<h3>3. Er det gratis Jacobian Kalkulator verktøy tilgjengelig?</h3>
+<p>Ja, flere nettbaserte <strong>jacobian kalkulator</strong> tjenester er gratis, som Symbolab, Wolfram Alpha og Desmos. Noen tilbyr også premiumversjoner med flere funksjoner.</p>
+
+<h3>4. Hvordan tolker jeg resultatet fra en Jacobian Kalkulator?</h3>
+<p>Matrisen viser hvordan små endringer i inputvariabler påvirker output. En determinant ulik null indikerer at funksjonen er lokalt inverterbar. For arealtransformasjoner gir determinanten skaleringsfaktoren.</p>
+
+<h3>5. Kan en Jacobian Kalkulator håndtere komplekse tall?</h3>
+<p>Noen avanserte verktøy støtter komplekse variable. Sjekk funksjonaliteten til den spesifikke <strong>jacobian kalkulator</strong> du bruker, da de fleste standardverktøy fokuserer på reelle tall.</p>
+
+<p>Med en <strong>jacobian kalkulator</strong> kan du frigjøre tid til analyse og anvendelse, i stedet for å slite med derivasjon. Enten du studerer flervariabelanalyse eller jobber med avanserte tekniske problemstillinger, er dette verktøyet en uvurderlig ressurs. Prøv det selv, og oppdag hvor mye enklere matematikken blir!</p></div>
+    <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/prosent-kalkulator'"><span class="tool-card-icon">📐</span><h3>Prosent Kalkulator</h3><p>Beregn prosent med flere metoder og sammenligninger</p></div><div class="tool-card" onclick="location='/verktoy/kvadratrot-kalkulator'"><span class="tool-card-icon">📐</span><h3>Kvadratrot Kalkulator</h3><p>Beregn kvadratroter og andre røtter</p></div><div class="tool-card" onclick="location='/verktoy/potens-kalkulator'"><span class="tool-card-icon">📐</span><h3>Potens Kalkulator</h3><p>Beregn potens av tall med store eksponenter</p></div><div class="tool-card" onclick="location='/verktoy/brøk-kalkulator'"><span class="tool-card-icon">📐</span><h3>Brøk Kalkulator</h3><p>Beregn med brøker og forenkle resultater</p></div><div class="tool-card" onclick="location='/verktoy/gjennomsnitt-kalkulator'"><span class="tool-card-icon">📐</span><h3>Gjennomsnitt Kalkulator</h3><p>Beregn gjennomsnitt og statistiske mål</p></div><div class="tool-card" onclick="location='/verktoy/logaritme-kalkulator'"><span class="tool-card-icon">📐</span><h3>Logaritme Kalkulator</h3><p>Beregn logaritmer og eksponentialfunksjoner</p></div><div class="tool-card" onclick="location='/verktoy/primtall-kalkulator'"><span class="tool-card-icon">📐</span><h3>Primtall Kalkulator</h3><p>Finn primtall og faktoriser tall</p></div><div class="tool-card" onclick="location='/verktoy/fakultet-kalkulator'"><span class="tool-card-icon">📐</span><h3>Fakultet Kalkulator</h3><p>Beregn fakultet av tall</p></div><div class="tool-card" onclick="location='/verktoy/kombinasjon-kalkulator'"><span class="tool-card-icon">📐</span><h3>Kombinasjon Kalkulator</h3><p>Beregn antall kombinasjoner</p></div><div class="tool-card" onclick="location='/verktoy/permutasjon-kalkulator'"><span class="tool-card-icon">📐</span><h3>Permutasjon Kalkulator</h3><p>Beregn antall permutasjoner</p></div><div class="tool-card" onclick="location='/verktoy/gcd-kalkulator'"><span class="tool-card-icon">📐</span><h3>Største Felles Divisor Kalkulator</h3><p>Finn største felles divisor (SFD)</p></div><div class="tool-card" onclick="location='/verktoy/lcm-kalkulator'"><span class="tool-card-icon">📐</span><h3>Minste Felles Multiplum Kalkulator</h3><p>Finn minste felles multiplum (MFM)</p></div><div class="tool-card" onclick="location='/kategori/matematikk'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle Matematikk</h3><p>Alle kalkulatorer i denne kategorien</p></div></div></div>
+    <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/lan-kalkulator'"><span class="tool-card-icon">💰</span><h3>Lån Kalkulator</h3><p>Beregn månedlige låneavdrag med nedbetalingsoversikt</p></div><div class="tool-card" onclick="location='/verktoy/temperatur-konvertering'"><span class="tool-card-icon">🔄</span><h3>Temperatur Konvertering</h3><p>Konverter temperatur mellom alle enheter</p></div><div class="tool-card" onclick="location='/verktoy/areal-kalkulator'"><span class="tool-card-icon">📏</span><h3>Areal Kalkulator</h3><p>Beregn areal av ulike former med enheter</p></div><div class="tool-card" onclick="location='/verktoy/alder-kalkulator'"><span class="tool-card-icon">📅</span><h3>Alder Kalkulator</h3><p>Beregn nøyaktig alder med sammenligning og statistikk</p></div><div class="tool-card" onclick="location='/verktoy/fart-kalkulator'"><span class="tool-card-icon">⚡</span><h3>Fart Kalkulator</h3><p>Beregn fart, distanse og tid med enhetskonvertering og drivstoffestimat</p></div></div></div>
+  </div>
+  <aside class="sidebar">
+    <div class="sidebar-card"><h3>Matematikk kalkulatorer</h3><ul class="sidebar-links"><li><a href="/verktoy/prosent-kalkulator"><span class="icon">📐</span>Prosent Kalkulator</a></li><li><a href="/verktoy/kvadratrot-kalkulator"><span class="icon">📐</span>Kvadratrot Kalkulator</a></li><li><a href="/verktoy/potens-kalkulator"><span class="icon">📐</span>Potens Kalkulator</a></li><li><a href="/verktoy/brøk-kalkulator"><span class="icon">📐</span>Brøk Kalkulator</a></li><li><a href="/verktoy/gjennomsnitt-kalkulator"><span class="icon">📐</span>Gjennomsnitt Kalkulator</a></li><li><a href="/verktoy/logaritme-kalkulator"><span class="icon">📐</span>Logaritme Kalkulator</a></li><li><a href="/verktoy/primtall-kalkulator"><span class="icon">📐</span>Primtall Kalkulator</a></li><li><a href="/verktoy/fakultet-kalkulator"><span class="icon">📐</span>Fakultet Kalkulator</a></li><li><a href="/kategori/matematikk" style="color:var(--primary)">Se alle Matematikk →</a></li></ul></div>
+    <div class="sidebar-card"><h3>Populære verktøy</h3><ul class="sidebar-links"><li><a href="/verktoy/bmi-kalkulator"><span class="icon">❤️</span>BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator"><span class="icon">💰</span>Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator"><span class="icon">📐</span>Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator"><span class="icon">📅</span>Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator"><span class="icon">❤️</span>Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator"><span class="icon">⚗️</span>pH Kalkulator</a></li></ul></div>
+  </aside>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">1543+ gratis kalkulatorer</p></div>
+      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li><li><a href="/kategori/krypto">₿ Krypto</a></li><li><a href="/kategori/spill">🎮 Spill</a></li><li><a href="/kategori/odds">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi">🌱 Økologi</a></li><li><a href="/kategori/bolig">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk">🎵 Musikk</a></li><li><a href="/kategori/teknologi">💻 Teknologi</a></li><li><a href="/kategori/ki">🤖 Kunstig Intelligens</a></li></ul></div>
+      <div class="footer-col"><h4>Populære</h4><ul><li><a href="/verktoy/bmi-kalkulator">BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator">Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator">Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator">Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator">Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator">pH Kalkulator</a></li><li><a href="/verktoy/molekylvekt-kalkulator">Molekylvektkalkulator</a></li><li><a href="/verktoy/halveringstid-kalkulator">Halveringstid Kalkulator</a></li><li><a href="/verktoy/befolkningsvekst-kalkulator">Befolkningsvekst Kalkulator</a></li><li><a href="/verktoy/terningkaster">Terningkaster</a></li></ul></div>
+      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/campingvognregelen-kalkulator">Campingvognregelen Kalkulator</a></li><li><a href="/verktoy/formuesskatt-2023-kalkulator">Formuesskatt 2023 Kalkulator</a></li><li><a href="/verktoy/stillingsprosent-kalkulator-laerer">Stillingsprosent Kalkulator Lærer</a></li><li><a href="/verktoy/pendlerfradrag-kalkulator">Pendlerfradrag Kalkulator</a></li><li><a href="/verktoy/partiell-derivasjon-kalkulator">Partiell Derivasjon Kalkulator</a></li><li><a href="/verktoy/verditap-kalkulator">Verditap Kalkulator</a></li><li><a href="/verktoy/tollkalkulator-norge">Tollkalkulator Norge</a></li><li><a href="/verktoy/fattigdomsgrense-kalkulator">Fattigdomsgrense Kalkulator</a></li></ul></div>
+      <div class="footer-col"><h4>Info</h4><ul><li><a href="/om-oss">Om oss</a></li><li><a href="/personvern">Personvern</a></li><li><a href="/kontakt">Kontakt</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Kalkulator24 — Alle kalkulatorer er gratis</p></div>
+  </div>
+</footer>
+<script>
+function toggleMenu(){var m=document.getElementById("mobileMenu");m.classList.toggle("open");}
+document.addEventListener("click",function(e){var m=document.getElementById("mobileMenu");var b=document.getElementById("hamburgerBtn");if(m&&b&&!m.contains(e.target)&&!b.contains(e.target))m.classList.remove("open");});
+</script>
+<script src="/assets/js/calc.js"></script>
+</body></html>

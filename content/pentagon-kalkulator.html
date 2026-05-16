@@ -1,0 +1,156 @@
+```html
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pentagon Kalkulator – Slik beregner du areal, omkrets og mer</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            max-width: 860px;
+            margin: 40px auto;
+            padding: 0 20px;
+            color: #1e2a3a;
+            background: #f9fafb;
+        }
+        h2 {
+            color: #0b3954;
+            border-bottom: 3px solid #d4a373;
+            padding-bottom: 6px;
+            margin-top: 2em;
+        }
+        h3 {
+            color: #1e5a6f;
+            margin-top: 1.5em;
+        }
+        p {
+            margin: 1em 0;
+        }
+        ul, ol {
+            padding-left: 1.4em;
+            margin: 0.8em 0;
+        }
+        li {
+            margin-bottom: 0.3em;
+        }
+        strong {
+            color: #0b3954;
+        }
+        .highlight {
+            background: #e6f0f5;
+            padding: 12px 18px;
+            border-left: 6px solid #0b3954;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5em 0;
+        }
+        .faq-item {
+            background: white;
+            border-radius: 12px;
+            padding: 12px 18px;
+            margin: 1em 0;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        }
+        .faq-item p {
+            margin: 0.3em 0;
+        }
+        .kalkulator-badge {
+            background: #d4a373;
+            color: white;
+            font-weight: 600;
+            padding: 2px 10px;
+            border-radius: 30px;
+            font-size: 0.8em;
+            display: inline-block;
+            margin-right: 6px;
+        }
+        .formel {
+            background: #ffffff;
+            padding: 12px 18px;
+            border-radius: 12px;
+            border: 1px solid #dce5ec;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+        @media (max-width: 600px) {
+            .formel { white-space: normal; word-break: break-all; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Introduksjon -->
+    <h2>Hva er en Pentagon Kalkulator?</h2>
+    <p>En <strong>pentagon kalkulator</strong> er et digitalt verktøy som raskt beregner areal, omkrets, sidelengde, diagonal, radius og høyde i en regulær femkant (pentagon). I stedet for å utføre manuelle trigonometriske beregninger, skriver du inn én kjent verdi – for eksempel sidelengde eller omkrets – og kalkulatoren gjør resten. De fleste <strong>pentagon kalkulator</strong>-verktøyene støtter også omvendt beregning: du kan skrive inn areal og få ut sidelengde. Enten du er student, arkitekt, snekkermester eller bare nysgjerrig, sparer en <strong>pentagon kalkulator</strong> tid og minimerer feil.</p>
+    <p>En regulær pentagon har fem like lange sider og fem like vinkler (108° innvendig). Fordi geometrien er så symmetrisk, finnes det faste formler som knytter sidelengde, areal, omkrets og radius sammen. En <strong>pentagon kalkulator</strong> utnytter disse formlene og gir deg svar på sekunder.</p>
+
+    <!-- Hvorfor viktig -->
+    <h2>Hvorfor er en Pentagon Kalkulator viktig?</h2>
+    <p>Å beregne egenskapene til en femkant for hånd er tidkrevende og utsatt for feil, spesielt når du jobber med desimaltall eller store prosjekter. Her er noen grunner til at en <strong>pentagon kalkulator</strong> er uunnværlig:</p>
+    <ul>
+        <li><strong>Nøyaktighet:</strong> Manuell utregning av areal krever ofte kvadratrøtter og sin/cos. Én tastefeil og resultatet blir feil. Kalkulatoren eliminerer dette.</li>
+        <li><strong>Tidsbesparelse:</strong> I stedet for å slå opp formler og taste inn flere trinn, får du alt på ett sted. Perfekt for bygg- og anleggsbransjen.</li>
+        <li><strong>Pedagogisk verdi:</strong> Lær deg sammenhengen mellom sidelengde og areal ved å teste ulike verdier. En <strong>pentagon kalkulator</strong> fungerer som en interaktiv lærebok.</li>
+        <li><strong>Relevans i yrkeslivet:</strong> Arkitekter designer vinduer, tak eller møbler med pentagonformer. Snekkere trenger eksakte mål for materialkutt. En kalkulator gir deg tillit til dine mål.</li>
+    </ul>
+    <p>Kort sagt: en <strong>pentagon kalkulator</strong> gjør kompleks geometri tilgjengelig for alle – fra skoleelever til profesjonelle.</p>
+
+    <!-- Slik bruker du -->
+    <h2>Slik bruker du en Pentagon Kalkulator</h2>
+    <h3>Trinn-for-trinn veiledning</h3>
+    <ol>
+        <li><strong>Finn en pålitelig pentagon kalkulator</strong> – søk etter «pentagon kalkulator» på nettet, eller bruk en app. Mange er gratis og krever ingen nedlasting.</li>
+        <li><strong>Velg hvilken verdi du kjenner</strong> – oftest sidelengde (s), omkrets (P), areal (A) eller radius (r). Noen kalkulatorer har en nedtrekksmeny.</li>
+        <li><strong>Skriv inn verdien</strong> – for eksempel 12,5 cm. Pass på enheter (mm, cm, m, tommer).</li>
+        <li><strong>Trykk på «Beregn»</strong> – kalkulatoren viser øyeblikkelig alle andre egenskaper: areal, omkrets, diagonal, høyde, omskrevet radius og innskrevet radius.</li>
+        <li><strong>Juster og sammenlign</strong> – endre verdien og se hvordan arealet endrer seg. Dette er nyttig for optimalisering.</li>
+    </ol>
+    <p>De fleste <strong>pentagon kalkulator</strong>-verktøyene har også en «omvendt modus»: skriv inn areal og få sidelengde. Test gjerne med kjente tall for å sjekke at du forstår logikken.</p>
+
+    <!-- Formel med eksempel -->
+    <h2>Formel med eksempel – areal av en regulær pentagon</h2>
+    <p>Den vanligste formelen for arealet <strong>A</strong> av en regulær pentagon med sidelengde <strong>s</strong> er:</p>
+    <div class="formel">
+        A = (1/4) × √(5(5 + 2√5)) × s²
+    </div>
+    <p>Forenklet kan du også bruke: <strong>A ≈ 1,720477 × s²</strong> (avrundet).</p>
+    <h3>Eksempel: sidelengde = 8 cm</h3>
+    <ul>
+        <li>Beregn s² = 8 × 8 = 64</li>
+        <li>Multipliser med konstanten: 64 × 1,720477 ≈ 110,1105</li>
+        <li><strong>Areal ≈ 110,11 cm²</strong></li>
+    </ul>
+    <p>Med en <strong>pentagon kalkulator</strong> skriver du bare inn 8, og får arealet 110,11 cm² (samt omkrets 40 cm, diagonal ca. 12,94 cm, og mer). Prøv gjerne selv: jo større sidelengde, jo raskere vokser arealet (kvadratisk).</p>
+    <div class="highlight">
+        <strong>💡 Tips:</strong> Konstanten √(5(5+2√5))/4 ≈ 1,720477. Husk at dette gjelder kun for regulære femkanter. For irregulære former må du dele figuren inn i trekanter.
+    </div>
+
+    <!-- Praktiske eksempler -->
+    <h2>Praktiske eksempler fra virkeligheten</h2>
+    <h3>1. Arkitektur – pentagonvindu</h3>
+    <p>Du skal lage et vindu i form av en regulær femkant. Glassleverandøren trenger arealet for å prise glasset. Sidelengden er 0,6 meter. En <strong>pentagon kalkulator</strong> gir areal = 0,6² × 1,720477 ≈ 0,619 m². Du kan også få omkretsen (3,0 m) for å beregne listverk.</p>
+    <h3>2. Hagearbeid – pentagonbed</h3>
+    <p>Du anlegger et blomsterbed i pentagonform. Hver side skal være 1,2 meter. For å kjøpe jord og planter trenger du arealet. Kalkulatoren viser ca. 2,48 m². Omkretsen (6,0 m) hjelper deg med kantstein.</p>
+    <h3>3. Produktdesign – bordplate</h3>
+    <p>Et salongbord med pentagonformet plate. Sidelengde 45 cm. Arealet blir 45² × 1,720477 ≈ 3484 cm² (0,348 m²). Dette gir deg nøyaktig materialforbruk. En <strong>pentagon kalkulator</strong> sikrer at du ikke kjøper for lite tre eller glass.</p>
+    <h3>4. Pedagogikk – matematikkoppgave</h3>
+    <p>Elever får i oppgave å finne arealet av en pentagon med sidelengde 5,2 cm. I stedet for å bruke kalkulator manuelt, kan de kontrollere svaret med en <strong>pentagon kalkulator</strong>. Dette styrker forståelsen av formler og avrunding.</p>
+
+    <!-- Tips -->
+    <h2>Tips for å få mest mulig ut av en Pentagon Kalkulator</h2>
+    <ul>
+        <li><strong>Bruk riktig enhet:</strong> Sjekk at du ikke blander cm og m. Mange kalkulatorer lar deg velge enhet – utnytt dette.</li>
+        <li><strong>Forstå avrunding:</strong> Noen kalkulatorer viser 3 desimaler, andre 6. For byggprosjekter er 2–3 desimaler ofte tilstrekkelig.</li>
+        <li><strong>Kombiner med andre verktøy:</strong> Bruk en <strong>pentagon kalkulator</strong> sammen med en arealkalkulator for uregelmessige former hvis du har sammensatte figurer.</li>
+        <li><strong>Lær deg bakgrunnsformelen:</strong> Selv om kalkulatoren gjør jobben, er det nyttig å vite at arealet alltid er proporsjonalt med s². Dobbelt så lang side gir fire ganger så stort areal.</li>
+        <li><strong>Test med kjente tall:</strong> Hvis du vet at en pentagon med side 1 cm har areal ≈ 1,720 cm², kan du lett sjekke om kalkulatoren fungerer korrekt.</li>
+        <li><strong>Bruk mobil eller nettbrett:</strong> De fleste <strong>pentagon kalkulator</strong>-sidene er responsive og fungerer like bra i felt som på kontoret.</li>
+    </ul>
+
+    <!-- FAQ -->
+    <h2>Ofte stilte spørsmål (FAQ)</h2>
+
+    <div class="faq-item">
+        <p

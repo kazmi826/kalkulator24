@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diagonaliser Matrise Kalkulator — Gratis Online Kalkulator | Kalkulator24</title>
+  <meta name="description" content="Beregn egenverdier og egenvektorer for en 2x2 matrise, og finn diagonaliseringen. — Gratis kalkulator online">
+  <meta name="keywords" content="diagonalisering, matrise, egenverdier, egenvektorer, lineær algebra, kalkulator">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="Norwegian">
+  <meta name="google-site-verification" content="U-ZiCQHLID9ShjKIWBJI0Xi7xJDNrx9bwP4tRBEYzSQ">
+  <meta name="theme-color" content="#2563eb">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Diagonaliser Matrise Kalkulator — Gratis Online Kalkulator | Kalkulator24">
+  <meta property="og:description" content="Beregn egenverdier og egenvektorer for en 2x2 matrise, og finn diagonaliseringen. — Gratis kalkulator online">
+  <meta property="og:url" content="https://kalkulator24.guru/verktoy/diagonaliser-matrise-kalkulator">
+  <meta property="og:locale" content="nb_NO">
+  <link rel="canonical" href="https://kalkulator24.guru/verktoy/diagonaliser-matrise-kalkulator">
+  <link rel="alternate" hreflang="nb" href="https://kalkulator24.guru/verktoy/diagonaliser-matrise-kalkulator">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+</head>
+<body>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Diagonaliser Matrise Kalkulator","description":"Beregn egenverdier og egenvektorer for en 2x2 matrise, og finn diagonaliseringen.","url":"https://kalkulator24.guru/verktoy/diagonaliser-matrise-kalkulator","applicationCategory":"UtilityApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"NOK"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Hjem","item":"https://kalkulator24.guru"},{"@type":"ListItem","position":2,"name":"Matematikk","item":"https://kalkulator24.guru/kategori/matematikk"},{"@type":"ListItem","position":3,"name":"Diagonaliser Matrise Kalkulator","item":"https://kalkulator24.guru/verktoy/diagonaliser-matrise-kalkulator"}]}</script>
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="/" class="logo">Kalkulator24</a>
+    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="active">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li><li><a href="/kategori/odds" class="">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi" class="">🌱 Økologi</a></li><li><a href="/kategori/bolig" class="">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk" class="">🎵 Musikk</a></li><li><a href="/kategori/teknologi" class="">💻 Teknologi</a></li><li><a href="/kategori/ki" class="">🤖 Kunstig Intelligens</a></li></ul>
+    <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">☰</button>
+  </div>
+  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="active">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li><li><a href="/kategori/odds" class="">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi" class="">🌱 Økologi</a></li><li><a href="/kategori/bolig" class="">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk" class="">🎵 Musikk</a></li><li><a href="/kategori/teknologi" class="">💻 Teknologi</a></li><li><a href="/kategori/ki" class="">🤖 Kunstig Intelligens</a></li></ul></div>
+</nav>
+<div class="breadcrumb"><a href="/">Hjem</a><span class="sep">›</span><a href="/kategori/matematikk">Matematikk</a><span class="sep">›</span>Diagonaliser Matrise Kalkulator</div>
+<div class="tool-hero"><div class="tool-badge">📐 Matematikk</div><h1>Diagonaliser Matrise Kalkulator</h1><p class="subtitle">Beregn egenverdier og egenvektorer for en 2x2 matrise, og finn diagonaliseringen. — raskt og gratis</p></div>
+<div class="main-wrap">
+  <div class="main-content">
+    <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>a₁₁ (øverst venstre)</label><div class="input-row"><input type="number" class="calc-input" data-field="a11" placeholder="f.eks. 2"></div></div><div class="input-group"><label>a₁₂ (øverst høyre)</label><div class="input-row"><input type="number" class="calc-input" data-field="a12" placeholder="f.eks. 1"></div></div><div class="input-group"><label>a₂₁ (nederst venstre)</label><div class="input-row"><input type="number" class="calc-input" data-field="a21" placeholder="f.eks. 1"></div></div><div class="input-group"><label>a₂₂ (nederst høyre)</label><div class="input-row"><input type="number" class="calc-input" data-field="a22" placeholder="f.eks. 2"></div></div></div>    <button class="btn-calc" onclick="runCalculator('diagonaliser_matrise_2x2')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
+    <div class="content-card"><h2>Hva er en Diagonaliser Matrise Kalkulator?</h2>
+<p>En <strong>diagonaliser matrise kalkulator</strong> er et digitalt verktøy som automatiserer prosessen med å diagonalisere en kvadratisk matrise. Diagonalisering innebærer å finne en diagonal matrise <strong>D</strong> og en inverterbar matrise <strong>P</strong> slik at <strong>A = PDP⁻¹</strong>, der <strong>A</strong> er den opprinnelige matrisen. Kalkulatoren beregner egenverdier og egenvektorer, og utfører de nødvendige matriseoperasjonene for å levere resultatet raskt og nøyaktig. Dette sparer tid og reduserer risikoen for manuelle regnefeil, spesielt for store matriser.</p>
+<p>Verktøyet er spesielt nyttig for studenter, ingeniører og forskere som jobber med lineær algebra, differensialligninger eller kvantemekanikk. En <strong>diagonaliser matrise kalkulator</strong> kan håndtere både reelle og komplekse tall, og gir ofte trinnvise løsninger som hjelper brukeren å forstå prosessen bedre.</p>
+
+<h2>Hvorfor er Diagonalisering Viktig?</h2>
+<p>Diagonalisering er en av de mest sentrale teknikkene i lineær algebra, og den har vidtrekkende anvendelser. Her er noen grunner til hvorfor det er viktig:</p>
+<ul>
+<li><strong>Forenkler beregninger:</strong> Diagonalmatriser er mye enklere å arbeide med enn generelle matriser. For eksempel kan potenser av en diagonalmatrise <strong>Dⁿ</strong> beregnes ved å opphøye hvert diagonalelement i n.</li>
+<li><strong>Løser differensialligninger:</strong> Systemer av lineære differensialligninger kan løses effektivt ved å diagonalisere koeffisientmatrisen.</li>
+<li><strong>Anvendelser i fysikk:</strong> I kvantemekanikk brukes diagonalisering for å finne energinivåer og egentilstander.</li>
+<li><strong>Datavitenskap:</strong> I maskinlæring og dataanalyse brukes diagonalisering i teknikker som Principal Component Analysis (PCA) for dimensjonsreduksjon.</li>
+</ul>
+<p>En <strong>diagonaliser matrise kalkulator</strong> gjør denne prosessen tilgjengelig for alle, uansett matematisk bakgrunn, og sikrer at du får korrekte resultater uten å måtte utføre lange, repetitive beregninger for hånd.</p>
+
+<h2>Slik Bruker du en Diagonaliser Matrise Kalkulator</h2>
+<p>Å bruke en <strong>diagonaliser matrise kalkulator</strong> er enkelt og krever bare noen få steg. Følg denne fremgangsmåten for å få best mulig resultat:</p>
+<ul>
+<li><strong>Steg 1:</strong> Finn en pålitelig online kalkulator. Søk etter "diagonaliser matrise kalkulator" på nettet, og velg en som støtter matriser av din størrelse (vanligvis 2x2, 3x3 eller større).</li>
+<li><strong>Steg 2:</strong> Skriv inn matrisen din. De fleste kalkulatorer lar deg taste inn elementene i en tabell eller et rutenett. Sørg for at du legger inn tallene korrekt, og bruk desimaltegn eller brøker etter behov.</li>
+<li><strong>Steg 3:</strong> Velg eventuelle innstillinger. Noen kalkulatorer lar deg velge om du vil se trinnvise løsninger, eller om du vil ha resultatet i desimal- eller brøkform.</li>
+<li><strong>Steg 4:</strong> Klikk på "Beregn" eller "Diagonaliser". Kalkulatoren vil da utføre de nødvendige beregningene og vise resultatet, vanligvis inkludert diagonalmatrisen <strong>D</strong>, basisbyttematrisen <strong>P</strong>, og dens invers <strong>P⁻¹</strong>.</li>
+</ul>
+<p>Husk at ikke alle matriser er diagonaliserbare. Kalkulatoren vil gi en melding hvis matrisen din ikke kan diagonaliseres, for eksempel hvis den mangler nok lineært uavhengige egenvektorer.</p>
+
+<h2>Formel med Eksempel</h2>
+<p>For å forstå hva en <strong>diagonaliser matrise kalkulator</strong> gjør, er det nyttig å se på den underliggende formelen. Gitt en kvadratisk matrise <strong>A</strong> av størrelse n×n, diagonaliseres den hvis vi kan finne:</p>
+<ul>
+<li><strong>Egenverdier:</strong> Skalarer λ slik at det(A - λI) = 0.</li>
+<li><strong>Egenvektorer:</strong> Ikke-null vektorer v slik at (A - λI)v = 0.</li>
+</ul>
+<p>Deretter setter vi sammen egenvektorene som kolonner i matrisen <strong>P</strong>, og egenverdiene på diagonalen i <strong>D</strong>. Resultatet er:</p>
+<p><strong>A = PDP⁻¹</strong></p>
+<p><strong>Eksempel:</strong> La oss diagonalisere matrisen A = [[2, 1], [1, 2]].</p>
+<ul>
+<li><strong>Finn egenverdier:</strong> Løs det(A - λI) = (2-λ)(2-λ) - 1 = λ² - 4λ + 3 = 0, som gir λ₁ = 3 og λ₂ = 1.</li>
+<li><strong>Finn egenvektorer:</strong> For λ₁ = 3: (A - 3I)v = 0 gir v₁ = [1, 1]ᵀ. For λ₂ = 1: (A - I)v = 0 gir v₂ = [1, -1]ᵀ.</li>
+<li><strong>Sett opp P og D:</strong> P = [[1, 1], [1, -1]], D = [[3, 0], [0, 1]].</li>
+<li><strong>Bekreft:</strong> PDP⁻¹ = A. En <strong>diagonaliser matrise kalkulator</strong> ville utført disse stegene automatisk og vist resultatet.</li>
+</ul>
+
+<h2>Praktiske Eksempler</h2>
+<p>Her er noen praktiske situasjoner der en <strong>diagonaliser matrise kalkulator</strong> kan være uvurderlig:</p>
+<ul>
+<li><strong>Ingeniørvitenskap:</strong> I strukturell analyse brukes diagonalisering for å finne egenfrekvenser og modale former i vibrasjonssystemer. En kalkulator kan raskt beregne disse for store matriser.</li>
+<li><strong>Økonomi:</strong> I porteføljeteori brukes diagonalisering for å dekomponere kovariansmatriser, noe som hjelper med risikostyring og optimering.</li>
+<li><strong>Utdanning:</strong> Studenter som lærer lineær algebra kan bruke kalkulatoren til å sjekke sine manuelle beregninger og få innsikt i hvordan diagonalisering fungerer.</li>
+<li><strong>Fysikk:</strong> I kvantemekanikk diagonaliseres Hamilton-operatoren for å finne energinivåer. En kalkulator håndterer komplekse tall og store matriser effektivt.</li>
+</ul>
+<p>I alle disse tilfellene sparer en <strong>diagonaliser matrise kalkulator</strong> tid og minimerer feil, slik at du kan fokusere på tolkningen av resultatene i stedet for de tekniske detaljene.</p>
+
+<h2>Tips for Effektiv Bruk</h2>
+<p>For å få mest mulig ut av en <strong>diagonaliser matrise kalkulator</strong>, bør du vurdere disse tipsene:</p>
+<ul>
+<li><strong>Kontroller matrisen:</strong> Sørg for at matrisen er kvadratisk (samme antall rader og kolonner). Ikke-kvadratiske matriser kan ikke diagonaliseres.</li>
+<li><strong>Bruk presise tall:</strong> Hvis du jobber med desimaltall, bruk så mange desimaler som mulig for å unngå avrundingsfeil. Brøker er ofte mer nøyaktige.</li>
+<li><strong>Sjekk diagonaliserbarhet:</strong> Ikke alle matriser er diagonaliserbare. Hvis kalkulatoren gir en feilmelding, sjekk om matrisen har nok egenvektorer. For eksempel er en matrise med en egenverdi med algebraisk multiplisitet 2, men geometrisk multiplisitet 1, ikke diagonaliserbar.</li>
+<li><strong>Bruk trinnvise løsninger:</strong> Mange kalkulatorer tilbyr en "vis trinn" funksjon. Dette er nyttig for læring og for å verifisere at du forstår prosessen.</li>
+<li><strong>Eksperimenter:</strong> Prøv med forskjellige matriser for å se hvordan egenverdiene og egenvektorene endrer seg. Dette kan gi dypere innsikt i lineær algebra.</li>
+</ul>
+
+<h2>FAQ - Ofte Stilte Spørsmål</h2>
+<h3>1. Hva er forskjellen på diagonalisering og diagonalmatrise?</h3>
+<p>En diagonalmatrise er en matrise der alle elementer utenfor hoveddiagonalen er null. Diagonalisering er prosessen med å finne en slik matrise <strong>D</strong> og en basisbyttematrise <strong>P</strong> slik at den opprinnelige matrisen <strong>A</strong> kan skrives som <strong>A = PDP⁻¹</strong>. En <strong>diagonaliser matrise kalkulator</strong> utfører denne prosessen automatisk.</p>
+<h3>2. Kan alle matriser diagonaliseres?</h3>
+<p>Nei, bare kvadratiske matriser som har nok lineært uavhengige egenvektorer (dvs. en basis av egenvektorer) kan diagonaliseres. Matriser med manglende egenvektorer kalles defekte matriser. En <strong>diagonaliser matrise kalkulator</strong> vil gi en feilmelding hvis matrisen ikke er diagonaliserbar.</p>
+<h3>3. Hva gjør jeg hvis kalkulatoren gir komplekse tall?</h3>
+<p>Hvis matrisen har komplekse egenverdier, vil en god <strong>diagonaliser matrise kalkulator</strong> håndtere dette automatisk. Resultatet vil inkludere komplekse tall i både <strong>P</strong> og <strong>D</strong>. Dette er normalt i mange fysiske anvendelser, som kvantemekanikk.</p>
+<h3>4. Hvorfor får jeg feil resultat når jeg sjekker for hånd?</h3>
+<p>Mulige årsaker inkluderer avrundingsfeil, feil ved inntasting av matrisen, eller at du har brukt en kalkulator som ikke støtter din matrisestørrelse. Sørg for å dobbeltsjekke inndataene og bruk en pålitelig <strong>diagonaliser matrise kalkulator</strong> som viser trinnvise løsninger for å sammenligne.</p>
+<h3>5. Kan jeg bruke kalkulatoren for matriser større enn 3x3?</h3>
+<p>Ja, mange <strong>diagonaliser matrise kalkulatorer</strong> støtter matriser opp til 10x10 eller større. Vær imidlertid oppmerksom på at beregningstiden kan øke for svært store matriser, og noen kalkulatorer kan ha begrensninger på gratisversjoner.</p></div>
+    <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/prosent-kalkulator'"><span class="tool-card-icon">📐</span><h3>Prosent Kalkulator</h3><p>Beregn prosent med flere metoder og sammenligninger</p></div><div class="tool-card" onclick="location='/verktoy/kvadratrot-kalkulator'"><span class="tool-card-icon">📐</span><h3>Kvadratrot Kalkulator</h3><p>Beregn kvadratroter og andre røtter</p></div><div class="tool-card" onclick="location='/verktoy/potens-kalkulator'"><span class="tool-card-icon">📐</span><h3>Potens Kalkulator</h3><p>Beregn potens av tall med store eksponenter</p></div><div class="tool-card" onclick="location='/verktoy/brøk-kalkulator'"><span class="tool-card-icon">📐</span><h3>Brøk Kalkulator</h3><p>Beregn med brøker og forenkle resultater</p></div><div class="tool-card" onclick="location='/verktoy/gjennomsnitt-kalkulator'"><span class="tool-card-icon">📐</span><h3>Gjennomsnitt Kalkulator</h3><p>Beregn gjennomsnitt og statistiske mål</p></div><div class="tool-card" onclick="location='/verktoy/logaritme-kalkulator'"><span class="tool-card-icon">📐</span><h3>Logaritme Kalkulator</h3><p>Beregn logaritmer og eksponentialfunksjoner</p></div><div class="tool-card" onclick="location='/verktoy/primtall-kalkulator'"><span class="tool-card-icon">📐</span><h3>Primtall Kalkulator</h3><p>Finn primtall og faktoriser tall</p></div><div class="tool-card" onclick="location='/verktoy/fakultet-kalkulator'"><span class="tool-card-icon">📐</span><h3>Fakultet Kalkulator</h3><p>Beregn fakultet av tall</p></div><div class="tool-card" onclick="location='/verktoy/kombinasjon-kalkulator'"><span class="tool-card-icon">📐</span><h3>Kombinasjon Kalkulator</h3><p>Beregn antall kombinasjoner</p></div><div class="tool-card" onclick="location='/verktoy/permutasjon-kalkulator'"><span class="tool-card-icon">📐</span><h3>Permutasjon Kalkulator</h3><p>Beregn antall permutasjoner</p></div><div class="tool-card" onclick="location='/verktoy/gcd-kalkulator'"><span class="tool-card-icon">📐</span><h3>Største Felles Divisor Kalkulator</h3><p>Finn største felles divisor (SFD)</p></div><div class="tool-card" onclick="location='/verktoy/lcm-kalkulator'"><span class="tool-card-icon">📐</span><h3>Minste Felles Multiplum Kalkulator</h3><p>Finn minste felles multiplum (MFM)</p></div><div class="tool-card" onclick="location='/kategori/matematikk'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle Matematikk</h3><p>Alle kalkulatorer i denne kategorien</p></div></div></div>
+    <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/lan-kalkulator'"><span class="tool-card-icon">💰</span><h3>Lån Kalkulator</h3><p>Beregn månedlige låneavdrag med nedbetalingsoversikt</p></div><div class="tool-card" onclick="location='/verktoy/temperatur-konvertering'"><span class="tool-card-icon">🔄</span><h3>Temperatur Konvertering</h3><p>Konverter temperatur mellom alle enheter</p></div><div class="tool-card" onclick="location='/verktoy/areal-kalkulator'"><span class="tool-card-icon">📏</span><h3>Areal Kalkulator</h3><p>Beregn areal av ulike former med enheter</p></div><div class="tool-card" onclick="location='/verktoy/alder-kalkulator'"><span class="tool-card-icon">📅</span><h3>Alder Kalkulator</h3><p>Beregn nøyaktig alder med sammenligning og statistikk</p></div><div class="tool-card" onclick="location='/verktoy/fart-kalkulator'"><span class="tool-card-icon">⚡</span><h3>Fart Kalkulator</h3><p>Beregn fart, distanse og tid med enhetskonvertering og drivstoffestimat</p></div></div></div>
+  </div>
+  <aside class="sidebar">
+    <div class="sidebar-card"><h3>Matematikk kalkulatorer</h3><ul class="sidebar-links"><li><a href="/verktoy/prosent-kalkulator"><span class="icon">📐</span>Prosent Kalkulator</a></li><li><a href="/verktoy/kvadratrot-kalkulator"><span class="icon">📐</span>Kvadratrot Kalkulator</a></li><li><a href="/verktoy/potens-kalkulator"><span class="icon">📐</span>Potens Kalkulator</a></li><li><a href="/verktoy/brøk-kalkulator"><span class="icon">📐</span>Brøk Kalkulator</a></li><li><a href="/verktoy/gjennomsnitt-kalkulator"><span class="icon">📐</span>Gjennomsnitt Kalkulator</a></li><li><a href="/verktoy/logaritme-kalkulator"><span class="icon">📐</span>Logaritme Kalkulator</a></li><li><a href="/verktoy/primtall-kalkulator"><span class="icon">📐</span>Primtall Kalkulator</a></li><li><a href="/verktoy/fakultet-kalkulator"><span class="icon">📐</span>Fakultet Kalkulator</a></li><li><a href="/kategori/matematikk" style="color:var(--primary)">Se alle Matematikk →</a></li></ul></div>
+    <div class="sidebar-card"><h3>Populære verktøy</h3><ul class="sidebar-links"><li><a href="/verktoy/bmi-kalkulator"><span class="icon">❤️</span>BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator"><span class="icon">💰</span>Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator"><span class="icon">📐</span>Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator"><span class="icon">📅</span>Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator"><span class="icon">❤️</span>Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator"><span class="icon">⚗️</span>pH Kalkulator</a></li></ul></div>
+  </aside>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">1543+ gratis kalkulatorer</p></div>
+      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li><li><a href="/kategori/krypto">₿ Krypto</a></li><li><a href="/kategori/spill">🎮 Spill</a></li><li><a href="/kategori/odds">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi">🌱 Økologi</a></li><li><a href="/kategori/bolig">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk">🎵 Musikk</a></li><li><a href="/kategori/teknologi">💻 Teknologi</a></li><li><a href="/kategori/ki">🤖 Kunstig Intelligens</a></li></ul></div>
+      <div class="footer-col"><h4>Populære</h4><ul><li><a href="/verktoy/bmi-kalkulator">BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator">Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator">Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator">Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator">Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator">pH Kalkulator</a></li><li><a href="/verktoy/molekylvekt-kalkulator">Molekylvektkalkulator</a></li><li><a href="/verktoy/halveringstid-kalkulator">Halveringstid Kalkulator</a></li><li><a href="/verktoy/befolkningsvekst-kalkulator">Befolkningsvekst Kalkulator</a></li><li><a href="/verktoy/terningkaster">Terningkaster</a></li></ul></div>
+      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/campingvognregelen-kalkulator">Campingvognregelen Kalkulator</a></li><li><a href="/verktoy/formuesskatt-2023-kalkulator">Formuesskatt 2023 Kalkulator</a></li><li><a href="/verktoy/stillingsprosent-kalkulator-laerer">Stillingsprosent Kalkulator Lærer</a></li><li><a href="/verktoy/pendlerfradrag-kalkulator">Pendlerfradrag Kalkulator</a></li><li><a href="/verktoy/partiell-derivasjon-kalkulator">Partiell Derivasjon Kalkulator</a></li><li><a href="/verktoy/verditap-kalkulator">Verditap Kalkulator</a></li><li><a href="/verktoy/tollkalkulator-norge">Tollkalkulator Norge</a></li><li><a href="/verktoy/fattigdomsgrense-kalkulator">Fattigdomsgrense Kalkulator</a></li></ul></div>
+      <div class="footer-col"><h4>Info</h4><ul><li><a href="/om-oss">Om oss</a></li><li><a href="/personvern">Personvern</a></li><li><a href="/kontakt">Kontakt</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Kalkulator24 — Alle kalkulatorer er gratis</p></div>
+  </div>
+</footer>
+<script>
+function toggleMenu(){var m=document.getElementById("mobileMenu");m.classList.toggle("open");}
+document.addEventListener("click",function(e){var m=document.getElementById("mobileMenu");var b=document.getElementById("hamburgerBtn");if(m&&b&&!m.contains(e.target)&&!b.contains(e.target))m.classList.remove("open");});
+</script>
+<script src="/assets/js/calc.js"></script>
+</body></html>

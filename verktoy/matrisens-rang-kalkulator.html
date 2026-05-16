@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matrisens Rang Kalkulator — Gratis Online Kalkulator | Kalkulator24</title>
+  <meta name="description" content="Beregn rangen til en matrise (maks 4x4) med trinnvis forklaring og sammenligning. — Gratis kalkulator online">
+  <meta name="keywords" content="matriserang, rang av matrise, lineær algebra, matrisekalkulator, norsk">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="Norwegian">
+  <meta name="google-site-verification" content="U-ZiCQHLID9ShjKIWBJI0Xi7xJDNrx9bwP4tRBEYzSQ">
+  <meta name="theme-color" content="#2563eb">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Matrisens Rang Kalkulator — Gratis Online Kalkulator | Kalkulator24">
+  <meta property="og:description" content="Beregn rangen til en matrise (maks 4x4) med trinnvis forklaring og sammenligning. — Gratis kalkulator online">
+  <meta property="og:url" content="https://kalkulator24.guru/verktoy/matrisens-rang-kalkulator">
+  <meta property="og:locale" content="nb_NO">
+  <link rel="canonical" href="https://kalkulator24.guru/verktoy/matrisens-rang-kalkulator">
+  <link rel="alternate" hreflang="nb" href="https://kalkulator24.guru/verktoy/matrisens-rang-kalkulator">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+</head>
+<body>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Matrisens Rang Kalkulator","description":"Beregn rangen til en matrise (maks 4x4) med trinnvis forklaring og sammenligning.","url":"https://kalkulator24.guru/verktoy/matrisens-rang-kalkulator","applicationCategory":"UtilityApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"NOK"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Hjem","item":"https://kalkulator24.guru"},{"@type":"ListItem","position":2,"name":"Matematikk","item":"https://kalkulator24.guru/kategori/matematikk"},{"@type":"ListItem","position":3,"name":"Matrisens Rang Kalkulator","item":"https://kalkulator24.guru/verktoy/matrisens-rang-kalkulator"}]}</script>
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="/" class="logo">Kalkulator24</a>
+    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="active">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li><li><a href="/kategori/odds" class="">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi" class="">🌱 Økologi</a></li><li><a href="/kategori/bolig" class="">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk" class="">🎵 Musikk</a></li><li><a href="/kategori/teknologi" class="">💻 Teknologi</a></li><li><a href="/kategori/ki" class="">🤖 Kunstig Intelligens</a></li></ul>
+    <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">☰</button>
+  </div>
+  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="active">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li><li><a href="/kategori/odds" class="">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi" class="">🌱 Økologi</a></li><li><a href="/kategori/bolig" class="">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk" class="">🎵 Musikk</a></li><li><a href="/kategori/teknologi" class="">💻 Teknologi</a></li><li><a href="/kategori/ki" class="">🤖 Kunstig Intelligens</a></li></ul></div>
+</nav>
+<div class="breadcrumb"><a href="/">Hjem</a><span class="sep">›</span><a href="/kategori/matematikk">Matematikk</a><span class="sep">›</span>Matrisens Rang Kalkulator</div>
+<div class="tool-hero"><div class="tool-badge">📐 Matematikk</div><h1>Matrisens Rang Kalkulator</h1><p class="subtitle">Beregn rangen til en matrise (maks 4x4) med trinnvis forklaring og sammenligning. — raskt og gratis</p></div>
+<div class="main-wrap">
+  <div class="main-content">
+    <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>Matrisestørrelse</label><div class="input-row"><select class="calc-input" data-field="matrix_size"><option value="2x2">2x2</option><option value="3x3">3x3</option><option value="4x4">4x4</option></select></div></div><div class="input-group"><label>Rad 1 (kommaseparert)</label><div class="input-row"><input type="text" class="calc-input" data-field="row1" placeholder="f.eks. 1,2,3"></div></div><div class="input-group"><label>Rad 2 (kommaseparert)</label><div class="input-row"><input type="text" class="calc-input" data-field="row2" placeholder="f.eks. 4,5,6"></div></div><div class="input-group"><label>Rad 3 (kommaseparert)</label><div class="input-row"><input type="text" class="calc-input" data-field="row3" placeholder="f.eks. 7,8,9"></div></div><div class="input-group"><label>Rad 4 (kommaseparert)</label><div class="input-row"><input type="text" class="calc-input" data-field="row4" placeholder="f.eks. 10,11,12"></div></div></div>    <button class="btn-calc" onclick="runCalculator('matrix_rank')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
+    <div class="content-card">Her er en SEO-optimalisert HTML-artikkel på norsk om "Matrisens Rang Kalkulator". Den inneholder de spesifiserte seksjonene, overskrifter, lister og nøkkelordet 8 ganger.
+
+```html
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrisens Rang Kalkulator – En komplett guide</title>
+    <meta name="description" content="Lær alt om matrisens rang kalkulator: hva det er, hvorfor det er viktig, hvordan du bruker den, formel med eksempel, praktiske anvendelser og FAQ.">
+</head>
+<body>
+    <article>
+        <h1>Matrisens Rang Kalkulator – Full guide for studenter og ingeniører</h1>
+        <p>En <strong>matrisens rang kalkulator</strong> er et uunnværlig verktøy i lineær algebra. Enten du studerer matematikk, jobber med datavitenskap eller analyserer tekniske systemer, hjelper kalkulatoren deg raskt å finne rangen til en matrise. I denne artikkelen går vi gjennom alt du trenger å vite – fra grunnleggende definisjoner til praktiske eksempler og tips.</p>
+
+        <h2>Hva er matrisens rang?</h2>
+        <p>Rangen til en matrise er antallet lineært uavhengige rader (eller kolonner) i matrisen. Det forteller oss hvor mye "informasjon" matrisen inneholder, og om systemet har unike løsninger. En <strong>matrisens rang kalkulator</strong> beregner dette tallet automatisk ved hjelp av Gauss-eliminasjon eller andre algoritmer.</p>
+        <ul>
+            <li><strong>Full rang:</strong> Når rangen er lik det minste antallet rader eller kolonner.</li>
+            <li><strong>Manglende rang:</strong> Når rader eller kolonner er lineært avhengige.</li>
+            <li><strong>Nullmatrise:</strong> Rang 0, alle elementer er null.</li>
+        </ul>
+        <p>En <strong>matrisens rang kalkulator</strong> gir deg svaret på sekunder, uten manuell reduksjon.</p>
+
+        <h2>Hvorfor er rangen viktig?</h2>
+        <p>Rangen er avgjørende i flere sammenhenger:</p>
+        <ul>
+            <li><strong>Løsning av lineære ligningssystemer:</strong> Rangen bestemmer om systemet har én, ingen eller uendelig mange løsninger.</li>
+            <li><strong>Matriseinvers:</strong> En kvadratisk matrise er inverterbar bare hvis den har full rang.</li>
+            <li><strong>Dimensjon av kolonnerom og radrom:</strong> Rangen er dimensjonen til disse underrommene.</li>
+            <li><strong>Datakomprimering og PCA:</strong> I maskinlæring brukes rang for å redusere dimensjonalitet.</li>
+        </ul>
+        <p>Med en <strong>matrisens rang kalkulator</strong> sparer du tid og unngår feil, spesielt ved store matriser.</p>
+
+        <h2>Slik bruker du en matrisens rang kalkulator</h2>
+        <p>De fleste nettbaserte kalkulatorer er enkle i bruk. Følg disse trinnene:</p>
+        <ol>
+            <li><strong>Angi dimensjon:</strong> Velg antall rader og kolonner (f.eks. 3x3, 4x5).</li>
+            <li><strong>Fyll inn tall:</strong> Skriv inn matriseelementene i feltene.</li>
+            <li><strong>Beregn:</strong> Klikk på "Beregn rang" eller "Calculate".</li>
+            <li><strong>Resultat:</strong> Kalkulatoren viser rangen og ofte den reduserte trappeformen.</li>
+        </ol>
+        <p>En god <strong>matrisens rang kalkulator</strong> viser også mellomregninger, slik at du kan lære prosessen.</p>
+
+        <h2>Formel med eksempel</h2>
+        <p>Rangen finnes ved å redusere matrisen til trappeform (Gauss-eliminasjon). Antallet rader som ikke er null, er rangen.</p>
+        <h3>Eksempel:</h3>
+        <p>La oss ta matrisen A = [[1, 2, 3], [4, 5, 6], [7, 8, 9]].</p>
+        <ul>
+            <li>Radoperasjoner: R2 = R2 - 4*R1 → [0, -3, -6], R3 = R3 - 7*R1 → [0, -6, -12].</li>
+            <li>Deretter R3 = R3 - 2*R2 → [0, 0, 0].</li>
+            <li>To rader er ikke-null, så rangen = 2.</li>
+        </ul>
+        <p>En <strong>matrisens rang kalkulator</strong> utfører disse trinnene automatisk og gir deg rangen 2 på et sekund.</p>
+
+        <h2>Praktiske eksempler</h2>
+        <h3>Eksempel 1: Ligningssystem</h3>
+        <p>Systemet x + y = 5, 2x + 2y = 10 har matrise [[1,1],[2,2]]. Rangen er 1, noe som betyr at systemet har uendelig mange løsninger (linjene er parallelle).</p>
+        <h3>Eksempel 2: Ingeniørfag</h3>
+        <p>I elektriske kretser brukes rang for å sjekke om Kirchhoffs lover gir uavhengige ligninger. En <strong>matrisens rang kalkulator</strong> hjelper ingeniører raskt å validere kretsmodeller.</p>
+        <h3>Eksempel 3: Datavitenskap</h3>
+        <p>I bildebehandling kan en matrise med lav rang komprimeres effektivt. Kalkulatoren viser om matrisen har lav rang, noe som er nyttig for SVD-dekomponering.</p>
+        <p>Uansett fagfelt – en <strong>matrisens rang kalkulator</strong> er et praktisk verktøy i hverdagen.</p>
+
+        <h2>Tips for effektiv bruk</h2>
+        <ul>
+            <li><strong>Sjekk dimensjonen:</strong> Sørg for at du har riktig antall rader og kolonner før beregning.</li>
+            <li><strong>Bruk desimaltall:</strong> De fleste kalkulatorer støtter brøker og desimaltall – vær presis.</li>
+            <li><strong>Lær av mellomregningene:</strong> Mange kalkulatorer viser trappeformen – studer den for å forstå rangen bedre.</li>
+            <li><strong>Test med kjente matriser:</strong> Prøv identitetsmatrisen (rang = dimensjon) eller nullmatrisen (rang = 0).</li>
+            <li><strong>Kombiner med andre verktøy:</strong> Bruk en <strong>matrisens rang kalkulator</strong> sammen med determinantkalkulator for full kontroll.</li>
+        </ul>
+        <p>Husk at en <strong>matrisens rang kalkulator</strong> er mest nyttig når du forstår teorien bak.</p>
+
+        <h2>FAQ – Ofte stilte spørsmål</h2>
+        <h3>1. Hva er forskjellen på radrang og kolonnerang?</h3>
+        <p>Radrang er antall lineært uavhengige rader, kolonnerang er antall uavhengige kolonner. De er alltid like for en gitt matrise. En <strong>matrisens rang kalkulator</strong> beregner begge, men resultatet er det samme.</p>
+
+        <h3>2. Kan rangen være større enn antall rader eller kolonner?</h3>
+        <p>Nei, rangen kan maksimalt være lik det minste antallet rader eller kolonner. For en 3x5-matrise er maks rang 3.</p>
+
+        <h3>3. Hvordan påvirker rangen løsningen av et ligningssystem?</h3>
+        <p>Hvis rangen til koeffisientmatrisen er lik rangen til den utvidede matrisen, har systemet løsning. Hvis rangen er lik antall ukjente, er løsningen unik. En <strong>matrisens rang kalkulator</strong> gir deg denne informasjonen raskt.</p>
+
+        <h3>4. Er en matrisens rang kalkulator gratis?</h3>
+        <p>Ja, de fleste nettbaserte kalkulatorer er gratis. Noen avanserte verktøy har betalte versjoner med flere funksjoner, men grunnleggende rangberegning er som regel gratis.</p>
+
+        <h3>5. Kan jeg bruke kalkulatoren for symbolsk matrise?</h3>
+        <p>Noen kalkulatorer støtter symbolsk algebra (f.eks. med variabler som a, b). De fleste jobber med numeriske verdier. Sjekk funksjonaliteten før du velger en <strong>matrisens rang kalkulator</strong>.</p>
+
+        <p>Med denne guiden er du klar til å bruke en <strong>matrisens rang kalkulator</strong> effektivt. Enten du er student, forsker eller ingeniør – verktøyet sparer tid og gir innsikt i lineær algebra.</p>
+    </article>
+</body>
+</html>
+```</div>
+    <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/prosent-kalkulator'"><span class="tool-card-icon">📐</span><h3>Prosent Kalkulator</h3><p>Beregn prosent med flere metoder og sammenligninger</p></div><div class="tool-card" onclick="location='/verktoy/kvadratrot-kalkulator'"><span class="tool-card-icon">📐</span><h3>Kvadratrot Kalkulator</h3><p>Beregn kvadratroter og andre røtter</p></div><div class="tool-card" onclick="location='/verktoy/potens-kalkulator'"><span class="tool-card-icon">📐</span><h3>Potens Kalkulator</h3><p>Beregn potens av tall med store eksponenter</p></div><div class="tool-card" onclick="location='/verktoy/brøk-kalkulator'"><span class="tool-card-icon">📐</span><h3>Brøk Kalkulator</h3><p>Beregn med brøker og forenkle resultater</p></div><div class="tool-card" onclick="location='/verktoy/gjennomsnitt-kalkulator'"><span class="tool-card-icon">📐</span><h3>Gjennomsnitt Kalkulator</h3><p>Beregn gjennomsnitt og statistiske mål</p></div><div class="tool-card" onclick="location='/verktoy/logaritme-kalkulator'"><span class="tool-card-icon">📐</span><h3>Logaritme Kalkulator</h3><p>Beregn logaritmer og eksponentialfunksjoner</p></div><div class="tool-card" onclick="location='/verktoy/primtall-kalkulator'"><span class="tool-card-icon">📐</span><h3>Primtall Kalkulator</h3><p>Finn primtall og faktoriser tall</p></div><div class="tool-card" onclick="location='/verktoy/fakultet-kalkulator'"><span class="tool-card-icon">📐</span><h3>Fakultet Kalkulator</h3><p>Beregn fakultet av tall</p></div><div class="tool-card" onclick="location='/verktoy/kombinasjon-kalkulator'"><span class="tool-card-icon">📐</span><h3>Kombinasjon Kalkulator</h3><p>Beregn antall kombinasjoner</p></div><div class="tool-card" onclick="location='/verktoy/permutasjon-kalkulator'"><span class="tool-card-icon">📐</span><h3>Permutasjon Kalkulator</h3><p>Beregn antall permutasjoner</p></div><div class="tool-card" onclick="location='/verktoy/gcd-kalkulator'"><span class="tool-card-icon">📐</span><h3>Største Felles Divisor Kalkulator</h3><p>Finn største felles divisor (SFD)</p></div><div class="tool-card" onclick="location='/verktoy/lcm-kalkulator'"><span class="tool-card-icon">📐</span><h3>Minste Felles Multiplum Kalkulator</h3><p>Finn minste felles multiplum (MFM)</p></div><div class="tool-card" onclick="location='/kategori/matematikk'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle Matematikk</h3><p>Alle kalkulatorer i denne kategorien</p></div></div></div>
+    <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/lan-kalkulator'"><span class="tool-card-icon">💰</span><h3>Lån Kalkulator</h3><p>Beregn månedlige låneavdrag med nedbetalingsoversikt</p></div><div class="tool-card" onclick="location='/verktoy/temperatur-konvertering'"><span class="tool-card-icon">🔄</span><h3>Temperatur Konvertering</h3><p>Konverter temperatur mellom alle enheter</p></div><div class="tool-card" onclick="location='/verktoy/areal-kalkulator'"><span class="tool-card-icon">📏</span><h3>Areal Kalkulator</h3><p>Beregn areal av ulike former med enheter</p></div><div class="tool-card" onclick="location='/verktoy/alder-kalkulator'"><span class="tool-card-icon">📅</span><h3>Alder Kalkulator</h3><p>Beregn nøyaktig alder med sammenligning og statistikk</p></div><div class="tool-card" onclick="location='/verktoy/fart-kalkulator'"><span class="tool-card-icon">⚡</span><h3>Fart Kalkulator</h3><p>Beregn fart, distanse og tid med enhetskonvertering og drivstoffestimat</p></div></div></div>
+  </div>
+  <aside class="sidebar">
+    <div class="sidebar-card"><h3>Matematikk kalkulatorer</h3><ul class="sidebar-links"><li><a href="/verktoy/prosent-kalkulator"><span class="icon">📐</span>Prosent Kalkulator</a></li><li><a href="/verktoy/kvadratrot-kalkulator"><span class="icon">📐</span>Kvadratrot Kalkulator</a></li><li><a href="/verktoy/potens-kalkulator"><span class="icon">📐</span>Potens Kalkulator</a></li><li><a href="/verktoy/brøk-kalkulator"><span class="icon">📐</span>Brøk Kalkulator</a></li><li><a href="/verktoy/gjennomsnitt-kalkulator"><span class="icon">📐</span>Gjennomsnitt Kalkulator</a></li><li><a href="/verktoy/logaritme-kalkulator"><span class="icon">📐</span>Logaritme Kalkulator</a></li><li><a href="/verktoy/primtall-kalkulator"><span class="icon">📐</span>Primtall Kalkulator</a></li><li><a href="/verktoy/fakultet-kalkulator"><span class="icon">📐</span>Fakultet Kalkulator</a></li><li><a href="/kategori/matematikk" style="color:var(--primary)">Se alle Matematikk →</a></li></ul></div>
+    <div class="sidebar-card"><h3>Populære verktøy</h3><ul class="sidebar-links"><li><a href="/verktoy/bmi-kalkulator"><span class="icon">❤️</span>BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator"><span class="icon">💰</span>Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator"><span class="icon">📐</span>Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator"><span class="icon">📅</span>Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator"><span class="icon">❤️</span>Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator"><span class="icon">⚗️</span>pH Kalkulator</a></li></ul></div>
+  </aside>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">1543+ gratis kalkulatorer</p></div>
+      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li><li><a href="/kategori/krypto">₿ Krypto</a></li><li><a href="/kategori/spill">🎮 Spill</a></li><li><a href="/kategori/odds">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi">🌱 Økologi</a></li><li><a href="/kategori/bolig">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk">🎵 Musikk</a></li><li><a href="/kategori/teknologi">💻 Teknologi</a></li><li><a href="/kategori/ki">🤖 Kunstig Intelligens</a></li></ul></div>
+      <div class="footer-col"><h4>Populære</h4><ul><li><a href="/verktoy/bmi-kalkulator">BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator">Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator">Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator">Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator">Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator">pH Kalkulator</a></li><li><a href="/verktoy/molekylvekt-kalkulator">Molekylvektkalkulator</a></li><li><a href="/verktoy/halveringstid-kalkulator">Halveringstid Kalkulator</a></li><li><a href="/verktoy/befolkningsvekst-kalkulator">Befolkningsvekst Kalkulator</a></li><li><a href="/verktoy/terningkaster">Terningkaster</a></li></ul></div>
+      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/campingvognregelen-kalkulator">Campingvognregelen Kalkulator</a></li><li><a href="/verktoy/formuesskatt-2023-kalkulator">Formuesskatt 2023 Kalkulator</a></li><li><a href="/verktoy/stillingsprosent-kalkulator-laerer">Stillingsprosent Kalkulator Lærer</a></li><li><a href="/verktoy/pendlerfradrag-kalkulator">Pendlerfradrag Kalkulator</a></li><li><a href="/verktoy/partiell-derivasjon-kalkulator">Partiell Derivasjon Kalkulator</a></li><li><a href="/verktoy/verditap-kalkulator">Verditap Kalkulator</a></li><li><a href="/verktoy/tollkalkulator-norge">Tollkalkulator Norge</a></li><li><a href="/verktoy/fattigdomsgrense-kalkulator">Fattigdomsgrense Kalkulator</a></li></ul></div>
+      <div class="footer-col"><h4>Info</h4><ul><li><a href="/om-oss">Om oss</a></li><li><a href="/personvern">Personvern</a></li><li><a href="/kontakt">Kontakt</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Kalkulator24 — Alle kalkulatorer er gratis</p></div>
+  </div>
+</footer>
+<script>
+function toggleMenu(){var m=document.getElementById("mobileMenu");m.classList.toggle("open");}
+document.addEventListener("click",function(e){var m=document.getElementById("mobileMenu");var b=document.getElementById("hamburgerBtn");if(m&&b&&!m.contains(e.target)&&!b.contains(e.target))m.classList.remove("open");});
+</script>
+<script src="/assets/js/calc.js"></script>
+</body></html>

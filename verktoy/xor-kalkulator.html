@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XOR Kalkulator — Gratis Online Kalkulator | Kalkulator24</title>
+  <meta name="description" content="Beregn XOR (eksklusiv ELLER) mellom to binære eller desimale tall. Viser resultat i binær, desimal og hex. — Gratis kalkulator online">
+  <meta name="keywords" content="xor, eksklusiv eller, binær kalkulator, bitvis operasjon, krypto, logisk kalkulator">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="Norwegian">
+  <meta name="google-site-verification" content="U-ZiCQHLID9ShjKIWBJI0Xi7xJDNrx9bwP4tRBEYzSQ">
+  <meta name="theme-color" content="#2563eb">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="XOR Kalkulator — Gratis Online Kalkulator | Kalkulator24">
+  <meta property="og:description" content="Beregn XOR (eksklusiv ELLER) mellom to binære eller desimale tall. Viser resultat i binær, desimal og hex. — Gratis kalkulator online">
+  <meta property="og:url" content="https://kalkulator24.guru/verktoy/xor-kalkulator">
+  <meta property="og:locale" content="nb_NO">
+  <link rel="canonical" href="https://kalkulator24.guru/verktoy/xor-kalkulator">
+  <link rel="alternate" hreflang="nb" href="https://kalkulator24.guru/verktoy/xor-kalkulator">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+</head>
+<body>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"XOR Kalkulator","description":"Beregn XOR (eksklusiv ELLER) mellom to binære eller desimale tall. Viser resultat i binær, desimal og hex.","url":"https://kalkulator24.guru/verktoy/xor-kalkulator","applicationCategory":"UtilityApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"NOK"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Hjem","item":"https://kalkulator24.guru"},{"@type":"ListItem","position":2,"name":"Krypto","item":"https://kalkulator24.guru/kategori/krypto"},{"@type":"ListItem","position":3,"name":"XOR Kalkulator","item":"https://kalkulator24.guru/verktoy/xor-kalkulator"}]}</script>
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="/" class="logo">Kalkulator24</a>
+    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="active">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li><li><a href="/kategori/odds" class="">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi" class="">🌱 Økologi</a></li><li><a href="/kategori/bolig" class="">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk" class="">🎵 Musikk</a></li><li><a href="/kategori/teknologi" class="">💻 Teknologi</a></li><li><a href="/kategori/ki" class="">🤖 Kunstig Intelligens</a></li></ul>
+    <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">☰</button>
+  </div>
+  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="active">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li><li><a href="/kategori/odds" class="">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi" class="">🌱 Økologi</a></li><li><a href="/kategori/bolig" class="">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk" class="">🎵 Musikk</a></li><li><a href="/kategori/teknologi" class="">💻 Teknologi</a></li><li><a href="/kategori/ki" class="">🤖 Kunstig Intelligens</a></li></ul></div>
+</nav>
+<div class="breadcrumb"><a href="/">Hjem</a><span class="sep">›</span><a href="/kategori/krypto">Krypto</a><span class="sep">›</span>XOR Kalkulator</div>
+<div class="tool-hero"><div class="tool-badge">₿ Krypto</div><h1>XOR Kalkulator</h1><p class="subtitle">Beregn XOR (eksklusiv ELLER) mellom to binære eller desimale tall. Viser resultat i binær, desimal og hex. — raskt og gratis</p></div>
+<div class="main-wrap">
+  <div class="main-content">
+    <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>Tall 1 (desimal)</label><div class="input-row"><input type="number" class="calc-input" data-field="input1" placeholder="f.eks. 5"></div></div><div class="input-group"><label>Tall 2 (desimal)</label><div class="input-row"><input type="number" class="calc-input" data-field="input2" placeholder="f.eks. 3"></div></div></div>    <button class="btn-calc" onclick="runCalculator('xor_calculator')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
+    <div class="content-card">Her er en komplett HTML-artikkel på norsk om "XOR Kalkulator", strukturert med de angitte seksjonene og kravene om nøkkelordfrekvens og kun tillatte HTML-tagger.
+
+```html
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XOR Kalkulator – komplett guide på norsk</title>
+</head>
+<body>
+
+<h2>Hva er en XOR Kalkulator?</h2>
+<p>En <strong>xor kalkulator</strong> er et digitalt verktøy som utfører den logiske operasjonen XOR (exclusive OR) på to binære eller boolske verdier. XOR står for «eksklusiv eller» og returnerer <strong>1</strong> (sann) bare når de to inngangene er forskjellige. Hvis begge inngangene er like (0 og 0 eller 1 og 1), blir resultatet <strong>0</strong> (usann).</p>
+<p>En <strong>xor kalkulator</strong> kan arbeide med enkeltbiter, binære tall, heksadesimale tall eller til og med tekststrenger (ved å konvertere tegn til binære koder). Kalkulatoren gir deg raskt svar uten å måtte regne ut sannhetstabellen manuelt.</p>
+<p>For eksempel: <strong>1 XOR 0 = 1</strong>, mens <strong>1 XOR 1 = 0</strong>. Dette enkle prinsippet ligger til grunn for alt fra kryptografi til feildeteksjon i datanettverk.</p>
+
+<h2>Hvorfor er en XOR Kalkulator viktig?</h2>
+<p>XOR-operasjonen er fundamental innen informatikk, elektronikk og matematikk. En dedikert <strong>xor kalkulator</strong> sparer tid og minimerer feil i følgende situasjoner:</p>
+<ul>
+    <li><strong>Kryptografi:</strong> XOR brukes i mange krypteringsalgoritmer (f.eks. engangspad, AES). En rask kalkulator hjelper deg å verifisere nøkler og chiffertekst.</li>
+    <li><strong>Feildeteksjon:</strong> Paritetsbiter og CRC-koder bygger på XOR. Ingeniører bruker kalkulatoren for å sjekke dataintegritet.</li>
+    <li><strong>Programmering:</strong> Utviklere bruker XOR for å bytte verdier uten en midlertidig variabel (a ^= b; b ^= a; a ^= b).</li>
+    <li><strong>Bildeprosessering:</strong> XOR kan brukes til å sammenligne to bilder (piksel for piksel) og finne forskjeller.</li>
+    <li><strong>Læring og debugging:</strong> Studenter og hobbyelektronikere får umiddelbar tilbakemelding på XOR-oppgaver.</li>
+</ul>
+<p>Uten en <strong>xor kalkulator</strong> må du manuelt konvertere tall til binære og utføre bitvis XOR, noe som er tidkrevende og feilutsatt for lengre sekvenser.</p>
+
+<h2>Slik bruker du en XOR Kalkulator</h2>
+<p>Bruken av en <strong>xor kalkulator</strong> er svært intuitiv, men her er en trinnvis veiledning for å sikre korrekte resultater:</p>
+<h3>Trinn 1: Velg inndataformat</h3>
+<p>De fleste kalkulatorer lar deg velge mellom binært (base 2), desimalt (base 10), heksadesimalt (base 16) eller ASCII-tekst. Velg det formatet som passer ditt problem.</p>
+<h3>Trinn 2: Skriv inn de to verdiene</h3>
+<p>Skriv inn første verdi i felt A og andre verdi i felt B. For binære tall må du kun bruke sifrene 0 og 1. For heksadesimal kan du bruke 0-9 og A-F.</p>
+<h3>Trinn 3: Utfør operasjonen</h3>
+<p>Klikk på «Beregn» eller «XOR»-knappen. Kalkulatoren utfører bitvis XOR på de to tallene og viser resultatet i samme format som inndata (eller i flere formater samtidig).</p>
+<h3>Trinn 4: Tolk resultatet</h3>
+<p>Resultatet viser hvilke biter som er forskjellige. For eksempel: <strong>1010 XOR 1100 = 0110</strong>. Dette betyr at bit 2 og bit 1 (fra venstre) er forskjellige mellom de to tallene.</p>
+<p>Mange <strong>xor kalkulator</strong>-verktøy har også en «sannhetstabell»-modus som viser alle mulige kombinasjoner for 2 innganger.</p>
+
+<h2>Formel med eksempel</h2>
+<p>Den matematiske formelen for XOR kan uttrykkes slik:</p>
+<p><strong>A XOR B = (A ∧ ¬B) ∨ (¬A ∧ B)</strong></p>
+<p>Her står ∧ for logisk OG, ∨ for logisk ELLER, og ¬ for negasjon. For bitvise operasjoner gjelder formelen for hver enkelt bit.</p>
+<h3>Eksempel: Desimalt tall</h3>
+<p>La oss regne ut <strong>5 XOR 3</strong> manuelt for å demonstrere hvordan en <strong>xor kalkulator</strong> gjør jobben:</p>
+<ol>
+    <li>Konverter til binært: 5 = <strong>101</strong>, 3 = <strong>011</strong> (fyll på med ledende nuller for like lengde: 101 og 011).</li>
+    <li>Utfør bitvis XOR: <br>
+        Bit 2 (MSB): 1 XOR 0 = 1<br>
+        Bit 1: 0 XOR 1 = 1<br>
+        Bit 0: 1 XOR 1 = 0<br>
+        Resultat: <strong>110</strong> binært = 6 desimalt.</li>
+    <li>Sjekk med en <strong>xor kalkulator</strong>: 5 XOR 3 = 6.</li>
+</ol>
+<p>Det samme gjelder for heksadesimal: <strong>A XOR 5</strong> (desimalt 10 XOR 5) = <strong>F</strong> (15). Binært: 1010 XOR 0101 = 1111.</p>
+
+<h2>Praktiske eksempler</h2>
+<p>Her er tre konkrete scenarier der en <strong>xor kalkulator</strong> er uunnværlig:</p>
+<h3>Eksempel 1: Kryptering av en melding</h3>
+<p>Du har en melding «HI» (ASCII: H=72, I=73) og en nøkkel «K» (75). For å kryptere: <br>
+    72 XOR 75 = 3 (kontroll: 01001000 XOR 01001011 = 00000011). <br>
+    73 XOR 75 = 2 (01001001 XOR 01001011 = 00000010). <br>
+    Den krypterte meldingen blir to tegn med ASCII-verdiene 3 og 2. For å dekryptere bruker du samme nøkkel og <strong>xor kalkulator</strong> på nytt.</p>
+<h3>Eksempel 2: Feildeteksjon i overføring</h3>
+<p>Du sender byte <strong>11010110</strong> og mottar <strong>11010111</strong>. En XOR-kalkulator viser: <br>
+    11010110 XOR 11010111 = 00000001. <br>
+    Den ene biten som er forskjellig (bit 0) indikerer en feil. Uten kalkulatoren måtte du sammenligne bit for bit manuelt.</p>
+<h3>Eksempel 3: Grafisk sammenligning</h3>
+<p>To bilder av samme størrelse kan XOR-opereres piksel for piksel. Resultatet blir svart der pikslene er like, og farget der de er forskjellige. En <strong>xor kalkulator</strong> for heltall (f.eks. RGB-verdier) gjør denne analysen rask.</p>
+
+<h2>Tips for effektiv bruk av XOR Kalkulator</h2>
+<ul>
+    <li><strong>Forstå bitlengde:</strong> Sørg for at begge tallene har samme antall biter. Hvis ikke, fyll på med ledende nuller. En god <strong>xor kalkulator</strong> gjør dette automatisk.</li>
+    <li><strong>Bruk flere formatvisninger:</strong> Velg en kalkulator som viser resultatet i både binært, desimalt og heksadesimalt samtidig – dette gir dypere innsikt.</li>
+    <li><strong>Sjekk med sannhetstabell:</strong> Hvis du er usikker på enkeltbiter, bruk sannhetstabellmodus: 0 XOR 0 = 0, 0 XOR 1 = 1, 1 XOR 0 = 1, 1 XOR 1 = 0.</li>
+    <li><strong>Unngå fortegnsproblemer:</strong> Noen kalkulatorer behandler tall som signerte (toerkomplement). For ren bitvis XOR bør du bruke usignert modus.</li>
+    <li><strong>Test med enkle verdier:</strong> Start med små tall (f.eks. 1 XOR 2) for å verifisere at kalkulatoren fungerer som forventet.</li>
+    <li><strong>Bruk i programmering:</strong> Lær deg XOR-operatoren i ditt favorittspråk (^ i C/Java/Python), men bruk en <strong>xor kalkulator</strong> for å dobbeltsjekke komplekse uttrykk.</li>
+</ul>
+
+<h2>FAQ – 5 spørsmål om XOR Kalkulator</h2>
+<h3>1. Hva er forskjellen mellom XOR og OR?</h3>
+<p>OR returnerer 1 hvis minst én inngang er 1. XOR returnerer 1 kun hvis inngangene er forskjellige. For eksempel: 1 OR 1 = 1, men 1 XOR 1 = 0. En <strong>xor kalkulator</strong> skiller seg derfor fra en vanlig OR-kalkulator.</p>
+<h3>2. Kan jeg bruke en XOR Kalkulator på tekst?</h3>
+<p>Ja, men da må teksten først konverteres til binære tall (f.eks. via ASCII- eller Unicode-verdier). Mange avanserte <strong>xor kalkulator</strong>-verktøy har en tekstmodus som gjør dette automatisk.</p>
+<h3>3. Hvorfor får jeg feil resultat når jeg XOR-er to negative tall?</h3>
+<p>Negative tall lagres ofte i toerkomplementformat. En standard <strong>xor kalkulator</strong> for desimaltall kan tolke bitmønsteret feil. Bruk binærmodus for å se de faktiske bitene, eller velg en usignert tolkning.</p>
+<h3>4. Er XOR det samme som addisjon uten mente?</h3>
+<p>Nesten! For enkeltbiter er XOR identisk med addisjon modulo 2 (0+0=0, 0+1=1, 1+0=1, 1+1=0). Men for flerbiter er XOR bitvis, mens addisjon inkluderer mente. En <strong>xor kalkulator</strong> tar ikke hensyn til mente.</p>
+<h3>5. Hvordan sjekker jeg om en XOR Kalkulator er pålitelig?</h3>
+<p>Test med kjente verdier: 5 XOR 3 skal gi 6, 255 XOR 0 skal gi 255, og 1 XOR 1 skal gi 0. Sammenlign med manuell utregning eller en annen pålitelig kilde. En god <strong>xor kalkulator</strong> håndterer også store tall (opptil 64 bit) konsistent.</p>
+
+</body>
+</html>
+```</div>
+    <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/ethereum-gruve-kalkulator'"><span class="tool-card-icon">₿</span><h3>Ethereum Gruve Kalkulator</h3><p>Beregn Ethereum gruvedrift lønnsomhet</p></div><div class="tool-card" onclick="location='/verktoy/krypto-fortjeneste'"><span class="tool-card-icon">₿</span><h3>Krypto Fortjenestekalkulator</h3><p>Beregn kryptovaluta fortjeneste</p></div><div class="tool-card" onclick="location='/verktoy/gruvedrift-lonnsomhet'"><span class="tool-card-icon">₿</span><h3>Gruvedriftens Lønnsomhet Kalkulator</h3><p>Beregn gruvedrift lønnsomhet</p></div><div class="tool-card" onclick="location='/verktoy/krypto-skatt'"><span class="tool-card-icon">₿</span><h3>Krypto Skatte Kalkulator</h3><p>Beregn kryptovaluta skatt i Norge</p></div><div class="tool-card" onclick="location='/verktoy/krypto-til-fiat'"><span class="tool-card-icon">₿</span><h3>Krypto til Fiat Kalkulator</h3><p>Konverter kryptovaluta til fiat valuta</p></div><div class="tool-card" onclick="location='/verktoy/krypto-staking'"><span class="tool-card-icon">₿</span><h3>Krypto Staking Kalkulator</h3><p>Beregn staking belønninger</p></div><div class="tool-card" onclick="location='/verktoy/xrp-kalkulator'"><span class="tool-card-icon">₿</span><h3>XRP Kalkulator</h3><p>Beregn XRP verdier og fortjeneste</p></div><div class="tool-card" onclick="location='/verktoy/kryptovaluta-omformer'"><span class="tool-card-icon">₿</span><h3>Kryptovalutaomformer</h3><p>Konverter mellom kryptovalutaer</p></div><div class="tool-card" onclick="location='/verktoy/blockchain-kalkulator'"><span class="tool-card-icon">₿</span><h3>Blockchain Kalkulator</h3><p>Beregn blockchain statistikk</p></div><div class="tool-card" onclick="location='/verktoy/token-teller-kalkulator'"><span class="tool-card-icon">₿</span><h3>Token Teller Kalkulator</h3><p>Beregn antall tokens, verdi og potensiell avkastning for dine kryptoinvesteringer.</p></div><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/kalorikalkulator'"><span class="tool-card-icon">❤️</span><h3>Kalorikalkulator</h3><p>Beregn daglig kaloriinntak med BMR, TDEE og makrofordeling</p></div><div class="tool-card" onclick="location='/kategori/krypto'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle Krypto</h3><p>Alle kalkulatorer i denne kategorien</p></div></div></div>
+    <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/lan-kalkulator'"><span class="tool-card-icon">💰</span><h3>Lån Kalkulator</h3><p>Beregn månedlige låneavdrag med nedbetalingsoversikt</p></div><div class="tool-card" onclick="location='/verktoy/prosent-kalkulator'"><span class="tool-card-icon">📐</span><h3>Prosent Kalkulator</h3><p>Beregn prosent med flere metoder og sammenligninger</p></div><div class="tool-card" onclick="location='/verktoy/temperatur-konvertering'"><span class="tool-card-icon">🔄</span><h3>Temperatur Konvertering</h3><p>Konverter temperatur mellom alle enheter</p></div><div class="tool-card" onclick="location='/verktoy/areal-kalkulator'"><span class="tool-card-icon">📏</span><h3>Areal Kalkulator</h3><p>Beregn areal av ulike former med enheter</p></div><div class="tool-card" onclick="location='/verktoy/alder-kalkulator'"><span class="tool-card-icon">📅</span><h3>Alder Kalkulator</h3><p>Beregn nøyaktig alder med sammenligning og statistikk</p></div></div></div>
+  </div>
+  <aside class="sidebar">
+    <div class="sidebar-card"><h3>Krypto kalkulatorer</h3><ul class="sidebar-links"><li><a href="/verktoy/ethereum-gruve-kalkulator"><span class="icon">₿</span>Ethereum Gruve Kalkulator</a></li><li><a href="/verktoy/krypto-fortjeneste"><span class="icon">₿</span>Krypto Fortjenestekalkulator</a></li><li><a href="/verktoy/gruvedrift-lonnsomhet"><span class="icon">₿</span>Gruvedriftens Lønnsomhet Kalkulator</a></li><li><a href="/verktoy/krypto-skatt"><span class="icon">₿</span>Krypto Skatte Kalkulator</a></li><li><a href="/verktoy/krypto-til-fiat"><span class="icon">₿</span>Krypto til Fiat Kalkulator</a></li><li><a href="/verktoy/krypto-staking"><span class="icon">₿</span>Krypto Staking Kalkulator</a></li><li><a href="/verktoy/xrp-kalkulator"><span class="icon">₿</span>XRP Kalkulator</a></li><li><a href="/verktoy/kryptovaluta-omformer"><span class="icon">₿</span>Kryptovalutaomformer</a></li><li><a href="/kategori/krypto" style="color:var(--primary)">Se alle Krypto →</a></li></ul></div>
+    <div class="sidebar-card"><h3>Populære verktøy</h3><ul class="sidebar-links"><li><a href="/verktoy/bmi-kalkulator"><span class="icon">❤️</span>BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator"><span class="icon">💰</span>Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator"><span class="icon">📐</span>Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator"><span class="icon">📅</span>Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator"><span class="icon">❤️</span>Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator"><span class="icon">⚗️</span>pH Kalkulator</a></li></ul></div>
+  </aside>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">1543+ gratis kalkulatorer</p></div>
+      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li><li><a href="/kategori/krypto">₿ Krypto</a></li><li><a href="/kategori/spill">🎮 Spill</a></li><li><a href="/kategori/odds">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi">🌱 Økologi</a></li><li><a href="/kategori/bolig">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk">🎵 Musikk</a></li><li><a href="/kategori/teknologi">💻 Teknologi</a></li><li><a href="/kategori/ki">🤖 Kunstig Intelligens</a></li></ul></div>
+      <div class="footer-col"><h4>Populære</h4><ul><li><a href="/verktoy/bmi-kalkulator">BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator">Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator">Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator">Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator">Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator">pH Kalkulator</a></li><li><a href="/verktoy/molekylvekt-kalkulator">Molekylvektkalkulator</a></li><li><a href="/verktoy/halveringstid-kalkulator">Halveringstid Kalkulator</a></li><li><a href="/verktoy/befolkningsvekst-kalkulator">Befolkningsvekst Kalkulator</a></li><li><a href="/verktoy/terningkaster">Terningkaster</a></li></ul></div>
+      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/campingvognregelen-kalkulator">Campingvognregelen Kalkulator</a></li><li><a href="/verktoy/formuesskatt-2023-kalkulator">Formuesskatt 2023 Kalkulator</a></li><li><a href="/verktoy/stillingsprosent-kalkulator-laerer">Stillingsprosent Kalkulator Lærer</a></li><li><a href="/verktoy/pendlerfradrag-kalkulator">Pendlerfradrag Kalkulator</a></li><li><a href="/verktoy/partiell-derivasjon-kalkulator">Partiell Derivasjon Kalkulator</a></li><li><a href="/verktoy/verditap-kalkulator">Verditap Kalkulator</a></li><li><a href="/verktoy/tollkalkulator-norge">Tollkalkulator Norge</a></li><li><a href="/verktoy/fattigdomsgrense-kalkulator">Fattigdomsgrense Kalkulator</a></li></ul></div>
+      <div class="footer-col"><h4>Info</h4><ul><li><a href="/om-oss">Om oss</a></li><li><a href="/personvern">Personvern</a></li><li><a href="/kontakt">Kontakt</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Kalkulator24 — Alle kalkulatorer er gratis</p></div>
+  </div>
+</footer>
+<script>
+function toggleMenu(){var m=document.getElementById("mobileMenu");m.classList.toggle("open");}
+document.addEventListener("click",function(e){var m=document.getElementById("mobileMenu");var b=document.getElementById("hamburgerBtn");if(m&&b&&!m.contains(e.target)&&!b.contains(e.target))m.classList.remove("open");});
+</script>
+<script src="/assets/js/calc.js"></script>
+</body></html>

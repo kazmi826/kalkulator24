@@ -1,0 +1,148 @@
+```html
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krollkalkulator – komplett guide for nøyaktig krollberegning</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.7;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            color: #1e293b;
+            background: #f8fafc;
+        }
+        h2 {
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 0.4rem;
+            margin-top: 2.5rem;
+            color: #0f172a;
+        }
+        h3 {
+            margin-top: 1.8rem;
+            color: #1e293b;
+        }
+        p {
+            margin-bottom: 1.2rem;
+        }
+        ul {
+            padding-left: 1.5rem;
+            margin: 1rem 0;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        strong {
+            color: #0f172a;
+        }
+        .faq-item {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 1.2rem 1.5rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+            border: 1px solid #e2e8f0;
+        }
+        .faq-question {
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: block;
+            margin-bottom: 0.4rem;
+            color: #2563eb;
+        }
+        .example-box {
+            background: #eef2ff;
+            padding: 1.2rem 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid #2563eb;
+            margin: 1.5rem 0;
+        }
+        .formula {
+            background: #1e293b;
+            color: #f1f5f9;
+            padding: 0.8rem 1.2rem;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            display: inline-block;
+            margin: 0.5rem 0;
+        }
+        .tip-list {
+            background: #f0fdf4;
+            border-radius: 12px;
+            padding: 1rem 1.5rem;
+            border: 1px solid #bbf7d0;
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background: #cbd5e1;
+            margin: 2.5rem 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Introduksjon -->
+    <h2>Hva er en krollkalkulator?</h2>
+    <p>En <strong>krollkalkulator</strong> er et digitalt verktøy (eller en manuell beregningsmetode) som brukes til å bestemme den nøyaktige krollen i et materiale – oftest metalltråd, rør, kabler eller tekstiler. Kroll refererer til hvor mye et materiale bøyer seg under en gitt last, eller hvor mye det krøller seg under produksjon. I ingeniørfag, bygg, smykkedesign og tekstilindustri er en <strong>krollkalkulator</strong> helt avgjørende for å forutsi deformasjon, unngå brudd og sikre presisjon.</p>
+    <p>Enten du jobber med bøying av armeringsjern, beregner kroll i høyspentkabler eller designer fjærer, gir en <strong>krollkalkulator</strong> deg en matematisk modell som oversetter fysiske parametere – som diameter, strekkfasthet og bøyeradius – til en forutsigbar krollfaktor. Moderne versjoner finnes som apper, online verktøy eller innebygde funksjoner i CAD-programvare.</p>
+
+    <!-- Hvorfor viktig -->
+    <h2>Hvorfor er krollkalkulator viktig?</h2>
+    <p>Uten en <strong>krollkalkulator</strong> ville mange produksjonsprosesser vært basert på ren gjetning. Her er de viktigste grunnene til at den er uunnværlig:</p>
+    <ul>
+        <li><strong>Presisjon og kvalitet:</strong> Feil kroll kan føre til at en komponent ikke passer i montasjen, eller at et smykke mister sin geometri. Kalkulatoren sikrer at krollen holder seg innenfor toleranser på brøkdeler av en millimeter.</li>
+        <li><strong>Materialbesparelse:</strong> Ved å beregne nøyaktig hvor mye materiale som kreves for en gitt kroll, reduseres avfall. Spesielt i produksjon av dyre metaller som titan eller gull er dette kritisk.</li>
+        <li><strong>Sikkerhet:</strong> I konstruksjoner som broer, kraner eller høyspentmaster kan ukontrollert kroll føre til svikt. En <strong>krollkalkulator</strong> hjelper ingeniører med å dimensjonere riktig og unngå katastrofer.</li>
+        <li><strong>Tidsbesparelse:</strong> Manuelle prøve-feil-metoder tar tid. Med en kalkulator får du svar på sekunder, og du kan simulere ulike scenarier før du kutter en eneste tråd.</li>
+        <li><strong>Standardisering:</strong> Mange bransjer (ISO, ASTM) krever dokumenterte krollberegninger. En kalkulator gir repeterbare resultater som kan brukes i sertifisering.</li>
+    </ul>
+
+    <!-- Slik bruker du -->
+    <h2>Slik bruker du en krollkalkulator</h2>
+    <p>Å bruke en <strong>krollkalkulator</strong> er enkelt når du forstår input-parametrene. Følg disse trinnene:</p>
+    <ul>
+        <li><strong>Bestem materialtype:</strong> Ulike materialer (stål, aluminium, kobber, nylon) har ulik elastisitetsmodul og flytespenning. Velg riktig materiale i kalkulatoren.</li>
+        <li><strong>Mål diameter eller tykkelse:</strong> For tråd eller rør – bruk en mikrometer eller skyvelære. For tekstiler – mål trådtykkelse i tex eller denier.</li>
+        <li><strong>Angi bøyeradius (R):</strong> Hvor skarp er krollen? Liten radius = større kroll. Oppgi i mm eller tommer.</li>
+        <li><strong>Last eller strekk (valgfritt):</strong> Noen kalkulatorer inkluderer strekkraft (Newton) for å beregne kroll under belastning.</li>
+        <li><strong>Kalkuler:</strong> Trykk på beregn. Du får krollfaktor (f.eks. 0,85) eller krollvinkel i grader. Noen verktøy gir også anbefalt justering av verktøyet.</li>
+    </ul>
+    <p>De fleste online <strong>krollkalkulatorer</strong> har også en "reverse mode" – du angir ønsket kroll, og den forteller hvilken bøyeradius eller materialtykkelse du trenger.</p>
+
+    <!-- Formel med eksempel -->
+    <h2>Formel med eksempel</h2>
+    <p>Den mest grunnleggende formelen for kroll i en bøyd tråd er basert på forholdet mellom bøyeradius og tråddiameter. For enkelhets skyld bruker vi <strong>krollfaktor (K)</strong>:</p>
+    <div class="formula">
+        K = (R + d/2) / R
+    </div>
+    <p>Hvor: <strong>R</strong> = indre bøyeradius (mm), <strong>d</strong> = tråddiameter (mm). K > 1 betyr at ytre fiber strekkes (kroll), K = 1 betyr ingen kroll.</p>
+    <div class="example-box">
+        <h3>Praktisk eksempel:</h3>
+        <p><strong>Du har en kobbertråd med diameter 2 mm. Du bøyer den rundt en dor med radius 5 mm. Hva er krollfaktoren?</strong></p>
+        <p>R = 5 mm, d = 2 mm<br>
+        K = (5 + 2/2) / 5 = (5 + 1) / 5 = 6/5 = <strong>1,2</strong></p>
+        <p>Dette betyr at ytterkanten av tråden blir 20 % lengre enn innerkanten – en moderat kroll. Hvis du bruker en <strong>krollkalkulator</strong>, vil den også vise at materialet vil ha en fjæringseffekt (springback) på omtrent 4–6 grader i kobber.</p>
+    </div>
+
+    <!-- Praktiske eksempler -->
+    <h2>Praktiske eksempler fra ulike bransjer</h2>
+    <ul>
+        <li><strong>Bygg og armering:</strong> En entreprenør skal bøye 12 mm armeringsjern til en 90° krok. Med en <strong>krollkalkulator</strong> beregner han at indre radius må være minst 3 x diameter (36 mm) for å unngå sprekkdannelse. Kalkulatoren gir også nødvendig kraft for bøying.</li>
+        <li><strong>Elektronikk og kabler:</strong> Ved installasjon av tynne koaksialkabler i krysskoblinger må krollradiusen være minst 10 ganger kabeldiameteren for å unngå signaltap. En <strong>krollkalkulator</strong> hjelper teknikeren å velge riktig bøyejigg.</li>
+        <li><strong>Smykkedesign:</strong> En gullsmed lager en ring av 1,5 mm sølvtråd. Hun bruker kalkulatoren for å finne ut at for en perfekt sirkel med diameter 18 mm, må tråden kappes nøyaktig 56,5 mm – inkludert krolltillegget på 3 %.</li>
+        <li><strong>Tekstilindustri:</strong> Ved produksjon av børster eller fletter beregner en <strong>krollkalkulator</strong> hvor mange tvinner per meter som trengs for å oppnå en bestemt krollfasthet. Dette påvirker både slitestyrke og utseende.</li>
+        <li><strong>Møbelproduksjon:</strong> Stålrør til stolben bøyes i en presse. Kalkulatoren forutsier kroll og fjæring, slik at røret bøyes 3° ekstra for å oppnå nøyaktig 90° etter tilbakefjæring.</li>
+    </ul>
+
+    <!-- Tips -->
+    <h2>Tips for nøyaktig krollberegning</h2>
+    <div class="tip-list">
+        <ul>
+            <li><strong>Bruk alltid reelle målinger:</strong> Ikke stol på nominelle diametre. Mål materialet med presisjonsverktøy – en forskjell på 0,1 mm kan endre krollfaktoren med 5 %.</li>
+            <li><strong>Inkluder fjæringseffekt (springback):</strong> De fleste materialer "spretter tilbake" litt etter bøying. En god <strong>krollkalkulator</strong> tar hensyn til Youngs modul og flytespenning.</li>
+            <li><strong>Test på skrapmateriale:</strong> Selv med kalkulator, kjør en testbøying på et avfallsstykke. Kalkulatoren gir en teoretisk verdi, men praktiske variasjoner (som verktøyslitasje) kan påvirke.</li>
+            <li><strong>Kalibrer verktøyet:</strong> Hvis du bruker en digital <strong>krollkalkulator</strong> eller app, sjekk at den er oppdatert med riktige materialdat

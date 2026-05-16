@@ -1,0 +1,90 @@
+```html
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strømforbruk Kalkulator – Slik får du kontroll på strømutgiftene</title>
+    <style>
+        body { font-family: 'Segoe UI', Roboto, Arial, sans-serif; line-height: 1.7; max-width: 860px; margin: 2rem auto; padding: 0 1.5rem; color: #1e293b; background: #f8fafc; }
+        h2 { border-left: 5px solid #2563eb; padding-left: 1rem; margin-top: 2.5rem; color: #0f172a; }
+        h3 { margin-top: 2rem; color: #1e293b; }
+        p { margin-bottom: 1.2rem; }
+        ul, ol { margin-bottom: 1.5rem; padding-left: 1.8rem; }
+        li { margin-bottom: 0.5rem; }
+        strong { color: #0f172a; }
+        .faq-item { background: #ffffff; padding: 1.2rem 1.5rem; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); margin-bottom: 1rem; }
+        .faq-question { font-weight: 700; color: #2563eb; margin-bottom: 0.4rem; }
+        .example-box { background: #eef2ff; padding: 1.2rem 1.5rem; border-radius: 16px; margin: 1.8rem 0; border: 1px solid #c7d2fe; }
+        .formula { background: #ffffff; padding: 1rem 1.5rem; border-radius: 12px; border: 1px solid #e2e8f0; font-family: 'Courier New', monospace; font-weight: 600; display: inline-block; margin: 0.8rem 0; }
+        @media (max-width: 600px) { body { padding: 0 1rem; } }
+    </style>
+</head>
+<body>
+
+<h2>Hva er en strømforbruk kalkulator?</h2>
+<p>En <strong>strømforbruk kalkulator</strong> er et digitalt verktøy som beregner hvor mye elektrisk energi et apparat, en bolig eller en hel husholdning bruker over en gitt tidsperiode. Ved å taste inn effekt (watt), brukstid og eventuell strømpris får du raskt et estimat på både kilowattimer (kWh) og kostnad. Kalkulatoren kan være en nettside, en app eller en innebygd funksjon i strømleverandørens portal. Mange norske strømkunder bruker en <strong>strømforbruk kalkulator</strong> for å avdekke hvilke apparater som trekker mest strøm, og for å sammenligne potensielle besparelser ved å bytte til mer energieffektive produkter.</p>
+<p>Verktøyet bygger på den fysiske sammenhengen mellom effekt, tid og energi. I praksis oversetter den tekniske enheter som watt og timer til noe forståelig – nemlig kroner og øre. Uten en <strong>strømforbruk kalkulator</strong> er det vanskelig å vite om det er gamle panelovner, varmtvannsberederen eller tørketrommelen som er den største strømslukeren i hjemmet ditt.</p>
+
+<h2>Hvorfor er en strømforbruk kalkulator viktig?</h2>
+<p>Strømprisene i Norge har variert kraftig de siste årene, og for mange husholdninger har strømregningen blitt en stor utgiftspost. En <strong>strømforbruk kalkulator</strong> gir deg innsikt og kontroll. I stedet for å bli overrasket over regningen, kan du forutse kostnader og justere vanene dine i tide. Dette er spesielt viktig for deg som har timebasert strømpris (spotpris), fordi kalkulatoren kan hjelpe deg å flytte forbruket til billigere timer.</p>
+<p>Videre er verktøyet uunnværlig når du skal vurdere energisparetiltak. Skal du kjøpe ny vaskemaskin eller varmepumpe? Med en <strong>strømforbruk kalkulator</strong> kan du sammenligne dagens forbruk med et mer effektivt produkt, og regne ut hvor lang tid det tar før investeringen er tjent inn. Kalkulatoren bidrar også til å redusere unødvendig energibruk, noe som er bra både for lommeboken og miljøet.</p>
+<ul>
+    <li><strong>Unngå overraskelser</strong> – du ser nøyaktig hva hvert apparat koster.</li>
+    <li><strong>Sammenlign produkter</strong> – finn den mest energieffektive modellen.</li>
+    <li><strong>Tilpass forbruket</strong> – flytt strømkrevende aktiviteter til lavpristider.</li>
+    <li><strong>Miljøbevissthet</strong> – lavere forbruk gir mindre belastning på strømnettet.</li>
+</ul>
+
+<h2>Slik bruker du en strømforbruk kalkulator</h2>
+<p>Å bruke en <strong>strømforbruk kalkulator</strong> er enkelt, men for å få nøyaktige resultater må du ha noen grunnleggende tall klare. Følg denne fremgangsmåten:</p>
+<ol>
+    <li><strong>Finn effekten (watt)</strong> – står på merkelappen til apparatet, ofte merket W eller kW. 1 kW = 1000 W.</li>
+    <li><strong>Registrer brukstiden</strong> – hvor mange timer per dag eller uke bruker du apparatet? Vær realistisk.</li>
+    <li><strong>Legg inn strømpris</strong> – bruk din gjennomsnittlige pris per kWh (inkludert nettleie og avgifter). Per 2025 ligger mange rundt 100–150 øre/kWh.</li>
+    <li><strong>Trykk på beregn</strong> – kalkulatoren multipliserer effekt (kW) × tid (timer) × pris. Resultatet vises i kWh og kroner.</li>
+</ol>
+<p>Mange kalkulatorer har også forhåndsinnstilte verdier for vanlige apparater som kjøleskap, vaskemaskin og TV. Du kan også justere parametere som antall personer i husstanden eller om du har varmepumpe. En avansert <strong>strømforbruk kalkulator</strong> kan til og med importere data fra strømmåleren din via API.</p>
+
+<h2>Formel med eksempel</h2>
+<p>Den matematiske formelen bak en <strong>strømforbruk kalkulator</strong> er rett frem:</p>
+<div class="formula">Energi (kWh) = Effekt (kW) × Tid (timer)</div>
+<p>For å regne ut kostnaden legger du til strømprisen:</p>
+<div class="formula">Kostnad (kr) = Energi (kWh) × Pris per kWh (kr)</div>
+
+<div class="example-box">
+    <h3>🔌 Eksempel: Elektrisk panelovn</h3>
+    <p><strong>Effekt:</strong> 2000 W (2 kW)<br>
+    <strong>Brukstid:</strong> 5 timer per dag<br>
+    <strong>Strømpris:</strong> 1,20 kr/kWh</p>
+    <p><strong>Beregning:</strong> 2 kW × 5 timer = 10 kWh per dag<br>
+    <strong>Kostnad per dag:</strong> 10 kWh × 1,20 kr = 12 kroner<br>
+    <strong>Kostnad per måned (30 dager):</strong> 12 kr × 30 = 360 kroner</p>
+    <p>Med en <strong>strømforbruk kalkulator</strong> får du dette svaret på sekunder, og du kan enkelt justere tid eller effekt for å se hvordan endringer påvirker regningen.</p>
+</div>
+
+<h2>Praktiske eksempler</h2>
+<h3>Eksempel 1: Hjemmekontor og underholdning</h3>
+<p>Du jobber hjemmefra og bruker en bærbar PC (60 W) i 8 timer, en skjerm (30 W) i 8 timer, og en spillkonsoll (150 W) i 2 timer om kvelden. Med en <strong>strømforbruk kalkulator</strong> kan du summere forbruket: (0,06 kW × 8) + (0,03 kW × 8) + (0,15 kW × 2) = 0,48 + 0,24 + 0,30 = 1,02 kWh per dag. Til 1,30 kr/kWh blir det 1,33 kroner per dag – eller omtrent 40 kroner i måneden. Småpenger, men flere slike enheter sammen kan gi et betydelig bidrag.</p>
+
+<h3>Eksempel 2: Varmtvannsbereder – den skjulte strømslukeren</h3>
+<p>En vanlig varmtvannsbereder på 2 kW står på i gjennomsnitt 3–4 timer per døgn for å holde temperaturen. Bruker du 3,5 timer daglig: 2 kW × 3,5 = 7 kWh. Med 1,20 kr/kWh blir det 8,40 kr per dag, altså over 250 kroner i måneden. En <strong>strømforbruk kalkulator</strong> avslører raskt at berederen ofte er den største enkeltposten i en bolig uten varmepumpe.</p>
+
+<h3>Eksempel 3: Tørketrommel vs. utetørking</h3>
+<p>En kondenstørketrommel bruker cirka 3,5 kWh per tørkesyklus. Tørker du 4 lass i uken, blir det 14 kWh per uke. I løpet av en måned (4 uker) utgjør det 56 kWh. Med strømpris 1,20 kr/kWh koster tørketrommelen deg 67 kroner måneden. Å bruke en <strong>strømforbruk kalkulator</strong> hjelper deg å veie tiden du sparer mot kostnaden – kanskje du velger å tørke ute når været tillater det.</p>
+
+<h2>Tips for å redusere strømforbruket</h2>
+<ul>
+    <li><strong>Bruk en strømforbruk kalkulator jevnlig</strong> – sjekk forbruket etter at du har byttet apparater eller endret vaner.</li>
+    <li><strong>Slå av standby</strong> – apparater i standby trekker ofte 5–20 watt i timen. Det kan utgjøre 200–300 kWh i året.</li>
+    <li><strong>Senk innetemperaturen</strong> – én grad lavere kan redusere strømforbruket med 5 %.</li>
+    <li><strong>Fyll vaskemaskin og oppvaskmaskin helt</strong> – færre sykluser sparer både strøm og vann.</li>
+    <li><strong>Bytt til LED-pærer</strong> – LED bruker 80–90 % mindre strøm enn glødepærer.</li>
+    <li><strong>Tidsstyr strømkrevende apparater</strong> – sett vask og tørk til natt eller lavpristider.</li>
+</ul>
+
+<h2>Ofte stilte spørsmål (FAQ)</h2>
+
+<div class="faq-item">
+    <div class="faq-question">1. Hvor nøyaktig er en strømforbruk kalkulator?</div>
+    <p>Nøyaktigheten avhenger av verdiene du legger inn. Hvis du oppgir riktig effekt og reell brukstid, vil resultatet være svært presist. Husk at str

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boks- og Viskerdiagram Kalkulator — Gratis Online Kalkulator | Kalkulator24</title>
+  <meta name="description" content="Beregn kvartiler, median, min, maks og vis data som boksdiagram. — Gratis kalkulator online">
+  <meta name="keywords" content="boksdiagram, viskerdiagram, kvartiler, median, statistikk, dataanalyse, outlier, IQR">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="Norwegian">
+  <meta name="google-site-verification" content="U-ZiCQHLID9ShjKIWBJI0Xi7xJDNrx9bwP4tRBEYzSQ">
+  <meta name="theme-color" content="#2563eb">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Boks- og Viskerdiagram Kalkulator — Gratis Online Kalkulator | Kalkulator24">
+  <meta property="og:description" content="Beregn kvartiler, median, min, maks og vis data som boksdiagram. — Gratis kalkulator online">
+  <meta property="og:url" content="https://kalkulator24.guru/verktoy/boks-og-viskerdiagram-kalkulator">
+  <meta property="og:locale" content="nb_NO">
+  <link rel="canonical" href="https://kalkulator24.guru/verktoy/boks-og-viskerdiagram-kalkulator">
+  <link rel="alternate" hreflang="nb" href="https://kalkulator24.guru/verktoy/boks-og-viskerdiagram-kalkulator">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+</head>
+<body>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Boks- og Viskerdiagram Kalkulator","description":"Beregn kvartiler, median, min, maks og vis data som boksdiagram.","url":"https://kalkulator24.guru/verktoy/boks-og-viskerdiagram-kalkulator","applicationCategory":"UtilityApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"NOK"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Hjem","item":"https://kalkulator24.guru"},{"@type":"ListItem","position":2,"name":"Statistikk","item":"https://kalkulator24.guru/kategori/statistikk"},{"@type":"ListItem","position":3,"name":"Boks- og Viskerdiagram Kalkulator","item":"https://kalkulator24.guru/verktoy/boks-og-viskerdiagram-kalkulator"}]}</script>
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="/" class="logo">Kalkulator24</a>
+    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="active">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li><li><a href="/kategori/odds" class="">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi" class="">🌱 Økologi</a></li><li><a href="/kategori/bolig" class="">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk" class="">🎵 Musikk</a></li><li><a href="/kategori/teknologi" class="">💻 Teknologi</a></li><li><a href="/kategori/ki" class="">🤖 Kunstig Intelligens</a></li></ul>
+    <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">☰</button>
+  </div>
+  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="active">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li><li><a href="/kategori/odds" class="">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi" class="">🌱 Økologi</a></li><li><a href="/kategori/bolig" class="">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk" class="">🎵 Musikk</a></li><li><a href="/kategori/teknologi" class="">💻 Teknologi</a></li><li><a href="/kategori/ki" class="">🤖 Kunstig Intelligens</a></li></ul></div>
+</nav>
+<div class="breadcrumb"><a href="/">Hjem</a><span class="sep">›</span><a href="/kategori/statistikk">Statistikk</a><span class="sep">›</span>Boks- og Viskerdiagram Kalkulator</div>
+<div class="tool-hero"><div class="tool-badge">📊 Statistikk</div><h1>Boks- og Viskerdiagram Kalkulator</h1><p class="subtitle">Beregn kvartiler, median, min, maks og vis data som boksdiagram. — raskt og gratis</p></div>
+<div class="main-wrap">
+  <div class="main-content">
+    <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>Datasett (kommaseparert)</label><div class="input-row"><input type="text" class="calc-input" data-field="data_values" placeholder="f.eks. 1,3,5,7,9,11,13"></div></div></div>    <button class="btn-calc" onclick="runCalculator('box_whisker_calculator')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
+    <div class="content-card"><h2>Hva er en boks- og viskerdiagram kalkulator?</h2>
+<p>En <strong>boks- og viskerdiagram kalkulator</strong> er et digitalt verktøy som automatisk beregner og visualiserer statistiske data i form av et boksplott (også kjent som box plot). Diagrammet viser datasettets fordeling gjennom fem nøkkelverdier: minimum, første kvartil (Q1), median (Q2), tredje kvartil (Q3) og maksimum. "Viskerne" strekker seg fra boksen til de ytterste datapunktene, mens eventuelle avvikere (outliers) markeres separat.</p>
+<p>Ved å bruke en <strong>boks- og viskerdiagram kalkulator</strong> slipper du manuelle beregninger og kan raskt identifisere sentraltendens, spredning og skjevhet i dataene. Verktøyet er spesielt nyttig for studenter, forskere, dataanalytikere og alle som jobber med statistikk. De fleste kalkulatorer aksepterer rådata i form av tallrekker og genererer et grafisk diagram i løpet av sekunder.</p>
+<p>En <strong>boks- og viskerdiagram kalkulator</strong> kan være nettbasert, innebygd i statistikkprogrammer som Excel eller R, eller tilgjengelig som mobilapp. Uansett format er funksjonaliteten den samme: å forenkle analyseprosessen og gjøre komplekse datasett mer forståelige.</p>
+
+<h2>Hvorfor er boks- og viskerdiagram kalkulator viktig?</h2>
+<p>Å forstå datasettets struktur er avgjørende for å ta informerte beslutninger. En <strong>boks- og viskerdiagram kalkulator</strong> gir flere fordeler:</p>
+<ul>
+<li><strong>Tidsbesparelse:</strong> Manuelle beregninger av kvartiler og avvikere tar tid, spesielt for store datasett. Kalkulatoren gjør jobben på sekunder.</li>
+<li><strong>Nøyaktighet:</strong> Menneskelige feil i sortering og utregning elimineres.</li>
+<li><strong>Visuell klarhet:</strong> Diagrammet gir et øyeblikkelig bilde av datasentrum, spredning og eventuelle ekstremverdier.</li>
+<li><strong>Sammenligning:</strong> Du kan enkelt sammenligne flere datasett side om side.</li>
+<li><strong>Identifisering av avvikere:</strong> Outliers kan indikere målefeil eller spesielle forhold som krever videre undersøkelse.</li>
+</ul>
+<p>Uten en <strong>boks- og viskerdiagram kalkulator</strong> risikerer du å overse viktige mønstre eller feiltolke data. Verktøyet er derfor uunnværlig i alt fra akademisk forskning til bedriftsanalyse.</p>
+
+<h2>Slik bruker du en boks- og viskerdiagram kalkulator</h2>
+<p>Bruken av en <strong>boks- og viskerdiagram kalkulator</strong> er enkel og intuitiv. Følg disse trinnene:</p>
+<ol>
+<li><strong>Samle dataene dine:</strong> Ha en liste med tall klart, for eksempel testresultater, temperaturer eller salgstall.</li>
+<li><strong>Åpne kalkulatoren:</strong> Gå til en nettbasert <strong>boks- og viskerdiagram kalkulator</strong> eller start funksjonen i statistikkprogrammet ditt.</li>
+<li><strong>Lim inn data:</strong> Skriv eller lim inn tallene i inntastingsfeltet. Skill dem med komma, mellomrom eller linjeskift.</li>
+<li><strong>Velg innstillinger:</strong> Noen kalkulatorer lar deg velge om du vil vise avvikere, justere skala eller legge til tittel.</li>
+<li><strong>Beregn:</strong> Klikk på "Beregn" eller "Generer diagram". Verktøyet vil da sortere dataene og beregne kvartiler, median, minimum og maksimum.</li>
+<li><strong>Analyser resultatet:</strong> Du får opp et boksplott med viskere. Studer boksens plassering (median), lengden på boks (interkvartilbredde) og viskernes rekkevidde.</li>
+</ol>
+<p>De fleste <strong>boks- og viskerdiagram kalkulator</strong>-verktøyene tilbyr også en tabell med de beregnede verdiene, slik at du kan dobbeltsjekke tallene.</p>
+
+<h2>Formel med eksempel</h2>
+<p>En <strong>boks- og viskerdiagram kalkulator</strong> bruker følgende formler for å konstruere diagrammet:</p>
+<ul>
+<li><strong>Minimum:</strong> Den minste verdien i datasettet (unntatt avvikere).</li>
+<li><strong>Første kvartil (Q1):</strong> Medianen av den nedre halvdelen av dataene.</li>
+<li><strong>Median (Q2):</strong> Midtverdien når dataene er sortert.</li>
+<li><strong>Tredje kvartil (Q3):</strong> Medianen av den øvre halvdelen av dataene.</li>
+<li><strong>Maksimum:</strong> Den største verdien i datasettet (unntatt avvikere).</li>
+<li><strong>Interkvartilbredde (IQR):</strong> Q3 - Q1.</li>
+<li><strong>Viskere:</strong> Strekker seg til høyeste verdi ≤ Q3 + 1,5*IQR og laveste verdi ≥ Q1 - 1,5*IQR.</li>
+<li><strong>Avvikere:</strong> Verdier utenfor viskerne.</li>
+</ul>
+<p><strong>Eksempel:</strong> La oss si du har testresultatene: 5, 7, 8, 9, 10, 12, 15, 18, 20, 22.</p>
+<p>En <strong>boks- og viskerdiagram kalkulator</strong> ville beregnet:</p>
+<ul>
+<li>Minimum: 5</li>
+<li>Q1: (7+8)/2 = 7,5</li>
+<li>Median: (10+12)/2 = 11</li>
+<li>Q3: (18+20)/2 = 19</li>
+<li>Maksimum: 22</li>
+<li>IQR: 19 - 7,5 = 11,5</li>
+<li>Nedre visker: 5 (siden 5 ≥ 7,5 - 1,5*11,5 = -9,75)</li>
+<li>Øvre visker: 22 (siden 22 ≤ 19 + 1,5*11,5 = 36,25)</li>
+<li>Ingen avvikere i dette tilfellet.</li>
+</ul>
+<p>Boksen vil strekke seg fra 7,5 til 19, med en linje ved 11 (median). Viskerne går til 5 og 22.</p>
+
+<h2>Praktiske eksempler</h2>
+<p>Her er tre scenarier der en <strong>boks- og viskerdiagram kalkulator</strong> er spesielt nyttig:</p>
+<h3>Eksempel 1: Sammenligning av elevprestasjoner</h3>
+<p>En lærer har testresultater fra to klasser. Ved å bruke en <strong>boks- og viskerdiagram kalkulator</strong> for hver klasse, ser hun at klasse A har en median på 75 og en smal boks (jevn prestasjon), mens klasse B har en median på 70 og en bred boks (stor variasjon). Dette indikerer at klasse B trenger mer differensiert undervisning.</p>
+<h3>Eksempel 2: Kvalitetskontroll i produksjon</h3>
+<p>En fabrikk måler vekten av pakker. En <strong>boks- og viskerdiagram kalkulator</strong> avslører flere avvikere (pakker som er for lette eller tunge). Dette fører til justering av maskinene og reduserer svinn.</p>
+<h3>Eksempel 3: Økonomisk analyse</h3>
+<p>En analytiker sammenligner månedslønninger i to bransjer. Ved hjelp av en <strong>boks- og viskerdiagram kalkulator</strong> ser han at bransje X har høyere median, men også større spredning og flere avvikere (ekstremt høye lønninger). Bransje Y er mer jevn, men lavere betalt.</p>
+
+<h2>Tips for effektiv bruk</h2>
+<ul>
+<li><strong>Rens dataene først:</strong> Fjern åpenbare feil eller duplikater før du bruker en <strong>boks- og viskerdiagram kalkulator</strong>.</li>
+<li><strong>Forstå konteksten:</strong> Avvikere kan være viktige funn, ikke bare feil. Vurder alltid hvorfor de oppstår.</li>
+<li><strong>Sammenlign flere datasett:</strong> Bruk kalkulatoren til å lage flere diagrammer side om side for å se trender.</li>
+<li><strong>Kombiner med andre verktøy:</strong> Bruk histogrammer eller QQ-plott i tillegg for en dypere analyse.</li>
+<li><strong>Dokumenter innstillingene:</strong> Noter hvilken metode for kvartilberegning kalkulatoren bruker (f.eks. inkluderer den medianen i kvartilene eller ikke).</li>
+</ul>
+
+<h2>Ofte stilte spørsmål (FAQ)</h2>
+<h3>1. Hva er forskjellen på et boksplott og et viskerdiagram?</h3>
+<p>Det er ingen forskjell. "Boks- og viskerdiagram" er den norske oversettelsen av "box and whisker plot". En <strong>boks- og viskerdiagram kalkulator</strong> lager nettopp dette diagrammet.</p>
+
+<h3>2. Kan en boks- og viskerdiagram kalkulator håndtere store datasett?</h3>
+<p>Ja, de fleste nettbaserte kalkulatorer kan håndtere tusenvis av datapunkter. Noen programmer har imidlertid begrensninger. Sjekk verktøyets spesifikasjoner før du laster inn store datasett.</p>
+
+<h3>3. Hvordan tolker jeg avvikere i et boksplott?</h3>
+<p>Avvikere er punkter som ligger mer enn 1,5 ganger interkvartilbredden (IQR) fra boksens kanter. De kan indikere målefeil, unike hendelser eller viktige ekstremverdier. En <strong>boks- og viskerdiagram kalkulator</strong> markerer dem ofte som prikker.</p>
+
+<h3>4. Må dataene være normalfordelte for å bruke et boksplott?</h3>
+<p>Nei, boksplott er robuste og fungerer for alle fordelinger. De er spesielt nyttige for skjeve datasett fordi de viser median og kvartiler i stedet for gjennomsnitt, som påvirkes av skjevhet.</p>
+
+<h3>5. Hvilke alternativer finnes til en boks- og viskerdiagram kalkulator?</h3>
+<p>Alternativer inkluderer histogrammer, tetthetsplott, stolpediagrammer og QQ-plott. En <strong>boks- og viskerdiagram kalkulator</strong> er imidlertid ofte det beste valget for å raskt få oversikt over sentraltendens, spredning og avvikere i ett enkelt diagram.</p>
+
+<p>Ved å mestre bruken av en <strong>boks- og viskerdiagram kalkulator</strong> kan du effektivisere dataanalysen og kommunisere funnene dine på en klar og visuell måte. Verktøyet er enkelt å lære, men kraftfullt nok til å avdekke komplekse mønstre i ethvert datasett.</p></div>
+    <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/standardavvik-kalkulator'"><span class="tool-card-icon">📊</span><h3>Standardavvik Kalkulator</h3><p>Beregn standardavvik og statistiske mål</p></div><div class="tool-card" onclick="location='/verktoy/median-kalkulator'"><span class="tool-card-icon">📊</span><h3>Median Kalkulator</h3><p>Finn median og kvartiler i tallrekke</p></div><div class="tool-card" onclick="location='/verktoy/varians-kalkulator'"><span class="tool-card-icon">📊</span><h3>Varians Kalkulator</h3><p>Beregn varians og spredning i data</p></div><div class="tool-card" onclick="location='/verktoy/typetall-kalkulator'"><span class="tool-card-icon">📊</span><h3>Typetall Kalkulator</h3><p>Finn typetall og modus i datasett</p></div><div class="tool-card" onclick="location='/verktoy/variasjonsbredde-kalkulator'"><span class="tool-card-icon">📊</span><h3>Variasjonsbredde Kalkulator</h3><p>Beregn variasjonsbredde i datasett</p></div><div class="tool-card" onclick="location='/verktoy/sannsynlighet-fordeling'"><span class="tool-card-icon">📊</span><h3>Sannsynlighet Fordeling Kalkulator</h3><p>Beregn sannsynlighetsfordelinger</p></div><div class="tool-card" onclick="location='/verktoy/z-score-kalkulator'"><span class="tool-card-icon">📊</span><h3>Z-Score Kalkulator</h3><p>Beregn Z-score og standardavvik</p></div><div class="tool-card" onclick="location='/verktoy/konfidensintervall'"><span class="tool-card-icon">📊</span><h3>Konfidensintervall Kalkulator</h3><p>Beregn konfidensintervall for gjennomsnitt</p></div><div class="tool-card" onclick="location='/verktoy/regresjonsanalyse'"><span class="tool-card-icon">📊</span><h3>Regresjonsanalyse Kalkulator</h3><p>Utfør lineær regresjonsanalyse</p></div><div class="tool-card" onclick="location='/verktoy/korrelasjons-kalkulator'"><span class="tool-card-icon">📊</span><h3>Korrelasjons Kalkulator</h3><p>Beregn korrelasjonskoeffisient</p></div><div class="tool-card" onclick="location='/verktoy/histogram-kalkulator'"><span class="tool-card-icon">📊</span><h3>Histogram Kalkulator</h3><p>Lag histogram og analyser fordeling</p></div><div class="tool-card" onclick="location='/verktoy/boks-plott-kalkulator'"><span class="tool-card-icon">📊</span><h3>Boksplott Kalkulator</h3><p>Lag boksplott og finn kvartiler</p></div><div class="tool-card" onclick="location='/kategori/statistikk'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle Statistikk</h3><p>Alle kalkulatorer i denne kategorien</p></div></div></div>
+    <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/lan-kalkulator'"><span class="tool-card-icon">💰</span><h3>Lån Kalkulator</h3><p>Beregn månedlige låneavdrag med nedbetalingsoversikt</p></div><div class="tool-card" onclick="location='/verktoy/prosent-kalkulator'"><span class="tool-card-icon">📐</span><h3>Prosent Kalkulator</h3><p>Beregn prosent med flere metoder og sammenligninger</p></div><div class="tool-card" onclick="location='/verktoy/temperatur-konvertering'"><span class="tool-card-icon">🔄</span><h3>Temperatur Konvertering</h3><p>Konverter temperatur mellom alle enheter</p></div><div class="tool-card" onclick="location='/verktoy/areal-kalkulator'"><span class="tool-card-icon">📏</span><h3>Areal Kalkulator</h3><p>Beregn areal av ulike former med enheter</p></div><div class="tool-card" onclick="location='/verktoy/alder-kalkulator'"><span class="tool-card-icon">📅</span><h3>Alder Kalkulator</h3><p>Beregn nøyaktig alder med sammenligning og statistikk</p></div></div></div>
+  </div>
+  <aside class="sidebar">
+    <div class="sidebar-card"><h3>Statistikk kalkulatorer</h3><ul class="sidebar-links"><li><a href="/verktoy/standardavvik-kalkulator"><span class="icon">📊</span>Standardavvik Kalkulator</a></li><li><a href="/verktoy/median-kalkulator"><span class="icon">📊</span>Median Kalkulator</a></li><li><a href="/verktoy/varians-kalkulator"><span class="icon">📊</span>Varians Kalkulator</a></li><li><a href="/verktoy/typetall-kalkulator"><span class="icon">📊</span>Typetall Kalkulator</a></li><li><a href="/verktoy/variasjonsbredde-kalkulator"><span class="icon">📊</span>Variasjonsbredde Kalkulator</a></li><li><a href="/verktoy/sannsynlighet-fordeling"><span class="icon">📊</span>Sannsynlighet Fordeling Kalkulator</a></li><li><a href="/verktoy/z-score-kalkulator"><span class="icon">📊</span>Z-Score Kalkulator</a></li><li><a href="/verktoy/konfidensintervall"><span class="icon">📊</span>Konfidensintervall Kalkulator</a></li><li><a href="/kategori/statistikk" style="color:var(--primary)">Se alle Statistikk →</a></li></ul></div>
+    <div class="sidebar-card"><h3>Populære verktøy</h3><ul class="sidebar-links"><li><a href="/verktoy/bmi-kalkulator"><span class="icon">❤️</span>BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator"><span class="icon">💰</span>Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator"><span class="icon">📐</span>Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator"><span class="icon">📅</span>Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator"><span class="icon">❤️</span>Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator"><span class="icon">⚗️</span>pH Kalkulator</a></li></ul></div>
+  </aside>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">1543+ gratis kalkulatorer</p></div>
+      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li><li><a href="/kategori/krypto">₿ Krypto</a></li><li><a href="/kategori/spill">🎮 Spill</a></li><li><a href="/kategori/odds">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi">🌱 Økologi</a></li><li><a href="/kategori/bolig">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk">🎵 Musikk</a></li><li><a href="/kategori/teknologi">💻 Teknologi</a></li><li><a href="/kategori/ki">🤖 Kunstig Intelligens</a></li></ul></div>
+      <div class="footer-col"><h4>Populære</h4><ul><li><a href="/verktoy/bmi-kalkulator">BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator">Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator">Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator">Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator">Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator">pH Kalkulator</a></li><li><a href="/verktoy/molekylvekt-kalkulator">Molekylvektkalkulator</a></li><li><a href="/verktoy/halveringstid-kalkulator">Halveringstid Kalkulator</a></li><li><a href="/verktoy/befolkningsvekst-kalkulator">Befolkningsvekst Kalkulator</a></li><li><a href="/verktoy/terningkaster">Terningkaster</a></li></ul></div>
+      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/campingvognregelen-kalkulator">Campingvognregelen Kalkulator</a></li><li><a href="/verktoy/formuesskatt-2023-kalkulator">Formuesskatt 2023 Kalkulator</a></li><li><a href="/verktoy/stillingsprosent-kalkulator-laerer">Stillingsprosent Kalkulator Lærer</a></li><li><a href="/verktoy/pendlerfradrag-kalkulator">Pendlerfradrag Kalkulator</a></li><li><a href="/verktoy/partiell-derivasjon-kalkulator">Partiell Derivasjon Kalkulator</a></li><li><a href="/verktoy/verditap-kalkulator">Verditap Kalkulator</a></li><li><a href="/verktoy/tollkalkulator-norge">Tollkalkulator Norge</a></li><li><a href="/verktoy/fattigdomsgrense-kalkulator">Fattigdomsgrense Kalkulator</a></li></ul></div>
+      <div class="footer-col"><h4>Info</h4><ul><li><a href="/om-oss">Om oss</a></li><li><a href="/personvern">Personvern</a></li><li><a href="/kontakt">Kontakt</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Kalkulator24 — Alle kalkulatorer er gratis</p></div>
+  </div>
+</footer>
+<script>
+function toggleMenu(){var m=document.getElementById("mobileMenu");m.classList.toggle("open");}
+document.addEventListener("click",function(e){var m=document.getElementById("mobileMenu");var b=document.getElementById("hamburgerBtn");if(m&&b&&!m.contains(e.target)&&!b.contains(e.target))m.classList.remove("open");});
+</script>
+<script src="/assets/js/calc.js"></script>
+</body></html>

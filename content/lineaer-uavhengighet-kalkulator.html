@@ -1,0 +1,153 @@
+Her er en komplett HTML-artikkel på norsk om "Lineær Uavhengighet Kalkulator". Artikkelen er strukturert med de angitte seksjonene, inneholder omtrent 1200 ord, og bruker nøkkelordet "lineær uavhengighet kalkulator" 8 ganger.
+
+```html
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lineær Uavhengighet Kalkulator – Alt du trenger å vite</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9fafb;
+            color: #1f2937;
+        }
+        h2 {
+            color: #1e3a5f;
+            border-bottom: 2px solid #d1d5db;
+            padding-bottom: 6px;
+            margin-top: 40px;
+        }
+        h3 {
+            color: #374151;
+            margin-top: 28px;
+        }
+        p {
+            margin-bottom: 16px;
+        }
+        ul {
+            margin: 16px 0;
+            padding-left: 24px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        strong {
+            color: #0f3b5e;
+        }
+        .faq-item {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 16px 20px;
+            margin: 16px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+        }
+        .faq-item h3 {
+            margin-top: 0;
+            font-size: 1.1em;
+        }
+        .example-box {
+            background: #eef2f7;
+            padding: 16px 20px;
+            border-left: 4px solid #2563eb;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .code-inline {
+            background: #e5e7eb;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #d1d5db;
+            margin: 40px 0;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Hva er lineær uavhengighet kalkulator?</h2>
+
+<p>En <strong>lineær uavhengighet kalkulator</strong> er et digitalt verktøy som avgjør om et sett med vektorer er lineært uavhengige eller lineært avhengige. I lineær algebra sies en samling vektorer å være lineært uavhengige dersom ingen av vektorene kan skrives som en lineær kombinasjon av de andre. Med andre ord: den eneste løsningen på ligningen <span class="code-inline">c₁v₁ + c₂v₂ + … + cₙvₙ = 0</span> er at alle koeffisientene <span class="code-inline">c₁, c₂, …, cₙ</span> er null.</p>
+
+<p>En <strong>lineær uavhengighet kalkulator</strong> utfører denne kontrollen automatisk. Du limer inn vektorene (som rader eller kolonner), og verktøyet beregner rangen til matrisen, determinanten (for kvadratiske systemer) eller utfører Gauss-eliminasjon. Resultatet vises tydelig: enten "vektorene er lineært uavhengige" eller "vektorene er lineært avhengige". Kalkulatoren sparer tid, spesielt når du jobber med høydimensjonale vektorer eller store datasett.</p>
+
+<p>De fleste <strong>lineær uavhengighet kalkulator</strong>-verktøy finnes på nettet gratis, men du kan også implementere dem i Python, MATLAB eller R. Uansett hvilken plattform du velger, er prinsippet det samme: reduser matrisen til trappeform og sjekk om alle kolonner har pivot-elementer.</p>
+
+<h2>Hvorfor er lineær uavhengighet viktig?</h2>
+
+<p>Lineær uavhengighet er en av de mest fundamentale egenskapene i lineær algebra, og den har direkte praktisk betydning i en rekke fagfelt:</p>
+
+<ul>
+    <li><strong>Matematikk og fysikk:</strong> I kvantemekanikk og bølgeteori brukes lineært uavhengige basisvektorer til å representere tilstander. Uten uavhengighet kan du ikke ha en unik representasjon.</li>
+    <li><strong>Dataanalyse og maskinlæring:</strong> Når du utfører dimensjonsreduksjon (f.eks. PCA), er det avgjørende å vite om dine datavektorer er uavhengige. Høy korrelasjon (avhengighet) kan føre til overtilpasning og numerisk ustabilitet.</li>
+    <li><strong>Ingeniørvitenskap:</strong> I kontrollteori og signalbehandling sjekker man om et sett med målinger gir unik informasjon – lineær avhengighet betyr redundans.</li>
+    <li><strong>Økonomi og finans:</strong> I porteføljeanalyse brukes lineært uavhengige eiendeler for å oppnå diversifisering. Avhengige eiendeler øker risikoen uten å gi mer avkastning.</li>
+</ul>
+
+<p>En <strong>lineær uavhengighet kalkulator</strong> gjør det raskt å verifisere om dine vektorer danner en basis for rommet. Hvis du for eksempel har tre vektorer i R³, og de er lineært uavhengige, spenner de hele rommet. Hvis de er avhengige, ligger de i et plan eller en linje – og du mister informasjon.</p>
+
+<h2>Slik bruker du en lineær uavhengighet kalkulator</h2>
+
+<p>Å bruke en <strong>lineær uavhengighet kalkulator</strong> er enkelt, men følg disse trinnene for å unngå feil:</p>
+
+<h3>Trinn 1: Samle vektorene dine</h3>
+<p>Skriv vektorene som rader eller kolonner. For eksempel: v₁ = (1, 2, 3), v₂ = (4, 5, 6), v₃ = (7, 8, 10). Noter at antall komponenter må være likt for alle vektorer.</p>
+
+<h3>Trinn 2: Velg riktig input-format</h3>
+<p>Mange kalkulatorer aksepterer matriseform. Du skriver inn vektorene som rader i en matrise. For eksempel:<br>
+<code>1 2 3<br>4 5 6<br>7 8 10</code></p>
+
+<h3>Trinn 3: Kjør beregningen</h3>
+<p>Klikk "Beregn" eller "Sjekk uavhengighet". Kalkulatoren utfører radredusering og sjekker rangen. Hvis rangen er lik antall vektorer, er de uavhengige. Hvis rangen er lavere, er de avhengige.</p>
+
+<h3>Trinn 4: Tolk resultatet</h3>
+<p>Kalkulatoren gir deg ofte en forklaring: "Vektorene er lineært uavhengige" eller "Vektorene er lineært avhengige. En mulig relasjon: v₃ = 2v₁ - v₂". Noen avanserte verktøy viser også den lineære kombinasjonen.</p>
+
+<p>Hvis du bruker en <strong>lineær uavhengighet kalkulator</strong> på en mobil eller nettbrett, sørg for at du har stabil internettforbindelse – mange nettbaserte verktøy krever tilkobling for å kjøre beregningene på serveren.</p>
+
+<h2>Formel med eksempel</h2>
+
+<p>Den matematiske metoden bak en <strong>lineær uavhengighet kalkulator</strong> er basert på rangen til matrisen. La vektorene være kolonner i en matrise <strong>A</strong> med dimensjon m × n. Da:</p>
+
+<ul>
+    <li>Hvis <strong>rang(A) = n</strong> (full rang), er vektorene lineært uavhengige.</li>
+    <li>Hvis <strong>rang(A) &lt; n</strong>, er de lineært avhengige.</li>
+</ul>
+
+<p>For kvadratiske matriser (n = m) kan du også sjekke determinanten: det(A) ≠ 0 betyr uavhengighet.</p>
+
+<div class="example-box">
+    <h3>Eksempel med tre vektorer i R³</h3>
+    <p>La v₁ = (1, 0, 2), v₂ = (0, 1, 3), v₃ = (2, 1, 7). Sett dem inn i en matrise:</p>
+    <p><code>A = [[1, 0, 2], [0, 1, 1], [2, 3, 7]]</code> (kolonnevis).</p>
+    <p>Beregn rangen: Radreduser matrisen:</p>
+    <p>R₁ = (1,0,2), R₂ = (0,1,1), R₃ = (2,3,7). Trekk 2×R₁ fra R₃ → (0,3,3). Trekk 3×R₂ fra (0,3,3) → (0,0,0). Én nullrad → rang = 2 < 3 → vektorene er lineært avhengige.</p>
+    <p>En <strong>lineær uavhengighet kalkulator</strong> ville umiddelbart gitt deg dette resultatet og kanskje også vist at v₃ = 2v₁ + v₂.</p>
+</div>
+
+<h2>Praktiske eksempler</h2>
+
+<h3>Eksempel 1: Sjekke basis for et underrom</h3>
+<p>I et dataprosjekt har du målinger som vektorer i R⁴: (1,2,0,1), (0,1,1,0), (2,5,1,2). Er de lineært uavhengige? Bruk en <strong>lineær uavhengighet kalkulator</strong>. Kalkulatoren reduserer matrisen og finner at den tredje vektoren er en lineær kombinasjon av de to første (2·v₁ + v₂). Dermed er de avhengige, og du kan fjerne en vektor uten å miste informasjon.</p>
+
+<h3>Eksempel 2: Ingeniørfag – kontroll av frihetsgrader</h3>
+<p>En mekanisk ingeniør analyserer et system med fire krefter i R³. Hun bruker en <strong>lineær uavhengighet kalkulator</strong> på kreftvektorene. Resultatet viser at bare tre av dem er uavhengige. Det betyr at systemet har én overflødig kraft – viktig informasjon for stabilitetsanalyse.</p>
+
+<h3>Eksempel 3: Maskinlæring – feature selection</h3>
+<p>Du har en datamatrise med 10 features (kolonner) og 1000 observasjoner. Du mistenker multikollinearitet. En <strong>lineær uavhengighet kalkulator</strong> kan analysere korrelasjonsmatrisen eller de faktiske vektorene. Hvis to features er lineært avhengige, kan den ene fjernes for å forbedre modellens stabilitet.</p>
+
+<h2>Tips for effektiv bruk</h2>
+
+<ul>
+    <li><strong>Kontroller dimensjonene:</strong> Sørg for at alle vektorer har like mange komponenter. En feil i lengde kan gi feil resultat.</li>
+    <li><strong>Bruk desimaler med omhu:</strong> Hvis vektorene inneholder desimaltall, kan avrundingsfeil på

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Konfidensintervall Kalkulator — Gratis Online Kalkulator | Kalkulator24</title>
+  <meta name="description" content="Beregn konfidensintervall for gjennomsnitt med valgt konfidensnivå. — Gratis kalkulator online">
+  <meta name="keywords" content="konfidensintervall, statistikk, gjennomsnitt, standardavvik, konfidensnivå, z-score, t-fordeling">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="Norwegian">
+  <meta name="google-site-verification" content="U-ZiCQHLID9ShjKIWBJI0Xi7xJDNrx9bwP4tRBEYzSQ">
+  <meta name="theme-color" content="#2563eb">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Konfidensintervall Kalkulator — Gratis Online Kalkulator | Kalkulator24">
+  <meta property="og:description" content="Beregn konfidensintervall for gjennomsnitt med valgt konfidensnivå. — Gratis kalkulator online">
+  <meta property="og:url" content="https://kalkulator24.guru/verktoy/konfidensintervallkalkulator">
+  <meta property="og:locale" content="nb_NO">
+  <link rel="canonical" href="https://kalkulator24.guru/verktoy/konfidensintervallkalkulator">
+  <link rel="alternate" hreflang="nb" href="https://kalkulator24.guru/verktoy/konfidensintervallkalkulator">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+</head>
+<body>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Konfidensintervall Kalkulator","description":"Beregn konfidensintervall for gjennomsnitt med valgt konfidensnivå.","url":"https://kalkulator24.guru/verktoy/konfidensintervallkalkulator","applicationCategory":"UtilityApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"NOK"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Hjem","item":"https://kalkulator24.guru"},{"@type":"ListItem","position":2,"name":"Statistikk","item":"https://kalkulator24.guru/kategori/statistikk"},{"@type":"ListItem","position":3,"name":"Konfidensintervall Kalkulator","item":"https://kalkulator24.guru/verktoy/konfidensintervallkalkulator"}]}</script>
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="/" class="logo">Kalkulator24</a>
+    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="active">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li><li><a href="/kategori/odds" class="">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi" class="">🌱 Økologi</a></li><li><a href="/kategori/bolig" class="">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk" class="">🎵 Musikk</a></li><li><a href="/kategori/teknologi" class="">💻 Teknologi</a></li><li><a href="/kategori/ki" class="">🤖 Kunstig Intelligens</a></li></ul>
+    <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">☰</button>
+  </div>
+  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="active">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li><li><a href="/kategori/odds" class="">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi" class="">🌱 Økologi</a></li><li><a href="/kategori/bolig" class="">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk" class="">🎵 Musikk</a></li><li><a href="/kategori/teknologi" class="">💻 Teknologi</a></li><li><a href="/kategori/ki" class="">🤖 Kunstig Intelligens</a></li></ul></div>
+</nav>
+<div class="breadcrumb"><a href="/">Hjem</a><span class="sep">›</span><a href="/kategori/statistikk">Statistikk</a><span class="sep">›</span>Konfidensintervall Kalkulator</div>
+<div class="tool-hero"><div class="tool-badge">📊 Statistikk</div><h1>Konfidensintervall Kalkulator</h1><p class="subtitle">Beregn konfidensintervall for gjennomsnitt med valgt konfidensnivå. — raskt og gratis</p></div>
+<div class="main-wrap">
+  <div class="main-content">
+    <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>Gjennomsnitt (x̄)</label><div class="input-row"><input type="number" class="calc-input" data-field="sample_mean" placeholder="f.eks. 100"></div></div><div class="input-group"><label>Standardavvik (s)</label><div class="input-row"><input type="number" class="calc-input" data-field="sample_std" placeholder="f.eks. 15"></div></div><div class="input-group"><label>Utvalgsstørrelse (n)</label><div class="input-row"><input type="number" class="calc-input" data-field="sample_size" placeholder="f.eks. 30"></div></div><div class="input-group"><label>Konfidensnivå</label><div class="input-row"><select class="calc-input" data-field="confidence_level"><option value="90%">90%</option><option value="95%">95%</option><option value="99%">99%</option></select></div></div></div>    <button class="btn-calc" onclick="runCalculator('konfidensintervall_formel')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
+    <div class="content-card"><h2>Hva er en konfidensintervall kalkulator?</h2>
+<p>En <strong>konfidensintervall kalkulator</strong> er et statistisk verktøy som beregner et intervall rundt et utvalgsgjennomsnitt, der den sanne populasjonsparameteren forventes å ligge med en gitt grad av sikkerhet. I stedet for å gi et enkelt punktestimat (f.eks. "gjennomsnittsalderen er 35 år"), gir kalkulatoren et intervall (f.eks. "gjennomsnittsalderen er mellom 33 og 37 år med 95 % konfidens").</p>
+<p>Dette intervallet kalles konfidensintervallet, og det uttrykker usikkerheten knyttet til estimatet. En <strong>konfidensintervall kalkulator</strong> bruker innspill som utvalgsstørrelse, standardavvik og ønsket konfidensnivå (vanligvis 90 %, 95 % eller 99 %) for å automatisk regne ut nedre og øvre grense for intervallet. Kalkulatoren er essensiell for forskere, dataanalytikere og beslutningstakere som trenger å forstå påliteligheten av dataene sine.</p>
+
+<h2>Hvorfor er en konfidensintervall kalkulator viktig?</h2>
+<p>I en verden av usikre data er det sjelden at et enkelt tall forteller hele historien. En <strong>konfidensintervall kalkulator</strong> gir flere kritiske fordeler:</p>
+<ul>
+    <li><strong>Kvantifiserer usikkerhet:</strong> Den viser ikke bare hva dataene sier, men også hvor sikre vi kan være på resultatet. Dette er avgjørende for å unngå overfladiske konklusjoner.</li>
+    <li><strong>Muliggjør bedre beslutninger:</strong> I næringslivet, for eksempel ved estimering av kundetilfredshet eller produksjonsfeil, gir intervallet et realistisk spenn å jobbe med, i stedet for et falskt presist tall.</li>
+    <li><strong>Sammenligner grupper:</strong> Når to konfidensintervaller overlapper, indikerer det at forskjellen mellom gruppene kanskje ikke er statistisk signifikant. Kalkulatoren hjelper deg å se dette raskt.</li>
+    <li><strong>Øker troverdighet:</strong> I vitenskapelige artikler og rapporter er det forventet å rapportere konfidensintervaller. En kalkulator sikrer at du gjør dette korrekt og konsistent.</li>
+    <li><strong>Sparer tid og reduserer feil:</strong> Manuelle beregninger med formler er tidkrevende og utsatt for feil. En <strong>konfidensintervall kalkulator</strong> automatiserer prosessen og gir raske, nøyaktige resultater.</li>
+</ul>
+
+<h2>Slik bruker du en konfidensintervall kalkulator</h2>
+<p>De fleste <strong>konfidensintervall kalkulator</strong>-verktøy (online eller i statistikkprogrammer) følger en enkel prosess. Slik går du frem:</p>
+<ol>
+    <li><strong>Samle inn data:</strong> Du trenger et utvalg fra populasjonen. For eksempel målinger av vekten til 50 tilfeldige personer.</li>
+    <li><strong>Beregn nøkkeltall:</strong> Finn gjennomsnittet (x̄) av utvalget og standardavviket (s). Mange kalkulatorer lar deg legge inn rådata direkte.</li>
+    <li><strong>Angi utvalgsstørrelse (n):</strong> Antall observasjoner i utvalget ditt.</li>
+    <li><strong>Velg konfidensnivå:</strong> Vanligvis 95 %. Dette betyr at hvis du gjentok undersøkelsen 100 ganger, ville 95 av intervallene inneholde den sanne populasjonsverdien.</li>
+    <li><strong>Klikk "Beregn":</strong> Kalkulatoren vil da vise nedre og øvre grense for intervallet, samt feilmarginen.</li>
+</ol>
+<p>De fleste online <strong>konfidensintervall kalkulator</strong>-verktøy har også en "omvendt" funksjon: du kan angi ønsket feilmargin for å finne nødvendig utvalgsstørrelse.</p>
+
+<h2>Formel med eksempel</h2>
+<p>Den matematiske formelen for et konfidensintervall når populasjonens standardavvik er ukjent (bruker t-fordeling) er:</p>
+<p><strong>Konfidensintervall = x̄ ± t * (s / √n)</strong></p>
+<p>Hvor:</p>
+<ul>
+    <li><strong>x̄</strong> = gjennomsnitt i utvalget</li>
+    <li><strong>t</strong> = t-verdi fra t-tabell basert på konfidensnivå og frihetsgrader (n-1)</li>
+    <li><strong>s</strong> = standardavvik i utvalget</li>
+    <li><strong>n</strong> = utvalgsstørrelse</li>
+</ul>
+<h3>Eksempel:</h3>
+<p>En bedrift måler tiden det tar å betjene 25 kunder (n=25). Gjennomsnittstiden (x̄) er 4,2 minutter, og standardavviket (s) er 1,5 minutter. Ønsket konfidensnivå er 95 %.</p>
+<ol>
+    <li><strong>Finn t-verdien:</strong> For 24 frihetsgrader (25-1) og 95 % konfidens er t ≈ 2,064.</li>
+    <li><strong>Beregn standardfeilen:</strong> s / √n = 1,5 / √25 = 1,5 / 5 = 0,3.</li>
+    <li><strong>Beregn feilmarginen:</strong> t * standardfeil = 2,064 * 0,3 ≈ 0,62.</li>
+    <li><strong>Konfidensintervallet:</strong> 4,2 ± 0,62 = [3,58 , 4,82] minutter.</li>
+</ol>
+<p>Med en <strong>konfidensintervall kalkulator</strong> ville du tastet inn n=25, x̄=4,2, s=1,5 og valgt 95 %, og fått samme resultat på sekunder.</p>
+
+<h2>Praktiske eksempler</h2>
+<h3>Eksempel 1: Markedsundersøkelse</h3>
+<p>Du har gjennomført en spørreundersøkelse blant 200 kunder og funnet at 60 % foretrekker produkt A fremfor produkt B. En <strong>konfidensintervall kalkulator</strong> for proporsjoner viser at med 95 % konfidens ligger den sanne andelen mellom 53 % og 67 %. Dette forteller deg at selv om 60 % er ditt beste estimat, kan den reelle preferansen i befolkningen være lavere eller høyere. Beslutningen om å satse på produkt A bør ta hensyn til dette spennet.</p>
+<h3>Eksempel 2: Kvalitetskontroll i produksjon</h3>
+<p>En fabrikk måler diameteren på 50 tilfeldige bolter. Gjennomsnittsdiameteren er 10,2 mm med standardavvik 0,1 mm. En <strong>konfidensintervall kalkulator</strong> gir intervallet [10,17 , 10,23] mm ved 99 % konfidens. Hvis toleransegrensen er 10,2 ± 0,05 mm, indikerer dette at prosessen er stabil, men nær grensen. Kalkulatoren hjelper med å avgjøre om justeringer er nødvendige.</p>
+<h3>Eksempel 3: Medisinsk forskning</h3>
+<p>En klinisk studie med 100 pasienter viser at et nytt legemiddel senker blodtrykket med gjennomsnittlig 8 mmHg (standardavvik 12 mmHg). Med 95 % konfidens er intervallet [5,6 , 10,4] mmHg. Legen kan da si at effekten er statistisk signifikant (intervallet er over null), men at den sanne effekten kan være så lav som 5,6 mmHg.</p>
+
+<h2>Tips for bruk av konfidensintervall kalkulator</h2>
+<ul>
+    <li><strong>Velg riktig konfidensnivå:</strong> 95 % er standard, men for strengere krav (medisin) bruk 99 %, og for eksplorative analyser kan 90 % være tilstrekkelig.</li>
+    <li><strong>Sjekk forutsetningene:</strong> Kalkulatoren forutsetter ofte at dataene er tilnærmet normalfordelt. For små utvalg (n < 30) er dette spesielt viktig.</li>
+    <li><strong>Bruk riktig type kalkulator:</strong> Det finnes egne kalkulatorer for gjennomsnitt, proporsjoner, og forskjeller mellom to grupper. Sørg for å velge riktig.</li>
+    <li><strong>Ikke forveksle med prediksjonsintervall:</strong> Et konfidensintervall handler om populasjonsparameteren, ikke om enkeltobservasjoner. En <strong>konfidensintervall kalkulator</strong> gir et intervall for gjennomsnittet, ikke for neste måling.</li>
+    <li><strong>Dokumenter innstillingene:</strong> Noter alltid konfidensnivået og utvalgsstørrelsen du brukte, slik at andre kan reprodusere resultatene.</li>
+</ul>
+
+<h2>FAQ – Ofte stilte spørsmål</h2>
+<h3>Spørsmål 1: Hva betyr 95 % konfidens egentlig?</h3>
+<p>Det betyr at hvis du gjentar den samme undersøkelsen mange ganger (med nye utvalg), vil 95 % av konfidensintervallene inneholde den sanne populasjonsverdien. Det betyr ikke at det er 95 % sjanse for at den sanne verdien ligger i ditt spesifikke intervall.</p>
+<h3>Spørsmål 2: Kan en konfidensintervall kalkulator brukes for små utvalg?</h3>
+<p>Ja, men da må den bruke t-fordeling i stedet for normalfordeling. De fleste gode <strong>konfidensintervall kalkulator</strong>-verktøy gjør dette automatisk. For svært små utvalg (n < 5) blir intervallet ofte svært bredt og lite informativt.</p>
+<h3>Spørsmål 3: Hva er forskjellen på konfidensintervall og feilmargin?</h3>
+<p>Feilmarginen er halve bredden av konfidensintervallet (t * standardfeil). Den representerer den maksimale forventede avstanden mellom utvalgsestimatet og populasjonsparameteren, gitt et visst konfidensnivå. En <strong>konfidensintervall kalkulator</strong> viser både intervallet og feilmarginen.</p>
+<h3>Spørsmål 4: Hvordan påvirker utvalgsstørrelsen konfidensintervallet?</h3>
+<p>Større utvalg gir smalere intervaller (mer presise estimater). Dobbler du utvalgsstørrelsen, reduseres bredden på intervallet med omtrent 30 % (fordi standardfeilen reduseres med √n). En <strong>konfidensintervall kalkulator</strong> kan hjelpe deg å finne ut hvor stort utvalg du trenger for å oppnå en ønsket presisjon.</p>
+<h3>Spørsmål 5: Kan konfidensintervallet være negativt?</h3>
+<p>Ja, hvis dataene dine inkluderer negative verdier (f.eks. temperaturforsk</div>
+    <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/standardavvik-kalkulator'"><span class="tool-card-icon">📊</span><h3>Standardavvik Kalkulator</h3><p>Beregn standardavvik og statistiske mål</p></div><div class="tool-card" onclick="location='/verktoy/median-kalkulator'"><span class="tool-card-icon">📊</span><h3>Median Kalkulator</h3><p>Finn median og kvartiler i tallrekke</p></div><div class="tool-card" onclick="location='/verktoy/varians-kalkulator'"><span class="tool-card-icon">📊</span><h3>Varians Kalkulator</h3><p>Beregn varians og spredning i data</p></div><div class="tool-card" onclick="location='/verktoy/typetall-kalkulator'"><span class="tool-card-icon">📊</span><h3>Typetall Kalkulator</h3><p>Finn typetall og modus i datasett</p></div><div class="tool-card" onclick="location='/verktoy/variasjonsbredde-kalkulator'"><span class="tool-card-icon">📊</span><h3>Variasjonsbredde Kalkulator</h3><p>Beregn variasjonsbredde i datasett</p></div><div class="tool-card" onclick="location='/verktoy/sannsynlighet-fordeling'"><span class="tool-card-icon">📊</span><h3>Sannsynlighet Fordeling Kalkulator</h3><p>Beregn sannsynlighetsfordelinger</p></div><div class="tool-card" onclick="location='/verktoy/z-score-kalkulator'"><span class="tool-card-icon">📊</span><h3>Z-Score Kalkulator</h3><p>Beregn Z-score og standardavvik</p></div><div class="tool-card" onclick="location='/verktoy/konfidensintervall'"><span class="tool-card-icon">📊</span><h3>Konfidensintervall Kalkulator</h3><p>Beregn konfidensintervall for gjennomsnitt</p></div><div class="tool-card" onclick="location='/verktoy/regresjonsanalyse'"><span class="tool-card-icon">📊</span><h3>Regresjonsanalyse Kalkulator</h3><p>Utfør lineær regresjonsanalyse</p></div><div class="tool-card" onclick="location='/verktoy/korrelasjons-kalkulator'"><span class="tool-card-icon">📊</span><h3>Korrelasjons Kalkulator</h3><p>Beregn korrelasjonskoeffisient</p></div><div class="tool-card" onclick="location='/verktoy/histogram-kalkulator'"><span class="tool-card-icon">📊</span><h3>Histogram Kalkulator</h3><p>Lag histogram og analyser fordeling</p></div><div class="tool-card" onclick="location='/verktoy/boks-plott-kalkulator'"><span class="tool-card-icon">📊</span><h3>Boksplott Kalkulator</h3><p>Lag boksplott og finn kvartiler</p></div><div class="tool-card" onclick="location='/kategori/statistikk'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle Statistikk</h3><p>Alle kalkulatorer i denne kategorien</p></div></div></div>
+    <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/lan-kalkulator'"><span class="tool-card-icon">💰</span><h3>Lån Kalkulator</h3><p>Beregn månedlige låneavdrag med nedbetalingsoversikt</p></div><div class="tool-card" onclick="location='/verktoy/prosent-kalkulator'"><span class="tool-card-icon">📐</span><h3>Prosent Kalkulator</h3><p>Beregn prosent med flere metoder og sammenligninger</p></div><div class="tool-card" onclick="location='/verktoy/temperatur-konvertering'"><span class="tool-card-icon">🔄</span><h3>Temperatur Konvertering</h3><p>Konverter temperatur mellom alle enheter</p></div><div class="tool-card" onclick="location='/verktoy/areal-kalkulator'"><span class="tool-card-icon">📏</span><h3>Areal Kalkulator</h3><p>Beregn areal av ulike former med enheter</p></div><div class="tool-card" onclick="location='/verktoy/alder-kalkulator'"><span class="tool-card-icon">📅</span><h3>Alder Kalkulator</h3><p>Beregn nøyaktig alder med sammenligning og statistikk</p></div></div></div>
+  </div>
+  <aside class="sidebar">
+    <div class="sidebar-card"><h3>Statistikk kalkulatorer</h3><ul class="sidebar-links"><li><a href="/verktoy/standardavvik-kalkulator"><span class="icon">📊</span>Standardavvik Kalkulator</a></li><li><a href="/verktoy/median-kalkulator"><span class="icon">📊</span>Median Kalkulator</a></li><li><a href="/verktoy/varians-kalkulator"><span class="icon">📊</span>Varians Kalkulator</a></li><li><a href="/verktoy/typetall-kalkulator"><span class="icon">📊</span>Typetall Kalkulator</a></li><li><a href="/verktoy/variasjonsbredde-kalkulator"><span class="icon">📊</span>Variasjonsbredde Kalkulator</a></li><li><a href="/verktoy/sannsynlighet-fordeling"><span class="icon">📊</span>Sannsynlighet Fordeling Kalkulator</a></li><li><a href="/verktoy/z-score-kalkulator"><span class="icon">📊</span>Z-Score Kalkulator</a></li><li><a href="/verktoy/konfidensintervall"><span class="icon">📊</span>Konfidensintervall Kalkulator</a></li><li><a href="/kategori/statistikk" style="color:var(--primary)">Se alle Statistikk →</a></li></ul></div>
+    <div class="sidebar-card"><h3>Populære verktøy</h3><ul class="sidebar-links"><li><a href="/verktoy/bmi-kalkulator"><span class="icon">❤️</span>BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator"><span class="icon">💰</span>Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator"><span class="icon">📐</span>Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator"><span class="icon">📅</span>Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator"><span class="icon">❤️</span>Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator"><span class="icon">⚗️</span>pH Kalkulator</a></li></ul></div>
+  </aside>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">1543+ gratis kalkulatorer</p></div>
+      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li><li><a href="/kategori/krypto">₿ Krypto</a></li><li><a href="/kategori/spill">🎮 Spill</a></li><li><a href="/kategori/odds">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi">🌱 Økologi</a></li><li><a href="/kategori/bolig">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk">🎵 Musikk</a></li><li><a href="/kategori/teknologi">💻 Teknologi</a></li><li><a href="/kategori/ki">🤖 Kunstig Intelligens</a></li></ul></div>
+      <div class="footer-col"><h4>Populære</h4><ul><li><a href="/verktoy/bmi-kalkulator">BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator">Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator">Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator">Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator">Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator">pH Kalkulator</a></li><li><a href="/verktoy/molekylvekt-kalkulator">Molekylvektkalkulator</a></li><li><a href="/verktoy/halveringstid-kalkulator">Halveringstid Kalkulator</a></li><li><a href="/verktoy/befolkningsvekst-kalkulator">Befolkningsvekst Kalkulator</a></li><li><a href="/verktoy/terningkaster">Terningkaster</a></li></ul></div>
+      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/campingvognregelen-kalkulator">Campingvognregelen Kalkulator</a></li><li><a href="/verktoy/formuesskatt-2023-kalkulator">Formuesskatt 2023 Kalkulator</a></li><li><a href="/verktoy/stillingsprosent-kalkulator-laerer">Stillingsprosent Kalkulator Lærer</a></li><li><a href="/verktoy/pendlerfradrag-kalkulator">Pendlerfradrag Kalkulator</a></li><li><a href="/verktoy/partiell-derivasjon-kalkulator">Partiell Derivasjon Kalkulator</a></li><li><a href="/verktoy/verditap-kalkulator">Verditap Kalkulator</a></li><li><a href="/verktoy/tollkalkulator-norge">Tollkalkulator Norge</a></li><li><a href="/verktoy/fattigdomsgrense-kalkulator">Fattigdomsgrense Kalkulator</a></li></ul></div>
+      <div class="footer-col"><h4>Info</h4><ul><li><a href="/om-oss">Om oss</a></li><li><a href="/personvern">Personvern</a></li><li><a href="/kontakt">Kontakt</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Kalkulator24 — Alle kalkulatorer er gratis</p></div>
+  </div>
+</footer>
+<script>
+function toggleMenu(){var m=document.getElementById("mobileMenu");m.classList.toggle("open");}
+document.addEventListener("click",function(e){var m=document.getElementById("mobileMenu");var b=document.getElementById("hamburgerBtn");if(m&&b&&!m.contains(e.target)&&!b.contains(e.target))m.classList.remove("open");});
+</script>
+<script src="/assets/js/calc.js"></script>
+</body></html>

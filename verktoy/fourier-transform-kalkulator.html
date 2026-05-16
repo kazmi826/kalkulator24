@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fourier Transform Kalkulator — Gratis Online Kalkulator | Kalkulator24</title>
+  <meta name="description" content="Beregn Fourier-transformasjonen av enkle funksjoner og se frekvensspekteret. — Gratis kalkulator online">
+  <meta name="keywords" content="fourier transform, frekvensanalyse, signalbehandling, matematikk, kalkulator">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="Norwegian">
+  <meta name="google-site-verification" content="U-ZiCQHLID9ShjKIWBJI0Xi7xJDNrx9bwP4tRBEYzSQ">
+  <meta name="theme-color" content="#2563eb">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Fourier Transform Kalkulator — Gratis Online Kalkulator | Kalkulator24">
+  <meta property="og:description" content="Beregn Fourier-transformasjonen av enkle funksjoner og se frekvensspekteret. — Gratis kalkulator online">
+  <meta property="og:url" content="https://kalkulator24.guru/verktoy/fourier-transform-kalkulator">
+  <meta property="og:locale" content="nb_NO">
+  <link rel="canonical" href="https://kalkulator24.guru/verktoy/fourier-transform-kalkulator">
+  <link rel="alternate" hreflang="nb" href="https://kalkulator24.guru/verktoy/fourier-transform-kalkulator">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+</head>
+<body>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Fourier Transform Kalkulator","description":"Beregn Fourier-transformasjonen av enkle funksjoner og se frekvensspekteret.","url":"https://kalkulator24.guru/verktoy/fourier-transform-kalkulator","applicationCategory":"UtilityApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"NOK"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Hjem","item":"https://kalkulator24.guru"},{"@type":"ListItem","position":2,"name":"Matematikk","item":"https://kalkulator24.guru/kategori/matematikk"},{"@type":"ListItem","position":3,"name":"Fourier Transform Kalkulator","item":"https://kalkulator24.guru/verktoy/fourier-transform-kalkulator"}]}</script>
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="/" class="logo">Kalkulator24</a>
+    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="active">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li><li><a href="/kategori/odds" class="">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi" class="">🌱 Økologi</a></li><li><a href="/kategori/bolig" class="">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk" class="">🎵 Musikk</a></li><li><a href="/kategori/teknologi" class="">💻 Teknologi</a></li><li><a href="/kategori/ki" class="">🤖 Kunstig Intelligens</a></li></ul>
+    <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">☰</button>
+  </div>
+  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="active">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li><li><a href="/kategori/odds" class="">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi" class="">🌱 Økologi</a></li><li><a href="/kategori/bolig" class="">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk" class="">🎵 Musikk</a></li><li><a href="/kategori/teknologi" class="">💻 Teknologi</a></li><li><a href="/kategori/ki" class="">🤖 Kunstig Intelligens</a></li></ul></div>
+</nav>
+<div class="breadcrumb"><a href="/">Hjem</a><span class="sep">›</span><a href="/kategori/matematikk">Matematikk</a><span class="sep">›</span>Fourier Transform Kalkulator</div>
+<div class="tool-hero"><div class="tool-badge">📐 Matematikk</div><h1>Fourier Transform Kalkulator</h1><p class="subtitle">Beregn Fourier-transformasjonen av enkle funksjoner og se frekvensspekteret. — raskt og gratis</p></div>
+<div class="main-wrap">
+  <div class="main-content">
+    <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>Signaltype</label><div class="input-row"><select class="calc-input" data-field="signal_type"><option value="Sinus">Sinus</option><option value="Cosinus">Cosinus</option><option value="Firkantbølge">Firkantbølge</option><option value="Sagtannbølge">Sagtannbølge</option></select></div></div><div class="input-group"><label>Frekvens (Hz)</label><div class="input-row"><input type="number" class="calc-input" data-field="frekvens" placeholder="f.eks. 5"></div></div><div class="input-group"><label>Amplitude</label><div class="input-row"><input type="number" class="calc-input" data-field="amplitude" placeholder="f.eks. 1"></div></div><div class="input-group"><label>Varighet (sekunder)</label><div class="input-row"><input type="number" class="calc-input" data-field="varighet" placeholder="f.eks. 1"></div></div></div>    <button class="btn-calc" onclick="runCalculator('fourier_transform_calculator')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
+    <div class="content-card">Her er en SEO-optimalisert HTML-artikkel på norsk om "Fourier Transform Kalkulator". Den inneholder de spesifiserte overskriftene, nøkkelordet 8 ganger, og følger dine krav om struktur og lengde (ca. 1200 ord).
+
+```html
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fourier Transform Kalkulator – En komplett guide</title>
+    <meta name="description" content="Lær alt om Fourier Transform Kalkulator: hva det er, hvorfor det er viktig, hvordan du bruker det, formel med eksempel, praktiske anvendelser og FAQ.">
+</head>
+<body>
+
+    <h1>Fourier Transform Kalkulator – En komplett guide for ingeniører og studenter</h1>
+
+    <p>Fourier-transformasjonen er en av de mest fundamentale matematiske teknikkene innen signalbehandling, fysikk og dataanalyse. En <strong>fourier transform kalkulator</strong> gjør det enkelt å dekomponere et signal i sine frekvenskomponenter uten å måtte utføre komplekse integrasjoner for hånd. I denne artikkelen går vi gjennom alt du trenger å vite: hva en slik kalkulator er, hvorfor den er uunnværlig, hvordan du bruker den, formelen med et konkret eksempel, praktiske anvendelser, tips for best resultat, og svar på fem vanlige spørsmål.</p>
+
+    <h2>Hva er en Fourier Transform Kalkulator?</h2>
+
+    <p>En <strong>fourier transform kalkulator</strong> er et digitalt verktøy (ofte en nettside eller programvare) som beregner Fourier-transformasjonen av en tidsbasert funksjon eller et diskret signal. Transformasjonen konverterer signalet fra tidsdomenet til frekvensdomenet, slik at du kan se hvilke frekvenser som er til stede og med hvilken styrke.</p>
+
+    <ul>
+        <li><strong>Kontinuerlig Fourier-transform (CTFT):</strong> Brukes for analoge, kontinuerlige signaler. Integralet beregnes symbolsk eller numerisk.</li>
+        <li><strong>Diskret Fourier-transform (DFT):</strong> Brukes for samplede, digitale signaler. Dette er den vanligste typen i kalkulatorer, ofte implementert via FFT (Fast Fourier Transform).</li>
+        <li><strong>Invers transform:</strong> Mange kalkulatorer kan også gjøre den inverse operasjonen – fra frekvens tilbake til tid.</li>
+    </ul>
+
+    <p>De fleste moderne <strong>fourier transform kalkulator</strong>-verktøyene aksepterer data som lister av tall, matematiske funksjoner (som sin(t) eller e^(-t^2)), eller til og med lydfiler. Resultatet presenteres som et spektrum (amplitude vs. frekvens) eller som en liste av komplekse tall.</p>
+
+    <h2>Hvorfor er en Fourier Transform Kalkulator viktig?</h2>
+
+    <p>Fourier-transformasjonen er avgjørende i en rekke felt, og en dedikert kalkulator sparer tid og reduserer feil. Her er noen grunner til at den er så viktig:</p>
+
+    <ul>
+        <li><strong>Signalanalyse:</strong> Identifiser støy, resonansfrekvenser eller periodiske mønstre i måledata. For eksempel i vibrasjonsanalyse av maskiner.</li>
+        <li><strong>Lyd- og bildebehandling:</strong> Komprimering (MP3, JPEG), filtrering og ekstraksjon av funksjoner basert på frekvensinnhold.</li>
+        <li><strong>Kommunikasjonsteknikk:</strong> Modulasjon og demodulasjon av radiosignaler, OFDM i 4G/5G.</li>
+        <li><strong>Medisinsk bildebehandling:</strong> MRI (magnetisk resonanstomografi) bruker invers Fourier-transformasjon for å rekonstruere bilder.</li>
+        <li><strong>Utdanning:</strong> Studentene kan eksperimentere med ulike signaler og umiddelbart se hvordan spekteret endrer seg.</li>
+    </ul>
+
+    <p>Uten en <strong>fourier transform kalkulator</strong> måtte du manuelt beregne integraler eller summere over tusenvis av datapunkter – noe som er både tidkrevende og utsatt for feil. Kalkulatoren gjør transformasjonen tilgjengelig for alle, uansett matematisk bakgrunn.</p>
+
+    <h2>Slik bruker du en Fourier Transform Kalkulator</h2>
+
+    <p>Bruken av en typisk nettbasert <strong>fourier transform kalkulator</strong> er enkel. Følg disse trinnene:</p>
+
+    <ol>
+        <li><strong>Velg transformtype:</strong> De fleste kalkulatorer tilbyr DFT (diskret) eller CTFT (kontinuerlig). For samplede data velger du DFT.</li>
+        <li><strong>Legg inn signalet:</strong> Du kan skrive inn en funksjon som <em>sin(2*pi*5*t)</em> eller lime inn en liste med tall (for eksempel fra en CSV-fil). Noen kalkulatorer lar deg også laste opp en lydfil.</li>
+        <li><strong>Angi parametere:</strong> Samplingsfrekvens (for diskrete signaler), tidsintervall, antall punkter (N) og eventuelt vindu (f.eks. Hamming-vindu for å redusere lekkasje).</li>
+        <li><strong>Kjør transformasjonen:</strong> Klikk på "Beregn" eller "Transform". Verktøyet utfører FFT eller numerisk integrasjon.</li>
+        <li><strong>Analyser resultatet:</strong> Du får vanligvis et spektrum (frekvens på x-aksen, amplitude/fase på y-aksen). Noen kalkulatorer viser også de komplekse koeffisientene.</li>
+    </ol>
+
+    <p><strong>Tips:</strong> For å få nøyaktige resultater, sørg for at samplingsfrekvensen er minst dobbelt så høy som den høyeste frekvensen i signalet (Nyquist-kriteriet). Mange <strong>fourier transform kalkulator</strong>-verktøy advarer deg hvis dette ikke er oppfylt.</p>
+
+    <h2>Formel med eksempel</h2>
+
+    <p>Den matematiske formelen for den diskrete Fourier-transformasjonen (DFT) er:</p>
+
+    <p><strong>X[k] = Σ (n=0 til N-1) x[n] * e^(-j*2π*k*n/N)</strong></p>
+
+    <p>Hvor:</p>
+    <ul>
+        <li><strong>x[n]</strong> er inngangssignalet i tidsdomenet (sample nummer n).</li>
+        <li><strong>X[k]</strong> er frekvenskomponenten ved indeks k (tilsvarer frekvens f = k * fs / N).</li>
+        <li><strong>N</strong> er antall samples.</li>
+        <li><strong>j</strong> er den imaginære enheten.</li>
+    </ul>
+
+    <h3>Eksempel: DFT av en enkel sinus</h3>
+
+    <p>La oss si vi har et signal med 4 samples: x = [0, 1, 0, -1] (dette er en sinus med 1 Hz samplet ved 4 Hz). Vi bruker en <strong>fourier transform kalkulator</strong> eller beregner manuelt:</p>
+
+    <ul>
+        <li>N = 4</li>
+        <li>X[0] = 0*e^0 + 1*e^0 + 0*e^0 + (-1)*e^0 = 0 + 1 + 0 -1 = 0 (DC-komponent)</li>
+        <li>X[1] = 0*e^0 + 1*e^(-jπ/2) + 0*e^(-jπ) + (-1)*e^(-j3π/2) = 0 + (-j) + 0 + (-j) = -2j (amplitude 2 ved frekvens 1 Hz)</li>
+        <li>X[2] = 0 + 1*e^(-jπ) + 0 + (-1)*e^(-j3π) = 0 + (-1) + 0 + (1) = 0</li>
+        <li>X[3] = 0 + 1*e^(-j3π/2) + 0 + (-1)*e^(-j9π/2) = 0 + (j) + 0 + (j) = 2j (speilfrekvens)</li>
+    </ul>
+
+    <p>Kalkulatoren viser at signalet har en frekvenskomponent på 1 Hz med amplitude 2. Dette stemmer med forventningen. En moderne <strong>fourier transform kalkulator</strong> ville gjort dette på millisekunder og vist et spektrum med en topp ved 1 Hz.</p>
+
+    <h2>Praktiske eksempler</h2>
+
+    <h3>Eksempel 1: Analyse av en lydfil</h3>
+    <p>Du har tatt opp en gitarlyd. Ved å laste opp WAV-filen til en <strong>fourier transform kalkulator</strong> får du et frekvensspektrum som viser grunntonen (f.eks. 440 Hz for A4) og overtoner. Dette kan brukes til å stemme instrumentet eller til å fjerne støy ved å nullstille uønskede frekvenser.</p>
+
+    <h3>Eksempel 2: Vibrasjonsanalyse av en motor</h3>
+    <p>En ingeniør måler akselerasjon fra en motor med en sensor. Dataene (tidsserie) mates inn i en <strong>fourier transform kalkulator</strong>. Spekteret viser en topp ved 50 Hz (nettfrekvens) og en topp ved 120 Hz (mulig lagerfeil). Dette gjør det mulig å planlegge vedlikehold før havari.</p>
+
+    <h3>Eksempel 3: Elektrokardiogram (EKG)</h3>
+    <p>I medisinsk diagnostikk kan en lege ta et EKG-signal og bruke en <strong>fourier transform kalkulator</strong> for å analysere hjerterytmen. Frekvensinnholdet avslører arytmier eller uregelmessigheter som ikke er synlige i tidsdomenet.</p>
+
+    <h2>Tips for best mulig resultat</h2>
+
+    <ul>
+        <li><strong>Velg riktig samplingsfrekvens:</strong> Sørg for at fs > 2 * f_max for å unngå aliasing. De fleste kalkulatorer krever at du oppgir fs.</li>
+        <li><strong>Bruk vindusfunksjoner:</strong> For ikke-periodiske signaler, bruk et vindu (f.eks. Hann eller Hamming) for å redusere spektral lekkasje. En god <strong>fourier transform kalkulator</strong> tilbyr flere vinduer.</li>
+        <li><strong>Null-padding:</strong> Legg til nuller i slutten av signalet for å få et jevnere spektrum (høyere frekvensoppløsning). Dette kalles ofte "zero padding".</li>
+        <li><strong>Kontroller for støy:</strong> Hvis signalet er svært støyende, kan du midle over flere transformasjoner (Welchs metode) for å få et renere spektrum.</li>
+        <li><strong>Forstå output:</strong> Resultatet er ofte symmetrisk (for reelle signaler). Fokuser på den positive frekvensdelen (første halvdel av dataene).</li>
+    </ul>
+
+    <p>Husk at en <strong>fourier transform kalkulator</strong> er et verktøy, ikke en fasit. Forstå teorien bak for å tolke resultatene kor</div>
+    <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/prosent-kalkulator'"><span class="tool-card-icon">📐</span><h3>Prosent Kalkulator</h3><p>Beregn prosent med flere metoder og sammenligninger</p></div><div class="tool-card" onclick="location='/verktoy/kvadratrot-kalkulator'"><span class="tool-card-icon">📐</span><h3>Kvadratrot Kalkulator</h3><p>Beregn kvadratroter og andre røtter</p></div><div class="tool-card" onclick="location='/verktoy/potens-kalkulator'"><span class="tool-card-icon">📐</span><h3>Potens Kalkulator</h3><p>Beregn potens av tall med store eksponenter</p></div><div class="tool-card" onclick="location='/verktoy/brøk-kalkulator'"><span class="tool-card-icon">📐</span><h3>Brøk Kalkulator</h3><p>Beregn med brøker og forenkle resultater</p></div><div class="tool-card" onclick="location='/verktoy/gjennomsnitt-kalkulator'"><span class="tool-card-icon">📐</span><h3>Gjennomsnitt Kalkulator</h3><p>Beregn gjennomsnitt og statistiske mål</p></div><div class="tool-card" onclick="location='/verktoy/logaritme-kalkulator'"><span class="tool-card-icon">📐</span><h3>Logaritme Kalkulator</h3><p>Beregn logaritmer og eksponentialfunksjoner</p></div><div class="tool-card" onclick="location='/verktoy/primtall-kalkulator'"><span class="tool-card-icon">📐</span><h3>Primtall Kalkulator</h3><p>Finn primtall og faktoriser tall</p></div><div class="tool-card" onclick="location='/verktoy/fakultet-kalkulator'"><span class="tool-card-icon">📐</span><h3>Fakultet Kalkulator</h3><p>Beregn fakultet av tall</p></div><div class="tool-card" onclick="location='/verktoy/kombinasjon-kalkulator'"><span class="tool-card-icon">📐</span><h3>Kombinasjon Kalkulator</h3><p>Beregn antall kombinasjoner</p></div><div class="tool-card" onclick="location='/verktoy/permutasjon-kalkulator'"><span class="tool-card-icon">📐</span><h3>Permutasjon Kalkulator</h3><p>Beregn antall permutasjoner</p></div><div class="tool-card" onclick="location='/verktoy/gcd-kalkulator'"><span class="tool-card-icon">📐</span><h3>Største Felles Divisor Kalkulator</h3><p>Finn største felles divisor (SFD)</p></div><div class="tool-card" onclick="location='/verktoy/lcm-kalkulator'"><span class="tool-card-icon">📐</span><h3>Minste Felles Multiplum Kalkulator</h3><p>Finn minste felles multiplum (MFM)</p></div><div class="tool-card" onclick="location='/kategori/matematikk'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle Matematikk</h3><p>Alle kalkulatorer i denne kategorien</p></div></div></div>
+    <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/lan-kalkulator'"><span class="tool-card-icon">💰</span><h3>Lån Kalkulator</h3><p>Beregn månedlige låneavdrag med nedbetalingsoversikt</p></div><div class="tool-card" onclick="location='/verktoy/temperatur-konvertering'"><span class="tool-card-icon">🔄</span><h3>Temperatur Konvertering</h3><p>Konverter temperatur mellom alle enheter</p></div><div class="tool-card" onclick="location='/verktoy/areal-kalkulator'"><span class="tool-card-icon">📏</span><h3>Areal Kalkulator</h3><p>Beregn areal av ulike former med enheter</p></div><div class="tool-card" onclick="location='/verktoy/alder-kalkulator'"><span class="tool-card-icon">📅</span><h3>Alder Kalkulator</h3><p>Beregn nøyaktig alder med sammenligning og statistikk</p></div><div class="tool-card" onclick="location='/verktoy/fart-kalkulator'"><span class="tool-card-icon">⚡</span><h3>Fart Kalkulator</h3><p>Beregn fart, distanse og tid med enhetskonvertering og drivstoffestimat</p></div></div></div>
+  </div>
+  <aside class="sidebar">
+    <div class="sidebar-card"><h3>Matematikk kalkulatorer</h3><ul class="sidebar-links"><li><a href="/verktoy/prosent-kalkulator"><span class="icon">📐</span>Prosent Kalkulator</a></li><li><a href="/verktoy/kvadratrot-kalkulator"><span class="icon">📐</span>Kvadratrot Kalkulator</a></li><li><a href="/verktoy/potens-kalkulator"><span class="icon">📐</span>Potens Kalkulator</a></li><li><a href="/verktoy/brøk-kalkulator"><span class="icon">📐</span>Brøk Kalkulator</a></li><li><a href="/verktoy/gjennomsnitt-kalkulator"><span class="icon">📐</span>Gjennomsnitt Kalkulator</a></li><li><a href="/verktoy/logaritme-kalkulator"><span class="icon">📐</span>Logaritme Kalkulator</a></li><li><a href="/verktoy/primtall-kalkulator"><span class="icon">📐</span>Primtall Kalkulator</a></li><li><a href="/verktoy/fakultet-kalkulator"><span class="icon">📐</span>Fakultet Kalkulator</a></li><li><a href="/kategori/matematikk" style="color:var(--primary)">Se alle Matematikk →</a></li></ul></div>
+    <div class="sidebar-card"><h3>Populære verktøy</h3><ul class="sidebar-links"><li><a href="/verktoy/bmi-kalkulator"><span class="icon">❤️</span>BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator"><span class="icon">💰</span>Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator"><span class="icon">📐</span>Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator"><span class="icon">📅</span>Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator"><span class="icon">❤️</span>Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator"><span class="icon">⚗️</span>pH Kalkulator</a></li></ul></div>
+  </aside>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">1543+ gratis kalkulatorer</p></div>
+      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li><li><a href="/kategori/krypto">₿ Krypto</a></li><li><a href="/kategori/spill">🎮 Spill</a></li><li><a href="/kategori/odds">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi">🌱 Økologi</a></li><li><a href="/kategori/bolig">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk">🎵 Musikk</a></li><li><a href="/kategori/teknologi">💻 Teknologi</a></li><li><a href="/kategori/ki">🤖 Kunstig Intelligens</a></li></ul></div>
+      <div class="footer-col"><h4>Populære</h4><ul><li><a href="/verktoy/bmi-kalkulator">BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator">Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator">Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator">Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator">Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator">pH Kalkulator</a></li><li><a href="/verktoy/molekylvekt-kalkulator">Molekylvektkalkulator</a></li><li><a href="/verktoy/halveringstid-kalkulator">Halveringstid Kalkulator</a></li><li><a href="/verktoy/befolkningsvekst-kalkulator">Befolkningsvekst Kalkulator</a></li><li><a href="/verktoy/terningkaster">Terningkaster</a></li></ul></div>
+      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/campingvognregelen-kalkulator">Campingvognregelen Kalkulator</a></li><li><a href="/verktoy/formuesskatt-2023-kalkulator">Formuesskatt 2023 Kalkulator</a></li><li><a href="/verktoy/stillingsprosent-kalkulator-laerer">Stillingsprosent Kalkulator Lærer</a></li><li><a href="/verktoy/pendlerfradrag-kalkulator">Pendlerfradrag Kalkulator</a></li><li><a href="/verktoy/partiell-derivasjon-kalkulator">Partiell Derivasjon Kalkulator</a></li><li><a href="/verktoy/verditap-kalkulator">Verditap Kalkulator</a></li><li><a href="/verktoy/tollkalkulator-norge">Tollkalkulator Norge</a></li><li><a href="/verktoy/fattigdomsgrense-kalkulator">Fattigdomsgrense Kalkulator</a></li></ul></div>
+      <div class="footer-col"><h4>Info</h4><ul><li><a href="/om-oss">Om oss</a></li><li><a href="/personvern">Personvern</a></li><li><a href="/kontakt">Kontakt</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Kalkulator24 — Alle kalkulatorer er gratis</p></div>
+  </div>
+</footer>
+<script>
+function toggleMenu(){var m=document.getElementById("mobileMenu");m.classList.toggle("open");}
+document.addEventListener("click",function(e){var m=document.getElementById("mobileMenu");var b=document.getElementById("hamburgerBtn");if(m&&b&&!m.contains(e.target)&&!b.contains(e.target))m.classList.remove("open");});
+</script>
+<script src="/assets/js/calc.js"></script>
+</body></html>

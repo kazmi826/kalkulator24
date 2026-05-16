@@ -1,0 +1,171 @@
+```html
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divergens Kalkulator – alt du trenger å vite</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            max-width: 820px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            color: #1e2b3c;
+            background: #fafbfc;
+        }
+        h2 {
+            font-size: 1.9rem;
+            border-left: 6px solid #2b6f9e;
+            padding-left: 1rem;
+            margin-top: 2.8rem;
+            color: #0a2a44;
+        }
+        h3 {
+            font-size: 1.4rem;
+            margin-top: 2rem;
+            color: #1f4a6e;
+        }
+        p {
+            margin-bottom: 1.2rem;
+        }
+        ul {
+            padding-left: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        strong {
+            color: #0d3b5e;
+        }
+        .faq-item {
+            background: #ffffff;
+            border: 1px solid #d9e2ec;
+            border-radius: 12px;
+            padding: 1.2rem 1.5rem;
+            margin-bottom: 1.2rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+        }
+        .faq-item p {
+            margin: 0.5rem 0 0 0;
+        }
+        .formel-boks {
+            background: #e9f0f7;
+            padding: 1.2rem 1.8rem;
+            border-radius: 18px;
+            margin: 1.8rem 0;
+            font-size: 1.1rem;
+            border-left: 5px solid #2b6f9e;
+        }
+        .eksempel-boks {
+            background: #f4f8fe;
+            padding: 1rem 1.5rem;
+            border-radius: 14px;
+            margin: 1.5rem 0;
+        }
+        .tips-liste {
+            background: #f0f6fb;
+            padding: 1.2rem 1.8rem;
+            border-radius: 16px;
+        }
+        code {
+            background: #e2eaf2;
+            padding: 0.2rem 0.5rem;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+        }
+        .kalkulator-mention {
+            background: #ffffff;
+            border: 1px dashed #2b6f9e;
+            padding: 0.3rem 0.8rem;
+            border-radius: 30px;
+            display: inline-block;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Introduksjon -->
+    <h2>Hva er en divergens kalkulator?</h2>
+    <p><strong>Divergens kalkulator</strong> er et digitalt verktøy som beregner divergensen til et vektorfelt i et gitt punkt. Divergens (∇ · F) er en matematisk operator som måler nettofluks av et vektorfelt ut av et infinitesimalt volum. Kort sagt forteller den om feltet «sprer seg» eller «samler seg» i et punkt. En <strong>divergens kalkulator</strong> automatiserer de partielle derivasjonene og summeringen, slik at du slipper å gjøre tidkrevende håndregning.</p>
+    <p>Vektorfelt kan beskrive alt fra væskehastighet til elektriske felt. Derfor brukes <strong>divergens kalkulator</strong> i fysikk, ingeniørvitenskap og anvendt matematikk. Den tar inn komponentene <em>P</em>, <em>Q</em> og eventuelt <em>R</em> (for 2D eller 3D) og leverer et skalarresultat som viser feltets kildestyrke.</p>
+
+    <!-- Hvorfor viktig -->
+    <h2>Hvorfor er en divergens kalkulator viktig?</h2>
+    <p>I mange tekniske og naturvitenskapelige sammenhenger er divergens en nøkkelstørrelse. Uten en <strong>divergens kalkulator</strong> må du derivere manuelt – noe som øker risikoen for tegnfeil og unøyaktigheter. Her er de viktigste grunnene til at verktøyet er uunnværlig:</p>
+    <ul>
+        <li><strong>Tidsbesparelse:</strong> Beregninger som tar 15 minutter for hånd, gjøres på få sekunder.</li>
+        <li><strong>Færre feil:</strong> Spesielt ved komplekse felt med flere variable reduserer en <strong>divergens kalkulator</strong> risikoen for regnefeil.</li>
+        <li><strong>Læringsstøtte:</strong> Studenter kan sjekke sine manuelle svar og forstå hvor de gjør feil.</li>
+        <li><strong>Anvendelser i CFD:</strong> I computational fluid dynamics brukes divergens til å sjekke inkompressibilitet (∇·v = 0).</li>
+        <li><strong>Elektromagnetisme:</strong> Gauss’ lov sier ∇·E = ρ/ε₀; en rask divergens-kalkulasjon gir ladningstettheten.</li>
+    </ul>
+    <p>Kort sagt: en <strong>divergens kalkulator</strong> gjør kompleks vektoranalyse tilgjengelig for alle – fra studenter til forskere.</p>
+
+    <!-- Slik bruker du -->
+    <h2>Slik bruker du en divergens kalkulator</h2>
+    <p>De fleste nettkalkulatorer følger samme logikk. Slik kommer du i gang:</p>
+    <ul>
+        <li><strong>Velg dimensjon:</strong> 2D (to komponenter) eller 3D (tre komponenter).</li>
+        <li><strong>Skriv inn feltkomponentene:</strong> For eksempel <em>P(x,y,z)</em>, <em>Q(x,y,z)</em> og <em>R(x,y,z)</em> som funksjoner av variablene.</li>
+        <li><strong>Angi punkt (valgfritt):</strong> Mange kalkulatorer kan evaluere divergensen i et spesifikt punkt (x₀, y₀, z₀).</li>
+        <li><strong>Klikk «Beregn»:</strong> Verktøyet utfører partielle derivasjoner og summerer dem.</li>
+        <li><strong>Les resultatet:</strong> Du får et skalaruttrykk (f.eks. 2x + 3y) eller en tallverdi hvis punkt er oppgitt.</li>
+    </ul>
+    <p>En god <strong>divergens kalkulator</strong> viser også mellomregningene, slik at du kan følge hvert derivasjonstrinn.</p>
+
+    <!-- Formel med eksempel -->
+    <h2>Formel med eksempel – divergens i 3D</h2>
+    <div class="formel-boks">
+        <p><strong>Divergensformel (kartesiske koordinater):</strong><br>
+        ∇ · <strong>F</strong> = ∂P/∂x + ∂Q/∂y + ∂R/∂z</p>
+        <p>der <strong>F</strong>(x,y,z) = (P, Q, R).</p>
+    </div>
+    <div class="eksempel-boks">
+        <p><strong>Eksempel:</strong> La <strong>F</strong>(x,y,z) = (x²y, yz, xz²).<br>
+        Da er P = x²y, Q = yz, R = xz².</p>
+        <ul>
+            <li>∂P/∂x = 2xy</li>
+            <li>∂Q/∂y = z</li>
+            <li>∂R/∂z = 2xz</li>
+        </ul>
+        <p><strong>Divergens:</strong> ∇·F = 2xy + z + 2xz.</p>
+        <p>Ved punktet (1, 2, 3): 2·1·2 + 3 + 2·1·3 = 4 + 3 + 6 = <strong>13</strong>.</p>
+        <p>Bruker du en <strong>divergens kalkulator</strong> får du samme svar umiddelbart.</p>
+    </div>
+
+    <!-- Praktiske eksempler -->
+    <h2>Praktiske eksempler på bruk</h2>
+    <h3>1. Væskedynamikk – kontinuitetsligningen</h3>
+    <p>For en inkompressibel væske skal divergensen av hastighetsfeltet være null (∇·v = 0). En <strong>divergens kalkulator</strong> sjekker raskt om et gitt felt oppfyller dette. Eksempel: v = (3x, -3y, 0) gir divergens 3 – 3 + 0 = 0, altså inkompressibel strømning.</p>
+    <h3>2. Elektrostatikk – Gauss’ lov</h3>
+    <p>Elektrisk felt E = (x, y, z) har divergens 3 (i vakum). Det betyr at ladningstettheten ρ = ε₀·3. Med en <strong>divergens kalkulator</strong> finner du feltets kilder på sekunder.</p>
+    <h3>3. Varmefluks i materialer</h3>
+    <p>Varmefluksvektoren q = -k∇T. Divergensen av q gir varmekildens styrke. Ingeniører bruker <strong>divergens kalkulator</strong> til å optimalisere kjølesystemer.</p>
+    <h3>4. Finne kilder og sluk i felt</h3>
+    <p>Positiv divergens indikerer en kilde (feltet «strømmer ut»), negativ divergens et sluk. En rask kalkulasjon med en <strong>divergens kalkulator</strong> avslører feltets oppførsel.</p>
+
+    <!-- Tips -->
+    <h2>Tips for effektiv bruk av divergens kalkulator</h2>
+    <div class="tips-liste">
+        <ul>
+            <li><strong>Sjekk dimensjonen:</strong> Pass på at du har like mange komponenter som dimensjoner (2D eller 3D).</li>
+            <li><strong>Bruk parenteser riktig:</strong> For funksjoner som sin(xy) eller e^(x+y) – skriv dem presist.</li>
+            <li><strong>Benytt symbolsk modus:</strong> Hvis kalkulatoren støtter symbolsk divergens, får du et generelt uttrykk, ikke bare en tallverdi.</li>
+            <li><strong>Sammenlign med håndregning:</strong> Bruk verktøyet til å verifisere dine egne derivasjoner – det styrker forståelsen.</li>
+            <li><strong>Se etter forenklinger:</strong> Noen ganger kan du faktorisere resultatet. En <strong>divergens kalkulator</strong> viser ofte det forenklede uttrykket.</li>
+            <li><strong>Husk enheter:</strong> Divergens har enheter (f.eks. s⁻¹ i fluidmekanikk). Verktøyet gir tall, men du må tolke fysisk.</li>
+        </ul>
+    </div>
+
+    <!-- FAQ – 5 spørsmål -->
+    <h2>Ofte stilte spørsmål (FAQ)</h2>
+
+    <div class="faq-item">
+        <strong>1. Hva er forskjellen på divergens og curl?</strong>
+        <p>Divergens måler «utstrømning» (skalar), mens curl måler rotasjon (vektor). En <strong>divergens kalkulator</strong> beregner ∇·F, en curl-kalkulator beregner ∇×F.</p>
+    </

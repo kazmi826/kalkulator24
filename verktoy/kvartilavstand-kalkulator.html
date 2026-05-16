@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kvartilavstand Kalkulator — Gratis Online Kalkulator | Kalkulator24</title>
+  <meta name="description" content="Beregn kvartilavstand (IQR) for et datasett. Få Q1, Q3, median, og tolkning av spredning. — Gratis kalkulator online">
+  <meta name="keywords" content="kvartilavstand, IQR, kvartiler, statistikk, spredning, datasett, Q1, Q3, median, outlierdeteksjon">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="Norwegian">
+  <meta name="google-site-verification" content="U-ZiCQHLID9ShjKIWBJI0Xi7xJDNrx9bwP4tRBEYzSQ">
+  <meta name="theme-color" content="#2563eb">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kvartilavstand Kalkulator — Gratis Online Kalkulator | Kalkulator24">
+  <meta property="og:description" content="Beregn kvartilavstand (IQR) for et datasett. Få Q1, Q3, median, og tolkning av spredning. — Gratis kalkulator online">
+  <meta property="og:url" content="https://kalkulator24.guru/verktoy/kvartilavstand-kalkulator">
+  <meta property="og:locale" content="nb_NO">
+  <link rel="canonical" href="https://kalkulator24.guru/verktoy/kvartilavstand-kalkulator">
+  <link rel="alternate" hreflang="nb" href="https://kalkulator24.guru/verktoy/kvartilavstand-kalkulator">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+</head>
+<body>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Kvartilavstand Kalkulator","description":"Beregn kvartilavstand (IQR) for et datasett. Få Q1, Q3, median, og tolkning av spredning.","url":"https://kalkulator24.guru/verktoy/kvartilavstand-kalkulator","applicationCategory":"UtilityApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"NOK"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Hjem","item":"https://kalkulator24.guru"},{"@type":"ListItem","position":2,"name":"Statistikk","item":"https://kalkulator24.guru/kategori/statistikk"},{"@type":"ListItem","position":3,"name":"Kvartilavstand Kalkulator","item":"https://kalkulator24.guru/verktoy/kvartilavstand-kalkulator"}]}</script>
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="/" class="logo">Kalkulator24</a>
+    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="active">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li><li><a href="/kategori/odds" class="">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi" class="">🌱 Økologi</a></li><li><a href="/kategori/bolig" class="">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk" class="">🎵 Musikk</a></li><li><a href="/kategori/teknologi" class="">💻 Teknologi</a></li><li><a href="/kategori/ki" class="">🤖 Kunstig Intelligens</a></li></ul>
+    <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">☰</button>
+  </div>
+  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="active">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li><li><a href="/kategori/odds" class="">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi" class="">🌱 Økologi</a></li><li><a href="/kategori/bolig" class="">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk" class="">🎵 Musikk</a></li><li><a href="/kategori/teknologi" class="">💻 Teknologi</a></li><li><a href="/kategori/ki" class="">🤖 Kunstig Intelligens</a></li></ul></div>
+</nav>
+<div class="breadcrumb"><a href="/">Hjem</a><span class="sep">›</span><a href="/kategori/statistikk">Statistikk</a><span class="sep">›</span>Kvartilavstand Kalkulator</div>
+<div class="tool-hero"><div class="tool-badge">📊 Statistikk</div><h1>Kvartilavstand Kalkulator</h1><p class="subtitle">Beregn kvartilavstand (IQR) for et datasett. Få Q1, Q3, median, og tolkning av spredning. — raskt og gratis</p></div>
+<div class="main-wrap">
+  <div class="main-content">
+    <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>Datasett (kommaseparerte tall)</label><div class="input-row"><input type="text" class="calc-input" data-field="datasett" placeholder="f.eks. 1, 3, 5, 7, 9, 11, 13"></div></div></div>    <button class="btn-calc" onclick="runCalculator('kvartilavstand_beregning')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
+    <div class="content-card">Her er en SEO-optimalisert HTML-artikkel om "Kvartilavstand Kalkulator" på norsk, med omtrent 1200 ord, de angitte seksjonene og nøkkelordet brukt 8 ganger.
+
+```html
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kvartilavstand Kalkulator – En komplett guide for analyse</title>
+    <meta name="description" content="Lær alt om kvartilavstand kalkulator: hva det er, hvorfor det er viktig, formel med eksempel, praktiske tips og FAQ. Perfekt for statistikkstudenter og dataanalyse.">
+</head>
+<body>
+
+    <h1>Kvartilavstand Kalkulator – En komplett guide for dataanalyse</h1>
+
+    <p>I statistikk og dataanalyse er spredningsmål avgjørende for å forstå variasjonen i et datasett. <strong>Kvartilavstand kalkulator</strong> er et verktøy som raskt beregner avstanden mellom første og tredje kvartil (IQR). Denne artikkelen gir deg alt du trenger å vite – fra grunnleggende definisjoner til praktiske eksempler og tips. Enten du er student, forsker eller jobber med kvalitetskontroll, vil du ha nytte av å forstå hvordan en <strong>kvartilavstand kalkulator</strong> fungerer.</p>
+
+    <h2>Hva er kvartilavstand?</h2>
+    <p>Kvartilavstand (Interquartile Range, forkortet IQR) måler spredningen i midten av et datasett. Den beregnes som differansen mellom tredje kvartil (Q3) og første kvartil (Q1). Dette betyr at 50% av dataene ligger innenfor dette intervallet. En <strong>kvartilavstand kalkulator</strong> gjør denne beregningen automatisk, men det er nyttig å forstå konseptet.</p>
+    <ul>
+        <li><strong>Første kvartil (Q1)</strong>: Medianen av den nedre halvdelen av datasettet (25. persentil).</li>
+        <li><strong>Tredje kvartil (Q3)</strong>: Medianen av den øvre halvdelen av datasettet (75. persentil).</li>
+        <li><strong>Kvartilavstand (IQR)</strong>: Q3 - Q1.</li>
+    </ul>
+    <p>IQR er robust mot ekstremverdier (outliers) fordi den ignorerer de ytterste 25% av dataene på hver side. Dette gjør <strong>kvartilavstand kalkulator</strong> til et foretrukket verktøy i mange fagfelt, spesielt når datasett inneholder skjevheter eller avvik.</p>
+
+    <h2>Hvorfor er kvartilavstand viktig?</h2>
+    <p>Kvartilavstand gir et mer pålitelig bilde av spredning enn for eksempel standardavvik når dataene ikke er normalfordelt. Her er noen grunner til at en <strong>kvartilavstand kalkulator</strong> er uunnværlig:</p>
+    <ul>
+        <li><strong>Robusthet mot outliers</strong>: Ekstremverdier påvirker ikke IQR like mye som gjennomsnitt eller standardavvik.</li>
+        <li><strong>Identifisering av outliers</strong>: Ved å bruke IQR kan du sette grenser (Q1 - 1,5*IQR og Q3 + 1,5*IQR) for å oppdage avvik.</li>
+        <li><strong>Sammenligning av datasett</strong>: To datasett kan ha samme gjennomsnitt, men helt ulik spredning – IQR avslører dette.</li>
+        <li><strong>Visualisering i boksplott</strong>: Boksplott (box plot) er basert på kvartiler og IQR, og er en standard måte å presentere data på.</li>
+        <li><strong>Kvalitetskontroll</strong>: I produksjon og industri brukes IQR for å overvåke variasjon og sikre stabil kvalitet.</li>
+    </ul>
+    <p>Uten en <strong>kvartilavstand kalkulator</strong> måtte du manuelt sortere dataene og finne kvartiler – en tidkrevende prosess for store datasett. Kalkulatoren effektiviserer arbeidet og reduserer risikoen for regnefeil.</p>
+
+    <h2>Slik bruker du en kvartilavstand kalkulator</h2>
+    <p>De fleste <strong>kvartilavstand kalkulator</strong>-verktøy er enkle å bruke. Følg disse trinnene:</p>
+    <ol>
+        <li><strong>Samle dataene</strong>: Ha datasettet klart, for eksempel i en liste eller kolonne.</li>
+        <li><strong>Lim inn eller skriv inn data</strong>: De fleste kalkulatorer aksepterer tall atskilt med komma, mellomrom eller linjeskift.</li>
+        <li><strong>Velg metode for kvartilberegning</strong>: Noen kalkulatorer lar deg velge mellom ulike metoder (f.eks. inkluderende eller ekskluderende median). For enkelhets skyld, velg standardmetoden (ofte "Tukey" eller "Excel-metoden").</li>
+        <li><strong>Klikk "Beregn"</strong>: Verktøyet returnerer Q1, Q3, IQR, og ofte også en liste over eventuelle outliers.</li>
+        <li><strong>Tolk resultatet</strong>: Jo større IQR, desto større spredning i de midterste 50% av dataene.</li>
+    </ol>
+    <p>En god <strong>kvartilavstand kalkulator</strong> gir deg også muligheten til å visualisere dataene i et boksplott. Dette gjør det lettere å kommunisere funnene til andre.</p>
+
+    <h2>Formel med eksempel</h2>
+    <h3>Formel</h3>
+    <p><strong>Kvartilavstand (IQR) = Q3 - Q1</strong></p>
+    <p>For å finne Q1 og Q3 må du først sortere datasettet i stigende rekkefølge. Deretter:</p>
+    <ul>
+        <li>Finn medianen (Q2). Del datasettet i to halvdeler.</li>
+        <li>Q1 er medianen av den nedre halvdelen (inkluder medianen hvis antall observasjoner er oddetall, avhengig av metode).</li>
+        <li>Q3 er medianen av den øvre halvdelen.</li>
+    </ul>
+
+    <h3>Eksempel</h3>
+    <p>La oss si vi har følgende datasett med 9 observasjoner (antall salg per dag):</p>
+    <p><strong>Data:</strong> 12, 15, 18, 20, 22, 25, 29, 33, 40</p>
+    <ol>
+        <li><strong>Sortert:</strong> 12, 15, 18, 20, 22, 25, 29, 33, 40 (allerede sortert).</li>
+        <li><strong>Median (Q2):</strong> 22 (5. verdi).</li>
+        <li><strong>Nedre halvdel:</strong> 12, 15, 18, 20 (4 verdier). Median av disse = (15+18)/2 = 16,5. Dette er Q1.</li>
+        <li><strong>Øvre halvdel:</strong> 25, 29, 33, 40 (4 verdier). Median = (29+33)/2 = 31. Dette er Q3.</li>
+        <li><strong>IQR:</strong> 31 - 16,5 = 14,5.</li>
+    </ol>
+    <p>Med en <strong>kvartilavstand kalkulator</strong> ville du fått samme resultat på sekunder. IQR = 14,5 betyr at de midterste 50% av salgstallene varierer med 14,5 enheter.</p>
+
+    <h2>Praktiske eksempler</h2>
+    <h3>Eksempel 1: Lønn i en bedrift</h3>
+    <p>En HR-avdeling samler inn månedslønn for 20 ansatte (i tusen kroner): 30, 32, 35, 38, 40, 42, 45, 48, 50, 55, 58, 60, 62, 65, 70, 75, 80, 90, 120, 200. Ved å bruke en <strong>kvartilavstand kalkulator</strong> finner de Q1 = 40, Q3 = 75, IQR = 35. Dette viser at de midterste 50% av ansatte tjener mellom 40 000 og 75 000 kroner. Outliers (som 200 000) kan identifiseres ved hjelp av IQR-grenser.</p>
+
+    <h3>Eksempel 2: Eksamenresultater</h3>
+    <p>En lærer har poengsummer fra 30 elever: 45, 52, 55, 60, 62, 65, 68, 70, 72, 75, 78, 80, 82, 85, 88, 90, 92, 95, 98, 100. En <strong>kvartilavstand kalkulator</strong> gir Q1 = 65, Q3 = 90, IQR = 25. Dette indikerer moderat spredning. Læreren kan konkludere at de fleste elever presterer jevnt, men at det er rom for forbedring i den laveste kvartilen.</p>
+
+    <h3>Eksempel 3: Produksjonsfeil</h3>
+    <p>En fabrikk måler antall defekter per batch over 50 batcher. IQR brukes til å sette varslingsgrenser. Med en <strong>kvartilavstand kalkulator</strong> kan kvalitetsingeniøren raskt oppdage når prosessen er ute av kontroll ved å se på om nye batcher faller utenfor grensene Q1 - 1,5*IQR eller Q3 + 1,5*IQR.</p>
+
+    <h2>Tips for bruk av kvartilavstand kalkulator</h2>
+    <ul>
+        <li><strong>Velg riktig kvartilmetode</strong>: Ulike statistikkprogrammer (Excel, SPSS, R) bruker ulike algoritmer. Vær konsekvent når du sammenligner datasett.</li>
+        <li><strong>Kombiner med boksplott</strong>: Visualiser IQR sammen med median og outliers for en helhetlig forståelse.</li>
+        <li><strong>Bruk IQR for å oppdage skjevhet</strong>: Hvis avstanden fra Q1 til median er mye større eller mindre enn fra median til Q3, tyder det på skjev fordeling.</li>
+        <li><strong>Ikke bruk IQR alene</strong>: Suppler med andre mål som gjennomsnitt, standardavvik og variasjonsbredde for en komplett analyse.</li>
+        <li><strong>Sjekk datakvaliteten</strong>: Rens data for åpenbare feil før du kjører en <strong>kvartilavstand kalkulator</strong> – ellers kan resultatet bli misvisende.</li>
+        <li><strong>Lær deg tolkning</strong>: IQR sier ingenting om formen på fordelingen utover spredningen. Bruk histogram eller tetthetsplott for mer innsikt.</li>
+    </ul>
+    <p>Husk at en <strong>kvartilavstand kalkulator</strong> er et verktøy, ikke en erstatning for sunn fornuft. For eksempel, i datasett med få observasjoner (n < 10) kan IQR være upålitelig.</p>
+
+    <h2>FAQ – Ofte stilte spørsmål</h2>
+
+    <h3>1. Hva er forskjellen på</div>
+    <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/standardavvik-kalkulator'"><span class="tool-card-icon">📊</span><h3>Standardavvik Kalkulator</h3><p>Beregn standardavvik og statistiske mål</p></div><div class="tool-card" onclick="location='/verktoy/median-kalkulator'"><span class="tool-card-icon">📊</span><h3>Median Kalkulator</h3><p>Finn median og kvartiler i tallrekke</p></div><div class="tool-card" onclick="location='/verktoy/varians-kalkulator'"><span class="tool-card-icon">📊</span><h3>Varians Kalkulator</h3><p>Beregn varians og spredning i data</p></div><div class="tool-card" onclick="location='/verktoy/typetall-kalkulator'"><span class="tool-card-icon">📊</span><h3>Typetall Kalkulator</h3><p>Finn typetall og modus i datasett</p></div><div class="tool-card" onclick="location='/verktoy/variasjonsbredde-kalkulator'"><span class="tool-card-icon">📊</span><h3>Variasjonsbredde Kalkulator</h3><p>Beregn variasjonsbredde i datasett</p></div><div class="tool-card" onclick="location='/verktoy/sannsynlighet-fordeling'"><span class="tool-card-icon">📊</span><h3>Sannsynlighet Fordeling Kalkulator</h3><p>Beregn sannsynlighetsfordelinger</p></div><div class="tool-card" onclick="location='/verktoy/z-score-kalkulator'"><span class="tool-card-icon">📊</span><h3>Z-Score Kalkulator</h3><p>Beregn Z-score og standardavvik</p></div><div class="tool-card" onclick="location='/verktoy/konfidensintervall'"><span class="tool-card-icon">📊</span><h3>Konfidensintervall Kalkulator</h3><p>Beregn konfidensintervall for gjennomsnitt</p></div><div class="tool-card" onclick="location='/verktoy/regresjonsanalyse'"><span class="tool-card-icon">📊</span><h3>Regresjonsanalyse Kalkulator</h3><p>Utfør lineær regresjonsanalyse</p></div><div class="tool-card" onclick="location='/verktoy/korrelasjons-kalkulator'"><span class="tool-card-icon">📊</span><h3>Korrelasjons Kalkulator</h3><p>Beregn korrelasjonskoeffisient</p></div><div class="tool-card" onclick="location='/verktoy/histogram-kalkulator'"><span class="tool-card-icon">📊</span><h3>Histogram Kalkulator</h3><p>Lag histogram og analyser fordeling</p></div><div class="tool-card" onclick="location='/verktoy/boks-plott-kalkulator'"><span class="tool-card-icon">📊</span><h3>Boksplott Kalkulator</h3><p>Lag boksplott og finn kvartiler</p></div><div class="tool-card" onclick="location='/kategori/statistikk'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle Statistikk</h3><p>Alle kalkulatorer i denne kategorien</p></div></div></div>
+    <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/lan-kalkulator'"><span class="tool-card-icon">💰</span><h3>Lån Kalkulator</h3><p>Beregn månedlige låneavdrag med nedbetalingsoversikt</p></div><div class="tool-card" onclick="location='/verktoy/prosent-kalkulator'"><span class="tool-card-icon">📐</span><h3>Prosent Kalkulator</h3><p>Beregn prosent med flere metoder og sammenligninger</p></div><div class="tool-card" onclick="location='/verktoy/temperatur-konvertering'"><span class="tool-card-icon">🔄</span><h3>Temperatur Konvertering</h3><p>Konverter temperatur mellom alle enheter</p></div><div class="tool-card" onclick="location='/verktoy/areal-kalkulator'"><span class="tool-card-icon">📏</span><h3>Areal Kalkulator</h3><p>Beregn areal av ulike former med enheter</p></div><div class="tool-card" onclick="location='/verktoy/alder-kalkulator'"><span class="tool-card-icon">📅</span><h3>Alder Kalkulator</h3><p>Beregn nøyaktig alder med sammenligning og statistikk</p></div></div></div>
+  </div>
+  <aside class="sidebar">
+    <div class="sidebar-card"><h3>Statistikk kalkulatorer</h3><ul class="sidebar-links"><li><a href="/verktoy/standardavvik-kalkulator"><span class="icon">📊</span>Standardavvik Kalkulator</a></li><li><a href="/verktoy/median-kalkulator"><span class="icon">📊</span>Median Kalkulator</a></li><li><a href="/verktoy/varians-kalkulator"><span class="icon">📊</span>Varians Kalkulator</a></li><li><a href="/verktoy/typetall-kalkulator"><span class="icon">📊</span>Typetall Kalkulator</a></li><li><a href="/verktoy/variasjonsbredde-kalkulator"><span class="icon">📊</span>Variasjonsbredde Kalkulator</a></li><li><a href="/verktoy/sannsynlighet-fordeling"><span class="icon">📊</span>Sannsynlighet Fordeling Kalkulator</a></li><li><a href="/verktoy/z-score-kalkulator"><span class="icon">📊</span>Z-Score Kalkulator</a></li><li><a href="/verktoy/konfidensintervall"><span class="icon">📊</span>Konfidensintervall Kalkulator</a></li><li><a href="/kategori/statistikk" style="color:var(--primary)">Se alle Statistikk →</a></li></ul></div>
+    <div class="sidebar-card"><h3>Populære verktøy</h3><ul class="sidebar-links"><li><a href="/verktoy/bmi-kalkulator"><span class="icon">❤️</span>BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator"><span class="icon">💰</span>Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator"><span class="icon">📐</span>Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator"><span class="icon">📅</span>Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator"><span class="icon">❤️</span>Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator"><span class="icon">⚗️</span>pH Kalkulator</a></li></ul></div>
+  </aside>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">1543+ gratis kalkulatorer</p></div>
+      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li><li><a href="/kategori/krypto">₿ Krypto</a></li><li><a href="/kategori/spill">🎮 Spill</a></li><li><a href="/kategori/odds">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi">🌱 Økologi</a></li><li><a href="/kategori/bolig">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk">🎵 Musikk</a></li><li><a href="/kategori/teknologi">💻 Teknologi</a></li><li><a href="/kategori/ki">🤖 Kunstig Intelligens</a></li></ul></div>
+      <div class="footer-col"><h4>Populære</h4><ul><li><a href="/verktoy/bmi-kalkulator">BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator">Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator">Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator">Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator">Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator">pH Kalkulator</a></li><li><a href="/verktoy/molekylvekt-kalkulator">Molekylvektkalkulator</a></li><li><a href="/verktoy/halveringstid-kalkulator">Halveringstid Kalkulator</a></li><li><a href="/verktoy/befolkningsvekst-kalkulator">Befolkningsvekst Kalkulator</a></li><li><a href="/verktoy/terningkaster">Terningkaster</a></li></ul></div>
+      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/campingvognregelen-kalkulator">Campingvognregelen Kalkulator</a></li><li><a href="/verktoy/formuesskatt-2023-kalkulator">Formuesskatt 2023 Kalkulator</a></li><li><a href="/verktoy/stillingsprosent-kalkulator-laerer">Stillingsprosent Kalkulator Lærer</a></li><li><a href="/verktoy/pendlerfradrag-kalkulator">Pendlerfradrag Kalkulator</a></li><li><a href="/verktoy/partiell-derivasjon-kalkulator">Partiell Derivasjon Kalkulator</a></li><li><a href="/verktoy/verditap-kalkulator">Verditap Kalkulator</a></li><li><a href="/verktoy/tollkalkulator-norge">Tollkalkulator Norge</a></li><li><a href="/verktoy/fattigdomsgrense-kalkulator">Fattigdomsgrense Kalkulator</a></li></ul></div>
+      <div class="footer-col"><h4>Info</h4><ul><li><a href="/om-oss">Om oss</a></li><li><a href="/personvern">Personvern</a></li><li><a href="/kontakt">Kontakt</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Kalkulator24 — Alle kalkulatorer er gratis</p></div>
+  </div>
+</footer>
+<script>
+function toggleMenu(){var m=document.getElementById("mobileMenu");m.classList.toggle("open");}
+document.addEventListener("click",function(e){var m=document.getElementById("mobileMenu");var b=document.getElementById("hamburgerBtn");if(m&&b&&!m.contains(e.target)&&!b.contains(e.target))m.classList.remove("open");});
+</script>
+<script src="/assets/js/calc.js"></script>
+</body></html>

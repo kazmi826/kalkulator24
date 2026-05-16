@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simpsons Regel Kalkulator — Gratis Online Kalkulator | Kalkulator24</title>
+  <meta name="description" content="Beregn tilnærmet integralverdi med Simpsons regel. Sammenlign med eksakt verdi og feilmargin. — Gratis kalkulator online">
+  <meta name="keywords" content="Simpsons regel, numerisk integrasjon, integral, tilnærming, matematikk, kalkulator, feilanalyse">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="Norwegian">
+  <meta name="google-site-verification" content="U-ZiCQHLID9ShjKIWBJI0Xi7xJDNrx9bwP4tRBEYzSQ">
+  <meta name="theme-color" content="#2563eb">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Simpsons Regel Kalkulator — Gratis Online Kalkulator | Kalkulator24">
+  <meta property="og:description" content="Beregn tilnærmet integralverdi med Simpsons regel. Sammenlign med eksakt verdi og feilmargin. — Gratis kalkulator online">
+  <meta property="og:url" content="https://kalkulator24.guru/verktoy/simpsons-regel-kalkulator">
+  <meta property="og:locale" content="nb_NO">
+  <link rel="canonical" href="https://kalkulator24.guru/verktoy/simpsons-regel-kalkulator">
+  <link rel="alternate" hreflang="nb" href="https://kalkulator24.guru/verktoy/simpsons-regel-kalkulator">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+</head>
+<body>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Simpsons Regel Kalkulator","description":"Beregn tilnærmet integralverdi med Simpsons regel. Sammenlign med eksakt verdi og feilmargin.","url":"https://kalkulator24.guru/verktoy/simpsons-regel-kalkulator","applicationCategory":"UtilityApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"NOK"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Hjem","item":"https://kalkulator24.guru"},{"@type":"ListItem","position":2,"name":"Matematikk","item":"https://kalkulator24.guru/kategori/matematikk"},{"@type":"ListItem","position":3,"name":"Simpsons Regel Kalkulator","item":"https://kalkulator24.guru/verktoy/simpsons-regel-kalkulator"}]}</script>
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="/" class="logo">Kalkulator24</a>
+    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="active">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li><li><a href="/kategori/odds" class="">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi" class="">🌱 Økologi</a></li><li><a href="/kategori/bolig" class="">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk" class="">🎵 Musikk</a></li><li><a href="/kategori/teknologi" class="">💻 Teknologi</a></li><li><a href="/kategori/ki" class="">🤖 Kunstig Intelligens</a></li></ul>
+    <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">☰</button>
+  </div>
+  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="active">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li><li><a href="/kategori/odds" class="">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi" class="">🌱 Økologi</a></li><li><a href="/kategori/bolig" class="">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk" class="">🎵 Musikk</a></li><li><a href="/kategori/teknologi" class="">💻 Teknologi</a></li><li><a href="/kategori/ki" class="">🤖 Kunstig Intelligens</a></li></ul></div>
+</nav>
+<div class="breadcrumb"><a href="/">Hjem</a><span class="sep">›</span><a href="/kategori/matematikk">Matematikk</a><span class="sep">›</span>Simpsons Regel Kalkulator</div>
+<div class="tool-hero"><div class="tool-badge">📐 Matematikk</div><h1>Simpsons Regel Kalkulator</h1><p class="subtitle">Beregn tilnærmet integralverdi med Simpsons regel. Sammenlign med eksakt verdi og feilmargin. — raskt og gratis</p></div>
+<div class="main-wrap">
+  <div class="main-content">
+    <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>Nedre grense (a)</label><div class="input-row"><input type="number" class="calc-input" data-field="a" placeholder="0"></div></div><div class="input-group"><label>Øvre grense (b)</label><div class="input-row"><input type="number" class="calc-input" data-field="b" placeholder="1"></div></div><div class="input-group"><label>Antall delintervaller (n, må være partall)</label><div class="input-row"><input type="number" class="calc-input" data-field="n" placeholder="10"></div></div><div class="input-group"><label>Funksjon</label><div class="input-row"><select class="calc-input" data-field="function_type"><option value="x^2">x^2</option><option value="sin(x)">sin(x)</option><option value="cos(x)">cos(x)</option><option value="e^x">e^x</option><option value="sqrt(x)">sqrt(x)</option><option value="1/x">1/x</option><option value="x^3">x^3</option><option value="ln(x)">ln(x)</option></select></div></div></div>    <button class="btn-calc" onclick="runCalculator('simpsons_rule')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
+    <div class="content-card"><h2>Simpsons Regel Kalkulator: En komplett guide til numerisk integrasjon</h2>
+
+<p>I matematikk og ingeniørfag støter man ofte på integraler som er vanskelige eller umulige å løse analytisk. Da kommer numeriske metoder til unnsetning, og en av de mest populære er Simpsons regel. En <strong>simpsons regel kalkulator</strong> gjør det enkelt å beregne tilnærmede verdier av bestemte integraler uten å måtte utføre kompliserte håndberegninger. Denne artikkelen gir deg alt du trenger å vite om verktøyet, fra teori til praktisk bruk.</p>
+
+<h2>Hva er Simpsons regel?</h2>
+
+<p>Simpsons regel er en numerisk integrasjonsmetode som brukes til å tilnærme verdien av et bestemt integral. Metoden ble utviklet av den britiske matematikeren Thomas Simpson på 1700-tallet og er kjent for å være mer nøyaktig enn enklere metoder som rektangelmetoden og trapesmetoden.</p>
+
+<p>I stedet for å tilnærme arealet under en kurve med rektangler eller trapeser, bruker Simpsons regel parabler (andregradspolynomer) til å tilnærme funksjonen over små intervaller. Dette gir en mye bedre tilpasning til kurver som ikke er lineære. En <strong>simpsons regel kalkulator</strong> automatiserer denne prosessen og lar deg fokusere på resultatene i stedet for de repetitive beregningene.</p>
+
+<p>Metoden krever at integrasjonsintervallet deles inn i et jevnt antall delintervaller (n må være et partall). For hvert par av delintervaller tilpasses en parabel, og arealet under parabelen beregnes. Summen av alle disse arealene gir en tilnærming til det opprinnelige integralet.</p>
+
+<h2>Hvorfor er Simpsons regel viktig?</h2>
+
+<p>Numerisk integrasjon er uunnværlig i mange fagfelt. Her er noen grunner til at Simpsons regel og en <strong>simpsons regel kalkulator</strong> er viktige verktøy:</p>
+
+<ul>
+  <li><strong>Høy nøyaktighet:</strong> For funksjoner som er glatte og kontinuerlige, gir Simpsons regel ofte svært nøyaktige resultater, selv med et relativt lavt antall delintervaller. Feilen avtar med fjerde potens av steglengden.</li>
+  <li><strong>Håndterer komplekse funksjoner:</strong> Mange integraler i fysikk, statistikk og ingeniørfag har ingen analytisk løsning. Simpsons regel gir en praktisk måte å finne en tilnærmet verdi på.</li>
+  <li><strong>Effektivitet:</strong> Sammenlignet med andre metoder som trapesmetoden, krever Simpsons regel færre delintervaller for å oppnå samme nøyaktighet. Dette sparer tid og datakraft.</li>
+  <li><strong>Anvendelighet:</strong> Metoden brukes i alt fra beregning av sannsynligheter i statistikk til å bestemme arealer, volumer og tyngdepunkter i fysikk og ingeniørfag.</li>
+</ul>
+
+<p>En <strong>simpsons regel kalkulator</strong> gjør denne kraftfulle metoden tilgjengelig for alle, uansett matematisk bakgrunn. Du trenger ikke å huske formelen eller utføre tidkrevende beregninger – bare skriv inn funksjonen og grensene, så får du svaret.</p>
+
+<h2>Slik bruker du en Simpsons regel kalkulator</h2>
+
+<p>Å bruke en <strong>simpsons regel kalkulator</strong> er enkelt og krever bare noen få trinn. De fleste kalkulatorer følger samme logikk:</p>
+
+<ol>
+  <li><strong>Angi funksjonen:</strong> Skriv inn den matematiske funksjonen du vil integrere. For eksempel: x^2, sin(x), e^x, eller ln(x). De fleste kalkulatorer støtter standard matematisk notasjon.</li>
+  <li><strong>Angi integrasjonsgrensene:</strong> Oppgi nedre grense (a) og øvre grense (b) for integralet.</li>
+  <li><strong>Velg antall delintervaller (n):</strong> Dette er antall underinndelinger av intervallet. Husk at n må være et partall. Jo høyere n, desto mer nøyaktig blir resultatet, men beregningene tar lengre tid.</li>
+  <li><strong>Beregn:</strong> Klikk på "Beregn" eller tilsvarende knapp. Kalkulatoren utfører Simpsons regel og viser den tilnærmede verdien av integralet.</li>
+  <li><strong>Analyser resultatet:</strong> Noen kalkulatorer viser også en feilestimering eller mellomregninger. Dette kan være nyttig for å vurdere nøyaktigheten.</li>
+</ol>
+
+<p>Mange nettbaserte <strong>simpsons regel kalkulatorer</strong> tilbyr også grafisk fremstilling av funksjonen og parabeltilpasningen, noe som gir en visuell forståelse av metoden.</p>
+
+<h2>Formel med eksempel</h2>
+
+<p>Simpsons regel formel er:</p>
+
+<p><strong>∫<sub>a</sub><sup>b</sup> f(x) dx ≈ (Δx/3) [f(x₀) + 4f(x₁) + 2f(x₂) + 4f(x₃) + ... + 2f(x<sub>n-2</sub>) + 4f(x<sub>n-1</sub>) + f(x<sub>n</sub>)]</strong></p>
+
+<p>hvor:</p>
+<ul>
+  <li>Δx = (b - a) / n (steglengden)</li>
+  <li>n er et partall (antall delintervaller)</li>
+  <li>x<sub>i</sub> = a + i·Δx for i = 0, 1, 2, ..., n</li>
+  <li>Koeffisientene følger mønsteret: 1, 4, 2, 4, 2, ..., 4, 1</li>
+</ul>
+
+<p><strong>Eksempel:</strong> Beregn ∫<sub>0</sub><sup>2</sup> x² dx ved hjelp av Simpsons regel med n = 4.</p>
+
+<p>Løsning:</p>
+<ul>
+  <li>a = 0, b = 2, n = 4 → Δx = (2 - 0)/4 = 0.5</li>
+  <li>x₀ = 0, x₁ = 0.5, x₂ = 1.0, x₃ = 1.5, x₄ = 2.0</li>
+  <li>f(x) = x² → f(0) = 0, f(0.5) = 0.25, f(1) = 1, f(1.5) = 2.25, f(2) = 4</li>
+  <li>Bruk formelen: (0.5/3) [0 + 4(0.25) + 2(1) + 4(2.25) + 4] = (0.1667) [0 + 1 + 2 + 9 + 4] = 0.1667 × 16 = 2.6667</li>
+</ul>
+
+<p>Den eksakte verdien av integralet er 2.6667, så Simpsons regel gir et perfekt resultat for denne andregradsfunksjonen. En <strong>simpsons regel kalkulator</strong> ville gitt samme svar umiddelbart.</p>
+
+<h2>Praktiske eksempler</h2>
+
+<p>Her er noen praktiske situasjoner der en <strong>simpsons regel kalkulator</strong> kommer til nytte:</p>
+
+<h3>Eksempel 1: Beregning av areal under en sannsynlighetstetthet</h3>
+<p>I statistikk må man ofte beregne sannsynligheter for normalfordelingen. Integralet av normalfordelingens tetthetsfunksjon har ingen analytisk løsning. Ved å bruke Simpsons regel kan du finne arealet under kurven mellom to punkter, for eksempel P(0 &lt; Z &lt; 1.5). Med en <strong>simpsons regel kalkulator</strong> skriver du inn funksjonen (1/√(2π))·e<sup>-x²/2</sup>, setter grensene 0 og 1.5, og velger n = 10. Resultatet blir en god tilnærming til sannsynligheten.</p>
+
+<h3>Eksempel 2: Fysikk – arbeid utført av en variabel kraft</h3>
+<p>I fysikk beregnes arbeid som integralet av kraft over avstand. Hvis kraften varierer på en komplisert måte, for eksempel F(x) = 5·sin(x) + 3x, og du vil finne arbeidet fra x = 1 til x = 4, kan du bruke Simpsons regel. En <strong>simpsons regel kalkulator</strong> gir deg raskt en tilnærmet verdi, slik at du kan fokusere på fysikken i stedet for matematikken.</p>
+
+<h3>Eksempel 3: Ingeniørfag – volum av et ujevnt objekt</h3>
+<p>Ved å integrere tverrsnittsarealet langs en akse kan man finne volumet av et objekt. For objekter med komplekse former, som en skipspropell eller en flyvinge, er Simpsons regel en standard metode. En <strong>simpsons regel kalkulator</strong> gjør det mulig å legge inn målte arealer ved forskjellige posisjoner og få et nøyaktig volumestimat.</p>
+
+<h2>Tips for bruk av Simpsons regel kalkulator</h2>
+
+<ul>
+  <li><strong>Velg riktig antall delintervaller:</strong> Start med et moderat antall (f.eks. n = 10) og øk gradvis. Hvis resultatet stabiliserer seg, har du sannsynligvis en god tilnærming. For svært svingende funksjoner kan det være nødvendig med høyere n.</li>
+  <li><strong>Sjekk at n er et partall:</strong> De fleste <strong>simpsons regel kalkulatorer</strong> vil gi en feilmelding hvis n er oddetall. Hvis du må bruke et oddetall, vurder trapesmetoden i stedet.</li>
+  <li><strong>Sammenlign med andre metoder:</strong> For å være sikker på nøyaktigheten, kan du sammenligne resultatet med trapesmetoden eller en annen numerisk metode. Hvis de gir svært like svar, er tilnærmingen trolig god.</li>
+  <li><strong>Bruk for kontinuerlige funksjoner:</strong> Simpsons regel fungerer best for funksjoner som er glatte og kontinuerlige i intervallet. Hvis funksjonen har diskontinuiteter eller brå endringer, bør du dele intervallet ved disse punktene.</li>
+  <li><strong>Utnytt grafisk fremstilling:</strong> Mange kalkulatorer viser grafen til funksjonen og parabeltilpasningen. Dette kan hjelpe deg å forstå hvorfor resultatet blir som det blir, og om du bør justere n.</li>
+  <li><strong>Husk feilestimering:</strong> Den teoretiske feilen for Simpsons regel er proporsjonal med (b-a)⁵·f⁽⁴⁾(ξ)/n⁴ for en eller annen ξ i intervallet. Hvis du kjenner den fjerdederiverte, kan du estimere feilen.</li>
+</ul>
+
+<h2>FAQ – Ofte stilte spørsmål om Simps</div>
+    <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/prosent-kalkulator'"><span class="tool-card-icon">📐</span><h3>Prosent Kalkulator</h3><p>Beregn prosent med flere metoder og sammenligninger</p></div><div class="tool-card" onclick="location='/verktoy/kvadratrot-kalkulator'"><span class="tool-card-icon">📐</span><h3>Kvadratrot Kalkulator</h3><p>Beregn kvadratroter og andre røtter</p></div><div class="tool-card" onclick="location='/verktoy/potens-kalkulator'"><span class="tool-card-icon">📐</span><h3>Potens Kalkulator</h3><p>Beregn potens av tall med store eksponenter</p></div><div class="tool-card" onclick="location='/verktoy/brøk-kalkulator'"><span class="tool-card-icon">📐</span><h3>Brøk Kalkulator</h3><p>Beregn med brøker og forenkle resultater</p></div><div class="tool-card" onclick="location='/verktoy/gjennomsnitt-kalkulator'"><span class="tool-card-icon">📐</span><h3>Gjennomsnitt Kalkulator</h3><p>Beregn gjennomsnitt og statistiske mål</p></div><div class="tool-card" onclick="location='/verktoy/logaritme-kalkulator'"><span class="tool-card-icon">📐</span><h3>Logaritme Kalkulator</h3><p>Beregn logaritmer og eksponentialfunksjoner</p></div><div class="tool-card" onclick="location='/verktoy/primtall-kalkulator'"><span class="tool-card-icon">📐</span><h3>Primtall Kalkulator</h3><p>Finn primtall og faktoriser tall</p></div><div class="tool-card" onclick="location='/verktoy/fakultet-kalkulator'"><span class="tool-card-icon">📐</span><h3>Fakultet Kalkulator</h3><p>Beregn fakultet av tall</p></div><div class="tool-card" onclick="location='/verktoy/kombinasjon-kalkulator'"><span class="tool-card-icon">📐</span><h3>Kombinasjon Kalkulator</h3><p>Beregn antall kombinasjoner</p></div><div class="tool-card" onclick="location='/verktoy/permutasjon-kalkulator'"><span class="tool-card-icon">📐</span><h3>Permutasjon Kalkulator</h3><p>Beregn antall permutasjoner</p></div><div class="tool-card" onclick="location='/verktoy/gcd-kalkulator'"><span class="tool-card-icon">📐</span><h3>Største Felles Divisor Kalkulator</h3><p>Finn største felles divisor (SFD)</p></div><div class="tool-card" onclick="location='/verktoy/lcm-kalkulator'"><span class="tool-card-icon">📐</span><h3>Minste Felles Multiplum Kalkulator</h3><p>Finn minste felles multiplum (MFM)</p></div><div class="tool-card" onclick="location='/kategori/matematikk'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle Matematikk</h3><p>Alle kalkulatorer i denne kategorien</p></div></div></div>
+    <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/lan-kalkulator'"><span class="tool-card-icon">💰</span><h3>Lån Kalkulator</h3><p>Beregn månedlige låneavdrag med nedbetalingsoversikt</p></div><div class="tool-card" onclick="location='/verktoy/temperatur-konvertering'"><span class="tool-card-icon">🔄</span><h3>Temperatur Konvertering</h3><p>Konverter temperatur mellom alle enheter</p></div><div class="tool-card" onclick="location='/verktoy/areal-kalkulator'"><span class="tool-card-icon">📏</span><h3>Areal Kalkulator</h3><p>Beregn areal av ulike former med enheter</p></div><div class="tool-card" onclick="location='/verktoy/alder-kalkulator'"><span class="tool-card-icon">📅</span><h3>Alder Kalkulator</h3><p>Beregn nøyaktig alder med sammenligning og statistikk</p></div><div class="tool-card" onclick="location='/verktoy/fart-kalkulator'"><span class="tool-card-icon">⚡</span><h3>Fart Kalkulator</h3><p>Beregn fart, distanse og tid med enhetskonvertering og drivstoffestimat</p></div></div></div>
+  </div>
+  <aside class="sidebar">
+    <div class="sidebar-card"><h3>Matematikk kalkulatorer</h3><ul class="sidebar-links"><li><a href="/verktoy/prosent-kalkulator"><span class="icon">📐</span>Prosent Kalkulator</a></li><li><a href="/verktoy/kvadratrot-kalkulator"><span class="icon">📐</span>Kvadratrot Kalkulator</a></li><li><a href="/verktoy/potens-kalkulator"><span class="icon">📐</span>Potens Kalkulator</a></li><li><a href="/verktoy/brøk-kalkulator"><span class="icon">📐</span>Brøk Kalkulator</a></li><li><a href="/verktoy/gjennomsnitt-kalkulator"><span class="icon">📐</span>Gjennomsnitt Kalkulator</a></li><li><a href="/verktoy/logaritme-kalkulator"><span class="icon">📐</span>Logaritme Kalkulator</a></li><li><a href="/verktoy/primtall-kalkulator"><span class="icon">📐</span>Primtall Kalkulator</a></li><li><a href="/verktoy/fakultet-kalkulator"><span class="icon">📐</span>Fakultet Kalkulator</a></li><li><a href="/kategori/matematikk" style="color:var(--primary)">Se alle Matematikk →</a></li></ul></div>
+    <div class="sidebar-card"><h3>Populære verktøy</h3><ul class="sidebar-links"><li><a href="/verktoy/bmi-kalkulator"><span class="icon">❤️</span>BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator"><span class="icon">💰</span>Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator"><span class="icon">📐</span>Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator"><span class="icon">📅</span>Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator"><span class="icon">❤️</span>Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator"><span class="icon">⚗️</span>pH Kalkulator</a></li></ul></div>
+  </aside>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">1543+ gratis kalkulatorer</p></div>
+      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li><li><a href="/kategori/krypto">₿ Krypto</a></li><li><a href="/kategori/spill">🎮 Spill</a></li><li><a href="/kategori/odds">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi">🌱 Økologi</a></li><li><a href="/kategori/bolig">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk">🎵 Musikk</a></li><li><a href="/kategori/teknologi">💻 Teknologi</a></li><li><a href="/kategori/ki">🤖 Kunstig Intelligens</a></li></ul></div>
+      <div class="footer-col"><h4>Populære</h4><ul><li><a href="/verktoy/bmi-kalkulator">BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator">Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator">Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator">Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator">Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator">pH Kalkulator</a></li><li><a href="/verktoy/molekylvekt-kalkulator">Molekylvektkalkulator</a></li><li><a href="/verktoy/halveringstid-kalkulator">Halveringstid Kalkulator</a></li><li><a href="/verktoy/befolkningsvekst-kalkulator">Befolkningsvekst Kalkulator</a></li><li><a href="/verktoy/terningkaster">Terningkaster</a></li></ul></div>
+      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/campingvognregelen-kalkulator">Campingvognregelen Kalkulator</a></li><li><a href="/verktoy/formuesskatt-2023-kalkulator">Formuesskatt 2023 Kalkulator</a></li><li><a href="/verktoy/stillingsprosent-kalkulator-laerer">Stillingsprosent Kalkulator Lærer</a></li><li><a href="/verktoy/pendlerfradrag-kalkulator">Pendlerfradrag Kalkulator</a></li><li><a href="/verktoy/partiell-derivasjon-kalkulator">Partiell Derivasjon Kalkulator</a></li><li><a href="/verktoy/verditap-kalkulator">Verditap Kalkulator</a></li><li><a href="/verktoy/tollkalkulator-norge">Tollkalkulator Norge</a></li><li><a href="/verktoy/fattigdomsgrense-kalkulator">Fattigdomsgrense Kalkulator</a></li></ul></div>
+      <div class="footer-col"><h4>Info</h4><ul><li><a href="/om-oss">Om oss</a></li><li><a href="/personvern">Personvern</a></li><li><a href="/kontakt">Kontakt</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Kalkulator24 — Alle kalkulatorer er gratis</p></div>
+  </div>
+</footer>
+<script>
+function toggleMenu(){var m=document.getElementById("mobileMenu");m.classList.toggle("open");}
+document.addEventListener("click",function(e){var m=document.getElementById("mobileMenu");var b=document.getElementById("hamburgerBtn");if(m&&b&&!m.contains(e.target)&&!b.contains(e.target))m.classList.remove("open");});
+</script>
+<script src="/assets/js/calc.js"></script>
+</body></html>

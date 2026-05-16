@@ -1,0 +1,155 @@
+```html
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bompenger Kalkulator – Spar penger med riktig rute</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 820px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            color: #1e293b;
+            background: #f8fafc;
+        }
+        h2 {
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 0.3rem;
+            margin-top: 2.5rem;
+            color: #0f172a;
+        }
+        h3 {
+            margin-top: 1.8rem;
+            color: #1e293b;
+        }
+        p {
+            margin: 1rem 0;
+        }
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 1.8rem;
+        }
+        li {
+            margin-bottom: 0.4rem;
+        }
+        strong {
+            color: #0f172a;
+        }
+        .example-box {
+            background: #ffffff;
+            border-left: 6px solid #2563eb;
+            padding: 1.2rem 1.5rem;
+            margin: 1.8rem 0;
+            border-radius: 0 12px 12px 0;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        }
+        .faq-item {
+            background: #ffffff;
+            padding: 1rem 1.5rem;
+            margin: 1rem 0;
+            border-radius: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        .faq-item h3 {
+            margin-top: 0;
+        }
+        .tip-list {
+            background: #f1f5f9;
+            padding: 1.2rem 1.8rem;
+            border-radius: 20px;
+        }
+        .highlight {
+            background: #dbeafe;
+            padding: 0.1rem 0.3rem;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+        hr {
+            margin: 2rem 0;
+            border: 0;
+            height: 1px;
+            background: #cbd5e1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Introduksjon -->
+    <h2>Hva er en bompenger kalkulator?</h2>
+    <p>En <strong>bompenger kalkulator</strong> er et digitalt verktøy som beregner hvor mye du må betale i bompenger for en gitt kjørestrekning. Kalkulatoren tar hensyn til takstgrupper (lett/kjøretøy, elbil, hybrid, diesel), antall passeringer, tidspunkt (rush/minstrafikk) og eventuelle rabattordninger som AutoPASS eller tidsbaserte avtaler. I Norge finnes det flere titalls bomstasjoner, og prisene varierer kraftig – en <strong>bompenger kalkulator</strong> gir deg kontroll over kostnadene før du setter deg bak rattet.</p>
+    <p>Mange forveksler bompenger med drivstoffkostnader, men bomutgifter kan utgjøre en overraskende stor del av den totale reisekostnaden, spesielt for pendlere i og rundt storbyene. En pålitelig <strong>bompenger kalkulator</strong> hjelper deg å planlegge ruten og unngå ubehagelige overraskelser på fakturaen.</p>
+
+    <!-- Hvorfor viktig -->
+    <h2>Hvorfor er en bompenger kalkulator viktig?</h2>
+    <p>Bompenger har blitt en betydelig utgiftspost for norske bilister. Ifølge Opplysningsrådet for veitrafikken bruker en gjennomsnittspendler i Oslo-området flere tusen kroner i måneden bare på bompasseringer. En <strong>bompenger kalkulator</strong> gir deg muligheten til å:</p>
+    <ul>
+        <li><strong>Budsjettere presist</strong> – du vet nøyaktig hva reisen koster før du drar.</li>
+        <li><strong>Sammenligne ruter</strong> – finn den billigste veien, selv om den er litt lengre.</li>
+        <li><strong>Vurdere elbil vs. fossilbil</strong> – elbiler har ofte rabatt eller lavere takst i bomringen.</li>
+        <li><strong>Unngå bøter</strong> – ved å planlegge betaling eller velge riktig brikkeavtale.</li>
+        <li><strong>Redusere stress</strong> – ingen overraskelser når regningen kommer fra AutoPASS.</li>
+    </ul>
+    <p>Uten en <strong>bompenger kalkulator</strong> risikerer du å betale mer enn nødvendig, spesielt hvis du kjører gjennom flere bomstasjoner på én tur. Verktøyet er like viktig for yrkessjåfører som for familien på vei til hytta.</p>
+
+    <!-- Slik bruker du -->
+    <h2>Slik bruker du en bompenger kalkulator</h2>
+    <p>De fleste <strong>bompenger kalkulator</strong>-tjenester er nettbaserte og svært brukervennlige. Slik går du frem:</p>
+    <ul>
+        <li><strong>Velg start- og sluttpunkt</strong> – skriv inn adresser eller bydeler. Kalkulatoren finner aktuelle bomstasjoner underveis.</li>
+        <li><strong>Angi kjøretøytype</strong> – elbil, hybrid, diesel, bensin, varebil eller lastebil. Takstene varierer.</li>
+        <li><strong>Velg tidspunkt</strong> – rushtid (06:00–09:00 og 15:00–18:00) er dyrere i de fleste bomringer.</li>
+        <li><strong>Legg til antall passeringer</strong> – for pendlere: ukedager i måneden × 2 (tur/retur).</li>
+        <li><strong>Klikk på "Beregn"</strong> – resultatet viser total bomkostnad per tur, dag, uke eller måned.</li>
+    </ul>
+    <p>Noen avanserte kalkulatorer lar deg også legge inn rabattavtaler (f.eks. 20 % rabatt med AutoPASS-avtale) eller ferjeforbindelser. Test alltid kalkulatoren med kjente ruter for å sjekke nøyaktigheten.</p>
+
+    <!-- Formel med eksempel -->
+    <h2>Formel med eksempel – slik regner kalkulatoren</h2>
+    <p>En <strong>bompenger kalkulator</strong> bygger på en enkel formel, men med mange variabler:</p>
+    <div class="example-box">
+        <p><strong>Total bomkostnad = Σ (takst per stasjon × antall passeringer × tidsfaktor) – eventuell rabatt</strong></p>
+    </div>
+    <p><strong>Eksempel:</strong> Du kjører dieselbil fra Lillestrøm til Oslo sentrum i rushtiden. Ruten har 3 bomstasjoner: A, B og C.</p>
+    <ul>
+        <li>Stasjon A: 26 kr (rushtid) × 1 passering = 26 kr</li>
+        <li>Stasjon B: 32 kr (rushtid) × 1 passering = 32 kr</li>
+        <li>Stasjon C: 18 kr (rushtid) × 1 passering = 18 kr</li>
+        <li>Sum før rabatt: 76 kr. Med AutoPASS-avtale (20 % rabatt): 76 × 0,8 = <strong>60,8 kr</strong>.</li>
+    </ul>
+    <p>Hvis du pendler 22 dager i måneden (tur/retur): 60,8 kr × 44 turer = <strong>2.675 kr</strong> i måneden. En god <strong>bompenger kalkulator</strong> gjør denne utregningen automatisk og viser deg også alternativer som å kjøre utenom rushtiden for å spare penger.</p>
+
+    <!-- Praktiske eksempler -->
+    <h2>Praktiske eksempler på bruk</h2>
+    <h3>Pendler i Oslo-området</h3>
+    <p>Marte kjører hver dag fra Ski til Oslo sentrum. Uten kalkulator trodde hun bomutgiftene var ca. 1.500 kr/mnd. Etter å ha brukt en <strong>bompenger kalkulator</strong> oppdaget hun at riktig sum var 2.340 kr, fordi hun passerte to ekstra bomstasjoner på grunn av veiarbeid. Hun endret rute og sparte 680 kr per måned.</p>
+    <h3>Familietur til Bergen</h3>
+    <p>Familien Pedersen skulle kjøre fra Stavanger til Bergen. De la inn start og mål i en <strong>bompenger kalkulator</strong> og fikk opp 8 bomstasjoner til totalt 412 kr. Ved å velge en alternativ fergeforbindelse og unngå rushtid i Bergen sentrum, reduserte de kostnaden til 289 kr – en besparelse på 30 %.</p>
+    <h3>Elbil vs. diesel – hva lønner seg?</h3>
+    <p>Ola vurderte å bytte til elbil. Med en <strong>bompenger kalkulator</strong> sammenlignet han dieselbilens bomkostnad (2.100 kr/mnd) med elbilens (450 kr/mnd, med 50 % rabatt i bomringen). Besparelsen på bom alene var 1.650 kr/mnd, noe som gjorde elbil-lån mye mer overkommelig.</p>
+
+    <!-- Tips -->
+    <h2>Tips for å få mest ut av bompenger kalkulatoren</h2>
+    <div class="tip-list">
+        <ul>
+            <li><strong>Oppdater alltid takstene</strong> – bompengesatser endres ofte (1. januar og 1. juli). Sjekk at kalkulatoren bruker gjeldende priser.</li>
+            <li><strong>Bruk offisielle kilder</strong> – AutoPASS, Statens vegvesen eller pålitelige tredjeparter som Bompenger.no.</li>
+            <li><strong>Legg inn riktig kjøretøytype</strong> – elbil, hybrid og hydrogenbil har egne takster. Feil valg gir feil resultat.</li>
+            <li><strong>Test flere tidspunkter</strong> – en avreise 15 minutter tidligere kan redusere kostnaden med 20–40 % i rushtidssoner.</li>
+            <li><strong>Kombiner med ruteplanlegger</strong> – bruk Google Maps eller Waze sammen med <strong>bompenger kalkulator</strong> for å finne den optimale kombinasjonen av tid og penger.</li>
+            <li><strong>Husk rabattavtaler</strong> – AutoPASS-avtale med brikke gir ofte 10–20 % rabatt. Kalkulatoren bør ha et felt for dette.</li>
+        </ul>
+    </div>
+
+    <!-- FAQ -->
+    <h2>Ofte stilte spørsmål (FAQ)</h2>
+
+    <div class="faq-item">
+        <h3>1. Hvor nøyaktig er en bompenger kalkulator?</h3>
+        <p>De fleste kalkulatorer er nøyaktige innenfor ±5 %, forutsatt at du legger inn riktig kjøretøy og tidspunkt. Vær oppmerksom på at nye bomstasjoner kan komme, og at satser justeres. Bruk alltid en oppdatert <strong>bompenger kalkulator</strong> fra en pålitelig kilde.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>2. Kan jeg bruke kalkulatoren for hele

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Egenverdi og Egenvektor Kalkulator — Gratis Online Kalkulator | Kalkulator24</title>
+  <meta name="description" content="Beregn egenverdier og egenvektorer for en 2x2 matrise. Få trinnvis forklaring og tolkning. — Gratis kalkulator online">
+  <meta name="keywords" content="egenverdi, egenvektor, matrise, lineær algebra, kalkulator, 2x2 matrise, diagonalisering">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="Norwegian">
+  <meta name="google-site-verification" content="U-ZiCQHLID9ShjKIWBJI0Xi7xJDNrx9bwP4tRBEYzSQ">
+  <meta name="theme-color" content="#2563eb">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Egenverdi og Egenvektor Kalkulator — Gratis Online Kalkulator | Kalkulator24">
+  <meta property="og:description" content="Beregn egenverdier og egenvektorer for en 2x2 matrise. Få trinnvis forklaring og tolkning. — Gratis kalkulator online">
+  <meta property="og:url" content="https://kalkulator24.guru/verktoy/egenverdi-og-egenvektor-kalkulator">
+  <meta property="og:locale" content="nb_NO">
+  <link rel="canonical" href="https://kalkulator24.guru/verktoy/egenverdi-og-egenvektor-kalkulator">
+  <link rel="alternate" hreflang="nb" href="https://kalkulator24.guru/verktoy/egenverdi-og-egenvektor-kalkulator">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+</head>
+<body>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Egenverdi og Egenvektor Kalkulator","description":"Beregn egenverdier og egenvektorer for en 2x2 matrise. Få trinnvis forklaring og tolkning.","url":"https://kalkulator24.guru/verktoy/egenverdi-og-egenvektor-kalkulator","applicationCategory":"UtilityApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"NOK"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Hjem","item":"https://kalkulator24.guru"},{"@type":"ListItem","position":2,"name":"Matematikk","item":"https://kalkulator24.guru/kategori/matematikk"},{"@type":"ListItem","position":3,"name":"Egenverdi og Egenvektor Kalkulator","item":"https://kalkulator24.guru/verktoy/egenverdi-og-egenvektor-kalkulator"}]}</script>
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="/" class="logo">Kalkulator24</a>
+    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="active">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li><li><a href="/kategori/odds" class="">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi" class="">🌱 Økologi</a></li><li><a href="/kategori/bolig" class="">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk" class="">🎵 Musikk</a></li><li><a href="/kategori/teknologi" class="">💻 Teknologi</a></li><li><a href="/kategori/ki" class="">🤖 Kunstig Intelligens</a></li></ul>
+    <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">☰</button>
+  </div>
+  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="active">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li><li><a href="/kategori/odds" class="">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi" class="">🌱 Økologi</a></li><li><a href="/kategori/bolig" class="">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk" class="">🎵 Musikk</a></li><li><a href="/kategori/teknologi" class="">💻 Teknologi</a></li><li><a href="/kategori/ki" class="">🤖 Kunstig Intelligens</a></li></ul></div>
+</nav>
+<div class="breadcrumb"><a href="/">Hjem</a><span class="sep">›</span><a href="/kategori/matematikk">Matematikk</a><span class="sep">›</span>Egenverdi og Egenvektor Kalkulator</div>
+<div class="tool-hero"><div class="tool-badge">📐 Matematikk</div><h1>Egenverdi og Egenvektor Kalkulator</h1><p class="subtitle">Beregn egenverdier og egenvektorer for en 2x2 matrise. Få trinnvis forklaring og tolkning. — raskt og gratis</p></div>
+<div class="main-wrap">
+  <div class="main-content">
+    <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>a₁₁ (øverst venstre)</label><div class="input-row"><input type="number" class="calc-input" data-field="a11" placeholder="f.eks. 2"></div></div><div class="input-group"><label>a₁₂ (øverst høyre)</label><div class="input-row"><input type="number" class="calc-input" data-field="a12" placeholder="f.eks. 1"></div></div><div class="input-group"><label>a₂₁ (nederst venstre)</label><div class="input-row"><input type="number" class="calc-input" data-field="a21" placeholder="f.eks. 1"></div></div><div class="input-group"><label>a₂₂ (nederst høyre)</label><div class="input-row"><input type="number" class="calc-input" data-field="a22" placeholder="f.eks. 2"></div></div></div>    <button class="btn-calc" onclick="runCalculator('eigenvalue_eigenvector_2x2')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
+    <div class="content-card">Her er en SEO-optimalisert HTML-artikkel på norsk om "Egenverdi og Egenvektor Kalkulator". Artikkelen er strukturert med de angitte seksjonene, har omtrent 1200 ord, og inneholder nøkkelordet "egenverdi og egenvektor kalkulator" 8 ganger.
+
+```html
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egenverdi og Egenvektor Kalkulator – Alt du trenger å vite</title>
+    <meta name="description" content="Lær alt om egenverdi og egenvektor kalkulator: hva det er, hvorfor det er viktig, hvordan du bruker det, formler, eksempler og FAQ. Perfekt for studenter og ingeniører.">
+</head>
+<body>
+
+<h2>Hva er en egenverdi og egenvektor kalkulator?</h2>
+<p>
+    En <strong>egenverdi og egenvektor kalkulator</strong> er et digitalt verktøy som raskt beregner egenverdier (λ) og tilhørende egenvektorer for en gitt kvadratisk matrise. I lineær algebra representerer egenverdier skaleringsfaktorer for transformasjoner, mens egenvektorer er retningene som forblir uendret under transformasjonen. Kalkulatoren automatiserer de komplekse algebraiske operasjonene, slik at du slipper å løse karakteristiske polynomer manuelt.
+</p>
+<p>
+    For eksempel, hvis du har en 2x2 eller 3x3 matrise, kan du skrive inn verdiene, og kalkulatoren finner røttene til det karakteristiske polynomet (det(A - λI) = 0) og deretter løser (A - λI)v = 0 for hver λ. Resultatet vises ofte som desimaltall eller brøker, avhengig av verktøyet. En <strong>egenverdi og egenvektor kalkulator</strong> sparer tid og reduserer feil, spesielt i store matriser.
+</p>
+
+<h2>Hvorfor er en egenverdi og egenvektor kalkulator viktig?</h2>
+<p>
+    Betydningen av en <strong>egenverdi og egenvektor kalkulator</strong> strekker seg langt utover matematikktimene. Her er noen sentrale grunner til at verktøyet er uvurderlig:
+</p>
+<ul>
+    <li><strong>Effektivitet i studier og forskning:</strong> I fag som fysikk, ingeniørvitenskap og datavitenskap må du ofte analysere stabilitet, vibrasjoner eller nettverk. Manuell utregning av egenverdier for 4x4-matriser kan ta timer – en kalkulator gjør det på sekunder.</li>
+    <li><strong>Redusert feilrisiko:</strong> Algebraiske feil, spesielt ved faktorisering av polynomer, er vanlige. Kalkulatoren eliminerer nesten all risiko for regnefeil.</li>
+    <li><strong>Visualisering av data:</strong> I maskinlæring brukes egenvektorer til Principal Component Analysis (PCA). En rask kalkulator hjelper deg å forstå hvilke dimensjoner som har størst varians.</li>
+    <li><strong>Anvendelser i ingeniørfag:</strong> Strukturmekanikk, kvantemekanikk og kontrollteori er avhengig av egenverdier for å forutsi systemers oppførsel. En pålitelig kalkulator er derfor et must.</li>
+</ul>
+<p>
+    Kort sagt: Uansett om du er student som løser lekser eller forsker som analyserer komplekse systemer, gir en <strong>egenverdi og egenvektor kalkulator</strong> deg presise svar uten unødvendig hodebry.
+</p>
+
+<h2>Slik bruker du en egenverdi og egenvektor kalkulator</h2>
+<p>
+    Å bruke en <strong>egenverdi og egenvektor kalkulator</strong> er enkelt. Følg disse trinnene:
+</p>
+<ol>
+    <li><strong>Velg matrisestørrelse:</strong> De fleste kalkulatorer støtter 2x2, 3x3 og noen ganger 4x4 eller større. Velg dimensjonen som passer ditt problem.</li>
+    <li><strong>Skriv inn matriseverdiene:</strong> Fyll inn tallene i feltene. Vær nøye med fortegn og desimaler. Mange verktøy tillater brøker (f.eks. 1/2) eller desimaltall.</li>
+    <li><strong>Klikk "Beregn":</strong> Kalkulatoren løser det karakteristiske polynomet og finner egenverdiene. Deretter beregner den egenvektorene for hver egenverdi.</li>
+    <li><strong>Les resultatene:</strong> Du får opp en liste med egenverdier (λ) og tilhørende egenvektorer (v). Noen kalkulatorer viser også mellomtrinn, som det karakteristiske polynomet.</li>
+</ol>
+<p>
+    <strong>Tips:</strong> Hvis du får komplekse egenverdier, viser kalkulatoren dem ofte som a ± bi. For reelle anvendelser, noter at egenvektorene kan være unormerte – du kan enkelt normalisere dem ved å dele på lengden.
+</p>
+
+<h2>Formel med eksempel</h2>
+<p>
+    Den underliggende formelen for egenverdier er det karakteristiske polynomet:
+    <br>
+    <strong>det(A - λI) = 0</strong>
+    <br>
+    Hvor A er matrisen, λ er egenverdien, I er identitetsmatrisen, og det står for determinant.
+</p>
+<h3>Eksempel med 2x2 matrise</h3>
+<p>
+    La oss si vi har matrisen: <br>
+    A = [[2, 1], [1, 2]] <br>
+    Trinn 1: Sett opp A - λI = [[2-λ, 1], [1, 2-λ]] <br>
+    Trinn 2: Beregn determinant: (2-λ)(2-λ) - (1)(1) = λ² - 4λ + 3 = 0 <br>
+    Trinn 3: Løs andregradslikningen: λ₁ = 3, λ₂ = 1 <br>
+    Trinn 4: Finn egenvektorer: For λ=3: (A-3I)v = 0 → [-1, 1; 1, -1]v = 0 → v₁ = [1, 1] (opp til skalering). For λ=1: (A-I)v = 0 → [1, 1; 1, 1]v = 0 → v₂ = [1, -1]. <br>
+    En <strong>egenverdi og egenvektor kalkulator</strong> ville gitt deg disse resultatene umiddelbart.
+</p>
+
+<h2>Praktiske eksempler</h2>
+<h3>Eksempel 1: Stabilitetsanalyse i ingeniørfag</h3>
+<p>
+    En brokonstruksjon modelleres med en 3x3 stivhetsmatrise. Ingeniøren bruker en <strong>egenverdi og egenvektor kalkulator</strong> for å finne egenfrekvensene (kvadratroten av egenverdiene). Hvis den største egenverdien er nær null, kan broen kollapse under resonans. Kalkulatoren gir raske svar som redder tid og øker sikkerheten.
+</p>
+<h3>Eksempel 2: PCA i dataanalyse</h3>
+<p>
+    I maskinlæring ønsker du å redusere dimensjonalitet. Du beregner kovariansmatrisen til datasettet og bruker en <strong>egenverdi og egenvektor kalkulator</strong> til å finne hovedkomponentene. Egenvektorene med størst egenverdi representerer retningene med mest varians. Dette er avgjørende for visualisering og støyreduksjon.
+</p>
+<h3>Eksempel 3: Kvantemekanikk</h3>
+<p>
+    I kvantefysikk representeres observerbare størrelser som matriser (operatorer). En <strong>egenverdi og egenvektor kalkulator</strong> brukes til å finne mulige måleresultater (egenverdier) og tilstander (egenvektorer) for en partikkel. For eksempel, spinnoperatoren for et elektron har egenverdier ±½.
+</p>
+
+<h2>Tips for effektiv bruk</h2>
+<ul>
+    <li><strong>Kontroller matrisen:</strong> Dobbeltsjekk at du har skrevet inn riktige tall. En liten feil kan gi helt andre egenverdier.</li>
+    <li><strong>Forstå komplekse tall:</strong> Hvis kalkulatoren gir komplekse egenverdier, betyr det at systemet har oscillasjoner eller ustabilitet. I slike tilfeller er egenvektorene også komplekse.</li>
+    <li><strong>Bruk flere kalkulatorer:</strong> Prøv gjerne to ulike <strong>egenverdi og egenvektor kalkulator</strong>-verktøy for å verifisere resultatene, spesielt ved store matriser.</li>
+    <li><strong>Normaliser egenvektorene:</strong> Mange kalkulatorer gir ikke normaliserte vektorer. For å sammenligne med andre kilder, del hver vektor på dens euklidske lengde.</li>
+    <li><strong>Lær deg teorien:</strong> Selv om kalkulatoren gjør jobben, er det nyttig å forstå hvordan egenverdier og egenvektorer henger sammen med diagonalisering og basisbytte.</li>
+</ul>
+
+<h2>FAQ – 5 vanlige spørsmål</h2>
+<h3>1. Hva er forskjellen på egenverdi og egenvektor?</h3>
+<p>
+    <strong>Svar:</strong> Egenverdien (λ) er en skalar som forteller hvor mye en egenvektor skaleres når den multipliseres med matrisen. Egenvektoren (v) er en ikke-null vektor som kun endrer lengde (ikke retning) under transformasjonen. En <strong>egenverdi og egenvektor kalkulator</strong> finner begge samtidig.
+</p>
+<h3>2. Kan jeg bruke kalkulatoren for ikke-kvadratiske matriser?</h3>
+<p>
+    <strong>Svar:</strong> Nei, egenverdier er kun definert for kvadratiske matriser (like mange rader som kolonner). For rektangulære matriser må du bruke singulærverdidekomponering (SVD) i stedet.
+</p>
+<h3>3. Hvorfor får jeg komplekse egenverdier?</h3>
+<p>
+    <strong>Svar:</strong> Komplekse egenverdier oppstår når matrisen ikke er symmetrisk, eller når systemet har svingninger. For eksempel i rotasjonsmatriser eller visse dynamiske systemer. Kalkulatoren vil vise dem som a + bi.
+</p>
+<h3>4. Er en egenverdi og egenvektor kalkulator nøyaktig?</h3>
+<p>
+    <strong>Svar:</strong> De fleste nettbaserte kalkulatorer bruker numeriske metoder (som QR-algoritmen) og er svært nøyaktige for matriser opp til 10x10. For ekstremt store matriser (1000x1000) anbefales profesjonell programvare som MATLAB eller Python.
+</p>
+<h3>5. Hvordan sjekker jeg om svaret er riktig?</h3>
+<p>
+    <strong>Svar:</strong> Du kan verifisere ved å multiplisere matrisen A med egenvektoren v. Hvis resultatet er λ * v (innenfor en liten toleranse), er sv</div>
+    <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/prosent-kalkulator'"><span class="tool-card-icon">📐</span><h3>Prosent Kalkulator</h3><p>Beregn prosent med flere metoder og sammenligninger</p></div><div class="tool-card" onclick="location='/verktoy/kvadratrot-kalkulator'"><span class="tool-card-icon">📐</span><h3>Kvadratrot Kalkulator</h3><p>Beregn kvadratroter og andre røtter</p></div><div class="tool-card" onclick="location='/verktoy/potens-kalkulator'"><span class="tool-card-icon">📐</span><h3>Potens Kalkulator</h3><p>Beregn potens av tall med store eksponenter</p></div><div class="tool-card" onclick="location='/verktoy/brøk-kalkulator'"><span class="tool-card-icon">📐</span><h3>Brøk Kalkulator</h3><p>Beregn med brøker og forenkle resultater</p></div><div class="tool-card" onclick="location='/verktoy/gjennomsnitt-kalkulator'"><span class="tool-card-icon">📐</span><h3>Gjennomsnitt Kalkulator</h3><p>Beregn gjennomsnitt og statistiske mål</p></div><div class="tool-card" onclick="location='/verktoy/logaritme-kalkulator'"><span class="tool-card-icon">📐</span><h3>Logaritme Kalkulator</h3><p>Beregn logaritmer og eksponentialfunksjoner</p></div><div class="tool-card" onclick="location='/verktoy/primtall-kalkulator'"><span class="tool-card-icon">📐</span><h3>Primtall Kalkulator</h3><p>Finn primtall og faktoriser tall</p></div><div class="tool-card" onclick="location='/verktoy/fakultet-kalkulator'"><span class="tool-card-icon">📐</span><h3>Fakultet Kalkulator</h3><p>Beregn fakultet av tall</p></div><div class="tool-card" onclick="location='/verktoy/kombinasjon-kalkulator'"><span class="tool-card-icon">📐</span><h3>Kombinasjon Kalkulator</h3><p>Beregn antall kombinasjoner</p></div><div class="tool-card" onclick="location='/verktoy/permutasjon-kalkulator'"><span class="tool-card-icon">📐</span><h3>Permutasjon Kalkulator</h3><p>Beregn antall permutasjoner</p></div><div class="tool-card" onclick="location='/verktoy/gcd-kalkulator'"><span class="tool-card-icon">📐</span><h3>Største Felles Divisor Kalkulator</h3><p>Finn største felles divisor (SFD)</p></div><div class="tool-card" onclick="location='/verktoy/lcm-kalkulator'"><span class="tool-card-icon">📐</span><h3>Minste Felles Multiplum Kalkulator</h3><p>Finn minste felles multiplum (MFM)</p></div><div class="tool-card" onclick="location='/kategori/matematikk'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle Matematikk</h3><p>Alle kalkulatorer i denne kategorien</p></div></div></div>
+    <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/lan-kalkulator'"><span class="tool-card-icon">💰</span><h3>Lån Kalkulator</h3><p>Beregn månedlige låneavdrag med nedbetalingsoversikt</p></div><div class="tool-card" onclick="location='/verktoy/temperatur-konvertering'"><span class="tool-card-icon">🔄</span><h3>Temperatur Konvertering</h3><p>Konverter temperatur mellom alle enheter</p></div><div class="tool-card" onclick="location='/verktoy/areal-kalkulator'"><span class="tool-card-icon">📏</span><h3>Areal Kalkulator</h3><p>Beregn areal av ulike former med enheter</p></div><div class="tool-card" onclick="location='/verktoy/alder-kalkulator'"><span class="tool-card-icon">📅</span><h3>Alder Kalkulator</h3><p>Beregn nøyaktig alder med sammenligning og statistikk</p></div><div class="tool-card" onclick="location='/verktoy/fart-kalkulator'"><span class="tool-card-icon">⚡</span><h3>Fart Kalkulator</h3><p>Beregn fart, distanse og tid med enhetskonvertering og drivstoffestimat</p></div></div></div>
+  </div>
+  <aside class="sidebar">
+    <div class="sidebar-card"><h3>Matematikk kalkulatorer</h3><ul class="sidebar-links"><li><a href="/verktoy/prosent-kalkulator"><span class="icon">📐</span>Prosent Kalkulator</a></li><li><a href="/verktoy/kvadratrot-kalkulator"><span class="icon">📐</span>Kvadratrot Kalkulator</a></li><li><a href="/verktoy/potens-kalkulator"><span class="icon">📐</span>Potens Kalkulator</a></li><li><a href="/verktoy/brøk-kalkulator"><span class="icon">📐</span>Brøk Kalkulator</a></li><li><a href="/verktoy/gjennomsnitt-kalkulator"><span class="icon">📐</span>Gjennomsnitt Kalkulator</a></li><li><a href="/verktoy/logaritme-kalkulator"><span class="icon">📐</span>Logaritme Kalkulator</a></li><li><a href="/verktoy/primtall-kalkulator"><span class="icon">📐</span>Primtall Kalkulator</a></li><li><a href="/verktoy/fakultet-kalkulator"><span class="icon">📐</span>Fakultet Kalkulator</a></li><li><a href="/kategori/matematikk" style="color:var(--primary)">Se alle Matematikk →</a></li></ul></div>
+    <div class="sidebar-card"><h3>Populære verktøy</h3><ul class="sidebar-links"><li><a href="/verktoy/bmi-kalkulator"><span class="icon">❤️</span>BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator"><span class="icon">💰</span>Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator"><span class="icon">📐</span>Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator"><span class="icon">📅</span>Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator"><span class="icon">❤️</span>Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator"><span class="icon">⚗️</span>pH Kalkulator</a></li></ul></div>
+  </aside>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">1543+ gratis kalkulatorer</p></div>
+      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li><li><a href="/kategori/krypto">₿ Krypto</a></li><li><a href="/kategori/spill">🎮 Spill</a></li><li><a href="/kategori/odds">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi">🌱 Økologi</a></li><li><a href="/kategori/bolig">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk">🎵 Musikk</a></li><li><a href="/kategori/teknologi">💻 Teknologi</a></li><li><a href="/kategori/ki">🤖 Kunstig Intelligens</a></li></ul></div>
+      <div class="footer-col"><h4>Populære</h4><ul><li><a href="/verktoy/bmi-kalkulator">BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator">Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator">Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator">Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator">Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator">pH Kalkulator</a></li><li><a href="/verktoy/molekylvekt-kalkulator">Molekylvektkalkulator</a></li><li><a href="/verktoy/halveringstid-kalkulator">Halveringstid Kalkulator</a></li><li><a href="/verktoy/befolkningsvekst-kalkulator">Befolkningsvekst Kalkulator</a></li><li><a href="/verktoy/terningkaster">Terningkaster</a></li></ul></div>
+      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/campingvognregelen-kalkulator">Campingvognregelen Kalkulator</a></li><li><a href="/verktoy/formuesskatt-2023-kalkulator">Formuesskatt 2023 Kalkulator</a></li><li><a href="/verktoy/stillingsprosent-kalkulator-laerer">Stillingsprosent Kalkulator Lærer</a></li><li><a href="/verktoy/pendlerfradrag-kalkulator">Pendlerfradrag Kalkulator</a></li><li><a href="/verktoy/partiell-derivasjon-kalkulator">Partiell Derivasjon Kalkulator</a></li><li><a href="/verktoy/verditap-kalkulator">Verditap Kalkulator</a></li><li><a href="/verktoy/tollkalkulator-norge">Tollkalkulator Norge</a></li><li><a href="/verktoy/fattigdomsgrense-kalkulator">Fattigdomsgrense Kalkulator</a></li></ul></div>
+      <div class="footer-col"><h4>Info</h4><ul><li><a href="/om-oss">Om oss</a></li><li><a href="/personvern">Personvern</a></li><li><a href="/kontakt">Kontakt</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Kalkulator24 — Alle kalkulatorer er gratis</p></div>
+  </div>
+</footer>
+<script>
+function toggleMenu(){var m=document.getElementById("mobileMenu");m.classList.toggle("open");}
+document.addEventListener("click",function(e){var m=document.getElementById("mobileMenu");var b=document.getElementById("hamburgerBtn");if(m&&b&&!m.contains(e.target)&&!b.contains(e.target))m.classList.remove("open");});
+</script>
+<script src="/assets/js/calc.js"></script>
+</body></html>

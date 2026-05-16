@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaussisk Eliminering Kalkulator — Gratis Online Kalkulator | Kalkulator24</title>
+  <meta name="description" content="Løs lineære ligningssystemer med Gauss-eliminering. Få trinnvis løsning og sjekk for entydig/infinite/ingen løsning. — Gratis kalkulator online">
+  <meta name="keywords" content="gaussisk eliminering, lineære ligninger, matrise, radoperasjoner, lineær algebra, løsningsmetode, norsk kalkulator">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="Norwegian">
+  <meta name="google-site-verification" content="U-ZiCQHLID9ShjKIWBJI0Xi7xJDNrx9bwP4tRBEYzSQ">
+  <meta name="theme-color" content="#2563eb">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Gaussisk Eliminering Kalkulator — Gratis Online Kalkulator | Kalkulator24">
+  <meta property="og:description" content="Løs lineære ligningssystemer med Gauss-eliminering. Få trinnvis løsning og sjekk for entydig/infinite/ingen løsning. — Gratis kalkulator online">
+  <meta property="og:url" content="https://kalkulator24.guru/verktoy/gaussisk-eliminering-kalkulator">
+  <meta property="og:locale" content="nb_NO">
+  <link rel="canonical" href="https://kalkulator24.guru/verktoy/gaussisk-eliminering-kalkulator">
+  <link rel="alternate" hreflang="nb" href="https://kalkulator24.guru/verktoy/gaussisk-eliminering-kalkulator">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+</head>
+<body>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Gaussisk Eliminering Kalkulator","description":"Løs lineære ligningssystemer med Gauss-eliminering. Få trinnvis løsning og sjekk for entydig/infinite/ingen løsning.","url":"https://kalkulator24.guru/verktoy/gaussisk-eliminering-kalkulator","applicationCategory":"UtilityApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"NOK"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Hjem","item":"https://kalkulator24.guru"},{"@type":"ListItem","position":2,"name":"Matematikk","item":"https://kalkulator24.guru/kategori/matematikk"},{"@type":"ListItem","position":3,"name":"Gaussisk Eliminering Kalkulator","item":"https://kalkulator24.guru/verktoy/gaussisk-eliminering-kalkulator"}]}</script>
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="/" class="logo">Kalkulator24</a>
+    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="active">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li><li><a href="/kategori/odds" class="">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi" class="">🌱 Økologi</a></li><li><a href="/kategori/bolig" class="">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk" class="">🎵 Musikk</a></li><li><a href="/kategori/teknologi" class="">💻 Teknologi</a></li><li><a href="/kategori/ki" class="">🤖 Kunstig Intelligens</a></li></ul>
+    <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">☰</button>
+  </div>
+  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="active">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li><li><a href="/kategori/odds" class="">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi" class="">🌱 Økologi</a></li><li><a href="/kategori/bolig" class="">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk" class="">🎵 Musikk</a></li><li><a href="/kategori/teknologi" class="">💻 Teknologi</a></li><li><a href="/kategori/ki" class="">🤖 Kunstig Intelligens</a></li></ul></div>
+</nav>
+<div class="breadcrumb"><a href="/">Hjem</a><span class="sep">›</span><a href="/kategori/matematikk">Matematikk</a><span class="sep">›</span>Gaussisk Eliminering Kalkulator</div>
+<div class="tool-hero"><div class="tool-badge">📐 Matematikk</div><h1>Gaussisk Eliminering Kalkulator</h1><p class="subtitle">Løs lineære ligningssystemer med Gauss-eliminering. Få trinnvis løsning og sjekk for entydig/infinite/ingen løsning. — raskt og gratis</p></div>
+<div class="main-wrap">
+  <div class="main-content">
+    <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>Antall variabler (n)</label><div class="input-row"><input type="number" class="calc-input" data-field="matrix_size" placeholder="f.eks. 3"></div></div><div class="input-group"><label>Koeffisientmatrise (radvis, komma/ mellomrom separert)</label><div class="input-row"><input type="text" class="calc-input" data-field="coefficients" placeholder="f.eks. 2 1 -1 8, -3 -1 2 -11, -2 1 2 -3"></div></div></div>    <button class="btn-calc" onclick="runCalculator('gaussian_elimination')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
+    <div class="content-card">Her er en komplett SEO-artikkel på norsk om "Gaussisk Eliminering Kalkulator", strukturert med HTML-tagger og optimalisert for søkemotorer.
+
+```html
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaussisk Eliminering Kalkulator – Guide, formel og praktiske eksempler</title>
+    <meta name="description" content="Lær alt om gaussisk eliminering kalkulator: hva det er, hvorfor det er viktig, hvordan du bruker den, formel med eksempel, praktiske anvendelser og tips. Inkluderer FAQ.">
+</head>
+<body>
+
+    <h1>Gaussisk Eliminering Kalkulator – komplett guide for studenter og ingeniører</h1>
+
+    <p>Å løse lineære ligningssystemer manuelt kan være tidkrevende og feilutsatt, spesielt når antallet ukjente vokser. En <strong>gaussisk eliminering kalkulator</strong> automatiserer prosessen og gir raske, nøyaktige svar. I denne artikkelen forklarer vi alt du trenger å vite – fra grunnleggende teori til praktisk bruk.</p>
+
+    <h2>Hva er gaussisk eliminering?</h2>
+
+    <p>Gaussisk eliminering er en systematisk metode for å løse lineære ligningssystemer. Metoden ble oppkalt etter matematikeren Carl Friedrich Gauss, og den går ut på å omforme en utvidet matrise til en trappeform (row echelon form) ved hjelp av elementære radoperasjoner. Deretter løses systemet ved tilbakesubstitusjon.</p>
+
+    <p>En <strong>gaussisk eliminering kalkulator</strong> utfører disse operasjonene automatisk. Du skriver inn koeffisientene, og kalkulatoren returnerer løsningen (eller indikerer ingen løsning/uendelig mange løsninger). De fleste verktøy støtter både reelle tall, brøker og komplekse tall.</p>
+
+    <h3>Hvordan fungerer metoden?</h3>
+
+    <ul>
+        <li><strong>Forovereliminasjon:</strong> Gjør matrisen til en øvre trekantmatrise ved å eliminere variabler under diagonalen.</li>
+        <li><strong>Tilbakesubstitusjon:</strong> Løs den siste ligningen først, og arbeid deg oppover.</li>
+    </ul>
+
+    <p>En digital <strong>gaussisk eliminering kalkulator</strong> gjør dette på millisekunder – perfekt for eksamensforberedelse eller tekniske beregninger.</p>
+
+    <h2>Hvorfor er gaussisk eliminering viktig?</h2>
+
+    <p>Metoden er grunnleggende i lineær algebra og har utallige anvendelser:</p>
+
+    <ul>
+        <li><strong>Ingeniørfag:</strong> Analyse av elektriske kretser, strukturer og væskestrømmer.</li>
+        <li><strong>Data science:</strong> Løsning av minste kvadraters problemer i maskinlæring.</li>
+        <li><strong>Økonomi:</strong> Input-output-modeller og likevektsanalyser.</li>
+        <li><strong>Fysikk:</strong> Simulering av fysiske systemer med flere ukjente.</li>
+    </ul>
+
+    <p>Uten en <strong>gaussisk eliminering kalkulator</strong> måtte du utføre tidkrevende radoperasjoner for hånd. For store systemer (f.eks. 10×10) er dette praktisk talt umulig uten feil. Kalkulatoren sikrer presisjon og sparer tid.</p>
+
+    <h2>Slik bruker du en gaussisk eliminering kalkulator</h2>
+
+    <p>De fleste online kalkulatorer har et enkelt grensesnitt. Følg disse trinnene:</p>
+
+    <ol>
+        <li><strong>Angi dimensjon:</strong> Velg antall ligninger og ukjente (f.eks. 3×3).</li>
+        <li><strong>Fyll inn koeffisienter:</strong> Skriv inn tallene i matrisefeltene. Husk å skille desimaler med punktum.</li>
+        <li><strong>Velg metode:</strong> Noen kalkulatorer lar deg velge mellom gaussisk eliminering og Gauss-Jordan.</li>
+        <li><strong>Klikk "Løs":</strong> Resultatet vises som en vektor (x, y, z) eller som en trappeform.</li>
+    </ol>
+
+    <p><strong>Tips:</strong> En god <strong>gaussisk eliminering kalkulator</strong> viser også mellomtrinnene, slik at du kan lære metoden.</p>
+
+    <h2>Formel med eksempel</h2>
+
+    <p>La oss se på et system med 3 ligninger og 3 ukjente:</p>
+
+    <p><strong>System:</strong><br>
+    2x + y - z = 8<br>
+    -3x - y + 2z = -11<br>
+    -2x + y + 2z = -3</p>
+
+    <h3>Steg 1: Skriv den utvidede matrisen</h3>
+    <p>[ 2   1  -1 |  8 ]<br>
+    [-3  -1   2 | -11 ]<br>
+    [-2   1   2 | -3 ]</p>
+
+    <h3>Steg 2: Forovereliminasjon</h3>
+    <ul>
+        <li>Bruk rad 1 til å eliminere x i rad 2 og 3.</li>
+        <li>Rad 2 → Rad 2 + (3/2)*Rad 1 → [0  0.5  0.5 | 1]</li>
+        <li>Rad 3 → Rad 3 + Rad 1 → [0  2  1 | 5]</li>
+    </ul>
+
+    <h3>Steg 3: Fortsett eliminering</h3>
+    <ul>
+        <li>Bytt rad 2 og 3 for å få en pivot i andre rad: [0  2  1 | 5]</li>
+        <li>Eliminer y i rad 3: Rad 3 → Rad 3 - (0.5/2)*Rad 2 → [0  0  0.25 | -0.25]</li>
+    </ul>
+
+    <h3>Steg 4: Tilbakesubstitusjon</h3>
+    <ul>
+        <li>Fra rad 3: 0.25z = -0.25 → z = -1</li>
+        <li>Fra rad 2: 2y + 1*(-1) = 5 → y = 3</li>
+        <li>Fra rad 1: 2x + 3 - (-1) = 8 → 2x = 4 → x = 2</li>
+    </ul>
+
+    <p><strong>Løsning:</strong> x=2, y=3, z=-1. En <strong>gaussisk eliminering kalkulator</strong> gir samme svar på sekunder.</p>
+
+    <h2>Praktiske eksempler</h2>
+
+    <h3>Eksempel 1: Elektrisk kretsanalyse</h3>
+    <p>I en krets med tre strømmer I1, I2, I3 kan Kirchhoffs lover gi et lineært system. En <strong>gaussisk eliminering kalkulator</strong> løser dette raskt, slik at du kan finne spenning og strøm i hver gren.</p>
+
+    <h3>Eksempel 2: Kjemisk balansering</h3>
+    <p>For reaksjonen C₂H₆ + O₂ → CO₂ + H₂O setter du opp ligninger for antall atomer. Systemet har 3 ligninger og 3 ukjente. Kalkulatoren gir deg de støkiometriske koeffisientene.</p>
+
+    <h3>Eksempel 3: Økonomisk likevekt</h3>
+    <p>I en enkel økonomi med tre sektorer (landbruk, industri, tjenester) kan du modellere flyten av varer. Løsningen finner du med en <strong>gaussisk eliminering kalkulator</strong>.</p>
+
+    <h2>Tips for effektiv bruk</h2>
+
+    <ul>
+        <li><strong>Kontroller dimensjonen:</strong> Antall ligninger må være lik antall ukjente for en unik løsning.</li>
+        <li><strong>Bruk brøkform:</strong> Unngå avrundingsfeil ved å velge en kalkulator som støtter brøker.</li>
+        <li><strong>Lær mellomtrinnene:</strong> Se på radoperasjonene for å forstå metoden bedre.</li>
+        <li><strong>Sjekk svaret:</strong> Sett inn løsningen i de opprinnelige ligningene for å verifisere.</li>
+        <li><strong>Prøv flere verktøy:</strong> Noen <strong>gaussisk eliminering kalkulator</strong>-tjenester har ekstra funksjoner som matriseinvers.</li>
+    </ul>
+
+    <h2>FAQ – Ofte stilte spørsmål</h2>
+
+    <h3>1. Hva er forskjellen på gaussisk eliminering og Gauss-Jordan?</h3>
+    <p>Gaussisk eliminering stopper ved trappeform og bruker tilbakesubstitusjon. Gauss-Jordan fortsetter til redusert trappeform (redusert rad-echelon form), der løsningen leses direkte. De fleste <strong>gaussisk eliminering kalkulator</strong>-verktøy tilbyr begge.</p>
+
+    <h3>2. Kan kalkulatoren håndtere systemer uten løsning?</h3>
+    <p>Ja. Hvis systemet er inkonsistent (f.eks. 0=5), vil en <strong>gaussisk eliminering kalkulator</strong> vise "ingen løsning" eller en feilmelding. Ved uendelig mange løsninger vises løsningsparameteren.</p>
+
+    <h3>3. Må jeg betale for en god kalkulator?</h3>
+    <p>Nei. Det finnes flere gratis online verktøy som Symbolab, Wolfram Alpha og Matrix Calculator. De gir også trinnvise forklaringer.</p>
+
+    <h3>4. Hvor nøyaktig er en slik kalkulator?</h3>
+    <p>De fleste bruker presisjonsaritmetikk (brøker eller høy presisjon). Unngå kalkulatorer som bare viser desimaltall med få siffer – det kan gi avrundingsfeil.</p>
+
+    <h3>5. Kan jeg bruke kalkulatoren på eksamen?</h3>
+    <p>Det avhenger av reglene. Noen tillater avanserte kalkulatorer med matrisefunksjoner, mens andre krever manuell utregning. Bruk en <strong>gaussisk eliminering kalkulator</strong> til å øve hjemme, men lær metoden grundig.</p>
+
+    <h2>Oppsummering</h2>
+
+    <p>En <strong>gaussisk eliminering kalkulator</strong> er et uunnværlig verktøy for alle som jobber med lineær algebra. Enten du er student, ingeniør eller dataanalytiker, sparer den tid og reduserer feil. Ved å forstå metoden bak – og bruke kalkulatoren smart – kan du løse komplekse systemer på sekunder.</p>
+
+    <p>Husk alltid å sjekke at kalkulatoren støtter brøker og viser mellomtrinn. Da får du både svaret og innsikten du trenger.</p>
+
+</body>
+</html>
+```</div>
+    <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/prosent-kalkulator'"><span class="tool-card-icon">📐</span><h3>Prosent Kalkulator</h3><p>Beregn prosent med flere metoder og sammenligninger</p></div><div class="tool-card" onclick="location='/verktoy/kvadratrot-kalkulator'"><span class="tool-card-icon">📐</span><h3>Kvadratrot Kalkulator</h3><p>Beregn kvadratroter og andre røtter</p></div><div class="tool-card" onclick="location='/verktoy/potens-kalkulator'"><span class="tool-card-icon">📐</span><h3>Potens Kalkulator</h3><p>Beregn potens av tall med store eksponenter</p></div><div class="tool-card" onclick="location='/verktoy/brøk-kalkulator'"><span class="tool-card-icon">📐</span><h3>Brøk Kalkulator</h3><p>Beregn med brøker og forenkle resultater</p></div><div class="tool-card" onclick="location='/verktoy/gjennomsnitt-kalkulator'"><span class="tool-card-icon">📐</span><h3>Gjennomsnitt Kalkulator</h3><p>Beregn gjennomsnitt og statistiske mål</p></div><div class="tool-card" onclick="location='/verktoy/logaritme-kalkulator'"><span class="tool-card-icon">📐</span><h3>Logaritme Kalkulator</h3><p>Beregn logaritmer og eksponentialfunksjoner</p></div><div class="tool-card" onclick="location='/verktoy/primtall-kalkulator'"><span class="tool-card-icon">📐</span><h3>Primtall Kalkulator</h3><p>Finn primtall og faktoriser tall</p></div><div class="tool-card" onclick="location='/verktoy/fakultet-kalkulator'"><span class="tool-card-icon">📐</span><h3>Fakultet Kalkulator</h3><p>Beregn fakultet av tall</p></div><div class="tool-card" onclick="location='/verktoy/kombinasjon-kalkulator'"><span class="tool-card-icon">📐</span><h3>Kombinasjon Kalkulator</h3><p>Beregn antall kombinasjoner</p></div><div class="tool-card" onclick="location='/verktoy/permutasjon-kalkulator'"><span class="tool-card-icon">📐</span><h3>Permutasjon Kalkulator</h3><p>Beregn antall permutasjoner</p></div><div class="tool-card" onclick="location='/verktoy/gcd-kalkulator'"><span class="tool-card-icon">📐</span><h3>Største Felles Divisor Kalkulator</h3><p>Finn største felles divisor (SFD)</p></div><div class="tool-card" onclick="location='/verktoy/lcm-kalkulator'"><span class="tool-card-icon">📐</span><h3>Minste Felles Multiplum Kalkulator</h3><p>Finn minste felles multiplum (MFM)</p></div><div class="tool-card" onclick="location='/kategori/matematikk'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle Matematikk</h3><p>Alle kalkulatorer i denne kategorien</p></div></div></div>
+    <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/lan-kalkulator'"><span class="tool-card-icon">💰</span><h3>Lån Kalkulator</h3><p>Beregn månedlige låneavdrag med nedbetalingsoversikt</p></div><div class="tool-card" onclick="location='/verktoy/temperatur-konvertering'"><span class="tool-card-icon">🔄</span><h3>Temperatur Konvertering</h3><p>Konverter temperatur mellom alle enheter</p></div><div class="tool-card" onclick="location='/verktoy/areal-kalkulator'"><span class="tool-card-icon">📏</span><h3>Areal Kalkulator</h3><p>Beregn areal av ulike former med enheter</p></div><div class="tool-card" onclick="location='/verktoy/alder-kalkulator'"><span class="tool-card-icon">📅</span><h3>Alder Kalkulator</h3><p>Beregn nøyaktig alder med sammenligning og statistikk</p></div><div class="tool-card" onclick="location='/verktoy/fart-kalkulator'"><span class="tool-card-icon">⚡</span><h3>Fart Kalkulator</h3><p>Beregn fart, distanse og tid med enhetskonvertering og drivstoffestimat</p></div></div></div>
+  </div>
+  <aside class="sidebar">
+    <div class="sidebar-card"><h3>Matematikk kalkulatorer</h3><ul class="sidebar-links"><li><a href="/verktoy/prosent-kalkulator"><span class="icon">📐</span>Prosent Kalkulator</a></li><li><a href="/verktoy/kvadratrot-kalkulator"><span class="icon">📐</span>Kvadratrot Kalkulator</a></li><li><a href="/verktoy/potens-kalkulator"><span class="icon">📐</span>Potens Kalkulator</a></li><li><a href="/verktoy/brøk-kalkulator"><span class="icon">📐</span>Brøk Kalkulator</a></li><li><a href="/verktoy/gjennomsnitt-kalkulator"><span class="icon">📐</span>Gjennomsnitt Kalkulator</a></li><li><a href="/verktoy/logaritme-kalkulator"><span class="icon">📐</span>Logaritme Kalkulator</a></li><li><a href="/verktoy/primtall-kalkulator"><span class="icon">📐</span>Primtall Kalkulator</a></li><li><a href="/verktoy/fakultet-kalkulator"><span class="icon">📐</span>Fakultet Kalkulator</a></li><li><a href="/kategori/matematikk" style="color:var(--primary)">Se alle Matematikk →</a></li></ul></div>
+    <div class="sidebar-card"><h3>Populære verktøy</h3><ul class="sidebar-links"><li><a href="/verktoy/bmi-kalkulator"><span class="icon">❤️</span>BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator"><span class="icon">💰</span>Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator"><span class="icon">📐</span>Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator"><span class="icon">📅</span>Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator"><span class="icon">❤️</span>Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator"><span class="icon">⚗️</span>pH Kalkulator</a></li></ul></div>
+  </aside>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">1543+ gratis kalkulatorer</p></div>
+      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li><li><a href="/kategori/krypto">₿ Krypto</a></li><li><a href="/kategori/spill">🎮 Spill</a></li><li><a href="/kategori/odds">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi">🌱 Økologi</a></li><li><a href="/kategori/bolig">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk">🎵 Musikk</a></li><li><a href="/kategori/teknologi">💻 Teknologi</a></li><li><a href="/kategori/ki">🤖 Kunstig Intelligens</a></li></ul></div>
+      <div class="footer-col"><h4>Populære</h4><ul><li><a href="/verktoy/bmi-kalkulator">BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator">Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator">Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator">Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator">Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator">pH Kalkulator</a></li><li><a href="/verktoy/molekylvekt-kalkulator">Molekylvektkalkulator</a></li><li><a href="/verktoy/halveringstid-kalkulator">Halveringstid Kalkulator</a></li><li><a href="/verktoy/befolkningsvekst-kalkulator">Befolkningsvekst Kalkulator</a></li><li><a href="/verktoy/terningkaster">Terningkaster</a></li></ul></div>
+      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/campingvognregelen-kalkulator">Campingvognregelen Kalkulator</a></li><li><a href="/verktoy/formuesskatt-2023-kalkulator">Formuesskatt 2023 Kalkulator</a></li><li><a href="/verktoy/stillingsprosent-kalkulator-laerer">Stillingsprosent Kalkulator Lærer</a></li><li><a href="/verktoy/pendlerfradrag-kalkulator">Pendlerfradrag Kalkulator</a></li><li><a href="/verktoy/partiell-derivasjon-kalkulator">Partiell Derivasjon Kalkulator</a></li><li><a href="/verktoy/verditap-kalkulator">Verditap Kalkulator</a></li><li><a href="/verktoy/tollkalkulator-norge">Tollkalkulator Norge</a></li><li><a href="/verktoy/fattigdomsgrense-kalkulator">Fattigdomsgrense Kalkulator</a></li></ul></div>
+      <div class="footer-col"><h4>Info</h4><ul><li><a href="/om-oss">Om oss</a></li><li><a href="/personvern">Personvern</a></li><li><a href="/kontakt">Kontakt</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Kalkulator24 — Alle kalkulatorer er gratis</p></div>
+  </div>
+</footer>
+<script>
+function toggleMenu(){var m=document.getElementById("mobileMenu");m.classList.toggle("open");}
+document.addEventListener("click",function(e){var m=document.getElementById("mobileMenu");var b=document.getElementById("hamburgerBtn");if(m&&b&&!m.contains(e.target)&&!b.contains(e.target))m.classList.remove("open");});
+</script>
+<script src="/assets/js/calc.js"></script>
+</body></html>

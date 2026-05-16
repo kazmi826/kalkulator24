@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skalarprodukt Kalkulator — Gratis Online Kalkulator | Kalkulator24</title>
+  <meta name="description" content="Beregn skalarproduktet (prikkproduktet) av to vektorer i 2D eller 3D. Få vinkelen mellom vektorene og projeksjon. — Gratis kalkulator online">
+  <meta name="keywords" content="skalarprodukt, prikkprodukt, vektor, dot product, vinkel mellom vektorer, projeksjon, matematikk, kalkulator">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="Norwegian">
+  <meta name="google-site-verification" content="U-ZiCQHLID9ShjKIWBJI0Xi7xJDNrx9bwP4tRBEYzSQ">
+  <meta name="theme-color" content="#2563eb">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Skalarprodukt Kalkulator — Gratis Online Kalkulator | Kalkulator24">
+  <meta property="og:description" content="Beregn skalarproduktet (prikkproduktet) av to vektorer i 2D eller 3D. Få vinkelen mellom vektorene og projeksjon. — Gratis kalkulator online">
+  <meta property="og:url" content="https://kalkulator24.guru/verktoy/skalarproduktkalkulator">
+  <meta property="og:locale" content="nb_NO">
+  <link rel="canonical" href="https://kalkulator24.guru/verktoy/skalarproduktkalkulator">
+  <link rel="alternate" hreflang="nb" href="https://kalkulator24.guru/verktoy/skalarproduktkalkulator">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+</head>
+<body>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Skalarprodukt Kalkulator","description":"Beregn skalarproduktet (prikkproduktet) av to vektorer i 2D eller 3D. Få vinkelen mellom vektorene og projeksjon.","url":"https://kalkulator24.guru/verktoy/skalarproduktkalkulator","applicationCategory":"UtilityApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"NOK"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Hjem","item":"https://kalkulator24.guru"},{"@type":"ListItem","position":2,"name":"Matematikk","item":"https://kalkulator24.guru/kategori/matematikk"},{"@type":"ListItem","position":3,"name":"Skalarprodukt Kalkulator","item":"https://kalkulator24.guru/verktoy/skalarproduktkalkulator"}]}</script>
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="/" class="logo">Kalkulator24</a>
+    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="active">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li><li><a href="/kategori/odds" class="">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi" class="">🌱 Økologi</a></li><li><a href="/kategori/bolig" class="">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk" class="">🎵 Musikk</a></li><li><a href="/kategori/teknologi" class="">💻 Teknologi</a></li><li><a href="/kategori/ki" class="">🤖 Kunstig Intelligens</a></li></ul>
+    <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">☰</button>
+  </div>
+  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="active">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li><li><a href="/kategori/odds" class="">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi" class="">🌱 Økologi</a></li><li><a href="/kategori/bolig" class="">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk" class="">🎵 Musikk</a></li><li><a href="/kategori/teknologi" class="">💻 Teknologi</a></li><li><a href="/kategori/ki" class="">🤖 Kunstig Intelligens</a></li></ul></div>
+</nav>
+<div class="breadcrumb"><a href="/">Hjem</a><span class="sep">›</span><a href="/kategori/matematikk">Matematikk</a><span class="sep">›</span>Skalarprodukt Kalkulator</div>
+<div class="tool-hero"><div class="tool-badge">📐 Matematikk</div><h1>Skalarprodukt Kalkulator</h1><p class="subtitle">Beregn skalarproduktet (prikkproduktet) av to vektorer i 2D eller 3D. Få vinkelen mellom vektorene og projeksjon. — raskt og gratis</p></div>
+<div class="main-wrap">
+  <div class="main-content">
+    <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>Vektor 1 - X</label><div class="input-row"><input type="number" class="calc-input" data-field="vector1_x" placeholder="f.eks. 3"></div></div><div class="input-group"><label>Vektor 1 - Y</label><div class="input-row"><input type="number" class="calc-input" data-field="vector1_y" placeholder="f.eks. 4"></div></div><div class="input-group"><label>Vektor 1 - Z (valgfritt)</label><div class="input-row"><input type="number" class="calc-input" data-field="vector1_z" placeholder="la stå tom for 2D"></div></div><div class="input-group"><label>Vektor 2 - X</label><div class="input-row"><input type="number" class="calc-input" data-field="vector2_x" placeholder="f.eks. 2"></div></div><div class="input-group"><label>Vektor 2 - Y</label><div class="input-row"><input type="number" class="calc-input" data-field="vector2_y" placeholder="f.eks. -1"></div></div><div class="input-group"><label>Vektor 2 - Z (valgfritt)</label><div class="input-row"><input type="number" class="calc-input" data-field="vector2_z" placeholder="la stå tom for 2D"></div></div></div>    <button class="btn-calc" onclick="runCalculator('skalarprodukt_formel')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
+    <div class="content-card">Her er en SEO-artikkel på norsk om "Skalarprodukt Kalkulator", formatert som HTML med de angitte seksjonene og kravene.
+
+```html
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skalarprodukt Kalkulator: Hva det er og hvordan du bruker det</title>
+    <meta name="description" content="Lær alt om skalarprodukt kalkulator: definisjon, formel, praktiske eksempler og tips. Perfekt for studenter og ingeniører.">
+</head>
+<body>
+
+    <h1>Skalarprodukt Kalkulator – Din guide til prikkprodukt</h1>
+    
+    <p>I matematikk og fysikk er <strong>skalarprodukt</strong> (også kalt prikkprodukt eller dot-produkt) en fundamental operasjon mellom to vektorer. En <strong>skalarprodukt kalkulator</strong> gjør denne utregningen lynrask og nøyaktig. I denne artikkelen går vi gjennom alt du trenger å vite – fra definisjonen til praktiske anvendelser – slik at du kan mestre både teorien og verktøyet.</p>
+
+    <h2>Hva er skalarprodukt?</h2>
+    <p>Skalarprodukt er en algebraisk operasjon som tar to like lange vektorer og returnerer et enkelt tall (en skalar). Resultatet forteller noe om vinkelen mellom vektorene og deres lengder. For to vektorer <strong>a</strong> = [a₁, a₂, a₃] og <strong>b</strong> = [b₁, b₂, b₃] i 3D-rom, er skalarproduktet definert som:</p>
+    <p><strong>a · b = a₁·b₁ + a₂·b₂ + a₃·b₃</strong></p>
+    <p>En <strong>skalarprodukt kalkulator</strong> bruker akkurat denne formelen, men kan håndtere vektorer med et hvilket som helst antall dimensjoner – fra 2D til 10D eller mer. Kalkulatoren sparer deg for manuell addisjon og multiplikasjon, spesielt når vektorene har desimaltall eller store komponenter.</p>
+
+    <h2>Hvorfor er skalarprodukt viktig?</h2>
+    <p>Skalarprodukt er ikke bare en matematisk kuriositet – det har konkrete bruksområder i flere fagfelt:</p>
+    <ul>
+        <li><strong>Fysikk:</strong> Beregning av arbeid (W = F · d) hvor kraft og forskyvning er vektorer.</li>
+        <li><strong>Datagrafikk:</strong> Bestemme lysrefleksjon (Lambert-modellen) og projeksjoner.</li>
+        <li><strong>Maskinlæring:</strong> Kjernefunksjoner og likhetsmål mellom datapunkter.</li>
+        <li><strong>Ingeniørfag:</strong> Strukturanalyse og beregning av momenter.</li>
+        <li><strong>Matematikk:</strong> Ortogonalitet (vinkelrett) – hvis skalarprodukt = 0, står vektorene normalt på hverandre.</li>
+    </ul>
+    <p>En <strong>skalarprodukt kalkulator</strong> gjør det enkelt å verifisere slike beregninger raskt, uten risiko for feil i multiplikasjon eller addisjon.</p>
+
+    <h2>Slik bruker du en skalarprodukt kalkulator</h2>
+    <p>De fleste nettbaserte <strong>skalarprodukt kalkulator</strong>-verktøy fungerer på samme måte. Følg disse trinnene:</p>
+    <ol>
+        <li><strong>Angi dimensjon:</strong> Velg om vektorene er i 2D, 3D, 4D osv. (vanligvis 2 eller 3 dimensjoner).</li>
+        <li><strong>Skriv inn komponenter:</strong> For vektor A skriver du a₁, a₂, a₃… For vektor B skriver du b₁, b₂, b₃…</li>
+        <li><strong>Trykk "Beregn":</strong> Kalkulatoren summerer produktene av tilsvarende komponenter.</li>
+        <li><strong>Les resultatet:</strong> Du får et enkelt tall – skalarproduktet. Noen kalkulatorer viser også vinkelen mellom vektorene.</li>
+    </ol>
+    <p>Eksempel: Hvis du har vektor A = (3, 4) og vektor B = (2, -1), skriver du inn 3,4 for A og 2,-1 for B. En <strong>skalarprodukt kalkulator</strong> gir da 3·2 + 4·(-1) = 6 – 4 = 2.</p>
+
+    <h2>Formel med eksempel</h2>
+    <h3>Den generelle formelen</h3>
+    <p>For vektorer i n dimensjoner: <strong>a · b = ∑(aᵢ · bᵢ)</strong> for i = 1 til n.</p>
+    
+    <h3>Steg-for-steg eksempel i 3D</h3>
+    <p>La oss ta vektorene:<br>
+    <strong>a</strong> = (4, -2, 5)<br>
+    <strong>b</strong> = (1, 3, -2)</p>
+    <p>Beregning:<br>
+    a · b = (4)(1) + (-2)(3) + (5)(-2) = 4 – 6 – 10 = <strong>-12</strong></p>
+    <p>Med en <strong>skalarprodukt kalkulator</strong> får du dette svaret umiddelbart. Prøv gjerne selv – det er spesielt nyttig når du har flere desimaler eller store tall.</p>
+
+    <h2>Praktiske eksempler</h2>
+    <h3>Eksempel 1: Arbeid i fysikk</h3>
+    <p>En kraft F = (10 N, 0 N, 5 N) flytter et objekt langs forskyvningen d = (2 m, 3 m, -1 m). Arbeidet W = F · d = 10·2 + 0·3 + 5·(-1) = 20 + 0 – 5 = 15 J. En <strong>skalarprodukt kalkulator</strong> gir svaret på sekunder.</p>
+    
+    <h3>Eksempel 2: Ortogonalitet</h3>
+    <p>To vektorer er vinkelrette hvis skalarproduktet er null. Sjekk om (3, -2, 1) og (2, 3, 0) er ortogonale: 3·2 + (-2)·3 + 1·0 = 6 – 6 + 0 = 0 → Ja, de står normalt på hverandre.</p>
+    
+    <h3>Eksempel 3: Projeksjon</h3>
+    <p>Lengden av projeksjonen av vektor a på b er gitt ved (a·b) / |b|. Hvis a = (6, 2) og b = (3, 4), finner du først a·b = 6·3 + 2·4 = 18+8=26. Deretter |b| = √(3²+4²)=5. Projeksjon = 26/5 = 5,2. En <strong>skalarprodukt kalkulator</strong> hjelper med første steg.</p>
+
+    <h2>Tips for effektiv bruk av skalarprodukt kalkulator</h2>
+    <ul>
+        <li><strong>Dobbeltsjekk dimensjonene:</strong> Sørg for at begge vektorene har samme antall komponenter. Hvis du angir 3D for A og 2D for B, blir det feil.</li>
+        <li><strong>Bruk desimaltegn riktig:</strong> De fleste kalkulatorer bruker punktum (.) som desimalskilletegn. Skriv 3.5, ikke 3,5.</li>
+        <li><strong>Forstå fortegn:</strong> Negativt skalarprodukt betyr at vektorene peker i motsatt retning (vinkel > 90°). Positivt betyr vinkel < 90°.</li>
+        <li><strong>Kombiner med vinkelfunksjon:</strong> Mange <strong>skalarprodukt kalkulator</strong>-verktøy viser også cos(θ) = (a·b) / (|a||b|). Bruk dette til å finne vinkelen.</li>
+        <li><strong>Test med enkle tall:</strong> Før du stoler på kalkulatoren for komplekse data, test med enkle vektorer som (1,0) og (0,1) – da skal svaret bli 0.</li>
+    </ul>
+
+    <h2>FAQ – Ofte stilte spørsmål om skalarprodukt kalkulator</h2>
+    
+    <h3>1. Hva er forskjellen mellom skalarprodukt og kryssprodukt?</h3>
+    <p>Skalarprodukt gir et tall (skalar), mens kryssprodukt gir en ny vektor. En <strong>skalarprodukt kalkulator</strong> brukes til prikkprodukt, ikke til kryssprodukt. Kryssprodukt krever en egen kalkulator.</p>
+    
+    <h3>2. Kan jeg bruke skalarprodukt kalkulator for vektorer med mer enn 3 dimensjoner?</h3>
+    <p>Ja, de fleste moderne <strong>skalarprodukt kalkulator</strong>-verktøy støtter opptil 10 dimensjoner eller mer. Du skriver bare inn alle komponentene i riktig rekkefølge.</p>
+    
+    <h3>3. Hva gjør jeg hvis jeg får feil svar?</h3>
+    <p>Sjekk at du har skrevet inn komponentene riktig, at dimensjonene er like, og at du bruker riktig desimalskilletegn. Noen kalkulatorer krever også at vektorene skrives uten parenteser.</p>
+    
+    <h3>4. Er skalarprodukt det samme som dot-produkt?</h3>
+    <p>Ja, <strong>skalarprodukt</strong> og <strong>dot-produkt</strong> er to navn på samme operasjon. En <strong>skalarprodukt kalkulator</strong> kalles derfor også ofte for dot-produkt kalkulator.</p>
+    
+    <h3>5. Kan skalarprodukt kalkulator beregne vinkelen mellom vektorer?</h3>
+    <p>Noen avanserte <strong>skalarprodukt kalkulator</strong>-verktøy viser også vinkelen, men de fleste viser kun selve skalarproduktet. For å finne vinkelen må du vite lengdene til vektorene og bruke formelen cos(θ) = (a·b) / (|a||b|).</p>
+
+    <p><strong>Oppsummering:</strong> En <strong>skalarprodukt kalkulator</strong> er et uunnværlig verktøy for studenter, ingeniører og forskere. Den sparer tid, reduserer feil og gir deg muligheten til å fokusere på tolkningen av resultatene. Enten du regner på fysikkoppgaver eller jobber med 3D-grafikk, vil en pålitelig <strong>skalarprodukt kalkulator</strong> gjøre hverdagen lettere. Prøv en i dag og opplev hvor raskt du får svar!</p>
+
+</body>
+</html>
+```</div>
+    <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/prosent-kalkulator'"><span class="tool-card-icon">📐</span><h3>Prosent Kalkulator</h3><p>Beregn prosent med flere metoder og sammenligninger</p></div><div class="tool-card" onclick="location='/verktoy/kvadratrot-kalkulator'"><span class="tool-card-icon">📐</span><h3>Kvadratrot Kalkulator</h3><p>Beregn kvadratroter og andre røtter</p></div><div class="tool-card" onclick="location='/verktoy/potens-kalkulator'"><span class="tool-card-icon">📐</span><h3>Potens Kalkulator</h3><p>Beregn potens av tall med store eksponenter</p></div><div class="tool-card" onclick="location='/verktoy/brøk-kalkulator'"><span class="tool-card-icon">📐</span><h3>Brøk Kalkulator</h3><p>Beregn med brøker og forenkle resultater</p></div><div class="tool-card" onclick="location='/verktoy/gjennomsnitt-kalkulator'"><span class="tool-card-icon">📐</span><h3>Gjennomsnitt Kalkulator</h3><p>Beregn gjennomsnitt og statistiske mål</p></div><div class="tool-card" onclick="location='/verktoy/logaritme-kalkulator'"><span class="tool-card-icon">📐</span><h3>Logaritme Kalkulator</h3><p>Beregn logaritmer og eksponentialfunksjoner</p></div><div class="tool-card" onclick="location='/verktoy/primtall-kalkulator'"><span class="tool-card-icon">📐</span><h3>Primtall Kalkulator</h3><p>Finn primtall og faktoriser tall</p></div><div class="tool-card" onclick="location='/verktoy/fakultet-kalkulator'"><span class="tool-card-icon">📐</span><h3>Fakultet Kalkulator</h3><p>Beregn fakultet av tall</p></div><div class="tool-card" onclick="location='/verktoy/kombinasjon-kalkulator'"><span class="tool-card-icon">📐</span><h3>Kombinasjon Kalkulator</h3><p>Beregn antall kombinasjoner</p></div><div class="tool-card" onclick="location='/verktoy/permutasjon-kalkulator'"><span class="tool-card-icon">📐</span><h3>Permutasjon Kalkulator</h3><p>Beregn antall permutasjoner</p></div><div class="tool-card" onclick="location='/verktoy/gcd-kalkulator'"><span class="tool-card-icon">📐</span><h3>Største Felles Divisor Kalkulator</h3><p>Finn største felles divisor (SFD)</p></div><div class="tool-card" onclick="location='/verktoy/lcm-kalkulator'"><span class="tool-card-icon">📐</span><h3>Minste Felles Multiplum Kalkulator</h3><p>Finn minste felles multiplum (MFM)</p></div><div class="tool-card" onclick="location='/kategori/matematikk'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle Matematikk</h3><p>Alle kalkulatorer i denne kategorien</p></div></div></div>
+    <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/lan-kalkulator'"><span class="tool-card-icon">💰</span><h3>Lån Kalkulator</h3><p>Beregn månedlige låneavdrag med nedbetalingsoversikt</p></div><div class="tool-card" onclick="location='/verktoy/temperatur-konvertering'"><span class="tool-card-icon">🔄</span><h3>Temperatur Konvertering</h3><p>Konverter temperatur mellom alle enheter</p></div><div class="tool-card" onclick="location='/verktoy/areal-kalkulator'"><span class="tool-card-icon">📏</span><h3>Areal Kalkulator</h3><p>Beregn areal av ulike former med enheter</p></div><div class="tool-card" onclick="location='/verktoy/alder-kalkulator'"><span class="tool-card-icon">📅</span><h3>Alder Kalkulator</h3><p>Beregn nøyaktig alder med sammenligning og statistikk</p></div><div class="tool-card" onclick="location='/verktoy/fart-kalkulator'"><span class="tool-card-icon">⚡</span><h3>Fart Kalkulator</h3><p>Beregn fart, distanse og tid med enhetskonvertering og drivstoffestimat</p></div></div></div>
+  </div>
+  <aside class="sidebar">
+    <div class="sidebar-card"><h3>Matematikk kalkulatorer</h3><ul class="sidebar-links"><li><a href="/verktoy/prosent-kalkulator"><span class="icon">📐</span>Prosent Kalkulator</a></li><li><a href="/verktoy/kvadratrot-kalkulator"><span class="icon">📐</span>Kvadratrot Kalkulator</a></li><li><a href="/verktoy/potens-kalkulator"><span class="icon">📐</span>Potens Kalkulator</a></li><li><a href="/verktoy/brøk-kalkulator"><span class="icon">📐</span>Brøk Kalkulator</a></li><li><a href="/verktoy/gjennomsnitt-kalkulator"><span class="icon">📐</span>Gjennomsnitt Kalkulator</a></li><li><a href="/verktoy/logaritme-kalkulator"><span class="icon">📐</span>Logaritme Kalkulator</a></li><li><a href="/verktoy/primtall-kalkulator"><span class="icon">📐</span>Primtall Kalkulator</a></li><li><a href="/verktoy/fakultet-kalkulator"><span class="icon">📐</span>Fakultet Kalkulator</a></li><li><a href="/kategori/matematikk" style="color:var(--primary)">Se alle Matematikk →</a></li></ul></div>
+    <div class="sidebar-card"><h3>Populære verktøy</h3><ul class="sidebar-links"><li><a href="/verktoy/bmi-kalkulator"><span class="icon">❤️</span>BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator"><span class="icon">💰</span>Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator"><span class="icon">📐</span>Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator"><span class="icon">📅</span>Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator"><span class="icon">❤️</span>Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator"><span class="icon">⚗️</span>pH Kalkulator</a></li></ul></div>
+  </aside>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">1543+ gratis kalkulatorer</p></div>
+      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li><li><a href="/kategori/krypto">₿ Krypto</a></li><li><a href="/kategori/spill">🎮 Spill</a></li><li><a href="/kategori/odds">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi">🌱 Økologi</a></li><li><a href="/kategori/bolig">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk">🎵 Musikk</a></li><li><a href="/kategori/teknologi">💻 Teknologi</a></li><li><a href="/kategori/ki">🤖 Kunstig Intelligens</a></li></ul></div>
+      <div class="footer-col"><h4>Populære</h4><ul><li><a href="/verktoy/bmi-kalkulator">BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator">Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator">Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator">Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator">Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator">pH Kalkulator</a></li><li><a href="/verktoy/molekylvekt-kalkulator">Molekylvektkalkulator</a></li><li><a href="/verktoy/halveringstid-kalkulator">Halveringstid Kalkulator</a></li><li><a href="/verktoy/befolkningsvekst-kalkulator">Befolkningsvekst Kalkulator</a></li><li><a href="/verktoy/terningkaster">Terningkaster</a></li></ul></div>
+      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/campingvognregelen-kalkulator">Campingvognregelen Kalkulator</a></li><li><a href="/verktoy/formuesskatt-2023-kalkulator">Formuesskatt 2023 Kalkulator</a></li><li><a href="/verktoy/stillingsprosent-kalkulator-laerer">Stillingsprosent Kalkulator Lærer</a></li><li><a href="/verktoy/pendlerfradrag-kalkulator">Pendlerfradrag Kalkulator</a></li><li><a href="/verktoy/partiell-derivasjon-kalkulator">Partiell Derivasjon Kalkulator</a></li><li><a href="/verktoy/verditap-kalkulator">Verditap Kalkulator</a></li><li><a href="/verktoy/tollkalkulator-norge">Tollkalkulator Norge</a></li><li><a href="/verktoy/fattigdomsgrense-kalkulator">Fattigdomsgrense Kalkulator</a></li></ul></div>
+      <div class="footer-col"><h4>Info</h4><ul><li><a href="/om-oss">Om oss</a></li><li><a href="/personvern">Personvern</a></li><li><a href="/kontakt">Kontakt</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Kalkulator24 — Alle kalkulatorer er gratis</p></div>
+  </div>
+</footer>
+<script>
+function toggleMenu(){var m=document.getElementById("mobileMenu");m.classList.toggle("open");}
+document.addEventListener("click",function(e){var m=document.getElementById("mobileMenu");var b=document.getElementById("hamburgerBtn");if(m&&b&&!m.contains(e.target)&&!b.contains(e.target))m.classList.remove("open");});
+</script>
+<script src="/assets/js/calc.js"></script>
+</body></html>

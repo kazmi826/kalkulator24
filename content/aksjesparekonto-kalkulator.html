@@ -1,0 +1,174 @@
+```html
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aksjesparekonto Kalkulator – Slik optimaliserer du sparingen</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.7;
+            max-width: 820px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            color: #1a1a2e;
+            background: #f9fafc;
+        }
+        h2 {
+            border-bottom: 3px solid #2a6f97;
+            padding-bottom: 0.3rem;
+            margin-top: 2.5rem;
+            color: #0b3b4f;
+        }
+        h3 {
+            margin-top: 1.8rem;
+            color: #1e4a5f;
+        }
+        p {
+            margin: 1rem 0;
+        }
+        ul, ol {
+            padding-left: 1.5rem;
+        }
+        li {
+            margin: 0.4rem 0;
+        }
+        strong {
+            color: #0a3a4a;
+        }
+        .highlight-box {
+            background: #e6f0f5;
+            border-left: 5px solid #2a6f97;
+            padding: 1rem 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.8rem 0;
+        }
+        .example-card {
+            background: white;
+            border: 1px solid #d4e0e8;
+            border-radius: 12px;
+            padding: 1.2rem 1.5rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+        }
+        .faq-item {
+            background: white;
+            border-radius: 12px;
+            padding: 0.8rem 1.5rem;
+            margin: 1rem 0;
+            border: 1px solid #dde5ec;
+        }
+        .faq-item h3 {
+            margin-top: 0.2rem;
+            color: #1f5065;
+        }
+        code {
+            background: #eef3f7;
+            padding: 0.2rem 0.5rem;
+            border-radius: 6px;
+            font-size: 0.95rem;
+        }
+        .kalkulator-note {
+            background: #eef7f0;
+            border-radius: 12px;
+            padding: 1rem 1.5rem;
+            border: 1px solid #b6d7c0;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #d0dce5;
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- INTRO -->
+    <p><strong>Aksjesparekonto kalkulator</strong> er et verktøy som hjelper deg å beregne fremtidig verdi av aksjesparing med skattefordeler. Ved å forstå hvordan rentes rente og skjermingsfradrag påvirker avkastningen, kan du ta smartere investeringsbeslutninger. Denne artikkelen gir deg alt du trenger: hva en <strong>aksjesparekonto kalkulator</strong> er, hvorfor den er viktig, hvordan du bruker den, formelen bak, praktiske eksempler, tips og svar på vanlige spørsmål.</p>
+
+    <!-- SEKSJON 1 -->
+    <h2>Hva er en aksjesparekonto kalkulator?</h2>
+    <p>En <strong>aksjesparekonto kalkulator</strong> er et digitalt verktøy som estimerer verdien av en aksjesparekonto (ASK) over tid. Den tar hensyn til:</p>
+    <ul>
+        <li><strong>Innskudd</strong> – engangsbeløp eller månedlig sparing.</li>
+        <li><strong>Forventet årlig avkastning</strong> – prosentvis vekst.</li>
+        <li><strong>Tidshorisont</strong> – antall år du sparer.</li>
+        <li><strong>Skjermingsfradrag</strong> – den skattefrie delen av gevinsten (justeres årlig).</li>
+        <li><strong>Uttaksbeskatning</strong> – 37,8 % skatt på gevinst (2025-sats, men kan variere).</li>
+    </ul>
+    <p>I motsetning til vanlige aksjekalkulatorer tar ASK-kalkulatoren hensyn til den utsatte skattefordelen. Uten en <strong>aksjesparekonto kalkulator</strong> er det lett å underestimere hvor mye skatt du sparer ved å la pengene vokse skattefritt i mange år.</p>
+
+    <!-- SEKSJON 2 -->
+    <h2>Hvorfor er en aksjesparekonto kalkulator viktig?</h2>
+    <p>Mange investorer overser den reelle effekten av skatteutsettelse. En <strong>aksjesparekonto kalkulator</strong> synliggjør:</p>
+    <ul>
+        <li><strong>Forskjellen på ASK og vanlig aksjehandel</strong> – på vanlig konto betaler du skatt hvert år ved realisasjon, mens ASK utsetter skatten til uttak.</li>
+        <li><strong>Rentes rente-effekten</strong> – pengene du ellers ville betalt i skatt, forblir investert og vokser.</li>
+        <li><strong>Optimalt sparebeløp</strong> – kalkulatoren viser hvor mye du må spare for å nå et mål, for eksempel 1 million kroner.</li>
+        <li><strong>Sammenligning av strategier</strong> – engangssum vs. månedlig sparing, høy vs. lav avkastning.</li>
+    </ul>
+    <div class="highlight-box">
+        <p><strong>💡 Visste du?</strong> Ifølge SSB sparer over 1 million nordmenn i aksjesparekonto. Riktig bruk av en <strong>aksjesparekonto kalkulator</strong> kan bety forskjellen på hundretusener i ekstra avkastning over 20 år.</p>
+    </div>
+
+    <!-- SEKSJON 3 -->
+    <h2>Slik bruker du en aksjesparekonto kalkulator</h2>
+    <p>De fleste <strong>aksjesparekonto kalkulator</strong>-verktøyene følger samme logikk. Slik går du frem:</p>
+    <ol>
+        <li><strong>Velg innskuddstype:</strong> Engangsbeløp, månedlig sparing, eller en kombinasjon.</li>
+        <li><strong>Oppgi beløp:</strong> For eksempel 100 000 kr i startinnskudd og 5 000 kr per måned.</li>
+        <li><strong>Forventet avkastning:</strong> Historisk avkastning på Oslo Børs er ca. 7–9 % årlig. Velg 6–8 % for konservativt anslag.</li>
+        <li><strong>Tidshorisont:</strong> 10, 15, 20 år eller mer.</li>
+        <li><strong>Skattesats:</strong> Standard 37,8 % (oppdateres årlig). Kalkulatoren trekker dette fra gevinsten ved simulert uttak.</li>
+        <li><strong>Skjermingsfradrag:</strong> Noen kalkulatorer inkluderer en justerbar faktor (ca. 1–2 % årlig). Dette reduserer skattegrunnlaget.</li>
+    </ol>
+    <p>Trykk på «Beregn» og få et detaljert sammendrag: totalt innskudd, forventet verdi før skatt, skattebeløp, og verdi etter skatt. En god <strong>aksjesparekonto kalkulator</strong> viser også en graf over veksten.</p>
+
+    <!-- SEKSJON 4 -->
+    <h2>Formel med eksempel</h2>
+    <p>De fleste kalkulatorer bruker en modifisert fremtidsverdiformel. For enkelhets skyld viser vi grunnstrukturen:</p>
+    <p><strong>Fremtidig verdi (FV) = (P × (1 + r)^n) + (M × ((1 + r)^n – 1) / r)</strong></p>
+    <ul>
+        <li><strong>P</strong> = engangsinnskudd</li>
+        <li><strong>M</strong> = månedlig innskudd (justert for årlig frekvens)</li>
+        <li><strong>r</strong> = årlig avkastning / 12 (månedlig)</li>
+        <li><strong>n</strong> = totalt antall måneder</li>
+    </ul>
+    <p>Deretter beregnes skatten: <strong>Skatt = (FV – totalt innskudd – skjermingsgrunnlag) × 37,8 %</strong>. Skjermingsfradrag utgjør en fastsatt prosent av innskudd per år (typisk 1,5–2 %).</p>
+
+    <div class="example-card">
+        <h3>📐 Regneeksempel</h3>
+        <p><strong>Forutsetninger:</strong> Engangsinnskudd 200 000 kr, 8 % årlig avkastning, 15 år, skjermingsfradrag 1,5 % årlig, skatt 37,8 %.</p>
+        <ul>
+            <li>Brutto verdi før skatt: 200 000 × (1,08)^15 ≈ <strong>634 000 kr</strong></li>
+            <li>Totalt innskudd: 200 000 kr</li>
+            <li>Skjermingsgrunnlag (omtrentlig): 200 000 × 1,5 % × 15 ≈ 45 000 kr</li>
+            <li>Skatt: (634 000 – 200 000 – 45 000) × 37,8 % ≈ <strong>147 000 kr</strong></li>
+            <li><strong>Verdi etter skatt: ≈ 487 000 kr</strong></li>
+        </ul>
+        <p>Uten ASK (årlig skatt) ville verdien etter skatt vært ca. 410 000 kr. En <strong>aksjesparekonto kalkulator</strong> viser tydelig fordelen på 77 000 kr.</p>
+    </div>
+
+    <!-- SEKSJON 5 -->
+    <h2>Praktiske eksempler</h2>
+    <p>Her er to scenarioer som viser hvordan en <strong>aksjesparekonto kalkulator</strong> kan hjelpe deg å planlegge.</p>
+
+    <h3>Eksempel 1: Månedlig sparing mot boligsparing</h3>
+    <p>Kari sparer 4 000 kr/mnd i ASK med 7 % avkastning. Etter 10 år viser kalkulatoren:</p>
+    <ul>
+        <li>Total innskudd: 480 000 kr</li>
+        <li>Brutto verdi: ca. 690 000 kr</li>
+        <li>Skatt (med skjerming): ca. 60 000 kr</li>
+        <li><strong>Netto: 630 000 kr</strong> – nok til egenkapital i mange byer.</li>
+    </ul>
+    <p>Uten ASK ville netto vært omtrent 580 000 kr. <strong>Kalkulatoren</strong> viser at ASK gir 50 000 kr ekstra.</p>
+
+    <h3>Eksempel 2: Engangsarv på 500 000 kr</h3>
+    <p>Ole arver 500 000 kr og vurderer ASK i 20 år (8 % avkastning). Kalkulatoren gir:</p>
+    <ul>
+        <li>Brutto verdi: 2 330 000 kr</li>
+        <li>Skatt: ca. 550 000 kr</li>
+        <li><strong>Netto: 1 780 000 kr</strong></li>
+    </ul>
+    <p>Ved vanlig aksjehandel (årlig skatt

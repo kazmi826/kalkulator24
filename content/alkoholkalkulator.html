@@ -1,0 +1,111 @@
+```html
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alkoholkalkulator – forstå promille og alkoholforbruk</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            max-width: 820px;
+            margin: 2rem auto;
+            padding: 1.2rem;
+            color: #1e1e1e;
+            background: #fafafa;
+        }
+        h2 { border-bottom: 2px solid #2c7da0; padding-bottom: 0.3rem; margin-top: 2.2rem; color: #1f4e6f; }
+        h3 { margin-top: 1.8rem; color: #2a5f7a; }
+        p { margin: 1rem 0; }
+        ul, ol { padding-left: 1.5rem; }
+        li { margin: 0.4rem 0; }
+        strong { color: #1e3a4b; }
+        .faq-item { background: #eef4f8; padding: 1rem; border-radius: 12px; margin: 1.5rem 0; }
+        .faq-item p { margin: 0.3rem 0; }
+        .example-box { background: #ffffff; border-left: 5px solid #2c7da0; padding: 1rem 1.2rem; border-radius: 0 12px 12px 0; margin: 1.8rem 0; box-shadow: 0 2px 6px rgba(0,0,0,0.03); }
+        .note { background: #f9f3e0; padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.95rem; }
+        hr { margin: 2rem 0; border: 0; border-top: 1px solid #d0dde5; }
+    </style>
+</head>
+<body>
+
+    <h2>Hva er en alkoholkalkulator?</h2>
+    <p>En <strong>alkoholkalkulator</strong> er et digitalt verktøy (ofte en nettside eller app) som beregner omtrentlig promille i blodet basert på mengde alkohol, tidsrom, kroppsvekt, kjønn og andre faktorer. Den gir et estimat på hvor mye alkohol som er i kroppen, og hvor lang tid det tar før alkoholen er forbrent. Mange bruker <strong>alkoholkalkulator</strong> for å få en pekepinn på om de er under lovlig promillegrense før de setter seg bak rattet.</p>
+    <p>De fleste <strong>alkoholkalkulatorer</strong> bygger på standardiserte formler (Widmark-formelen) og tar hensyn til at kvinner og menn har ulik væskeprosent i kroppen. Verktøyet gir et <strong>teoretisk estimat</strong> – ikke en garanti. Faktorer som stoffskifte, matinntak og leverfunksjon kan påvirke den faktiske promillen.</p>
+
+    <h2>Hvorfor er en alkoholkalkulator viktig?</h2>
+    <p>Å forstå sin egen promille er avgjørende for ansvarlig alkoholbruk. En <strong>alkoholkalkulator</strong> hjelper deg å unngå farlige situasjoner som promillekjøring, og gir innsikt i hvor raskt alkoholen brytes ned. Mange tror de er edru etter noen timer, men forbrenningen tar lengre tid enn man tror – spesielt etter mye inntak.</p>
+    <ul>
+        <li><strong>Trafikksikkerhet:</strong> I Norge er promillegrensen 0,2. En kalkulator kan indikere om du er over grensen.</li>
+        <li><strong>Helsebevissthet:</strong> Gir et realistisk bilde av eget alkoholforbruk i forhold til anbefalinger.</li>
+        <li><strong>Planlegging:</strong> Du kan beregne når du sannsynligvis er edru igjen – nyttig før kjøring eller jobb.</li>
+        <li><strong>Unngå sosialt press:</strong> Tallene kan hjelpe deg å si nei til flere drinker.</li>
+    </ul>
+    <p>En <strong>alkoholkalkulator</strong> erstatter <strong>ikke</strong> en alkotest, men den gir en viktig pekepinn. Bruk den alltid som et veiledende verktøy.</p>
+
+    <h2>Slik bruker du en alkoholkalkulator</h2>
+    <p>De fleste nettbaserte <strong>alkoholkalkulatorer</strong> følger samme enkle fremgangsmåte:</p>
+    <ol>
+        <li><strong>Kjønn:</strong> Velg mann eller kvinne – fordelingen av kroppsvæske er forskjellig.</li>
+        <li><strong>Kroppsvekt:</strong> Oppgi vekt i kg. Dette påvirker fortynningen av alkohol i kroppen.</li>
+        <li><strong>Antall enheter alkohol:</strong> Angi hvor mange glass/øl/enheter du har drukket. Én enhet = ca. 12 g ren alkohol.</li>
+        <li><strong>Tidsrom:</strong> Hvor lang tid har du brukt på å drikke? Jo lengre tid, jo lavere promille.</li>
+        <li><strong>Beregn:</strong> Klikk på knappen – kalkulatoren viser estimert promille og forbrenningstid.</li>
+    </ol>
+    <p>Noen avanserte kalkulatorer lar deg også legge inn måltider, alkoholprosent og spesifikke drinker. <strong>Husk:</strong> Resultatet er et øyeblikksbilde, og promillen synker gradvis.</p>
+
+    <div class="example-box">
+        <h3>Formel med eksempel (Widmarks formel)</h3>
+        <p><strong>Formel (forenklet):</strong> <br>
+        Promille = (alkohol i gram) / (kroppsvekt i kg × V) – (forbrenning × timer)</p>
+        <p><strong>V (distribusjonsfaktor):</strong> Menn = 0,7 | Kvinner = 0,6</p>
+        <p><strong>Eksempel:</strong> En mann på 80 kg drikker 5 øl (5 enheter à 12 g alkohol = 60 g alkohol) over 3 timer.</p>
+        <ul>
+            <li>Alkohol i gram: 5 × 12 = 60 g</li>
+            <li>Distribusjon: 80 kg × 0,7 = 56</li>
+            <li>Teoretisk promille uten forbrenning: 60 / 56 ≈ 1,07 ‰</li>
+            <li>Forbrenning per time: ca. 0,15 ‰. Etter 3 timer: 0,15 × 3 = 0,45 ‰</li>
+            <li><strong>Estimert promille:</strong> 1,07 – 0,45 = <strong>0,62 ‰</strong></li>
+        </ul>
+        <p class="note">Dette er et forenklet regnestykke. En <strong>alkoholkalkulator</strong> gjør alle disse beregningene automatisk og mer presist.</p>
+    </div>
+
+    <h2>Praktiske eksempler</h2>
+    <h3>Eksempel 1: Fest og kjøring dagen etter</h3>
+    <p>Kari (65 kg, kvinne) drikker 6 glass vin (6 enheter) i løpet av 5 timer. Hun skal kjøre bil kl. 08.00 neste morgen. <strong>Alkoholkalkulator</strong> viser at hun har ca. 0,8 ‰ rett etter inntak, og at det tar omtrent 8–9 timer før promillen er under 0,2. Hun bør vente minst til kl. 11–12 før hun kjører, avhengig av stoffskifte.</p>
+    <h3>Eksempel 2: Mann på julebord</h3>
+    <p>Ola (90 kg, mann) drikker 8 øl (8 enheter) på 4 timer. Kalkulatoren gir en promille på ca. 1,2 ‰. Han føler seg påvirket, men tror han er edru etter 4 timer. Ifølge <strong>alkoholkalkulator</strong> vil han først være under 0,2 ‰ etter 10–11 timer. Han tar heller en taxi.</p>
+
+    <h2>Tips for mer nøyaktig bruk av alkoholkalkulator</h2>
+    <ul>
+        <li><strong>Vær ærlig om antall enheter:</strong> Underrapportering gir falsk trygghet.</li>
+        <li><strong>Ta hensyn til mat:</strong> Mat i magen forsinker opptaket, men promillen kan likevel bli høy.</li>
+        <li><strong>Forbrenning varierer:</strong> Alder, leverhelse, medisiner og tretthet påvirker farten. En kalkulator gir et gjennomsnitt.</li>
+        <li><strong>Bruk flere kalkulatorer:</strong> Sjekk gjerne 2–3 ulike <strong>alkoholkalkulatorer</strong> for å se spennet i estimatene.</li>
+        <li><strong>Ikke stol blindt:</strong> Hvis du er i tvil – ikke kjør. En <strong>alkoholkalkulator</strong> er et hjelpemiddel, ikke et juridisk forsvar.</li>
+        <li><strong>Husk alkohol i mat og blandinger:</strong> Noen drinker og desserter inneholder alkohol som må telles med.</li>
+    </ul>
+
+    <hr>
+
+    <h2>FAQ – 5 vanlige spørsmål om alkoholkalkulator</h2>
+
+    <div class="faq-item">
+        <p><strong>1. Hvor nøyaktig er en alkoholkalkulator?</strong></p>
+        <p>En <strong>alkoholkalkulator</strong> gir en teoretisk beregning basert på gjennomsnittsverdier. Nøyaktigheten er ±20–30 % fordi individuelle faktorer som forbrenningshastighet, genetikk og nylig matinntak spiller inn. Den er et nyttig estimat, men ikke like presis som en utåndingstest eller blodprøve.</p>
+    </div>
+
+    <div class="faq-item">
+        <p><strong>2. Kan en alkoholkalkulator fortelle meg om jeg er lovlig edru?</strong></p>
+        <p>Den kan indikere sannsynlig promille, men på grunn av individuelle variasjoner bør du alltid bruke en godkjent alkotest hvis du er usikker. Mange <strong>alkoholkalkulatorer</strong> advarer om at du ikke skal stole på resultatet alene når det gjelder bilkjøring.</p>
+    </div>
+
+    <div class="faq-item">
+        <p><strong>3. Hvor lang tid tar det å forbrenne en alkoholenhet?</strong></p>
+        <p>I gjennomsnitt forbrenner kroppen ca. 0,10–0,15 ‰ per time, tilsvarende omtrent én alkoholenhet (12 g alkohol) per time for en person på 70–80 kg. En <strong>alkoholkalkulator</strong> bruker dette som standard, men forbrenningen kan være langsommere hos kvinner og eldre.</p>
+    </div>
+
+    <div class="faq-item">
+        <p><strong>4. Hvorfor spiller kjønn en rolle i alkoholkalkulatoren?</strong></p>
+        <p>Kvinner har generelt lavere andel kroppsvæske (ca. 50–55 %) enn menn (ca. 60–65 %), og mindre av enzymet alkoholdehydrogenase i magen. Derfor blir promillen høyere per enhet alkohol. En god <strong

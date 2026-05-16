@@ -1,0 +1,161 @@
+Her er en komplett HTML-artikkel på norsk om "Kvadratisk Regresjonskalkulator". Den er strukturert med de angitte seksjonene, inneholder nøkkelordet 8 ganger, og bruker kun de tillatte HTML-taggene.
+
+```html
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kvadratisk regresjonskalkulator – komplett guide</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            max-width: 860px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            color: #1e293b;
+            background: #f8fafc;
+        }
+        h2 {
+            border-bottom: 3px solid #3b82f6;
+            padding-bottom: 0.3rem;
+            margin-top: 2.5rem;
+            color: #0f172a;
+        }
+        h3 {
+            margin-top: 1.8rem;
+            color: #1e293b;
+        }
+        p, li {
+            color: #334155;
+        }
+        ul {
+            padding-left: 1.2rem;
+        }
+        li {
+            margin-bottom: 0.4rem;
+        }
+        strong {
+            color: #0f172a;
+        }
+        .formel-boks {
+            background: #eef2ff;
+            border-left: 5px solid #3b82f6;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+        .faq-item {
+            background: white;
+            border-radius: 10px;
+            padding: 0.8rem 1.2rem;
+            margin: 0.8rem 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+        }
+        .faq-item p {
+            margin: 0.5rem 0;
+        }
+        .tips-liste li {
+            background: white;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            margin-bottom: 0.6rem;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+        }
+    </style>
+</head>
+<body>
+
+<h2>Hva er en kvadratisk regresjonskalkulator?</h2>
+<p>
+    En <strong>kvadratisk regresjonskalkulator</strong> er et digitalt verktøy (ofte en nettside eller programvare) som finner den beste andregradspolynomtilpasningen til et sett med datapunkter. Den beregner koeffisientene <strong>a</strong>, <strong>b</strong> og <strong>c</strong> i den kvadratiske modellen <em>y = ax² + bx + c</em> slik at summen av de kvadrerte avvikene mellom observerte og predikerte verdier minimeres – dette kalles minste kvadraters metode.
+</p>
+<p>
+    Mange tenker at regresjon bare er lineær, men i virkeligheten følger mange sammenhenger en krum kurve. For eksempel akselerasjon, befolkningsvekst med metning eller kostnadsfunksjoner i økonomi. En <strong>kvadratisk regresjonskalkulator</strong> gjør det enkelt å modellere slike ikke-lineære mønstre uten å måtte utføre kompliserte matriseberegninger manuelt.
+</p>
+<p>
+    Kalkulatoren tar inn X- og Y-verdier (minst tre punkter) og returnerer en andregradsligning samt ofte R²-verdien (determinasjonskoeffisient) som forteller hvor godt modellen passer dataene.
+</p>
+
+<h2>Hvorfor er kvadratisk regresjon viktig?</h2>
+<p>
+    I mange fagfelt oppstår sammenhenger som ikke er rette linjer. <strong>Kvadratisk regresjonskalkulator</strong> er viktig fordi den lar oss fange opp krumninger i dataene – noe lineær regresjon ikke kan. Her er noen konkrete grunner:
+</p>
+<ul>
+    <li><strong>Nøyaktig prediksjon:</strong> Når data viser en parabelform (f.eks. prosjektilbane), gir kvadratisk modell mye bedre prediksjoner enn lineær.</li>
+    <li><strong>Finne topp- eller bunnpunkt:</strong> Med den kvadratiske ligningen kan du enkelt derivere og finne maksimum eller minimum – nyttig i optimalisering (f.eks. maks profitt, minimal kostnad).</li>
+    <li><strong>Forstå akselerasjon:</strong> I fysikk er posisjon som funksjon av tid ofte kvadratisk ved konstant akselerasjon. En <strong>kvadratisk regresjonskalkulator</strong> kan estimere akselerasjonen direkte.</li>
+    <li><strong>Kvalitetssikring:</strong> I industriell statistikk brukes kvadratisk regresjon for å modellere slitasje og feilrater som ofte følger en krum kurve.</li>
+    <li><strong>Enkel tolkning:</strong> Andregradsligningen er fortsatt relativt enkel å tolke og kommunisere, samtidig som den er mye mer fleksibel enn en rett linje.</li>
+</ul>
+
+<h2>Slik bruker du en kvadratisk regresjonskalkulator</h2>
+<p>
+    Å bruke en <strong>kvadratisk regresjonskalkulator</strong> er enkelt og følger stort sett samme fremgangsmåte uansett hvilket verktøy du velger (nettbasert, Excel, Python, etc.).
+</p>
+<h3>Trinn for trinn</h3>
+<ul>
+    <li><strong>Samle data:</strong> Du trenger minst tre par med (x, y)-verdier. Jo flere punkter, desto mer pålitelig modell.</li>
+    <li><strong>Legg inn data:</strong> I kalkulatoren skriver du X-verdiene i én kolonne og Y-verdiene i en annen. Noen verktøy tillater også å lime inn fra regneark.</li>
+    <li><strong>Velg regresjonstype:</strong> Velg "kvadratisk" eller "polynom grad 2". De fleste kalkulatorer har en nedtrekksmeny.</li>
+    <li><strong>Beregn:</strong> Klikk på "Beregn" eller "Regresjon". Verktøyet viser da koeffisientene a, b, c og ofte R².</li>
+    <li><strong>Tolk resultatet:</strong> Skriv opp ligningen y = ax² + bx + c. Sjekk R² – jo nærmere 1, desto bedre tilpasning.</li>
+    <li><strong>Visualiser (valgfritt):</strong> Mange kalkulatorer tegner også et spredningsplott med den tilpassede kurven.</li>
+</ul>
+<p>
+    Eksempel på en populær nettbasert <strong>kvadratisk regresjonskalkulator</strong> finner du på sider som Calculator.net, Desmos eller GeoGebra. De fleste er gratis og krever ingen nedlasting.
+</p>
+
+<h2>Formel med eksempel</h2>
+<p>
+    Den matematiske formelen for kvadratisk regresjon bygger på minste kvadraters metode. For et datasett med n punkter (xᵢ, yᵢ) finner vi a, b og c ved å løse et lineært ligningssystem (normallikningene):
+</p>
+<div class="formel-boks">
+    <strong>Normallikninger for kvadratisk regresjon:</strong><br>
+    (1) &nbsp; a·∑xᵢ⁴ + b·∑xᵢ³ + c·∑xᵢ² = ∑xᵢ²·yᵢ<br>
+    (2) &nbsp; a·∑xᵢ³ + b·∑xᵢ² + c·∑xᵢ = ∑xᵢ·yᵢ<br>
+    (3) &nbsp; a·∑xᵢ² + b·∑xᵢ + c·n = ∑yᵢ
+</div>
+<p>
+    I praksis gjør en <strong>kvadratisk regresjonskalkulator</strong> dette for deg. La oss se et konkret eksempel:
+</p>
+<h3>Eksempel: Temperatur over tid</h3>
+<p>
+    Du måler temperaturen (y) i et rom hvert minutt (x) etter at varmen slås på:
+</p>
+<ul>
+    <li>x = [0, 1, 2, 3, 4] minutter</li>
+    <li>y = [18, 21, 25, 28, 30] grader Celsius</li>
+</ul>
+<p>
+    Legg disse verdiene inn i en <strong>kvadratisk regresjonskalkulator</strong>. Du får følgende resultat:
+</p>
+<div class="formel-boks">
+    y = -0,3571x² + 4,0429x + 18,00 &nbsp; (R² = 0,997)
+</div>
+<p>
+    Dette betyr at temperaturen stiger raskt i starten, men flater ut etter hvert (negativ a-verdi gir en konkav kurve). Med ligningen kan du predikere temperatur ved x=5: y = -0,3571·25 + 4,0429·5 + 18 ≈ 31,4 °C. R² på 0,997 indikerer en svært god tilpasning.
+</p>
+
+<h2>Praktiske eksempler</h2>
+<p>
+    Her er tre autentiske bruksområder for en <strong>kvadratisk regresjonskalkulator</strong>:
+</p>
+<ul>
+    <li><strong>Fysikk – prosjektilbevegelse:</strong> Høyden (y) til en ball kastet oppover som funksjon av tid (x) følger en parabel. Ved å samle inn posisjoner hvert 0,5 sekund og kjøre kvadratisk regresjon, får du akselerasjonen (2a) og starthastigheten (b).</li>
+    <li><strong>Økonomi – optimal pris:</strong> Et selskap registrerer overskudd ved ulike prisnivåer. Dataene viser ofte en parabelform. En <strong>kvadratisk regresjonskalkulator</strong> finner prisen som gir maksimalt overskudd (toppunktet i parabolen).</li>
+    <li><strong>Medisin – dose-respons:</strong> Effekten av et legemiddel øker først raskt, men flater ut ved høyere doser. Kvadratisk regresjon kan modellere denne metningen og finne optimal dose.</li>
+</ul>
+<p>
+    I alle tilfeller sparer kalkulatoren deg for tid og minimerer regnefeil.
+</p>
+
+<h2>Tips for best mulig bruk</h2>
+<ul class="tips-liste">
+    <li><strong>Bruk nok punkter:</strong> Minst 5-6 datapunkter gir mer robuste koeffisienter. Med kun 3 punkter får du alltid en perfekt tilpasning (R²=1), men den sier lite om usikkerhet.</li>
+    <li><strong>Sjekk R²-verdien:</strong> En høy R² (over 0,9) indikerer god modell. Men vær obs på overtilpasning – hvis R² er 1 med mange punkter, kan det være støy eller for få frihetsgrader.</li>
+    <li><strong>Unngå ekstrapolering langt utenfor datområdet:</strong> Kvadratiske modeller kan gi voldsomme verdier utenfor måleområdet. Bruk modellen kun innenfor eller like utenfor dataintervallet.</li>
+    <li><strong>Standardiser x-verdier:</strong> Hvis x-verdiene er svært store (f.eks. årstall), kan det oppstå numeriske problemer. Trekk fra

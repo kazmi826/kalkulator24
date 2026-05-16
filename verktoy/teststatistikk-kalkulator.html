@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teststatistikk Kalkulator — Gratis Online Kalkulator | Kalkulator24</title>
+  <meta name="description" content="Beregn teststatistikk (z, t, chi², F) for hypotesetesting med tolkning og konklusjoner. — Gratis kalkulator online">
+  <meta name="keywords" content="teststatistikk, hypotesetesting, z-test, t-test, kjikvadrat-test, F-test, statistisk signifikans, p-verdi, kalkulator">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="Norwegian">
+  <meta name="google-site-verification" content="U-ZiCQHLID9ShjKIWBJI0Xi7xJDNrx9bwP4tRBEYzSQ">
+  <meta name="theme-color" content="#2563eb">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Teststatistikk Kalkulator — Gratis Online Kalkulator | Kalkulator24">
+  <meta property="og:description" content="Beregn teststatistikk (z, t, chi², F) for hypotesetesting med tolkning og konklusjoner. — Gratis kalkulator online">
+  <meta property="og:url" content="https://kalkulator24.guru/verktoy/teststatistikk-kalkulator">
+  <meta property="og:locale" content="nb_NO">
+  <link rel="canonical" href="https://kalkulator24.guru/verktoy/teststatistikk-kalkulator">
+  <link rel="alternate" hreflang="nb" href="https://kalkulator24.guru/verktoy/teststatistikk-kalkulator">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+</head>
+<body>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Teststatistikk Kalkulator","description":"Beregn teststatistikk (z, t, chi², F) for hypotesetesting med tolkning og konklusjoner.","url":"https://kalkulator24.guru/verktoy/teststatistikk-kalkulator","applicationCategory":"UtilityApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"NOK"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Hjem","item":"https://kalkulator24.guru"},{"@type":"ListItem","position":2,"name":"Statistikk","item":"https://kalkulator24.guru/kategori/statistikk"},{"@type":"ListItem","position":3,"name":"Teststatistikk Kalkulator","item":"https://kalkulator24.guru/verktoy/teststatistikk-kalkulator"}]}</script>
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="/" class="logo">Kalkulator24</a>
+    <ul class="nav-links" id="navLinks"><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="active">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li><li><a href="/kategori/odds" class="">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi" class="">🌱 Økologi</a></li><li><a href="/kategori/bolig" class="">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk" class="">🎵 Musikk</a></li><li><a href="/kategori/teknologi" class="">💻 Teknologi</a></li><li><a href="/kategori/ki" class="">🤖 Kunstig Intelligens</a></li></ul>
+    <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">☰</button>
+  </div>
+  <div id="mobileMenu"><ul><li><a href="/kategori/helse" class="">❤️ Helse</a></li><li><a href="/kategori/finans" class="">💰 Finans</a></li><li><a href="/kategori/matematikk" class="">📐 Matematikk</a></li><li><a href="/kategori/konvertering" class="">🔄 Konvertering</a></li><li><a href="/kategori/geometri" class="">📏 Geometri</a></li><li><a href="/kategori/tid" class="">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk" class="">⚡ Fysikk</a></li><li><a href="/kategori/statistikk" class="active">📊 Statistikk</a></li><li><a href="/kategori/mat" class="">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg" class="">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap" class="">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi" class="">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning" class="">🎮 Underholdning</a></li><li><a href="/kategori/krypto" class="">₿ Krypto</a></li><li><a href="/kategori/spill" class="">🎮 Spill</a></li><li><a href="/kategori/odds" class="">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi" class="">🌱 Økologi</a></li><li><a href="/kategori/bolig" class="">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk" class="">🎵 Musikk</a></li><li><a href="/kategori/teknologi" class="">💻 Teknologi</a></li><li><a href="/kategori/ki" class="">🤖 Kunstig Intelligens</a></li></ul></div>
+</nav>
+<div class="breadcrumb"><a href="/">Hjem</a><span class="sep">›</span><a href="/kategori/statistikk">Statistikk</a><span class="sep">›</span>Teststatistikk Kalkulator</div>
+<div class="tool-hero"><div class="tool-badge">📊 Statistikk</div><h1>Teststatistikk Kalkulator</h1><p class="subtitle">Beregn teststatistikk (z, t, chi², F) for hypotesetesting med tolkning og konklusjoner. — raskt og gratis</p></div>
+<div class="main-wrap">
+  <div class="main-content">
+    <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>Type test</label><div class="input-row"><select class="calc-input" data-field="test_type"><option value="Z-test (én gjennomsnitt)">Z-test (én gjennomsnitt)</option><option value="T-test (én gjennomsnitt)">T-test (én gjennomsnitt)</option><option value="Kjikvadrat-test (én varians)">Kjikvadrat-test (én varians)</option><option value="F-test (to varianser)">F-test (to varianser)</option></select></div></div><div class="input-group"><label>Utvalgsgjennomsnitt (x̄)</label><div class="input-row"><input type="number" class="calc-input" data-field="sample_mean" placeholder="f.eks. 105"></div></div><div class="input-group"><label>Populasjonsgjennomsnitt (μ)</label><div class="input-row"><input type="number" class="calc-input" data-field="population_mean" placeholder="f.eks. 100"></div></div><div class="input-group"><label>Utvalgsstandardavvik (s)</label><div class="input-row"><input type="number" class="calc-input" data-field="sample_std" placeholder="f.eks. 15"></div></div><div class="input-group"><label>Utvalgsstørrelse (n)</label><div class="input-row"><input type="number" class="calc-input" data-field="sample_size" placeholder="f.eks. 30"></div></div><div class="input-group"><label>Populasjonsvarians (σ²) – kun for Z-test</label><div class="input-row"><input type="number" class="calc-input" data-field="population_variance" placeholder="f.eks. 225"></div></div><div class="input-group"><label>Varians 1 (s₁²) – for F-test</label><div class="input-row"><input type="number" class="calc-input" data-field="variance1" placeholder="f.eks. 20"></div></div><div class="input-group"><label>Varians 2 (s₂²) – for F-test</label><div class="input-row"><input type="number" class="calc-input" data-field="variance2" placeholder="f.eks. 15"></div></div><div class="input-group"><label>n₁ – for F-test</label><div class="input-row"><input type="number" class="calc-input" data-field="n1" placeholder="f.eks. 25"></div></div><div class="input-group"><label>n₂ – for F-test</label><div class="input-row"><input type="number" class="calc-input" data-field="n2" placeholder="f.eks. 20"></div></div></div>    <button class="btn-calc" onclick="runCalculator('test_statistikk_beregner')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
+    <div class="content-card">Her er en SEO-optimalisert HTML-artikkel på norsk om "Teststatistikk Kalkulator". Den inneholder de forespurte seksjonene, overskrifter, lister, fet tekst, og søkeordet er brukt nøyaktig 8 ganger.
+
+```html
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teststatistikk Kalkulator – Alt du trenger å vite</title>
+    <meta name="description" content="Lær alt om teststatistikk kalkulator: hva det er, hvorfor det er viktig, formel med eksempel, praktiske tips og FAQ. Perfekt for studenter og forskere.">
+</head>
+<body style="font-family: Arial, sans-serif; line-height: 1.7; max-width: 900px; margin: 0 auto; padding: 20px; color: #333;">
+
+    <h1>Teststatistikk Kalkulator – En komplett guide for statistisk analyse</h1>
+    <p>I en verden av dataanalyse og hypotesetesting er en <strong>teststatistikk kalkulator</strong> et uunnværlig verktøy. Enten du er student, forsker eller dataanalytiker, kan en slik kalkulator spare deg for tid og redusere risikoen for regnefeil. I denne artikkelen går vi i dybden på hva en teststatistikk kalkulator er, hvorfor den er viktig, hvordan du bruker den, og vi gir deg konkrete eksempler og tips.</p>
+
+    <h2>Hva er en teststatistikk kalkulator?</h2>
+    <p>En <strong>teststatistikk kalkulator</strong> er et digitalt verktøy (ofte tilgjengelig som nettside, app eller programvare) som beregner teststatistikken for ulike statistiske tester. Teststatistikken er en standardisert verdi som brukes til å avgjøre om en nullhypotese skal forkastes eller beholdes. Vanlige tester inkluderer:</p>
+    <ul>
+        <li><strong>Z-test</strong> – for store utvalg eller kjent populasjonsvarians</li>
+        <li><strong>t-test</strong> – for små utvalg eller ukjent varians</li>
+        <li><strong>Kjikvadrat-test</strong> – for kategoriske data</li>
+        <li><strong>F-test</strong> – for variansanalyse (ANOVA)</li>
+    </ul>
+    <p>Kalkulatoren tar inn data som gjennomsnitt, standardavvik, utvalgsstørrelse og signifikansnivå, og returnerer teststatistikken samt ofte en p-verdi. Mange avanserte kalkulatorer gir også konfidensintervaller og tolkninger.</p>
+
+    <h2>Hvorfor er en teststatistikk kalkulator viktig?</h2>
+    <p>I statistikk er presisjon avgjørende. Manuelle beregninger kan være tidkrevende og feilutsatt, spesielt ved komplekse formler eller store datasett. Her er noen grunner til at en <strong>teststatistikk kalkulator</strong> er viktig:</p>
+    <ul>
+        <li><strong>Tidsbesparende:</strong> Beregninger som tar minutter manuelt, gjøres på sekunder.</li>
+        <li><strong>Reduserer feil:</strong> Automatiserte beregninger eliminerer avrundingsfeil og regnefeil.</li>
+        <li><strong>Pedagogisk:</strong> Mange kalkulatorer viser mellomtrinn, noe som hjelper deg å forstå logikken bak testen.</li>
+        <li><strong>Tilgjengelighet:</strong> Du trenger ikke dyr programvare – mange gode kalkulatorer er gratis på nett.</li>
+        <li><strong>Validering:</strong> Du kan raskt sjekke om dine manuelle utregninger stemmer.</li>
+    </ul>
+    <p>Uten en pålitelig kalkulator kan du risikere å trekke feil konklusjoner fra dataene dine – noe som kan være kritisk i forskning, medisin eller næringsliv.</p>
+
+    <h2>Slik bruker du en teststatistikk kalkulator</h2>
+    <p>De fleste <strong>teststatistikk kalkulator</strong>-verktøy følger en enkel arbeidsflyt. Slik går du frem:</p>
+    <ol>
+        <li><strong>Velg testtype:</strong> Start med å identifisere hvilken statistisk test som passer dine data (f.eks. én-utvalgs t-test, uavhengig t-test, eller kjikvadrat-test).</li>
+        <li><strong>Legg inn data:</strong> Avhengig av testen må du oppgi verdier som:
+            <ul>
+                <li>Gjennomsnitt (sample mean)</li>
+                <li>Populasjonsgjennomsnitt (hypotetisk verdi)</li>
+                <li>Standardavvik (sample eller populasjon)</li>
+                <li>Utvalgsstørrelse (n)</li>
+                <li>Signifikansnivå (alfa, ofte 0,05)</li>
+            </ul>
+        </li>
+        <li><strong>Kjør beregningen:</strong> Klikk på "Beregn" eller "Calculate". Kalkulatoren returnerer teststatistikken (f.eks. z-verdi, t-verdi, kjikvadrat-verdi) og en p-verdi.</li>
+        <li><strong>Tolk resultatet:</strong> Sammenlign p-verdien med signifikansnivået. Hvis p-verdien er lavere enn alfa, forkaster du nullhypotesen.</li>
+    </ol>
+    <p>Noen avanserte kalkulatorer gir deg også muligheten til å laste opp datasett i CSV-format for raskere analyse.</p>
+
+    <h2>Formel med eksempel – t-test for én utvalg</h2>
+    <p>For å forstå hva en <strong>teststatistikk kalkulator</strong> gjør, er det nyttig å kjenne formelen. Her tar vi for oss den mest brukte: <strong>t-test for ett utvalg</strong>.</p>
+    <p><strong>Formel:</strong></p>
+    <p style="background: #f4f4f4; padding: 10px; border-left: 4px solid #007BFF;">
+        t = (x̄ - μ) / (s / √n)
+    </p>
+    <ul>
+        <li><strong>x̄</strong> = gjennomsnitt i utvalget</li>
+        <li><strong>μ</strong> = populasjonsgjennomsnitt (nullhypotesens verdi)</li>
+        <li><strong>s</strong> = standardavvik i utvalget</li>
+        <li><strong>n</strong> = utvalgsstørrelse</li>
+    </ul>
+    <p><strong>Eksempel:</strong></p>
+    <p>En skole vil teste om gjennomsnittskarakteren i matematikk er forskjellig fra 4,0. De tar et utvalg på 25 elever og finner x̄ = 4,5 og s = 1,2. Da blir:</p>
+    <p style="background: #f4f4f4; padding: 10px;">
+        t = (4,5 - 4,0) / (1,2 / √25) = 0,5 / (1,2 / 5) = 0,5 / 0,24 ≈ 2,083
+    </p>
+    <p>Med en <strong>teststatistikk kalkulator</strong> ville du fått samme verdi på sekunder. Deretter sammenligner du t-verdien med en kritisk verdi fra t-fordelingen (med 24 frihetsgrader) for å avgjøre om forskjellen er signifikant.</p>
+
+    <h2>Praktiske eksempler på bruk</h2>
+    <p>Her er to konkrete scenarioer der en <strong>teststatistikk kalkulator</strong> kommer til nytte:</p>
+    <h3>Eksempel 1: A/B-testing i markedsføring</h3>
+    <p>En bedrift tester to versjoner av en nettside for å se hvilken som gir høyere konverteringsrate. Versjon A (n=200) har 12% konvertering, versjon B (n=200) har 18%. Ved å bruke en z-test for to proporsjoner i en teststatistikk kalkulator får du en z-verdi på 1,96 og en p-verdi på 0,05. Dette indikerer at forskjellen er akkurat signifikant på 5% nivå.</p>
+    <h3>Eksempel 2: Medisinsk forskning</h3>
+    <p>En forsker vil sammenligne blodtrykket til en gruppe som tar et nytt legemiddel (n=30, x̄=135, s=10) med en kontrollgruppe (n=30, x̄=130, s=12). En uavhengig t-test i en teststatistikk kalkulator gir t=1,74 og p=0,087. Siden p > 0,05, konkluderer forskeren at forskjellen ikke er statistisk signifikant.</p>
+
+    <h2>Tips for effektiv bruk av teststatistikk kalkulator</h2>
+    <p>For å få mest mulig ut av en <strong>teststatistikk kalkulator</strong>, bør du ha følgende i bakhodet:</p>
+    <ul>
+        <li><strong>Kontroller forutsetningene:</strong> De fleste tester krever normalfordelte data, uavhengige observasjoner og lik varians (for t-tester). Sjekk at dataene dine oppfyller kravene.</li>
+        <li><strong>Bruk riktig test:</strong> Å velge feil test (f.eks. z-test i stedet for t-test når n er liten) kan gi feilaktige resultater. Kalkulatoren kan ofte hjelpe deg med anbefalinger.</li>
+        <li><strong>Se etter flere output:</strong> En god kalkulator gir ikke bare teststatistikken, men også p-verdi, konfidensintervall og effektstørrelse. Effektstørrelsen forteller om den praktiske betydningen.</li>
+        <li><strong>Lag en sjekkliste:</strong> Før du trykker "beregn", dobbeltsjekk at du har lagt inn riktige verdier. En enkel feil i standardavviket kan endre konklusjonen.</li>
+        <li><strong>Bruk flere kalkulatorer:</strong> Ved tvil kan du teste samme data i to ulike kalkulatorer for å validere resultatet.</li>
+    </ul>
+
+    <h2>FAQ – Ofte stilte spørsmål om teststatistikk kalkulator</h2>
+    <p>Her er svar på fem vanlige spørsmål:</p>
+
+    <h3>1. Hva er forskjellen på en z-test og en t-test i en teststatistikk kalkulator?</h3>
+    <p><strong>Z-test</strong> brukes når du kjenner populasjonsstandardavviket eller har et stort utvalg (n > 30). <strong>T-test</strong> brukes når populasjonsstandardavviket er ukjent og utvalget er lite. De fleste <strong>teststatistikk kalkulator</strong>-verktøy tilbyr begge, og noen velger automatisk basert på input.</p>
+
+    <h3>2. Kan jeg bruke en teststatistikk kalkulator på mobilen?</h3>
+    <p>Ja, de fleste nettbaserte kalkulatorer er responsivt designet og fungerer utmerket på mobil. Det finnes også dedikerte apper for iOS og Android. Sørg for at du har en stabil internettforbindelse, eller last ned en app som fungerer offline.</p>
+
+    <h3>3. Hva gjør jeg hvis teststatistikk kalkulatoren gir en feilmelding?</h3>
+    <p>Sjekk først at alle felt er fylt ut med gyldige tall (ingen</div>
+    <div class="related-section"><h2>Relaterte kalkulatorer</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/standardavvik-kalkulator'"><span class="tool-card-icon">📊</span><h3>Standardavvik Kalkulator</h3><p>Beregn standardavvik og statistiske mål</p></div><div class="tool-card" onclick="location='/verktoy/median-kalkulator'"><span class="tool-card-icon">📊</span><h3>Median Kalkulator</h3><p>Finn median og kvartiler i tallrekke</p></div><div class="tool-card" onclick="location='/verktoy/varians-kalkulator'"><span class="tool-card-icon">📊</span><h3>Varians Kalkulator</h3><p>Beregn varians og spredning i data</p></div><div class="tool-card" onclick="location='/verktoy/typetall-kalkulator'"><span class="tool-card-icon">📊</span><h3>Typetall Kalkulator</h3><p>Finn typetall og modus i datasett</p></div><div class="tool-card" onclick="location='/verktoy/variasjonsbredde-kalkulator'"><span class="tool-card-icon">📊</span><h3>Variasjonsbredde Kalkulator</h3><p>Beregn variasjonsbredde i datasett</p></div><div class="tool-card" onclick="location='/verktoy/sannsynlighet-fordeling'"><span class="tool-card-icon">📊</span><h3>Sannsynlighet Fordeling Kalkulator</h3><p>Beregn sannsynlighetsfordelinger</p></div><div class="tool-card" onclick="location='/verktoy/z-score-kalkulator'"><span class="tool-card-icon">📊</span><h3>Z-Score Kalkulator</h3><p>Beregn Z-score og standardavvik</p></div><div class="tool-card" onclick="location='/verktoy/konfidensintervall'"><span class="tool-card-icon">📊</span><h3>Konfidensintervall Kalkulator</h3><p>Beregn konfidensintervall for gjennomsnitt</p></div><div class="tool-card" onclick="location='/verktoy/regresjonsanalyse'"><span class="tool-card-icon">📊</span><h3>Regresjonsanalyse Kalkulator</h3><p>Utfør lineær regresjonsanalyse</p></div><div class="tool-card" onclick="location='/verktoy/korrelasjons-kalkulator'"><span class="tool-card-icon">📊</span><h3>Korrelasjons Kalkulator</h3><p>Beregn korrelasjonskoeffisient</p></div><div class="tool-card" onclick="location='/verktoy/histogram-kalkulator'"><span class="tool-card-icon">📊</span><h3>Histogram Kalkulator</h3><p>Lag histogram og analyser fordeling</p></div><div class="tool-card" onclick="location='/verktoy/boks-plott-kalkulator'"><span class="tool-card-icon">📊</span><h3>Boksplott Kalkulator</h3><p>Lag boksplott og finn kvartiler</p></div><div class="tool-card" onclick="location='/kategori/statistikk'" style="border:2px dashed var(--border)"><span class="tool-card-icon">→</span><h3>Se alle Statistikk</h3><p>Alle kalkulatorer i denne kategorien</p></div></div></div>
+    <div class="related-section" style="margin-top:32px"><h2>Du vil kanskje like</h2><div class="tools-grid"><div class="tool-card" onclick="location='/verktoy/bmi-kalkulator'"><span class="tool-card-icon">❤️</span><h3>BMI Kalkulator</h3><p>Beregn din kroppsmasseindeks med avanserte analyser</p></div><div class="tool-card" onclick="location='/verktoy/lan-kalkulator'"><span class="tool-card-icon">💰</span><h3>Lån Kalkulator</h3><p>Beregn månedlige låneavdrag med nedbetalingsoversikt</p></div><div class="tool-card" onclick="location='/verktoy/prosent-kalkulator'"><span class="tool-card-icon">📐</span><h3>Prosent Kalkulator</h3><p>Beregn prosent med flere metoder og sammenligninger</p></div><div class="tool-card" onclick="location='/verktoy/temperatur-konvertering'"><span class="tool-card-icon">🔄</span><h3>Temperatur Konvertering</h3><p>Konverter temperatur mellom alle enheter</p></div><div class="tool-card" onclick="location='/verktoy/areal-kalkulator'"><span class="tool-card-icon">📏</span><h3>Areal Kalkulator</h3><p>Beregn areal av ulike former med enheter</p></div><div class="tool-card" onclick="location='/verktoy/alder-kalkulator'"><span class="tool-card-icon">📅</span><h3>Alder Kalkulator</h3><p>Beregn nøyaktig alder med sammenligning og statistikk</p></div></div></div>
+  </div>
+  <aside class="sidebar">
+    <div class="sidebar-card"><h3>Statistikk kalkulatorer</h3><ul class="sidebar-links"><li><a href="/verktoy/standardavvik-kalkulator"><span class="icon">📊</span>Standardavvik Kalkulator</a></li><li><a href="/verktoy/median-kalkulator"><span class="icon">📊</span>Median Kalkulator</a></li><li><a href="/verktoy/varians-kalkulator"><span class="icon">📊</span>Varians Kalkulator</a></li><li><a href="/verktoy/typetall-kalkulator"><span class="icon">📊</span>Typetall Kalkulator</a></li><li><a href="/verktoy/variasjonsbredde-kalkulator"><span class="icon">📊</span>Variasjonsbredde Kalkulator</a></li><li><a href="/verktoy/sannsynlighet-fordeling"><span class="icon">📊</span>Sannsynlighet Fordeling Kalkulator</a></li><li><a href="/verktoy/z-score-kalkulator"><span class="icon">📊</span>Z-Score Kalkulator</a></li><li><a href="/verktoy/konfidensintervall"><span class="icon">📊</span>Konfidensintervall Kalkulator</a></li><li><a href="/kategori/statistikk" style="color:var(--primary)">Se alle Statistikk →</a></li></ul></div>
+    <div class="sidebar-card"><h3>Populære verktøy</h3><ul class="sidebar-links"><li><a href="/verktoy/bmi-kalkulator"><span class="icon">❤️</span>BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator"><span class="icon">💰</span>Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator"><span class="icon">📐</span>Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator"><span class="icon">📅</span>Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator"><span class="icon">❤️</span>Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator"><span class="icon">⚗️</span>pH Kalkulator</a></li></ul></div>
+  </aside>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col"><h4>Kalkulator24</h4><p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.6)">1543+ gratis kalkulatorer</p></div>
+      <div class="footer-col"><h4>Kategorier</h4><ul><li><a href="/kategori/helse">❤️ Helse</a></li><li><a href="/kategori/finans">💰 Finans</a></li><li><a href="/kategori/matematikk">📐 Matematikk</a></li><li><a href="/kategori/konvertering">🔄 Konvertering</a></li><li><a href="/kategori/geometri">📏 Geometri</a></li><li><a href="/kategori/tid">📅 Tid og Dato</a></li><li><a href="/kategori/fysikk">⚡ Fysikk</a></li><li><a href="/kategori/statistikk">📊 Statistikk</a></li><li><a href="/kategori/mat">🍎 Mat og Ernæring</a></li><li><a href="/kategori/bygg">🏗️ Bygg og Anlegg</a></li><li><a href="/kategori/vitenskap">🔬 Vitenskap</a></li><li><a href="/kategori/kjemi">⚗️ Kjemi</a></li><li><a href="/kategori/underholdning">🎮 Underholdning</a></li><li><a href="/kategori/krypto">₿ Krypto</a></li><li><a href="/kategori/spill">🎮 Spill</a></li><li><a href="/kategori/odds">🎲 Odds og Statistikk</a></li><li><a href="/kategori/okologi">🌱 Økologi</a></li><li><a href="/kategori/bolig">🏠 Bolig og Bygg</a></li><li><a href="/kategori/musikk">🎵 Musikk</a></li><li><a href="/kategori/teknologi">💻 Teknologi</a></li><li><a href="/kategori/ki">🤖 Kunstig Intelligens</a></li></ul></div>
+      <div class="footer-col"><h4>Populære</h4><ul><li><a href="/verktoy/bmi-kalkulator">BMI Kalkulator</a></li><li><a href="/verktoy/lan-kalkulator">Lån Kalkulator</a></li><li><a href="/verktoy/prosent-kalkulator">Prosent Kalkulator</a></li><li><a href="/verktoy/alder-kalkulator">Alder Kalkulator</a></li><li><a href="/verktoy/kalorikalkulator">Kalorikalkulator</a></li><li><a href="/verktoy/ph-kalkulator">pH Kalkulator</a></li><li><a href="/verktoy/molekylvekt-kalkulator">Molekylvektkalkulator</a></li><li><a href="/verktoy/halveringstid-kalkulator">Halveringstid Kalkulator</a></li><li><a href="/verktoy/befolkningsvekst-kalkulator">Befolkningsvekst Kalkulator</a></li><li><a href="/verktoy/terningkaster">Terningkaster</a></li></ul></div>
+      <div class="footer-col"><h4>Nylig lagt til</h4><ul><li><a href="/verktoy/campingvognregelen-kalkulator">Campingvognregelen Kalkulator</a></li><li><a href="/verktoy/formuesskatt-2023-kalkulator">Formuesskatt 2023 Kalkulator</a></li><li><a href="/verktoy/stillingsprosent-kalkulator-laerer">Stillingsprosent Kalkulator Lærer</a></li><li><a href="/verktoy/pendlerfradrag-kalkulator">Pendlerfradrag Kalkulator</a></li><li><a href="/verktoy/partiell-derivasjon-kalkulator">Partiell Derivasjon Kalkulator</a></li><li><a href="/verktoy/verditap-kalkulator">Verditap Kalkulator</a></li><li><a href="/verktoy/tollkalkulator-norge">Tollkalkulator Norge</a></li><li><a href="/verktoy/fattigdomsgrense-kalkulator">Fattigdomsgrense Kalkulator</a></li></ul></div>
+      <div class="footer-col"><h4>Info</h4><ul><li><a href="/om-oss">Om oss</a></li><li><a href="/personvern">Personvern</a></li><li><a href="/kontakt">Kontakt</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Kalkulator24 — Alle kalkulatorer er gratis</p></div>
+  </div>
+</footer>
+<script>
+function toggleMenu(){var m=document.getElementById("mobileMenu");m.classList.toggle("open");}
+document.addEventListener("click",function(e){var m=document.getElementById("mobileMenu");var b=document.getElementById("hamburgerBtn");if(m&&b&&!m.contains(e.target)&&!b.contains(e.target))m.classList.remove("open");});
+</script>
+<script src="/assets/js/calc.js"></script>
+</body></html>
