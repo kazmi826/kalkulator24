@@ -17414,7 +17414,7 @@
       "category": "teknologi",
       "description": "Beregn strømforbruk og kostnad for AI-modeller som ChatGPT, med sammenligning og miljøtips.",
       "keywords": "AI energibruk, strømforbruk AI, ChatGPT strøm, AI kostnad kalkulator, miljøavtrykk AI",
-      "formula": "ai_energy_usage_calculator",
+      "formula": "generic",
       "inputs": [
         {
           "id": "model_type",
@@ -22402,7 +22402,7 @@
       "category": "statistikk",
       "description": "Beregn nedre kvartil (Q1) for et datasett. Inkluderer median, øvre kvartil og IQR.",
       "keywords": "nedre kvartil, Q1, kvartilberegning, statistikk, datasett, median, IQR, kvartilanalyse",
-      "formula": "nedre_kvartil_formel",
+      "formula": "median",
       "inputs": [
         {
           "id": "datasett",
@@ -22488,7 +22488,7 @@
       "category": "statistikk",
       "description": "Beregn harmonisk gjennomsnitt av en tallrekke. Inkluderer sammenligning med aritmetisk og geometrisk gjennomsnitt.",
       "keywords": "harmonisk gjennomsnitt, harmonisk middel, gjennomsnitt kalkulator, statistikk, tallrekke, gjennomsnittsberegning, harmonisk snitt",
-      "formula": "harmonisk_gjennomsnitt_formel",
+      "formula": "average",
       "inputs": [
         {
           "id": "tallrekke",
@@ -24802,7 +24802,7 @@
       "category": "matematikk",
       "description": "Beregn invers cosekant (arccsc) av en vinkel eller verdi. Få resultat i radianer og grader.",
       "keywords": "invers cosekant, arccsc, arcsin, trigonometri, kalkulator, matematikk, vinkel, radianer, grader",
-      "formula": "invers_cosekant_formel",
+      "formula": "generic",
       "inputs": [
         {
           "id": "verdi",
@@ -25576,7 +25576,7 @@
       "category": "matematikk",
       "description": "Beregn lengden (magnituden) til en vektor i 2D eller 3D med trinnvis forklaring.",
       "keywords": "vektor, magnitude, lengde, 2D, 3D, vektorlengde, matematikk, kalkulator, norsk",
-      "formula": "vektor_magnitude_formel",
+      "formula": "magnitude",
       "inputs": [
         {
           "id": "dimension",
@@ -26298,7 +26298,7 @@
       "category": "matematikk",
       "description": "Beregn projeksjonen av en vektor på en annen vektor. Få lengde, komponent og vinkel.",
       "keywords": "vektorprojeksjon, projeksjon, vektor, skalarprojeksjon, vektorprojeksjon kalkulator, matematikk, geometri, vektorberegning",
-      "formula": "vektorprojeksjon_formel",
+      "formula": "generic",
       "inputs": [
         {
           "id": "v_x",
@@ -29568,7 +29568,7 @@
       "category": "matematikk",
       "description": "Beregn integralets verdi ved hjelp av gjennomsnittsverdisetningen for kontinuerlige funksjoner.",
       "keywords": "gjennomsnittsverdisetning, integral, gjennomsnittsverdi, kontinuerlig funksjon, kalkulator, matematikk",
-      "formula": "gjennomsnittsverdisetning_formel",
+      "formula": "average",
       "inputs": [
         {
           "id": "funksjon_type",
@@ -48308,7 +48308,7 @@
       "category": "okologi",
       "description": "Beregn pant for flasker og bokser kjøpt hos Elkjøp. Sammenlign med vanlig pant og se miljøgevinst.",
       "keywords": "pant, elkjøp pant, flaskepant, bokspant, pantekalkulator, miljø, resirkulering, norge",
-      "formula": "elkjop_pant_kalkulator",
+      "formula": "generic",
       "inputs": [
         {
           "id": "antall_flasker",
