@@ -38,8 +38,7 @@
 <div class="main-wrap">
   <div class="main-content">
     <div class="calc-card"><h2>Skriv inn verdiene dine</h2><div class="inputs-grid"><div class="input-group"><label>Antall EC2-instanser</label><div class="input-row"><input type="number" class="calc-input" data-field="ec2_instances" placeholder="f.eks. 5"></div></div><div class="input-group"><label>Timer per måned per instans</label><div class="input-row"><input type="number" class="calc-input" data-field="hours_per_month" placeholder="f.eks. 720"></div></div><div class="input-group"><label>EC2-instans type</label><div class="input-row"><select class="calc-input" data-field="instance_type"><option value="t3.micro">t3.micro</option><option value="t3.small">t3.small</option><option value="t3.medium">t3.medium</option><option value="t3.large">t3.large</option><option value="m5.large">m5.large</option><option value="m5.xlarge">m5.xlarge</option><option value="c5.large">c5.large</option><option value="c5.xlarge">c5.xlarge</option></select></div></div><div class="input-group"><label>Dataoverføring per måned (GB)</label><div class="input-row"><input type="number" class="calc-input" data-field="data_transfer_gb" placeholder="f.eks. 100"></div></div><div class="input-group"><label>S3-lagring (GB)</label><div class="input-row"><input type="number" class="calc-input" data-field="s3_storage_gb" placeholder="f.eks. 500"></div></div></div>    <button class="btn-calc" onclick="runCalculator('aws_cost_calculator')">Beregn →</button>    <div class="result-box" id="resultBox"><div class="result-label">Resultat</div><div class="result-value" id="resultValue">—</div><div class="result-desc" id="resultDesc"></div></div></div>
-    <div class="content-card">```html
-<!DOCTYPE html>
+    <div class="content-card"><!DOCTYPE html>
 <html lang="no">
 <head>
     <meta charset="UTF-8">
