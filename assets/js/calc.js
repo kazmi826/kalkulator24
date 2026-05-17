@@ -357,7 +357,215 @@ function runCalculator(formula) {
       'bodyfat_advanced': Calculators.bodyfat,
       'lbs_to_kg_advanced': Calculators.lbs_to_kg,
       'km_to_miles_advanced': Calculators.km_to_miles,
-    };
+    
+  car_loan: (i) => { if(!i.car_price) return null; const p = i.car_price - (i.down_payment || 0); const r = (i.interest_rate || 0) / 100 / 12; const n = (i.loan_term || 1) * 12; const result = r === 0 ? p / n : p * r * Math.pow(1 + r, n) / (Math.pow(1 + r, n) - 1); return {value: result, unit: 'kr/mnd', desc: 'Månedlig betaling for billån'}; },
+
+  student_loan: (i) => { if(!i.loan_amount) return null; const r = i.interest_rate / 100 / 12; const n = i.repayment_years * 12; const result = r === 0 ? i.loan_amount / n : i.loan_amount * (r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1); return {value: result, unit: 'kr/mnd', desc: 'Månedlig betaling for studielån'}; },
+
+  budget: (i) => { if(!i.income) return null; const result = i.income - (i.housing || 0) - (i.food || 0) - (i.transport || 0); return {value: result, unit: 'kr', desc: 'Budsjettbalanse' + ' (' + 'inntekt minus utgifter' + ')'}; },
+
+  inflation: (i) => { if(!i.amount) return null; const result = i.amount * Math.pow(1 + i.inflation_rate / 100, i.years); return {value: result, unit: 'kr', desc: 'Beløp etter ' + i.years + ' år med ' + i.inflation_rate + '% inflasjon'}; },
+
+  break_even: (i) => { if(!i.fixed_costs) return null; const result = i.fixed_costs / (i.price_per_unit - i.variable_cost_per_unit); return {value: result, unit: 'enheter', desc: 'Antall enheter som må selges for å dekke faste kostnader'}; },
+
+  combinations: (i) => { if(!i.n) return null; const result = i.n >= i.r ? (() => { let a=1,b=1,c=i.n; for(let d=1;d<=i.r;d++){a*=c--;b*=d;} return a/b; })() : 0; return {value: result, unit: 'kombinasjoner', desc: 'Antall kombinasjoner av ' + i.n + ' elementer tatt ' + i.r + ' av gangen'}; },
+
+  permutations: (i) => { if(!i.n) return null; const result = i.n >= i.r ? (() => { let p = 1; for(let k = i.n; k > i.n - i.r; k--) p *= k; return p; })() : 0; return {value: result, unit: 'antall', desc: 'Antall permutasjoner av ' + i.n + ' elementer tatt ' + i.r + ' av gangen'}; },
+
+  bytes_to_mb: (i) => { if(!i.bytes) return null; const result = i.bytes / (1024 * 1024); return {value: result, unit: 'MB', desc: 'Bytes til Megabyte'}; },
+
+  acres_to_m2: (i) => { if(!i.hectares) return null; const result = (parseFloat(i.hectares) * 10000).toFixed(i.precision || 2); return {value: result, unit: 'm\u00B2', desc: i.hectares + ' hektar = ' + result + ' kvadratmeter'}; },
+
+  horsepower: (i) => { if(!i.horsepower) return null; const result = i.conversion === 'hk' ? i.horsepower : i.conversion === 'kw' ? i.horsepower * 1.34102 : i.conversion === 'ps' ? i.horsepower * 0.98632 : null; return {value: result, unit: i.conversion === 'hk' ? 'hk' : i.conversion === 'kw' ? 'hk' : i.conversion === 'ps' ? 'hk' : '', desc: 'Hestekrefter omregnet til ' + (i.conversion === 'hk' ? 'hestekrefter' : i.conversion === 'kw' ? 'kilowatt' : i.conversion === 'ps' ? 'metriske hestekrefter' : '')}; },
+
+  bar_to_psi: (i) => { if(!i.pressure) return null; const result = i.from_unit === 'bar' ? i.pressure * 14.5038 : i.pressure / 14.5038; return {value: result, unit: 'psi', desc: 'Trykk i psi'}; },
+
+  knots_to_kmh: (i) => { if(!i.knots) return null; const result = i.knots * 1.852; return {value: result, unit: 'km/t', desc: 'Knop til km/t'}; },
+
+  shoe_size: (i) => { if(!i.size) return null; const s = parseFloat(i.size); if(isNaN(s)) return null; const systems = {EU: 0, UK: 1, US: 2, CM: 3}; const from = systems[i.from_system]; const to = systems[i.to_system]; if(from === undefined || to === undefined) return null; const eu = [s, (s * 3 - 25.5), (s * 3 - 24), (s * 0.667)][from]; const conversions = [eu, (eu + 25.5) / 3, (eu + 24) / 3, eu * 1.5]; const result = Math.round(conversions[to] * 100) / 100; const units = ['EU', 'UK', 'US', 'cm']; return {value: result, unit: units[to], desc: 'Størrelse i ' + units[to]}; },
+
+  ring_size: (i) => { if(!i.size) return null; const from = i.from_system || 'mm'; const to = i.to_system || 'mm'; const size = parseFloat(i.size); if(isNaN(size)) return null; let mm; if(from === 'mm') { mm = size; } else if(from === 'eu') { mm = (size - 40) * 0.4 + 12; } else if(from === 'us' || from === 'uk') { mm = (size - 6) * 0.4 + 12; } else { mm = size; } let result; let unit; if(to === 'mm') { result = mm; unit = 'mm'; } else if(to === 'eu') { result = Math.round((mm - 12) / 0.4 + 40); unit = 'EU'; } else if(to === 'us') { result = Math.round((mm - 12) / 0.4 + 6); unit = 'US'; } else if(to === 'uk') { result = Math.round((mm - 12) / 0.4 + 6); unit = 'UK'; } else { result = mm; unit = 'mm'; } return {value: result, unit: unit, desc: 'Ringstørrelse i ' + unit}; },
+
+  deg_to_rad: (i) => { if(!i.angle) return null; const result = i.from_unit === 'deg' ? i.angle * (Math.PI / 180) : i.angle * (180 / Math.PI); return {value: result, unit: i.to_unit === 'rad' ? 'rad' : 'grader', desc: 'Vinkel konvertert fra ' + i.from_unit + ' til ' + i.to_unit}; },
+
+  diagonal: (i) => { if(!i.length) return null; const result = Math.sqrt(i.length * i.length + i.width * i.width); return {value: result, unit: 'enhet', desc: 'Diagonalen er ' + result + ' enheter'}; },
+
+  perimeter: (i) => { if(!i.shape) return null; const result = i.shape === 'sirkel' ? 2 * Math.PI * i.dimension1 : i.shape === 'rektangel' ? 2 * (i.dimension1 + i.dimension2) : i.shape === 'trekant' ? i.dimension1 + i.dimension2 + i.dimension3 : null; return {value: result, unit: 'm', desc: 'Omkretsen er ' + result + ' meter'}; },
+
+  timezone_calc: (i) => { if(!i.time) return null; const date = new Date(i.time); const fromOffset = parseFloat(i.from_timezone); const toOffset = parseFloat(i.to_timezone); const diffMs = (toOffset - fromOffset) * 60 * 60 * 1000; const result = new Date(date.getTime() + diffMs); return {value: result.toISOString(), unit: 'tidspunkt', desc: 'Konvertert tidssone'}; },
+
+  unix_timestamp: (i) => { if(!i.unix_time) return null; const result = i.conversion === 'to_date' ? new Date(parseInt(i.unix_time) * 1000).toLocaleString('nb-NO') : Math.floor(new Date(i.unix_time).getTime() / 1000); return {value: result, unit: i.conversion === 'to_date' ? 'dato' : 'sekunder', desc: i.conversion === 'to_date' ? 'Konverterer Unix-tidsstempel til dato' : 'Konverterer dato til Unix-tidsstempel'}; },
+
+  meeting_cost: (i) => { if(!i.participants) return null; const result = i.participants * i.duration_hours * i.average_hourly_rate; return {value: result, unit: 'kr', desc: 'Total møtekostnad i kroner'}; },
+
+  deadline: (i) => { if(!i.deadline_date) return null; const diff = new Date(i.deadline_date) - new Date(i.current_date); const days = Math.ceil(diff / (1000 * 60 * 60 * 24)); const result = days - (i.working_days_left || 0); return {value: result, unit: 'dager', desc: 'Gjenstående arbeidsdager til frist' + (result === 1 ? '' : 'er')}; },
+
+  ohms_law: (i) => { if(!i.voltage) return null; const result = i.current * i.resistance; return {value: result, unit: 'V', desc: 'Spenning (V) = Strøm (A) * Motstand (Ω)'}; },
+
+  watt_calc: (i) => { if(!i.voltage) return null; const result = i.voltage * i.current * (i.power_factor || 1); return {value: result, unit: 'W', desc: 'Aktiv effekt i watt (W) = Spenning (V) * Strøm (A) * Effektfaktor'}; },
+
+  wavelength: (i) => { if(!i.frequency) return null; const result = i.wave_speed / i.frequency; return {value: result, unit: 'm', desc: 'Bølgelengde i meter'}; },
+
+  gravity: (i) => { if(!i.mass1 || !i.mass2 || !i.distance) return null; const G = 6.67430e-11; const result = G * i.mass1 * i.mass2 / (i.distance * i.distance); return {value: result, unit: 'N', desc: 'Gravitasjonskraften mellom to legemer'}; },
+
+  pressure_calc: (i) => { if(!i.force) return null; const result = i.force / i.area; return {value: result, unit: 'Pa', desc: 'Trykk = ' + i.force + ' N / ' + i.area + ' m' + String.fromCharCode(178) + ' = ' + result + ' Pa'}; },
+
+  friction: (i) => { if(!i.normal_force) return null; const result = i.normal_force * i.friction_coefficient; return {value: result, unit: 'N', desc: 'Friksjonskraften er ' + result + ' N'}; },
+
+  pendulum: (i) => { if(!i.length) return null; const result = 2 * Math.PI * Math.sqrt(i.length / (i.gravity || 9.81)); return {value: result, unit: 's', desc: 'Svingetid for en pendel'}; },
+
+  magnetic_force: (i) => { if(!i.magnetic_field_strength || !i.current || !i.wire_length) return null; const result = i.magnetic_field_strength * i.current * i.wire_length; return {value: result, unit: 'N', desc: 'Magnetisk kraft i newton'}; },
+
+  snells_law: (i) => { if(!i.refractive_index1 || !i.refractive_index2 || !i.incident_angle) return null; const result = Math.asin((i.refractive_index1 / i.refractive_index2) * Math.sin(i.incident_angle * Math.PI / 180)) * 180 / Math.PI; return {value: result, unit: 'grader', desc: 'Brytningsvinkel i henhold til Snells lov'}; },
+
+  range: (i) => { if(!i.numbers) return null; const nums = i.numbers.split(',').map(Number).filter(n => !isNaN(n)); if(nums.length === 0) return null; const result = Math.max(...nums) - Math.min(...nums); return {value: result, unit: '', desc: 'Variasjonsbredde (range) er differansen mellom storste og minste verdi i datasettet.'}; },
+
+  unit_price: (i) => { if(!i.food_price) return null; const result = (parseFloat(i.food_price) + parseFloat(i.drink_price || 0)) * (1 + parseFloat(i.tip_percentage || 0) / 100); return {value: result, unit: 'kr', desc: 'Totalpris for mat og drikke med tips'}; },
+
+  wall: (i) => { if(!i.area) return null; const result = i.area * i.material * i.price_per_m2; return {value: result, unit: 'kr', desc: 'Kostnad for ' + i.area + ' m² ' + i.material + ' vegg'}; },
+
+  window: (i) => { if(!i.width) return null; const result = i.width * i.height * (i.material === 'tre' ? 1.0 : i.material === 'aluminium' ? 1.5 : i.material === 'plast' ? 0.8 : 1.0); return {value: result, unit: 'kvm', desc: 'Vindu areal: ' + result.toFixed(2) + ' kvm'}; },
+
+  door: (i) => { if(!i.width) return null; const result = i.width * i.height * (i.material === 'tre' ? 1.0 : i.material === 'aluminium' ? 1.2 : i.material === 'stål' ? 1.5 : 1.0); return {value: result, unit: 'm²', desc: 'Areal av dør: ' + result.toFixed(2) + ' m²'}; },
+
+  insulation: (i) => { if(!i.area) return null; const result = (i.area * i.thickness) / (i.material || 1); return {value: result, unit: 'm\u00B2K/W', desc: 'Varmemotstand for isolasjon' + ' (R-verdi)'}; },
+
+  pipe_volume: (i) => { if(!i.pipe_diameter) return null; const r = i.pipe_diameter / 2; const result = Math.PI * r * r * (i.length || 0); return {value: result, unit: 'm\u00B3', desc: 'R\u00F8rvolum i kubikkmeter'}; },
+
+  foundation: (i) => { if(!i.building_area) return null; const soilFactor = {leire: 0.8, sand: 1.0, grus: 1.2}[i.soil_type] || 1.0; const typeFactor = {plate: 1.5, stripe: 1.0, pele: 0.7}[i.foundation_type] || 1.0; const result = i.building_area * soilFactor * typeFactor; return {value: result, unit: 'm2', desc: 'Fundamentareal basert p\u00e5 bygningsareal, jordtype og fundamenttype'}; },
+
+  deck_calc: (i) => { if(!i.area) return null; const result = i.area * i.price_per_m2; return {value: result, unit: 'kr', desc: 'Total kostnad for ' + i.area + ' m² ' + i.material}; },
+
+  fence: (i) => { if(!i.perimeter) return null; const result = i.perimeter * i.height * (i.material === 'tre' ? 1.0 : i.material === 'stål' ? 1.5 : 2.0); return {value: result, unit: 'kvm', desc: 'Gjerdeareal i kvadratmeter basert på omkrets, høyde og materiale'}; },
+
+  soil: (i) => { if(!i.area) return null; const result = i.area * (i.soil_depth || 0.3) * (i.garden_type === 'blomsterbed' ? 1.2 : i.garden_type === 'grønnsakshage' ? 1.0 : 0.8); return {value: result, unit: 'm3', desc: 'Jordvolum for ' + (i.garden_type || 'hage') + ' med areal ' + i.area + ' m2 og dybde ' + (i.soil_depth || 0.3) + ' m'}; },
+
+  sqm_calculator: (i) => { if(!i.house_width || !i.house_length || !i.roof_pitch) return null; const pitchRad = i.roof_pitch * Math.PI / 180; const result = i.house_width * i.house_length * (1 / Math.cos(pitchRad)); return {value: Math.round(result * 100) / 100, unit: 'm²', desc: 'Bruksareal (BRA) i kvadratmeter basert på takvinkel'}; },
+
+  punnett: (i) => { if(!i.parent1) return null; const p1 = i.parent1.toUpperCase().split(''); const p2 = i.parent2.toUpperCase().split(''); const combos = []; for(let a of p1) for(let b of p2) combos.push(a+b); const unique = [...new Set(combos)].sort(); const result = unique.join(', '); return {value: result, unit: 'genotyper', desc: 'Mulige genotyper fra foreldrekombinasjonen ' + i.parent1 + ' x ' + i.parent2}; },
+
+  blood_type_inheritance: (i) => { if(!i.parent1) return null; const result = (() => { const p1 = i.parent1.toUpperCase(); const p2 = i.parent2.toUpperCase(); const alleles1 = p1 === 'A' ? ['A','O'] : p1 === 'B' ? ['B','O'] : p1 === 'AB' ? ['A','B'] : ['O','O']; const alleles2 = p2 === 'A' ? ['A','O'] : p2 === 'B' ? ['B','O'] : p2 === 'AB' ? ['A','B'] : ['O','O']; const types = []; for(let a1 of alleles1) { for(let a2 of alleles2) { const combo = [a1, a2].sort(); const type = combo[0] === 'O' && combo[1] === 'O' ? 'O' : combo[0] === 'A' && combo[1] === 'B' ? 'AB' : combo[0] === 'A' ? 'A' : 'B'; if(!types.includes(type)) types.push(type); } } return types.join('/'); })(); return {value: result, unit: 'blodtype', desc: 'Mulige blodtyper for barnet basert p\u00e5 foreldrenes blodtyper'}; },
+
+  blood_type: (i) => { if(!i.blood_type) return null; const result = i.blood_type; return {value: result, unit: 'type', desc: 'Blodtype: ' + result}; },
+
+  doubling_time: (i) => { if(!i.growth_rate) return null; const result = Math.log(2) / Math.log(1 + i.growth_rate / 100); return {value: result, unit: 'år', desc: 'Antall år for å doble verdien med en vekstrate på ' + i.growth_rate + '%'}; },
+
+  ecological_footprint: (i) => { if(!i.meat) return null; const result = (i.meat * 2.5 + (i.transport || 0) * 1.2 + (i.electricity || 0) * 0.8) / 100; return {value: result, unit: 'globale hektar', desc: 'Ditt okologiske fotavtrykk er ' + result.toFixed(2) + ' globale hektar'}; },
+
+  allele_frequency: (i) => { if(!i.dominant || !i.total) return null; const result = Math.sqrt(i.dominant / i.total); return {value: result, unit: 'andel', desc: 'Allelfrekvens for dominant allel'}; },
+
+  hardy_weinberg: (i) => { if(!i.p) return null; const p = parseFloat(i.p); const q = 1 - p; const result = { p2: p * p, pq: 2 * p * q, q2: q * q }; return {value: result, unit: 'andel', desc: 'p^2: ' + result.p2.toFixed(4) + ', 2pq: ' + result.pq.toFixed(4) + ', q^2: ' + result.q2.toFixed(4)}; },
+
+  chocolate_toxicity_cat: (i) => { if(!i.weight) return null; const typeFactors = {mork:1.5,melk:0.5,hvit:0.1}; const factor = typeFactors[i.type] || 0.5; const result = (i.weight * factor) / 100; return {value: result, unit: 'mg/kg', desc: 'Estimert teobromindose: ' + result.toFixed(2) + ' mg/kg. Risiko: ' + (result > 20 ? 'Hoy' : result > 10 ? 'Moderat' : 'Lav')}; },
+
+  protein_mw: (i) => { if(!i.sequence) return null; const mw = {A:89.1,R:174.2,N:132.1,D:133.1,C:121.2,Q:146.2,E:147.1,G:75.1,H:155.2,I:131.2,L:131.2,K:146.2,M:149.2,F:165.2,P:115.1,S:105.1,T:119.1,W:204.2,Y:181.2,V:117.1}; const seq = i.sequence.toUpperCase().replace(/[^A-Z]/g,''); let total = 0; for(let j=0;j<seq.length;j++) { const aa = seq[j]; if(mw[aa]) total += mw[aa]; } total -= (seq.length-1)*18.0; return {value: total, unit: 'g/mol', desc: 'Molekylvekt av proteinsekvensen i g/mol'}; },
+
+  dna_melting: (i) => { if(!i.sequence) return null; const seq = i.sequence.toUpperCase(); const a = (seq.match(/A/g) || []).length; const t = (seq.match(/T/g) || []).length; const g = (seq.match(/G/g) || []).length; const c = (seq.match(/C/g) || []).length; const len = seq.length; if(len < 14) { const result = 2 * (a + t) + 4 * (g + c); return {value: result, unit: '°C', desc: 'Smeltetemperatur (kort oligo)'}; } else { const result = 64.9 + 41 * (g + c - 16.4) / (a + t + g + c); return {value: result, unit: '°C', desc: 'Smeltetemperatur (lang sekvens)'}; } },
+
+  annealing_temp: (i) => { if(!i.tm) return null; const result = i.tm - 25; return {value: result, unit: '°C', desc: 'Anbefalt annealing-temperatur basert på Tm-verdien'}; },
+
+  compost: (i) => { if(!i.green) return null; const result = i.green / (i.brown || 1); return {value: result, unit: 'forhold', desc: 'Forholdet mellom grønt og brunt materiale i komposten'}; },
+
+  grass_seed: (i) => { if(!i.area) return null; const result = i.type === 'sports' ? i.area * 0.035 : i.type === 'park' ? i.area * 0.025 : i.area * 0.03; return {value: result, unit: 'kg', desc: 'Mengde gressfrø for ' + i.area + ' m²'}; },
+
+  corn_yield: (i) => { if(!i.area) return null; const result = (i.plants || 0) / i.area; return {value: result, unit: 'planter per m²', desc: 'Antall planter per kvadratmeter'}; },
+
+  cattle_per_acre: (i) => { if(!i.area) return null; const result = i.quality === 'god' ? i.area * 2.5 : i.quality === 'middels' ? i.area * 1.8 : i.area * 1.2; return {value: result, unit: 'dyr/dekar', desc: 'Antall kyr per dekar basert på areal og beitekvalitet'}; },
+
+  theoretical_yield: (i) => { if(!i.moles) return null; const result = i.moles * i.molar_mass_product; return {value: result, unit: 'g', desc: 'Teoretisk utbytte i gram'}; },
+
+  dilution_factor: (i) => { if(!i.c1) return null; const result = (i.c1 * i.v1) / i.v2; return {value: result, unit: 'M', desc: 'Konsentrasjon etter fortynning (c2)'}; },
+
+  serial_dilution: (i) => { if(!i.initial_conc) return null; const result = i.initial_conc / Math.pow(i.dilution_factor, i.steps); return {value: result, unit: i.initial_conc.includes('M') ? 'M' : i.initial_conc.includes('%') ? '%' : 'konsentrasjon', desc: 'Konsentrasjon etter ' + i.steps + ' fortynningstrinn'}; },
+
+  partial_pressure: (i) => { if(!i.total_pressure || !i.mole_fraction) return null; const result = i.total_pressure * i.mole_fraction; return {value: result, unit: 'atm', desc: 'Partialtrykk = totaltrykk * molfraksjon'}; },
+
+  entropy: (i) => { if(!i.q) return null; const result = i.q / i.temperature; return {value: result, unit: 'J/K', desc: 'Entropiendring for reversibel varmeoverf\u00F8ring'}; },
+
+  pka_calc: (i) => { if(!i.ka) return null; const result = -Math.log10(i.ka); return {value: result, unit: '', desc: 'pKa-verdi'}; },
+
+  percent_composition: (i) => { if(!i.element_mass) return null; const result = (i.element_mass / i.total_mass) * 100; return {value: result, unit: '%', desc: 'Masseprosent av grunnstoffet i forbindelsen'}; },
+
+  oxidation_number: (i) => { if(!i.element) return null; const elements = {H:1,He:0,Li:1,Be:2,B:3,C:0,N:0,O:-2,F:-1,Ne:0,Na:1,Mg:2,Al:3,Si:0,P:0,S:0,Cl:-1,Ar:0,K:1,Ca:2,Sc:3,Ti:4,V:5,Cr:3,Mn:2,Fe:3,Co:2,Ni:2,Cu:2,Zn:2,Ga:3,Ge:0,As:0,Se:-2,Br:-1,Kr:0,Rb:1,Sr:2,Y:3,Zr:4,Nb:5,Mo:6,Tc:7,Ru:3,Rh:3,Pd:2,Ag:1,Cd:2,In:3,Sn:4,Sb:3,Te:-2,I:-1,Xe:0,Cs:1,Ba:2,La:3,Ce:4,Pr:3,Nd:3,Pm:3,Sm:3,Eu:2,Gd:3,Tb:3,Dy:3,Ho:3,Er:3,Tm:3,Yb:2,Lu:3,Hf:4,Ta:5,W:6,Re:7,Os:4,Ir:3,Pt:4,Au:3,Hg:2,Tl:3,Pb:4,Bi:3,Po:-2,At:-1,Rn:0,Fr:1,Ra:2,Ac:3,Th:4,Pa:5,U:6,Np:7,Pu:4,Am:3,Cm:3,Bk:3,Cf:3,Es:3,Fm:3,Md:3,No:2,Lr:3}; const el = i.element.trim(); const ox = elements[el]; if(ox===undefined) return null; const result = ox; return {value: result, unit: '', desc: 'Oksidasjonstallet for ' + el + ' er ' + result}; },
+
+  solution_dilution: (i) => { if(!i.c1) return null; const result = (i.c1 * i.v1) / i.c2; return {value: result, unit: 'L', desc: 'Nødvendig sluttvolum (V2) for fortynning'}; },
+
+  tds_calc: (i) => { if(!i.ec) return null; const result = i.ec * 0.64; return {value: result, unit: 'mg/L', desc: 'Total oppløste faste stoffer (TDS) beregnet fra konduktivitet'}; },
+
+  titration: (i) => { if(!i.c_titrant || !i.v_titrant || !i.v_analyte) return null; const result = (i.c_titrant * i.v_titrant) / i.v_analyte; return {value: result, unit: 'mol/L', desc: 'Konsentrasjonen av analytten'}; },
+
+  centrifugal_force: (i) => { if(!i.mass) return null; const result = i.mass * i.velocity * i.velocity / i.radius; return {value: result, unit: 'N', desc: 'Sentrifugalkraft i newton'}; },
+
+  speed_physics: (i) => { if(!i.distance || !i.time) return null; const result = i.distance / i.time; return {value: result, unit: 'm/s', desc: 'Fart basert på distanse og tid'}; },
+
+  terminal_velocity: (i) => { if(!i.mass) return null; const result = Math.sqrt((2 * i.mass * 9.81) / (1.225 * i.drag * i.area)); return {value: result, unit: 'm/s', desc: 'Sluttfart for fallende objekt med luftmotstand'}; },
+
+  torque: (i) => { if(!i.force) return null; const result = i.force * i.distance; return {value: result, unit: 'Nm', desc: 'Kraftmoment: kraft ganger arm'}; },
+
+  projectile: (i) => { if(!i.velocity) return null; const v = i.velocity; const a = i.angle * Math.PI / 180; const result = (v * v * Math.sin(2 * a)) / 9.81; return {value: result, unit: 'm', desc: 'Maksimal horisontal rekkevidde'}; },
+
+  ideal_gas: (i) => { if(!i.pressure) return null; const result = (i.pressure * i.volume) / (8.314 * i.moles); return {value: result, unit: 'K', desc: 'Temperatur i Kelvin'}; },
+
+  charles_law: (i) => { if(!i.v1) return null; const result = i.v1 * i.t2 / i.t1; return {value: result, unit: 'L', desc: 'Sluttvolum (V2) i liter'}; },
+
+  specific_heat: (i) => { if(!i.mass) return null; const result = i.specific_heat * i.mass * i.delta_t; return {value: result, unit: 'J', desc: 'Varmeenergi (Q) i joule'}; },
+
+  ampere_to_watt: (i) => { if(!i.ampere) return null; const result = i.ampere * i.voltage; return {value: result, unit: 'W', desc: 'Effekt i watt'}; },
+
+  time_dilation: (i) => { if(!i.time) return null; const result = i.time / Math.sqrt(1 - (i.velocity * i.velocity) / (299792458 * 299792458)); return {value: result, unit: 's', desc: 'Tidsutvidelse i sekunder'}; },
+
+  orbital_period: (i) => { if(!i.radius || !i.velocity) return null; const result = (2 * Math.PI * i.radius) / i.velocity; return {value: result, unit: 's', desc: 'Omløpsperiode i sekunder'}; },
+
+  wet_bulb: (i) => { if(!i.temperature) return null; const result = i.temperature * Math.atan(0.151977 * Math.sqrt(i.humidity + 8.313659)) + Math.atan(i.temperature + i.humidity) - Math.atan(i.humidity - 1.676331) + 0.00391838 * Math.pow(i.humidity, 1.5) * Math.atan(0.023101 * i.humidity) - 4.686035; return {value: result, unit: '°C', desc: 'Våttermometer temperatur'}; },
+
+  density_altitude: (i) => { if(!i.altitude) return null; const result = i.altitude + 120 * (i.temperature - 15); return {value: result, unit: 'm', desc: 'Tetthetshøyde i meter'}; },
+
+  air_density: (i) => { if(!i.temperature) return null; const t = i.temperature + 273.15; const p = i.pressure * 100; const rh = (i.humidity || 0) / 100; const pv = rh * 6.112 * Math.exp((17.67 * (i.temperature)) / (i.temperature + 243.5)); const pd = p - pv; const result = (pd * 0.0289644 + pv * 0.018016) / (8.314462618 * t); return {value: result, unit: 'kg/m\u00B3', desc: 'Lufttetthet basert p\u00E5 temperatur, trykk og fuktighet'}; },
+
+  enthalpy: (i) => { if(!i.mass) return null; const result = i.mass * i.specific_heat * i.temp_change; return {value: result, unit: 'J', desc: 'Entalpiendring (Q = m * c * ΔT)'}; },
+
+  momentum: (i) => { if(!i.mass) return null; const result = i.mass * i.velocity; return {value: result, unit: 'kg*m/s', desc: 'Momentum er masse multiplisert med hastighet'}; },
+
+  relative_humidity: (i) => { if(!i.actual_temp || !i.dew_point) return null; const result = 100 * Math.exp((17.625 * i.dew_point) / (243.04 + i.dew_point) - (17.625 * i.actual_temp) / (243.04 + i.actual_temp)); return {value: result, unit: '%', desc: 'Relativ luftfuktighet i prosent'}; },
+
+  angular_velocity: (i) => { if(!i.angle) return null; const result = i.angle / i.time; return {value: result, unit: 'rad/s', desc: 'Vinkelhastigheten er ' + result + ' rad/s'}; },
+
+  gravitational_force: (i) => { if(!i.mass1) return null; const result = (6.67430e-11 * i.mass1 * i.mass2) / (i.distance * i.distance); return {value: result, unit: 'N', desc: 'Gravitasjonskraften mellom to legemer'}; },
+
+  earth_curvature: (i) => { if(!i.distance) return null; const result = Math.pow(i.distance, 2) * 0.0785; return {value: result, unit: 'meter', desc: 'Jordens krumning i meter for avstand ' + i.distance + ' km'}; },
+
+  hookes_law: (i) => { if(!i.spring_constant) return null; const result = i.spring_constant * i.displacement; return {value: result, unit: 'N', desc: 'Hookes lov: Kraft = fjærkonstant * forskyvning'}; },
+
+  de_broglie: (i) => { if(!i.mass) return null; const result = 6.62607015e-34 / (i.mass * i.velocity); return {value: result, unit: 'm', desc: 'De Broglie bølgelengde' + ' (m)'}; },
+
+  dew_point: (i) => { if(!i.temperature) return null; const a = 17.27; const b = 237.7; const gamma = (a * i.temperature) / (b + i.temperature) + Math.log(i.humidity / 100.0); const result = (b * gamma) / (a - gamma); return {value: result, unit: '°C', desc: 'Duggpunktstemperatur'}; },
+
+  transformer: (i) => { if(!i.primary_voltage) return null; const result = i.primary_voltage * i.secondary_turns / i.primary_turns; return {value: result, unit: 'V', desc: 'Sekundærspenning'}; },
+
+  coulombs_law: (i) => { if(!i.charge1) return null; const result = (8.987551787368176e9 * i.charge1 * i.charge2) / (i.distance * i.distance); return {value: result, unit: 'N', desc: 'Kraft mellom to punktladninger'}; },
+
+  potential_energy: (i) => { if(!i.mass) return null; const result = i.mass * 9.81 * i.height; return {value: result, unit: 'J', desc: 'Potensiell energi (E_p = m * g * h)'}; },
+
+  schwarzschild: (i) => { if(!i.mass) return null; const result = (2 * 6.67430e-11 * i.mass) / (299792458 * 299792458); return {value: result, unit: 'meter', desc: 'Schwarzschild-radius for et objekt med masse ' + i.mass + ' kg'}; },
+
+  string_tension: (i) => { if(!i.mass || !i.length || !i.frequency) return null; const result = 4 * i.mass * i.length * i.frequency * i.frequency; return {value: result, unit: 'N', desc: 'Strengspenning i newton'}; },
+
+  muzzle_energy: (i) => { if(!i.mass) return null; const result = 0.5 * i.mass * i.velocity * i.velocity; return {value: result, unit: 'J', desc: 'Munningsenergi i joule (J)'}; },
+
+  sunrise_sunset: (i) => { if(!i.latitude) return null; const phi = i.latitude * Math.PI / 180; const gamma = 2 * Math.PI / 365 * (i.day_of_year - 1); const decl = 0.006918 - 0.399912 * Math.cos(gamma) + 0.070257 * Math.sin(gamma) - 0.006758 * Math.cos(2 * gamma) + 0.000907 * Math.sin(2 * gamma) - 0.002697 * Math.cos(3 * gamma) + 0.00148 * Math.sin(3 * gamma); const cosH = -Math.tan(phi) * Math.tan(decl); if(cosH < -1 || cosH > 1) return {value: null, unit: 'timer', desc: 'Soloppgang/Solnedgang' + ' (polarnatt eller midnattssol)'}; const H = Math.acos(cosH); const sunrise = 12 - H * 180 / Math.PI / 15; const sunset = 12 + H * 180 / Math.PI / 15; return {value: sunrise, unit: 'timer', desc: 'Soloppgang (timer etter midnatt)'}; },
+
+  work_energy: (i) => { if(!i.force) return null; const result = i.force * (i.distance || 0) * Math.cos((i.angle || 0) * Math.PI / 180); return {value: result, unit: 'J', desc: 'Arbeid utført av kraften'}; },
+
+  newtons_second: (i) => { if(!i.mass) return null; const result = i.mass * i.acceleration; return {value: result, unit: 'N', desc: 'Kraften er ' + result + ' Newton'}; },
+
+  eos_calc: (i) => { if(!i.pressure) return null; const result = i.pressure * i.volume / (8.314462618 * i.temperature); return {value: result, unit: 'mol', desc: 'Antall mol gass (n = PV/RT)'}; },
+
+  reynolds_number: (i) => { if(!i.density) return null; const result = (i.density * i.velocity * i.length) / i.viscosity; return {value: result, unit: 'dimensjonsløs', desc: 'Reynolds tall' + ' - ' + 'forholdet mellom treghetskrefter og viskøse krefter'}; },
+
+  rc_time_constant: (i) => { if(!i.resistance) return null; const result = i.resistance * i.capacitance; return {value: result, unit: 's', desc: 'Tidskonstanten (tau) for RC-kretsen i sekunder'}; },
+
+  impulse: (i) => { if(!i.force || !i.time) return null; const result = i.force * i.time; return {value: result, unit: 'Ns', desc: 'Impuls er kraft ganger tid, maalt i newtonsekunder'}; },
+};
     calc = aliases[formula] || Calculators.generic;
   }
 
